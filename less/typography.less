@@ -1,0 +1,229 @@
+// ==========================================================
+// Modular Scale:   18px @ 1:1.618   8px @ 1:1.618
+// ==========================================================
+
+html {
+    font-family: @fontFamily;
+    font-size: 87.5%; /* 14 px */ 
+    line-height: @bodyBaseline;
+}
+body {
+    color: @bodyColor;
+    font-size: @bodySize;
+}
+
+
+// ==========================================================
+// Text Size Chart (Inspired by Typeplate.com)
+// ==========================================================
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @headingFamily;
+    font-weight: 500;
+    line-height: 1;
+    text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+    margin: @margin*1.5 0 @margin/2 0;
+    + .atk-form {
+        margin-top: @margin;
+    }
+}
+.peta {
+    font-size: @bodySize * 4.236;
+}
+.tera {
+    font-size: @bodySize * 3.046;
+}
+h1, .giga {
+    font-size: @bodySize * 2.618;
+}
+h2, .mega {
+    font-size: @bodySize * 1.883;
+}
+h3, .kilo {
+    font-size: @bodySize * 1.618;
+}
+h4, .hecto {
+    font-size: @bodySize * 1.164;
+}
+h5, .deka {
+    font-size: @bodySize;
+}
+h6, small, .deci {
+    font-size: @bodySize * 0.719;
+}
+
+
+// ==========================================================
+// Images
+// ==========================================================
+
+// Make images responsive
+figure img{
+    display:block;
+    height: auto;
+    width: 100%;
+}
+
+// Figcaption styling
+figcaption {
+    color: red;
+    font-size: small;
+    font-style: italic;
+}
+
+
+// ==========================================================
+// = Lists
+// ==========================================================
+
+ul, ol, dl {
+    margin: 0 0 @bodyBaseline 0;
+}
+
+
+// ==========================================================
+// Other elements
+// ==========================================================
+
+p {
+    margin: 0 0 @margin 0;
+}
+blockquote {
+    .kilo;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 @margin @margin;
+}
+mark {
+    background: blue;
+    color: red;    background: blue;
+    color: red;
+    line-height: @bodySize;
+}
+del {
+    color: red;
+}
+code, kbd, pre, samp {
+    border-top: 1px dotted #bfbfbf;
+    border-bottom: 1px dotted #bfbfbf;
+    cursor: text;
+    line-height: @bodySize;
+    margin: 0 0 @margin;
+    padding: @margin;
+}
+pre {
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    -webkit-transition-delay: 0s;
+    -webkit-transition-duration: 0.1s;
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease-in;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(191, 191, 191);
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(34, 34, 34);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(34, 34, 34);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(191, 191, 191);
+    border-top-style: dotted;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(34, 34, 34);
+    cursor: default;
+    display: block;
+    font-family: monospace, serif;
+    .deka;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 30px;
+    margin-bottom: 24px;
+    margin-top: 0px;
+    outline-color: rgb(34, 34, 34);
+    outline-style: none;
+    outline-width: 0px;
+    padding: @margin;
+    position: relative;
+    transition-delay: 0s;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: ease-in;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+code {
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(68, 68, 68);
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(68, 68, 68);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(68, 68, 68);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(68, 68, 68);
+    border-top-style: none;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    color: rgb(68, 68, 68);
+    cursor: default;
+    display: inline;
+    height: auto;
+    line-height: 24px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    outline-color: rgb(68, 68, 68);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    tab-size: 3;
+    transition-delay: 0s;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: ease-in;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    width: auto;
+}
+ins, small {
+    line-height: @bodyBaseline;
+}
+kbd, samp {
+    line-height: @bodyBaseline;
+}
+hr {
+    background: darkgray;
+    border: none;
+    margin: @margin 0;
+    width: 100%;
+    height: 1px;
+    clear: both;
+}

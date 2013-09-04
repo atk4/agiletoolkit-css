@@ -1,0 +1,148 @@
+// ==========================================================
+// Mass Effect
+// ==========================================================
+
+* { 
+   -webkit-box-sizing: border-box; 
+   -moz-box-sizing: border-box; 
+   box-sizing: border-box;
+}
+.atk-form, p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// ==========================================================
+// Set up baseline                                        
+// ==========================================================
+
+body {
+    
+    // Optional type aliasing
+    text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+// ==========================================================
+// Components
+// ==========================================================
+
+.atk-box {
+    background: lightgray;
+    padding: @margin;
+    margin-bottom: @margin;
+    >h1, >h2, >h3, >h4, >h5, >h6 {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+.atk-buttons {
+  .ui-button, button {
+    + * {
+      margin-left: @margin/3;
+    }
+  }
+}
+.atk-flex {
+    display:table;
+    > div {display:table-cell;vertical-align:top;.box-sizing();}
+}
+
+ // Wrapper container 
+.atk-wrapper { .fixed-container(); }
+
+ // Paginator 
+.atk-paginator {
+    a, span {font-size:0.9em;text-decoration:none;padding:@padding/4 @padding/2;margin:0;display:inline-block;}
+    a.disabled {color:@lightGray;cursor:default;}
+    a:hover {color:;}
+}
+
+ // Growl 
+.atk-growl {
+    font-weight:bold;
+    position:fixed;
+    top:@margin*2;
+    right:@margin*2;
+    z-index:9999;
+    .opacity(80);
+    >div {
+        width:180px;
+        margin-top:@margin;
+        position:relative;
+        &:first-child {margin-top:0;}
+        .ui-icon-closethick {.opacity(0);@transition: opacity .2s;.transition(@transition);}
+        &:hover {.ui-icon-closethick {.opacity(100);}}
+    }
+}
+
+ // Notification 
+.atk-notification {
+    padding:@padding/2;
+    position:relative;
+    .atk-notification-text {
+        padding:0 20px;
+        >.ui-icon {position:absolute;top:@padding/1.8;left:@padding/2;}
+    }
+    >a.ui-icon-closethick {position:absolute;top:@padding/4;right:@padding/4;}
+}
+.atk-notification {.box-shadow(0 10px 20px @white inset);}
+.atk-growl>.atk-notification {
+    @shadow: 0 5px 10px fadeout(@shadowColor,60%),0 10px 20px @white inset;
+    .box-shadow(@shadow);
+}
+
+
+// ==========================================================
+// Selection Colors
+// ==========================================================
+
+::selection {
+    background: green;
+    color: blue;
+}
+::-moz-selection {
+    background: green;
+    color: blue;
+}
+img::selection {
+    background: transparent;
+}
+img::-moz-selection {
+    background: transparent;
+}
+body {
+    -webkit-tap-highlight-color: green;
+}
+
+// ==========================================================
+// Links
+// ==========================================================
+
+a {
+    color: @link;
+
+    &:hover, &:focus{
+        color: red;
+    }
+
+    // Optional transition
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+}
+
+
+// ==========================================================
+// Fixes
+// ==========================================================
+
+.row {
+    .clearfix;
+}

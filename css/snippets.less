@@ -1,0 +1,26 @@
+@import "../less/variables.less";
+@import "../less/mixins.less";
+
+body {
+	background: darken(white,5%);
+	padding: @margin*2;
+}
+section + section {
+	margin-top: @margin*2;
+}
+.atk-box {
+	background: #fff;
+	border: 1px solid #ddd;
+	.border-radius(3px);
+	h2:first-child {
+		color: darken(white,35%);
+		font-weight: normal;
+	}
+	.atk-box {
+		background: white;
+	}
+}
+
+#main-header {
+	margin-bottom: @margin*2;
+}
