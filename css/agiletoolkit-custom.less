@@ -1,0 +1,73 @@
+// Import
+@import "../less/variables.less";
+@import "../less/mixins.less";
+
+
+// Swatches
+@aqua: #3498db;
+@aquaDarken: #2980b9;
+@navy: #2c3e50;
+@smoke: #ecf0f1;
+@tomato: #e74c3c;
+
+
+// General
+body {
+	background: @smoke;
+}
+section {
+	>h2:first-child {
+		border-bottom: 1px solid @smoke;
+		color: darken(@smoke,15%);
+		font-weight: 300;
+		margin-top: 0;
+		padding-bottom: 0.5em;
+	}
+}
+section + section {
+	margin-top: @margin*4;
+}
+.atk-box {
+	// background: #fff;
+	// border: 1px solid #ddd;
+	// .border-radius(3px);
+	// h2:first-child {
+	// 	color: darken(white,35%);
+	// 	font-weight: normal;
+	// }
+	// .atk-box {
+	// 	background: white;
+	// }
+}
+
+// Styling
+strong {
+	font-weight: 500;
+}
+
+// Layout
+#atk-header {
+	background: @navy;
+	color: #fff;
+	font-weight: 300;
+	padding: @margin/2 @margin;
+	text-align: center;
+}
+#atk-nav {
+	background: @smoke;
+	border-right: 1px solid darken(@smoke, 10%);
+	padding-top: @margin*2;
+	padding-bottom: @margin*2;
+	ul {
+		margin: 0;
+	}
+}
+#atk-content {
+	background: #fff;
+	padding: @margin*2;
+}
+#atk-footer {
+	background: @smoke;
+	border-top: 1px solid darken(@smoke, 10%);
+	padding: @margin;
+}

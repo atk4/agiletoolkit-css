@@ -74,6 +74,35 @@
   }
 }
 
+// Layouts
+.flex() {
+  display:-moz-box; /* Firefox */
+  display:-webkit-box; /* Safari and Chrome */
+  display:-ms-flexbox; /* Internet Explorer 10 */
+  display:box;
+}
+.box-flex(@value:1.0) {
+  -moz-box-flex: @value; /* Firefox */
+  -webkit-box-flex: @value; /* Safari and Chrome */
+  -ms-flex: @value; /* Internet Explorer 10 */
+  box-flex: @value;
+}
+
+// Placeholder
+.placeholder(@color: red) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: @color;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: @color;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: @color;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: @color;
+  }
+}
 
 
 // CSS3 PROPERTIES

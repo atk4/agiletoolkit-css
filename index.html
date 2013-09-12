@@ -13,278 +13,451 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 		<link href="css/agiletoolkit.css" rel="stylesheet" type="text/css" />
-		<link href="css/snippets.css" rel="stylesheet" type="text/css" />
+		<link href="css/agiletoolkit-custom.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-		<header class="peta" id="main-header">AgileToolkit — <strong>Snippets</strong></header>
-		<div id="content" class="row">
-			<div class="col span_2">
-				<nav class="atk-box">
-					<ul>
-						<li><a href="#grid-system">Grid System</a></li>
-						<li><a href="#typography">Typography</a></li>
-						<li><a href="#forms">Forms</a></li>
-					</ul>
-				</nav> 
+        <!-- Content -->
+
+        <div class="atk-layout">
+			<div class="atk-layout-row">
+				<header id="atk-header" class="giga">AgileToolkit 4.3 &ndash; <strong>Snippets</strong></header>
 			</div>
-			<div class="col span_10">
-				<section class="atk-box">
-					<h2>Overview</h2>
-					<ul>
-						<li>Currently supports only Chrome on Mac</li>
-						<li>Component library needs to be independent from jQueryUI</li>
-						<li>Examples should be in contrast with explanation</li>
-						<li>
-							Upcoming Features &amp; Widgets:
-							<ul>
-								<li>✘ Clean syntax in LESS Files. Add explanation when importing less files (e.g. components.less — boxes, buttons, tables, etc.).</li>
-								<li style="color: red">✘ Typography
+			<div id="atk-main" class="atk-layout-row fluid">
+				<div id="atk-main-inner" class="atk-layout">
+					<nav id="atk-nav" class="atk-layout-column span_2 hecto">
+						<ul class="clean">
+							<li><a href="#grid-system">Grid System</a></li>
+							<li><a href="#typography">Typography</a></li>
+							<li><a href="#forms">Forms</a></li>
+							<li><a href="layout-default.html">Layout</a></li>
+							<li><a href="#colors">Colors &amp; Effects</a></li>
+							<li><a href="#widgets">Widgets</a></li>
+							<li><a href="#jqueryui">jQueryUI</a></li>
+						</ul>
+					</nav>
+					<div id="atk-content" class="atk-layout-column fluid">
+						<section>
+							<h2>Overview</h2>
+							<ul class="clean">
+								<li>Currently supports only Chrome on Mac</li>
+								<li>Component library needs to be independent from jQueryUI</li>
+								<li>Examples should be in contrast with explanation</li>
+								<li>
+									Upcoming Features &amp; Widgets:
 									<ul>
-										<li>✘ Explore Typeplate</li>
-										<li>✘ Decide on baseline</li>
-										<li>✘ Recode everything based on rem</li>
-										<li>✘ Create headings based on modular scale</li>
-										<li>✘ Giant heading (Can be used for titles like "404 Page")</li>
-										<li>✘ Text colors</li>
-										<li>✘ Text sizes for emphasis</li>
-									</ul>
-								</li>
-								<li>✘ Forms
-									<ul>
-										<li>✘ Regular (Labels aside)</li>
-										<li>✘ Stacked</li>
-										<li>✘ Inline</li>
-										<li>✘ Hidden Labels</li>
-										<li>✘ Multi-column</li>
-									</ul>
-								</li>
-								<li>✘ Tables
-									<ul>
-										<li>✘ Regular</li>
-										<li>✘ Zebra</li>
-										<li>✘ with Grid Panel</li>
-										<li>✘ with Dropdowns</li>
-										<li>✘ with Swipe Navs (Mailbox App alikes)?</li>
-										<li>✘ with Badges (as status indication)</li>
-									</ul>
-								</li>
-								<li>✘ Layouts
-									<ul>
-										<li>✘ With nav on top</li>
-										<li>✘ With nav aside</li>
-									</ul>
-								</li>
-								<li>✘ Pagination
-									<ul>
-										<li>✘ Regular (Minimalistic — "Next" and "Prev" labels could be displayed as arrows)</li>
-										<li>✘ Detailed (Text labels)</li>
-									</ul>
-								</li>
-								<li>✘ Listers (Compatible with Avatarboxes, Badges, etc.)
-								<br/><a href="http://pinterest.com/pin/340373684308456854/">Inspiration</a></li>
-								<li>✘ Avatarboxes (Avatars mixed with buttons, labels, etc.)</li>
-								<li>✘ Bootstrap's Grid System</li>
-								<li>✘ Integrate jQueryUI Widgets</li>
-								<li>✘ <a href="http://fortawesome.github.io/Font-Awesome/">SVG Icon Font</a></li>
-								<li>✘ Responsive
-									<ul>
-										<li>✘ Grid System</li>
-										<li>✘ Images</li>
-										<li>✘ Tables (Might be not compatible with Swipe Navs)</li>
-									</ul>
-								</li>
-								<li>✘ Components
-									<ul>
-										<li>✘ Background Colors (Should be synced with text)</li>
-										<li>✘ Badges</li>
-										<li>✘ Boxes</li>
-									</ul>
-								</li>
-								<li>Ideas
-									<ul>
-										<li>Badges over Images</li>
-										<li>Flipping cover for Images</li>
-										<li>Custom social share buttons</li>
+										<li>✘ Clean syntax in LESS Files. Add explanation when importing less files (e.g. components.less — boxes, buttons, tables, etc.).</li>
+										<li style="color: red">✘ Typography
+											<ul>
+												<li>✘ Explore Typeplate</li>
+												<li>✘ Decide on baseline</li>
+												<li>✘ Recode everything based on rem</li>
+												<li>✘ Create headings based on modular scale</li>
+												<li>✘ Giant heading (Can be used for titles like "404 Page")</li>
+												<li>✘ Text colors</li>
+												<li>✘ Text sizes for emphasis</li>
+											</ul>
+										</li>
+										<li>✘ Forms
+											<ul>
+												<li>✘ Regular (Labels aside)</li>
+												<li>✘ Stacked</li>
+												<li>✘ Inline</li>
+												<li>✘ Hidden Labels</li>
+												<li>✘ Multi-column</li>
+											</ul>
+										</li>
+										<li>✘ Tables
+											<ul>
+												<li>✘ Regular</li>
+												<li>✘ Zebra</li>
+												<li>✘ with Grid Panel</li>
+												<li>✘ with Dropdowns</li>
+												<li>✘ with Swipe Navs (Mailbox App alikes)?</li>
+												<li>✘ with Badges (as status indication)</li>
+											</ul>
+										</li>
+										<li>✘ Layouts
+											<ul>
+												<li>✘ With nav on top</li>
+												<li>✘ With nav aside</li>
+											</ul>
+										</li>
+										<li>✘ Pagination
+											<ul>
+												<li>✘ Regular (Minimalistic — "Next" and "Prev" labels could be displayed as arrows)</li>
+												<li>✘ Detailed (Text labels)</li>
+											</ul>
+										</li>
+										<li>✘ Listers (Compatible with Avatarboxes, Badges, etc.)
+										<br/><a href="http://pinterest.com/pin/340373684308456854/">Inspiration</a></li>
+										<li>✘ Avatarboxes (Avatars mixed with buttons, labels, etc.)</li>
+										<li>✘ Bootstrap's Grid System</li>
+										<li>✘ Integrate jQueryUI Widgets</li>
+										<li>✘ <a href="http://fortawesome.github.io/Font-Awesome/">SVG Icon Font</a></li>
+										<li>✘ Responsive
+											<ul>
+												<li>✘ Grid System</li>
+												<li>✘ Images</li>
+												<li>✘ Tables (Might be not compatible with Swipe Navs)</li>
+											</ul>
+										</li>
+										<li>✘ Components
+											<ul>
+												<li>✘ Background Colors (Should be synced with text)</li>
+												<li>✘ Badges</li>
+												<li>✘ Boxes</li>
+											</ul>
+										</li>
+										<li>Ideas
+											<ul>
+												<li>Badges over Images</li>
+												<li>Flipping cover for Images</li>
+												<li>Custom social share buttons</li>
+											</ul>
+										</li>
 									</ul>
 								</li>
 							</ul>
-						</li>
-					</ul>
-				</section>
-				<section class="atk-box" id="grid-system">
-					<h2>Grid System</h2>
-					<div class="row">
-						<div class="span_2 col">span_2</div>
-						<div class="span_2 col">span_2</div>
-						<div class="span_4 col">span_4</div>
-						<div class="span_2 col">span_2</div>
-						<div class="span_2 col">span_2</div>
-					</div>
-				</section>
-				<section class="atk-box" id="typography">
-					<h2>Typography</h2>
-					<h1>The Brown fox jumps over the fence.</h1>
-					<p class="author"><em>by</em> Sarah Smith</p>
-					<p class="intro">A snappy introduction that sets out the main argument for the piece. I'll cover the main ideas right here and hint at my conclusion without giving the game away completely.</p>
-					<p class="first">If you can keep your head when all about you are losing theirs and blaming it on you; If you can trust yourself when all men doubt you, but make allowance for their doubting too; if you can wait and not be tired by waiting,or being lied about, don't deal in lies, or being hated, don't give way to hating, and yet don't look too good, nor talk too wise; if you can dream &#8212; and not make dreams your master; if you can think &#8212; and not make thoughts your aim; if you can meet with Triumph and Disaster and treat those two impostors just the same.</p>
-					<p>If you can bear to hear the truth you've spoken twisted by knaves to make a trap for fools, or watch the things you gave your life to broken, and stoop and build 'em up with wornout tools; if you can make one heap of all your winnings and risk it on one turn of pitch-and-toss, and lose, and start again at your beginnings and never breathe a word about your loss.</p>
-					<h2>A second level heading</h2>
-					<p>If you can force your heart and nerve and sinew to serve your turn long after they are gone, and so hold on when there is nothing in you except the will which says to them; 'Hold on!'</p>
-					<blockquote>&#8220;If you can talk with crowds and keep your virtue, or walk with kings &#8212; nor lose the common touch.&#8221;<br style=""></blockquote>
-					<p>If neither foes nor loving friends can hurt you, if all men count with you, but none too much; if you can fill the unforgiving minute with sixty seconds' worth of distance run - yours is the Earth and everything that's in it, and - which is more - you'll be a man my son!</p>
-					<pre>body {
-					  font-family: "Minion-Pro-1", "Minion-Pro-2";
-					  font-size: 18px; /* Scale origin */
-					}</pre>
-					<p>"<em>If&#8212;</em>
-					" is a poem written in 1895 by British Nobel laureate Rudyard Kipling. It was first published in the "Brother Square Toes" chapter of Rewards and Fairies, Kipling's 1910 collection of short stories and poems. Like William Ernest Henley's "<em>Invictus</em>
-					", it is a memorable evocation of Victorian stoicism and the "stiff upper lip" that popular culture has made into a traditional British virtue. Its status is confirmed both by the number of parodies it has inspired, and by the widespread popularity it still enjoys amongst Britons. It is often voted Britain's favourite poem.</p>
-					<blockquote>&#8220;If you can meet with Triumph and Disaster and treat those two impostors just the same&#8221;</blockquote>
-					<p>This line is written on the wall of the Centre Court players' entrance at the British tennis tournament, Wimbledon, and a part of the poem was read in a promotional video for the Wimbledon 2008 gentleman's final by Roger Federer and Rafael Nadal.</p>
-					<p>According to Kipling in his autobiography Something of Myself, posthumously published in 1937, the poem was inspired by Dr. Leander Starr Jameson, who in 1895 led a raid by British forces against the Boers in South Africa, subsequently called the Jameson Raid. This defeat increased the tensions that ultimately led to the Second Boer War. The British press, however, portrayed Jameson as a hero in the middle of the disaster, and the actual defeat as a British victory. Jameson's life &#8212; and the connection to the poem &#8212; is covered in the book <em>The If Man</em>
-					<p>According to Kipling in his autobiography Something of Myself, posthumously published in 1937, the poem was inspired by Dr. Leander Starr Jameson, who in 1895 led a raid by British forces against the Boers in South Africa, subsequently called the Jameson Raid. This defeat increased the tensions that ultimately led to the Second Boer War. The British press, however, portrayed Jameson as a hero in the middle of the disaster, and the actual defeat as a British victory. Jameson's life &#8212; and the connection to the poem &#8212; is covered in the book <em>The If Man</em>.</p>
-					<p class="author">The text used in this fake article is from Rudyard Kipling's <em>If&#8212;</em></p>
-					<div class="row">
-						<div class="span_6 col">
-							<div class="peta">.peta</div>
-							<div class="tera">.tera</div>
-							<div class="giga">.giga</div>
-							<div class="mega">.mega</div>
-							<div class="kilo">.kilo</div>
-							<div class="hecto">.hecto</div>
-							<div class="deka">.deka</div>
-							<div class="deci">.deci</div>
-						</div>
-						<div class="span_6 col">
-							<h1>Heading h1</h1>
-							<h2>Heading h2</h2>
-							<h3>Heading h3</h3>
-							<h4>Heading h4</h4>
-							<h5>Heading h5</h5>
-							<h6>Heading h6</h6>
-						</div>
-					</div>
-				</section>
-				<section class="atk-box" id="forms">
-					<h2>Forms</h2>
-					<div class="row">
-						<div class="span_6 col">
-							<h3>Basic Form</h3>
-							<div class="atk-form wider-labels atk-block demo-bg">
+						</section>
+						<section id="grid-system">
+							<h2>Grid System</h2>
+							<div class="row">
+								<div class="span_2 col">span_2</div>
+								<div class="span_2 col">span_2</div>
+								<div class="span_4 col">span_4</div>
+								<div class="span_2 col">span_2</div>
+								<div class="span_2 col">span_2</div>
+							</div>
+						</section>
+						<section id="typography">
+							<h2>Typography</h2>
+							<h1>The Brown fox jumps over the fence.</h1>
+							<p class="author"><em>by</em> Sarah Smith</p>
+							<p class="intro">A snappy introduction that sets out the main argument for the piece. I'll cover the main ideas right here and hint at my conclusion without giving the game away completely.</p>
+							<p class="first">If you can keep your head when all about you are losing theirs and blaming it on you; If you can trust yourself when all men doubt you, but make allowance for their doubting too; if you can wait and not be tired by waiting,or being lied about, don't deal in lies, or being hated, don't give way to hating, and yet don't look too good, nor talk too wise; if you can dream &#8212; and not make dreams your master; if you can think &#8212; and not make thoughts your aim; if you can meet with Triumph and Disaster and treat those two impostors just the same.</p>
+							<p>If you can bear to hear the truth you've spoken twisted by knaves to make a trap for fools, or watch the things you gave your life to broken, and stoop and build 'em up with wornout tools; if you can make one heap of all your winnings and risk it on one turn of pitch-and-toss, and lose, and start again at your beginnings and never breathe a word about your loss.</p>
+							<h2>A second level heading</h2>
+							<p>If you can force your heart and nerve and sinew to serve your turn long after they are gone, and so hold on when there is nothing in you except the will which says to them; 'Hold on!'</p>
+							<blockquote>&#8220;If you can talk with crowds and keep your virtue, or walk with kings &#8212; nor lose the common touch.&#8221;<br style=""></blockquote>
+							<p>If neither foes nor loving friends can hurt you, if all men count with you, but none too much; if you can fill the unforgiving minute with sixty seconds' worth of distance run - yours is the Earth and everything that's in it, and - which is more - you'll be a man my son!</p>
+							<pre>body {
+							  font-family: "Minion-Pro-1", "Minion-Pro-2";
+							  font-size: 18px; /* Scale origin */
+							}</pre>
+							<p>"<em>If&#8212;</em>
+							" is a poem written in 1895 by British Nobel laureate Rudyard Kipling. It was first published in the "Brother Square Toes" chapter of Rewards and Fairies, Kipling's 1910 collection of short stories and poems. Like William Ernest Henley's "<em>Invictus</em>
+							", it is a memorable evocation of Victorian stoicism and the "stiff upper lip" that popular culture has made into a traditional British virtue. Its status is confirmed both by the number of parodies it has inspired, and by the widespread popularity it still enjoys amongst Britons. It is often voted Britain's favourite poem.</p>
+							<blockquote>&#8220;If you can meet with Triumph and Disaster and treat those two impostors just the same&#8221;</blockquote>
+							<p>This line is written on the wall of the Centre Court players' entrance at the British tennis tournament, Wimbledon, and a part of the poem was read in a promotional video for the Wimbledon 2008 gentleman's final by Roger Federer and Rafael Nadal.</p>
+							<p>According to Kipling in his autobiography Something of Myself, posthumously published in 1937, the poem was inspired by Dr. Leander Starr Jameson, who in 1895 led a raid by British forces against the Boers in South Africa, subsequently called the Jameson Raid. This defeat increased the tensions that ultimately led to the Second Boer War. The British press, however, portrayed Jameson as a hero in the middle of the disaster, and the actual defeat as a British victory. Jameson's life &#8212; and the connection to the poem &#8212; is covered in the book <em>The If Man</em>
+							<p>According to Kipling in his autobiography Something of Myself, posthumously published in 1937, the poem was inspired by Dr. Leander Starr Jameson, who in 1895 led a raid by British forces against the Boers in South Africa, subsequently called the Jameson Raid. This defeat increased the tensions that ultimately led to the Second Boer War. The British press, however, portrayed Jameson as a hero in the middle of the disaster, and the actual defeat as a British victory. Jameson's life &#8212; and the connection to the poem &#8212; is covered in the book <em>The If Man</em>.</p>
+							<p class="author">The text used in this fake article is from Rudyard Kipling's <em>If&#8212;</em></p>
+							<div class="row">
+								<div class="span_6 col">
+									<div class="peta">.peta</div>
+									<div class="tera">.tera</div>
+									<div class="giga">.giga</div>
+									<div class="mega">.mega</div>
+									<div class="kilo">.kilo</div>
+									<div class="hecto">.hecto</div>
+									<div class="deka">.deka</div>
+									<div class="deci">.deci</div>
+								</div>
+								<div class="span_6 col">
+									<h1>Heading h1</h1>
+									<h2>Heading h2</h2>
+									<h3>Heading h3</h3>
+									<h4>Heading h4</h4>
+									<h5>Heading h5</h5>
+									<h6>Heading h6</h6>
+								</div>
+							</div>
+						</section>
+						<section id="forms">
+							<h2>Forms</h2>
+							<div class="row">
+								<div class="span_6 col">
+									<h3>Basic Form</h3>
+									<div class="atk-form wider-labels atk-block demo-bg">
+										<form>
+											<fieldset>
+												<div class="atk-form-row">
+													<label>Input:</label>
+													<div class="atk-form-field">
+														<input type="text">
+													</div>
+												</div>
+												<div class="atk-form-row has-error">
+													<label>Input with Button:</label>
+													<div class="atk-form-field">
+														<div class="input-row">
+															<div class="input-cell expanded"><input type="text"></div>
+															<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
+														</div>
+														<ins>Field Comment</ins>
+														<div class="atk-form-error">Field Error</div>
+													</div>
+												</div>
+												<div class="atk-form-row has-error">
+													<label>Input with Button:</label>
+													<div class="atk-form-field">
+														<div class="input-row">
+															<div class="input-cell expanded"><input type="text"></div>
+															<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
+														</div>
+														<div class="atk-form-error">Field Error</div>
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Input with Button:</label>
+													<div class="atk-form-field">
+														<div class="input-row">
+															<div class="input-cell expanded"><input type="text"></div>
+															<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
+														</div>
+														<ins>Field Comment</ins>
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Password:</label>
+													<div class="atk-form-field">
+														<input type="password">
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Retype Password:</label>
+													<div class="atk-form-field">
+														<input type="password">
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>File:</label>
+													<div class="atk-form-field">
+														<input type="file">
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Textarea:</label>
+													<div class="atk-form-field">
+														<textarea></textarea>
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Select:</label>
+													<div class="atk-form-field">
+														<select><option>Option #1</option><option>Option #2</option><option>Option #3</option></select>
+													</div>
+												</div>
+											</fieldset>
+											<fieldset>
+												<legend>This is Legend</legend>
+												<div class="atk-form-row">
+													<label>Checkboxes:</label>
+													<ul class="atk-form-field atk-form-options">
+														<li><input type="checkbox"><label>Chocolate</label></li>
+														<li><input type="checkbox"><label>Strawberry</label></li>
+														<li><input type="checkbox"><label>Vanilla</label></li>
+														<li><input type="checkbox"><label>Chocolate</label></li>
+														<li><input type="checkbox"><label>Strawberry</label></li>
+														<li><input type="checkbox"><label>Vanilla</label></li>
+														<li><input type="checkbox"><label>Chocolate</label></li>
+														<li><input type="checkbox"><label>Strawberry</label></li>
+														<li><input type="checkbox"><label>Vanilla</label></li>
+													</ul>
+												</div>
+												<div class="atk-form-row">
+													<label>Checkboxes Stacked:</label>
+													<ul class="atk-form-field atk-form-options stacked">
+														<li><input type="checkbox"><label>Chocolate</label></li>
+														<li><input type="checkbox"><label>Strawberry</label></li>
+														<li><input type="checkbox"><label>Vanilla</label></li>
+													</ul>
+												</div>
+												<div class="atk-form-row">
+													<label>Radio:</label>
+													<ul class="atk-form-field atk-form-options">
+														<li><input type="radio"><label>Blue</label></li>
+														<li><input type="radio"><label>Red</label></li>
+														<li><input type="radio"><label>Yellow</label></li>
+													</ul>
+												</div>
+												<div class="atk-form-row">
+													<label>Radio Stacked:</label>
+													<ul class="atk-form-field atk-form-options stacked">
+														<li><input type="radio"><label>Blue</label></li>
+														<li><input type="radio"><label>Red</label></li>
+														<li><input type="radio"><label>Yellow</label></li>
+													</ul>
+												</div>
+											</fieldset>
+											<div class="atk-buttons">
+												<button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="span_6 col">
+									<h3><em>Form</em> .stacked</h3>
+									<div class="atk-form stacked atk-block demo-bg">
+										<form>
+											<fieldset>
+												<div class="atk-form-row">
+													<label>Input:</label>
+													<div class="atk-form-field">
+														<input type="text">
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Input with Button:</label>
+													<div class="atk-form-field">
+														<div class="input-row">
+															<div class="input-cell expanded"><input type="text"></div>
+															<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
+														</div>
+														<ins>Field Comment</ins>
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Password:</label>
+													<div class="atk-form-field">
+														<input type="password">
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>File:</label>
+													<div class="atk-form-field">
+														<input type="file">
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Textarea:</label>
+													<div class="atk-form-field">
+														<textarea></textarea>
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Select:</label>
+													<div class="atk-form-field">
+														<select><option>Option #1</option><option>Option #2</option><option>Option #3</option></select>
+													</div>
+												</div>
+												<div class="atk-form-row">
+													<label>Checkboxes:</label>
+													<ul class="atk-form-field atk-form-options">
+														<li><input type="checkbox"><label>Chocolate</label></li>
+														<li><input type="checkbox"><label>Strawberry</label></li>
+														<li><input type="checkbox"><label>Vanilla</label></li>
+														<li><input type="checkbox"><label>Cranberry</label></li>
+														<li><input type="checkbox"><label>Blackberry</label></li>
+														<li><input type="checkbox"><label>Blueberry</label></li>
+													</ul>
+												</div>
+												<div class="atk-form-row">
+													<label>Checkboxes Stacked:</label>
+													<ul class="atk-form-field atk-form-options stacked">
+														<li><input type="checkbox"><label>Chocolate</label></li>
+														<li><input type="checkbox"><label>Strawberry</label></li>
+														<li><input type="checkbox"><label>Vanilla</label></li>
+													</ul>
+												</div>
+												<div class="atk-form-row">
+													<label>Radio:</label>
+													<ul class="atk-form-field atk-form-options">
+														<li><input type="radio"><label>Blue</label></li>
+														<li><input type="radio"><label>Red</label></li>
+														<li><input type="radio"><label>Yellow</label></li>
+														<li><input type="radio"><label>Violet</label></li>
+														<li><input type="radio"><label>Cyan</label></li>
+														<li><input type="radio"><label>Orange</label></li>
+														<li><input type="radio"><label>Black</label></li>
+														<li><input type="radio"><label>White</label></li>
+													</ul>
+												</div>
+												<div class="atk-form-row">
+													<label>Radio Stacked:</label>
+													<ul class="atk-form-field atk-form-options stacked">
+														<li><input type="radio"><label>Blue</label></li>
+														<li><input type="radio"><label>Red</label></li>
+														<li><input type="radio"><label>Yellow</label></li>
+													</ul>
+												</div>
+											</fieldset>
+											<div class="atk-buttons">
+												<button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button>
+											</div>
+										</form>
+									</div>
+								</div><!-- Span6 ends -->
+							</div>
+							<h3>Inline Forms <em>based on Grid System</em></h3>
+							<div class="atk-form stacked  atk-block demo-bg">
 								<form>
-									<fieldset>
-										<div class="atk-form-row">
+									<fieldset class="row">
+										<div class="atk-form-row span_2 col">
 											<label>Input:</label>
 											<div class="atk-form-field">
 												<input type="text">
 											</div>
 										</div>
-										<div class="atk-form-row has-error">
+										<div class="atk-form-row span_6 col">
 											<label>Input with Button:</label>
 											<div class="atk-form-field">
 												<div class="input-row">
 													<div class="input-cell expanded"><input type="text"></div>
 													<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
 												</div>
-												<ins>Field Comment</ins>
-												<div class="atk-form-error">Field Error</div>
 											</div>
 										</div>
-										<div class="atk-form-row has-error">
-											<label>Input with Button:</label>
-											<div class="atk-form-field">
-												<div class="input-row">
-													<div class="input-cell expanded"><input type="text"></div>
-													<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
-												</div>
-												<div class="atk-form-error">Field Error</div>
-											</div>
-										</div>
-										<div class="atk-form-row">
-											<label>Input with Button:</label>
-											<div class="atk-form-field">
-												<div class="input-row">
-													<div class="input-cell expanded"><input type="text"></div>
-													<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
-												</div>
-												<ins>Field Comment</ins>
-											</div>
-										</div>
-										<div class="atk-form-row">
+										<div class="atk-form-row span_4 col">
 											<label>Password:</label>
 											<div class="atk-form-field">
 												<input type="password">
 											</div>
 										</div>
-										<div class="atk-form-row">
-											<label>Retype Password:</label>
+									</fieldset>
+									<fieldset class="row">
+										<div class="atk-form-row span_2 col">
+											<label>Input:</label>
+											<div class="atk-form-field">
+												<input type="text">
+											</div>
+										</div>
+										<div class="atk-form-row span_2 col">
+											<label>Input with Button:</label>
+											<div class="atk-form-field">
+												<div class="input-row">
+													<div class="input-cell expanded"><input type="text"></div>
+													<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
+												</div>
+											</div>
+										</div>
+										<div class="atk-form-row span_2 col">
+											<label>Password:</label>
 											<div class="atk-form-field">
 												<input type="password">
 											</div>
 										</div>
-										<div class="atk-form-row">
-											<label>File:</label>
+										<div class="atk-form-row span_2 col">
+											<label>Password:</label>
 											<div class="atk-form-field">
-												<input type="file">
+												<input type="password">
 											</div>
 										</div>
-										<div class="atk-form-row">
-											<label>Textarea:</label>
+										<div class="atk-form-row span_2 col">
+											<label>Password:</label>
 											<div class="atk-form-field">
-												<textarea></textarea>
+												<input type="password">
 											</div>
 										</div>
-										<div class="atk-form-row">
-											<label>Select:</label>
+										<div class="atk-form-row span_2 col">
+											<label>Password:</label>
 											<div class="atk-form-field">
-												<select><option>Option #1</option><option>Option #2</option><option>Option #3</option></select>
+												<input type="password">
 											</div>
-										</div>
-									</fieldset>
-									<fieldset>
-										<legend>This is Legend</legend>
-										<div class="atk-form-row">
-											<label>Checkboxes:</label>
-											<ul class="atk-form-field atk-form-options">
-												<li><input type="checkbox"><label>Chocolate</label></li>
-												<li><input type="checkbox"><label>Strawberry</label></li>
-												<li><input type="checkbox"><label>Vanilla</label></li>
-												<li><input type="checkbox"><label>Chocolate</label></li>
-												<li><input type="checkbox"><label>Strawberry</label></li>
-												<li><input type="checkbox"><label>Vanilla</label></li>
-												<li><input type="checkbox"><label>Chocolate</label></li>
-												<li><input type="checkbox"><label>Strawberry</label></li>
-												<li><input type="checkbox"><label>Vanilla</label></li>
-											</ul>
-										</div>
-										<div class="atk-form-row">
-											<label>Checkboxes Stacked:</label>
-											<ul class="atk-form-field atk-form-options stacked">
-												<li><input type="checkbox"><label>Chocolate</label></li>
-												<li><input type="checkbox"><label>Strawberry</label></li>
-												<li><input type="checkbox"><label>Vanilla</label></li>
-											</ul>
-										</div>
-										<div class="atk-form-row">
-											<label>Radio:</label>
-											<ul class="atk-form-field atk-form-options">
-												<li><input type="radio"><label>Blue</label></li>
-												<li><input type="radio"><label>Red</label></li>
-												<li><input type="radio"><label>Yellow</label></li>
-											</ul>
-										</div>
-										<div class="atk-form-row">
-											<label>Radio Stacked:</label>
-											<ul class="atk-form-field atk-form-options stacked">
-												<li><input type="radio"><label>Blue</label></li>
-												<li><input type="radio"><label>Red</label></li>
-												<li><input type="radio"><label>Yellow</label></li>
-											</ul>
 										</div>
 									</fieldset>
 									<div class="atk-buttons">
@@ -292,16 +465,64 @@
 									</div>
 								</form>
 							</div>
-						</div>
-						<div class="span_6 col">
-							<h3><em>Form</em> .stacked</h3>
-							<div class="atk-form stacked atk-block demo-bg">
+							<div class="atk-form stacked row atk-block demo-bg">
 								<form>
-									<fieldset>
+									<fieldset class="span_9 col">
+										<div class="atk-form-row span_2 col">
+											<label>Input:</label>
+											<div class="atk-form-field">
+												<input type="text">
+											</div>
+										</div>
+										<div class="atk-form-row span_6 col">
+											<label>Input with Button:</label>
+											<div class="atk-form-field">
+												<div class="input-row">
+													<div class="input-cell expanded"><input type="text"></div>
+													<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
+												</div>
+											</div>
+										</div>
+										<div class="atk-form-row span_4 col">
+											<label>Password:</label>
+											<div class="atk-form-field">
+												<input type="password">
+											</div>
+										</div>
+									</fieldset>
+									<div class="atk-buttons span_3 col"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button></div>
+								</form>
+							</div>
+							<div class="atk-form row labels-right  atk-block demo-bg">
+								<form>
+									<fieldset class="span_9 col">
+										<div class="atk-form-row span_6 col">
+											<label>Username:</label>
+											<div class="atk-form-field">
+												<input type="text">
+											</div>
+										</div>
+										<div class="atk-form-row span_6 col">
+											<label>Password:</label>
+											<div class="atk-form-field">
+												<input type="password">
+											</div>
+										</div>
+									</fieldset>
+									<div class="atk-buttons span_3 col">
+										<button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button>
+									</div>
+								</form>
+							</div>
+							<h3>Multi-Column Form <em>based on Grid System</em></h3>
+							<div class="atk-form stacked wider-labels row  atk-block demo-bg">
+								<form>
+									<fieldset class="span_4 col">
 										<div class="atk-form-row">
 											<label>Input:</label>
 											<div class="atk-form-field">
 												<input type="text">
+												<ins>Field's Comment</ins>
 											</div>
 										</div>
 										<div class="atk-form-row">
@@ -324,12 +545,6 @@
 											<label>File:</label>
 											<div class="atk-form-field">
 												<input type="file">
-											</div>
-										</div>
-										<div class="atk-form-row">
-											<label>Textarea:</label>
-											<div class="atk-form-field">
-												<textarea></textarea>
 											</div>
 										</div>
 										<div class="atk-form-row">
@@ -379,312 +594,192 @@
 											</ul>
 										</div>
 									</fieldset>
+									<fieldset class="span_4 col">
+										<div class="atk-form-row">
+											<label>Input:</label>
+											<div class="atk-form-field">
+												<input type="text">
+												<ins>Field's Comment</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Input with Button:</label>
+											<div class="atk-form-field">
+												<div class="input-row span9">
+													<div class="input-cell expanded"><input type="text"></div>
+													<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" id="demo-datepicker" role="button" aria-disabled="false" title="demo"><span class="ui-button-icon-primary ui-icon ui-icon-calendar"></span><span class="ui-button-text">demo</span></button></div>
+												</div>
+												<ins>Class ".span9"</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Price:</label>
+											<div class="atk-form-field">
+												<input type="text" class="span_3 col">
+												<ins>Class ".span3"</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Textarea 1:</label>
+											<div class="atk-form-field span_8 col">
+												<textarea></textarea>
+												<ins>Class ".span8"</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Textarea 2:</label>
+											<div class="atk-form-field">
+												<textarea style="height:96px" class="span6"></textarea><ins>Class ".span6"</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Textarea 3:</label>
+											<div class="atk-form-field">
+												<textarea style="height:96px" class="span4"></textarea><ins>Class ".span4"</ins>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="span_4 col">
+										<div class="atk-form-row">
+											<label>Multiple Inputs:</label>
+											<div class="atk-form-field">
+												<input type="text" class="span_3"><input type="text" class="span_3"><input type="text" class="span_3">
+												<ins>Classes ".span3" + ".span3" + ".span3"</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Input with the button on its left:</label>
+											<div class="atk-form-field">
+												<div class="input-row span8">
+													<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">+</span></button></div>
+													<div class="input-cell expanded"><input type="text"></div>
+												</div>
+												<ins>Class ".span8"</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Price:</label>
+											<div class="atk-form-field">
+												<input type="text" class="span_3">
+												<ins>Class ".span3"</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Textarea 1:</label>
+											<div class="atk-form-field">
+												<textarea style="height:96px" class="span_6"></textarea><ins>Class ".span6"</ins>
+											</div>
+										</div>
+										<div class="atk-form-row">
+											<label>Textarea 2:</label>
+											<div class="atk-form-field">
+												<textarea style="height:96px" class="span_3"></textarea><ins>Class ".span3"</ins>
+											</div>
+										</div>
+									</fieldset>
 									<div class="atk-buttons">
 										<button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button>
 									</div>
 								</form>
 							</div>
-						</div><!-- Span6 ends -->
-					</div>
-					<h3>Inline Forms <em>based on Grid System</em></h3>
-					<div class="atk-form stacked  atk-block demo-bg">
-						<form>
-							<fieldset class="row">
-								<div class="atk-form-row span_2 col">
-									<label>Input:</label>
-									<div class="atk-form-field">
-										<input type="text">
+						</section>
+						<section id="colors">
+							<h2>Colors & Effects</h2>
+							<h3>Color Variety</h3>
+							<div class="atk-color-yellow">Yellow</div>
+							<div class="atk-color-pink">Pink</div>
+							<div class="atk-color-green">Green</div>
+							<div class="atk-color-blue">Blue</div>
+							<h3>Effects</h3>
+							<div class="atk-effect-danger">Danger</div>
+							<div class="atk-effect-warning">Warning</div>
+							<div class="atk-effect-success">Success</div>
+							<div class="atk-effect-info">Info</div>
+							<div class="atk-effect-primary">Primary</div>
+							<div class="atk-effect-disabled">Disabled</div>
+						</section>
+						<section id="widgets">
+							<h2>Widgets</h2>
+							<h3>Media Blocks</h3>
+							<p>Examples are combined with <a href="#colors">.atk-color-*</a> and .atk-box
+							<div class="row">
+								<div class="span_6 col">
+									<div class="atk-media-block center atk-box atk-color-green">
+										<div class="atk-media">
+											<img src="temp/apples.jpg" alt="Apples" />
+										</div>
+										<div class="atk-content">
+											<h4>Apples</h4>
+											<p>Donec dolor sapien, sollicitudin in erat ac, pellentesque venenatis orci. Nullam faucibus lacus quis sem fermentum adipiscing.</p>
+											<hr class="small" />
+											<a href="#">Download</a>
+										</div>
 									</div>
-								</div>
-								<div class="atk-form-row span_6 col">
-									<label>Input with Button:</label>
-									<div class="atk-form-field">
-										<div class="input-row">
-											<div class="input-cell expanded"><input type="text"></div>
-											<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
+									<div class="atk-media-block center atk-box atk-color-pink">
+										<div class="atk-media">
+											<img src="temp/tomatoes.jpg" alt="Tomatoes" />
+										</div>
+										<div class="atk-content">
+											<h4>Tomatoes</h4>
+											<p>Donec dolor sapien, sollicitudin in erat ac, pellentesque venenatis orci. Nullam faucibus lacus quis sem fermentum adipiscing.</p>
+											<hr class="small" />
+											<a href="#">Download</a>
 										</div>
 									</div>
 								</div>
-								<div class="atk-form-row span_4 col">
-									<label>Password:</label>
-									<div class="atk-form-field">
-										<input type="password">
+								<div class="span6 col">
+									<div class="atk-media-block center atk-box atk-color-yellow">
+										<div class="atk-media">
+											<img src="temp/bananas.jpg" alt="Bananas" />
+										</div>
+										<div class="atk-content">
+											<h4>Bananas</h4>
+											<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris at venenatis justo.</p>
+											<hr class="small" />
+											<a href="#">Download</a>
+										</div>
 									</div>
-								</div>
-							</fieldset>
-							<fieldset class="row">
-								<div class="atk-form-row span_2 col">
-									<label>Input:</label>
-									<div class="atk-form-field">
-										<input type="text">
-									</div>
-								</div>
-								<div class="atk-form-row span_2 col">
-									<label>Input with Button:</label>
-									<div class="atk-form-field">
-										<div class="input-row">
-											<div class="input-cell expanded"><input type="text"></div>
-											<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
+									<div class="atk-media-block center atk-box atk-color-blue">
+										<div class="atk-media">
+											<img src="temp/blueberries.jpg" alt="Blueberries" />
+										</div>
+										<div class="atk-content">
+											<h4>Blueberries</h4>
+											<p>Nunc id erat sit amet sapien convallis ultricies sed vel est. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+											<hr class="small" />
+											<a href="#">Download</a>
 										</div>
 									</div>
 								</div>
-								<div class="atk-form-row span_2 col">
-									<label>Password:</label>
-									<div class="atk-form-field">
-										<input type="password">
-									</div>
-								</div>
-								<div class="atk-form-row span_2 col">
-									<label>Password:</label>
-									<div class="atk-form-field">
-										<input type="password">
-									</div>
-								</div>
-								<div class="atk-form-row span_2 col">
-									<label>Password:</label>
-									<div class="atk-form-field">
-										<input type="password">
-									</div>
-								</div>
-								<div class="atk-form-row span_2 col">
-									<label>Password:</label>
-									<div class="atk-form-field">
-										<input type="password">
-									</div>
-								</div>
-							</fieldset>
-							<div class="atk-buttons">
-								<button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button>
 							</div>
-						</form>
+						</section>
+						<section id="jqueryui">
+							<h2>jQueryUI</h2>
+							<h3>Dialogs</h3>
+							<button>Show Dialog</button>
+							<button>Show .atk-dialog-minimal</button>
+							<h3>Tabs</h3>
+							<p>---</p>
+							<h3>Accordion</h3>
+							<p>---</p>
+							<h3>Sliders</h3>
+							<p>---</p>
+						</section>
 					</div>
-					<div class="atk-form stacked row atk-block demo-bg">
-						<form>
-							<fieldset class="span_9 col">
-								<div class="atk-form-row span_2 col">
-									<label>Input:</label>
-									<div class="atk-form-field">
-										<input type="text">
-									</div>
-								</div>
-								<div class="atk-form-row span_6 col">
-									<label>Input with Button:</label>
-									<div class="atk-form-field">
-										<div class="input-row">
-											<div class="input-cell expanded"><input type="text"></div>
-											<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
-										</div>
-									</div>
-								</div>
-								<div class="atk-form-row span_4 col">
-									<label>Password:</label>
-									<div class="atk-form-field">
-										<input type="password">
-									</div>
-								</div>
-							</fieldset>
-							<div class="atk-buttons span_3 col"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button></div>
-						</form>
-					</div>
-					<div class="atk-form row labels-right  atk-block demo-bg">
-						<form>
-							<fieldset class="span_9 col">
-								<div class="atk-form-row span_6 col">
-									<label>Username:</label>
-									<div class="atk-form-field">
-										<input type="text">
-									</div>
-								</div>
-								<div class="atk-form-row span_6 col">
-									<label>Password:</label>
-									<div class="atk-form-field">
-										<input type="password">
-									</div>
-								</div>
-							</fieldset>
-							<div class="atk-buttons span_3 col">
-								<button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button>
-							</div>
-						</form>
-					</div>
-					<h3>Multi-Column Form <em>based on Grid System</em></h3>
-					<div class="atk-form stacked wider-labels row  atk-block demo-bg">
-						<form>
-							<fieldset class="span_4 col">
-								<div class="atk-form-row">
-									<label>Input:</label>
-									<div class="atk-form-field">
-										<input type="text">
-										<ins>Field's Comment</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Input with Button:</label>
-									<div class="atk-form-field">
-										<div class="input-row">
-											<div class="input-cell expanded"><input type="text"></div>
-											<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Button</span></button></div>
-										</div>
-										<ins>Field Comment</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Password:</label>
-									<div class="atk-form-field">
-										<input type="password">
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>File:</label>
-									<div class="atk-form-field">
-										<input type="file">
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Select:</label>
-									<div class="atk-form-field">
-										<select><option>Option #1</option><option>Option #2</option><option>Option #3</option></select>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Checkboxes:</label>
-									<ul class="atk-form-field atk-form-options">
-										<li><input type="checkbox"><label>Chocolate</label></li>
-										<li><input type="checkbox"><label>Strawberry</label></li>
-										<li><input type="checkbox"><label>Vanilla</label></li>
-										<li><input type="checkbox"><label>Cranberry</label></li>
-										<li><input type="checkbox"><label>Blackberry</label></li>
-										<li><input type="checkbox"><label>Blueberry</label></li>
-									</ul>
-								</div>
-								<div class="atk-form-row">
-									<label>Checkboxes Stacked:</label>
-									<ul class="atk-form-field atk-form-options stacked">
-										<li><input type="checkbox"><label>Chocolate</label></li>
-										<li><input type="checkbox"><label>Strawberry</label></li>
-										<li><input type="checkbox"><label>Vanilla</label></li>
-									</ul>
-								</div>
-								<div class="atk-form-row">
-									<label>Radio:</label>
-									<ul class="atk-form-field atk-form-options">
-										<li><input type="radio"><label>Blue</label></li>
-										<li><input type="radio"><label>Red</label></li>
-										<li><input type="radio"><label>Yellow</label></li>
-										<li><input type="radio"><label>Violet</label></li>
-										<li><input type="radio"><label>Cyan</label></li>
-										<li><input type="radio"><label>Orange</label></li>
-										<li><input type="radio"><label>Black</label></li>
-										<li><input type="radio"><label>White</label></li>
-									</ul>
-								</div>
-								<div class="atk-form-row">
-									<label>Radio Stacked:</label>
-									<ul class="atk-form-field atk-form-options stacked">
-										<li><input type="radio"><label>Blue</label></li>
-										<li><input type="radio"><label>Red</label></li>
-										<li><input type="radio"><label>Yellow</label></li>
-									</ul>
-								</div>
-							</fieldset>
-							<fieldset class="span_4 col">
-								<div class="atk-form-row">
-									<label>Input:</label>
-									<div class="atk-form-field">
-										<input type="text">
-										<ins>Field's Comment</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Input with Button:</label>
-									<div class="atk-form-field">
-										<div class="input-row span9">
-											<div class="input-cell expanded"><input type="text"></div>
-											<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" id="demo-datepicker" role="button" aria-disabled="false" title="demo"><span class="ui-button-icon-primary ui-icon ui-icon-calendar"></span><span class="ui-button-text">demo</span></button></div>
-										</div>
-										<ins>Class ".span9"</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Price:</label>
-									<div class="atk-form-field">
-										<input type="text" class="span_3 col">
-										<ins>Class ".span3"</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Textarea 1:</label>
-									<div class="atk-form-field span_8 col">
-										<textarea></textarea>
-										<ins>Class ".span8"</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Textarea 2:</label>
-									<div class="atk-form-field">
-										<textarea style="height:96px" class="span6"></textarea><ins>Class ".span6"</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Textarea 3:</label>
-									<div class="atk-form-field">
-										<textarea style="height:96px" class="span4"></textarea><ins>Class ".span4"</ins>
-									</div>
-								</div>
-							</fieldset>
-							<fieldset class="span_4 col">
-								<div class="atk-form-row">
-									<label>Multiple Inputs:</label>
-									<div class="atk-form-field">
-										<input type="text" class="span_3"><input type="text" class="span_3"><input type="text" class="span_3">
-										<ins>Classes ".span3" + ".span3" + ".span3"</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Input with the button on its left:</label>
-									<div class="atk-form-field">
-										<div class="input-row span8">
-											<div class="input-cell"><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">+</span></button></div>
-											<div class="input-cell expanded"><input type="text"></div>
-										</div>
-										<ins>Class ".span8"</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Price:</label>
-									<div class="atk-form-field">
-										<input type="text" class="span_3">
-										<ins>Class ".span3"</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Textarea 1:</label>
-									<div class="atk-form-field">
-										<textarea style="height:96px" class="span_6"></textarea><ins>Class ".span6"</ins>
-									</div>
-								</div>
-								<div class="atk-form-row">
-									<label>Textarea 2:</label>
-									<div class="atk-form-field">
-										<textarea style="height:96px" class="span_3"></textarea><ins>Class ".span3"</ins>
-									</div>
-								</div>
-							</fieldset>
-							<div class="atk-buttons">
-								<button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button class="demo-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button>
-							</div>
-						</form>
-					</div>
-				</section>
+				</div>
+			</div>
+			<div class="atk-layout-row">
+				<footer id="atk-footer">
+					&copy; Agile Toolkit 2013
+				</footer>
 			</div>
 		</div>
-		<footer>
-			&copy; AgileToolkit 2013
-		</footer>
+		<!-- /Content -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/demo-minified.js"></script>
+        <script src="js/atk-helpers-min.js"></script>
+        <script src="js/demo-min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

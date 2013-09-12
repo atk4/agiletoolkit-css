@@ -7,23 +7,12 @@
    -moz-box-sizing: border-box; 
    box-sizing: border-box;
 }
+
+// This part should be rewised
 .atk-form, p {
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-
-// ==========================================================
-// Set up baseline                                        
-// ==========================================================
-
-body {
-    
-    // Optional type aliasing
-    text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
 }
 
 
@@ -97,6 +86,120 @@ body {
     .box-shadow(@shadow);
 }
 
+// Dialog Minimal
+.ui-dialog {
+    &.atk-dialog-minimal {
+        background: none;
+        border: none;
+        box-shadow: 0 0 100px rgba(0,0,0,0.25);
+        .ui-dialog-titlebar.ui-widget-header {
+            .kilo;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            color: #000;
+            font-weight: 300;
+            margin: 0;
+            padding: @margin @margin 0 @margin;
+            .ui-dialog-titlebar-close {
+                display: none;
+            }
+        }
+        .ui-dialog-content.ui-widget-content {
+            background: #fff;
+            padding: @margin/2 @margin @margin @margin;
+            p {
+                margin-bottom: @margin/1.5;
+            }
+            .atk-form {
+                fieldset {
+                    margin: 0;
+                }
+                .atk-form-row {
+                    label {
+                        display: none;
+                    }
+                    .atk-form-field input {
+                        .deca;
+                        background: gray;
+                        border-color: black;
+                        // margin-left: -@margin;
+                        padding: @margin/2;
+                        .placeholder(red);
+                        .transition(.3s);
+                        &:focus {
+                            background: #fff;
+                        }
+                    }
+                    + .atk-form-row {
+                        margin-top: 0;
+                        // .atk-form-field input {
+                        //  border-top: none;
+                        // }
+                    }
+                }
+                .atk-buttons {
+                    display: none;
+                }
+            }
+        }
+        .ui-dialog-buttonpane {
+            border-color: black;
+            margin: 0;
+            padding: 0;
+            .ui-dialog-buttonset {
+                .flex;
+                float: none;
+                width: 100%;
+                .ui-button {
+                    .box-flex;
+                    .deca;
+                    background: none;
+                    border: none;
+                    border-radius: 0;
+                    color: red;
+                    display: block;
+                    font-weight: 300;
+                    line-height: 1;
+                    margin: 0;
+                    padding: 1em 0;
+                    text-shadow: none;
+                    &:hover {
+                        background: lighten(gray,3%);
+                    }
+                    + .ui-button {
+                        border-left: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ==========================================================
+// Widgets
+// ==========================================================
+.atk-media-block {
+    display: table;
+    .atk-media, .atk-content {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .atk-media + .atk-content {
+        padding-left: @margin;
+    }
+    .atk-content {
+        width: 100%;
+    }
+    &.center {
+        .atk-media, .atk-content {
+            vertical-align: middle;
+        }
+    }
+}
+
+
 
 // ==========================================================
 // Selection Colors
@@ -120,22 +223,50 @@ body {
     -webkit-tap-highlight-color: green;
 }
 
+
 // ==========================================================
-// Links
+// Styling
 // ==========================================================
 
 a {
     color: @link;
-
+    text-decoration: none;
     &:hover, &:focus{
         color: red;
     }
+}
 
-    // Optional transition
-    -webkit-transition:all .2s linear;
-    -moz-transition:all .2s linear;
-    -o-transition:all .2s linear;
-    transition:all .2s linear;
+
+// ==========================================================
+// Colors
+// ==========================================================
+
+*[class*=atk-color] {
+    color: #000;
+    a {
+        color: #000;
+        &:hover {
+            color: blue;
+        }
+    }
+    hr {
+        background-color: #000;
+    }
+    &.atk-color-blue {
+        background: rgb(90, 198, 255);
+    }
+    &.atk-color-pink {
+        background: rgb(255, 130, 130);
+    }
+    &.atk-color-green {
+        background: rgb(160, 236, 111);
+    }
+    &.atk-color-yellow {
+        background: rgb(253, 235, 117);
+    }
+    &.atk-color-lightgray {
+        background: rgb(241, 241, 242);
+    }
 }
 
 
