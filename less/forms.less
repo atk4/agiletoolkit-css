@@ -41,6 +41,7 @@ input[type=checkbox] {
 button,
 input[type=button],
 input[type=submit] {
+    .border-radius(@cornerRadius);
     background: darken(white,60%);
     border: 1px solid darken(white,70%);
     color: #fff;
@@ -48,6 +49,7 @@ input[type=submit] {
     line-height: @bodyBaseline;
     padding: @margin/4 @margin/2;
 }
+
 input[type=file], select {
     margin: @margin/2 0 @margin/2 0;
 }

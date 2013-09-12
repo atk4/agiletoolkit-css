@@ -21,6 +21,7 @@
 // ==========================================================
 
 .atk-box {
+    .border-radius(@cornerRadius);
     background: lightgray;
     padding: @margin;
     margin-bottom: @margin;
@@ -198,6 +199,51 @@
         }
     }
 }
+.atk-menu {
+    &, li {
+        .clear-ul;
+    }
+    // &.bar {
+    //     .border-radius(@cornerRadius);
+    // }
+    &.bar {
+        >li {
+            margin-left: 1px;
+            a {
+                display: block;
+                padding: @margin/2 @margin;
+            }
+            &:first-child a {
+                .border-radius(@cornerRadius 0 0 @cornerRadius);
+                margin: 0;
+            }
+            &:last-child a {
+                .border-radius(0 @cornerRadius @cornerRadius 0);
+            }
+        }
+        &.atk-color-blue {
+            background: none;
+            >li {
+                a {
+                    background: @colorBlue;
+                    &:hover {
+                        background: darken(@colorBlue, 10%);
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    &.even-cells {
+        .flex;
+        >li {
+            .box-flex(1);
+            text-align: center;
+            margin-left: 1px;
+        }
+    }
+}
+
 
 
 
@@ -241,6 +287,12 @@ a {
 // Colors
 // ==========================================================
 
+@colorBlue:       rgb(90, 198, 255);
+@colorPink:       rgb(255, 130, 130);
+@colorGreen:      rgb(160, 236, 111);
+@colorYellow:     rgb(253, 235, 117);
+@colorLightGray:  rgb(241, 241, 242);
+
 *[class*=atk-color] {
     color: #000;
     a {
@@ -253,19 +305,19 @@ a {
         background-color: #000;
     }
     &.atk-color-blue {
-        background: rgb(90, 198, 255);
+        background: @colorBlue;
     }
     &.atk-color-pink {
-        background: rgb(255, 130, 130);
+        background: @colorPink;
     }
     &.atk-color-green {
-        background: rgb(160, 236, 111);
+        background: @colorGreen;
     }
     &.atk-color-yellow {
-        background: rgb(253, 235, 117);
+        background: @colorYellow; 
     }
     &.atk-color-lightgray {
-        background: rgb(241, 241, 242);
+        background: @colorLightGray;
     }
 }
 
