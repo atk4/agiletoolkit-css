@@ -43,6 +43,9 @@
     }
   }
 }
+.atk-avatar {
+    display: inline-block;
+}
 .atk-flex {
     display:table;
     > div {display:table-cell;vertical-align:top;.box-sizing();}
@@ -51,11 +54,33 @@
  // Wrapper container 
 .atk-wrapper { .fixed-container(); }
 
- // Paginator 
-.atk-paginator {
-    a, span {font-size:0.9em;text-decoration:none;padding:@padding/4 @padding/2;margin:0;display:inline-block;}
-    a.disabled {color:@lightGray;cursor:default;}
-    a:hover {color:;}
+ // Pagination 
+// .atk-paginator {
+//     a, span {font-size:0.9em;text-decoration:none;padding:@padding/4 @padding/2;margin:0;display:inline-block;}
+//     a.disabled {color:@lightGray;cursor:default;}
+//     a:hover {color:;}
+// }
+.atk-pagination {
+    .clear-font;
+    >a {
+        background: #fff;
+        border: 1px solid @borderColor;
+        font-size: @bodySize;
+        padding: @margin/4 @margin/2;
+        *[class*=icon] {
+            .position(relative, @r:-@margin/4);
+            margin-left: -@margin/2;
+        }
+        &:first-child {
+            .border-radius(@cornerRadius 0 0 @cornerRadius);
+        }
+        &:last-child {
+            .border-radius(0 @cornerRadius @cornerRadius 0); 
+        }
+        + a {
+            border-left-width: 0;
+        }
+    }
 }
 
  // Growl 
@@ -195,13 +220,13 @@
     .atk-media + .atk-content {
         padding-left: @margin;
     }
-    .atk-content {
-        width: 100%;
-    }
     &.center {
         .atk-media, .atk-content {
             vertical-align: middle;
         }
+    }
+    .atk-table & .atk-media + .atk-content {
+        padding-left: @margin/2;
     }
 }
 .atk-menu {
@@ -287,6 +312,35 @@ a {
     }
 }
 
+// Helpers
+.atk-jackscrew {
+    width: 100%;
+}
+
+// Alignment
+.atk-left {
+    text-align: left;
+}
+.atk-right {
+    text-align: right;
+}
+.atk-center {
+    text-align: center;
+}
+
+
+// Corner Classes
+.atk-rounded {
+    &, img& {
+        .border-radius(@cornerRadius);
+    }
+}
+.atk-circled {
+    &, img& {
+        .border-radius(50%);
+    }
+}
+
 
 // ==========================================================
 // Colors
@@ -340,5 +394,5 @@ a {
 // ==========================================================
 
 .row {
-    .clearfix;
+    .clear-fix;
 }

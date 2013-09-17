@@ -2,43 +2,55 @@
 // Tables
 // ==========================================================
 
-table {
-    margin-bottom: 1.4em;
-    width:100%;
-    border: 1px solid red;
-}
-
-thead{
-    text-align:left;
-    font-weight: bold;
-}
-
-tbody{
-    tr:nth-child(even) td{
-        background: blue;
+.atk-table {
+    table {
+        width: 100%;
+        th, td {
+            background: #fff;
+            border: 1px solid @borderColor;
+            text-align: left;
+            padding: @margin/4 @margin/2;
+        }
     }
 }
 
-tfoot{
-    font-style: italic;
-    td, th{
-        padding: .75em 10px;
-    }
-}
+// table {
+//     margin-bottom: 1.4em;
+//     width:100%;
+//     border: 1px solid red;
+// }
 
-th,td,caption{
-    border: 1px solid red;
-}
+// thead{
+//     text-align:left;
+//     font-weight: bold;
+// }
 
-td, th{
-    padding: 0 10px 0 10px;
-    line-height: 1.45em;
-}
+// tbody{
+//     tr:nth-child(even) td{
+//         background: blue;
+//     }
+// }
 
-caption{
-    border-bottom:0;
-    padding: .75em 10px;
-    line-height: 1.45em;
-    text-align:left;
-    font-style: italic;
-}
+// tfoot{
+//     font-style: italic;
+//     td, th{
+//         padding: .75em 10px;
+//     }
+// }
+
+// th,td,caption{
+//     border: 1px solid red;
+// }
+
+// td, th{
+//     padding: 0 10px 0 10px;
+//     line-height: 1.45em;
+// }
+
+// caption{
+//     border-bottom:0;
+//     padding: .75em 10px;
+//     line-height: 1.45em;
+//     text-align:left;
+//     font-style: italic;
+// }
