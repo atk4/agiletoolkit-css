@@ -2,6 +2,23 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8317",
   "files" : {
+    "\/css\/agiletoolkit.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/css\/agiletoolkit.less",
+      "outputAbbreviatedPath" : "\/css\/agiletoolkit.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 0,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 1,
+      "fileType" : 1,
+      "debugStyle" : 2
+    },
     "\/less\/components.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/components.less",
@@ -78,6 +95,15 @@
       "initialSize" : 947,
       "fileType" : 8192
     },
+    "\/css\/fontello.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/fontello.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/apple-touch-icon-72x72-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -128,17 +154,6 @@
       "initialSize" : 49135,
       "fileType" : 4096
     },
-    "\/images\/baseline-30.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/baseline-30.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/baseline-30.png",
-      "initialSize" : 965,
-      "fileType" : 8192
-    },
     "\/less\/variables.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/variables.less",
@@ -172,6 +187,17 @@
       "outputStyle" : 1,
       "fileType" : 1,
       "debugStyle" : 2
+    },
+    "\/images\/baseline-30.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/baseline-30.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/baseline-30.png",
+      "initialSize" : 965,
+      "fileType" : 8192
     },
     "\/test-opera.html" : {
       "ignoreWasSetByUser" : 0,
@@ -216,6 +242,15 @@
       "fileType" : 1,
       "debugStyle" : 2
     },
+    "\/layout-default.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/layout-default.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/less\/mixins.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/mixins.less",
@@ -232,15 +267,6 @@
       "outputStyle" : 1,
       "fileType" : 1,
       "debugStyle" : 2
-    },
-    "\/layout-default.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/layout-default.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/less\/typography.less" : {
       "ieCompatibility" : 1,
@@ -268,22 +294,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/less\/grid.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/grid.less",
-      "outputAbbreviatedPath" : "\/less\/grid.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 0,
-      "strictImports" : 0,
+    "\/temp\/bananas.jpg" : {
       "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
+      "ignore" : 0,
       "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 1,
-      "fileType" : 1,
-      "debugStyle" : 2
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/temp\/bananas.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/temp\/bananas.jpg",
+      "initialSize" : 21036,
+      "fileType" : 4096
     },
     "\/temp\/blueberries.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -296,14 +316,14 @@
       "initialSize" : 28762,
       "fileType" : 4096
     },
-    "\/less\/layouts.less" : {
+    "\/less\/grid.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/layouts.less",
-      "outputAbbreviatedPath" : "\/less\/layouts.css",
+      "inputAbbreviatedPath" : "\/less\/grid.less",
+      "outputAbbreviatedPath" : "\/less\/grid.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "strictImports" : 0,
       "ignoreWasSetByUser" : 0,
       "shouldRunBless" : 0,
@@ -330,30 +350,38 @@
       "fileType" : 1,
       "debugStyle" : 2
     },
-    "\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/apple-touch-icon-144x144-precomposed.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/apple-touch-icon-144x144-precomposed.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/apple-touch-icon-144x144-precomposed.png",
-      "initialSize" : 1475,
-      "fileType" : 8192
-    },
     "\/less\/grid-old.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/grid-old.less",
       "outputAbbreviatedPath" : "\/less\/grid-old.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 1,
+      "fileType" : 1,
+      "debugStyle" : 2
+    },
+    "\/temp\/fruits.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/temp\/fruits.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/temp\/fruits.jpg",
+      "initialSize" : 60580,
+      "fileType" : 4096
+    },
+    "\/less\/layouts.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/layouts.less",
+      "outputAbbreviatedPath" : "\/less\/layouts.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -395,16 +423,16 @@
       "initialSize" : 22663,
       "fileType" : 4096
     },
-    "\/temp\/bananas.jpg" : {
+    "\/apple-touch-icon-144x144-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/temp\/bananas.jpg",
+      "inputAbbreviatedPath" : "\/apple-touch-icon-144x144-precomposed.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/temp\/bananas.jpg",
-      "initialSize" : 21036,
-      "fileType" : 4096
+      "outputAbbreviatedPath" : "\/apple-touch-icon-144x144-precomposed.png",
+      "initialSize" : 1475,
+      "fileType" : 8192
     },
     "\/js\/atk-helpers-min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -416,6 +444,24 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/atk-helpers-min-min.js",
       "fileType" : 64
+    },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/test.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/test.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/less\/widgets.less" : {
       "ieCompatibility" : 1,
@@ -433,15 +479,6 @@
       "outputStyle" : 1,
       "fileType" : 1,
       "debugStyle" : 2
-    },
-    "\/test.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/test.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/apple-touch-icon-57x57-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
@@ -476,22 +513,16 @@
       "initialSize" : 730,
       "fileType" : 8192
     },
-    "\/css\/agiletoolkit.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/css\/agiletoolkit.less",
-      "outputAbbreviatedPath" : "\/css\/agiletoolkit.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 0,
-      "strictImports" : 0,
+    "\/temp\/fruits2.jpg" : {
       "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
+      "ignore" : 0,
       "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 1,
-      "fileType" : 1,
-      "debugStyle" : 2
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/temp\/fruits2.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/temp\/fruits2.jpg",
+      "initialSize" : 66206,
+      "fileType" : 4096
     },
     "\/apple-touch-icon.png" : {
       "ignoreWasSetByUser" : 0,
