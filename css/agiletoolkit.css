@@ -203,6 +203,9 @@ fieldset{border:none;margin:0;padding:0}
 .atk-menu.bar>li:last-child a{-webkit-border-radius:0 3px 3px 0;-moz-border-radius:0 3px 3px 0;border-radius:0 3px 3px 0}
 .atk-menu.bar.atk-color-blue{background:none}.atk-menu.bar.atk-color-blue>li a{background:#5ac6ff}.atk-menu.bar.atk-color-blue>li a:hover{background:#27b4ff;color:#000}
 .atk-menu.even-cells{display:-moz-box;display:-webkit-box;display:-ms-flexbox;display:box}.atk-menu.even-cells>li{-moz-box-flex:1;-webkit-box-flex:1;-ms-flex:1;box-flex:1;text-align:center;margin-left:1px}
+.atk-popover.ui-dialog{border-color:#eee;border-radius:3px;box-shadow:0 5px 10px rgba(0,0,0,0.3)}.atk-popover.ui-dialog>.ui-dialog-titlebar{display:none}
+.atk-popover.ui-dialog>.ui-dialog-content{background:#fff;border-radius:3px;padding:.809rem;z-index:2}
+.atk-popover.ui-dialog .arrow.top{margin-bottom:-5px;z-index:1 !important}.atk-popover.ui-dialog .arrow.top:after{background:#fff;border-color:#eee}
 ::selection{background:#008000;color:#00f}
 ::-moz-selection{background:#008000;color:#00f}
 img::selection{background:transparent}
