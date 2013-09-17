@@ -31,6 +31,11 @@
         }
     }
 }
+.atk-label {
+    .border-radius(@cornerRadius);
+    font-weight: bold;
+    padding: 0.2em 0.4em;
+}
 .atk-buttons {
   .ui-button, button {
     + * {
@@ -287,12 +292,6 @@ a {
 // Colors
 // ==========================================================
 
-@colorBlue:       rgb(90, 198, 255);
-@colorPink:       rgb(255, 130, 130);
-@colorGreen:      rgb(160, 236, 111);
-@colorYellow:     rgb(253, 235, 117);
-@colorLightGray:  rgb(241, 241, 242);
-
 *[class*=atk-color] {
     color: #000;
     a {
@@ -318,6 +317,20 @@ a {
     }
     &.atk-color-lightgray {
         background: @colorLightGray;
+    }
+}
+*[class*=atk-effect] {
+    &.atk-effect-danger {
+        background: @effectDanger;
+    }
+    &.atk-effect-warning {
+        background: @effectWarning;
+    }
+    &.atk-effect-success {
+        background: @effectSuccess;
+    }
+    &.atk-effect-info {
+        background: @effectInfo;
     }
 }
 
