@@ -6,36 +6,27 @@
     <head>
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-		<title><?page_title?>Agile Toolkit — Default Title<?/?></title>
+		<title>Agile Toolkit</title>
         
-        <meta name="description" content="<?$page_description?>">
+        <meta name="description" content="123">
         <meta name="viewport" content="width=device-width">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+		<link href="atk43/ui-lightness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
 		<link href="atk43/css/agiletoolkit.css" rel="stylesheet" type="text/css" />
 		<link href="atk43/css/agiletoolkit-custom.css" rel="stylesheet" type="text/css" />
-
-		<?$js_include?>
-
-		<script type="text/javascript">
-			$(function(){
-				<?$document_ready?>
-			});
-		</script>
     </head>
-	<body id="<?$pagename?>">
+	<body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <?Layout?>
+
         <!-- Content -->
 
         <div class="atk-layout">
 			<div class="atk-layout-row">
 				<header id="atk-header" class="giga">AgileToolkit 4.3 &ndash; <strong>Snippets</strong></header>
-                <?$Menu?>
 			</div>
 			<div id="atk-main" class="atk-layout-row fluid">
 				<div id="atk-main-inner" class="atk-layout">
@@ -51,7 +42,6 @@
 						</ul>
 					</nav>
 					<div id="atk-content" class="atk-layout-column fluid">
-                        <?Content?>
 						<section>
 							<h2>Overview</h2>
 							<ul class="clean">
@@ -1911,16 +1901,69 @@
 						<section id="jqueryui">
 							<h2>jQueryUI</h2>
 							<h3>Dialogs</h3>
-							<button>Show Dialog</button>
-							<button>Show .atk-dialog-minimal</button>
+							<button id="opener">Open Dialog</button>
+							<button id="opener2">Open .atk-dialog-minimal</button>
+							<div id="dialog" title="Basic dialog">
+							  <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+							</div>
+							<div id="dialog-minimal" title="Minimal dialog">
+							  <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+							</div>
 							<h3>Tabs</h3>
-							<p>---</p>
+							
+							<div class="example atk-box">
+								<div id="tabs">
+									<ul>
+										<li><a href="#tabs-1">Nunc tincidunt</a></li>
+										<li><a href="#tabs-2">Proin dolor</a></li>
+										<li><a href="#tabs-3">Aenean lacinia</a></li>
+									</ul>
+									<div id="tabs-1">
+										<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+									</div>
+									<div id="tabs-2">
+										<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+									</div>
+									<div id="tabs-3">
+										<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+										<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+									</div>
+								</div>
+							</div>
 							<h3>Accordion</h3>
-							<p>---</p>
-							<h3>Sliders</h3>
-							<p>---</p>
+							
+							<div class="example atk-box">
+								<div id="accordion">
+									<h3>Section 1</h3>
+									<div>
+										<p>Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+									</div>
+									<h3>Section 2</h3>
+									<div>
+										<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+									</div>
+									<h3>Section 3</h3>
+									<div>
+										<p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. <a href="#">Phasellus</a> ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+										<ul>
+											<li>List item</li>
+											<li>List item</li>
+											<li>List item</li>
+											<li>List item</li>
+											<li>List item</li>
+											<li>List item</li>
+											<li>List item</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<h3>Datepicker</h3>
+							
+							<div class="example atk-box">
+								<label>Date:</label for="datepicker"><input type="text" id="datepicker">
+							</div>
 						</section>
-                        <?/Content?>
+
 					</div>
 				</div>
 			</div>
@@ -1932,12 +1975,12 @@
 		</div>
 		<!-- /Content -->
 
-        <?/?>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/atk-helpers-min.js"></script>
-        <script src="js/demo-min.js"></script>
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="atk43/js/atk-helpers-min.js"></script>
+        <script src="atk43/js/demo-min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
