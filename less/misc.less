@@ -364,6 +364,25 @@ a {
 }
 
 
+// States
+.stateDefault() {
+    background: @stateDefault;
+    border-color: @borderColor;
+    color: @bodyColor;
+}
+.stateHover() {
+    background: @stateHover;
+    border-color: @borderColor;
+    color: @bodyColor;
+}
+.stateActive() {
+    background: @stateActive;
+    border-color: @borderColor;
+    color: @bodyColor;
+}
+
+
+
 // ==========================================================
 // Colors
 // ==========================================================
@@ -426,18 +445,18 @@ a {
     &,
     .ui-widget-content &,
     .ui-widget-header & {
-        background: @colorLight;
-        border-color: @borderColor;
+        .stateDefault;
         &.ui-state-hover {
-            background: @stateHover;
-            border-color: @borderColor;
-            color: @linkColorHover;
+            .stateHover;
         }
         &.ui-state-active, &.ui-state-focus {
-            background: @stateActive;
-            border-color: @borderColor;
-            color: green;
+            .stateActive;
         }
+    }
+}
+.ui-button {
+    .ui-button-text {
+        padding: 0;
     }
 }
 .ui-widget {
@@ -446,9 +465,7 @@ a {
     font-size: @bodySize;
 }
 .ui-widget-header {
-    background: @colorLight;
-    border-color: @colorLight;
-    color: @bodyColor;
+    .clear-area;
     .ui-state-hover {
         background: @stateHover;
     }
@@ -586,6 +603,39 @@ a {
                 }
             }
         }
+    }
+}
+.ui-tabs {
+    .clear-area;
+    .ui-tabs-nav.ui-widget-header {
+        border-bottom: 1px solid @borderColor;
+        padding: 0;
+        .ui-state-default {
+            background: none;
+            border-color: transparent;
+            &.ui-state-active {
+                background: @colorLight;
+                border-color: @borderColor;
+            }
+        }
+    }
+    .ui-tabs-panel.ui-widget-content {
+        background: @colorLight;
+        border: 1px solid @borderColor;
+        border-top-width: 0;
+        padding: @margin;
+    }
+}
+.ui-accordion {
+    .ui-accordion-header {
+        &.ui-state-active {
+            background: @colorLight;
+            border-bottom-color: @colorLight;
+        }
+    }
+    .ui-accordion-content {
+        border-color: @borderColor;
+        padding: @margin/2;
     }
 }
 

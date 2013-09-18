@@ -108,7 +108,7 @@ label{font-weight:bold;padding:.4045rem 0;margin-top:1px}
 input[type="text"],input[type="url"],input[type="email"],input[type="password"],input[type="search"],input[type="number"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="tel"],textarea{background:#fff;border:1px solid #ccc;font-size:1em;line-height:1.618;padding:.4045rem}
 textarea{min-height:5.663rem}
 input[type=radio],input[type=checkbox]{line-height:1.618}
-button,input[type=button],input[type=submit]{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#666;border:1px solid #4d4d4d;color:#fff;font-size:.875rem;line-height:1.618;padding:.4045rem .809rem}
+a.atk-button,button.atk-button,input[type=button].atk-button,input[type=submit].atk-button,a.ui-button,button.ui-button,input[type=button].ui-button,input[type=submit].ui-button{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#fff;border-color:#eee;color:#000;font-size:.875rem;line-height:1.618;padding:.4045rem .809rem}
 input[type=file],select{margin:.809rem 0 .809rem 0}
 button::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="reset"]::-moz-focus-inner{padding:0 !important;border:0 !important}
 input[readonly],div.atk-form-field-readonly{background:#e6e6e6}
@@ -230,10 +230,11 @@ a{color:#00f;text-decoration:none}a:hover,a:focus{color:#f00}
 *[class*=atk-effect].atk-effect-info{background:#cef}
 .ui-corner-all{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
 .ui-state-default,.ui-state-default a:link,.ui-state-default a:visited{color:#000}
-.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{background:#fff;border-color:#eee}.ui-state-default.ui-state-hover,.ui-widget-content .ui-state-default.ui-state-hover,.ui-widget-header .ui-state-default.ui-state-hover{background:#eee;border-color:#eee;color:#f00}
-.ui-state-default.ui-state-active,.ui-widget-content .ui-state-default.ui-state-active,.ui-widget-header .ui-state-default.ui-state-active,.ui-state-default.ui-state-focus,.ui-widget-content .ui-state-default.ui-state-focus,.ui-widget-header .ui-state-default.ui-state-focus{background:#ff0;border-color:#eee;color:#008000}
+.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{background:#fff;border-color:#eee;color:#000}.ui-state-default.ui-state-hover,.ui-widget-content .ui-state-default.ui-state-hover,.ui-widget-header .ui-state-default.ui-state-hover{background:#f5f5f5;border-color:#eee;color:#000}
+.ui-state-default.ui-state-active,.ui-widget-content .ui-state-default.ui-state-active,.ui-widget-header .ui-state-default.ui-state-active,.ui-state-default.ui-state-focus,.ui-widget-content .ui-state-default.ui-state-focus,.ui-widget-header .ui-state-default.ui-state-focus{background:#eee;border-color:#eee;color:#000}
+.ui-button .ui-button-text{padding:0}
 .ui-widget{color:#000;font-family:"Helvetica Neue","Helvetica","sans-serif";font-size:.875rem}
-.ui-widget-header{background:#fff;border-color:#fff;color:#000}.ui-widget-header .ui-state-hover{background:#eee}
+.ui-widget-header{background:none;border:none;margin:0;padding:0}.ui-widget-header .ui-state-hover{background:#f5f5f5}
 .ui-widget-content{background:#fff;color:#000}.ui-widget-content a{color:#00f}.ui-widget-content a:hover{color:#f00}
 .ui-helper-reset{font-size:.875rem;line-height:1.618}
 .ui-datepicker{border-color:#aeaeae;padding:.809rem}.ui-datepicker .ui-datepicker-header{background:none;border:none;color:#000;margin-bottom:.809rem;padding:0}.ui-datepicker .ui-datepicker-header .ui-icon{display:none}
@@ -251,6 +252,10 @@ a{color:#00f;text-decoration:none}a:hover,a:focus{color:#f00}
 .ui-datepicker table.ui-datepicker-calendar tr td a.ui-state-default{border:none;display:block;font-weight:normal;text-align:center}
 .ui-datepicker table.ui-datepicker-calendar tr td.ui-datepicker-today a{outline:1px solid #f00}
 .ui-datepicker table.ui-datepicker-calendar tr:last-child td{border-bottom:none}
+.ui-tabs{background:none;border:none;margin:0;padding:0}.ui-tabs .ui-tabs-nav.ui-widget-header{border-bottom:1px solid #eee;padding:0}.ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default{background:none;border-color:transparent}.ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active{background:#fff;border-color:#eee}
+.ui-tabs .ui-tabs-panel.ui-widget-content{background:#fff;border:1px solid #eee;border-top-width:0;padding:1.618rem}
+.ui-accordion .ui-accordion-header.ui-state-active{background:#fff;border-bottom-color:#fff}
+.ui-accordion .ui-accordion-content{border-color:#eee;padding:.809rem}
 .row{*zoom:1}.row:before,.row:after{display:table;content:"";line-height:0}
 .row:after{clear:both}
 @font-face{font-family:'fontello';src:url('../font/fontello.eot?30854166');src:url('../font/fontello.eot?30854166#iefix') format('embedded-opentype'),url('../font/fontello.woff?30854166') format('woff'),url('../font/fontello.ttf?30854166') format('truetype'),url('../font/fontello.svg?30854166#fontello') format('svg');font-weight:normal;font-style:normal}[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"fontello";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;}

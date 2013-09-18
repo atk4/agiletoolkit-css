@@ -38,16 +38,17 @@ input[type=checkbox] {
     line-height: @bodyBaseline;
 }
 
+a,
 button,
 input[type=button],
 input[type=submit] {
-    .border-radius(@cornerRadius);
-    background: darken(white,60%);
-    border: 1px solid darken(white,70%);
-    color: #fff;
-    font-size: @bodySize;
-    line-height: @bodyBaseline;
-    padding: @margin/4 @margin/2;
+    &.atk-button, &.ui-button {
+        .border-radius(@cornerRadius);
+        .stateDefault;
+        font-size: @bodySize;
+        line-height: @bodyBaseline;
+        padding: @margin/4 @margin/2;
+    }
 }
 
 input[type=file], select {
