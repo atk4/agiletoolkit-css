@@ -137,15 +137,6 @@
       "initialSize" : 49135,
       "fileType" : 4096
     },
-    "\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/less\/mixins.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/mixins.less",
@@ -162,6 +153,15 @@
       "outputStyle" : 1,
       "fileType" : 1,
       "debugStyle" : 2
+    },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/ui-lightness\/jquery-ui-1.10.3.custom.min.css" : {
       "ignoreWasSetByUser" : 0,
@@ -330,6 +330,17 @@
       "fileType" : 1,
       "debugStyle" : 2
     },
+    "\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
+      "initialSize" : 278,
+      "fileType" : 8192
+    },
     "\/less\/typography.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/typography.less",
@@ -357,17 +368,6 @@
       "outputAbbreviatedPath" : "\/temp\/bananas.jpg",
       "initialSize" : 21036,
       "fileType" : 4096
-    },
-    "\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
-      "initialSize" : 278,
-      "fileType" : 8192
     },
     "\/less\/layouts.less" : {
       "ieCompatibility" : 1,
@@ -514,14 +514,16 @@
       "initialSize" : 1475,
       "fileType" : 8192
     },
-    "\/layout-default.html" : {
+    "\/js\/demo-min.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/layout-default.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/js\/demo-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/demo-min-min.js",
+      "fileType" : 64
     },
     "\/images\/baseline.png" : {
       "ignoreWasSetByUser" : 0,
@@ -532,17 +534,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/baseline.png",
       "initialSize" : 947,
-      "fileType" : 8192
-    },
-    "\/ui-lightness\/images\/ui-bg_glass_65_ffffff_1x400.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/ui-lightness\/images\/ui-bg_glass_65_ffffff_1x400.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/ui-lightness\/images\/ui-bg_glass_65_ffffff_1x400.png",
-      "initialSize" : 207,
       "fileType" : 8192
     },
     "\/ui-lightness\/images\/ui-bg_diagonals-thick_20_666666_40x40.png" : {
@@ -556,16 +547,25 @@
       "initialSize" : 312,
       "fileType" : 8192
     },
-    "\/js\/demo-min.js" : {
+    "\/layout-default.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/demo-min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/demo-min-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/layout-default.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/ui-lightness\/images\/ui-bg_glass_65_ffffff_1x400.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/ui-lightness\/images\/ui-bg_glass_65_ffffff_1x400.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/ui-lightness\/images\/ui-bg_glass_65_ffffff_1x400.png",
+      "initialSize" : 207,
+      "fileType" : 8192
     },
     "\/less\/normalize.less" : {
       "ieCompatibility" : 1,
@@ -606,17 +606,6 @@
       "outputAbbreviatedPath" : "\/js\/demo-min.js",
       "fileType" : 64
     },
-    "\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png",
-      "initialSize" : 4549,
-      "fileType" : 8192
-    },
     "\/temp\/fruits2.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -627,6 +616,17 @@
       "outputAbbreviatedPath" : "\/temp\/fruits2.jpg",
       "initialSize" : 66206,
       "fileType" : 4096
+    },
+    "\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png",
+      "initialSize" : 4549,
+      "fileType" : 8192
     },
     "\/js\/atk-helpers.js" : {
       "ignoreWasSetByUser" : 0,

@@ -103,7 +103,7 @@ code{background-origin:padding-box;background-size:auto;border-bottom-color:#444
 ins,small{line-height:1.618}
 kbd,samp{line-height:1.618}
 hr{background:#a9a9a9;border:none;margin:1.618rem 0;width:100%;height:1px;clear:both}hr.small{margin:.809rem 0}
-.atk-table table{width:100%}.atk-table table th,.atk-table table td{background:#fff;border:1px solid #eee;text-align:left;padding:.4045rem .809rem}
+.atk-table table{width:100%}.atk-table table th,.atk-table table td{background:#fff;border:1px solid #eee;color:#000;padding:.4045rem .809rem;text-align:left}
 label{font-weight:bold;padding:.4045rem 0;margin-top:1px}
 input[type="text"],input[type="url"],input[type="email"],input[type="password"],input[type="search"],input[type="number"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="tel"],textarea{background:#fff;border:1px solid #ccc;font-size:1em;line-height:1.618;padding:.4045rem}
 textarea{min-height:5.663rem}
