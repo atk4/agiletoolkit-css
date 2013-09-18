@@ -234,7 +234,7 @@ a{color:#00f;text-decoration:none}a:hover,a:focus{color:#f00}
 .ui-state-default.ui-state-active,.ui-widget-content .ui-state-default.ui-state-active,.ui-widget-header .ui-state-default.ui-state-active,.ui-state-default.ui-state-focus,.ui-widget-content .ui-state-default.ui-state-focus,.ui-widget-header .ui-state-default.ui-state-focus{background:#eee;border-color:#eee;color:#000}
 .ui-button .ui-button-text{padding:0}
 .ui-widget{color:#000;font-family:"Helvetica Neue","Helvetica","sans-serif";font-size:.875rem}
-.ui-widget-header{background:none;border:none;margin:0;padding:0}.ui-widget-header .ui-state-hover{background:#f5f5f5}
+.ui-widget-header{background:none;border:none;margin:0;padding:0;color:#000}.ui-widget-header .ui-state-hover{background:#f5f5f5}
 .ui-widget-content{background:#fff;color:#000}.ui-widget-content a{color:#00f}.ui-widget-content a:hover{color:#f00}
 .ui-helper-reset{font-size:.875rem;line-height:1.618}
 .ui-datepicker{border-color:#aeaeae;padding:.809rem}.ui-datepicker .ui-datepicker-header{background:none;border:none;color:#000;margin-bottom:.809rem;padding:0}.ui-datepicker .ui-datepicker-header .ui-icon{display:none}

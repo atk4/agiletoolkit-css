@@ -330,6 +330,17 @@
       "fileType" : 1,
       "debugStyle" : 2
     },
+    "\/temp\/bananas.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/temp\/bananas.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/temp\/bananas.jpg",
+      "initialSize" : 21036,
+      "fileType" : 4096
+    },
     "\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -357,17 +368,6 @@
       "outputStyle" : 1,
       "fileType" : 1,
       "debugStyle" : 2
-    },
-    "\/temp\/bananas.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/temp\/bananas.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/temp\/bananas.jpg",
-      "initialSize" : 21036,
-      "fileType" : 4096
     },
     "\/less\/layouts.less" : {
       "ieCompatibility" : 1,
@@ -606,17 +606,6 @@
       "outputAbbreviatedPath" : "\/js\/demo-min.js",
       "fileType" : 64
     },
-    "\/temp\/fruits2.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/temp\/fruits2.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/temp\/fruits2.jpg",
-      "initialSize" : 66206,
-      "fileType" : 4096
-    },
     "\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -627,6 +616,17 @@
       "outputAbbreviatedPath" : "\/ui-lightness\/images\/ui-icons_ef8c08_256x240.png",
       "initialSize" : 4549,
       "fileType" : 8192
+    },
+    "\/temp\/fruits2.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/temp\/fruits2.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/temp\/fruits2.jpg",
+      "initialSize" : 66206,
+      "fileType" : 4096
     },
     "\/js\/atk-helpers.js" : {
       "ignoreWasSetByUser" : 0,
