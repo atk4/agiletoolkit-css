@@ -160,6 +160,7 @@ fieldset{border:none;margin:0;padding:0}
 .atk-row>[class*="span"],.atk-row>form>[class*="span"],.atk-row>form>[class*="span"]>[class*="span"]{display:inline;float:left;margin-left:2.5%}
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .atk-form:last-child,p:last-child{margin-bottom:0}
+.atk-text-nowrap{white-space:nowrap}
 .atk-halfpush{margin-bottom:.809rem}
 .atk-push{margin-bottom:1.618rem}
 .atk-sep{margin-left:.5393333333333333rem !important;margin-right:.5393333333333333rem !important}
