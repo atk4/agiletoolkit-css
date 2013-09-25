@@ -23,10 +23,10 @@ input[type="datetime-local"],
 input[type="tel"],
 textarea {
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid @borderClickable;
     font-size: 1em;
     line-height: @bodyBaseline;
-    padding: @margin/4;
+    padding: 0.5em;
 }
 
 textarea {
@@ -36,19 +36,6 @@ textarea {
 input[type=radio],
 input[type=checkbox] {
     line-height: @bodyBaseline;
-}
-
-a,
-button,
-input[type=button],
-input[type=submit] {
-    &.atk-button, &.ui-button {
-        .border-radius(@cornerRadius);
-        .stateDefault;
-        font-size: @bodySize;
-        line-height: @bodyBaseline;
-        padding: @margin/4 @margin/2;
-    }
 }
 
 input[type=file], select {
@@ -97,7 +84,7 @@ fieldset {
             margin: 0 0 @margin/2 0;
             width: 100%;
             display: block;
-            .kilo;
+            .atk-size-kilo;
         }
         .atk-form-row {
             .clear-fix();
@@ -133,12 +120,12 @@ fieldset {
                 margin-top: 0;
             }
         }
-        &[class*=span] + fieldset[class*=span] + .atk-buttons {
+        &[class*=span] + fieldset[class*=span] + .atk-actions {
             border: none;
             padding-left: 0;
             margin: 0;
             &:before {
-                .atk-buttons;
+                .atk-actions;
                 margin-top: 0;
                 content: '';
                 display: block;
@@ -150,8 +137,8 @@ fieldset {
                 border-top: 1px solid @border;
         }
     }
-    .atk-buttons { border-top: 1px solid @border; margin-top: @margin; padding-top: @margin; }
-    .atk-buttons, .legend { padding-left: @label + @labelMargin; }
+    .atk-actions { border-top: 1px solid @border; margin-top: @margin; padding-top: @margin; }
+    .atk-actions, .legend { padding-left: @label + @labelMargin; }
 
     // Stacked form
     &.stacked { 
@@ -170,10 +157,10 @@ fieldset {
                 }
             }
         }
-        .atk-buttons[class*=span] {
+        .atk-actions[class*=span] {
             padding-top: @margin + @margin/6 !important;
         }
-        .atk-buttons, .legend { padding-left: 0; }
+        .atk-actions, .legend { padding-left: 0; }
     }
     // Inline form
     &.row {
@@ -185,7 +172,7 @@ fieldset {
                 > *[class*=span] {
                     margin-top: 0;
                 }
-                +.atk-buttons[class*=span] {
+                +.atk-actions[class*=span] {
                     border: none;
                     margin-top: 0;
                     padding: 0;
@@ -194,7 +181,7 @@ fieldset {
                 }
             }
         }
-        .atk-buttons { clear: both; text-align: right; }
+        .atk-actions { clear: both; text-align: right; }
     }
     // Form with wide labels
     &.wider-labels {
@@ -213,7 +200,7 @@ fieldset {
                 > .atk-form-field { margin-left: 0; }
             }
         }
-        .atk-buttons, .legend { padding-left: @label + (@label*0.6) + @labelMargin; }
+        .atk-actions, .legend { padding-left: @label + (@label*0.6) + @labelMargin; }
     }
     // Form with right aligned labels
     &.labels-right fieldset .atk-form-row > label { text-align: right; }

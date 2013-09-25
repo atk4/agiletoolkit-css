@@ -19,4 +19,16 @@ $(function(){
     $( "#opener2" ).click(function() {
     	$('#dialog-minimal').dialog("open");
     });
+    $('#icons-toggle').click(
+      function(){
+        $('#icons-library').fadeIn();
+        // $(this).html("Hide Icons").addClass("atk-push");
+        $(this).fadeOut();
+      }
+      // ,
+      // function() {
+      //   $('#icons-library').slideUp();
+      //   $(this).html("Show");
+      // }
+    );
 });

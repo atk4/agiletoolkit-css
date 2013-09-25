@@ -1,5 +1,5 @@
 // ==========================================================
-// Modular Scale:   18px @ 1:1.618   8px @ 1:1.618
+// Modular Scale:   16px @ 1:1.618   12px @ 1:1.618
 // ==========================================================
 
 html {
@@ -30,29 +30,29 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: @margin;
     }
 }
-.peta {
+.atk-size-zetta {
     font-size: @bodySize * 4.236;
 }
-.tera {
-    font-size: @bodySize * 3.046;
+.atk-size-exa {
+    font-size: @bodySize * 3.177;
 }
-h1, .giga {
+h1, .atk-size-peta {
     font-size: @bodySize * 2.618;
 }
-h2, .mega {
-    font-size: @bodySize * 1.883;
+h2, .atk-size-tera {
+    font-size: @bodySize * 1.963;
 }
-h3, .kilo {
+h3, .atk-size-giga {
     font-size: @bodySize * 1.618;
 }
-h4, .hecto {
-    font-size: @bodySize * 1.164;
+h4, .atk-size-mega {
+    font-size: @bodySize * 1.214;
 }
-h5, .deca {
+h5, .atk-size-kilo {
     font-size: @bodySize;
 }
-h6, small, .deci {
-    font-size: @bodySize * 0.719;
+h6, small, .atk-size-nano {
+    font-size: @bodySize * 0.75;
 }
 
 
@@ -103,7 +103,7 @@ p {
     margin: 0 0 @margin 0;
 }
 blockquote {
-    .kilo;
+    .atk-size-kilo;
     font-style: italic;
     font-weight: 300;
     margin: 0 @margin @margin;
@@ -160,7 +160,7 @@ pre {
     cursor: default;
     display: block;
     font-family: monospace, serif;
-    .deca;
+    .atk-size-nano;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
