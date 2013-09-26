@@ -199,7 +199,7 @@ a.atk-button,a:link.atk-button,a:visited.atk-button,button.atk-button,input[type
 .ui-dialog.atk-dialog-minimal .ui-dialog-buttonpane .ui-dialog-buttonset .ui-button+.ui-button{border-left:1px solid #000}
 .atk-actions>*+*{margin-left:.3em}
 .atk-media-block{display:table}.atk-media-block .atk-media,.atk-media-block .atk-content{display:table-cell;vertical-align:top}
-.atk-media-block .atk-media img{display:block}
+.atk-media-block .atk-media>img{display:block}
 .atk-media-block .atk-media+.atk-content{padding-left:1.618rem}
 .atk-table .atk-media-block .atk-media+.atk-content{padding-left:.809rem}
 .atk-menu-bar{width:100%}.atk-menu-bar.atk-cells>*{vertical-align:middle}.atk-menu-bar.atk-cells>* .atk-logo,.atk-menu-bar.atk-cells>* .atk-actions,.atk-menu-bar.atk-cells>* .atk-media-block{margin-left:1.618rem;margin-right:1.618rem;white-space:nowrap}
