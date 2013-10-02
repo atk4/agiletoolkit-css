@@ -20,7 +20,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: @headingFamily;
     font-weight: @headingWeight;
-    line-height: 1;
+    line-height: 1.2;
     text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
     margin: @margin*1.5 0 @margin/2 0;
     &:first-child {
@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .atk-size-exa {
     font-size: @bodySize * 3.177;
+}
+h1 {
+    margin-bottom: @margin*1.5;
 }
 h1, .atk-size-peta {
     font-size: @bodySize * 2.618;

@@ -5,8 +5,10 @@
 .atk-menu.atk-menu-naked>li a{padding:0}
 .atk-menu.atk-menu-naked>li+li a{margin-left:3.236rem}
 #atk-content{padding:3.236rem}
+#atk-footer{padding:1.618rem 3.236rem}
 body.page-index{background:#000 url(../temp/stars.jpg);-webkit-background-size:cover;background-size:cover;color:#fff}body.page-index a{color:#14cc76}
 body.page-index #atk-header,body.page-index #atk-content,body.page-index #atk-footer{background:none;border:none}
 body.page-index #atk-header{background:none}
 body.page-index #atk-content{padding-top:1.618rem}body.page-index #atk-content .hero{border:1px solid rgba(255,255,255,0.15);border-width:1px 0;margin-bottom:3.236rem;padding:3.236rem 0}
 body.page-index #atk-footer{color:rgba(255,255,255,0.2)}
+body.page-team .team-block .atk-media{font-size:0;line-height:0;width:207px}body.page-team .team-block .atk-media a{display:inline-block;margin:2px}
