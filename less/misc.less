@@ -296,7 +296,7 @@ input[type=submit] {
         // margin-left: 1px;
         a {
             display: block;
-            padding: @margin/2 @margin;
+            padding: 0.6em 1.2em;
         }
         &:first-child a {
             .border-radius(@cornerRadius 0 0 @cornerRadius);
@@ -488,8 +488,15 @@ a {
 // Colors
 // ==========================================================
 
-*[class*=atk-swatch] {
-    color: #000;
+.colorCheck (@a) when (lightness(@a) >= 50%) {
+  color: black;
+}
+.colorCheck (@a) when (lightness(@a) < 50%) {
+  color: white;
+}
+
+*[class*=atk-swatch], .atk-button[class*=atk-swatch] {
+    color: #fff;
     a {
         color: #000;
         &:hover {
@@ -501,18 +508,41 @@ a {
     }
     &.atk-swatch-1 {
         background: @swatch1;
+        border-color: @swatch1;
+        .colorCheck(@swatch1);
     }
     &.atk-swatch-2 {
         background: @swatch2;
+        .colorCheck(@swatch2);
     }
     &.atk-swatch-3 {
         background: @swatch3;
+        .colorCheck(@swatch3);
     }
     &.atk-swatch-4 {
-        background: @swatch4; 
+        background: @swatch4;
+        .colorCheck(@swatch4);
     }
     &.atk-swatch-5 {
         background: @swatch5;
+        .colorCheck(@swatch5);
+    }
+    &.atk-button:hover {
+        &.atk-swatch-1 {
+            background: lighten(@swatch1, 5%);
+        }
+        &.atk-swatch-2 {
+            background: lighten(@swatch2, 5%);
+        }
+        &.atk-swatch-3 {
+            background: lighten(@swatch3, 5%);
+        }
+        &.atk-swatch-4 {
+            background: lighten(@swatch4, 5%);
+        }
+        &.atk-swatch-5 {
+            background: lighten(@swatch5, 5%);
+        }
     }
 }
 *[class*=atk-effect] {

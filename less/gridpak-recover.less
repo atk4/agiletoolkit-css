@@ -33,36 +33,30 @@
  
  
 
-    /* 1. 12 Column Grid 0px - Infinity 
+    /* 1. 6 Column Grid 0px - 758px 
     ----------------------------------------------------------------------------- 
     
-    Span 1:    6.5%
-    Span 2:    15.0%
-    Span 3:    23.5%
-    Span 4:    32.0%
-    Span 5:    40.5%
-    Span 6:    49.0%
-    Span 7:    57.5%
-    Span 8:    66.0%
-    Span 9:    74.5%
-    Span 10:    83.0%
-    Span 11:    91.5%
-    Span 12:    100%
+    Span 1:    16.6666666667%
+    Span 2:    33.3333333333%
+    Span 3:    50.0%
+    Span 4:    66.6666666667%
+    Span 5:    83.3333333333%
+    Span 6:    100%
     
     ----------------------------------------------------------------------------- */	
     
-	@media screen and (min-width: 0px) {
+	@media screen and (min-width: 0px) and (max-width: 758px) {
         
         .col {
-            margin-left:2%;
-            padding:0 0%;
+            margin-left:0%;
+            padding:0 1.5%;
         }
         
         /* --- Gridpak variables ---*/ 
-        @max_columns: 12;
-        @padding: 0 0%;
+        @max_columns: 6;
+        @padding: 0 1.5%;
         @gutter_px: 0;
-        @gutter_pc: 2%;
+        @gutter_pc: 0%;
         
 
         
@@ -80,6 +74,65 @@
         }
         
         */
+        .span_1 {
+            .mixin-span(1, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .span_2 {
+            .mixin-span(2, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .span_3 {
+            .mixin-span(3, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .span_4 {
+            .mixin-span(4, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .span_5 {
+            .mixin-span(5, @gutter_pc, @gutter_px, @padding, @max_columns);
+        }
+        .span_6 {
+            .mixin-span_first;
+            width:100%;
+        }
+    }
+
+    /* 2. 12 Column Grid 759px - Infinity 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    8.33333333333%
+    Span 2:    16.6666666667%
+    Span 3:    25.0%
+    Span 4:    33.3333333333%
+    Span 5:    41.6666666667%
+    Span 6:    50.0%
+    Span 7:    58.3333333333%
+    Span 8:    66.6666666667%
+    Span 9:    75.0%
+    Span 10:    83.3333333333%
+    Span 11:    91.6666666667%
+    Span 12:    100%
+    
+    ----------------------------------------------------------------------------- */	
+    
+	@media screen and (min-width: 759px) {
+        
+        .col {
+            margin-left:0%;
+            padding:0 1.5%;
+        }
+        
+        /* --- Gridpak variables ---*/ 
+        @max_columns: 12;
+        @padding: 0 1.5%;
+        @gutter_px: 0;
+        @gutter_pc: 0%;
+        
+
+        
+        .row .col:first-child {
+            .mixin-span_first;
+        }
+        
+        
         .span_1 {
             .mixin-span(1, @gutter_pc, @gutter_px, @padding, @max_columns);
         }

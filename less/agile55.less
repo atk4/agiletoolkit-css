@@ -1,0 +1,48 @@
+@bodyFamily: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+
+
+// Swatches
+@lime: #14cc76;
+@tomato: #bf1313;
+
+
+#atk-header {
+	background: none;
+	font-family: @bodyFamily;
+	font-weight: 300;
+	text-align: left !important;
+	a {
+		color: #fff;
+	}
+	.atk-logo {
+		.position(relative, @t:0.4em);
+	}
+}
+#atk-footer {
+	color: fade(#fff, 20%);
+}
+.atk-logo {
+	display: inline-block;
+}
+body.page-index {
+	background: #000 url(../temp/stars.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #fff;
+	a {
+		color: @lime;
+	}
+	#atk-header, #atk-content, #atk-footer {
+		background: none;
+		border: none;
+	}
+	#atk-content {
+		padding-top: @margin;
+		.hero {
+			border: 1px solid fade(#fff, 15%);
+			border-width: 1px 0;
+			margin-bottom: @margin*2;
+			padding: @margin*2 0;
+		}
+	}
+}
