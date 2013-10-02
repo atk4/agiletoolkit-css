@@ -1,98 +1,61 @@
 // Import
 @import "../less/variables.less";
 @import "../less/mixins.less";
-@import "../less/agile55.less";
-
-// Swatches
-@aqua: #3498db;
-@aquaDarken: #2980b9;
-@navy: #2c3e50;
-@smoke: #ecf0f1;
-@tomato: #e74c3c;
 
 
-// General
-body {
-	background: @smoke;
-}
-section {
-	>h2:first-child {
-		border-bottom: 1px solid @smoke;
-		color: darken(@smoke,15%);
-		font-weight: 300;
-		margin-top: 0;
-		padding-bottom: 0.5em;
+#atk-header {
+	font-family: @bodyFamily;
+	font-weight: 300;
+	text-align: left !important;
+	padding: 0 @margin*2;
+	a {
+		color: #fff;
+	}
+	.atk-logo {
+		margin-left: 0;
+		.position(relative, @t:0.4em);
 	}
 }
-section + section {
-	margin-top: @margin*4;
-}
-.atk-box {
-	// background: #fff;
-	// border: 1px solid #ddd;
-	// .border-radius(3px);
-	// h2:first-child {
-	// 	color: darken(white,35%);
-	// 	font-weight: normal;
-	// }
-	// .atk-box {
-	// 	background: white;
-	// }
-}
-
-// Styling
-strong {
-	font-weight: 500;
-}
-
-// Layout
-#atk-header {
-	background: @navy;
-	color: #fff;
-	font-weight: 300;
-	padding: @margin/2 @margin;
-	text-align: center;
-}
-#atk-nav {
-	background: #fff;
-	border-right: 1px solid lighten(@smoke, 3%);
-	padding-top: @margin*2;
-	padding-bottom: @margin*2;
-	ul {
-		margin: 0;
+.atk-menu {
+	&.atk-menu-naked {
+		>li {
+			a {
+				padding: 0;
+			}
+			+ li a {
+				margin-left: @margin*2;
+			}
+		}
 	}
 }
 #atk-content {
-	background: #fff;
 	padding: @margin*2;
 }
-#atk-footer {
-	background: @smoke;
-	border-top: 1px solid darken(@smoke, 10%);
-	padding: @margin;
-}
-
-
-// Various
-.example {
-	background: lighten(@smoke, 4%);
-	border: 1px solid @smoke;
-}
-
-
-// Examples
-#example-swatches, #example-effects {
-	text-align: center;
-	.row>div>div {
-		height: 96px;
-		width: 100%;
+body.page-index {
+	background: #000 url(../temp/stars.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #fff;
+	a {
+		color: @swatch2;
 	}
-}
-#example-icons {
-	#icons-toggle {
-
+	#atk-header, #atk-content, #atk-footer {
+		background: none;
+		border: none;
 	}
-	#icons-library {
-		display: none;
+	#atk-header {
+		background: none;
+	}
+	#atk-content {
+		padding-top: @margin;
+		.hero {
+			border: 1px solid fade(#fff, 15%);
+			border-width: 1px 0;
+			margin-bottom: @margin*2;
+			padding: @margin*2 0;
+		}
+	}
+	#atk-footer {
+		color: fade(#fff, 20%);
 	}
 }
