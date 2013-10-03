@@ -12,3 +12,4 @@ body.page-index #atk-header{background:none}
 body.page-index #atk-content{padding-top:1.618rem}body.page-index #atk-content .hero{border:1px solid rgba(255,255,255,0.15);border-width:1px 0;margin-bottom:3.236rem;padding:3.236rem 0}
 body.page-index #atk-footer{color:rgba(255,255,255,0.2)}
 body.page-team .team-block .atk-media{font-size:0;line-height:0;width:207px}body.page-team .team-block .atk-media a{display:inline-block;margin:2px}
+body.page-portfolio .project{width:25%}body.page-portfolio .project .thumbnail{font-size:0;line-height:0;margin-bottom:.809rem}
