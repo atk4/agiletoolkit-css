@@ -21,16 +21,21 @@
 // ==========================================================
 
 .atk-wrapper {
-
+    margin-left: auto;
+    margin-right: auto;
+    width: @siteWidth;
 }
 .atk-text-nowrap {
     white-space: nowrap;
 }
-.atk-halfpush {
+.atk-push-halve {
     margin-bottom: @margin/2;
 }
 .atk-push {
     margin-bottom: @margin;
+}
+.atk-push-double {
+   margin-bottom: @margin*2;
 }
 .atk-sep {
     margin-left: @margin/3 !important;
@@ -51,9 +56,6 @@
         }
     }
 }
-.atk-wrapper {
-    .fixed-container();
-}
 a,
 a:link,
 a:visited,
@@ -70,6 +72,11 @@ input[type=submit] {
         line-height: @bodyBaseline;
         // padding: @margin/4 @margin/2;
         padding: 0.5em 1em;
+        &.atk-button-outline {
+            background: none;
+            border: 0.25em solid #fff;
+            color: #fff;
+        }
     }
 }
 .atk-box {
@@ -276,22 +283,39 @@ input[type=submit] {
         padding-left: @margin/2;
     }
 }
-.atk-menu-bar {
+// .atk-menu-bar {
+//     width: 100%;
+//     &.atk-cells>* {
+//         vertical-align: middle;
+//         .atk-logo, .atk-actions, .atk-media-block {
+//             margin-left: @margin;
+//             margin-right: @margin;
+//             white-space: nowrap;
+//         }
+//         .atk-logo {
+//             display: inline-block;
+//             margin-top: 0.5em;
+//             margin-bottom: 0.5em;
+//         }
+//         .atk-media-block .atk-content {
+//             padding-left: @margin/3;
+//         }
+//     }
+// }
+.atk-bar {
+    line-height: 1;
+    padding: @margin 0;
     width: 100%;
     &.atk-cells>* {
-        vertical-align: middle;
-        .atk-logo, .atk-actions, .atk-media-block {
-            margin-left: @margin;
-            margin-right: @margin;
-            white-space: nowrap;
-        }
+        padding-right: 2.5em;
         .atk-logo {
             display: inline-block;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
         }
         .atk-media-block .atk-content {
             padding-left: @margin/3;
+        }
+        &:last-child {
+            padding-right: 0;
         }
     }
 }
@@ -304,11 +328,12 @@ input[type=submit] {
         // margin-left: 1px;
         a {
             display: block;
-            padding: 0.6em 1.2em;
+            // padding: 0.6em 1.2em;
+            margin: 0 1.2em;
         }
         &:first-child a {
             .border-radius(@cornerRadius 0 0 @cornerRadius);
-            margin: 0;
+            // margin: 0;
         }
         &:last-child a {
             .border-radius(0 @cornerRadius @cornerRadius 0);
@@ -491,7 +516,6 @@ a {
 }
 
 
-
 // ==========================================================
 // Colors
 // ==========================================================
@@ -503,7 +527,7 @@ a {
   color: white;
 }
 
-*[class*=atk-swatch], .atk-button[class*=atk-swatch] {
+*[class*=atk-swatch], .atk-button[class*=atk-swatch], .atk-label[class*=atk-swatch] {
     color: #fff;
     a {
         color: #000;
@@ -516,24 +540,38 @@ a {
     }
     &.atk-swatch-1 {
         background: @swatch1;
-        border-color: @swatch1;
-        .colorCheck(@swatch1);
+        border-color: @swatch2;
+        &, a {
+            .colorCheck(@swatch1);
+        }
     }
     &.atk-swatch-2 {
         background: @swatch2;
-        .colorCheck(@swatch2);
+        border-color: @swatch2;
+        &, a {
+            .colorCheck(@swatch2);
+        }
     }
     &.atk-swatch-3 {
         background: @swatch3;
-        .colorCheck(@swatch3);
+        border-color: @swatch3;
+        &, a {
+            .colorCheck(@swatch3);
+        }
     }
     &.atk-swatch-4 {
         background: @swatch4;
-        .colorCheck(@swatch4);
+        border-color: @swatch4;
+        &, a {
+            .colorCheck(@swatch4);
+        }
     }
     &.atk-swatch-5 {
         background: @swatch5;
-        .colorCheck(@swatch5);
+        border-color: @swatch5;
+        &, a {
+            .colorCheck(@swatch5);
+        }
     }
     &.atk-button:hover {
         &.atk-swatch-1 {
@@ -606,7 +644,7 @@ a {
 }
 .ui-widget {
     color: @bodyColor;
-    font-family: @fontFamily;
+    font-family: @bodyFamily;
     font-size: @bodySize;
 }
 .ui-widget-header {
