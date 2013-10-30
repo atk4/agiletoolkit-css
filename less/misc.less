@@ -43,6 +43,7 @@
 }
 .atk-cells {
     display:table;
+    width: 100%;
     > .atk-cell {
         display: table-cell;
         vertical-align: top;
@@ -72,12 +73,24 @@ input[type=submit] {
         line-height: @bodyBaseline;
         // padding: @margin/4 @margin/2;
         padding: 0.5em 1em;
+        &.atk-button-blank {
+            .buttonBlank;
+        }
         &.atk-button-outline {
-            background: none;
-            border: 0.25em solid #fff;
-            color: #fff;
+            .buttonOutline;
         }
     }
+}
+.buttonBlank() {
+    background: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+.buttonOutline() {
+    background: none;
+    border-color: #fff;
+    box-shadow: none !important;
+    color: #fff !important;
 }
 .atk-box {
     .border-radius(@cornerRadius);
@@ -152,17 +165,17 @@ input[type=submit] {
 
  // Notification 
 .atk-notification {
-    padding:@padding/2;
+    padding:@margin/2;
     position:relative;
     .atk-notification-text {
         padding:0 20px;
-        >.ui-icon {position:absolute;top:@padding/1.8;left:@padding/2;}
+        >.ui-icon {position:absolute;top:@margin/1.8;left:@margin/2;}
     }
-    >a.ui-icon-closethick {position:absolute;top:@padding/4;right:@padding/4;}
+    >a.ui-icon-closethick {position:absolute;top:@margin/4;right:@margin/4;}
 }
-.atk-notification {.box-shadow(0 10px 20px @white inset);}
+// .atk-notification {.box-shadow(0 10px 20px @white inset);}
 .atk-growl>.atk-notification {
-    @shadow: 0 5px 10px fadeout(@shadowColor,60%),0 10px 20px @white inset;
+    @shadow: 0 5px 10px fadeout(#000,60%),0 10px 20px #fff inset;
     .box-shadow(@shadow);
 }
 
@@ -430,6 +443,7 @@ a {
     }
 }
 
+
 // Helpers
 .atk-jackscrew {
     width: 100%;
@@ -445,8 +459,8 @@ a {
     float: left;
 }
 .atk-move-center {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
     &.atk-button {
         display: block;
     }
@@ -501,17 +515,17 @@ a {
 .stateDefault() {
     .box-shadow(0 1px 0 rgba(0,0,0,0.1));
     background: @stateDefault;
-    border: 1px solid @borderClickable;
+    border: 0.1em solid @borderClickable;
     color: @bodyColor;
 }
 .stateHover() {
     background: @stateHover;
-    border: 1px solid @borderClickable;
+    border: 0.1em solid @borderClickable;
     color: @bodyColor;
 }
 .stateActive() {
     background: @stateActive;
-    border: 1px solid @borderClickable;
+    border: 0.1em solid @borderClickable;
     color: @bodyColor;
 }
 
@@ -699,7 +713,7 @@ a {
             text-align: center;
             width: 1.2rem;
             &:before {
-                color: @colorPrimary;
+                color: @linkColor;
                 display: block;
                 font-family: "fontello";
                 font-size: 12px;

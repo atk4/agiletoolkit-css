@@ -51,13 +51,13 @@ input[type="submit"]::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner { padding: 0 !important; border: 0 !important; }
 
 input[readonly],
-div.atk-form-field-readonly { background: @lightestGray; }
+div.atk-form-field-readonly { background: @bodyColor; }
 
 input[type=text]:focus,
 input[type=password]:focus,
 textarea:focus {
-    @shadow: 0 0 3px fadeout(@focused,30%), 0 0 10px fadeout(@focused,70%);
-    border-color: @focused;
+    @shadow: 0 0 3px fadeout(@colorFocus,30%), 0 0 10px fadeout(@colorFocus,70%);
+    border-color: @colorFocus;
     .box-shadow(@shadow);
     outline: none;
 }
@@ -89,11 +89,11 @@ fieldset {
         .atk-form-row {
             .clear-fix();
             > label {
-                width: @label;
+                width: 7em;
                 float: left;
             }
             > .atk-form-field {
-                margin-left: @label + @labelMargin;
+                margin-left: 7em + 2em;
                 input[type=text]:not([class*="span"]),
                 input[type=password]:not([class*="span"]),
                 input[readonly]:not([class*="span"]),
@@ -103,18 +103,18 @@ fieldset {
                 input + input { margin-left: @margin/4; }
                 ins {
                     text-decoration: none;
-                    color: @lightGray;
+                    color: @bodyColor;
                     display: block;
                     margin-top: @margin/3;
                 }
                 .atk-form-error {
-                    color: @error;
+                    color: red;
                     margin-top: @margin/3;
                 }
             }
             &.has-error {
-                > label { color: @error; }
-                input { border-color: @error; }
+                > label { color: red; }
+                input { border-color: red; }
             }
             + *[class*=span] {
                 margin-top: 0;
@@ -134,11 +134,11 @@ fieldset {
         + fieldset {
                 margin-top: @margin;
                 padding-top: @margin;
-                border-top: 1px solid @border;
+                border-top: 1px solid @borderStatic;
         }
     }
-    .atk-actions { border-top: 1px solid @border; margin-top: @margin; padding-top: @margin; }
-    .atk-actions, .legend { padding-left: @label + @labelMargin; }
+    .atk-actions { border-top: 1px solid @borderStatic; margin-top: @margin; padding-top: @margin; }
+    .atk-actions, .legend { padding-left: 7em + 7em; }
 
     // Stacked form
     &.stacked { 
@@ -187,11 +187,11 @@ fieldset {
     &.wider-labels {
         fieldset {
             // legend {
-            //     text-indent: @label*1.6 + @labelMargin;
+            //     text-indent: 7em*1.6 + 7em;
             // }
             .atk-form-row {
-                > label { width: @label + (@label*0.6); float: left; }
-                > .atk-form-field { margin-left: @label + (@label*0.6) + @labelMargin; }
+                > label { width: 7em + (7em*0.6); float: left; }
+                > .atk-form-field { margin-left: 7em + (7em*0.6) + 7em; }
             }
         }
         &.stacked {
@@ -200,7 +200,7 @@ fieldset {
                 > .atk-form-field { margin-left: 0; }
             }
         }
-        .atk-actions, .legend { padding-left: @label + (@label*0.6) + @labelMargin; }
+        .atk-actions, .legend { padding-left: 7em + (7em*0.6) + 7em; }
     }
     // Form with right aligned labels
     &.labels-right fieldset .atk-form-row > label { text-align: right; }
@@ -237,7 +237,7 @@ fieldset {
         vertical-align: middle;
         &.expanded {
             width: 100%;
-            line-height: @lineHeight;
+            line-height: @bodyBaseline;
             &:first-child input {
                 .border-right-radius(0);
             }
@@ -259,28 +259,5 @@ fieldset {
         .ui-buttonset { white-space: nowrap; }
         > .ui-button { margin-left: 0; margin-right: 0; }
         .ui-button * { line-height: normal; }
-    }
-}
-
-// @media screen and (-webkit-min-device-pixel-ratio:0) {
-//     .input-row .input-cell .ui-button,
-//     .input-row .input-cell .ui-button * { line-height: 1.4; }
-// }
-
-// and this is actually for layout
-.atk-row {
-    .clear-fix();
-    // +.atk-row { margin-top: @margin; }
-
-    > *:first-child:not([class*="offset"]),
-    > form > *:first-child[class*="span"],
-    > form > *[class*="span"]>*:first-child[class*="span"] {
-        margin-left: 0 !important;
-    }
-
-    > [class*="span"],
-    > form > [class*="span"],
-    > form > [class*="span"] > [class*="span"] {
-        .gridColumn();
     }
 }
