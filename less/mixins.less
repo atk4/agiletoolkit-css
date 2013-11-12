@@ -171,24 +171,24 @@
 }
 
 // Transitions
-.transition(@transition) {
-  -webkit-transition: @transition;
-     -moz-transition: @transition;
-      -ms-transition: @transition;
-       -o-transition: @transition;
-          transition: @transition;
+.transition(@arguments) {
+  -webkit-transition: @arguments;
+     -moz-transition: @arguments;
+      -ms-transition: @arguments;
+       -o-transition: @arguments;
+          transition: @arguments;
 }
-.transition-delay(@transition-delay) {
-  -webkit-transition-delay: @transition-delay;
-     -moz-transition-delay: @transition-delay;
-       -o-transition-delay: @transition-delay;
-          transition-delay: @transition-delay;
+.transition-delay(@arguments) {
+  -webkit-transition-delay: @arguments;
+     -moz-transition-delay: @arguments;
+       -o-transition-delay: @arguments;
+          transition-delay: @arguments;
 }
-.transition-duration(@transition-duration) {
-  -webkit-transition-duration: @transition-duration;
-     -moz-transition-duration: @transition-duration;
-       -o-transition-duration: @transition-duration;
-          transition-duration: @transition-duration;
+.transition-duration(@arguments) {
+  -webkit-transition-duration: @arguments;
+     -moz-transition-duration: @arguments;
+       -o-transition-duration: @arguments;
+          transition-duration: @arguments;
 }
 
 // 2D Transformations
@@ -250,6 +250,20 @@
       -ms-animation: @arguments;
        -o-animation: @arguments;
           animation: @arguments;
+}
+.animation-delay(@arguments) {
+  -webkit-animation-delay: @arguments;
+     -moz-animation-delay: @arguments;
+      -ms-animation-delay: @arguments;
+       -o-animation-delay: @arguments;
+          animation-delay: @arguments;
+}
+.animation-duration(@arguments) {
+  -webkit-animation-duration: @arguments;
+     -moz-animation-duration: @arguments;
+      -ms-animation-duration: @arguments;
+       -o-animation-duration: @arguments;
+          animation-duration: @arguments;
 }
 
 // Box sizing

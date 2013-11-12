@@ -1,5 +1,5 @@
 // ==========================================================
-// Modular Scale:   16px @ 1:1.618   12px @ 1:1.618
+// Modular Scale: 16px @ 1:1.667 / 12px @ 1:1.667 / Major 6th
 // ==========================================================
 
 html {
@@ -23,6 +23,7 @@ body {
 // ==========================================================
 
 h1, h2, h3, h4, h5, h6 {
+    color: @headingColor;
     font-family: @headingFamily;
     font-weight: @headingWeight;
     line-height: 1.2;
@@ -36,25 +37,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .atk-size-zetta {
-    font-size: @bodySize * 4.236;
+    font-size: @bodySize * 5.792;
 }
 .atk-size-exa {
-    font-size: @bodySize * 3.177;
-}
-h1 {
-    margin-bottom: @margin;
+    font-size: @bodySize * 4.632;
 }
 h1, .atk-size-peta {
-    font-size: @bodySize * 2.618;
+    font-size: @bodySize * 3.474;
 }
 h2, .atk-size-tera {
-    font-size: @bodySize * 1.963;
+    font-size: @bodySize * 2.779;
 }
 h3, .atk-size-giga {
-    font-size: @bodySize * 1.618;
+    font-size: @bodySize * 1.667; /* before: 1.667 */
 }
 h4, .atk-size-mega {
-    font-size: @bodySize * 1.214;
+    font-size: @bodySize * 1.25;
 }
 h5, .atk-size-kilo {
     font-size: @bodySize;
@@ -88,16 +86,31 @@ figcaption {
 // ==========================================================
 
 ul, ol, dl {
-    margin: 0 0 @bodyBaseline 0;
+    margin: 0 0 @margin 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 ul, ol {
-    &.clean {
+    &.atk-list-nobullets {
         margin-left: 0;
         padding-left: 0;
         list-style-type: none;
         ul, ol {
             list-style-type: none;
             padding-left: 1em;
+        }
+    }
+    &.atk-list-inline {
+        li {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            &:first-child {
+                .atk-sep {
+                    display: none;
+                }
+            }
         }
     }
 }

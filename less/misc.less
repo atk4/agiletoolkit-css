@@ -94,7 +94,8 @@ input[type=submit] {
 }
 .atk-box {
     .border-radius(@cornerRadius);
-    background: lightgray;
+    background: @colorLight;
+    border: 1px solid @borderStatic;
     padding: @margin;
     margin-bottom: @margin;
     >h1, >h2, >h3, >h4, >h5, >h6 {
@@ -534,10 +535,10 @@ a {
 // Colors
 // ==========================================================
 
-.colorCheck (@a) when (lightness(@a) >= 50%) {
+.colorCheck (@a) when (lightness(@a) >= 60%) {
   color: black;
 }
-.colorCheck (@a) when (lightness(@a) < 50%) {
+.colorCheck (@a) when (lightness(@a) < 60%) {
   color: white;
 }
 
@@ -555,35 +556,35 @@ a {
     &.atk-swatch-1 {
         background: @swatch1;
         border-color: @swatch2;
-        &, a {
+        &, a, h1, h2, h3, h4, h5, h6 {
             .colorCheck(@swatch1);
         }
     }
     &.atk-swatch-2 {
         background: @swatch2;
         border-color: @swatch2;
-        &, a {
+        &, a, h1, h2, h3, h4, h5, h6 {
             .colorCheck(@swatch2);
         }
     }
     &.atk-swatch-3 {
         background: @swatch3;
         border-color: @swatch3;
-        &, a {
+        &, a, h1, h2, h3, h4, h5, h6 {
             .colorCheck(@swatch3);
         }
     }
     &.atk-swatch-4 {
         background: @swatch4;
         border-color: @swatch4;
-        &, a {
+        &, a, h1, h2, h3, h4, h5, h6 {
             .colorCheck(@swatch4);
         }
     }
     &.atk-swatch-5 {
         background: @swatch5;
         border-color: @swatch5;
-        &, a {
+        &, a, h1, h2, h3, h4, h5, h6 {
             .colorCheck(@swatch5);
         }
     }
