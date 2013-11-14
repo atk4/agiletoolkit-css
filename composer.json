@@ -1,7 +1,7 @@
 {
     "name": "atk4/atk-default-theme",
     "source": {
-        "url": "https://github.com/atk4/atk-default-theme.git",
+        "url": "git@github.com:atk4/atk-default-theme.git",
         "type": "git",
         "reference": "origin/master"
     }
