@@ -23,19 +23,28 @@
 .atk-wrapper {
     margin-left: auto;
     margin-right: auto;
-    width: @siteWidth;
+    width: @siteWidth !important;
 }
 .atk-text-nowrap {
     white-space: nowrap;
 }
 .atk-push-halve {
     margin-bottom: @margin/2;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 .atk-push {
     margin-bottom: @margin;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 .atk-push-double {
    margin-bottom: @margin*2;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 .atk-sep {
     margin-left: @margin/3 !important;
@@ -49,12 +58,11 @@
         vertical-align: top;
         .box-sizing();
     }
-    &.atk-cells-gutter {
-        > .atk-cell {
-            + .atk-cell {
-                padding-left: 1em;
-            }
-        }
+    &.atk-cells-gutter .atk-cell + .atk-cell {
+        padding-left: 1em;
+    }
+    &.atk-cells-gutter-halve .atk-cell + .atk-cell {
+        padding-left: 0.5em;
     }
 }
 a,
@@ -103,6 +111,12 @@ input[type=submit] {
             margin-top: 0;
         }
     }
+}
+.atk-section {
+    padding: @margin*2 0;
+}
+.atk-section-small {
+    padding: @margin 0;
 }
 .atk-label {
     .border-radius(@cornerRadius);
@@ -281,41 +295,6 @@ input[type=submit] {
         }
     }   
 }
-.atk-media-block {
-    display: table;
-    .atk-media, .atk-content {
-        display: table-cell;
-        vertical-align: top;
-    }
-    .atk-media>img {
-        display: block;
-    }
-    .atk-media + .atk-content {
-        padding-left: @margin;
-    }
-    .atk-table & .atk-media + .atk-content {
-        padding-left: @margin/2;
-    }
-}
-// .atk-menu-bar {
-//     width: 100%;
-//     &.atk-cells>* {
-//         vertical-align: middle;
-//         .atk-logo, .atk-actions, .atk-media-block {
-//             margin-left: @margin;
-//             margin-right: @margin;
-//             white-space: nowrap;
-//         }
-//         .atk-logo {
-//             display: inline-block;
-//             margin-top: 0.5em;
-//             margin-bottom: 0.5em;
-//         }
-//         .atk-media-block .atk-content {
-//             padding-left: @margin/3;
-//         }
-//     }
-// }
 .atk-bar {
     line-height: 1;
     padding: @margin 0;
@@ -325,9 +304,9 @@ input[type=submit] {
         .atk-logo {
             display: inline-block;
         }
-        .atk-media-block .atk-content {
-            padding-left: @margin/3;
-        }
+        // .atk-cells.atk-cells-gutter .atk-cell + .atk-cell {
+        //     padding-left: @margin/3;
+        // }
         &:last-child {
             padding-right: 0;
         }
@@ -365,21 +344,6 @@ input[type=submit] {
             .box-flex(1);
             text-align: center;
             margin-left: 1px;
-        }
-    }
-    &.atk-swatch-1 {
-        background: none !important;
-        >li {
-            a {
-                background: @swatch1;
-                &:hover {
-                    background: darken(@swatch1, 10%);
-                    color: #000;
-                }
-            }
-            &.atk-state-active {
-                background: darken(@swatch1, 5%);
-            }
         }
     }
 }
@@ -535,74 +499,36 @@ a {
 // Colors
 // ==========================================================
 
-.colorCheck (@a) when (lightness(@a) >= 60%) {
+.colorCheck (@a) when (lightness(@a) >= 55%) {
   color: black;
 }
-.colorCheck (@a) when (lightness(@a) < 60%) {
+.colorCheck (@a) when (lightness(@a) < 55%) {
   color: white;
 }
 
-*[class*=atk-swatch], .atk-button[class*=atk-swatch], .atk-label[class*=atk-swatch] {
-    color: #fff;
-    a {
-        color: #000;
-        &:hover {
-            color: blue;
+.createSwatch(@color) {
+    .@{color} {
+        &, &.atk-button[class*=atk-swatch], &.atk-label[class*=atk-swatch] {
+            .colorCheck(@@color);
+            background: @@color;
+            border-color: @@color;
+            hr {
+                background-color: #000;
+            }
+            &, a, h1, h2, h3, h4, h5, h6 {
+                .colorCheck(@@color);
+            }
+            &[class*=icon-] {
+                background: none;
+                color: @@color;
+                &[class*=atk-shape] {
+                    .colorCheck(@@color);
+                    background: @@color;
+                }
+            }
         }
-    }
-    hr {
-        background-color: #000;
-    }
-    &.atk-swatch-1 {
-        background: @swatch1;
-        border-color: @swatch2;
-        &, a, h1, h2, h3, h4, h5, h6 {
-            .colorCheck(@swatch1);
-        }
-    }
-    &.atk-swatch-2 {
-        background: @swatch2;
-        border-color: @swatch2;
-        &, a, h1, h2, h3, h4, h5, h6 {
-            .colorCheck(@swatch2);
-        }
-    }
-    &.atk-swatch-3 {
-        background: @swatch3;
-        border-color: @swatch3;
-        &, a, h1, h2, h3, h4, h5, h6 {
-            .colorCheck(@swatch3);
-        }
-    }
-    &.atk-swatch-4 {
-        background: @swatch4;
-        border-color: @swatch4;
-        &, a, h1, h2, h3, h4, h5, h6 {
-            .colorCheck(@swatch4);
-        }
-    }
-    &.atk-swatch-5 {
-        background: @swatch5;
-        border-color: @swatch5;
-        &, a, h1, h2, h3, h4, h5, h6 {
-            .colorCheck(@swatch5);
-        }
-    }
-    &.atk-button:hover {
-        &.atk-swatch-1 {
-            background: lighten(@swatch1, 5%);
-        }
-        &.atk-swatch-2 {
-            background: lighten(@swatch2, 5%);
-        }
-        &.atk-swatch-3 {
-            background: lighten(@swatch3, 5%);
-        }
-        &.atk-swatch-4 {
-            background: lighten(@swatch4, 5%);
-        }
-        &.atk-swatch-5 {
-            background: lighten(@swatch5, 5%);
+        &.atk-button:hover {
+            background: lighten(@@color, 5%);
         }
     }
 }
