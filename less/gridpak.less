@@ -33,69 +33,7 @@
  
  
 
-    /* 1. 6 Column Grid 0px - 758px 
-    ----------------------------------------------------------------------------- 
-    
-    Span 1:    16.6666666667%
-    Span 2:    33.3333333333%
-    Span 3:    50.0%
-    Span 4:    66.6666666667%
-    Span 5:    83.3333333333%
-    Span 6:    100%
-    
-    ----------------------------------------------------------------------------- */	
-    
-	@media screen and (min-width: 0px) and (max-width: 758px) {
-        
-        .col {
-            margin-left:0%;
-            padding:0 1.5%;
-        }
-        
-        /* --- Gridpak variables ---*/ 
-        @max_columns: 6;
-        @padding: 0 1.5%;
-        @gutter_px: 0;
-        @gutter_pc: 0%;
-        
-
-        
-        .row .col:first-child {
-            .mixin-span_first;
-        }
-        
-        
-        /*
-        Add your semantic classnames in alongside their corresponding spans here. e.g.
-        
-        .span_3,
-        .my_semantic_class_name {
-            ...
-        }
-        
-        */
-        .span_1 {
-            .mixin-span(1, @gutter_pc, @gutter_px, @padding, @max_columns);
-        }
-        .span_2 {
-            .mixin-span(2, @gutter_pc, @gutter_px, @padding, @max_columns);
-        }
-        .span_3 {
-            .mixin-span(3, @gutter_pc, @gutter_px, @padding, @max_columns);
-        }
-        .span_4 {
-            .mixin-span(4, @gutter_pc, @gutter_px, @padding, @max_columns);
-        }
-        .span_5 {
-            .mixin-span(5, @gutter_pc, @gutter_px, @padding, @max_columns);
-        }
-        .span_6 {
-            .mixin-span_first;
-            width:100%;
-        }
-    }
-
-    /* 2. 12 Column Grid 759px - Infinity 
+    /* 1. 12 Column Grid 0px - Infinity 
     ----------------------------------------------------------------------------- 
     
     Span 1:    8.33333333333%
@@ -113,26 +51,35 @@
     
     ----------------------------------------------------------------------------- */	
     
-	@media screen and (min-width: 759px) {
+	@media screen and (min-width: 0px) {
+        
+        .row {
+            margin-left:-20px;
+        }
         
         .col {
-            margin-left:0%;
-            padding:0 1.5%;
+            border-left-width:20px;
+            padding:0 0px;
         }
         
         /* --- Gridpak variables ---*/ 
         @max_columns: 12;
-        @padding: 0 1.5%;
-        @gutter_px: 0;
-        @gutter_pc: 0%;
+        @padding: 0 0px;
+        @gutter_px: 20px;
+        @gutter_pc: 0;
         
 
         
-        .row .col:first-child {
-            .mixin-span_first;
+        
+        /*
+        Add your semantic classnames in alongside their corresponding spans here. e.g.
+        
+        .span_3,
+        .my_semantic_class_name {
+            ...
         }
         
-        
+        */
         .span_1 {
             .mixin-span(1, @gutter_pc, @gutter_px, @padding, @max_columns);
         }
