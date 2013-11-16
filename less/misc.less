@@ -28,7 +28,7 @@
 .atk-text-nowrap {
     white-space: nowrap;
 }
-.atk-push-halve {
+.atk-push-small {
     margin-bottom: @margin/2;
     &:last-child {
         margin-bottom: 0;
@@ -40,7 +40,7 @@
         margin-bottom: 0;
     }
 }
-.atk-push-double {
+.atk-push-large {
    margin-bottom: @margin*2;
     &:last-child {
         margin-bottom: 0;
@@ -61,7 +61,7 @@
     &.atk-cells-gutter .atk-cell + .atk-cell {
         padding-left: 1em;
     }
-    &.atk-cells-gutter-halve .atk-cell + .atk-cell {
+    &.atk-cells-gutter-small .atk-cell + .atk-cell {
         padding-left: 0.5em;
     }
 }
@@ -159,6 +159,10 @@ input[type=submit] {
         }
     }
 }
+.atk-text-dimmed {
+    color: lighten(@bodyColor, 40%);
+}
+
 
  // Growl 
 .atk-growl {
@@ -322,7 +326,9 @@ input[type=submit] {
         a {
             display: block;
             // padding: 0.6em 1.2em;
-            margin: 0 1.2em;
+        }
+        + li a {
+            margin: 0 0 0 2em;
         }
         &:first-child a {
             .border-radius(@cornerRadius 0 0 @cornerRadius);

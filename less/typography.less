@@ -26,9 +26,9 @@ h1, h2, h3, h4, h5, h6 {
     color: @headingColor;
     font-family: @headingFamily;
     font-weight: @headingWeight;
-    line-height: 1.2;
+    line-height: @headingBaseline;
     text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-    margin: @margin*1 0 @margin/2 0;
+    margin: @margin 0 @margin/2 0;
     &:first-child {
         margin-top: 0;
     }
@@ -37,19 +37,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .atk-size-zetta {
-    font-size: @bodySize * 5.792;
-}
-.atk-size-exa {
     font-size: @bodySize * 4.632;
 }
-h1 {
-    line-height: 1.1;
-}
-h1, .atk-size-peta {
+.atk-size-exa {
     font-size: @bodySize * 3.474;
 }
-h2, .atk-size-tera {
+h1, .atk-size-peta {
     font-size: @bodySize * 2.779;
+}
+h2, .atk-size-tera {
+    font-size: @bodySize * 2.084;
 }
 h3, .atk-size-giga {
     font-size: @bodySize * 1.667; /* before: 1.667 */
@@ -257,13 +254,17 @@ kbd, samp {
     line-height: @bodyBaseline;
 }
 hr {
-    background: darkgray;
+    background: none;
     border: none;
+    border-top: 1px solid @borderStatic;
     margin: @margin 0;
     width: 100%;
     height: 1px;
     clear: both;
-    &.small {
+    &.atk-hr-small {
         margin: @margin/2 0;
+    }
+    &.atk-hr-dotted {
+        border-top-style: dotted;
     }
 }
