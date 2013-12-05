@@ -162,6 +162,26 @@ fieldset {
         }
         .atk-actions, .legend { padding-left: 0; }
     }
+    // Stacked form
+    &.atk-form-compact {
+      fieldset {
+        margin-bottom: 0;
+        .atk-form-row + .atk-form-row {
+          margin-top: @margin/4;
+        }
+        label {
+          display: none !important;
+        }
+      }
+      .atk-actions {
+        border: none;
+        margin-top: @margin/4;
+        padding: 0;
+        .atk-button {
+          width: 100%;
+        }
+      }
+    }
     // Inline form
     &.row {
         fieldset {

@@ -1,10 +1,10 @@
 // ==========================================================
-// Modular Scale: 16px @ 1:1.667 / 12px @ 1:1.667 / Major 6th
+// General
 // ==========================================================
 
 html {
     font-family: @bodyFamily;
-    font-size: 100%; /* 16 px */ 
+    font-size: 100%; /* 16px */ 
     line-height: @bodyBaseline;
 }
 body {
@@ -36,30 +36,59 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: @margin;
     }
 }
+// .atk-size-zetta {
+//     font-size: @bodySize * pow(@bodyBaseline,3);
+// }
+// .atk-size-exa {
+//     font-size: @bodySizeAlt * pow(@bodyBaseline,3);
+// }
+// h1, .atk-size-peta {
+//     font-size: @bodySize * pow(@bodyBaseline,2);
+// }
+// h2, .atk-size-tera {
+//     font-size: @bodySizeAlt * pow(@bodyBaseline,2);
+// }
+// h3, .atk-size-giga {
+//     font-size: @bodySize * @bodyBaseline;
+// }
+// h4, .atk-size-mega {
+//     font-size: @bodySizeAlt * @bodyBaseline;
+// }
+// h5, .atk-size-kilo {
+//     font-size: @bodySize;
+// }
+// h6, small, .atk-size-milli {
+//     font-size: @bodySizeAlt;
+// }
+
 .atk-size-zetta {
-    font-size: @bodySize * 4.632;
+    font-size: @bodySize * pow(@bodyBaseline,3.5);
 }
 .atk-size-exa {
-    font-size: @bodySize * 3.474;
+    font-size: @bodySize * pow(@bodyBaseline,3);
 }
 h1, .atk-size-peta {
-    font-size: @bodySize * 2.779;
+    font-size: @bodySize * pow(@bodyBaseline,2.5);
 }
 h2, .atk-size-tera {
-    font-size: @bodySize * 2.084;
+    font-size: @bodySize * pow(@bodyBaseline,2);
 }
 h3, .atk-size-giga {
-    font-size: @bodySize * 1.667; /* before: 1.667 */
+    font-size: @bodySize * pow(@bodyBaseline,1.5);
 }
 h4, .atk-size-mega {
-    font-size: @bodySize * 1.25;
+    font-size: @bodySize * pow(@bodyBaseline,1);
 }
 h5, .atk-size-kilo {
     font-size: @bodySize;
 }
-h6, small, .atk-size-nano {
-    font-size: @bodySize * 0.75;
+h6, small, .atk-size-milli {
+    font-size: @bodySize * pow(@bodyBaseline,-0.5);
 }
+.atk-size-micro {
+    font-size: @bodySize * pow(@bodyBaseline,-1);
+}
+
 
 
 // ==========================================================
@@ -181,7 +210,7 @@ pre {
     cursor: default;
     display: block;
     font-family: monospace, serif;
-    .atk-size-nano;
+    .atk-size-milli;
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
