@@ -1,0 +1,86 @@
+// ==========================================================
+// Widgets
+// ==========================================================
+.atk-actions {
+    >* {
+        + * {
+            margin-left: 0.3em;
+        }
+    }   
+}
+.atk-bar {
+    line-height: 1;
+    padding: @margin 0;
+    width: 100%;
+    &.atk-cells>* {
+        padding-right: 2.5em;
+        .atk-logo {
+            display: inline-block;
+        }
+        // .atk-cells.atk-cells-gutter .atk-cell + .atk-cell {
+        //     padding-left: @margin/3;
+        // }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+.atk-menu {
+    display: inline-block;
+    &, li {
+        .clear-ul;
+    }
+    >li {
+        // margin-left: 1px;
+        a {
+            display: block;
+            // padding: 0.6em 1.2em;
+        }
+        + li a {
+            margin: 0 0 0 2em;
+        }
+        &:first-child a {
+            .border-radius(@cornerRadius 0 0 @cornerRadius);
+            // margin: 0;
+        }
+        &:last-child a {
+            .border-radius(0 @cornerRadius @cornerRadius 0);
+        }
+    }
+    &.atk-menu-horizontal {
+        display: table;
+        >li {
+            display: table-cell;
+        }
+    }
+    &.atk-menu-horizontal-justified {
+        .flex;
+        >li {
+            .box-flex(1);
+            text-align: center;
+            margin-left: 1px;
+        }
+    }
+}
+.atk-popover.ui-dialog {
+    border-color: @borderStatic;
+    border-radius: @cornerRadius;
+    box-shadow: 0 5px 10px fade(@colorDark,30%);
+    >.ui-dialog-titlebar {
+        display: none;
+    }
+    >.ui-dialog-content {
+        background: #fff;
+        border-radius: @cornerRadius;
+        padding: @margin/2;
+        z-index: 2;
+    }
+    .arrow.top {
+        margin-bottom: -5px;
+        z-index: 1 !important;
+        &:after {
+            background: #fff;
+            border-color: @borderStatic;
+        }
+    }
+}
