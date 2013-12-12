@@ -57,6 +57,9 @@
         vertical-align: top;
         .box-sizing();
     }
+    &.atk-cells-gutter-large .atk-cell + .atk-cell {
+        padding-left: 2em;
+    }
     &.atk-cells-gutter .atk-cell + .atk-cell {
         padding-left: 1em;
     }
@@ -99,7 +102,7 @@ input[type=submit] {
     box-shadow: none !important;
     color: #fff !important;
 }
-.atk-box {
+.atk-box, .atk-box-small {
     .border-radius(@cornerRadius);
     background: @colorLight;
     border: 1px solid @borderStatic;
@@ -113,6 +116,9 @@ input[type=submit] {
     &:last-child {
         margin-bottom: 0;
     }
+}
+.atk-box-small {
+    padding: @margin/2;
 }
 .atk-section {
     padding: @margin*2 0;

@@ -41,7 +41,7 @@
 						</ul>
 					</nav>
 					<div id="atk-content" class="atk-layout-column fluid">
-						<section>
+<!-- 						<section style="">
 							<h2>Overview</h2>
 							<h3>Highlights</h3>
 							<ul>
@@ -105,7 +105,7 @@
 										<li><span class="icon-clock-1"></span>Badges</li>
 										<li><span class="icon-clock-1"></span>Boxes</li>
 										<li><span class="icon-clock-1"></span>.atk-actions (margins between buttons and links)</li>
-									</ul><!-- /Components -->
+									</ul>
 								</li>
 								<li>
 									<span class="icon-clock-1"></span>Widgets
@@ -147,7 +147,7 @@
 										<li>
 											<span class="icon-cancel-1"></span>Avatarboxes (Avatars mixed with buttons, labels, etc.)
 										</li>
-									</ul> <!-- /Widgets -->
+									</ul>
 								</li>
 								<li>
 									<span class="icon-clock-1"></span>jQueryUI Widgets
@@ -174,7 +174,7 @@
 								<li>Custom social share buttons</li>
 								<li>Examples should be in contrast with explanation</li>
 							</ul>
-						</section>
+						</section> -->
 						<section id="grid-system">
 							<h2>Grid System</h2>
 							<div class="row">
@@ -196,10 +196,10 @@
 							<p>If you can force your heart and nerve and sinew to serve your turn long after they are gone, and so hold on when there is nothing in you except the will which says to them; 'Hold on!'</p>
 							<blockquote>&#8220;If you can talk with crowds and keep your virtue, or walk with kings &#8212; nor lose the common touch.&#8221;<br style=""></blockquote>
 							<p>If neither foes nor loving friends can hurt you, if all men count with you, but none too much; if you can fill the unforgiving minute with sixty seconds' worth of distance run - yours is the Earth and everything that's in it, and - which is more - you'll be a man my son!</p>
-							<pre>body {
-							  font-family: "Minion-Pro-1", "Minion-Pro-2";
-							  font-size: 18px; /* Scale origin */
-							}</pre>
+<pre>body {
+  font-family: "Minion-Pro-1", "Minion-Pro-2";
+  font-size: 18px; /* Scale origin */
+}</pre>
 							<p>"<em>If&#8212;</em>
 							" is a poem written in 1895 by British Nobel laureate Rudyard Kipling. It was first published in the "Brother Square Toes" chapter of Rewards and Fairies, Kipling's 1910 collection of short stories and poems. Like William Ernest Henley's "<em>Invictus</em>
 							", it is a memorable evocation of Victorian stoicism and the "stiff upper lip" that popular culture has made into a traditional British virtue. Its status is confirmed both by the number of parodies it has inspired, and by the widespread popularity it still enjoys amongst Britons. It is often voted Britain's favourite poem.</p>
@@ -217,7 +217,8 @@
 									<div class="atk-size-giga">.atk-size-giga</div>
 									<div class="atk-size-mega">.atk-size-mega</div>
 									<div class="atk-size-kilo">.atk-size-kilo</div>
-									<div class="atk-size-nano">.atk-size-nano</div>
+									<div class="atk-size-milli">.atk-size-milli</div>
+									<div class="atk-size-micro">.atk-size-micro</div>
 								</div>
 								<div class="span_6 col">
 									<h1>Heading h1</h1>
@@ -772,27 +773,28 @@
 						<section id="colors">
 							<h2>Swatches, States & Effects</h2>
 							<h3>Swatches</h3>
+							<p>You can easily create your own swatches using <span class="atk-label atk-effect-info">.createSwatch()</span> mixin.</p>
 							<div class="example atk-box" id="example-swatches">
 								<div class="row">
 									<div class="span_2 col">
-										<div class="atk-swatch-1 atk-shape-rounded"></div><br/>
-										.atk-swatch-1
+										<div class="atk-swatch-ink atk-shape-rounded"></div><br/>
+										.atk-swatch-ink
 									</div>
 									<div class="span_2 col">
-										<div class="atk-swatch-2 atk-shape-rounded"></div><br/>
-										.atk-swatch-2
+										<div class="atk-swatch-blue atk-shape-rounded"></div><br/>
+										.atk-swatch-blue
 									</div>
 									<div class="span_2 col">
-										<div class="atk-swatch-3 atk-shape-rounded"></div><br/>
-										.atk-swatch-3
+										<div class="atk-swatch-green atk-shape-rounded"></div><br/>
+										.atk-swatch-green
 									</div>
 									<div class="span_2 col">
-										<div class="atk-swatch-4 atk-shape-rounded"></div><br/>
-										.atk-swatch-4
+										<div class="atk-swatch-yellow atk-shape-rounded"></div><br/>
+										.atk-swatch-yellow
 									</div>
 									<div class="span_2 col">
-										<div class="atk-swatch-5 atk-shape-rounded"></div><br/>
-										.atk-swatch-5
+										<div class="atk-swatch-gray atk-shape-rounded"></div><br/>
+										.atk-swatch-gray
 									</div>
 								</div>
 							</div>
@@ -825,6 +827,10 @@
 									</div>
 								</div>
 							</div>
+							<h3>States</h3>
+							<div class="example atk-box" id="example-effects">
+								In progress...
+							</div>
 						</section>
 						<section id="components">
 							<h2>Components</h2>
@@ -854,22 +860,22 @@
 							<div class="example atk-box">
 								<div class="row">
 									<div class="span_6 col">
-										<div class="atk-media-block atk-box atk-swatch-3">
-											<div class="atk-media">
+										<div class="atk-cells atk-cells-gutter-large atk-box atk-swatch-ink">
+											<div class="atk-cell">
 												<img src="temp/apples.jpg" alt="Apples" />
 											</div>
-											<div class="atk-content atk-valign-middle atk-jackscrew">
+											<div class="atk-cell atk-valign-middle atk-jackscrew">
 												<h4>Apples</h4>
 												<p>Donec dolor sapien, sollicitudin in erat ac, pellentesque venenatis orci. Nullam faucibus lacus quis sem fermentum adipiscing.</p>
 												<hr class="small" />
 												<a href="#"><span class="icon-down-circled-1"></span>Download</a>
 											</div>
 										</div>
-										<div class="atk-media-block atk-box atk-swatch-2">
-											<div class="atk-media">
+										<div class="atk-cells atk-cells-gutter-large atk-box atk-swatch-yellow">
+											<div class="atk-cell">
 												<img src="temp/tomatoes.jpg" alt="Tomatoes" />
 											</div>
-											<div class="atk-content atk-valign-middle atk-jackscrew">
+											<div class="atk-cell atk-valign-middle atk-jackscrew">
 												<h4>Tomatoes</h4>
 												<p>Donec dolor sapien, sollicitudin in erat ac, pellentesque venenatis orci. Nullam faucibus lacus quis sem fermentum adipiscing.</p>
 												<hr class="small" />
@@ -878,22 +884,22 @@
 										</div>
 									</div>
 									<div class="span_6 col">
-										<div class="atk-media-block atk-box atk-swatch-4">
-											<div class="atk-media">
+										<div class="atk-cells atk-cells-gutter-large atk-box atk-swatch-green">
+											<div class="atk-cell">
 												<img src="temp/bananas.jpg" alt="Bananas" />
 											</div>
-											<div class="atk-content atk-valign-middle atk-jackscrew">
+											<div class="atk-cell atk-valign-middle atk-jackscrew">
 												<h4>Bananas</h4>
 												<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris at venenatis justo.</p>
 												<hr class="small" />
 												<a href="#"><span class="icon-down-circled-1"></span>Download</a>
 											</div>
 										</div>
-										<div class="atk-media-block atk-box atk-swatch-1">
-											<div class="atk-media">
+										<div class="atk-cells atk-cells-gutter-large atk-box atk-swatch-blue">
+											<div class="atk-cell">
 												<img src="temp/blueberries.jpg" alt="Blueberries" />
 											</div>
-											<div class="atk-content atk-valign-middle atk-jackscrew">
+											<div class="atk-cell atk-valign-middle atk-jackscrew">
 												<h4>Blueberries</h4>
 												<p>Nunc id erat sit amet sapien convallis ultricies sed vel est. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 												<hr class="small" />
@@ -956,7 +962,7 @@
 									</table>
 								</div>
 							</div>
-							<p><span class="atk-label atk-effect-info">.atk-table</span> widget combined with <span class="atk-label atk-effect-info">.atk-media-block</span> and <span class="atk-label atk-effect-info">.atk-label</span>.</p>
+							<p><span class="atk-label atk-effect-info">.atk-table</span> widget combined with <span class="atk-label atk-effect-info">.atk-cells</span> and <span class="atk-label atk-effect-info">.atk-label</span>.</p>
 							<div class="example atk-box">
 								<div class="atk-table">
 									<table>
@@ -972,11 +978,11 @@
 										<tbody>
 											<tr>
 												<td>
-													<div class="atk-media-block atk-valign-center">
-														<div class="atk-media">
+													<div class="atk-cells atk-cells-gutter-small atk-valign-middle">
+														<div class="atk-cell">
 															<img src="temp/fruits.jpg" alt="Fruits" class="atk-circled" width="32" />
 														</div>
-														<div class="atk-content"><a href="#">Fruits</a></div>
+														<div class="atk-cell atk-valign-middle atk-jackscrew"><a href="#">Fruits</a></div>
 													</div>
 												</td>
 												<td>25.00 kg</td>
@@ -986,11 +992,11 @@
 											</tr>
 											<tr>
 												<td>
-													<div class="atk-media-block atk-valign-center">
-														<div class="atk-media">
+													<div class="atk-cells atk-cells-gutter-small atk-valign-middle">
+														<div class="atk-cell">
 															<img src="temp/fruits.jpg" alt="Fruits" class="atk-circled" width="32" />
 														</div>
-														<div class="atk-content"><a href="#">Fruits</a></div>
+														<div class="atk-cell atk-valign-middle atk-jackscrew"><a href="#">Fruits</a></div>
 													</div>
 												</td>
 												<td>25.00 kg</td>
@@ -1000,11 +1006,11 @@
 											</tr>
 											<tr>
 												<td>
-													<div class="atk-media-block atk-valign-center">
-														<div class="atk-media">
+													<div class="atk-cells atk-cells-gutter-small">
+														<div class="atk-cell">
 															<img src="temp/fruits.jpg" alt="Fruits" class="atk-circled" width="32" />
 														</div>
-														<div class="atk-content"><a href="#">Fruits</a></div>
+														<div class="atk-cell atk-valign-middle atk-jackscrew"><a href="#">Fruits</a></div>
 													</div>
 												</td>
 												<td>25.00 kg</td>
@@ -1041,11 +1047,11 @@
 							<h4>Menu Bar</h4>
 							<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span> Name of this widget should be changed.</span></p>
 							<div class="example atk-box">
-								<div class="atk-menu-bar atk-cells atk-swatch-1 atk-shape-rounded atk-push">
+								<div class="atk-bar atk-box atk-cells atk-swatch-ink atk-shape-rounded atk-push">
 									<div class="atk-cell atk-valign-middle">
 										<a href="#" class="atk-logo atk-size-giga">Logo</a>
 									</div>
-									<div class="atk-cell atk-jackscrew">
+									<div class="atk-cell atk-jackscrew atk-valign-middle">
 										<ul class="atk-menu atk-menu-horizontal atk-move-right">
 											<li class="atk-state-active"><a href="#">Item 1</a></li>
 											<li><a href="#">Item 2</a></li>
@@ -1055,8 +1061,8 @@
 										</ul>
 									</div>
 								</div>
-								<div class="atk-menu-bar atk-cells atk-swatch-1 atk-shape-rounded atk-push">
-									<div class="atk-cell atk-jackscrew">
+								<div class="atk-bar atk-box atk-cells atk-swatch-ink atk-shape-rounded atk-push">
+									<div class="atk-cell atk-jackscrew atk-valign-middle">
 										<ul class="atk-menu atk-menu-horizontal">
 											<li class="atk-state-active"><a href="#">Item 1</a></li>
 											<li><a href="#">Item 2</a></li>
@@ -1069,28 +1075,28 @@
 										<a href="#" class="atk-logo atk-size-giga">Logo</a>
 									</div>
 								</div>
-								<div class="atk-menu-bar atk-cells atk-swatch-1 atk-shape-rounded">
+								<div class="atk-bar atk-box atk-cells atk-swatch-ink atk-shape-rounded">
 									<div class="atk-cell atk-valign-middle">
 										<a href="#" class="atk-logo atk-size-giga">Logo</a>
 									</div>
-									<div class="atk-cell atk-jackscrew">
+									<div class="atk-cell atk-jackscrew atk-valign-middle">
 										<ul class="atk-menu atk-menu-horizontal">
 											<li class="atk-state-active"><a href="#">Item 1</a></li>
 											<li><a href="#">Item 2</a></li>
 											<li><a href="#">Item 3</a></li>
 										</ul>
 									</div>
-									<div class="atk-cell">
+									<div class="atk-cell atk-valign-middle">
 										<div class="atk-actions">
 											<a href="#" class="atk-label atk-swatch-3">Upgrade</a><span class="atk-sep">&sdot;</span><a href="#">Help</a>
 										</div>
 									</div>
-									<div class="atk-cell">
-										<div class="atk-media-block">
-											<div class="atk-media atk-valign-middle">
+									<div class="atk-cell atk-text-nowrap atk-valign-middle">
+										<div class="atk-cells atk-cells-gutter">
+											<div class="atk-cell atk-valign-middle">
 												<img src="temp/apples.jpg" alt="Apples" width="32" class="atk-shape-circle" />
 											</div>
-											<div class="atk-content atk-valign-middle">John Smith<span class="icon-down-dir"></span></div>
+											<div class="atk-cell atk-valign-middle">John Smith<span class="icon-down-dir"></span></div>
 										</div>
 									</div>
 								</div>

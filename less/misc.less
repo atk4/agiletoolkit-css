@@ -102,6 +102,9 @@ a {
 .atk-valign-middle {
     vertical-align: middle !important;
 }
+.atk-valign-baseline {
+    vertical-align: baseline !important;
+}
 .atk-valign-bottom {
     vertical-align: bottom !important;
 }
@@ -277,35 +280,37 @@ a {
     border-color: @borderOverlay;
     padding: @margin/2;
     .ui-datepicker-header {
-        background: none;
         border: none;
         color: #000;
+        line-height: @bodyBaseline;
         margin-bottom: @margin/2;
         padding: 0;
+        position: relative;
         .ui-icon {
             display: none;
         }
         .ui-datepicker-title {
-            .atk-size-mega;
             font-weight: 300;
-            line-height: 1;
             margin: 0;
         }
         .ui-datepicker-next, .ui-datepicker-prev {
             cursor: pointer;
-            height: auto;
+            height: 1.4em;
             // position: static;
-            line-height: 1;
-            padding-top: @margin/7;
-            padding-bottom: @margin/8;
+            line-height: 1.4em;
+            margin-top: -0.7em;
+            // padding-top: @margin/7;
+            // padding-bottom: @margin/8;
             text-align: center;
+            top: 50%;
             width: 1.2rem;
             &:before {
                 color: @linkColor;
                 display: block;
                 font-family: "fontello";
-                font-size: 12px;
+                // font-size: 12px;
                 height: 100%;
+                line-height: 1.4em;
                 width: 100%;
             }
         }
@@ -317,13 +322,13 @@ a {
             left: 0;
             // padding-left: @margin/4;
             // padding-right: @margin/5;
-            top: 0;
+            // top: 0;
             &:before {
                 content: '\ea60';
             }
             &.ui-datepicker-prev-hover {
                 left: 0;
-                top: 0;
+                // top: 0;
             }
         }
         .ui-datepicker-next {
@@ -331,13 +336,13 @@ a {
             // padding-left: @margin/3;
             // padding-right: @margin/5;
             text-indent: 0.1rem;
-            top: 0;
+            // top: 0;
             &:before {
                 content: '\ea61';
             }
             &.ui-datepicker-next-hover {
                 right: 0;
-                top: 0;
+                // top: 0;
             }
         }
     }
