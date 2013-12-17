@@ -38,31 +38,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .atk-size-zetta {
-    font-size: @bodySize * pow(@bodyBaseline,3.5);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*7);
 }
 .atk-size-exa {
-    font-size: @bodySize * pow(@bodyBaseline,3);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*6);
 }
 h1, .atk-size-peta {
-    font-size: @bodySize * pow(@bodyBaseline,2.5);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5);
 }
 h2, .atk-size-tera {
-    font-size: @bodySize * pow(@bodyBaseline,2);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4);
 }
 h3, .atk-size-giga {
-    font-size: @bodySize * pow(@bodyBaseline,1.5);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3);
 }
 h4, .atk-size-mega {
-    font-size: @bodySize * pow(@bodyBaseline,1);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2);
 }
 h5, .atk-size-kilo {
     font-size: @bodySize;
 }
 h6, small, .atk-size-milli {
-    font-size: @bodySize * pow(@bodyBaseline,-0.5);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1);
 }
 .atk-size-micro {
-    font-size: @bodySize * pow(@bodyBaseline,-1);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-2);
 }
 
 

@@ -28,12 +28,12 @@ body {
 // ==========================================================
 
 ::selection {
-    background: green;
-    color: blue;
+    background: @textSelect;
+    .colorCheck(@textSelect);
 }
 ::-moz-selection {
-    background: green;
-    color: blue;
+    background: @textSelect;
+    .colorCheck(@textSelect);
 }
 img::selection {
     background: transparent;
@@ -42,7 +42,7 @@ img::-moz-selection {
     background: transparent;
 }
 body {
-    -webkit-tap-highlight-color: green;
+    -webkit-tap-highlight-color: @textSelect;
 }
 
 
@@ -155,10 +155,10 @@ a {
 // Colors
 // ==========================================================
 
-.colorCheck (@a) when (lightness(@a) >= 50%) {
+.colorCheck (@a) when (lightness(@a) >= @swatchText) {
   color: black;
 }
-.colorCheck (@a) when (lightness(@a) < 50%) {
+.colorCheck (@a) when (lightness(@a) < @swatchText) {
   color: white;
 }
 

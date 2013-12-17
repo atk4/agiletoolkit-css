@@ -22,6 +22,8 @@
 @headingWeight:		   400;
 @headingBaseline:	   1.2; // Minor Third
 
+@fontScatter:          0.5; // Multiplier that affects difference between heading sizes
+
 
 // ==========================================================
 // Colors
@@ -29,6 +31,8 @@
 
 @linkColor:            darken(@atk-swatch-blue,10%);
 @linkColorHover:       red;
+
+@textSelect:           red; // Text selection's background color
 
 @borderStatic:         #e1e1e1;
 @borderClickable:      #c1c1c1;
@@ -47,6 +51,8 @@
 @atk-swatch-yellow:	   #ffcc00;		.createSwatch(atk-swatch-yellow);
 @atk-swatch-green:     #00cc66;		.createSwatch(atk-swatch-green);
 @atk-swatch-blue:      #0095ff;		.createSwatch(atk-swatch-blue);
+
+@swatchText:           50%; // If swatch's lightness is more than 50% then text goes dark
 
 @effectSuccess:        #ccffdb;
 @effectWarning:        #fcffcc;
