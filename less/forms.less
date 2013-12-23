@@ -25,7 +25,6 @@ textarea {
     background: #fff;
     border: 1px solid @borderClickable;
     border-radius: @cornerRadius;
-    font-size: 1em;
     line-height: @bodyBaseline;
     padding: 0.5em 0.7em;
 }
@@ -280,5 +279,19 @@ fieldset {
         .ui-buttonset { white-space: nowrap; }
         > .ui-button { margin-left: 0; margin-right: 0; }
         .ui-button * { line-height: normal; }
+    }
+}
+
+
+// New Forms
+
+.atk-form-field {
+    .clear-font;
+    * {
+        font-size: @bodySize;
+        line-height: @bodyBaseline;
+    }
+    .ui-selectmenu-button {
+        width: 100% !important;
     }
 }

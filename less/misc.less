@@ -264,6 +264,7 @@ a {
 }
 .ui-widget-content {
     background: @colorLight;
+    border-color: @borderOverlay;
     color: @bodyColor;
     a {
         color: @linkColor;
@@ -276,9 +277,34 @@ a {
     font-size: @bodySize;
     line-height: @bodyBaseline;
 }
+.ui-icon {
+    text-indent: 0 !important;
+}
 
 
 // Widgets
+.ui-selectmenu-button {
+    display: inline-block;
+    span.ui-selectmenu-text {
+        font-weight: normal;
+        line-height: @bodyBaseline;
+        padding: 0.5em 0.7em;
+    }
+    span.ui-icon:after {
+        content: '\e870';
+        color: @bodyColor;
+        display: block;
+        font-family: fontello;
+        font-size: @bodySize;
+        height: 16px;
+        line-height: @bodyBaseline;
+        width: 16px;
+    }
+}
+.ui-menu .ui-menu-item {
+    border: none;
+    padding: 0.2em 0.7em;
+}
 .ui-datepicker {
     border-color: @borderOverlay;
     padding: @margin/2;
