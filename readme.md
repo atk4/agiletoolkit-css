@@ -110,8 +110,100 @@ AgileToolkit CSS relies on 3rd party GridPack and uses flexible margin-based gri
 
 Because Agile Toolkit primarily targets interactive user interfaces, ability to have a flexible forms and grids are very important in Agile Toolkit and it offers higher diversity 
 
+### AgileToolkit CSS vs Foundation
+
+Foundation is a great SASS-based framework. Many of the core principles are shared such as flexibility and extensibility. AgileToolkit CSS is different to Foundation in the following ways:
+
+ - It's using LESS while foundation is using SASS
+ - AgileToolkit CSS aims at "simplicity"
+ - AgileToolkit CSS does not rely on JavaScript
+ - AgileToolkit CSS focuses on use of CSS3 and HTML5 and elegant HTML, while Foundation has a better support for older browsers
+ - AgileToolkit CSS integrates with jQuery UI for UI elements, while Foundation comes with it's own JavaScript framework.
+ 
+ 
+### AgileToolkit CSS and Mobile Devices
+
+Through the use of media elements Agile Toolkit CSS has some support for mobile devices, however it does not make cross-compatibility of HTML a major goal.
+
+Your website fonts and layouts will properly adjust for your mobile device and some widgets will change their behavior, however Agile Toolkit PHP framework has a dedicated support for mobile devices - enabling you to define a different set of features for mobile device as well as use proper UI library (such as jQuery Mobile) to deliver native interface.
+
 ### AgileToolkit CSS and Agile Toolkit
 
 Agile Toolkit CSS comes along with [Agile Toolkit PHP](http://agiletoolkit.org/) framework starting from version 4.3. This allows you to build your interface using PHP entirely and rely on standard widgets of Agile Toolkit.
  
+
+## Themes and Examples
+
+Currently there are only few test-sites using Agile Toolkit CSS:
+
+ - http://agile55.com/
+ - http://www4.agiletoolkit.org/
+ - http://surfaccounts.com/
+ 
+Agile Toolkit CSS is still BETA and you should avoid using it for production websites at this time.
+
+## Quick Start
+
+Clone the repository inside your project's folder. Create a 'style.less' file inside your project with the following content:
+
+    @import '../../agiletoolkit-css/css/agiletoolkit.less';
+
+Compile and include your own 'style.css' file.
+
+If you find a theme you'd like to use (such as [agile55-theme](https://github.com/agile55/agile55-theme)), you can enable it like this:
+
+    @import '../../agile55-theme/css/agile55.less';
+
+Finally you can change some of the default settings of Agile Toolkit by adding more lines inside your style.less file:
+
+    @bodyBackground:       'red';
+    @cornerRadius:         10px;
+
+You should only specify settings which you really wish to change. For the possible variables refer to file [variables.less](less/variables.less)
+
+## Known Bugs
+
+Currently there are many incomplete features in Agile Toolkit CSS:
+
+ - IE-family browsers are not supported yet
+ - Mobile device compatibility is limited
+ - Class names are unstable and might change making your markup incompatible
+ - jQuery UI icons may not appear properly
+ - jQuery UI Dialogs are being refactored
+ - States are in-progress
+ 
+## Documentation
+
+Documentation is located inside [doc folder](doc/).
+
+## Authors
+
+AgileToolkit CSS is brought to you by:
+
+ - Mayack
+ - Romans
+ 
+See also [http://agiletoolkit.org/about/authors](http://agiletoolkit.org/about/authors) for more information.
+
+## Copyright and License
+
+Agile Toolkit CSS is (c) 2013-2014 by Agile Toolkit UK Ltd and is distributed under terms of MIT License.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
