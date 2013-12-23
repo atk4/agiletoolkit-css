@@ -6,10 +6,10 @@ Flexible and extensible User Interface framework for simple, consistent, aesthet
 
 ## Table of contents
 
- - [Design philosophy and features]()
- - [Themes and Examples]()
+ - [Design philosophy and features](#design-philosophy-and-features)
+ - [Themes and Examples](#themes-and-examples)
  - [Quick start](#quick-start)
- - [Known Bugs and feature Request](#bugs-and-feature-requests)
+ - [Known Bugs and feature Request](#known-bugs)
  - [Documentation](#documentation)
  - [Authors](#authors)
  - [Copyright and license](#copyright-and-license)
