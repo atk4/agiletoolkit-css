@@ -138,7 +138,6 @@ Currently there are only few test-sites using Agile Toolkit CSS:
 
  - http://agile55.com/
  - http://www4.agiletoolkit.org/
- - http://surfaccounts.com/
  
 Agile Toolkit CSS is still BETA and you should avoid using it for production websites at this time.
 
