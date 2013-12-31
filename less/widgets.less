@@ -89,6 +89,21 @@
         }
     }
 }
+.atk-input-icon {
+    display: inline-block;
+    position: relative;
+    input {
+        padding-right: 1.4em;
+    }
+    *[class*=icon] {
+        .position(@t:50%, @r:0.5em);
+        line-height: 1;
+        margin-top: -0.5em;
+        &:before {
+            margin: 0;
+        }
+    }
+}
 
 // Popover
 .atk-popover.ui-dialog {

@@ -288,22 +288,31 @@ a {
     span.ui-selectmenu-text {
         font-weight: normal;
         line-height: @bodyBaseline;
-        padding: 0.5em 0.7em;
+        padding: 0.5em 2em 0.5em 0.7em;
     }
-    span.ui-icon:after {
-        content: '\e870';
-        color: @bodyColor;
-        display: block;
-        font-family: fontello;
-        font-size: @bodySize;
-        height: 16px;
-        line-height: @bodyBaseline;
-        width: 16px;
+    span.ui-icon {
+        text-align: center;
+        &:after {
+            content: '\e870';
+            color: @bodyColor;
+            display: block;
+            font-family: fontello;
+            font-size: @bodySize;
+            height: 16px;
+            line-height: @bodyBaseline;
+            width: 16px;
+        }
     }
 }
-.ui-menu .ui-menu-item {
-    border: none;
-    padding: 0.2em 0.7em;
+.ui-selectmenu-menu {
+    .ui-menu {
+        border-top: 0;
+        padding: 0;
+        .ui-menu-item {
+            border: none;
+            padding: 0.2em 0.4em;
+        }
+    }
 }
 .ui-datepicker {
     border-color: @borderOverlay;
@@ -464,6 +473,9 @@ a {
         padding: @margin/2;
     }
 }
+
+// Icon Replacement
+
 
 
 // ==========================================================

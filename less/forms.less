@@ -2,12 +2,20 @@
 // Forms
 // ==========================================================
 
+input[readonly],
+div.atk-form-field-readonly {
+    background: @bodyColor;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
 label {
     font-weight: bold;
     padding: @margin/4 0;
     margin-top: 1px;
 }
-
 input[type="text"],
 input[type="url"],
 input[type="email"],
@@ -28,31 +36,25 @@ textarea {
     line-height: @bodyBaseline;
     padding: 0.5em 0.7em;
 }
-
 textarea {
     min-height: @margin * 3 + @margin/2;
 }
-
 input[type=radio],
 input[type=checkbox] {
     line-height: @bodyBaseline;
 }
-
 input[type=file], select {
     margin: @margin/2 0 @margin/2 0;
 }
 
-
-// Overwriting (scaffolding) defaults
-// ----------------------------------------------
+// Focused State
 button::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner { padding: 0 !important; border: 0 !important; }
-
-input[readonly],
-div.atk-form-field-readonly { background: @bodyColor; }
-
+input[type="reset"]::-moz-focus-inner {
+    border: 0 !important;
+    padding: 0 !important;
+}
 input[type=text]:focus,
 input[type=password]:focus,
 textarea:focus {
@@ -62,15 +64,46 @@ textarea:focus {
     outline: none;
 }
 
-fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
+
+// New Forms
+.atk-form {
+    form {
+        display: table;
+        .atk-cells {
+            display: table-row;
+            >.atk-cell {
+                padding-bottom: @margin;
+                vertical-align: top;
+                input[type=text]:not([class*="span"]),
+                input[type=password]:not([class*="span"]),
+                input[readonly]:not([class*="span"]),
+                textarea:not([class*="span"]),
+                div.atk-form-field-readonly:not([class*="span"]),
+                select,
+                .ui-selectmenu-button,
+                .atk-input-icon {
+                    width: 100% !important;
+                }
+                input + input { margin-left: 0.3em; }
+                &:first-child label {
+                    display: inline-block;
+                }
+            }
+            + .atk-cells {
+                margin-top: @margin;
+            }
+        }
+        .atk-form-fieldset {
+            display: table-row-group;
+        }
+    }
 }
+
 
 // ATK form
 // ----------------------------------------------
-.atk-form {
+/*
+.atk-form-old {
     margin-bottom: @margin;
     .atk-form-row + .atk-form-row {
         margin-top: @margin;
@@ -228,7 +261,7 @@ fieldset {
 
 // ATK form fields
 // ----------------------------------------------
-.atk-form {
+.atk-form-old {
     ul.atk-form-options {
         list-style-type: none;
         margin: 0;
@@ -295,3 +328,4 @@ fieldset {
         width: 100% !important;
     }
 }
+*/
