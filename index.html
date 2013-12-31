@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link href="css/agiletoolkit.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
     </head>
 	<body>
         <!--[if lt IE 7]>
@@ -24,11 +24,11 @@
 
         <div class="atk-layout">
 			<div class="atk-layout-row">
-				<header id="atk-header" class="atk-size-exa">AgileToolkit 4.3 &ndash; <strong>Snippets</strong></header>
+				<header id="atk-header" class="atk-size-peta atk-swatch-ink atk-align-center atk-padding-small">AgileToolkit 4.3 &ndash; <strong>Snippets</strong></header>
 			</div>
 			<div id="atk-main" class="atk-layout-row fluid">
 				<div id="atk-main-inner" class="atk-layout">
-					<nav id="atk-nav" class="atk-layout-column span_2 hecto">
+					<nav id="atk-nav" class="atk-layout-column span_2 hecto atk-padding-small">
 						<ul class="clean">
 							<li><a href="#grid-system">Grid System</a></li>
 							<li><a href="#typography">Typography</a></li>
@@ -39,7 +39,7 @@
 							<li><a href="#jqueryui">jQueryUI</a></li>
 						</ul>
 					</nav>
-					<div id="atk-content" class="atk-layout-column fluid">
+					<div id="atk-content" class="atk-layout-column fluid atk-padding-large">
 <!-- 						<section style="">
 							<h2>Overview</h2>
 							<h3>Highlights</h3>
@@ -229,7 +229,49 @@
 								</div>
 							</div>
 						</section>
-						<section id="forms">
+						<section>
+							<h2>Forms</h2>
+							<h3>Basic Form</h3>
+							<div class="example atk-box">
+								<div class="atk-form">
+									<form>
+										<div class="atk-form-fieldset">
+											<div class="atk-cells atk-cells-gutter-large">
+												<div class="atk-cell"><label>Input:</label></div>
+												<div class="atk-cell atk-jackscrew"><input type="text"></div>
+											</div>
+											<div class="atk-cells atk-cells-gutter-large">
+												<div class="atk-cell"><label>Password:</label></div>
+												<div class="atk-cell"><span class="atk-input-icon"><input type="password"><a href="#" class="icon-help-circled-1"></a></span></div>
+											</div>
+											<div class="atk-cells atk-cells-gutter-large">
+												<div class="atk-cell"><label>Dropdown:</label></div>
+												<div class="atk-cell">
+													<select name="speed">
+														<option value="Slower">Slower</option>
+														<option value="Slow">Slow</option>
+														<option value="Medium" selected="selected">Medium Roast</option>
+														<option value="Fast">Fast</option>
+														<option value="Faster">Faster</option>
+													</select>
+												</div>
+											</div>
+											<div class="atk-cells atk-cells-gutter-large">
+												<div class="atk-cell"><label>Textarea:</label></div>
+												<div class="atk-cell"><textarea rows="5"></textarea></div>
+											</div>
+										</div>
+										<div class="atk-cells atk-cells-gutter-large">
+											<div class="atk-cell"></div>
+											<div class="atk-cell atk-actions">
+												<button class="atk-button">Save</button><button class="atk-button">Cancel</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+						<section id="forms" style="display:none">
 							<h2>Forms</h2>
 							<div class="row">
 								<div class="span_6 col">
@@ -984,10 +1026,10 @@
 														<div class="atk-cell atk-valign-middle atk-jackscrew"><a href="#">Fruits</a></div>
 													</div>
 												</td>
-												<td>25.00 kg</td>
-												<td>777-002-3578</td>
-												<td><a href="#">john@microsoft.com</a></td>
-												<td><span class="atk-label atk-effect-danger">Declined</span></td>
+												<td class='atk-text-nowrap'>25.00 kg</td>
+												<td class='atk-text-nowrap'>777-002-3578</td>
+												<td class='atk-text-nowrap'><a href="#">john@microsoft.com</a></td>
+												<td class='atk-text-nowrap'><span class="atk-label atk-effect-danger">Declined</span></td>
 											</tr>
 											<tr>
 												<td>
@@ -998,10 +1040,10 @@
 														<div class="atk-cell atk-valign-middle atk-jackscrew"><a href="#">Fruits</a></div>
 													</div>
 												</td>
-												<td>25.00 kg</td>
-												<td>777-002-3578</td>
-												<td><a href="#">john@microsoft.com</a></td>
-												<td><span class="atk-label atk-effect-danger">Declined</span></td>
+												<td class='atk-text-nowrap'>25.00 kg</td>
+												<td class='atk-text-nowrap'>777-002-3578</td>
+												<td class='atk-text-nowrap'><a href="#">john@microsoft.com</a></td>
+												<td class='atk-text-nowrap'><span class="atk-label atk-effect-danger">Declined</span></td>
 											</tr>
 											<tr>
 												<td>
@@ -1012,10 +1054,10 @@
 														<div class="atk-cell atk-valign-middle atk-jackscrew"><a href="#">Fruits</a></div>
 													</div>
 												</td>
-												<td>25.00 kg</td>
-												<td>777-002-3578</td>
-												<td><a href="#">john@microsoft.com</a></td>
-												<td><span class="atk-label atk-effect-danger">Declined</span></td>
+												<td class='atk-text-nowrap'>25.00 kg</td>
+												<td class='atk-text-nowrap'>777-002-3578</td>
+												<td class='atk-text-nowrap'><a href="#">john@microsoft.com</a></td>
+												<td class='atk-text-nowrap'><span class="atk-label atk-effect-danger">Declined</span></td>
 											</tr>
 										</tbody>
 									</table>
@@ -1046,7 +1088,7 @@
 							<h4>Menu Bar</h4>
 							<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span> Name of this widget should be changed.</span></p>
 							<div class="example atk-box">
-								<div class="atk-bar atk-box atk-cells atk-swatch-ink atk-shape-rounded atk-push">
+								<div class="atk-bar atk-cells atk-swatch-ink atk-shape-rounded atk-push atk-box">
 									<div class="atk-cell atk-valign-middle">
 										<a href="#" class="atk-logo atk-size-giga">Logo</a>
 									</div>
@@ -1060,7 +1102,7 @@
 										</ul>
 									</div>
 								</div>
-								<div class="atk-bar atk-box atk-cells atk-swatch-ink atk-shape-rounded atk-push">
+								<div class="atk-bar atk-cells atk-swatch-ink atk-shape-rounded atk-push atk-box">
 									<div class="atk-cell atk-jackscrew atk-valign-middle">
 										<ul class="atk-menu atk-menu-horizontal">
 											<li class="atk-state-active"><a href="#">Item 1</a></li>
@@ -1074,7 +1116,7 @@
 										<a href="#" class="atk-logo atk-size-giga">Logo</a>
 									</div>
 								</div>
-								<div class="atk-bar atk-box atk-cells atk-swatch-ink atk-shape-rounded">
+								<div class="atk-bar atk-cells atk-swatch-ink atk-shape-rounded atk-box">
 									<div class="atk-cell atk-valign-middle">
 										<a href="#" class="atk-logo atk-size-giga">Logo</a>
 									</div>
@@ -1087,7 +1129,7 @@
 									</div>
 									<div class="atk-cell atk-valign-middle">
 										<div class="atk-actions">
-											<a href="#" class="atk-label atk-swatch-3">Upgrade</a><span class="atk-sep">&sdot;</span><a href="#">Help</a>
+											<a href="#" class="atk-label atk-swatch-yellow">Upgrade</a><span class="atk-sep">&sdot;</span><a href="#">Help</a>
 										</div>
 									</div>
 									<div class="atk-cell atk-text-nowrap atk-valign-middle">
@@ -2167,7 +2209,7 @@
 				</div>
 			</div>
 			<div class="atk-layout-row">
-				<footer id="atk-footer">
+				<footer id="atk-footer" class="atk-box atk-align-center">
 					&copy; Agile Toolkit 2013
 				</footer>
 			</div>
@@ -2175,9 +2217,12 @@
 		<!-- /Content -->
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="http://view.jqueryui.com/master/ui/jquery.ui.core.js"></script>
+        <script src="http://view.jqueryui.com/master/ui/jquery.ui.widget.js"></script>
+        <script src="http://view.jqueryui.com/master/ui/jquery.ui.position.js"></script>
+        <script src="http://view.jqueryui.com/master/ui/jquery.ui.menu.js"></script>
+        <script src="http://view.jqueryui.com/master/ui/jquery.ui.selectmenu.js"></script>
         <script src="js/atk-helpers-min.js"></script>
         <script src="js/demo-min.js"></script>
 

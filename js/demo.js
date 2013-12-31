@@ -1,6 +1,8 @@
 $(function(){
+  $('select').selectmenu();
 	$( "#datepicker" ).datepicker();
 	$( "#tabs" ).tabs();
+  $('#icons-library').hide();
 	$( "#accordion" ).accordion({
 		heightStyle: "content"
 	});
