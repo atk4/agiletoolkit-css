@@ -13,6 +13,7 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
     </head>
 	<body>
         <!--[if lt IE 7]>
@@ -232,6 +233,7 @@
 						<section>
 							<h2>Forms</h2>
 							<h3>Basic Form</h3>
+							<p>Basic <span class="atk-label atk-effect-info">.atk-form</span> listed with all available field variations.</p>
 							<div class="example atk-box">
 								<div class="atk-form">
 									<form>
@@ -262,6 +264,113 @@
 											</div>
 										</div>
 										<div class="atk-cells atk-cells-gutter-large">
+											<div class="atk-cell"></div>
+											<div class="atk-cell atk-actions">
+												<button class="atk-button">Save</button><button class="atk-button">Cancel</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<h3>Compact Form</h3>
+							<p><span class="atk-label atk-effect-info">.atk-form-compact</span> decreases margins between field rows.</p>
+							<div class="example atk-box">
+								<div class="atk-form atk-form-compact">
+									<form>
+										<div class="atk-form-fieldset">
+											<div class="atk-cells atk-cells-gutter-large">
+												<div class="atk-cell"><label>Input:</label></div>
+												<div class="atk-cell atk-jackscrew"><input type="text"></div>
+											</div>
+											<div class="atk-cells atk-cells-gutter-large">
+												<div class="atk-cell"><label>Password:</label></div>
+												<div class="atk-cell"><span class="atk-input-icon"><input type="password"><a href="#" class="icon-help-circled-1"></a></span></div>
+											</div>
+										</div>
+										<div class="atk-cells atk-cells-gutter-large">
+											<div class="atk-cell"></div>
+											<div class="atk-cell atk-actions">
+												<button class="atk-button">Save</button><button class="atk-button">Cancel</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<h3>Stacked Form</h3>
+							<p><span class="atk-label atk-effect-info">.atk-form-stacked</span> decreases margins between field rows.</p>
+							<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span> Do not forget to remove .atk-cells-gutter-* classes if you are using stacked form.</p>
+							<div class="example atk-box">
+								<div class="atk-form atk-form-stacked">
+									<form>
+										<div class="atk-form-fieldset">
+											<div class="atk-cells">
+												<div class="atk-cell"><label>Input:</label></div>
+												<div class="atk-cell atk-jackscrew"><input type="text"></div>
+											</div>
+											<div class="atk-cells">
+												<div class="atk-cell"><label>Password:</label></div>
+												<div class="atk-cell"><span class="atk-input-icon"><input type="password"><a href="#" class="icon-help-circled-1"></a></span></div>
+											</div>
+										</div>
+										<div class="atk-cells">
+											<div class="atk-cell"></div>
+											<div class="atk-cell atk-actions">
+												<button class="atk-button">Save</button><button class="atk-button">Cancel</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<h3>Mixed Form</h3>
+							<p><span class="atk-label atk-effect-info">.atk-form-stacked</span> mixed with <span class="atk-label atk-effect-info">.atk-form-compact</span>.</p>
+							<div class="example atk-box">
+								<div class="atk-form atk-form-stacked atk-form-compact">
+									<form>
+										<div class="atk-form-fieldset">
+											<div class="atk-cells">
+												<div class="atk-cell"><label>Input:</label></div>
+												<div class="atk-cell atk-jackscrew"><input type="text"></div>
+											</div>
+											<div class="atk-cells">
+												<div class="atk-cell"><label>Password:</label></div>
+												<div class="atk-cell"><span class="atk-input-icon"><input type="password"><a href="#" class="icon-help-circled-1"></a></span></div>
+											</div>
+										</div>
+										<div class="atk-cells">
+											<div class="atk-cell"></div>
+											<div class="atk-cell atk-actions">
+												<button class="atk-button">Save</button><button class="atk-button">Cancel</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<h3>Hybrid Form</h3>
+							<p><span class="atk-label atk-effect-info">.atk-form-hybrid</span> allows to assign <span class="atk-label atk-effect-info">.atk-form-*</span> classes to <span class="atk-label atk-effect-info">.atk-form-fieldset</span>.</p>
+							<div class="example atk-box">
+								<div class="atk-form atk-form-hybrid">
+									<form>
+										<div class="atk-form-fieldset">
+											<div class="atk-cells atk-cells-gutter-large">
+												<div class="atk-cell"><label>Input:</label></div>
+												<div class="atk-cell atk-jackscrew"><input type="text"></div>
+											</div>
+											<div class="atk-cells atk-cells-gutter-large">
+												<div class="atk-cell"><label>Password:</label></div>
+												<div class="atk-cell"><span class="atk-input-icon"><input type="password"><a href="#" class="icon-help-circled-1"></a></span></div>
+											</div>
+										</div>
+										<div class="atk-form-fieldset atk-form-stacked atk-form-compact">
+											<div class="atk-cells">
+												<div class="atk-cell"><label>Input:</label></div>
+												<div class="atk-cell atk-jackscrew"><input type="text"></div>
+											</div>
+											<div class="atk-cells">
+												<div class="atk-cell"><label>Password:</label></div>
+												<div class="atk-cell"><span class="atk-input-icon"><input type="password"><a href="#" class="icon-help-circled-1"></a></span></div>
+											</div>
+										</div>
+										<div class="atk-cells">
 											<div class="atk-cell"></div>
 											<div class="atk-cell atk-actions">
 												<button class="atk-button">Save</button><button class="atk-button">Cancel</button>

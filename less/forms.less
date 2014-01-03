@@ -13,8 +13,8 @@ fieldset {
 }
 label {
     font-weight: bold;
-    padding: @margin/4 0;
-    margin-top: 1px;
+    // padding: @margin/4 0;
+    // margin-top: 1px;
 }
 input[type="text"],
 input[type="url"],
@@ -74,6 +74,9 @@ textarea:focus {
             >.atk-cell {
                 padding-bottom: @margin;
                 vertical-align: top;
+                label {
+                    margin: 0.5em 0;
+                }
                 input[type=text]:not([class*="span"]),
                 input[type=password]:not([class*="span"]),
                 input[readonly]:not([class*="span"]),
@@ -89,15 +92,58 @@ textarea:focus {
                     display: inline-block;
                 }
             }
-            + .atk-cells {
-                margin-top: @margin;
-            }
         }
         .atk-form-fieldset {
             display: table-row-group;
         }
+        >.atk-cells:last-child .atk-cell {
+            padding-bottom: 0;
+        }
     }
 }
+.atk-form-compact {
+    &.atk-form, .atk-form & {
+        .atk-cells>.atk-cell {
+            &, form & {
+                padding-bottom: @margin/2;
+            }
+        }
+        form>.atk-cells:last-child .atk-cell {
+            padding-bottom: 0;
+        }
+    }
+}
+.atk-form-stacked {
+    &.atk-form {
+        .atk-cells, .atk-cell, form, .atk-form-fieldset {
+            display: block;
+        }
+    }
+    .atk-cells {
+        .atk-cell {
+            &:first-child {
+                padding-bottom: 0;
+                label {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+.atk-form-hybrid.atk-form {
+    form {
+        display: block;
+    }
+    .atk-form-fieldset {
+        display: table;
+        &.atk-form-stacked {
+            &, .atk-cells, .atk-cell {
+                display: block;
+            }
+        }
+    }
+}
+
 
 
 // ATK form
