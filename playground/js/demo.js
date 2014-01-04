@@ -1,4 +1,9 @@
 $(function(){
+
+    $('.do-theme-switch').children().click(function(){
+        $('link').attr('href','css/'+$(this).data('file'));
+    });
+
   $('select').selectmenu();
 	$("#datepicker").datepicker();
 	$("#tabs" ).tabs();
