@@ -63,6 +63,24 @@
       "initialSize" : 3629,
       "fileType" : 8192
     },
+    "\/layout.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/layout.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/test.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/test.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/js\/demo.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -73,15 +91,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/demo-min.js",
       "fileType" : 64
-    },
-    "\/test.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/test.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/temp\/stars.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -122,7 +131,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/style.css",
-      "outputAbbreviatedPath" : "\/No Output Path",
+      "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
     "\/apple-touch-icon-72x72-precomposed.png" : {
@@ -147,6 +156,15 @@
       "initialSize" : 1189,
       "fileType" : 8192
     },
+    "\/test-opera.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/test-opera.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/js\/demo-min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -157,15 +175,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/demo-min-min.js",
       "fileType" : 64
-    },
-    "\/test-opera.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/test-opera.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/temp\/blueberries.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -200,15 +209,6 @@
       "outputAbbreviatedPath" : "\/js\/jquery-ui-1.11.master-min.js",
       "fileType" : 64
     },
-    "\/layout-default.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/layout-default.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/apple-touch-icon-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -240,15 +240,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/temp\/bananas.jpg" : {
+    "\/temp\/apples.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/temp\/bananas.jpg",
+      "inputAbbreviatedPath" : "\/temp\/apples.jpg",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/temp\/bananas.jpg",
-      "initialSize" : 21036,
+      "outputAbbreviatedPath" : "\/temp\/apples.jpg",
+      "initialSize" : 22663,
       "fileType" : 4096
     },
     "\/js\/jquery-ui-1.10.3.custom.min.js" : {
@@ -262,16 +262,16 @@
       "outputAbbreviatedPath" : "\/js\/jquery-ui-1.10.3.custom.min-min.js",
       "fileType" : 64
     },
-    "\/js\/atk-helpers.js" : {
+    "\/temp\/bananas.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/atk-helpers.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/atk-helpers-min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/temp\/bananas.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/temp\/bananas.jpg",
+      "initialSize" : 21036,
+      "fileType" : 4096
     },
     "\/js\/jquery-1.10.2.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -284,16 +284,16 @@
       "outputAbbreviatedPath" : "\/js\/jquery-1.10.2.min-min.js",
       "fileType" : 64
     },
-    "\/temp\/apples.jpg" : {
+    "\/js\/atk-helpers.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/temp\/apples.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/temp\/apples.jpg",
-      "initialSize" : 22663,
-      "fileType" : 4096
+      "inputAbbreviatedPath" : "\/js\/atk-helpers.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/atk-helpers-min.js",
+      "fileType" : 64
     },
     "\/temp\/fruits.jpg" : {
       "ignoreWasSetByUser" : 0,
