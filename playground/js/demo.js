@@ -1,7 +1,7 @@
 $(function(){
 
     $('.do-theme-switch').children().click(function(){
-        $('link').attr('href','css/'+$(this).data('file'));
+        $('link').attr('href','css/'+$(this).data('file')+'?'+(Math.random()*10000));
     });
 
   $('select').selectmenu();
