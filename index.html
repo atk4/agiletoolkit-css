@@ -177,16 +177,16 @@
 							</div>
 							<h4>Boxes</h4>
 							<p><span class="atk-label atk-effect-info">.atk-box</span> is a component that creates paddings, rounds corners (value <span class="atk-label atk-effect-info">@cornerRadius</span> can be changed in variables.less) and sets bottom margins between boxes (when stacked). <strong>Options:</strong> <span class="atk-label atk-effect-info">.atk-box-small</span>, <span class="atk-label atk-effect-info">.atk-box</span>, <span class="atk-label atk-effect-info">.atk-box-large</span>.</p>
-							<div class="atk-box">
+							<div class="atk-box atk-inline">
 								<div class="atk-cells atk-cells-gutter atk-align-center">
 									<div class="atk-cell">
-										<div class="atk-box-small atk-swatch-ink">.atk-box-small</div>
+										<div class="atk-box-small atk-swatch-ink atk-inline">.atk-box-small</div>
 									</div>
 									<div class="atk-cell">
-										<div class="atk-box atk-swatch-ink">.atk-box</div>
+										<div class="atk-box atk-swatch-ink atk-inline">.atk-box</div>
 									</div>
 									<div class="atk-cell">
-										<div class="atk-box-large atk-swatch-ink">.atk-box-large</div>
+										<div class="atk-box-large atk-swatch-ink atk-inline">.atk-box-large</div>
 									</div>
 								</div>
 							</div>
@@ -200,7 +200,7 @@
 							</div>
 							<h4>Separator</h4>
 							<p><span class="atk-label atk-effect-info">.atk-sep</span> is a component that creates margins between its siblings. It is recommended to use it with <span class="atk-label atk-effect-info">&lt;span&gt;</span> tag.</p>
-							<div class="atk-box atk-box-inline">
+							<div class="atk-box atk-inline">
 								<a href="#">Sign In</a><span class="atk-sep">&sdot;</span><a href="#">Sign Up</a>
 							</div>
 							<h4>Sections</h4>
@@ -227,33 +227,33 @@
 							</div>
 							<h4>Paddings</h4>
 							<p><span class="atk-label atk-effect-info">.atk-padding</span> component creates (consistent with the rest of the design) paddings in any element. <strong>Options:</strong> <span class="atk-label atk-effect-info">.atk-padding-small</span>, <span class="atk-label atk-effect-info">.atk-padding</span>, <span class="atk-label atk-effect-info">.atk-padding-large</span>, <span class="atk-label atk-effect-info">.atk-padding-reset</span>.</p>
-							<div class="atk-box">
+							<div class="atk-box atk-inline">
 								<div class="atk-cells atk-cells-gutter">
 									<div class="atk-cell">
-										<div class="atk-padding-small atk-swatch-ink atk-align-center">.atk-padding-small</div>
+										<div class="atk-padding-small atk-swatch-ink atk-align-center atk-inline">.atk-padding-small</div>
 									</div>
 									<div class="atk-cell">
-										<div class="atk-padding atk-swatch-ink atk-align-center">.atk-padding</div>
+										<div class="atk-padding atk-swatch-ink atk-align-center atk-inline">.atk-padding</div>
 									</div>
 									<div class="atk-cell">
-										<div class="atk-padding-large atk-swatch-ink atk-align-center">.atk-padding-large</div>
+										<div class="atk-padding-large atk-swatch-ink atk-align-center atk-inline">.atk-padding-large</div>
 									</div>
 								</div>
 							</div>
 							<h4>Pushes</h4>
 							<p><span class="atk-label atk-effect-info">.atk-push</span> component creates a bottom margin for any element. <strong>Options:</strong> <span class="atk-label atk-effect-info">.atk-push-small</span>, <span class="atk-label atk-effect-info">.atk-push</span>, <span class="atk-label atk-effect-info">.atk-push-large</span>.</p>
-							<div class="atk-box">
+							<div class="atk-box atk-inline">
 								<div class="atk-cells atk-cells-gutter">
 									<div class="atk-cell atk-valign-top atk-align-center">
-										<div class="atk-padding-small atk-swatch-ink atk-push-small">.atk-push-small</div>
+										<div class="atk-padding-small atk-swatch-ink atk-push-small atk-inline">.atk-push-small</div>
 										<div class="atk-padding-small atk-swatch-yellow"></div>
 									</div>
 									<div class="atk-cell atk-valign-top atk-align-center">
-										<div class="atk-padding-small atk-swatch-ink atk-push">.atk-push</div>
+										<div class="atk-padding-small atk-swatch-ink atk-push atk-inline">.atk-push</div>
 										<div class="atk-padding-small atk-swatch-yellow"></div>
 									</div>
 									<div class="atk-cell atk-valign-top atk-align-center">
-										<div class="atk-padding-small atk-swatch-ink atk-push-large">.atk-push-large</div>
+										<div class="atk-padding-small atk-swatch-ink atk-push-large atk-inline">.atk-push-large</div>
 										<div class="atk-padding-small atk-swatch-yellow"></div>
 									</div>
 								</div>
@@ -1246,7 +1246,7 @@
 							<h2>Forms</h2>
 							<h3>Basic Form</h3>
 							<p>Basic <span class="atk-label atk-effect-info">.atk-form</span> with labels aside. No additional classes required.</p>
-							<div class="atk-box">
+							<div class="atk-box span_6">
 								<div class="atk-form">
 									<form>
 										<div class="atk-form-fieldset">
@@ -1285,7 +1285,7 @@
 								</div>
 							</div>
 							<p>Additional class <span class="atk-label atk-effect-info">.atk-form-compact</span> decreases margins between field rows.</p>
-							<div class="atk-box">
+							<div class="atk-box span_6">
 								<div class="atk-form atk-form-compact">
 									<form>
 										<div class="atk-form-fieldset">
@@ -1309,7 +1309,7 @@
 							</div>
 							<h3>Stacked Form</h3>
 							<p>Additional class <span class="atk-label atk-effect-info">.atk-form-stacked</span> puts labels on top of fields. Removed <span class="atk-label atk-effect-info">.atk-cells</span> button wrapper and <span class="atk-label atk-effect-info">.atk-cells-gutter</span> classes.</p>
-							<div class="atk-box">
+							<div class="atk-box span_6">
 								<div class="atk-form atk-form-stacked">
 									<form>
 										<div class="atk-form-fieldset">
@@ -1329,7 +1329,7 @@
 								</div>
 							</div>
 							<p><span class="atk-label atk-effect-info">.atk-form-stacked</span> mixed with <span class="atk-label atk-effect-info">.atk-form-compact</span>.</p>
-							<div class="atk-box">
+							<div class="atk-box span_6">
 								<div class="atk-form atk-form-stacked atk-form-compact">
 									<form>
 										<div class="atk-form-fieldset">
@@ -1350,7 +1350,7 @@
 							</div>
 							<h3>Minimal Form</h3>
 							<p><span class="atk-label atk-effect-info">.atk-form-stacked</span> mixed with <span class="atk-label atk-effect-info">.atk-form-compact</span>. Removed <span class="atk-label atk-effect-info">&lt;label&gt;</span> tag, added <span class="atk-label atk-effect-info">placeholder=""</span> attribute for inputs and <span class="atk-label atk-effect-info">.atk-jackscrew</span> class for button.</p>
-							<div class="atk-box">
+							<div class="atk-box span_3">
 								<div class="atk-form atk-form-stacked atk-form-compact">
 									<form>
 										<div class="atk-form-fieldset">
@@ -1371,7 +1371,7 @@
 							</div>
 							<h3>Hybrid Form</h3>
 							<p><span class="atk-label atk-effect-info">.atk-form-hybrid</span> allows to assign <span class="atk-label atk-effect-info">.atk-form-*</span> classes to <span class="atk-label atk-effect-info">.atk-form-fieldset</span>.</p>
-							<div class="atk-box">
+							<div class="atk-box span_6">
 								<div class="atk-form atk-form-hybrid">
 									<form>
 										<div class="atk-form-fieldset">

@@ -27,6 +27,7 @@ $(function(){
         // $(this).html("Hide Icons").addClass("atk-push");
         $('#toggler').fadeOut();
         $(this).removeClass('atk-inline');
+        $(this).parent().removeClass('atk-inline');
       }
       // ,
       // function() {
