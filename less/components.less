@@ -1,33 +1,17 @@
 // ==========================================================
-// Tables
-// ==========================================================
-
-.atk-table {
-    table {
-        width: 100%;
-        th, td {
-            background: #fff;
-            border: 1px solid @borderStatic;
-            color: @bodyColor;
-            padding: @margin/4 @margin/2;
-            text-align: left;
-        }
-    }
-}
-
-
-// ==========================================================
 // Components
 // ==========================================================
 
-.atk-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: @siteWidth !important;
+.atk-text-dimmed {
+    color: lighten(@bodyColor, 40%);
 }
 .atk-text-nowrap {
     white-space: nowrap;
 }
+.atk-text-reset {
+    .clear-font;
+}
+
 .atk-push-small {
     margin-bottom: @margin/2;
     &:last-child {
@@ -46,6 +30,7 @@
         margin-bottom: 0;
     }
 }
+
 .atk-padding-small {
     padding: @margin/2;
 }
@@ -55,28 +40,59 @@
 .atk-padding-large {
     padding: @margin*2;
 }
+.atk-padding-reset {
+    padding: 0;
+}
+
+.atk-section-small {
+    padding: @margin/2 0;
+}
+.atk-section {
+    padding: @margin 0;
+}
+.atk-section-large {
+    padding: @margin*2 0;
+}
+
+.atk-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: @siteWidth !important;
+}
+
+.atk-actions {
+    >* {
+        + * {
+            margin-left: 0.5em;
+        }
+        &.atk-sep + * {
+            margin-left: 0;
+        }
+    }
+}
 .atk-sep {
     margin-left: @margin/3 !important;
     margin-right: @margin/3 !important;
 }
+
 .atk-cells {
     display:table;
     width: 100%;
-    > .atk-cell {
+    >.atk-cell {
         display: table-cell;
         vertical-align: middle;
-        .box-sizing();
     }
-    &.atk-cells-gutter-large .atk-cell + .atk-cell {
+    &.atk-cells-gutter-large>.atk-cell + .atk-cell {
         padding-left: 2em;
     }
-    &.atk-cells-gutter .atk-cell + .atk-cell {
+    &.atk-cells-gutter>.atk-cell + .atk-cell {
         padding-left: 1em;
     }
-    &.atk-cells-gutter-small .atk-cell + .atk-cell {
+    &.atk-cells-gutter-small>.atk-cell + .atk-cell {
         padding-left: 0.5em;
     }
 }
+
 a,
 a:link,
 a:visited,
@@ -87,12 +103,12 @@ input[type=submit] {
         .border-radius(@cornerRadius);
         .stateDefault;
         display: inline-block;
-        // font-size: @bodySize;
-        // font-size: 1em;
-        font-weight: 500;
+        font-weight: bold;
         line-height: @bodyBaseline;
-        // padding: @margin/4 @margin/2;
         padding: 0.5em 1em;
+        &:hover {
+            .stateHover;
+        }
         &.atk-button-blank {
             .buttonBlank;
         }
@@ -100,6 +116,9 @@ input[type=submit] {
             .buttonOutline;
         }
     }
+}
+.atk-button-blank {
+    .buttonBlank;
 }
 .buttonBlank() {
     background: none !important;
@@ -112,6 +131,7 @@ input[type=submit] {
     box-shadow: none !important;
     color: #fff !important;
 }
+
 *[class*=atk-box] {
     &, &[class*=span] {
         .border-radius(@cornerRadius);
@@ -135,184 +155,186 @@ input[type=submit] {
         }
     }
 }
-.atk-section-small {
-    padding: @margin/2 0;
-}
-.atk-section {
-    padding: @margin 0;
-}
-.atk-section-large {
-    padding: @margin*2 0;
-}
-.atk-section-small {
-    padding: @margin 0;
-}
+
 .atk-label {
     .border-radius(@cornerRadius);
     font-weight: bold;
     padding: 0.2em 0.4em;
 }
-.atk-buttons {
-  .ui-button, button {
-    + * {
-      margin-left: @margin/3;
-    }
-  }
-}
-.atk-avatar {
+
+.atk-inline {
     display: inline-block;
 }
-.atk-pagination {
-    .clear-font;
-    >a {
-        background: #fff;
-        border: 1px solid @borderClickable;
-        font-size: @bodySize;
-        padding: @margin/4 @margin/2;
-        *[class*=icon] {
-            .position(relative, @r:-@margin/4);
-            margin-left: -@margin/2;
+
+
+// Helpers
+.atk-jackscrew {
+    width: 100%;
+}
+
+// Clearers
+.atk-clear-fix {
+    .clear-fix;
+}
+
+// Object Positioning
+.atk-move-left {
+    float: left;
+}
+.atk-move-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    &.atk-button {
+        display: block;
+    }
+}
+.atk-move-right {
+    float: right;
+}
+
+// Horizontal Alignment
+.atk-align-left {
+    text-align: left;
+}
+.atk-align-right {
+    text-align: right;
+}
+.atk-align-center {
+    text-align: center;
+}
+
+// Vertical Alignment
+.atk-valign-top {
+    vertical-align: top !important;
+}
+.atk-valign-middle {
+    vertical-align: middle !important;
+}
+.atk-valign-baseline {
+    vertical-align: baseline !important;
+}
+.atk-valign-bottom {
+    vertical-align: bottom !important;
+}
+
+
+// Shapes
+.atk-shape-rectangle {
+    border-radius: 0;
+}
+.atk-shape-rounded {
+    &, img& {
+        .border-radius(@cornerRadius);
+    }
+}
+.atk-shape-circle {
+    &, img& {
+        .border-radius(50%);
+    }
+}
+// .atk-shape-diamond {
+//     &, img& {
+//         .rotate(-45deg);
+//         .transform-origin(50% 50%)
+//     }
+// }
+
+
+// States
+.stateDefault() {
+    .box-shadow(0 1px 0 rgba(0,0,0,0.07));
+    background: @stateDefault;
+    border: 0.1em solid @borderClickable;
+    color: @bodyColor;
+}
+.stateHover() {
+    background: @stateHover;
+    border: 0.1em solid @borderClickable;
+    color: @bodyColor;
+}
+.stateActive() {
+    background: @stateActive;
+    border: 0.1em solid @borderClickable;
+    color: @bodyColor;
+}
+
+
+// ==========================================================
+// Colors
+// ==========================================================
+
+.colorCheck (@a) when (luma(@a) >= @swatchText) {
+  color: black;
+}
+.colorCheck (@a) when (luma(@a) < @swatchText) {
+  color: white;
+}
+
+.createSwatch(@color) {
+    .@{color} {
+        &, &.atk-button[class*=atk-swatch], &.atk-label[class*=atk-swatch] {
+            .colorCheck(@@color);
+            background: @@color;
+            border-color: @@color;
+            hr {
+                border-color: #000;
+            }
+            &, a, h1, h2, h3, h4, h5, h6 {
+                .colorCheck(@@color);
+            }
+            &[class*=icon-] {
+                background: none;
+                color: @@color;
+                &[class*=atk-shape] {
+                    .colorCheck(@@color);
+                    background: @@color;
+                }
+            }
         }
-        &:first-child {
-            .border-radius(@cornerRadius 0 0 @cornerRadius);
-            border-right-color: @borderStatic;
-        }
-        &:last-child {
-            .border-radius(0 @cornerRadius @cornerRadius 0); 
-            border-left-color: @borderClickable;
-            border-right-color: @borderClickable;
-        }
-        + a {
-            border-left-width: 0;
-            border-right-color: @borderStatic;
+        &.atk-button[class*=atk-swatch] {
+            border-color: darken(@@color, 10%);
+            &:hover {
+                background: lighten(@@color, 5%);
+            }
         }
     }
 }
-.atk-text-dimmed {
-    color: lighten(@bodyColor, 40%);
-}
-
-
- // Growl 
-.atk-growl {
-    font-weight:bold;
-    position:fixed;
-    top:@margin*2;
-    right:@margin*2;
-    z-index:9999;
-    .opacity(80);
-    >div {
-        width:180px;
-        margin-top:@margin;
-        position:relative;
-        &:first-child {margin-top:0;}
-        .ui-icon-closethick {.opacity(0);@transition: opacity .2s;.transition(@transition);}
-        &:hover {.ui-icon-closethick {.opacity(100);}}
-    }
-}
-
- // Notification 
-.atk-notification {
-    padding:@margin/2;
-    position:relative;
-    .atk-notification-text {
-        padding:0 20px;
-        >.ui-icon {position:absolute;top:@margin/1.8;left:@margin/2;}
-    }
-    >a.ui-icon-closethick {position:absolute;top:@margin/4;right:@margin/4;}
-}
-// .atk-notification {.box-shadow(0 10px 20px @white inset);}
-.atk-growl>.atk-notification {
-    @shadow: 0 5px 10px fadeout(#000,60%),0 10px 20px #fff inset;
-    .box-shadow(@shadow);
-}
-
-// Dialog Minimal
-.ui-dialog {
-    &.atk-dialog-minimal {
-        background: none;
-        border: none;
-        box-shadow: 0 0 100px rgba(0,0,0,0.25);
-        .ui-dialog-titlebar.ui-widget-header {
-            .atk-size-mega;
-            background: #fff;
-            border: none;
-            border-radius: 0;
-            color: #000;
-            font-weight: 300;
-            margin: 0;
-            padding: @margin @margin 0 @margin;
-            .ui-dialog-titlebar-close {
-                display: none;
-            }
+*[class*=atk-effect] {
+    &, &.atk-button {
+        &.atk-effect-danger {
+            color: @effectDanger;
         }
-        .ui-dialog-content.ui-widget-content {
-            background: #fff;
-            padding: @margin/2 @margin @margin @margin;
-            p {
-                margin-bottom: @margin/1.5;
-            }
-            .atk-form {
-                fieldset {
-                    margin: 0;
-                }
-                .atk-form-row {
-                    label {
-                        display: none;
-                    }
-                    .atk-form-field input {
-                        .atk-size-kilo;
-                        background: gray;
-                        border-color: black;
-                        // margin-left: -@margin;
-                        padding: @margin/2;
-                        .placeholder(red);
-                        .transition(.3s);
-                        &:focus {
-                            background: #fff;
-                        }
-                    }
-                    + .atk-form-row {
-                        margin-top: 0;
-                        // .atk-form-field input {
-                        //  border-top: none;
-                        // }
-                    }
-                }
-                .atk-buttons {
-                    display: none;
-                }
-            }
+        &.atk-effect-warning {
+            color: @effectWarning;
         }
-        .ui-dialog-buttonpane {
-            border-color: @borderClickable;
-            margin: 0;
-            padding: 0;
-            .ui-dialog-buttonset {
-                .flex;
-                float: none;
-                width: 100%;
-                .ui-button {
-                    .box-flex;
-                    .atk-size-kilo;
-                    background: none;
-                    border: none;
-                    border-radius: 0;
-                    color: red;
-                    display: block;
-                    font-weight: 300;
-                    line-height: 1;
-                    margin: 0;
-                    padding: 1em 0;
-                    text-shadow: none;
-                    &:hover {
-                        background: lighten(gray,3%);
-                    }
-                    + .ui-button {
-                        border-left: 1px solid @borderClickable;
-                    }
-                }
-            }
+        &.atk-effect-success {
+            color: @effectSuccess;
+        }
+        &.atk-effect-info {
+            color: @effectInfo;
+        }
+    }
+    &.atk-label, &[class*=atk-box] {
+        color: @bodyColor;
+        &.atk-effect-danger {
+            @color: tint(@effectDanger, 80%);
+            background: @color;
+            border-color: @color;
+        }
+        &.atk-effect-warning {
+            @color: tint(@effectWarning, 80%);
+            background: @color;
+            border-color: @color;
+        }
+        &.atk-effect-success {
+            @color: tint(@effectSuccess, 80%);
+            background: @color;
+            border-color: @color; 
+        }
+        &.atk-effect-info {
+            @color: tint(@effectInfo, 80%);
+            background: @color;
+            border-color: @color;
         }
     }
 }

@@ -11,13 +11,6 @@
    }
 }
 
-// This part should be rewised
-.atk-form, p {
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 body {
     background: @bodyBackground;
 }
@@ -59,164 +52,22 @@ a {
 }
 
 
-// Helpers
-.atk-jackscrew {
-    width: 100%;
-}
-
-// Clearers
-.atk-clear-fix {
-    .clear-fix;
-}
-
-// Object Positioning
-.atk-move-left {
-    float: left;
-}
-.atk-move-center {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    &.atk-button {
-        display: block;
-    }
-}
-.atk-move-right {
-    float: right;
-}
-
-// Horizontal Alignment
-.atk-align-left {
-    text-align: left;
-}
-.atk-align-right {
-    text-align: right;
-}
-.atk-align-center {
-    text-align: center;
-}
-
-// Vertical Alignment
-.atk-valign-top {
-    vertical-align: top !important;
-}
-.atk-valign-middle {
-    vertical-align: middle !important;
-}
-.atk-valign-baseline {
-    vertical-align: baseline !important;
-}
-.atk-valign-bottom {
-    vertical-align: bottom !important;
-}
-
-
-// Shapes
-.atk-shape-rectangle {
-    border-radius: 0;
-}
-.atk-shape-rounded {
-    &, img& {
-        .border-radius(@cornerRadius);
-    }
-}
-.atk-shape-circle {
-    &, img& {
-        .border-radius(50%);
-    }
-}
-// .atk-shape-diamond {
-//     &, img& {
-//         .rotate(-45deg);
-//         .transform-origin(50% 50%)
-//     }
-// }
-
-
-// States
-.stateDefault() {
-    .box-shadow(0 1px 0 rgba(0,0,0,0.1));
-    background: @stateDefault;
-    border: 0.1em solid @borderClickable;
-    color: @bodyColor;
-}
-.stateHover() {
-    background: @stateHover;
-    border: 0.1em solid @borderClickable;
-    color: @bodyColor;
-}
-.stateActive() {
-    background: @stateActive;
-    border: 0.1em solid @borderClickable;
-    color: @bodyColor;
-}
-
-
-// ==========================================================
-// Colors
-// ==========================================================
-
-.colorCheck (@a) when (lightness(@a) >= @swatchText) {
-  color: black;
-}
-.colorCheck (@a) when (lightness(@a) < @swatchText) {
-  color: white;
-}
-
-.createSwatch(@color) {
-    .@{color} {
-        &, &.atk-button[class*=atk-swatch], &.atk-label[class*=atk-swatch] {
-            .colorCheck(@@color);
-            background: @@color;
-            border-color: @@color;
-            hr {
-                background-color: #000;
-            }
-            &, a, h1, h2, h3, h4, h5, h6 {
-                .colorCheck(@@color);
-            }
-            &[class*=icon-] {
-                background: none;
-                color: @@color;
-                &[class*=atk-shape] {
-                    .colorCheck(@@color);
-                    background: @@color;
-                }
-            }
-        }
-        &.atk-button:hover {
-            background: lighten(@@color, 5%);
-        }
-    }
-}
-*[class*=atk-effect] {
-    &.atk-effect-danger {
-        background: @effectDanger;
-    }
-    &.atk-effect-warning {
-        background: @effectWarning;
-    }
-    &.atk-effect-success {
-        background: @effectSuccess;
-    }
-    &.atk-effect-info {
-        background: @effectInfo;
-    }
-    &.atk-button {
-        &.atk-effect-danger {
-            .stateDefault;
-            color: red;
-        }
-    }
-}
-
-
 // ==========================================================
 // jQueryUI
 // ==========================================================
 
 // Components
-.ui-corner-all {
-    .border-radius(@cornerRadius);
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    .border-bottom-right-radius(@cornerRadius);
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    .border-bottom-left-radius(@cornerRadius);
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    .border-top-right-radius(@cornerRadius);
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    .border-top-left-radius(@cornerRadius);
 }
 .ui-state-default {
     &, a:link, a:visited {
@@ -243,7 +94,7 @@ a {
     background: #eee;
     border-color: @borderStatic;
     color: @bodyColor;
-    font-weight: normal;
+    font-weight: bold;
 }
 .ui-button {
     .ui-button-text {
@@ -310,6 +161,7 @@ a {
         padding: 0;
         .ui-menu-item {
             border: none;
+            font-weight: normal;
             padding: 0.2em 0.4em;
         }
     }
@@ -459,6 +311,11 @@ a {
 }
 .ui-accordion {
     .ui-accordion-header {
+        .atk-size-reset;
+        border-width: 1px;
+        margin: 0;
+        padding-top: @margin/2;
+        padding-bottom: @margin/2;
         &.ui-state-active {
             background: @colorLight;
             border-color: @borderStatic;
@@ -471,6 +328,9 @@ a {
     .ui-accordion-content {
         border-color: @borderStatic;
         padding: @margin/2;
+        + .ui-accordion-header {
+            margin-top: 0.2em;
+        }
     }
 }
 

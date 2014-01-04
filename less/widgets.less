@@ -2,34 +2,6 @@
 // Widgets
 // ==========================================================
 
-.atk-actions {
-    >* {
-        + * {
-            margin-left: 0.3em;
-        }
-        &.atk-sep + * {
-            margin-left: 0;
-        }
-    }
-}
-.atk-bar {
-    line-height: 1;
-    padding-top: @margin;
-    padding-bottom: @margin;
-    width: 100%;
-    &.atk-cells>* {
-        padding-right: 2.5em;
-        .atk-logo {
-            display: inline-block;
-        }
-        // .atk-cells.atk-cells-gutter .atk-cell + .atk-cell {
-        //     padding-left: @margin/3;
-        // }
-        &:last-child {
-            padding-right: 0;
-        }
-    }
-}
 .atk-menu {
     display: inline-block;
     &, li {
@@ -39,6 +11,7 @@
         // margin-left: 1px;
         a {
             display: block;
+            font-weight: bold;
             // padding: 0.6em 1.2em;
         }
         + li a {
@@ -89,21 +62,7 @@
         }
     }
 }
-.atk-input-icon {
-    display: inline-block;
-    position: relative;
-    input {
-        padding-right: 1.4em;
-    }
-    *[class*=icon] {
-        .position(@t:50%, @r:0.5em);
-        line-height: 1;
-        margin-top: -0.5em;
-        &:before {
-            margin: 0;
-        }
-    }
-}
+
 
 // Popover
 .atk-popover.ui-dialog {
@@ -135,6 +94,175 @@
             height: 10px;
             position: relative;
             top: 2px;
+        }
+    }
+}
+
+
+// ==========================================================
+// Tables
+// ==========================================================
+
+.atk-table {
+    table {
+        width: 100%;
+        th, td {
+            background: #fff;
+            border: 1px solid @borderStatic;
+            color: @bodyColor;
+            padding: @margin/4 @margin/2;
+            text-align: left;
+        }
+    }
+}
+.atk-pagination {
+    .clear-font;
+    >a {
+        background: #fff;
+        border: 1px solid @borderClickable;
+        font-size: @bodySize;
+        padding: @margin/4 @margin/2;
+        *[class*=icon] {
+            .position(relative, @r:-@margin/4);
+            margin-left: -@margin/2;
+        }
+        &:first-child {
+            .border-radius(@cornerRadius 0 0 @cornerRadius);
+            border-right-color: @borderStatic;
+        }
+        &:last-child {
+            .border-radius(0 @cornerRadius @cornerRadius 0); 
+            border-left-color: @borderClickable;
+            border-right-color: @borderClickable;
+        }
+        + a {
+            border-left-width: 0;
+            border-right-color: @borderStatic;
+        }
+    }
+}
+
+
+ // Growl 
+.atk-growl {
+    font-weight:bold;
+    position:fixed;
+    top:@margin*2;
+    right:@margin*2;
+    z-index:9999;
+    .opacity(80);
+    >div {
+        width:180px;
+        margin-top:@margin;
+        position:relative;
+        &:first-child {margin-top:0;}
+        .ui-icon-closethick {.opacity(0);@transition: opacity .2s;.transition(@transition);}
+        &:hover {.ui-icon-closethick {.opacity(100);}}
+    }
+}
+
+ // Notification 
+.atk-notification {
+    padding:@margin/2;
+    position:relative;
+    .atk-notification-text {
+        padding:0 20px;
+        >.ui-icon {position:absolute;top:@margin/1.8;left:@margin/2;}
+    }
+    >a.ui-icon-closethick {position:absolute;top:@margin/4;right:@margin/4;}
+}
+// .atk-notification {.box-shadow(0 10px 20px @white inset);}
+.atk-growl>.atk-notification {
+    @shadow: 0 5px 10px fadeout(#000,60%),0 10px 20px #fff inset;
+    .box-shadow(@shadow);
+}
+
+// Dialog Minimal
+.ui-dialog {
+    &.atk-dialog-minimal {
+        background: none;
+        border: none;
+        box-shadow: 0 0 100px rgba(0,0,0,0.25);
+        .ui-dialog-titlebar.ui-widget-header {
+            .atk-size-mega;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            color: #000;
+            font-weight: 300;
+            margin: 0;
+            padding: @margin @margin 0 @margin;
+            .ui-dialog-titlebar-close {
+                display: none;
+            }
+        }
+        .ui-dialog-content.ui-widget-content {
+            background: #fff;
+            padding: @margin/2 @margin @margin @margin;
+            p {
+                margin-bottom: @margin/1.5;
+            }
+            .atk-form {
+                fieldset {
+                    margin: 0;
+                }
+                .atk-form-row {
+                    label {
+                        display: none;
+                    }
+                    .atk-form-field input {
+                        .atk-size-kilo;
+                        background: gray;
+                        border-color: black;
+                        // margin-left: -@margin;
+                        padding: @margin/2;
+                        .placeholder(red);
+                        .transition(.3s);
+                        &:focus {
+                            background: #fff;
+                        }
+                    }
+                    + .atk-form-row {
+                        margin-top: 0;
+                        // .atk-form-field input {
+                        //  border-top: none;
+                        // }
+                    }
+                }
+                .atk-buttons {
+                    display: none;
+                }
+            }
+        }
+        .ui-dialog-buttonpane {
+            border-color: @borderClickable;
+            margin: 0;
+            padding: 0;
+            .ui-dialog-buttonset {
+                .flex;
+                float: none;
+                width: 100%;
+                .ui-button {
+                    .box-flex;
+                    .atk-size-kilo;
+                    background: none;
+                    border: none;
+                    border-radius: 0;
+                    color: red;
+                    display: block;
+                    font-weight: 300;
+                    line-height: 1;
+                    margin: 0;
+                    padding: 1em 0;
+                    text-shadow: none;
+                    &:hover {
+                        background: lighten(gray,3%);
+                    }
+                    + .ui-button {
+                        border-left: 1px solid @borderClickable;
+                    }
+                }
+            }
         }
     }
 }

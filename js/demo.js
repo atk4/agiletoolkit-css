@@ -1,9 +1,9 @@
 $(function(){
   $('select').selectmenu();
-	$( "#datepicker" ).datepicker();
-	$( "#tabs" ).tabs();
+	$("#datepicker").datepicker();
+	$("#tabs" ).tabs();
   $('#icons-library').hide();
-	$( "#accordion" ).accordion({
+	$("#accordion").accordion({
 		heightStyle: "content"
 	});
   $( "#dialog" ).dialog({
@@ -21,11 +21,12 @@ $(function(){
     $( "#opener2" ).click(function() {
     	$('#dialog-minimal').dialog("open");
     });
-    $('#icons-toggle').click(
+    $('#example-icons').click(
       function(){
         $('#icons-library').fadeIn();
         // $(this).html("Hide Icons").addClass("atk-push");
-        $(this).fadeOut();
+        $('#toggler').fadeOut();
+        $(this).removeClass('atk-inline');
       }
       // ,
       // function() {
