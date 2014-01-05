@@ -3,9 +3,8 @@
 // ==========================================================
 
 * { 
-   -webkit-box-sizing: border-box; 
-   -moz-box-sizing: border-box; 
-   box-sizing: border-box;
+   .box-sizing();
+   outline: none !important;
    &:last-child {
         margin-bottom: 0;
    }
@@ -129,9 +128,6 @@ a {
     font-size: @bodySize;
     line-height: @bodyBaseline;
 }
-.ui-icon {
-    text-indent: 0 !important;
-}
 
 
 // Widgets
@@ -143,17 +139,7 @@ a {
         padding: 0.5em 2em 0.5em 0.7em;
     }
     span.ui-icon {
-        text-align: center;
-        &:after {
-            content: '\e870';
-            color: @bodyColor;
-            display: block;
-            font-family: fontello;
-            font-size: @bodySize;
-            height: 16px;
-            line-height: @bodyBaseline;
-            width: 16px;
-        }
+        margin-top: -0.4em
     }
 }
 .ui-selectmenu-menu {
@@ -174,67 +160,47 @@ a {
         border: none;
         color: #000;
         line-height: @bodyBaseline;
-        margin-bottom: @margin/2;
+        margin: @margin/4 0 @margin/1.5 0;
         padding: 0;
         position: relative;
-        .ui-icon {
-            display: none;
-        }
         .ui-datepicker-title {
             font-weight: 300;
+            line-height: 1;
             margin: 0;
         }
         .ui-datepicker-next, .ui-datepicker-prev {
+            .disableTextHighlight;
             cursor: pointer;
-            height: 1.4em;
-            // position: static;
-            line-height: 1.4em;
-            margin-top: -0.7em;
-            // padding-top: @margin/7;
-            // padding-bottom: @margin/8;
+            height: 1em;
+            left: auto;
+            padding: 0.5em;
+            position: relative;
+            right: auto;
             text-align: center;
-            top: 50%;
-            width: 1.2rem;
-            &:before {
-                color: @linkColor;
-                display: block;
-                font-family: "fontello";
-                // font-size: 12px;
-                height: 100%;
-                line-height: 1.4em;
-                width: 100%;
+            top: 0;
+            width: 1em;
+            span.ui-icon {
+                color: transparent;
+                margin: -0.6em 0 0 -0.5em;
+                &:before {
+                    line-height: 1.2;
+                    color: @linkColor;
+                }
             }
-        }
-        .ui-state-hover {
-            // background: @colorHover;
-            border: none;
-        }
-        .ui-datepicker-prev {
-            left: 0;
-            // padding-left: @margin/4;
-            // padding-right: @margin/5;
-            // top: 0;
-            &:before {
-                content: '\ea60';
+            &:hover span.ui-icon:before {
+                color: @linkColorHover;
             }
-            &.ui-datepicker-prev-hover {
-                left: 0;
-                // top: 0;
+            &.ui-state-hover {
+                background: none;
+                border: none;
             }
+
         }
         .ui-datepicker-next {
-            right: 0;
-            // padding-left: @margin/3;
-            // padding-right: @margin/5;
-            text-indent: 0.1rem;
-            // top: 0;
-            &:before {
-                content: '\ea61';
-            }
-            &.ui-datepicker-next-hover {
-                right: 0;
-                // top: 0;
-            }
+            float: right;
+        }
+        .ui-datepicker-prev {
+            float: left;
         }
     }
     table.ui-datepicker-calendar {
@@ -317,6 +283,10 @@ a {
         margin: 0;
         padding-top: @margin/2;
         padding-bottom: @margin/2;
+        .ui-accordion-header-icon {
+            left: 0.8em;
+            margin-top: -0.5em;
+        }
         &.ui-state-active {
             background: @colorLight;
             border-color: @borderStatic;
@@ -336,7 +306,35 @@ a {
 }
 
 // Icon Replacement
-
+.ui-icon {
+    background-image: none !important;
+    background-position: 0;
+    text-align: center;
+    width: 1em;
+    height: auto;
+    line-height: 1;
+    overflow: hidden;
+    text-indent: 0;
+    &:before {
+        display: inline-block;
+        font-family: fontello;
+        height: 1em;
+        line-height: 1;
+        width: 1em;
+    }
+    &.ui-icon-triangle-1-s:before { 
+        content: '\e870';
+    }
+    &.ui-icon-triangle-1-e:before { 
+        content: '\e873';
+    }
+    &.ui-icon-circle-triangle-e:before {
+        content: '\ea61';   
+    }
+    &.ui-icon-circle-triangle-w:before {
+        content: '\ea60';
+    }
+}
 
 
 // ==========================================================
