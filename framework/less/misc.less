@@ -16,6 +16,12 @@ body {
 }
 
 
+// Hidden Variables
+
+@margin:               @baselineDestroyer * @bodyBaseline;
+@baselineDestroyer:    1rem;
+
+
 // ==========================================================
 // Selection Colors
 // ==========================================================
@@ -40,7 +46,7 @@ body {
 
 
 // ==========================================================
-// Styling
+// Hyperlinks
 // ==========================================================
 
 a {
@@ -230,18 +236,14 @@ a {
             }
             td {
                 a.ui-state-default {
-                    // background: none;
                     border: none;
                     display: block;
                     font-weight: normal;
                     text-align: center;
                 }
                 &.ui-datepicker-today {
-                    // background: @effectInfo;
                     a {
-                        // .position(relative, @t:-1px, @l:-1px);
                         outline: 1px solid red;
-                        // padding: 1px;
                     }
                 }
             }

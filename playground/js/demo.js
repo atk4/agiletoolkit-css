@@ -15,29 +15,32 @@ $(function(){
   	autoOpen: false,
   	modal: true
   });
-  $( "#dialog-minimal" ).dialog({
-  	autoOpen: false,
-  	modal: true,
-  	dialogClass: "atk-dialog-minimal"
+  $( "#dialog-buttonpane" ).dialog({
+      resizable: false,
+      height:140,
+      modal: true,
+      autoOpen: false,
+      buttons: {
+        "Delete all items": function() {
+          $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
   });
     $( "#opener" ).click(function() {
     	$('#dialog').dialog("open");
     });
     $( "#opener2" ).click(function() {
-    	$('#dialog-minimal').dialog("open");
+    	$('#dialog-buttonpane').dialog("open");
     });
     $('#example-icons').click(
       function(){
         $('#icons-library').fadeIn();
-        // $(this).html("Hide Icons").addClass("atk-push");
         $('#toggler').fadeOut();
         $(this).removeClass('atk-inline');
         $(this).parent().removeClass('atk-inline');
       }
-      // ,
-      // function() {
-      //   $('#icons-library').slideUp();
-      //   $(this).html("Show");
-      // }
     );
 });
