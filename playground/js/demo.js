@@ -17,7 +17,6 @@ $(function(){
   });
   $( "#dialog-buttonpane" ).dialog({
       resizable: false,
-      height:140,
       modal: true,
       autoOpen: false,
       buttons: {
@@ -25,6 +24,9 @@ $(function(){
           $( this ).dialog( "close" );
         },
         Cancel: function() {
+          $( this ).dialog( "close" );
+        },
+        "Testing": function() {
           $( this ).dialog( "close" );
         }
       }
