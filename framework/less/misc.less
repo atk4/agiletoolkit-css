@@ -326,7 +326,7 @@ a {
                 font-size: 120%;
             }
             &:hover {
-                color: @linkColorHover;
+                color: tint(@bodyColor, 40%);
             }
         }
     }
@@ -336,7 +336,7 @@ a {
         .ui-dialog-buttonset {
             .atk-actions;
             border-top: 1px solid @borderStatic;
-            padding: @margin/2;
+            padding: @margin/2 @margin;
         }
         &.ui-dialog-content {
             padding: @margin/2 @margin @margin @margin;

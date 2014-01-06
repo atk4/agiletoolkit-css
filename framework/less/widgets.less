@@ -135,3 +135,26 @@
         }
     }
 }
+
+// Dialog
+.atk-dialog {
+    .ui-dialog-content {
+        // margin-bottom: @margin;
+    }
+    .atk-dialog-buttons {
+        margin: 0 0 -@margin -@margin;
+        table-layout: fixed;
+        .atk-cell {
+            .atk-button {
+                .border-radius(0);
+                box-shadow: none;
+                border-width: 1px 1px 0 0;
+                text-align: center;
+                width: 100%;
+            }
+            + .atk-cell .atk-button {
+                border-right: none;
+            }
+        }
+    }
+}
