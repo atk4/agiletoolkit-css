@@ -54,13 +54,19 @@
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nisl sit amet nisi eleifend auctor. In consectetur leo ante, sed rutrum nulla pretium id. Vivamus porttitor convallis nisl non vulputate. Donec et tellus non ipsum consectetur rutrum in a quam.</p>
 									<p>Praesent ultricies magna et ultrices aliquet. Vivamus posuere sapien erat, at pretium nulla lacinia nec. Etiam eget mollis nisl, non lobortis ante. Nulla erat tortor, faucibus id vehicula in, adipiscing non nulla. Ut pharetra erat hendrerit odio consequat porta. Suspendisse tempus id mi non facilisis.</p>
 								</div>
-								<p>Preformatted <span class="atk-label atk-effect-info">&lt;pre&gt;</span> text.</p>
+								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;Preformatted <span class="atk-label atk-effect-info">&lt;pre&gt;</span> text.</p>
 								<div class="atk-box">
 	<pre>body {
 	  background: #ffffff;
 	}</pre>
 								</div>
-								<p>Use <span class="atk-label atk-effect-info">&lt;blockquote&gt;</span> to indicate a block of quoted text.</p>
+								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;<span class="atk-label atk-effect-info">&lt;code&gt;</span></p>
+								<div class="atk-box">
+	<code>body {
+	  background: #ffffff;
+	}</code>
+								</div>
+								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;Use <span class="atk-label atk-effect-info">&lt;blockquote&gt;</span> to indicate a block of quoted text.</p>
 								<div class="atk-box">
 									<blockquote>&#8220;Nam quis bibendum erat, ut cursus leo.&#8221;</blockquote>	
 								</div>
@@ -188,6 +194,62 @@
 										</div>
 									</div>
 								</div>
+								<h3>Buttons</h3>
+								<p>a tags</p>
+								<div class="atk-box atk-actions atk-inline">
+									<a href="#" class="atk-button-small">.atk-button-small</a><a href="#" class="atk-button atk-swatch-yellow">.atk-button</a><a href="#" class="atk-button-large atk-swatch-ink">.atk-button-large</a>
+								</div>
+								<p>input tags</p>
+								<div class="atk-box atk-actions atk-inline">
+									<input type="button" class="atk-button-small" value=".atk-button-small"/><input type="button" class="atk-button atk-swatch-yellow" value=".atk-button"/><input type="button" class="atk-button-large atk-swatch-ink" value=".atk-button-large"/>
+								</div>
+								<p>button tags</p>
+								<div class="atk-box atk-actions atk-inline">
+									<button class="atk-button-small">.atk-button-small</button><button class="atk-button atk-swatch-yellow">.atk-button</button><button href="#" class="atk-button-large atk-swatch-ink">.atk-button-large</button>
+								</div>
+								<h3>Menu</h3>
+								<p>Component <span class="atk-label atk-effect-info">.atk-menu-horizontal</span> combined with <span class="atk-label atk-effect-info">.atk-padding</span>.</p>
+								<div class="atk-box atk-inline">
+									<div class="atk-menu-horizontal">
+										<a href="#" class="atk-padding atk-swatch-ink">Item #1</a><a href="#" class="atk-padding atk-swatch-ink">Item #2</a><a href="#" class="atk-padding atk-swatch-ink">Item #3</a>
+									</div>
+								</div>
+								<p>Component <span class="atk-label atk-effect-info">.atk-menu-vertical</span> combined with <span class="atk-label atk-effect-info">.atk-padding-small</span> and <span class="atk-label atk-effect-info">.atk-label</span>.</p>
+								<div class="atk-box span_4">
+									<div class="atk-menu-vertical">
+										<a href="#" class="atk-padding-small atk-swatch-ink atk-cells">
+											<span class="atk-cell atk-jackscrew"><strong>Item #1</strong></span>
+											<span class="atk-cell"><span class="atk-label atk-swatch-yellow">3</span></span>
+										</a>
+										<a href="#" class="atk-padding-small atk-swatch-ink atk-cells">
+											<span class="atk-cell atk-jackscrew"><strong>Item #1</strong></span>
+											<span class="atk-cell"><span class="atk-label atk-shape-circle atk-swatch-blue">3</span></span>
+										</a>
+										<a href="#" class="atk-padding-small atk-swatch-ink atk-cells">
+											<span class="atk-cell atk-jackscrew"><strong>Item #1</strong></span>
+											<span class="atk-cell"><span class="atk-label atk-swatch-green atk-shape-rectangle">3</span></span>
+										</a>
+									</div>
+								</div>
+								<p>Component <span class="atk-label atk-effect-info">.atk-menu-horizontal</span> combined with <span class="atk-label atk-effect-info">.atk-button-small</span>.</p>
+								<div class="atk-box atk-inline">
+									<div class="atk-menu-horizontal">
+										<a href="#" class="atk-swatch-blue atk-button-small"><span class="icon-angle-left"></span></a><a href="#" class="atk-swatch-blue atk-button-small"><span class="icon-calendar"></span></a><a href="#" class="atk-swatch-blue atk-button-small">1</a><a href="#" class="atk-swatch-blue atk-button-small">2</a><a href="#" class="atk-swatch-blue atk-button-small">3</a><a href="#" class="atk-swatch-blue atk-button-small">4</a><a href="#" class="atk-swatch-blue atk-button-small">5</a><a href="#" class="atk-swatch-blue atk-button-small"><span class="icon-angle-right"></span></a>
+									</div>
+								</div>
+								<p>Component <span class="atk-label atk-effect-info">.atk-menu-vertical</span> combined with <span class="atk-label atk-effect-info">.atk-button</span>.</p>
+								<div class="atk-box span_4">
+									<div class="atk-menu-vertical">
+										<a href="#" class="atk-swatch-blue atk-button-large"><span class="icon-angle-left"></span></a>
+										<a href="#" class="atk-swatch-blue atk-button-large"><span class="icon-calendar"></span></a>
+										<a href="#" class="atk-swatch-blue atk-button-large">1</a>
+										<a href="#" class="atk-swatch-blue atk-button-large">2</a>
+										<a href="#" class="atk-swatch-blue atk-button-large">3</a>
+										<a href="#" class="atk-swatch-blue atk-button-large">4</a>
+										<a href="#" class="atk-swatch-blue atk-button-large">5</a>
+										<a href="#" class="atk-swatch-blue atk-button-large"><span class="icon-angle-right"></span></a>
+									</div>
+								</div>
 								<h3>Paddings &amp; Margins</h3>
 								<h4>Actions</h4>
 								<p><span class="atk-label atk-effect-info">.atk-actions</span> is a component that creates margins between its children. Make sure there are no spaces between your action buttons.</p>
@@ -202,7 +264,7 @@
 									<a href="#">Sign In</a><span class="atk-sep">&sdot;</span><a href="#">Sign Up</a>
 								</div>
 								<h4>Sections</h4>
-								<p><span class="atk-label atk-effect-info">.atk-section</span> component creates top and bottom margins. It is the best used for pages with fixed centered layout. <strong>Options:</strong> <span class="atk-label atk-effect-info">.atk-section-small</span>, <span class="atk-label atk-effect-info">.atk-section</span>, <span class="atk-label atk-effect-info">.atk-section-large</span>.</p>
+								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;<span class="atk-label atk-effect-info">.atk-section</span> component creates top and bottom margins. It is the best used for pages with fixed centered layout. <strong>Options:</strong> <span class="atk-label atk-effect-info">.atk-section-small</span>, <span class="atk-label atk-effect-info">.atk-section</span>, <span class="atk-label atk-effect-info">.atk-section-large</span>.</p>
 								<div class="atk-box">
 									<div class="atk-swatch-ink">
 										<div class="atk-section-small span_8 atk-move-center">
@@ -257,7 +319,7 @@
 									</div>
 								</div>
 								<h3>Icons</h3>
-								<p>We are using <a href="http://www.fontello.com">fontello.com</a> to generate our awesome &amp; scalable vector icon font. You can easily add or remove icons from your font pack if file size is a concern.</p>
+								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;We are using <a href="http://www.fontello.com">fontello.com</a> to generate our awesome &amp; scalable vector icon font. You can easily add or remove icons from your font pack if file size is a concern.</p>
 								<style>
 									.i-code {display: none;}
 								</style>
@@ -1423,7 +1485,7 @@
 													</div>
 												</div>
 												<div class="atk-cells atk-cells-gutter-large">
-													<div class="atk-cell atk-text-nowrap"><label>Combo Input #1:</label></div>
+													<div class="atk-cell atk-text-nowrap"><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;<label>Combo Input #1:</label></div>
 													<div class="atk-cell atk-jackscrew">
 														<div class="atk-cells atk-input-combo">
 															<div class="atk-cell">
@@ -1560,7 +1622,7 @@
 							<section id="widgets">
 								<h2>Widgets</h2>
 								<h3>Media Blocks</h3>
-								<p>Combination of <a href="#colors" class="atk-label atk-effect-info">.atk-swatch-*</a>, <span class="atk-label atk-effect-info">.atk-box</span> and <span class="atk-label atk-effect-info">.atk-cells</span> components.</p>
+								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;Combination of <a href="#colors" class="atk-label atk-effect-info">.atk-swatch-*</a>, <span class="atk-label atk-effect-info">.atk-box</span> and <span class="atk-label atk-effect-info">.atk-cells</span> components.</p>
 								<div class="atk-box" id="example-widgets-mediablocks">
 									<div class="row">
 										<div class="span_6 col">
@@ -1670,17 +1732,17 @@
 										</table>
 									</div>
 								</div>
-								<p><span class="atk-label atk-effect-info">.atk-table</span> widget combined with <span class="atk-label atk-effect-info">.atk-cells</span> and <span class="atk-label atk-effect-info">.atk-label</span> components.</p>
+								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;<span class="atk-label atk-effect-info">.atk-table</span> widget combined with <span class="atk-label atk-effect-info">.atk-cells</span> and <span class="atk-label atk-effect-info">.atk-label</span> components.</p>
 								<div class="atk-box">
 									<div class="atk-table">
 										<table>
 											<thead>
 												<tr>
-													<th>Product Type</th>
-													<th>Weight</th>
-													<th>Phone</th>
-													<th>Email</th>
-													<th>Status</th>
+													<th class="atk-swatch-ink">Product Type</th>
+													<th class="atk-swatch-ink">Weight</th>
+													<th class="atk-swatch-ink">Phone</th>
+													<th class="atk-swatch-ink">Email</th>
+													<th class="atk-swatch-ink">Status</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -1728,19 +1790,6 @@
 												</tr>
 											</tbody>
 										</table>
-									</div>
-								</div>
-								<h3>Pagination</h3>
-								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span> It might be useful to merge .atk-pagination with .atk-menu in the future.</span></p>
-								<div class="atk-box atk-inline">
-									<div class="atk-pagination">
-										<a href="#"><span class="icon-angle-left"></span></a>
-										<a href="#">1</a>
-										<a href="#">2</a>
-										<a href="#">3</a>
-										<a href="#">4</a>
-										<a href="#">5</a>
-										<a href="#"><span class="icon-angle-right"></span></a>
 									</div>
 								</div>
 								<h3>Menus</h3>
@@ -1824,7 +1873,7 @@
 									</div>
 								</div>
 								<h4>Fixed Navigation Bar</h4>
-								<p>Combination of <span class="atk-label atk-effect-info">.atk-cells</span>, <span class="atk-label atk-effect-info">.atk-swatch-*</span> and <span class="atk-label atk-effect-info">.atk-section-*</span> components. The best used as a header on a fixed page.</p>
+								<p><span class="atk-label atk-effect-warning"><span class="icon-attention"></span></span>&nbsp;Combination of <span class="atk-label atk-effect-info">.atk-cells</span>, <span class="atk-label atk-effect-info">.atk-swatch-*</span> and <span class="atk-label atk-effect-info">.atk-section-*</span> components. The best used as a header on a fixed page.</p>
 								<div class="atk-box">
 									<div class="atk-swatch-ink">
 										<div class="atk-move-center span_8">
