@@ -193,6 +193,7 @@ input {
         }
     }
     &.atk-menu-vertical {
+        display: block;
         >* {
             display: block;
             text-align: left;
@@ -332,7 +333,7 @@ input {
                     background: @@color;
                 }
             }
-            &:hover, &[class*=atk-button]:hover {
+            a&:hover, &[class*=atk-button]:hover {
                 .colorCheck(@@color);
                 background: lighten(@@color, 5%);
             }
