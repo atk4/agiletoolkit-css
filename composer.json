@@ -1,7 +1,7 @@
 {
-    "name": "atk4/atk-default-theme",
+    "name": "atk4/agiletoolkit-css",
     "source": {
-        "url": "git@github.com:atk4/atk-default-theme.git",
+        "url": "git@github.com:atk4/agiletoolkit-css.git",
         "type": "git",
         "reference": "origin/master"
     }
