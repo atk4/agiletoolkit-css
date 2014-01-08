@@ -181,18 +181,22 @@ input {
                 .box-sizing(content-box);
                 display: inline-block;
                 height: 1em * @bodyBaseline;
+                margin: 0 .2em;
                 min-width: 1em * @bodyBaseline;
                 padding: 0;
                 text-align: center;
+                &[class*='icon']:before {
+                    margin: 0;
+                }
             }
         }
-    }
-    *[class*='icon']:before {
-        margin: 0;
     }
     &.atk-menu-horizontal {
         >* {
             text-align: center;
+            *[class*='icon']:before {
+                margin: 0;
+            }
         }
     }
     &.atk-menu-vertical {
