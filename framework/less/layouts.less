@@ -1,7 +1,13 @@
 // ==========================================================
 // Layouts
 // ==========================================================
+
 // Flexible Layout (credit: Pixel vs. Bytes)
+.siteMargins(@a) when not (ispercentage(@a)) {
+	padding-left: (@windowMinWidth - @siteMinWidth)/2;
+	padding-right: (@windowMinWidth - @siteMinWidth)/2;
+	max-width: @siteMaxWidth + (@windowMinWidth - @siteMinWidth);
+}
 html, body  {
 	height: 100%; /* INFO Optional CSS for a sticky footer */
 }
@@ -13,7 +19,10 @@ html, body  {
 	>.atk-layout-row {
 		display: table-row;
 		height: 1px;
-		&.fluid {
+		.atk-layout-cell {
+			min-width: @windowMinWidth;
+		}
+		&.atk-layout-fluid {
 			height: auto;
 		}
 	}
@@ -21,11 +30,19 @@ html, body  {
 		display: table-cell;
 		min-width: 1px;
 		vertical-align: top;
-		&.fluid {
+		&.atk-layout-fluid {
 			width: auto;
 		}
 	}
 	body>& {
 		table-layout: fixed; /* NOTE Speed up table rendering */
 	}
+}
+.atk-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: @siteMinWidth;
+    max-width: @siteMaxWidth;
+    width: 100%;
+    .siteMargins(@siteMinWidth);
 }

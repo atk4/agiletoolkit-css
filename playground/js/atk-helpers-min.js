@@ -1,2 +1,2 @@
 // INFO IE and Opera need some fixing to display the correct height of nested layouts.
-function fixLayout(){var e=$("#atk-main-inner"),t=$("#atk-main-inner").parent().outerHeight();e.height(t)}$(function(){if(navigator.userAgent.match(/msie/i)||navigator.userAgent.match(/opera/i)){fixLayout();$(window).resize(function(){fixLayout()})}});
+function fixLayout(){var e=$(".atk-layout.atk-layout-cell"),t=$(".atk-layout.atk-layout-cell").parent().outerHeight();e.height(t)}$(function(){if(navigator.userAgent.match(/msie/i)||navigator.userAgent.match(/opera/i)){fixLayout();$(window).resize(function(){fixLayout()})}});
