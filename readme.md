@@ -28,7 +28,7 @@ AgileToolkit CSS uses a concept of Widgets and Components. Below is a widget exa
 
     <div class="atk-cells atk-cells-gutter-large atk-box atk-swatch-yellow">
 	    <div class="atk-cell">
-		    <img src="temp/tomatoes.jpg" alt="Tomatoes">
+		    <img src="playground/temp/tomatoes.jpg" alt="Tomatoes">
 		</div>
 		<div class="atk-cell atk-valign-middle atk-jackscrew">
 		    <h4>Tomatoes</h4>
