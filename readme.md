@@ -4,6 +4,10 @@ Flexible and extensible User Interface framework for simple, consistent, aesthet
 
 **!! AgileToolkit CSS is in the early BETA stage. You may use at your own risk. !!**
 
+[Current Agile CSS Components](http://css.agiletoolkit.org/)
+
+[Current Agile CSS Layouts](http://css.agiletoolkit.org/layouts.html)
+
 ## Table of contents
 
  - [Design philosophy and features](#design-philosophy-and-features)
