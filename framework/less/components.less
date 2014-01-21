@@ -159,18 +159,13 @@ input {
 
 // Box
 *[class*=atk-box] {
-    &, &[class*=span] {
+    &, &[class*=span], .ui-tabs &.ui-tabs-panel.ui-widget-content {
         .border-radius(@cornerRadius);
         background: @colorLight;
         border: 1px solid @borderStatic;
         display: block;
         padding: @margin;
         margin-bottom: @margin;
-        >h1, >h2, >h3, >h4, >h5, >h6 {
-            &:first-child {
-                margin-top: 0;
-            }
-        }
         &.atk-box-small {
             padding: @margin/2;
         }
@@ -265,31 +260,35 @@ input {
 }
 
 // Paddings
-.atk-padding-small {
-    padding: @margin/2;
-}
-.atk-padding {
-    padding: @margin;
-}
-.atk-padding-large {
-    padding: @margin*2;
-}
-.atk-padding-reset {
-    padding: 0;
+*[class*=atk-padding] {
+    &, .ui-tabs &.ui-tabs-panel.ui-widget-content {
+        padding: @margin;
+        &.atk-padding-small {
+            padding: @margin/2;
+        }
+        &.atk-padding-large {
+            padding: @margin*2;
+        }
+        &.atk-padding-reset {
+            padding: 0;
+        }
+    }
 }
 
 // Sections
-.atk-section-small {
-    padding-bottom: @margin/2;
-    padding-top: @margin/2;
-}
-.atk-section {
-    padding-bottom: @margin;
-    padding-top: @margin;
-}
-.atk-section-large {
-    padding-bottom: @margin*2;
-    padding-top: @margin*2;
+*[class*=atk-section] {
+    &, .ui-tabs &.ui-tabs-panel.ui-widget-content {
+        padding-bottom: @margin;
+        padding-top: @margin;
+        &.atk-section-small {
+            padding-bottom: @margin/2;
+            padding-top: @margin/2;
+        }
+        &.atk-section-large {
+            padding-bottom: @margin*2;
+            padding-top: @margin*2;
+        }
+    }
 }
 
 // Shapes

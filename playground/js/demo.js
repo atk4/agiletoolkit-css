@@ -6,7 +6,10 @@ $(function(){
 
   $('select').selectmenu();
 	$("#datepicker").datepicker();
-	$("#tabs" ).tabs();
+	$("#tabs").tabs();
+  $("#tabs2").tabs();
+  $("#tabs3").tabs();
+  $("#tabs4").tabs();
   $('#icons-library').hide();
 	$("#accordion").accordion({
 		heightStyle: "content"
