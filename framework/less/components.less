@@ -80,27 +80,23 @@ input {
         *[class*='atk-menu'] & {
             .border-radius(0);
         }
-        .atk-menu-horizontal & {
-            &:first-child {
-                .border-left-radius(@cornerRadius);
-            }
-            &:last-child {
-                .border-right-radius(@cornerRadius);
-            }
-            + *[class*='atk-button'] {
-                border-left: none;
-            }
+        .atk-menu-horizontal li:first-child & {
+            .border-left-radius(@cornerRadius);
         }
-        .atk-menu-vertical & {
-            &:first-child {
-                .border-top-radius(@cornerRadius);
-            }
-            &:last-child {
-                .border-bottom-radius(@cornerRadius);
-            }
-            + *[class*='atk-button'] {
-                border-top: none;
-            }
+        .atk-menu-horizontal li:last-child & {
+            .border-right-radius(@cornerRadius);
+        }
+        .atk-menu-horizontal li + li & {
+            border-left: none;
+        }
+        .atk-menu-vertical li:first-child & {
+            .border-top-radius(@cornerRadius);
+        }
+        .atk-menu-vertical li:last-child & {
+            .border-bottom-radius(@cornerRadius);
+        }
+        .atk-menu-vertical li + li & {
+            border-top: none;
         }
     }
 }
@@ -118,17 +114,18 @@ input {
     box-shadow: none !important;
     color: #fff !important;
 }
-*[class*=atk-menu] {
+ul[class*=atk-menu] {
     .clear-ul;
     white-space: nowrap;
-    >* {
+    >li {
+        .clear-fix;
         display: inline-block;
         position: relative;
-        &[class*='atk-button'] {
+        >a[class*='atk-button'] {
             .box-sizing(content-box);
             min-width: 1em;
         }
-        &.atk-cells {
+        >a.atk-cells {
             .atk-label {
                 display: inline-block;
                 height: 1em * @bodyBaseline;
@@ -142,8 +139,6 @@ input {
                 }
             }
         }
-    }
-    >li {
         >a {
             float: left;
             min-width: 100%;
@@ -167,7 +162,7 @@ input {
         }
     }
     &.atk-menu-horizontal {
-        >* {
+        >li>a {
             text-align: center;
             *[class*='icon']:before {
                 margin: 0;
@@ -176,9 +171,13 @@ input {
     }
     &.atk-menu-vertical {
         display: block;
-        >* {
+        >li {
             display: block;
             text-align: left;
+            a {
+                display: block;
+                float: none;
+            }
         }
     }
 }
