@@ -119,8 +119,11 @@ input {
     color: #fff !important;
 }
 *[class*=atk-menu] {
+    .clear-ul;
+    white-space: nowrap;
     >* {
         display: inline-block;
+        position: relative;
         &[class*='atk-button'] {
             .box-sizing(content-box);
             min-width: 1em;
@@ -136,6 +139,29 @@ input {
                 text-align: center;
                 &[class*='icon']:before {
                     margin: 0;
+                }
+            }
+        }
+    }
+    >li {
+        >a {
+            float: left;
+            min-width: 100%;
+            white-space: nowrap;
+        }
+        *[class*=atk-menu] {
+            .clear-ul;
+            .position(@t:100%, @l:0);
+            display: none;
+            min-width: 100%;
+        }
+        &:hover {
+            *[class*=atk-menu] {
+                display: block;
+            }
+            &[class*=atk-swatch] {
+                >a[class*=atk-swatch] {
+                    background: none;
                 }
             }
         }
