@@ -100,10 +100,35 @@
         width: 100%;
         th, td {
             background: #fff;
-            border: 1px solid @borderStatic;
             color: @bodyColor;
             padding: @margin/4 @margin/2;
             text-align: left;
+        }
+        tbody tr td {
+            border-top: 1px solid @borderStatic;
+        }
+    }
+    >*[class*=atk-box] {
+        &:first-child {
+            border-bottom: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-bottom: 0;
+        }
+        &:last-child {
+            border-top: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    }
+    &.atk-table-zebra {
+        tbody tr:nth-child(2n) td {
+            background: lighten(@borderStatic, 9%);
+        }
+    }
+    &.atk-table-bordered {
+        th, td {
+            border: 1px solid @borderStatic;
         }
     }
 }
