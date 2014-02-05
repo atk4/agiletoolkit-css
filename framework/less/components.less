@@ -145,9 +145,7 @@ ul[class*=atk-menu] {
         }
         *[class*=atk-menu] {
             .clear-ul;
-            .position(@t:100%, @l:0);
             display: none;
-            min-width: 100%;
         }
         &:hover {
             *[class*=atk-menu] {
@@ -161,10 +159,16 @@ ul[class*=atk-menu] {
         }
     }
     &.atk-menu-horizontal {
-        >li>a {
-            text-align: center;
-            *[class*='icon']:before {
-                margin: 0;
+        >li {
+            >a {
+                text-align: center;
+                *[class*='icon']:before {
+                    margin: 0;
+                }
+            }
+            *[class*=atk-menu] {
+                .position(@t:100%, @l:0);
+                min-width: 100%;
             }
         }
     }
@@ -176,6 +180,9 @@ ul[class*=atk-menu] {
             a {
                 display: block;
                 float: none;
+            }
+            *[class*=atk-menu] {
+                .position(@t:0, @l:100%);
             }
         }
     }

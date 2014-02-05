@@ -2,45 +2,6 @@
 // Widgets
 // ==========================================================
 
-// Menu
-.atk-menu {
-    display: inline-block;
-    &, li {
-        .clear-ul;
-    }
-    >li {
-        // margin-left: 1px;
-        a {
-            display: block;
-            font-weight: bold;
-            // padding: 0.6em 1.2em;
-        }
-        + li a {
-            margin: 0 0 0 2em;
-        }
-        &:first-child a:not(.atk-button) {
-            .border-radius(@cornerRadius 0 0 @cornerRadius);
-            // margin: 0;
-        }
-        &:last-child a:not(.atk-button) {
-            .border-radius(0 @cornerRadius @cornerRadius 0);
-        }
-    }
-    &.atk-menu-horizontal {
-        display: table;
-        >li {
-            display: table-cell;
-        }
-    }
-    &.atk-menu-horizontal-justified {
-        .flex;
-        >li {
-            .box-flex(1);
-            text-align: center;
-            margin-left: 1px;
-        }
-    }
-}
 
 // Popover
 .atk-popover.ui-dialog {
