@@ -96,13 +96,36 @@
 
 // Table
 .atk-table {
+    @p: @margin/4 @margin/2;
     table {
         width: 100%;
-        th, td {
+        thead th, tbody td {
             background: #fff;
             color: @bodyColor;
-            padding: @margin/4 @margin/2;
+            padding: @p;
+        }
+        >thead>tr>th {
             text-align: left;
+            &.atk-table-sort {
+                padding: 0;
+                >a {
+                    display: block;
+                    padding: @p;
+                    padding-right: @margin;
+                    position: relative;
+                    *[class*=icon] {
+                        .position(@t:50%, @r:@margin/2);
+                        line-height: 1;
+                        margin-top: -0.5em;
+                        &:before {
+                            margin: 0 -0.2em 0 0;
+                        }
+                    }
+                }
+            }
+            &:not([class*='atk-swatch'])>a {
+                color: @bodyColor;
+            }
         }
         tbody tr td {
             border-top: 1px solid @borderStatic;
@@ -122,7 +145,7 @@
         }
     }
     &.atk-table-zebra {
-        tbody tr:nth-child(2n) td {
+        tbody tr:nth-child(2n) td:not([class*='atk-swatch']) {
             background: lighten(@borderStatic, 9%);
         }
     }
