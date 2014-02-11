@@ -140,7 +140,8 @@ ul[class*=atk-menu] {
             }
         }
         >a {
-            float: left;
+            // float: left;
+            display: inline-block;
             white-space: nowrap;
         }
         *[class*=atk-menu] {
@@ -212,8 +213,9 @@ ul[class*=atk-menu] {
 // Label
 .atk-label {
     .border-radius(@cornerRadius);
+    display: inline-block;
     font-weight: bold;
-    // padding: (0.2em * @baselineDestroyer) (0.4em * @baselineDestroyer);
+    line-height: @bodyBaseline;
     padding: (0.2em * @baselineDestroyer) (0.4em * @baselineDestroyer);
 }
 
