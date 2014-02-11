@@ -125,7 +125,7 @@ ul[class*=atk-menu] {
             .box-sizing(content-box);
             min-width: 1em;
         }
-        >a.atk-cells {
+        // >a.atk-cells {
             .atk-label {
                 display: inline-block;
                 height: 1em * @bodyBaseline;
@@ -138,7 +138,7 @@ ul[class*=atk-menu] {
                     margin: 0;
                 }
             }
-        }
+        // }
         >a {
             // float: left;
             display: inline-block;
@@ -213,9 +213,10 @@ ul[class*=atk-menu] {
 // Label
 .atk-label {
     .border-radius(@cornerRadius);
-    display: inline-block;
+    // display: inline-block;
+    display: inline;
     font-weight: bold;
-    line-height: @bodyBaseline;
+    // line-height: @bodyBaseline;
     padding: (0.2em * @baselineDestroyer) (0.4em * @baselineDestroyer);
 }
 
