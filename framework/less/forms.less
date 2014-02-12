@@ -127,6 +127,7 @@ textarea:focus {
 .atk-form {
     form {
         display: table;
+        width: 100%;
         .atk-form-fieldset {
             display: table-row-group;
             >.atk-cells {
@@ -143,7 +144,7 @@ textarea:focus {
                     .atk-input-icon {
                         width: 100% !important;
                     }
-                    >* + * {
+                    >*:not(select) + * {
                         margin: @margin/4 0 0 0;
                     }
                     &:first-child label {

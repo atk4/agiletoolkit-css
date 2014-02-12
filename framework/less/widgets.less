@@ -62,18 +62,27 @@
 
 // Table
 .atk-table {
-    @p: @margin/4 @margin/2;
+    @p: @py @px;
+    @px: @margin/2;
+    @py: @margin/4;
     table {
         width: 100%;
         thead th, tbody td {
             background: #fff;
-            color: @bodyColor;
-            padding: @p;
+            &:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort) {
+                padding-bottom: @py;
+                padding-left: @px;
+                padding-right: @px;
+                padding-top: @py;   
+            }
+            &[class*=atk-section] {
+                padding-left: @px;
+                padding-right: @px;
+            }
         }
         >thead>tr>th {
             text-align: left;
             &.atk-table-sort {
-                padding: 0;
                 >a {
                     display: block;
                     padding: @p;
@@ -93,8 +102,17 @@
                 color: @bodyColor;
             }
         }
-        tbody tr td {
-            border-top: 1px solid @borderStatic;
+        tbody tr {
+            td {
+                border-top: 1px solid @borderStatic;
+            }
+            &.atk-table-expander {
+                display: none;
+                td {
+                    border-top: none;
+                }
+
+            }
         }
     }
     >*[class*=atk-box] {
@@ -111,9 +129,12 @@
         }
     }
     &.atk-table-zebra {
-        tbody tr:nth-child(2n) td:not([class*='atk-swatch']) {
+        tbody tr:nth-child(odd) td:not([class*='atk-swatch']) {
             background: lighten(@borderStatic, 9%);
         }
+    }
+    &.atk-table-border>table {
+        border: 1px solid @borderStatic;
     }
     &.atk-table-bordered {
         th, td {
