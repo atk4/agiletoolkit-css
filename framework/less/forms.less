@@ -58,6 +58,10 @@ textarea:focus {
     .box-shadow(@shadow);
     outline: none;
 }
+label em {
+    font-style: normal;
+    font-weight: normal;
+}
 
 
 // Advanced Fields
@@ -127,7 +131,9 @@ textarea:focus {
 .atk-form {
     form {
         display: table;
-        width: 100%;
+        &:not(.row) {
+            width: 100%;
+        }
         .atk-form-fieldset {
             display: table-row-group;
             >.atk-cells {

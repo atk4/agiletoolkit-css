@@ -4,7 +4,7 @@
 
 // Text
 .atk-text-dimmed {
-    color: lighten(@bodyColor, 40%);
+    color: lighten(@bodyColor, @textDimmed);
 }
 .atk-text-nowrap {
     white-space: nowrap;
@@ -12,12 +12,38 @@
 .atk-text-reset {
     .clear-font;
 }
+.atk-text-ellipsis {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 // Item List
 .atk-actions {
     >* {
         + * {
             margin-left: (0.5em * @baselineDestroyer);
+        }
+        &.atk-sep + * {
+            margin-left: 0;
+        }
+    }
+}
+.atk-actions-large {
+    >* {
+        + * {
+            margin-left: (1em * @baselineDestroyer);
+        }
+        &.atk-sep + * {
+            margin-left: 0;
+        }
+    }
+}
+.atk-actions-xlarge {
+    >* {
+        + * {
+            margin-left: (2em * @baselineDestroyer);
         }
         &.atk-sep + * {
             margin-left: 0;
@@ -115,8 +141,12 @@ input {
     color: #fff !important;
 }
 ul[class*=atk-menu] {
-    .clear-ul;
     display: inline-block;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding: 0;
     white-space: nowrap;
     >li {
         .clear-fix;
@@ -126,15 +156,7 @@ ul[class*=atk-menu] {
             .box-sizing(content-box);
             min-width: 1em;
         }
-        // >a.atk-cells {
             .atk-label {
-                // display: inline-block;
-                // height: 1em * @bodyBaseline;
-                // margin: 0 .2em;
-                // min-width: 1em * @bodyBaseline;
-                // padding-bottom: 0;
-                // padding-top: 0;
-                // text-align: center;
                 &[class*='icon']:before {
                     margin: 0;
                 }
@@ -146,15 +168,14 @@ ul[class*=atk-menu] {
                     width: 1em * @bodyBaseline;
                 }
             }
-        // }
         >a {
-            // float: left;
             display: inline-block;
             white-space: nowrap;
         }
         *[class*=atk-menu] {
             .clear-ul;
             display: none;
+            z-index: 99;
         }
         &:hover {
             *[class*=atk-menu] {
@@ -166,6 +187,9 @@ ul[class*=atk-menu] {
                 }
             }
         }
+    }
+    &:not[class*=atk-actions]>li {
+        margin-left: 0;
     }
     &.atk-menu-horizontal {
         >li {
