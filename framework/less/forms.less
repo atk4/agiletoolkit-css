@@ -138,7 +138,6 @@ label em {
             display: table-row-group;
             >.atk-cells {
                 >.atk-cell {
-                    padding-bottom: @margin;
                     vertical-align: top;
                     input[type=text]:not([class*="span"]),
                     input[type=password]:not([class*="span"]),
@@ -166,6 +165,9 @@ label em {
                     input, textarea {
                         border-color: @effectDanger;
                     }
+                }
+                &:not(:last-child)>.atk-cell {
+                    padding-bottom: @margin;
                 }
             }
             >.atk-cells, +.atk-cells {
