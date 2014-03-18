@@ -138,6 +138,7 @@ label em {
             display: table-row-group;
             >.atk-cells {
                 >.atk-cell {
+                    padding-bottom: @margin;
                     vertical-align: top;
                     input[type=text]:not([class*="span"]),
                     input[type=password]:not([class*="span"]),
@@ -166,12 +167,16 @@ label em {
                         border-color: @effectDanger;
                     }
                 }
-                >.atk-cell {
-                    padding-bottom: @margin;
-                }
             }
             >.atk-cells, +.atk-cells {
                 display: table-row;
+            }
+            &:last-child {
+                >.atk-cells {
+                    &:last-child .atk-cell {
+                        padding-bottom: 0 !important;
+                    }
+                }
             }
         }
         >.atk-actions {
