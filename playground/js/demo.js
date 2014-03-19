@@ -36,7 +36,9 @@ $(function(){
   // Dialog
   $( "#dialog" ).dialog({
   	autoOpen: false,
-  	modal: true
+  	modal: true,
+    close: function() { $('body>.atk-layout').removeClass('atk-dialog-enabled'); },
+    open: function() { $('body>.atk-layout').addClass('atk-dialog-enabled'); }
   });
   $( "#dialog-buttonpane" ).dialog({
       resizable: false,
@@ -50,13 +52,18 @@ $(function(){
         "Cancel": function() {
           $( this ).dialog( "close" );
         }
-      }
+      },
+      close: function() { $('body>.atk-layout').removeClass('atk-dialog-enabled'); },
+      open: function() { $('body>.atk-layout').addClass('atk-dialog-enabled'); }
   });
   $( "#dialog-menu" ).dialog({
     autoOpen: false,
     modal: true,
-    dialogClass: 'atk-dialog'
+    dialogClass: 'atk-dialog',
+    close: function() { $('body>.atk-layout').removeClass('atk-dialog-enabled'); },
+    open: function() { $('body>.atk-layout').addClass('atk-dialog-enabled'); }
   });
+  
     $( "#opener" ).click(function() {
     	$('#dialog').dialog("open");
     });

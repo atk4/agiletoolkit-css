@@ -173,6 +173,15 @@
     .border-bottom-right-radius(@radius);
 }
 
+// Blur
+.blur(@radius:5px) {
+  -webkit-filter: blur(@radius);
+  -moz-filter: blur(@radius);
+  -o-filter: blur(@radius);
+  -ms-filter: blur(@radius);
+  filter: blur(@radius);
+}
+
 // Drop shadows
 .box-shadow(@shadow: 0 1px 3px fadeout(@shadowColor,25%)) {
   -webkit-box-shadow: @shadow;
