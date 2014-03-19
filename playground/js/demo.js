@@ -37,8 +37,8 @@ $(function(){
   $( "#dialog" ).dialog({
   	autoOpen: false,
   	modal: true,
-    close: function() { $('body>.atk-layout').removeClass('atk-dialog-enabled'); },
-    open: function() { $('body>.atk-layout').addClass('atk-dialog-enabled'); }
+    close: function() { $('body>.atk-layout').removeClass('atk-blur'); },
+    open: function() { $('body>.atk-layout').addClass('atk-blur'); }
   });
   $( "#dialog-buttonpane" ).dialog({
       resizable: false,
@@ -53,15 +53,15 @@ $(function(){
           $( this ).dialog( "close" );
         }
       },
-      close: function() { $('body>.atk-layout').removeClass('atk-dialog-enabled'); },
-      open: function() { $('body>.atk-layout').addClass('atk-dialog-enabled'); }
+      close: function() { $('body>.atk-layout').removeClass('atk-blur'); },
+      open: function() { $('body>.atk-layout').addClass('atk-blur'); }
   });
   $( "#dialog-menu" ).dialog({
     autoOpen: false,
     modal: true,
     dialogClass: 'atk-dialog',
-    close: function() { $('body>.atk-layout').removeClass('atk-dialog-enabled'); },
-    open: function() { $('body>.atk-layout').addClass('atk-dialog-enabled'); }
+    close: function() { $('body>.atk-layout').removeClass('atk-blur'); },
+    open: function() { $('body>.atk-layout').addClass('atk-blur'); }
   });
 
     $( "#opener" ).click(function() {
