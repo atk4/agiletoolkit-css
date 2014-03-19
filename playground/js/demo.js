@@ -36,15 +36,7 @@ $(function(){
   // Dialog
   $( "#dialog" ).dialog({
   	autoOpen: false,
-  	modal: true,
-     close: function() { 
-      $('body').css("overflow","inherit");
-      $('body>.atk-layout').removeClass('atk-blur'); 
-    },
-    open: function() {
-      $('body>.atk-layout').addClass('atk-blur');
-      $('body').css("overflow","hidden");
-    }
+  	modal: true
   });
   $( "#dialog-buttonpane" ).dialog({
       resizable: false,
