@@ -308,7 +308,7 @@ ul[class*=atk-menu] {
 
 // Pushes
 .atk-push-small {
-    margin-bottom: @margin/2;
+    margin-bottom: round(@margin/2, 2);
     &:last-child {
         margin-bottom: 0;
     }
@@ -339,11 +339,11 @@ ul[class*=atk-menu] {
             padding-top: @margin;
         }
         &.atk-padding-small {
-            padding-left: @margin/2;
-            padding-right: @margin/2;
+            padding-left: round(@margin/2, 2);
+            padding-right: round(@margin/2, 2);
             &:not([class*=atk-section]) {
-                padding-bottom: @margin/2;
-                padding-top: @margin/2;
+                padding-bottom: round(@margin/2, 2);
+                padding-top: round(@margin/2, 2);
             }
         }
         &.atk-padding-large {
@@ -366,8 +366,8 @@ ul[class*=atk-menu] {
         padding-bottom: @margin;
         padding-top: @margin;
         &.atk-section-small {
-            padding-bottom: @margin/2;
-            padding-top: @margin/2;
+            padding-bottom: round(@margin/2, 2);
+            padding-top: round(@margin/2, 2);
         }
         &.atk-section-large {
             padding-bottom: @margin*2;

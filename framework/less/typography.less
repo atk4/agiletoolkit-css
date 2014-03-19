@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: @headingWeight;
     line-height: @headingBaseline;
     text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
-    margin: @margin 0 @margin/2 0;
+    margin: @margin 0 round(@margin/2,2) 0;
     &:first-child {
         margin-top: 0;
     }
@@ -165,10 +165,10 @@ hr {
     height: 1px;
     clear: both;
     &.atk-hr-small {
-        margin: @margin/2 0;
+        margin: round(@margin/2,2) 0;
     }
     &.atk-hr-large {
-        margin: @margin*2 0;
+        margin: round(@margin*2,2) 0;
     }
     &.atk-hr-dotted {
         border-top-style: dotted;

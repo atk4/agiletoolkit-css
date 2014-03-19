@@ -19,11 +19,11 @@
     >.ui-dialog-content {
         background: #fff;
         border-radius: @cornerRadius;
-        padding: @margin/2;
+        padding: round(@margin/2,2);
         z-index: 2;
     }
     .atk-arrow.top {
-        .position(@b:100%,@l:@margin/2);
+        .position(@b:100%,@l:round(@margin/2,2));
         width: 12px;
         height: 6px;
         z-index: 1 !important;
@@ -63,8 +63,8 @@
 // Table
 .atk-table {
     @p: @py @px;
-    @px: @margin/2;
-    @py: @margin/4;
+    @px: round(@margin/2,2);
+    @py: round(@margin/4,2);
     table {
         width: 100%;
         thead th, tbody td {
@@ -149,8 +149,8 @@
     >a {
         font-size: @bodySize;
         *[class*=icon] {
-            .position(relative, @r:-@margin/4);
-            margin-left: -@margin/2;
+            .position(relative, @r:-round(@margin/4,2));
+            margin-left: -round(@margin/2,2);
         }
         &:first-child {
             .border-radius(@cornerRadius 0 0 @cornerRadius);
