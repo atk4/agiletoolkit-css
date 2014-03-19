@@ -63,7 +63,7 @@ $(function(){
     close: function() { $('body>.atk-layout').removeClass('atk-dialog-enabled'); },
     open: function() { $('body>.atk-layout').addClass('atk-dialog-enabled'); }
   });
-  
+
     $( "#opener" ).click(function() {
     	$('#dialog').dialog("open");
     });
@@ -73,6 +73,9 @@ $(function(){
     $( "#opener3" ).click(function() {
       $('#dialog-menu').dialog("open");
     });
+
+    // Tooltips
+    $('#example-jqueryui-tooltips').tooltip();
 
     // Expander
     var x;
