@@ -410,32 +410,32 @@ ul[class*=atk-menu] {
 // Swatches
 .createSwatch(@color) {
     .@{color} {
-        & {
+        background: @@color;
+        border-color: @@color;
+        &, a:link& {
             .colorCheck(@@color);
-            background: @@color;
-            border-color: @@color;
-            hr {
-                border-color: #000;
-            }
-            &, a, h1, h2, h3, h4, h5, h6 {
+        }
+        hr {
+            border-color: #000;
+        }
+        a, h1, h2, h3, h4, h5, h6 {
+            .colorCheck(@@color);
+        }
+        &[class*=icon-] {
+            background: none;
+            color: @@color;
+            &[class*=atk-shape] {
                 .colorCheck(@@color);
+                background: @@color;
             }
-            &[class*=icon-] {
+            &:hover {
                 background: none;
                 color: @@color;
-                &[class*=atk-shape] {
-                    .colorCheck(@@color);
-                    background: @@color;
-                }
-                &:hover {
-                    background: none;
-                    color: @@color;
-                }
             }
-            a&:hover, &[class*=atk-button]:hover {
-                .colorCheck(@@color);
-                background: lighten(@@color, 5%);
-            }
+        }
+        a&:hover, &[class*=atk-button]:hover {
+            .colorCheck(@@color);
+            background: lighten(@@color, 5%);
         }
         &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th& { 
             .colorCheck(@@color);
@@ -447,6 +447,9 @@ ul[class*=atk-menu] {
             &:hover {
                 border-color: darken(@@color, 10%);
             }
+        }
+        *[class*=atk-menu] li:hover&>a {
+            .colorCheck(@@color);
         }
     }
 }
