@@ -37,8 +37,14 @@ $(function(){
   $( "#dialog" ).dialog({
   	autoOpen: false,
   	modal: true,
-    close: function() { $('body>.atk-layout').removeClass('atk-blur'); },
-    open: function() { $('body>.atk-layout').addClass('atk-blur'); }
+     close: function() { 
+      $('body').css("overflow","inherit");
+      $('body>.atk-layout').removeClass('atk-blur'); 
+    },
+    open: function() {
+      $('body>.atk-layout').addClass('atk-blur');
+      $('body').css("overflow","hidden");
+    }
   });
   $( "#dialog-buttonpane" ).dialog({
       resizable: false,
@@ -53,15 +59,27 @@ $(function(){
           $( this ).dialog( "close" );
         }
       },
-      close: function() { $('body>.atk-layout').removeClass('atk-blur'); },
-      open: function() { $('body>.atk-layout').addClass('atk-blur'); }
+    close: function() { 
+      $('body').css("overflow","inherit");
+      $('body>.atk-layout').removeClass('atk-blur'); 
+    },
+    open: function() {
+      $('body>.atk-layout').addClass('atk-blur');
+      $('body').css("overflow","hidden");
+    }
   });
   $( "#dialog-menu" ).dialog({
     autoOpen: false,
     modal: true,
     dialogClass: 'atk-dialog',
-    close: function() { $('body>.atk-layout').removeClass('atk-blur'); },
-    open: function() { $('body>.atk-layout').addClass('atk-blur'); }
+    close: function() { 
+      $('body').css("overflow","inherit");
+      $('body>.atk-layout').removeClass('atk-blur'); 
+    },
+    open: function() {
+      $('body>.atk-layout').addClass('atk-blur');
+      $('body').css("overflow","hidden");
+    }
   });
 
     $( "#opener" ).click(function() {
