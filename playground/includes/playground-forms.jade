@@ -1,0 +1,375 @@
+section#forms
+  h2 Forms
+  h3 Basic Form
+  p
+    | Basic&nbsp;
+    span.atk-label.atk-effect-info .atk-form
+    | &nbsp;with labels aside. No additional classes required.
+  .atk-box.span_6
+    .atk-form
+      form
+        .atk-form-fieldset
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Input:
+            .atk-cell.atk-jackscrew
+              input(type='text')
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Password:
+            .atk-cell
+              span.atk-input-icon
+                input(type='password')
+                a.icon-help-circled-1(href='javascript:void(0)')
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Dropdown:
+            .atk-cell
+              select(name='speed')
+                option(value='Slower') Slower
+                option(value='Slow') Slow
+                option(value='Medium', selected='selected') Medium Roast
+                option(value='Fast') Fast
+                option(value='Faster') Faster
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Textarea:
+            .atk-cell
+              textarea(rows='5')
+        .atk-cells.atk-cells-gutter-large
+          .atk-cell
+          .atk-cell.atk-actions
+            button.atk-button Okay
+            button.atk-button Cancel
+  p
+    | Additional class&nbsp;
+    span.atk-label.atk-effect-info .atk-form-compact
+    | &nbsp;decreases margins between field rows.
+  .atk-box.span_6
+    .atk-form.atk-form-compact
+      form
+        .atk-form-fieldset
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Input:
+            .atk-cell.atk-jackscrew
+              input(type='text')
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Password:
+            .atk-cell
+              span.atk-input-icon
+                input(type='password')
+                a.icon-help-circled-1(href='javascript:void(0)')
+        .atk-cells.atk-cells-gutter-large
+          .atk-cell
+          .atk-cell.atk-actions
+            button.atk-button Okay
+            button.atk-button Cancel
+  h3 Stacked Form
+  p
+    | Additional class&nbsp;
+    span.atk-label.atk-effect-info .atk-form-stacked
+    | &nbsp;puts labels on top of fields. Removed&nbsp;
+    span.atk-label.atk-effect-info .atk-cells
+    | &nbsp;button wrapper and&nbsp;
+    span.atk-label.atk-effect-info .atk-cells-gutter
+    | &nbsp;classes.
+  .atk-box.span_6
+    .atk-form.atk-form-stacked
+      form
+        .atk-form-fieldset
+          .atk-cells
+            .atk-cell
+              label Input:
+            .atk-cell
+              input(type='text')
+          .atk-cells
+            .atk-cell
+              label Password:
+            .atk-cell
+              span.atk-input-icon
+                input(type='password')
+                a.icon-help-circled-1(href='javascript:void(0)')
+        .atk-actions
+          button.atk-button Okay
+          button.atk-button Cancel
+  p
+    span.atk-label.atk-effect-info .atk-form-stacked
+    | &nbsp;mixed with&nbsp;
+    span.atk-label.atk-effect-info .atk-form-compact
+    | .
+  .atk-box.span_6
+    .atk-form.atk-form-stacked.atk-form-compact
+      form
+        .atk-form-fieldset
+          .atk-cells
+            .atk-cell
+              label Input:
+            .atk-cell
+              input(type='text')
+          .atk-cells
+            .atk-cell
+              label Password:
+            .atk-cell
+              span.atk-input-icon
+                input(type='password')
+                a.icon-help-circled-1(href='javascript:void(0)')
+        .atk-actions
+          button.atk-button Okay
+          button.atk-button Cancel
+  h3 Minimal Form
+  p
+    span.atk-label.atk-effect-info .atk-form-stacked
+    | &nbsp;mixed with&nbsp;
+    span.atk-label.atk-effect-info .atk-form-compact
+    | . Removed&nbsp;
+    span.atk-label.atk-effect-info <label>
+    | &nbsp;tag, added&nbsp;
+    span.atk-label.atk-effect-info placeholder=""
+    | &nbsp;attribute for inputs and&nbsp;
+    span.atk-label.atk-effect-info .atk-jackscrew
+    | &nbsp;class for button.
+  .atk-box.span_3
+    .atk-form.atk-form-stacked.atk-form-compact
+      form
+        .atk-form-fieldset
+          .atk-cells
+            .atk-cell
+            .atk-cell
+              input(type='text', placeholder='Input')
+          .atk-cells
+            .atk-cell
+            .atk-cell
+              span.atk-input-icon
+                input(type='password', placeholder='Password')
+                a.icon-help-circled-1(href='javascript:void(0)')
+        .atk-actions
+          button.atk-button.atk-jackscrew Okay
+  h3 Hybrid Form
+  p
+    span.atk-label.atk-effect-info .atk-form-hybrid
+    | &nbsp;allows to assign&nbsp;
+    span.atk-label.atk-effect-info .atk-form-*
+    | &nbsp;classes to&nbsp;
+    span.atk-label.atk-effect-info .atk-form-fieldset
+    | .
+  .atk-box.span_6
+    .atk-form.atk-form-hybrid
+      form
+        .atk-form-fieldset
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Input:
+            .atk-cell.atk-jackscrew
+              input(type='text')
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Password:
+            .atk-cell
+              span.atk-input-icon
+                input(type='password')
+                a.icon-help-circled-1(href='javascript:void(0)')
+        .atk-form-fieldset.atk-form-stacked
+          .atk-cells
+            .atk-cell
+              label Textarea:
+            .atk-cell.atk-jackscrew
+              textarea(rows='3')
+        .atk-cells
+          .atk-cell
+          .atk-cell.atk-actions
+            button.atk-button Okay
+            button.atk-button Cancel
+  p
+    span.atk-label.atk-effect-info .atk-form-fieldset
+    | &nbsp;and&nbsp;
+    span.atk-label.atk-effect-info .atk-actions
+    | &nbsp;combined with grid system's&nbsp;
+    span.atk-label.atk-effect-info .span_*
+    | &nbsp;classes.
+  .atk-box
+    .atk-form.atk-form-hybrid
+      form.row
+        .atk-form-fieldset.span_6.col
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label
+                | Input:
+                span.atk-form-mandatory *
+                | :
+            .atk-cell.atk-jackscrew
+              input(type='text')
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Password:
+            .atk-cell
+              span.atk-input-icon
+                input(type='password')
+                a.icon-help-circled-1(href='javascript:void(0)')
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Dropdown:
+            .atk-cell
+              select(name='speed')
+                option(value='Slower') Slower
+                option(value='Slow') Slow
+                option(value='Medium', selected='selected') Medium Roast
+                option(value='Fast') Fast
+                option(value='Faster') Faster
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell.atk-text-nowrap
+              span.atk-label.atk-effect-warning
+                span.icon-attention
+              label Combo Input #1:
+            .atk-cell.atk-jackscrew
+              .atk-cells.atk-input-combo
+                .atk-cell
+                  a.atk-button(href='javascript:void(0)')
+                    span.icon-plus-1
+                .atk-cell.atk-jackscrew
+                  input(type='text')
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell.atk-text-nowrap
+              label Combo Input #2:
+            .atk-cell.atk-jackscrew
+              .atk-cells.atk-input-combo
+                .atk-cell.atk-jackscrew
+                  input(type='text')
+                .atk-cell
+                  a.atk-button(href='javascript:void(0)')
+                    span.icon-calendar
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Combo Input #3:
+            .atk-cell.atk-jackscrew
+              .atk-cells.atk-input-combo
+                .atk-cell
+                  a.atk-button(href='javascript:void(0)')
+                    span.icon-minus-1
+                .atk-cell.atk-jackscrew
+                  input(type='text')
+                .atk-cell
+                  a.atk-button(href='javascript:void(0)')
+                    span.icon-plus-1
+                .atk-cell
+                  a.atk-button(href='javascript:void(0)')
+                    span.icon-trash
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Textarea:
+            .atk-cell
+              textarea(rows='3')
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label Checkbox:
+            .atk-cell.atk-jackscrew
+              .atk-input-radio
+                span
+                  input(type='checkbox')
+                  label
+                    | Pellentesque a ligula dignissim, accumsan est sit amet, aliquet risus. Phasellus eget rutrum diam. Cras condimentum ornare dapibus.
+          .atk-cells.atk-cells-gutter-large
+            .atk-cell
+              label
+                | Input
+                span.atk-form-mandatory *
+                | :
+            .atk-cell.atk-jackscrew
+              input(type='text')
+              p.atk-text-dimmed This is a form Comment.
+          .atk-cells.atk-cells-gutter-large.atk-form-error
+            .atk-cell.atk-text-nowrap
+              label Input with error:
+            .atk-cell.atk-jackscrew
+              input(type='text')
+              p.atk-effect-danger This is a form error.
+        .atk-form-fieldset.atk-form-stacked.span_6.col
+          .atk-cells
+            .atk-cell
+              label File Upload:
+            .atk-cell
+              input(type='file')
+          .atk-cells
+            .atk-cell
+              label Textarea:
+            .atk-cell
+              textarea(rows='5')
+          .atk-cells
+            .atk-cell
+              label Horizontal Radio Buttons:
+            .atk-cell
+              .atk-input-radio
+                span
+                  input(type='radio')
+                  label Blueberry
+                span
+                  input(type='radio')
+                  label Raspberry
+                span
+                  input(type='radio')
+                  label Strawberry
+                span
+                  input(type='radio')
+                  label Cherry
+                span
+                  input(type='radio')
+                  label Cranberry
+                span
+                  input(type='radio')
+                  label Gooseberry
+          .atk-cells
+            .atk-cell
+              label Vertical Radio Buttons:
+            .atk-cell
+              .atk-input-radio.atk-input-radio-stacked
+                span
+                  input(type='radio')
+                  label Blueberry
+                span
+                  input(type='radio')
+                  label Raspberry
+                span
+                  input(type='radio')
+                  label Strawberry
+                span
+                  input(type='radio')
+                  label Cherry
+                span
+                  input(type='radio')
+                  label Cranberry
+                span
+                  input(type='radio')
+                  label Gooseberry
+          .atk-cells
+            .atk-cell
+              label
+                | Vertical Radio Buttons with
+                span.atk-label.atk-effect-info .atk-cells
+                | component:
+            .atk-cell
+              .atk-input-radio.atk-input-radio-stacked.atk-cells
+                .atk-cell
+                  span
+                    input(type='radio')
+                    label Blueberry
+                  span
+                    input(type='radio')
+                    label Raspberry
+                  span
+                    input(type='radio')
+                    label Strawberry
+                .atk-cell
+                  span
+                    input(type='radio')
+                    label Cherry
+                  span
+                    input(type='radio')
+                    label Cranberry
+                  span
+                    input(type='radio')
+                    label Gooseberry
+        .span_12.col.atk-actions.atk-align-right
+          hr
+          button.atk-button.atk-button-blank Cancel
+          button.atk-button.atk-swatch-green Okay

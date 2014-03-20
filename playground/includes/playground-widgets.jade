@@ -1,0 +1,576 @@
+section#widgets
+  h2 Widgets
+  h3 Media Blocks
+  p
+    span.atk-label.atk-effect-warning
+      span.icon-attention
+    | &nbsp;Combination of&nbsp;
+    a.atk-label.atk-effect-info(href='#colors') .atk-swatch-*
+    | ,&nbsp;
+    span.atk-label.atk-effect-info .atk-box
+    | &nbsp;and&nbsp;
+    span.atk-label.atk-effect-info .atk-cells
+    | &nbsp;components.
+  #example-widgets-mediablocks.atk-box
+    .row
+      .span_6.col
+        .atk-cells.atk-cells-gutter-large.atk-box.atk-swatch-green
+          .atk-cell
+            img(src='temp/apples.jpg', alt='Apples')
+          .atk-cell.atk-jackscrew
+            h4 Apples
+            p.atk-push-small
+              | Curabitur posuere vehicula scelerisque. Quisque vitae velit ante. Sed vel euismod est. Sed eu libero quis justo aliquet condimentum. Maecenas dictum, tortor vehicula.
+            .atk-actions
+              a(href='javascript:void(0)')
+                span.icon-down-circled-1
+                | Download
+              a(href='javascript:void(0)')
+                span.icon-trash
+                | Delete
+        .atk-cells.atk-cells-gutter-large.atk-box.atk-swatch-red
+          .atk-cell
+            img(src='temp/tomatoes.jpg', alt='Tomatoes')
+          .atk-cell.atk-jackscrew
+            h4 Tomatoes
+            p.atk-push-small
+              | Curabitur posuere vehicula scelerisque. Quisque vitae velit ante. Sed vel euismod est. Sed eu libero quis justo aliquet condimentum. Maecenas dictum, tortor vehicula.
+            .atk-actions
+              a(href='javascript:void(0)')
+                span.icon-down-circled-1
+                | Download
+              a(href='javascript:void(0)')
+                span.icon-trash
+                | Delete
+      .span_6.col
+        .atk-cells.atk-cells-gutter-large.atk-box.atk-swatch-yellow.atk-valign-top
+          .atk-cell
+            img(src='temp/bananas.jpg', alt='Bananas')
+          .atk-cell.atk-jackscrew
+            h4 Bananas
+            p.atk-push-small
+              | Curabitur posuere vehicula scelerisque. Quisque vitae velit ante. Sed vel euismod est. Sed eu libero quis justo aliquet condimentum. Maecenas dictum, tortor vehicula.
+            .atk-actions
+              a(href='javascript:void(0)')
+                span.icon-down-circled-1
+                | Download
+              a(href='javascript:void(0)')
+                span.icon-trash
+                | Delete
+        .atk-cells.atk-cells-gutter-large.atk-box.atk-swatch-blue
+          .atk-cell
+            img(src='temp/blueberries.jpg', alt='Blueberries')
+          .atk-cell.atk-jackscrew
+            h4 Blueberries
+            p.atk-push-small
+              | Curabitur posuere vehicula scelerisque. Quisque vitae velit ante. Sed vel euismod est. Sed eu libero quis justo aliquet condimentum. Maecenas dictum, tortor vehicula.
+            .atk-actions
+              a(href='javascript:void(0)')
+                span.icon-down-circled-1
+                | Download
+              a(href='javascript:void(0)')
+                span.icon-trash
+                | Delete
+  h3 Tables
+  // [Widget] Table
+  p
+    | Basic&nbsp;
+    span.atk-label.atk-effect-info .atk-table
+    | &nbsp;widget.
+  .atk-box
+    .atk-table
+      table
+        thead
+          tr
+            th
+              input(type='checkbox')
+            th Name
+            th Description
+            th Actions
+        tbody
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Brian O'Connell
+            td.atk-jackscrew.atk-text-dimmed Nullam convallis ipsum nec lacus pharetra congue.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Danny Brown
+            td.atk-jackscrew.atk-text-dimmed Cras faucibus dui eget nunc commodo, vitae condimentum quam pharetra.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap John Smith
+            td.atk-jackscrew.atk-text-dimmed Sed varius nulla sodales hendrerit eleifend.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Satya Nadella
+            td.atk-jackscrew.atk-text-dimmed Aliquam rhoncus turpis felis, ac tempor nulla pulvinar id.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+  // [Widget] Table: Zebra
+  p
+    span.atk-label.atk-effect-info .atk-table
+    | &nbsp;widget with&nbsp;
+    span.atk-label.atk-effect-info .atk-table-zebra
+    | &nbsp;class on.
+  .atk-box
+    .atk-table.atk-table-zebra
+      table
+        thead
+          tr
+            th
+              input(type='checkbox')
+            th Name
+            th Description
+            th Actions
+        tbody
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Brian O'Connell
+            td.atk-jackscrew.atk-text-dimmed Nullam convallis ipsum nec lacus pharetra congue.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Danny Brown
+            td.atk-jackscrew.atk-text-dimmed Cras faucibus dui eget nunc commodo, vitae condimentum quam pharetra.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap John Smith
+            td.atk-jackscrew.atk-text-dimmed Sed varius nulla sodales hendrerit eleifend.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Satya Nadella
+            td.atk-jackscrew.atk-text-dimmed Aliquam rhoncus turpis felis, ac tempor nulla pulvinar id.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+  // [Widget] Table: Bordered
+  p
+    span.atk-label.atk-effect-info .atk-table
+    | &nbsp;widget with&nbsp;
+    span.atk-label.atk-effect-info .atk-table-outline
+    | &nbsp;class on.
+  .atk-box
+    .atk-table.atk-table-outline
+      table
+        thead
+          tr
+            th
+              input(type='checkbox')
+            th Name
+            th Description
+            th Actions
+        tbody
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Brian O'Connell
+            td.atk-jackscrew.atk-text-dimmed Nullam convallis ipsum nec lacus pharetra congue.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Danny Brown
+            td.atk-jackscrew.atk-text-dimmed Cras faucibus dui eget nunc commodo, vitae condimentum quam pharetra.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap John Smith
+            td.atk-jackscrew.atk-text-dimmed Sed varius nulla sodales hendrerit eleifend.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Satya Nadella
+            td.atk-jackscrew.atk-text-dimmed Aliquam rhoncus turpis felis, ac tempor nulla pulvinar id.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+  // [Widget] Table: Bordered
+  p
+    span.atk-label.atk-effect-info .atk-table
+    | &nbsp;widget with&nbsp;
+    span.atk-label.atk-effect-info .atk-table-bordered
+    | &nbsp;class on.
+  .atk-box
+    .atk-table.atk-table-bordered
+      table
+        thead
+          tr
+            th
+              input(type='checkbox')
+            th Name
+            th Description
+            th Actions
+        tbody
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Brian O'Connell
+            td.atk-jackscrew.atk-text-dimmed Nullam convallis ipsum nec lacus pharetra congue.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Danny Brown
+            td.atk-jackscrew.atk-text-dimmed Cras faucibus dui eget nunc commodo, vitae condimentum quam pharetra.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap John Smith
+            td.atk-jackscrew.atk-text-dimmed Sed varius nulla sodales hendrerit eleifend.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Satya Nadella
+            td.atk-jackscrew.atk-text-dimmed Aliquam rhoncus turpis felis, ac tempor nulla pulvinar id.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+  // [Widget] Table: With Expander
+  p
+    span.atk-label.atk-effect-info .atk-table
+    | &nbsp;widget with&nbsp;
+    span.atk-label.atk-effect-info .atk-table-expander
+    | . Click on a table row to expand it.
+  #table-expander.atk-box
+    .atk-table.atk-table-outline
+      table
+        thead
+          tr
+            th Name
+            th Description
+            th Actions
+        tbody
+          tr
+            td.atk-text-nowrap
+              a.icon-right-dir(href='javascript:void(0)')
+              | Brian O'Connell
+            td.atk-jackscrew.atk-text-dimmed Nullam convallis ipsum nec lacus pharetra congue.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr.atk-table-expander
+            td.atk-padding(colspan='3')
+              h4 Basic Form
+              .atk-form.atk-form-stacked.atk-form-compact
+                form
+                  .atk-form-fieldset
+                    .atk-cells
+                      .atk-cell
+                        label Input:
+                      .atk-cell.atk-jackscrew
+                        input(type='text')
+                    .atk-cells
+                      .atk-cell
+                        label Textarea:
+                      .atk-cell
+                        textarea(rows='3')
+                  .atk-cells
+                    .atk-cell
+                    .atk-cell.atk-actions
+                      button.atk-button Okay
+                      button.atk-button Cancel
+          tr
+            td.atk-text-nowrap
+              a.icon-right-dir(href='javascript:void(0)')
+              | Danny Brown
+            td.atk-jackscrew.atk-text-dimmed Cras faucibus dui eget nunc commodo, vitae condimentum quam pharetra.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr.atk-table-expander
+            td.atk-padding(colspan='3')
+              h4 Basic Form
+              .atk-form.atk-form-stacked.atk-form-compact
+                form
+                  .atk-form-fieldset
+                    .atk-cells
+                      .atk-cell
+                        label Input:
+                      .atk-cell.atk-jackscrew
+                        input(type='text')
+                    .atk-cells
+                      .atk-cell
+                        label Textarea:
+                      .atk-cell
+                        textarea(rows='3')
+                  .atk-cells
+                    .atk-cell
+                    .atk-cell.atk-actions
+                      button.atk-button Okay
+                      button.atk-button Cancel
+          tr
+            td.atk-text-nowrap
+              a.icon-right-dir(href='javascript:void(0)')
+              | John Smith
+            td.atk-jackscrew.atk-text-dimmed Sed varius nulla sodales hendrerit eleifend.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr.atk-table-expander
+            td.atk-padding(colspan='3')
+              h4 Basic Form
+              .atk-form.atk-form-stacked.atk-form-compact
+                form
+                  .atk-form-fieldset
+                    .atk-cells
+                      .atk-cell
+                        label Input:
+                      .atk-cell.atk-jackscrew
+                        input(type='text')
+                    .atk-cells
+                      .atk-cell
+                        label Textarea:
+                      .atk-cell
+                        textarea(rows='3')
+                  .atk-cells
+                    .atk-cell
+                    .atk-cell.atk-actions
+                      button.atk-button Okay
+                      button.atk-button Cancel
+          tr
+            td.atk-text-nowrap
+              a.icon-right-dir(href='javascript:void(0)')
+              | Satya Nadella
+            td.atk-jackscrew.atk-text-dimmed Aliquam rhoncus turpis felis, ac tempor nulla pulvinar id.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr.atk-table-expander
+            td.atk-padding(colspan='3')
+              h4 Basic Form
+              .atk-form.atk-form-stacked.atk-form-compact
+                form
+                  .atk-form-fieldset
+                    .atk-cells
+                      .atk-cell
+                        label Input:
+                      .atk-cell.atk-jackscrew
+                        input(type='text')
+                    .atk-cells
+                      .atk-cell
+                        label Dropdown:
+                      .atk-cell
+                        select(name='speed')
+                          option(value='Slower') Slower
+                          option(value='Slow') Slow
+                          option(value='Medium', selected='selected') Medium Roast
+                          option(value='Fast') Fast
+                          option(value='Faster') Faster
+                    .atk-cells
+                      .atk-cell
+                        label Textarea:
+                      .atk-cell
+                        textarea(rows='3')
+                  .atk-cells
+                    .atk-cell
+                    .atk-cell.atk-actions
+                      button.atk-button Okay
+                      button.atk-button Cancel
+  // [Widget] Table: With Panels
+  p
+    span.atk-label.atk-effect-info .atk-table
+    | &nbsp;widget combined with&nbsp;
+    span.atk-label.atk-effect-info .atk-box
+    | &nbsp;component.
+  .atk-box
+    .atk-table.atk-table-zebra.atk-table-bordered
+      .atk-box-small
+        span.atk-input-icon.atk-move-right
+          input(type='text', placeholder='Search')
+          a.icon-search.atk-swatch-ink(href='javascript:void(0)')
+        .atk-actions
+          button.atk-button Add
+          button.atk-button.atk-effect-danger Delete
+      table
+        thead
+          tr
+            th
+              input(type='checkbox')
+            th.atk-text-nowrap.atk-table-sort
+              a(href='javascript:void(0)')
+                span.icon-down-dir
+                | Name
+            th Description
+            th Actions
+        tbody
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Brian O'Connell
+            td.atk-jackscrew.atk-text-dimmed Nullam convallis ipsum nec lacus pharetra congue.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Danny Brown
+            td.atk-jackscrew.atk-text-dimmed Cras faucibus dui eget nunc commodo, vitae condimentum quam pharetra.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap John Smith
+            td.atk-jackscrew.atk-text-dimmed Sed varius nulla sodales hendrerit eleifend.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+          tr
+            td
+              input(type='checkbox')
+            td.atk-text-nowrap Satya Nadella
+            td.atk-jackscrew.atk-text-dimmed Aliquam rhoncus turpis felis, ac tempor nulla pulvinar id.
+            td.atk-align-center
+              a(href='javascript:void(0)') Edit
+      .atk-box-small.atk-actions.atk-align-center
+        a(href='javascript:void(0)') « Prev
+        a(href='javascript:void(0)') 1
+        a(href='javascript:void(0)') 2
+        strong 3
+        a(href='javascript:void(0)') 4
+        a(href='javascript:void(0)') 5
+        a(href='javascript:void(0)') Next »
+  // [Widget] Table: No Results
+  p
+    span.atk-label.atk-effect-info .atk-table
+    | &nbsp;combined with&nbsp;
+    span.atk-label.atk-effect-info .atk-label
+    | &nbsp;component.
+  .atk-box
+    .atk-table.atk-table-bordered
+      .atk-box-small
+        span.atk-input-icon.atk-move-right
+          input(type='text', placeholder='Search')
+          a.icon-search.atk-swatch-ink(href='javascript:void(0)')
+        .atk-actions
+          button.atk-button Add
+          button.atk-button.atk-effect-danger Delete
+      table
+        tbody
+          tr
+            td.atk-padding-large.atk-align-center
+              span.atk-label.atk-effect-warning
+                span.icon-attention
+                | No results found.
+  h4 Navigation Bar
+  p
+    | Combination of&nbsp;
+    span.atk-label.atk-effect-info .atk-cells
+    | ,&nbsp;
+    span.atk-label.atk-effect-info .atk-swatch-*
+    | &nbsp;and&nbsp;
+    span.atk-label.atk-effect-info .atk-padding
+    | &nbsp;components. The best used as a header on a fluid page.
+  .atk-box
+    .atk-bar.atk-cells.atk-cells-gutter-large.atk-swatch-ink.atk-padding-small
+      .atk-cell
+        a.atk-size-kilo(href='javascript:void(0)')
+          strong Logo
+      .atk-cell.atk-jackscrew
+        ul.atk-menu-horizontal
+          li.atk-state-active
+            a.atk-padding-small(href='javascript:void(0)') Item 1
+          li
+            a.atk-padding-small(href='javascript:void(0)')
+              | Item 2
+              span.atk-label.atk-size-milli.atk-shape-rounded.atk-swatch-green 12
+          li
+            a.atk-padding-small(href='javascript:void(0)') Item 3
+      .atk-cell.atk-text-nowrap
+        .atk-actions
+          a.atk-label.atk-swatch-yellow(href='javascript:void(0)') Upgrade
+          span.atk-sep ⋅
+          a(href='javascript:void(0)') Help
+      .atk-cell.atk-text-nowrap
+        .atk-cells.atk-cells-gutter-small
+          .atk-cell.atk-text-reset
+            img.atk-shape-circle(src='temp/apples.jpg', alt='Apples', width='32')
+          .atk-cell
+            | John Smith
+            span.icon-down-dir
+  h4 Boxed Navigation Bar
+  p
+    | Combination of&nbsp;
+    span.atk-label.atk-effect-info .atk-cells
+    | ,&nbsp;
+    span.atk-label.atk-effect-info .atk-swatch-*
+    | &nbsp;and&nbsp;
+    span.atk-label.atk-effect-info .atk-box
+    | &nbsp;components. The best used as a boxed type header.
+  .atk-box
+    .atk-bar.atk-cells.atk-cells-gutter-large.atk-swatch-ink.atk-box-small
+      .atk-cell
+        a.atk-size-kilo(href='javascript:void(0)')
+          strong Logo
+      .atk-cell.atk-jackscrew
+        ul.atk-menu-horizontal
+          li.atk-state-active
+            a.atk-padding-small(href='javascript:void(0)') Item 1
+          li
+            a.atk-padding-small(href='javascript:void(0)') Item 2
+          li
+            a.atk-padding-small(href='javascript:void(0)') Item 3
+      .atk-cell.atk-text-nowrap
+        .atk-actions
+          a.atk-label.atk-swatch-yellow(href='javascript:void(0)') Upgrade
+          span.atk-sep ⋅
+          a(href='javascript:void(0)') Help
+      .atk-cell.atk-text-nowrap
+        .atk-cells.atk-cells-gutter-small
+          .atk-cell.atk-text-reset
+            img.atk-shape-circle(src='temp/apples.jpg', alt='Apples', width='32')
+          .atk-cell
+            | John Smith
+            span.icon-down-dir
+  h4 Fixed Navigation Bar
+  p
+    span.atk-label.atk-effect-warning
+      span.icon-attention
+    | &nbsp;Combination of&nbsp;
+    span.atk-label.atk-effect-info .atk-cells
+    | ,&nbsp;
+    span.atk-label.atk-effect-info .atk-swatch-*
+    | &nbsp;and&nbsp;
+    span.atk-label.atk-effect-info .atk-section-*
+    | &nbsp;components. The best used as a header on a fixed page.
+  .atk-box
+    .atk-swatch-ink
+      .atk-move-center.span_8
+        .atk-bar.atk-cells.atk-cells-gutter.atk-section-small
+          .atk-cell
+            a.atk-size-kilo(href='javascript:void(0)')
+              strong Logo
+          .atk-cell.atk-jackscrew
+            ul.atk-menu-horizontal
+              li.atk-state-active
+                a.atk-padding-small(href='javascript:void(0)') Item 1
+              li
+                a.atk-padding-small(href='javascript:void(0)') Item 2
+              li
+                a.atk-padding-small(href='javascript:void(0)') Item 3
+          .atk-cell.atk-text-nowrap
+            .atk-actions
+              a.atk-label.atk-swatch-yellow(href='javascript:void(0)') Upgrade
+              span.atk-sep ⋅
+              a(href='javascript:void(0)') Help
