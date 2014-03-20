@@ -7,13 +7,7 @@ html(class='no-js')
   <!--<![endif]-->
   include includes/head
   body
-    <!--[if lt IE 8]>
-    p.browsehappy
-      | You are using an <strong>outdated</strong> browser.
-      | Please <a href="http://browsehappy.com/">upgrade your browser</a>
-      | to improve your experience.
-    <![endif]-->
-
+    include includes/browsehappy
     .atk-layout
       include includes/header
       .atk-layout-row.atk-layout-fluid
@@ -89,3 +83,4 @@ html(class='no-js')
                         .atk-align-center.atk-size-kilo
                           a(href='layouts/centered.html') Centered
     include includes/scripts
+    include includes/analytics
