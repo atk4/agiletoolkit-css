@@ -295,11 +295,14 @@
     }
 }
 .ui-tooltip {
-    .box-shadow(0 3px 7px rgba(0,0,0,0.05));
+    .atk-size-milli;
+    .box-shadow(0 3px 7px rgba(0,0,0,0.5));
     .colorCheck(@tooltipColor);
     background: @tooltipColor;
-    padding: round(@margin/3,2);
+    border: none;
+    padding: round(@margin/4,2) round(@margin/3,2) round(@margin/6,2) round(@margin/3,2);
 }
+
 
 // Icon Replacement
 .ui-icon {
