@@ -121,6 +121,15 @@
             font-weight: 300;
             line-height: 1;
             margin: 0;
+            padding: 0 1.5em;
+            select {
+                margin: 0;
+                width: 48%;
+                + select {
+                    font-family: @bodyFamily;
+                    margin-left: 4%;
+                }
+            }
         }
         .ui-datepicker-next, .ui-datepicker-prev {
             .disableTextHighlight;

@@ -21,6 +21,10 @@ $(function(){
 
   // Datepicker
 	$("#datepicker").datepicker();
+  $("#datepicker2").datepicker({
+    changeMonth: true,
+    changeYear: true
+  });
 
   // Tabs
 	$("#tabs").tabs();
