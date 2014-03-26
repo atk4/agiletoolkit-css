@@ -93,8 +93,11 @@
     }
 }
 .ui-selectmenu-menu {
+    border: 1px solid @borderOverlay;
     .ui-menu {
-        border-top: 0;
+        border: none;
+        max-height: 240px;
+        overflow: auto;
         padding: 0;
         .ui-menu-item {
             border: none;
