@@ -117,26 +117,28 @@
         padding: 0;
         position: relative;
         .ui-datepicker-title {
+            .atk-size-kilo;
             font-weight: 300;
             line-height: 1;
             margin: 0;
         }
         .ui-datepicker-next, .ui-datepicker-prev {
             .disableTextHighlight;
+            .position(@t:50%);
             cursor: pointer;
             height: 1em;
-            left: auto;
-            padding: 0.5em;
-            position: relative;
-            right: auto;
+            margin-top: -0.5em;
+            // padding: 0.5em;
             text-align: center;
-            top: 0;
             width: 1em;
             span.ui-icon {
                 color: transparent;
-                margin: -0.6em 0 0 -0.5em;
+                left: auto;
+                margin: 0;
+                position: static;
+                top: auto;
                 &:before {
-                    line-height: 1.2;
+                    line-height: 1;
                     color: @linkColor;
                 }
             }
@@ -150,10 +152,11 @@
 
         }
         .ui-datepicker-next {
-            float: right;
+            // float: right;
+            right: 0;
         }
         .ui-datepicker-prev {
-            float: left;
+            left: 0;
         }
     }
     table.ui-datepicker-calendar {
@@ -195,8 +198,9 @@
                 }
             }
             &:last-child {
-                td {
+                td, td .ui-state-default {
                     border-bottom: none;
+                    box-shadow: none;
                 }
             }
         }
