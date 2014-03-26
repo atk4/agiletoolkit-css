@@ -87,13 +87,13 @@ button,
 input {
     &[class*='atk-button'], &.ui-button {
         .border-radius(@cornerRadius);
-        .stateDefault;
+        .buttonDefault;
         display: inline-block;
         font-weight: bold;
         line-height: @bodyBaseline;
         padding: (0.5em * @baselineDestroyer) (1em * @baselineDestroyer);
         &:hover {
-            .stateHover;
+            .buttonHover;
         }
         &.atk-button-small {
             padding: (0.25em * @baselineDestroyer) (0.5em * @baselineDestroyer);
@@ -191,6 +191,13 @@ ul[class*=atk-menu] {
                 }
             }
         }
+        &.atk-menu-active {
+            >a, >a:hover {
+                .colorCheck(@menuActive);
+                background: @menuActive;
+                cursor: default;
+            }
+        }
     }
     &:not([class*=atk-actions])>li {
         margin-left: 0;
@@ -229,7 +236,7 @@ ul[class*=atk-menu] {
 *[class*=atk-box] {
     &, .ui-tabs &.ui-tabs-panel.ui-widget-content {
         .border-radius(@cornerRadius);
-        background: @colorLight;
+        background: @boxColor;
         border: 1px solid @borderStatic;
         display: block;
         padding: @margin;
@@ -496,21 +503,25 @@ ul[class*=atk-menu] {
 }
 
 // States
-.stateDefault() {
+.buttonDefault() {
     .box-shadow(0 1px 0 rgba(0,0,0,0.07));
-    background: @stateDefault;
+    background: @buttonDefault;
     border: 0.1em solid @borderClickable;
     color: @bodyColor;
 }
-.stateHover() {
-    background: @stateHover;
+.buttonHover() {
+    background: @buttonHover;
     border: 0.1em solid @borderClickable;
     color: @bodyColor;
 }
-.stateActive() {
-    background: @stateActive;
+.buttonActive() {
+    background: @buttonActive;
     border: 0.1em solid @borderClickable;
     color: @bodyColor;
+}
+.atk-disabled {
+    .opacity(50);
+    pointer-events: none;
 }
 
 // Special Effects

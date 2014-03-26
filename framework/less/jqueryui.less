@@ -22,12 +22,12 @@
     &,
     .ui-widget-content &,
     .ui-widget-header & {
-        .stateDefault;
+        .buttonDefault;
         &.ui-state-hover {
-            .stateHover;
+            .buttonHover;
         }
         &.ui-state-active, &.ui-state-focus {
-            .stateActive;
+            .buttonActive;
         }
     }
 }
@@ -56,11 +56,11 @@
     .clear-area;
     color: inherit;
     .ui-state-hover {
-        background: @stateHover;
+        background: @buttonHover;
     }
 }
 .ui-widget-content {
-    background: @colorLight;
+    background: #fff;
     border-color: @borderOverlay;
     color: inherit;
     a {
@@ -227,13 +227,13 @@
             border-bottom: none;
             border-color: transparent;
             &.ui-state-active {
-                background: @colorLight;
+                background: #fff;
                 border-color: @borderStatic;
             }
         }
     }
     .ui-tabs-panel.ui-widget-content {
-        background: @colorLight;
+        background: @boxColor;
         // border: 1px solid @borderStatic;
         padding: round(@margin/2,2) 0;
         &[class*=atk-box] {
@@ -254,9 +254,9 @@
             margin-top: -0.5em;
         }
         &.ui-state-active {
-            background: @colorLight;
+            background: @boxColor;
             border-color: @borderStatic;
-            border-bottom-color: @colorLight;
+            border-bottom-color: @boxColor;
             &, +.ui-accordion-content {
                 .box-shadow(none);
             }

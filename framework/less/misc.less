@@ -86,10 +86,14 @@ a {
   }
 }
 *[class*=icon] {
-  &:first-child:last-child {
+  &:first-child{
     &:before {
       margin-left: 0;
-      margin-right: 0;
     }
   }
+  &:last-child {
+    &:before {
+      margin-right: 0;
+    }
+  }  
 }

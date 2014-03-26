@@ -1,7 +1,6 @@
 section#components
   h2 Components
-  h3 Styling
-  h4 Swatches
+  h3 Swatches
   p
     span.atk-label.atk-effect-info .atk-swatch-*
     | &nbsp;component can be assigned to any element. Text color will adapt based on luma value (perceptual brightness) of the swatch. You can easily create as many swatches as you need using&nbsp;
@@ -22,7 +21,7 @@ section#components
         .atk-swatch-red.atk-box-small.atk-align-center .atk-swatch-red
       .col.span_4
         .atk-swatch-gray.atk-box-small.atk-align-center .atk-swatch-gray
-  h4 Effects
+  h3 Effects
   p
     span.atk-label.atk-effect-info .atk-effect-*
     | &nbsp;component is the best used for different kind of notifications.
@@ -67,10 +66,7 @@ section#components
     .atk-box-small.atk-inline.atk-effect-warning .atk-effect-warning
     .atk-box-small.atk-inline.atk-effect-danger .atk-effect-danger
     .atk-box-small.atk-inline.atk-effect-info .atk-effect-info
-  h4 States
-  .atk-box.atk-inline
-    | In progress...
-  h4 Shapes
+  h3 Shapes
   #example-styling-shapes.atk-box.atk-inline
     .atk-cells.atk-cells-gutter-large.atk-align-center
       .atk-cell
@@ -190,14 +186,14 @@ section#components
   .atk-box.span_4
     ul.atk-menu-vertical
       li.atk-padding-small.atk-swatch-ink.atk-size-kilo Navigation
-      li
-        a.atk-padding-small.atk-swatch-gray.atk-cells(href='javascript:void(0)')
+      li.atk-menu-active
+        a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
           span.atk-cell.atk-jackscrew
             span.icon-gauge-1
             | &nbsp;
             strong Dashboard
           span.atk-cell
-            span.atk-label.atk-size-milli.atk-swatch-blue 253
+            span.atk-label.atk-size-milli.atk-swatch-red 253
       li
         a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
           span.atk-cell.atk-jackscrew
@@ -207,7 +203,7 @@ section#components
           span.atk-cell
             span.atk-label.atk-size-milli.atk-shape-circle.atk-swatch-green 1
       li.atk-swatch-green
-        a.atk-padding-small.atk-swatch-gray.atk-cells(href='javascript:void(0)')
+        a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
           span.atk-cell.atk-jackscrew
             span.icon-chart-line
             | &nbsp;

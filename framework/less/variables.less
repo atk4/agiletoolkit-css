@@ -1,11 +1,4 @@
 // ==========================================================
-// General
-// ==========================================================
-
-@cornerRadius:         5px;
-
-
-// ==========================================================
 // Layout
 // ==========================================================
 
@@ -37,8 +30,7 @@
 
 @bodyBackground:       #fff;
 
-@linkColor:            darken(@atk-swatch-blue,10%);
-@linkColorHover:       darken(@linkColor,10%);
+@cornerRadius:         5px;
 
 @textSelect:           @atk-swatch-ink; // Text selection's color
 @textDimmed:           40%;
@@ -48,16 +40,6 @@
 @borderStatic:         #e1e1e1;
 @borderClickable:      darken(@borderStatic, 10%);
 @borderOverlay:        darken(@borderStatic, 25%);
-
-@formMandatory:        #ff0000;
-
-@colorFocus:           @atk-swatch-blue; // (!)
-@colorLight:           #fff; // (!)
-@colorDark:            #000; // (!)
-
-@stateDefault:         #fff;
-@stateHover:           #f5f5f5;
-@stateActive:          #eee;
 
 @atk-swatch-white:	   #ffffff;		.createSwatch(atk-swatch-white);
 @atk-swatch-gray:	   #f5f6f7;		.createSwatch(atk-swatch-gray);
@@ -75,12 +57,27 @@
 
 
 // ==========================================================
-// Widgets
+// Components & Widgets
 // ==========================================================
+
+@linkColor:            darken(@atk-swatch-blue,10%);
+@linkColorHover:       darken(@linkColor,10%);
 
 @dialogOverlay:        fade(#000, 20%); // Color of modal dialog's overlay
 
 @tooltipColor:         fade(@atk-swatch-ink, 90%);
+
+@menuActive:           @atk-swatch-blue;
+
+@buttonDefault:        #fff;
+@buttonHover:          #f5f5f5;
+@buttonActive:         #eee;
+
+@boxColor:             #fff;
+
+@formMandatory:        #ff0000;
+
+@colorFocus:           @atk-swatch-blue;
 
 
 // (!) — Need to check if it can be simplified.
