@@ -2,3 +2,6 @@
 playground/codekit-config.json
 
 playground/js/demo-min.js
+tests
+
+*.codekit
