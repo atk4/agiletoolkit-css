@@ -429,8 +429,10 @@ ul[class*=atk-menu] {
             .colorCheck(@@color);
         }
         &[class*=icon-] {
-            background: none;
-            color: @@color;
+            &, a:link& {
+                background: none;
+                color: @@color;
+            }
             &[class*=atk-shape] {
                 .colorCheck(@@color);
                 background: @@color;
