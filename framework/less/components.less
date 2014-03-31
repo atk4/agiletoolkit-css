@@ -335,29 +335,26 @@ ul[class*=atk-menu] {
 }
 
 // Pushes
-*[class*=atk-push] {
+*[class*=atk-push]:not(:last-child) {
+    &.atk-push-xsmall {
+        margin-bottom: round(@margin/3, 2);
+    }
     &.atk-push-small {
         margin-bottom: round(@margin/2, 2);
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
     &.atk-push {
         margin-bottom: @margin;
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
     &.atk-push-large {
        margin-bottom: @margin*2;
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
     &.atk-push-reset {
         margin-bottom: 0;
     }
     .atk-cells-group>& {
+        &.atk-push-xsmall>.atk-cell {
+            padding-bottom: round(@margin/3,2);
+        }
         &.atk-push-small>.atk-cell {
             padding-bottom: round(@margin/2,2);
         }

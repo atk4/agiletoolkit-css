@@ -6088,34 +6088,31 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 .atk-valign-bottom {
   vertical-align: bottom !important;
 }
-*[class*=atk-push].atk-push-small {
+*[class*=atk-push]:not(:last-child).atk-push-xsmall {
+  margin-bottom: 0.53rem;
+}
+*[class*=atk-push]:not(:last-child).atk-push-small {
   margin-bottom: 0.8rem;
 }
-*[class*=atk-push].atk-push-small:last-child {
-  margin-bottom: 0;
-}
-*[class*=atk-push].atk-push {
+*[class*=atk-push]:not(:last-child).atk-push {
   margin-bottom: 1.6rem;
 }
-*[class*=atk-push].atk-push:last-child {
-  margin-bottom: 0;
-}
-*[class*=atk-push].atk-push-large {
+*[class*=atk-push]:not(:last-child).atk-push-large {
   margin-bottom: 3.2rem;
 }
-*[class*=atk-push].atk-push-large:last-child {
+*[class*=atk-push]:not(:last-child).atk-push-reset {
   margin-bottom: 0;
 }
-*[class*=atk-push].atk-push-reset {
-  margin-bottom: 0;
+.atk-cells-group > *[class*=atk-push]:not(:last-child).atk-push-xsmall > .atk-cell {
+  padding-bottom: 0.53rem;
 }
-.atk-cells-group > *[class*=atk-push].atk-push-small > .atk-cell {
+.atk-cells-group > *[class*=atk-push]:not(:last-child).atk-push-small > .atk-cell {
   padding-bottom: 0.8rem;
 }
-.atk-cells-group > *[class*=atk-push].atk-push > .atk-cell {
+.atk-cells-group > *[class*=atk-push]:not(:last-child).atk-push > .atk-cell {
   padding-bottom: 1.6rem;
 }
-.atk-cells-group > *[class*=atk-push].atk-push-large > .atk-cell {
+.atk-cells-group > *[class*=atk-push]:not(:last-child).atk-push-large > .atk-cell {
   padding-bottom: 3.2rem;
 }
 *[class*=atk-padding],

@@ -66,10 +66,10 @@ section#forms
     .span_6.col
       .atk-box
         form.atk-cells-group.atk-cells-gutter-large.atk-jackscrew
-          .atk-cells.atk-push-large
+          .atk-cells.atk-push
             .atk-cell.atk-text-nowrap
               label 
-                strong Very Very Long Email:
+                strong Input:
             .atk-cell.atk-jackscrew
               input(type="text",size="9")
           .atk-cells.atk-push
@@ -78,43 +78,65 @@ section#forms
                 strong Password:
             .atk-cell.atk-jackscrew
               input(type="password",class="atk-jackscrew")
-          .atk-cells.atk-push-small
+          .atk-cells.atk-push
             .atk-cell.atk-text-nowrap
               label 
                 strong About:
             .atk-cell.atk-jackscrew
               textarea(class="atk-jackscrew")
           .atk-cells
-            .atk-cell
-              | 
-            .atk-cell.atk-jackscrew
-              a.atk-button(href="#") Submit
+            .atk-cell 
+            .atk-cell.atk-actions.atk-jackscrew
+              button.atk-button Submit
+              button.atk-button Cancel
 
   p
     | Additional class&nbsp;
     span.atk-label.atk-effect-info .atk-form-compact
     | &nbsp;decreases margins between field rows.
-  .atk-box.span_6
-    .atk-form.atk-form-compact
-      form
-        .atk-form-fieldset
-          .atk-cells.atk-cells-gutter-large
-            .atk-cell
-              label Input:
+  .row
+    .span_6.col
+      .atk-box.span_6
+        .atk-form.atk-form-compact
+          form
+            .atk-form-fieldset
+              .atk-cells.atk-cells-gutter-large
+                .atk-cell
+                  label Input:
+                .atk-cell.atk-jackscrew
+                  input(type='text')
+              .atk-cells.atk-cells-gutter-large
+                .atk-cell
+                  label Password:
+                .atk-cell
+                  span.atk-input-icon
+                    input(type='password')
+                    a.icon-help-circled-1(href='javascript:void(0)')
+            .atk-cells.atk-cells-gutter-large
+              .atk-cell
+              .atk-cell.atk-actions
+                button.atk-button Okay
+                button.atk-button Cancel
+    .span_6.col
+      .atk-box
+        form.atk-cells-group.atk-cells-gutter-large.atk-jackscrew
+          .atk-cells.atk-push-small
+            .atk-cell.atk-text-nowrap
+              label 
+                strong Input:
             .atk-cell.atk-jackscrew
-              input(type='text')
-          .atk-cells.atk-cells-gutter-large
-            .atk-cell
-              label Password:
-            .atk-cell
-              span.atk-input-icon
-                input(type='password')
-                a.icon-help-circled-1(href='javascript:void(0)')
-        .atk-cells.atk-cells-gutter-large
-          .atk-cell
-          .atk-cell.atk-actions
-            button.atk-button Okay
-            button.atk-button Cancel
+              input(type="text",size="9")
+          .atk-cells.atk-push-small
+            .atk-cell.atk-text-nowrap
+              label 
+                strong Password:
+            .atk-cell.atk-jackscrew
+              input(type="password",class="atk-jackscrew")
+          .atk-cells
+            .atk-cell 
+            .atk-cell.atk-actions.atk-jackscrew
+              button.atk-button Submit
+              button.atk-button Cancel
   h3 Stacked Form
   p
     | Additional class&nbsp;
@@ -124,49 +146,86 @@ section#forms
     | &nbsp;button wrapper and&nbsp;
     span.atk-label.atk-effect-info .atk-cells-gutter
     | &nbsp;classes.
-  .atk-box.span_6
-    .atk-form.atk-form-stacked
-      form
-        .atk-form-fieldset
-          .atk-cells
-            .atk-cell
-              label Input:
-            .atk-cell
-              input(type='text')
-          .atk-cells
-            .atk-cell
-              label Password:
-            .atk-cell
-              span.atk-input-icon
-                input(type='password')
-                a.icon-help-circled-1(href='javascript:void(0)')
-        .atk-actions
-          button.atk-button Okay
-          button.atk-button Cancel
+  .row.atk-push
+    .span_6.col
+      .atk-box
+        .atk-form.atk-form-stacked
+          form
+            .atk-form-fieldset
+              .atk-cells
+                .atk-cell
+                  label Input:
+                .atk-cell
+                  input(type='text')
+              .atk-cells
+                .atk-cell
+                  label Password:
+                .atk-cell
+                  span.atk-input-icon
+                    input(type='password')
+                    a.icon-help-circled-1(href='javascript:void(0)')
+            .atk-actions
+              button.atk-button Okay
+              button.atk-button Cancel
+    .span_6.col 
+      .atk-box
+        form
+          .atk-push-xsmall
+            label
+              strong Input:
+          .atk-push
+            input(type='text',class='atk-jackscrew')
+          .atk-push-xsmall
+            label
+              strong Password:
+          .atk-push
+            input(type='password',class='atk-jackscrew')
+          .atk-actions
+            button.atk-button Okay
+            button.atk-button Cancel
+
   p
     span.atk-label.atk-effect-info .atk-form-stacked
     | &nbsp;mixed with&nbsp;
     span.atk-label.atk-effect-info .atk-form-compact
     | .
-  .atk-box.span_6
-    .atk-form.atk-form-stacked.atk-form-compact
-      form
-        .atk-form-fieldset
-          .atk-cells
-            .atk-cell
-              label Input:
-            .atk-cell
-              input(type='text')
-          .atk-cells
-            .atk-cell
-              label Password:
-            .atk-cell
-              span.atk-input-icon
-                input(type='password')
-                a.icon-help-circled-1(href='javascript:void(0)')
-        .atk-actions
-          button.atk-button Okay
-          button.atk-button Cancel
+  .row
+    .span_6.col
+      .atk-box
+        .atk-form.atk-form-stacked.atk-form-compact
+          form
+            .atk-form-fieldset
+              .atk-cells
+                .atk-cell
+                  label Input:
+                .atk-cell
+                  input(type='text')
+              .atk-cells
+                .atk-cell
+                  label Password:
+                .atk-cell
+                  span.atk-input-icon
+                    input(type='password')
+                    a.icon-help-circled-1(href='javascript:void(0)')
+            .atk-actions
+              button.atk-button Okay
+              button.atk-button Cancel
+    .span_6.col 
+      .atk-box
+        form
+          .atk-push-xsmall
+            label
+              strong Input:
+          .atk-push-small
+            input(type='text',class='atk-jackscrew')
+          .atk-push-xsmall
+            label
+              strong Password:
+          .atk-push-small
+            input(type='password',class='atk-jackscrew')
+          .atk-actions
+            button.atk-button Okay
+            button.atk-button Cancel
   h3 Minimal Form
   p
     span.atk-label.atk-effect-info .atk-form-stacked
