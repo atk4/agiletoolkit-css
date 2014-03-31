@@ -67,17 +67,37 @@
         display: table-cell;
         vertical-align: middle;
     }
-    &.atk-cells-gutter-large>.atk-cell + .atk-cell {
-        padding-left: (2em * @baselineDestroyer);
-    }
-    &.atk-cells-gutter>.atk-cell + .atk-cell {
-        padding-left: (1em * @baselineDestroyer);
-    }
-    &.atk-cells-gutter-small>.atk-cell + .atk-cell {
-        padding-left: (0.5em * @baselineDestroyer);
-    }
     &.atk-cells-justified {
         table-layout: fixed;
+    }
+}
+.atk-cells-group {
+    display: table;
+    >.atk-cells {
+        display: table-row;
+    }
+}
+.atk-cells-table {
+    display: table;
+    .atk-cells-group {
+        display: table-row-group;
+    }
+    >.atk-cells {
+        display: table-row;
+    }
+}
+*[class*=atk-cells-gutter] {
+    &.atk-cells.atk-cells-gutter-large>.atk-cell + .atk-cell,
+    &.atk-cells-group.atk-cells-gutter-large>.atk-cells>.atk-cell + .atk-cell {
+        padding-left: (2em * @baselineDestroyer);
+    }
+    &.atk-cells.atk-cells-gutter>.atk-cell + .atk-cell,
+    &.atk-cells-group.atk-cells-gutter>.atk-cells>.atk-cell + .atk-cell {
+        padding-left: (1em * @baselineDestroyer);
+    }
+    &.atk-cells.atk-cells-gutter-small>.atk-cell + .atk-cell,
+    &.atk-cells-group.atk-cells-gutter-small>.atk-cells>.atk-cell + .atk-cell {
+        padding-left: (0.5em * @baselineDestroyer);
     }
 }
 
@@ -315,26 +335,39 @@ ul[class*=atk-menu] {
 }
 
 // Pushes
-.atk-push-small {
-    margin-bottom: round(@margin/2, 2);
-    &:last-child {
+*[class*=atk-push] {
+    &.atk-push-small {
+        margin-bottom: round(@margin/2, 2);
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.atk-push {
+        margin-bottom: @margin;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.atk-push-large {
+       margin-bottom: @margin*2;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.atk-push-reset {
         margin-bottom: 0;
     }
-}
-.atk-push {
-    margin-bottom: @margin;
-    &:last-child {
-        margin-bottom: 0;
+    .atk-cells-group>& {
+        &.atk-push-small>.atk-cell {
+            padding-bottom: round(@margin/2,2);
+        }
+        &.atk-push>.atk-cell {
+            padding-bottom: @margin;
+        }
+        &.atk-push-large>.atk-cell {
+            padding-bottom: @margin*2;
+        }
     }
-}
-.atk-push-large {
-   margin-bottom: @margin*2;
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-.atk-push-reset {
-    margin-bottom: 0;
 }
 
 // Paddings

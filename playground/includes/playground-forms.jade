@@ -5,62 +5,91 @@ section#forms
     | Basic&nbsp;
     span.atk-label.atk-effect-info .atk-form
     | &nbsp;with labels aside. No additional classes required.
-  .atk-box.span_6
-    .atk-form
-      form
-        .atk-form-fieldset
-          .atk-cells.atk-cells-gutter-large
-            .atk-cell
-              label Input:
+  .row.atk-push
+    .span_6.col
+      .atk-box
+        .atk-form
+          form
+            .atk-form-fieldset
+              .atk-cells.atk-cells-gutter-large
+                .atk-cell
+                  label Input:
+                .atk-cell.atk-jackscrew
+                  input(type='text')
+              .atk-cells.atk-cells-gutter-large
+                .atk-cell
+                  label Password:
+                .atk-cell
+                  span.atk-input-icon
+                    input(type='password')
+                    a.icon-help-circled-1(href='javascript:void(0)')
+              .atk-cells.atk-cells-gutter-large
+                .atk-cell
+                  label Dropdown:
+                .atk-cell
+                  select(name='speed')
+                    option(value='Slower') Slower
+                    option(value='Slow') Slow
+                    option(value='Medium', selected='selected') Medium Roast
+                    option(value='Fast') Fast
+                    option(value='Faster') Faster
+                    option(value='Slower') Slower
+                    option(value='Slow') Slow
+                    option(value='Medium', selected='selected') Medium Roast
+                    option(value='Fast') Fast
+                    option(value='Faster') Faster
+                    option(value='Slower') Slower
+                    option(value='Slow') Slow
+                    option(value='Medium', selected='selected') Medium Roast
+                    option(value='Fast') Fast
+                    option(value='Faster') Faster
+                    option(value='Slower') Slower
+                    option(value='Slow') Slow
+                    option(value='Medium', selected='selected') Medium Roast
+                    option(value='Fast') Fast
+                    option(value='Faster') Faster
+                    option(value='Slower') Slower
+                    option(value='Slow') Slow
+                    option(value='Medium', selected='selected') Medium Roast
+                    option(value='Fast') Fast
+                    option(value='Faster') Faster
+              .atk-cells.atk-cells-gutter-large
+                .atk-cell
+                  label Textarea:
+                .atk-cell
+                  textarea(rows='5')
+            .atk-cells.atk-cells-gutter-large
+              .atk-cell
+              .atk-cell.atk-actions
+                button.atk-button Okay
+                button.atk-button Cancel
+    .span_6.col
+      .atk-box
+        form.atk-cells-group.atk-cells-gutter-large.atk-jackscrew
+          .atk-cells.atk-push-large
+            .atk-cell.atk-text-nowrap
+              label 
+                strong Very Very Long Email:
             .atk-cell.atk-jackscrew
-              input(type='text')
-          .atk-cells.atk-cells-gutter-large
+              input(type="text",size="9")
+          .atk-cells.atk-push
+            .atk-cell.atk-text-nowrap
+              label 
+                strong Password:
+            .atk-cell.atk-jackscrew
+              input(type="password",class="atk-jackscrew")
+          .atk-cells.atk-push-small
+            .atk-cell.atk-text-nowrap
+              label 
+                strong About:
+            .atk-cell.atk-jackscrew
+              textarea(class="atk-jackscrew")
+          .atk-cells
             .atk-cell
-              label Password:
-            .atk-cell
-              span.atk-input-icon
-                input(type='password')
-                a.icon-help-circled-1(href='javascript:void(0)')
-          .atk-cells.atk-cells-gutter-large
-            .atk-cell
-              label Dropdown:
-            .atk-cell
-              select(name='speed')
-                option(value='Slower') Slower
-                option(value='Slow') Slow
-                option(value='Medium', selected='selected') Medium Roast
-                option(value='Fast') Fast
-                option(value='Faster') Faster
-                option(value='Slower') Slower
-                option(value='Slow') Slow
-                option(value='Medium', selected='selected') Medium Roast
-                option(value='Fast') Fast
-                option(value='Faster') Faster
-                option(value='Slower') Slower
-                option(value='Slow') Slow
-                option(value='Medium', selected='selected') Medium Roast
-                option(value='Fast') Fast
-                option(value='Faster') Faster
-                option(value='Slower') Slower
-                option(value='Slow') Slow
-                option(value='Medium', selected='selected') Medium Roast
-                option(value='Fast') Fast
-                option(value='Faster') Faster
-                option(value='Slower') Slower
-                option(value='Slow') Slow
-                option(value='Medium', selected='selected') Medium Roast
-                option(value='Fast') Fast
-                option(value='Faster') Faster
-          .atk-cells.atk-cells-gutter-large
-            .atk-cell
-              label Textarea:
-            .atk-cell
-              textarea(rows='5')
-        .atk-cells.atk-cells-gutter-large
-          .atk-cell
-          .atk-cell.atk-actions
-            button.atk-button Okay
-            button.atk-button Cancel
+              | 
+            .atk-cell.atk-jackscrew
+              a.atk-button(href="#") Submit
+
   p
     | Additional class&nbsp;
     span.atk-label.atk-effect-info .atk-form-compact
