@@ -5757,6 +5757,7 @@ input.ui-button {
   font-weight: bold;
   line-height: 1.618;
   padding: 0.5em 1em;
+  white-space: nowrap;
 }
 a[class*='atk-button']:hover,
 button[class*='atk-button']:hover,
