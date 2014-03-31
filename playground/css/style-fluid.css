@@ -6385,7 +6385,7 @@ a.atk-swatch-ink:hover,
 }
 .atk-swatch-yellow,
 a:link.atk-swatch-yellow {
-  color: white;
+  color: black;
 }
 .atk-swatch-yellow hr {
   border-color: #000;
@@ -6397,7 +6397,7 @@ a:link.atk-swatch-yellow {
 .atk-swatch-yellow h4,
 .atk-swatch-yellow h5,
 .atk-swatch-yellow h6 {
-  color: white;
+  color: black;
 }
 .atk-swatch-yellow[class*=icon-],
 a:link.atk-swatch-yellow[class*=icon-] {
@@ -6405,7 +6405,7 @@ a:link.atk-swatch-yellow[class*=icon-] {
   color: #ffcc00;
 }
 .atk-swatch-yellow[class*=icon-][class*=atk-shape] {
-  color: white;
+  color: black;
   background: #ffcc00;
 }
 .atk-swatch-yellow[class*=icon-]:hover {
@@ -6414,7 +6414,7 @@ a:link.atk-swatch-yellow[class*=icon-] {
 }
 a.atk-swatch-yellow:hover,
 .atk-swatch-yellow[class*=atk-button]:hover {
-  color: white;
+  color: black;
   background: #ffd11a;
 }
 .atk-swatch-yellow[class*='atk-button'],
@@ -6422,7 +6422,7 @@ a.atk-swatch-yellow:hover,
 .atk-table td.atk-swatch-yellow,
 .atk-table th.atk-swatch-yellow,
 .atk-swatch-yellow > .atk-popover-arrow:before {
-  color: white;
+  color: black;
   background: #ffcc00;
   border-color: #ffcc00;
 }
@@ -6433,7 +6433,7 @@ a.atk-swatch-yellow:hover,
   border-color: #cca300;
 }
 *[class*=atk-menu] li:hover.atk-swatch-yellow > a {
-  color: white;
+  color: black;
 }
 .atk-swatch-red {
   background: #f9451f;
