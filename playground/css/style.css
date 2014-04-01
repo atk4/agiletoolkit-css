@@ -5257,7 +5257,11 @@ textarea:focus {
   box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 10px rgba(0, 149, 255, 0.3);
   outline: none;
 }
-label em {
+label.atk-input-label {
+  display: inline-block;
+  margin: 0.5em 0;
+}
+label.atk-input-label em {
   font-style: normal;
   font-weight: normal;
 }
@@ -6077,15 +6081,19 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 .atk-align-center {
   text-align: center;
 }
+.atk-cells-group.atk-valign-top > .atk-cells > .atk-cell,
 .atk-valign-top {
   vertical-align: top !important;
 }
+.atk-cells-group.atk-valign-middle > .atk-cells > .atk-cell,
 .atk-valign-middle {
   vertical-align: middle !important;
 }
+.atk-cells-group.atk-valign-baseline > .atk-cells > .atk-cell,
 .atk-valign-baseline {
   vertical-align: baseline !important;
 }
+.atk-cells-group.atk-valign-bottom > .atk-cells > .atk-cell,
 .atk-valign-bottom {
   vertical-align: bottom !important;
 }

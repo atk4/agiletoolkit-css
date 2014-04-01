@@ -65,22 +65,23 @@ section#forms
                 button.atk-button Cancel
     .span_6.col
       .atk-box
-        form.atk-cells-group.atk-cells-gutter-large.atk-jackscrew
+        form.atk-cells-group.atk-cells-gutter-large.atk-newform.atk-valign-top
           .atk-cells.atk-push
             .atk-cell.atk-text-nowrap
-              label 
+              label.atk-input-label 
                 strong Input:
             .atk-cell.atk-jackscrew
-              input(type="text",size="9")
+              input(type="text",size="9",class="atk-push-xsmall")
+              div.atk-text-dimmed.atk-size-milli Some Text
           .atk-cells.atk-push
             .atk-cell.atk-text-nowrap
-              label 
+              label.atk-input-label 
                 strong Password:
             .atk-cell.atk-jackscrew
-              input(type="password",class="atk-jackscrew")
+              input(type="password",class="atk-jackscrew atk-push-xsmall")
           .atk-cells.atk-push
             .atk-cell.atk-text-nowrap
-              label 
+              label.atk-input-label
                 strong About:
             .atk-cell.atk-jackscrew
               textarea(class="atk-jackscrew")
@@ -119,16 +120,16 @@ section#forms
                 button.atk-button Cancel
     .span_6.col
       .atk-box
-        form.atk-cells-group.atk-cells-gutter-large.atk-jackscrew
+        form.atk-cells-group.atk-cells-gutter-large.atk-newform
           .atk-cells.atk-push-small
             .atk-cell.atk-text-nowrap
-              label 
+              label.atk-input-label
                 strong Input:
             .atk-cell.atk-jackscrew
               input(type="text",size="9")
           .atk-cells.atk-push-small
             .atk-cell.atk-text-nowrap
-              label 
+              label.atk-input-label
                 strong Password:
             .atk-cell.atk-jackscrew
               input(type="password",class="atk-jackscrew")
@@ -169,7 +170,7 @@ section#forms
               button.atk-button Cancel
     .span_6.col 
       .atk-box
-        form
+        form.atk-newform
           .atk-push-xsmall
             label
               strong Input:
@@ -212,7 +213,7 @@ section#forms
               button.atk-button Cancel
     .span_6.col 
       .atk-box
-        form
+        form.atk-newform
           .atk-push-xsmall
             label
               strong Input:
