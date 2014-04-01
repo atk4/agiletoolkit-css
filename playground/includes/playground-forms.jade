@@ -214,16 +214,19 @@ section#forms
     .span_6.col 
       .atk-box
         form.atk-newform
-          .atk-push-xsmall
-            label
-              strong Input:
           .atk-push-small
+            div.atk-push-small
+              label
+                strong Input:
             input(type='text',class='atk-jackscrew')
-          .atk-push-xsmall
-            label
-              strong Password:
-          .atk-push-small
-            input(type='password',class='atk-jackscrew')
+          .atk-push-small.atk-effect-danger
+            div.atk-push-xsmall
+              label
+                 strong Password:
+            input(type='password',class='atk-jackscrew atk-push-small')
+            p
+              span.icon-attention
+              | &nbsp;This is error
           .atk-actions
             button.atk-button Okay
             button.atk-button Cancel

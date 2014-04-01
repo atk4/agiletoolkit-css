@@ -4993,7 +4993,7 @@ body {
   height: 1px;
 }
 .atk-layout > .atk-layout-row .atk-layout-cell {
-  min-width: 960px;
+  min-width: 1000px;
 }
 .atk-layout > .atk-layout-row.atk-layout-fluid {
   height: auto;
@@ -5013,12 +5013,12 @@ body > .atk-layout {
 .atk-wrapper {
   margin-left: auto;
   margin-right: auto;
-  min-width: 800px;
-  max-width: 1600px;
+  min-width: 940px;
+  max-width: 1400px;
   width: 100%;
-  padding-left: 80px;
-  padding-right: 80px;
-  max-width: 1760px;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1460px;
 }
 html {
   font-family: "Helvetica Neue", "Helvetica", "sans-serif";
@@ -5423,7 +5423,7 @@ label.atk-input-label em {
   margin-bottom: 0;
 }
 body {
-  background: #f5f6f7;
+  background: #ffffff;
 }
 ::selection {
   background: #1c2933;
@@ -6650,49 +6650,3 @@ a.atk-swatch-blue:hover,
   color: white;
 }
 /* Use this less file if you want to customize your theme. */
-#atk-footer {
-  border-top: 1px solid #e1e1e1;
-}
-section {
-  margin-top: 4.8rem;
-}
-section h2:first-child {
-  border-bottom: 1px solid #e1e1e1;
-  color: #c8c8c8;
-  font-weight: 300;
-}
-section:first-child {
-  margin-top: 0;
-}
-#example-swatches .row + .row {
-  margin-top: 1em;
-}
-#example-effects-box .atk-box-small {
-  margin-bottom: 0;
-}
-#example-styling-shapes .atk-padding {
-  height: 100px;
-  width: 100%;
-}
-#example-styling-shapes .atk-padding.atk-shape-circle {
-  width: 100px;
-}
-#example-icons #icons-library {
-  white-space: nowrap;
-}
-#example-icons #toggler {
-  display: block;
-}
-#example-icons .i-code {
-  display: none;
-}
-#example-widgets-mediablocks img {
-  height: 100px;
-}
-#example-widgets-popover .row > .span_4 > .atk-box > *[class*=atk-popover] {
-  position: relative;
-}
-.layout-template .atk-swatch-gray:hover {
-  background: #eff1f2;
-  border-color: #eff1f2;
-}

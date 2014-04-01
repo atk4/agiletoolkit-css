@@ -5271,6 +5271,7 @@ label.atk-input-label em {
 }
 .atk-input-icon input {
   padding-right: 1.4em;
+  width: 100%;
 }
 .atk-input-icon *[class*=icon] {
   position: absolute;
@@ -6044,6 +6045,9 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 .atk-inline {
   display: inline-block;
 }
+.atk-block {
+  display: block;
+}
 .atk-jackscrew {
   width: 100%;
 }
@@ -6251,7 +6255,8 @@ img.atk-shape-circle {
   border-color: #ffffff;
 }
 .atk-swatch-white,
-a:link.atk-swatch-white {
+a:link.atk-swatch-white,
+.atk-swatch-white:visited {
   color: black;
 }
 .atk-swatch-white hr {
@@ -6307,7 +6312,8 @@ a.atk-swatch-white:hover,
   border-color: #f5f6f7;
 }
 .atk-swatch-gray,
-a:link.atk-swatch-gray {
+a:link.atk-swatch-gray,
+.atk-swatch-gray:visited {
   color: black;
 }
 .atk-swatch-gray hr {
@@ -6363,7 +6369,8 @@ a.atk-swatch-gray:hover,
   border-color: #1c2933;
 }
 .atk-swatch-ink,
-a:link.atk-swatch-ink {
+a:link.atk-swatch-ink,
+.atk-swatch-ink:visited {
   color: white;
 }
 .atk-swatch-ink hr {
@@ -6419,7 +6426,8 @@ a.atk-swatch-ink:hover,
   border-color: #ffcc00;
 }
 .atk-swatch-yellow,
-a:link.atk-swatch-yellow {
+a:link.atk-swatch-yellow,
+.atk-swatch-yellow:visited {
   color: black;
 }
 .atk-swatch-yellow hr {
@@ -6475,7 +6483,8 @@ a.atk-swatch-yellow:hover,
   border-color: #f9451f;
 }
 .atk-swatch-red,
-a:link.atk-swatch-red {
+a:link.atk-swatch-red,
+.atk-swatch-red:visited {
   color: white;
 }
 .atk-swatch-red hr {
@@ -6531,7 +6540,8 @@ a.atk-swatch-red:hover,
   border-color: #00cc66;
 }
 .atk-swatch-green,
-a:link.atk-swatch-green {
+a:link.atk-swatch-green,
+.atk-swatch-green:visited {
   color: white;
 }
 .atk-swatch-green hr {
@@ -6587,7 +6597,8 @@ a.atk-swatch-green:hover,
   border-color: #0095ff;
 }
 .atk-swatch-blue,
-a:link.atk-swatch-blue {
+a:link.atk-swatch-blue,
+.atk-swatch-blue:visited {
   color: white;
 }
 .atk-swatch-blue hr {

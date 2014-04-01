@@ -288,6 +288,9 @@ ul[class*=atk-menu] {
 .atk-inline {
     display: inline-block;
 }
+.atk-block {
+    display: block;
+}
 .atk-jackscrew {
     width: 100%;
 }
@@ -454,7 +457,7 @@ ul[class*=atk-menu] {
     .@{color} {
         background: @@color;
         border-color: @@color;
-        &, a:link& {
+        &, a:link&, &:visited {
             .colorCheck(@@color);
         }
         hr {
