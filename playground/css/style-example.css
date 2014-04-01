@@ -51,10 +51,10 @@
     ----------------------------------------------------------------------------- */
 @media screen and (min-width: 0px) {
   .row {
-    margin-left: -20px;
+    margin-left: -40px;
   }
   .col {
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
   }
   /* --- Gridpak variables ---*/
@@ -69,67 +69,67 @@
         */
   .span_1 {
     width: 8.33333333%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_2 {
     width: 16.66666667%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_3 {
     width: 25%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_4 {
     width: 33.33333333%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_5 {
     width: 41.66666667%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_6 {
     width: 50%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_7 {
     width: 58.33333333%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_8 {
     width: 66.66666667%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_9 {
     width: 75%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_10 {
     width: 83.33333333%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
   .span_11 {
     width: 91.66666667%;
-    border-left-width: 20px;
+    border-left-width: 40px;
     padding: 0 0px;
     margin-left: 0;
   }
@@ -5071,6 +5071,12 @@ h6 + .atk-form {
 }
 h5 {
   font-weight: bold;
+}
+.atk-size-yotta {
+  font-size: 3.28623771rem;
+}
+.atk-size-zetta {
+  font-size: 2.91376382rem;
 }
 .atk-size-exa {
   font-size: 2.58350744rem;
