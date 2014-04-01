@@ -540,6 +540,24 @@ ul[class*=atk-menu] {
             border-color: @color;
         }
     }
+    &.atk-effect-danger {
+        input[type="text"],
+        input[type="url"],
+        input[type="email"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="date"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="tel"],
+        textarea {
+            border-color: @effectDanger;
+        }
+    }
 }
 
 // States

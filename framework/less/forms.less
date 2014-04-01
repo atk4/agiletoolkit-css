@@ -54,7 +54,7 @@ input[type=text]:focus,
 input[type=password]:focus,
 textarea:focus {
     @shadow: 0 0 3px fadeout(@inputFocus,30%), 0 0 10px fadeout(@inputFocus,70%);
-    border-color: @inputFocus;
+    border-color: @inputFocus !important;
     .box-shadow(@shadow);
     outline: none;
 }

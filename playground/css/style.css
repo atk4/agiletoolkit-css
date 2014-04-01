@@ -5251,7 +5251,7 @@ input[type="reset"]::-moz-focus-inner {
 input[type=text]:focus,
 input[type=password]:focus,
 textarea:focus {
-  border-color: #0095ff;
+  border-color: #0095ff !important;
   -webkit-box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 10px rgba(0, 149, 255, 0.3);
   -moz-box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 10px rgba(0, 149, 255, 0.3);
   box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 10px rgba(0, 149, 255, 0.3);
@@ -6236,6 +6236,22 @@ img.atk-shape-circle {
 *[class*=atk-effect][class*=atk-box].atk-effect-info {
   background: #d5eef7;
   border-color: #d5eef7;
+}
+*[class*=atk-effect].atk-effect-danger input[type="text"],
+*[class*=atk-effect].atk-effect-danger input[type="url"],
+*[class*=atk-effect].atk-effect-danger input[type="email"],
+*[class*=atk-effect].atk-effect-danger input[type="password"],
+*[class*=atk-effect].atk-effect-danger input[type="search"],
+*[class*=atk-effect].atk-effect-danger input[type="number"],
+*[class*=atk-effect].atk-effect-danger input[type="date"],
+*[class*=atk-effect].atk-effect-danger input[type="month"],
+*[class*=atk-effect].atk-effect-danger input[type="week"],
+*[class*=atk-effect].atk-effect-danger input[type="time"],
+*[class*=atk-effect].atk-effect-danger input[type="datetime"],
+*[class*=atk-effect].atk-effect-danger input[type="datetime-local"],
+*[class*=atk-effect].atk-effect-danger input[type="tel"],
+*[class*=atk-effect].atk-effect-danger textarea {
+  border-color: #ff2d1a;
 }
 .atk-disabled {
   opacity: 0.5;
