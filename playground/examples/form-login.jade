@@ -4,57 +4,43 @@ doctype html
 <!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 html(class='no-js')
-	<!--<![endif]-->
-	head
-		meta(charset='utf-8')
-		<!--[if IE]><!-->
-		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-		meta(name="viewport",content="width=device-width, initial-scale=1")
-		<!--[endif]-->
-		title Agile Toolkit CSS
-		meta(name='description', content='')
-		link(rel='stylesheet', href='../css/style-example-login.css')
-	body
-		include ../includes/browsehappy
-		include ../includes/analytics
-		.atk-layout
-			.atk-layout-row.atk-layout-fluid
-				.atk-layout.atk-layout-cell
-					.atk-layout-column.atk-layout-fluid.atk-valign-middle
-						.atk-wrapper.atk-padding-small
-							.atk-box
-								.atk-push.atk-align-center
-									a.atk-text-reset(href='javascript:void(0)')
-										img(src='../images/logo-gray.svg', title='Agile Toolkit', width='96')
-								.atk-form.atk-form-stacked.atk-form-compact
-									form
-										.atk-form-fieldset.atk-push-small
-											.atk-cells
-												.atk-cell
-												.atk-cell
-													input(type='text', placeholder='E-mail')
-											.atk-cells
-												.atk-cell
-												.atk-cell
-													span.atk-input-icon
-														input(type='password', placeholder='Password')
-														a.icon-help-circled-1(href='javascript:void(0)')
-										.atk-cells.atk-cells-gutter
-											.atk-cell
-												.atk-input-radio
-													span.atk-text-dimmed
-														input#remember(type='checkbox')
-														label(for='remember') Remember me
-											.atk-cell.atk-align-right
-												button.atk-button.atk-jackscrew.atk-swatch-green Sign In
-								hr
-								.atk-push-small
-									a.atk-button.atk-jackscrew.atk-align-center.atk-swatch-facebook(href='#')
-										span.icon-facebook
-										| &nbsp;Sign in with Facebook
-								a.atk-button.atk-jackscrew.atk-align-center.atk-swatch-twitter(href='#')
-									span.icon-twitter
-									| &nbsp;Sign in with Twitter
-							.atk-align-center
-								a.atk-text-dimmed(href='#') Don't have an acccount?
+  <!--<![endif]-->
+  head
+    meta(charset='utf-8')
+    <!--[if IE]><!-->
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name="viewport",content="width=device-width, initial-scale=1")
+    <!--[endif]-->
+    title Agile Toolkit CSS
+    meta(name='description', content='')
+    link(rel='stylesheet', href='../css/style-example-login.css')
+  body
+    include ../includes/browsehappy
+    include ../includes/analytics
+    .atk-layout
+      .atk-layout-row.atk-layout-fluid
+        .atk-layout.atk-layout-cell
+          .atk-layout-column.atk-layout-fluid.atk-valign-middle
+            .atk-wrapper.atk-padding-small
+              .atk-box
+                .atk-push.atk-align-center
+                  a.atk-text-reset.atk-push.atk-block(href='javascript:void(0)')
+                    img(src='../images/logo-gray.svg', title='Agile Toolkit', width='96')
+                  form
+                    .atk-push-xsmall
+                      input(type='text',class='atk-jackscrew', placeholder='Username')
+                    .atk-push-xsmall
+                      input(type='password',class='atk-jackscrew', placeholder='Password')
+                    .atk-actions
+                      button.atk-button.atk-jackscrew.atk-swatch-green Sign In
+                hr
+                .atk-push-small
+                  a.atk-button.atk-jackscrew.atk-align-center.atk-swatch-facebook(href='#')
+                    span.icon-facebook
+                    | &nbsp;Sign in with Facebook
+                a.atk-button.atk-jackscrew.atk-align-center.atk-swatch-twitter(href='#')
+                  span.icon-twitter
+                  | &nbsp;Sign in with Twitter
+              .atk-align-center
+                a.atk-text-dimmed(href='#') Don't have an acccount?
 
