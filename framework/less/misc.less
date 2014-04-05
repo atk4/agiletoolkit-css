@@ -85,15 +85,7 @@ a {
       }
   }
 }
-*[class*=icon] {
-  &:first-child{
-    &:before {
-      margin-left: 0;
-    }
-  }
-  &:last-child {
-    &:before {
-      margin-right: 0;
-    }
-  }  
+*[class*=icon]:before {
+  margin-left: 0;
+  margin-right: 0; 
 }

@@ -5310,10 +5310,8 @@ a:focus {
 .row:after {
   clear: both;
 }
-*[class*=icon]:first-child:before {
+*[class*=icon]:before {
   margin-left: 0;
-}
-*[class*=icon]:last-child:before {
   margin-right: 0;
 }
 .atk-bar.atk-cells {
@@ -5526,29 +5524,24 @@ a:focus {
   margin-left: -7.07px;
   right: auto;
 }
-.atk-loader {
-  color: white;
+.atk-banner {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  z-index: 999;
   height: 100%;
   width: 100%;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
-.atk-loader .atk-loader-align {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-.atk-loader .atk-loader-cogs {
+.atk-banner .atk-box {
   background: rgba(0, 0, 0, 0.25);
   border: none;
-  display: inline-block;
-  line-height: 1;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
 }
-.atk-loader .atk-loader-cogs:after,
-.atk-loader .atk-loader-cogs:before {
+.atk-banner .atk-box.atk-banner-cogs {
+  line-height: 1;
+}
+.atk-banner .atk-box.atk-banner-cogs:after,
+.atk-banner .atk-box.atk-banner-cogs:before {
   content: '\ea8a';
   display: inline-block;
   font-family: fontello;
@@ -5558,7 +5551,7 @@ a:focus {
   position: relative;
   width: 1em;
 }
-.atk-loader .atk-loader-cogs:after {
+.atk-banner .atk-box.atk-banner-cogs:after {
   -webkit-animation: spin 2300ms linear infinite;
   -moz-animation: spin 2300ms linear infinite;
   -ms-animation: spin 2300ms linear infinite;
@@ -5567,14 +5560,28 @@ a:focus {
   top: -0.53em;
   margin-left: -0.19em;
 }
-.atk-loader .atk-loader-cogs:before {
+.atk-banner .atk-box.atk-banner-cogs:before {
   -webkit-animation: spin2 2300ms linear infinite;
   -moz-animation: spin2 2300ms linear infinite;
   -ms-animation: spin2 2300ms linear infinite;
   -o-animation: spin2 2300ms linear infinite;
   animation: spin2 2300ms linear infinite;
 }
-.atk-loader.atk-visible {
+.atk-banner,
+.atk-banner h1,
+.atk-banner h2,
+.atk-banner h3,
+.atk-banner h4,
+.atk-banner h5,
+.atk-banner h6 {
+  color: white;
+  margin-top: 0;
+}
+.atk-banner,
+.atk-banner.atk-cells {
+  display: none;
+}
+.atk-banner.atk-cells.atk-visible {
   display: table;
 }
 @-ms-keyframes spin {
@@ -5654,6 +5661,9 @@ a:hover.atk-text-dimmed {
 .atk-text-reset {
   font-size: 0;
   line-height: 0;
+}
+.atk-text-baseline-reset {
+  line-height: 1;
 }
 .atk-text-ellipsis {
   display: inline-block;

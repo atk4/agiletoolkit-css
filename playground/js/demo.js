@@ -86,10 +86,28 @@ $(function(){
     });
 
     // Loader
-    $('#example-loader').click(function(){
+    var bannerLoader;
+    $('#banner-loader-start').click(function(){
+      if ( bannerLoader != "open" ) {
+        $('#banner-loader').addClass('atk-visible');
+        bannerLoader = "open";
+      }
+    });
+    $('#banner-loader').click(function(){
+      $('#banner-loader').removeClass('atk-visible');
+      bannerLoader = "close";
+    });
 
-      $('.atk-loader').addClass('atk-visible');
-
+    var bannerNotification;
+    $('#banner-notification-start').click(function(){
+      if ( bannerNotification != "open" ) {
+        $('#banner-notification').addClass('atk-visible');
+        bannerNotification = "open";
+      }
+    });
+    $('#banner-notification').click(function(){
+        $('#banner-notification').removeClass('atk-visible');
+        bannerNotification = "close";
     });
 
 });

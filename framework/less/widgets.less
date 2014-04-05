@@ -221,51 +221,51 @@
     }
 }
 
-// Loader
-.loaderColor (@a) when (lightness(@a) >= @swatchText) {
+// Banner
+.overlayColor (@a) when (lightness(@a) >= @swatchText) {
   color: black;
 }
-.loaderColor (@a) when (lightness(@a) < @swatchText) {
+.overlayColor (@a) when (lightness(@a) < @swatchText) {
   color: white;
 }
-.atk-loader {
-    .loaderColor(@dialogOverlay);
-    .position(fixed, @t:0, @l:0);
-    display: none;
+.atk-banner {
+    .position(fixed, @t:0, @l:0, @z:999);
     height: 100%;
-    // pointer-events: none;
     width: 100%;
-    .atk-loader-align {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-    }
-    .atk-loader-cogs {
+    text-shadow: 0 0 1px fade(@dialogOverlay, 50%);
+    .atk-box {
         background: @dialogOverlay;
         border: none;
-        display: inline-block;
-        line-height: 1;
-        text-shadow: 0 0 1px fade(@dialogOverlay, 40%);
-        &:after, &:before {
-            content: '\ea8a';
-            display: inline-block;
-            font-family: fontello;
-            height: 1em;
+        &.atk-banner-cogs {
             line-height: 1;
-            margin-top: 0.53em;
-            position: relative;
-            width: 1em;
-        }
-        &:after {
-            .animation(spin 2300ms linear infinite);
-            top: -0.53em;
-            margin-left: -0.19em;
-        }
-        &:before {
-            .animation(spin2 2300ms linear infinite);
+            &:after, &:before {
+                content: '\ea8a';
+                display: inline-block;
+                font-family: fontello;
+                height: 1em;
+                line-height: 1;
+                margin-top: 0.53em;
+                position: relative;
+                width: 1em;
+            }
+            &:after {
+                .animation(spin 2300ms linear infinite);
+                top: -0.53em;
+                margin-left: -0.19em;
+            }
+            &:before {
+                .animation(spin2 2300ms linear infinite);
+            }
         }
     }
-    &.atk-visible {
+    &, h1, h2, h3, h4, h5, h6 {
+        .overlayColor(@dialogOverlay);
+        margin-top: 0;
+    }
+    &, &.atk-cells {
+        display: none;
+    }
+    &.atk-cells.atk-visible {
         display: table;
     }
 }

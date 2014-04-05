@@ -612,6 +612,17 @@ section#widgets
             | .atk-popover-bottom-right
             .atk-popover-arrow
 
-  h3 Loader
-  .atk-box.atk-inline
-    button.atk-button#example-loader Start Loader
+  h3 Banners
+  p
+    span.atk-label.atk-effect-info .atk-banner
+  .atk-box.atk-actions.atk-inline
+    button.atk-button#banner-loader-start Show Loader
+    button.atk-button#banner-notification-start Show Notification
+  .atk-banner.atk-cells#banner-loader
+    .atk-cell.atk-align-center.atk-valign-middle
+      .atk-box.atk-inline.atk-size-zetta.atk-banner-cogs
+  .atk-banner.atk-cells#banner-notification
+    .atk-cell.atk-align-center.atk-valign-middle
+      .atk-box.atk-inline(style="width:180px")
+        .icon-mail-1.atk-size-yotta.atk-push-small.atk-text-baseline-reset
+        h5 Verification link sent to your email
