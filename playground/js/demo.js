@@ -85,4 +85,11 @@ $(function(){
 
     });
 
+    // Loader
+    $('#example-loader').click(function(){
+
+      $('.atk-loader').addClass('atk-visible');
+
+    });
+
 });
