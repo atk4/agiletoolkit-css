@@ -2,6 +2,8 @@
 // Layouts
 // ==========================================================
 
+@windowMinWidth: @siteMinWidth + @siteMargin*2;
+
 // Flexible Layout (credit: Pixel vs. Bytes)
 .siteMargins(@a) when not (ispercentage(@a)) {
 	padding-left: (@windowMinWidth - @siteMinWidth)/2;

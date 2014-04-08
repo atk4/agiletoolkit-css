@@ -229,7 +229,6 @@ ul[class*=atk-menu] {
     &.atk-menu-horizontal {
         >li {
             >a {
-                text-align: center;
                 *[class*='icon']:before {
                     margin: 0;
                 }
@@ -345,35 +344,61 @@ ul[class*=atk-menu] {
 }
 
 // Pushes
-*[class*=atk-push]:not(:last-child) {
+*[class*=atk-push] {
     &.atk-push-xsmall {
-        margin-bottom: round(@margin/3, 2);
+        @m: round(@margin/3, 2);
+        margin-bottom: @m;
+        .atk-cells-group>&>.atk-cell {
+            padding-bottom: @m;
+        }
+        &.atk-row {
+            margin-bottom: -@m;
+            >*[class*=atk-col] {
+                margin-bottom: @m;
+            }
+        }
     }
     &.atk-push-small {
-        margin-bottom: round(@margin/2, 2);
+        @m: round(@margin/2, 2);
+        margin-bottom: @m;
+        .atk-cells-group>&>.atk-cell {
+            padding-bottom: @m;
+        }
+        &.atk-row {
+            margin-bottom: -@m;
+            >*[class*=atk-col] {
+                margin-bottom: @m
+            }
+        }
     }
     &.atk-push {
-        margin-bottom: @margin;
+        @m: @margin;
+        margin-bottom: @m;
+        .atk-cells-group>&>.atk-cell {
+            padding-bottom: @m;
+        }
+        &.atk-row {
+            margin-bottom: -@m;
+            >*[class*=atk-col] {
+                margin-bottom: @m;
+            }
+        }
     }
     &.atk-push-large {
-       margin-bottom: @margin*2;
+        @m: @margin*2;
+        margin-bottom: @m; 
+        .atk-cells-group>&>.atk-cell {
+           padding-bottom: @m;
+        }
+        &.atk-row {
+            margin-bottom: -@m;
+            >*[class*=atk-col] {
+                margin-bottom: @m;
+            }
+        }
     }
     &.atk-push-reset {
         margin-bottom: 0;
-    }
-    .atk-cells-group>& {
-        &.atk-push-xsmall>.atk-cell {
-            padding-bottom: round(@margin/3,2);
-        }
-        &.atk-push-small>.atk-cell {
-            padding-bottom: round(@margin/2,2);
-        }
-        &.atk-push>.atk-cell {
-            padding-bottom: @margin;
-        }
-        &.atk-push-large>.atk-cell {
-            padding-bottom: @margin*2;
-        }
     }
 }
 

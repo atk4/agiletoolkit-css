@@ -1,0 +1,95 @@
+// ==========================================================
+// New Grid System
+// ==========================================================
+
+.atk-row {
+  .clear-fix;
+  >*[class*=atk-col] {
+    float: left;
+  }
+}
+
+// Grid System Loop
+.generate-columns(@n, @i: 1, @m) when (@i =< @n) {
+
+  // Percentage Column Gutter
+  & when (ispercentage(@m)) {
+    .atk-col-@{i} {
+      @colsSingleWidth: (100% - @m * (@n - 1)) / @n;
+      @colsInnerGutter: @m * (@i - 1);
+      // width: (@colsSingleWidth * @i) + (@i * @m);
+      width: @colsSingleWidth * @i + @colsInnerGutter;
+      &.atk-col-@{n} {
+        width: 100%;
+      }
+    }
+  }
+
+  // Pixel/EM Column Gutter
+  & when not (ispercentage(@m)) {
+    *[class*=atk-col] {
+      border:0px solid rgba(0,0,0,0);
+      border-left-width: @m;
+      width: 100%;
+    }
+    .atk-col-@{i} {
+      &, &[class*=atk-col] {
+        width: (@i * 100% / @n);
+      }
+    }
+  }
+  .generate-columns(@n, @i:@i + 1, @m);
+}
+
+
+// Grid System Generator
+
+.createBreakPoint(@min, @max, @cols, @colsGutter, @breakLayout:false) {
+  @media screen and(min-width: @min) and (max-width: @max) {
+    .generate-columns(@n:@cols,@m:@colsGutter);
+    .atk-row {
+      & when (ispercentage(@colsGutter)) {
+        >*[class*=atk-col] + *[class*=atk-col] {
+          margin-left: @colsGutter;
+        }
+      }
+      & when not (ispercentage(@colsGutter)) {
+        margin-left: -@colsGutter;
+        >*[class*=atk-col] {
+          border-left-width: @colsGutter;
+        }
+      }
+    }
+    & when (@breakLayout = true) {
+      .atk-layout {
+        &, >.atk-layout-column, .atk-layout-cell, .atk-layout-row {
+          display: block;
+        }
+        .atk-layout-row {
+          height: auto;
+        }
+      }
+      *[class*=atk-menu] {
+        >li {
+          >*[class*=atk-menu] {
+            bottom: 0 !important;
+            left: 0 !important;
+            position: relative !important;
+            right: 0 !important;
+            top: 0 !important;
+            &.atk-menu-horizontal>li {
+              display: block;
+              float: none;
+            }
+          }
+          &:hover>*[class*=atk-menu] {
+            display: none !important;
+          }
+          &:focus {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}
