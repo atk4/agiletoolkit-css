@@ -4707,9 +4707,6 @@ body > .atk-layout {
   /* NOTE Speed up table rendering */
 }
 .atk-wrapper {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -6122,7 +6119,7 @@ img.atk-shape-circle {
 /* Helpers, Colors, Boxes, Buttons etc. */
 @media screen and (min-width: 1025px) {
   .atk-layout > .atk-layout-row > .atk-layout-cell {
-    min-width: 1200px;
+    min-width: 1280px;
   }
   .atk-wrapper {
     min-width: 1200px;
@@ -6193,7 +6190,7 @@ img.atk-shape-circle {
 }
 @media screen and (max-width: 1024px) {
   .atk-layout > .atk-layout-row > .atk-layout-cell {
-    min-width: 800px;
+    min-width: 860px;
   }
   .atk-wrapper {
     min-width: 800px;
@@ -6264,13 +6261,14 @@ img.atk-shape-circle {
 }
 @media screen and (max-width: 768px) {
   .atk-layout > .atk-layout-row > .atk-layout-cell {
-    min-width: 100%;
+    min-width: 40px;
   }
   .atk-wrapper {
     min-width: 0;
-    padding-left: 0;
-    padding-right: 0;
     max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 140%;
   }
   .atk-row {
     margin-left: -20px;
@@ -6336,13 +6334,14 @@ img.atk-shape-circle {
 }
 @media screen and (max-width: 479px) {
   .atk-layout > .atk-layout-row > .atk-layout-cell {
-    min-width: 100%;
+    min-width: 40px;
   }
   .atk-wrapper {
     min-width: 0;
-    padding-left: 0;
-    padding-right: 0;
     max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 140%;
   }
   .atk-row {
     margin-left: -20px;
