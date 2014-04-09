@@ -2,13 +2,33 @@
 // Layout
 // ==========================================================
 
-@siteMinWidth:         800px; // Side paddings are dropped if value is in percentages
-@siteMaxWidth:         1600px; // Put the same value as in @siteMinWidth if fixed layout is required
-@siteMargin:           80px; // Margin between site's content and browser's edge
 
-.createBreakPoint(@min:0, @max:479px, @cols:3, @colsGutter: 20px,  @breakLayout:true);
-.createBreakPoint(@min:480px, @max:768px, @cols:6, @colsGutter: 30px, @breakLayout:true);
-.createBreakPoint(@min:769px, @max:10000px, @cols:12, @colsGutter: 2%);
+// @siteMinWidth:         800px; // Side paddings are dropped if value is in percentages
+// @siteMaxWidth:         1600px; // Put the same value as in @siteMinWidth if fixed layout is required
+// @siteMargin:           80px; // Margin between site's content and browser's edge
+
+
+// Important: list .createViewport functions in the right order based on @min and @max values otherwise styles get overridden
+.createViewport(
+	@class: 'desktop-large',
+	@min: 1025px,
+	@cols:12,
+	@colsGutter: 40px,
+	@siteMinWidth: 1200px,
+	@siteMaxWidth: 1200px,
+	@siteMargin: 40px
+);
+.createViewport(
+	@class: 'desktop',
+	@max: 1024px,
+	@cols:12,
+	@colsGutter: 30px,
+	@siteMinWidth: 900px,
+	@siteMaxWidth: 900px,
+	@siteMargin: 30px
+);
+.createViewport(@class: 'tablet', @max:768px, @cols:6, @colsGutter: 20px, @breakLayout:true);	
+.createViewport(@class: 'mobile', @max:479px, @cols:3, @colsGutter: 20px,  @breakLayout:true);
 
 
 // ==========================================================

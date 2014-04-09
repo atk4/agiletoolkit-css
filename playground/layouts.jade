@@ -36,7 +36,7 @@ html(class='no-js')
                         a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/fixed.html')
                           span.atk-box-small.atk-move-center.atk-push-small.atk-swatch-ink(style='width: 150px;')
                           span.atk-box.atk-move-center.atk-push-small(style='width: 150px;')
-                          span.atk-box-small.atk-move-center.atk-push-small(style='width: 150px;')
+                          span.atk-box-small.atk-move-center(style='width: 150px;')
                         .atk-align-center.atk-size-kilo
                           a(href='layouts/fixed.html') Fixed
                     .span_4.col
@@ -45,10 +45,10 @@ html(class='no-js')
                           span.atk-box-small.atk-move-center.atk-push-small.atk-swatch-ink(style='width: 150px;')
                           span.atk-move-center.atk-cells.atk-cells-gutter-small.atk-push-small(style='width: 150px;')
                             span.atk-cell.atk-jackscrew
-                              span.atk-box.atk-move-center.atk-push-small
+                              span.atk-box.atk-move-center
                             span.atk-cell
-                              span.atk-box.atk-move-center.atk-push-small
-                          span.atk-box-small.atk-move-center.atk-push-small(style='width: 150px;')
+                              span.atk-box.atk-move-center
+                          span.atk-box-small.atk-move-center(style='width: 150px;')
                         .atk-align-center.atk-size-kilo
                           a(href='layouts/fixed-multicol.html') Fixed Multi-Column
                     .span_4.col
@@ -56,7 +56,7 @@ html(class='no-js')
                         a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/hybrid.html')
                           span.atk-box-small.atk-move-center.atk-push-small.atk-swatch-ink(style='min-width: 150px; max-width: 250px; width: auto;')
                           span.atk-box.atk-move-center.atk-push-small(style='min-width: 150px; max-width: 250px;')
-                          span.atk-box-small.atk-move-center.atk-push-small(style='min-width: 150px; max-width: 250px;')
+                          span.atk-box-small.atk-move-center(style='min-width: 150px; max-width: 250px;')
                         .atk-align-center.atk-size-kilo
                           a(href='layouts/hybrid.html') Hybrid
                   .row
@@ -66,28 +66,29 @@ html(class='no-js')
                           span.atk-box-small.atk-move-center.atk-push-small.atk-swatch-ink
                           span.atk-cells.atk-cells-gutter-small.atk-push-small
                             span.atk-cell
-                              span.atk-box.atk-move-center.atk-push-small
+                              span.atk-box.atk-move-center
                             span.atk-cell.atk-jackscrew
-                              span.atk-box.atk-move-center.atk-push-small
+                              span.atk-box.atk-move-center
                             span.atk-cell
-                              span.atk-box.atk-move-center.atk-push-small
-                          span.atk-box-small.atk-move-center.atk-push-small
+                              span.atk-box.atk-move-center
+                          span.atk-box-small.atk-move-center
                         .atk-align-center.atk-size-kilo
                           a(href='layouts/fluid.html') Fluid
                     .span_4.col
                       .atk-box-small.layout-template
                         a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/centered.html')
-                          span.atk-cells.atk-push-small
-                            span.atk-cell.atk-align-center.atk-valign-middle.atk-text-reset(style='height: 139px;')
+                          span.atk-cells
+                            span.atk-cell.atk-align-center.atk-valign-middle.atk-text-reset(style='height: 134px;')
                               span.atk-box.atk-inline
                         .atk-align-center.atk-size-kilo
                           a(href='layouts/centered.html') Centered
                     .span_4.col
                       .atk-box-small.layout-template
                         a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/responsive.html')
-                          span.atk-cells.atk-push-small
-                            span.atk-cell.atk-align-center.atk-valign-middle.atk-text-reset(style='height: 139px;')
-                              span.atk-box.atk-inline
+                          span.atk-cells
+                            .atk-cell.atk-actions.atk-valign-middle.atk-align-center.atk-text-baseline-reset(style="height:134px")
+                                span.icon-tablet.atk-size-yotta.atk-swatch-ink
+                                span.icon-laptop.atk-size-yotta.atk-swatch-ink
                         .atk-align-center.atk-size-kilo
                           a(href='layouts/responsive.html') Responsive
     include includes/scripts

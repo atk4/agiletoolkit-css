@@ -10,8 +10,7 @@
 }
 
 // Grid System Loop
-.generate-columns(@n, @i: 1, @m) when (@i =< @n) {
-
+.generateColumns(@n, @i: 1, @m) when (@i =< @n) {
   // Percentage Column Gutter
   & when (ispercentage(@m)) {
     .atk-col-@{i} {
@@ -24,72 +23,104 @@
       }
     }
   }
-
   // Pixel/EM Column Gutter
   & when not (ispercentage(@m)) {
-    *[class*=atk-col] {
-      border:0px solid rgba(0,0,0,0);
-      border-left-width: @m;
-      width: 100%;
-    }
     .atk-col-@{i} {
       &, &[class*=atk-col] {
         width: (@i * 100% / @n);
       }
     }
   }
-  .generate-columns(@n, @i:@i + 1, @m);
+  .generateColumns(@n, @i:@i + 1, @m);
 }
 
-
-// Grid System Generator
-
-.createBreakPoint(@min, @max, @cols, @colsGutter, @breakLayout:false) {
-  @media screen and(min-width: @min) and (max-width: @max) {
-    .generate-columns(@n:@cols,@m:@colsGutter);
-    .atk-row {
-      & when (ispercentage(@colsGutter)) {
-        >*[class*=atk-col] + *[class*=atk-col] {
-          margin-left: @colsGutter;
-        }
+// Viewport Features
+.viewportFeatures(@c, @g, @b, @smax, @smin, @sm) {
+  @wmin: @smin + @sm*2;
+  .siteMargins(@a) when not (ispercentage(@a)) {
+   padding-left: (@wmin - @smin)/2;
+   padding-right: (@wmin - @smin)/2;
+   max-width: @smax + (@wmin - @smin);
+  }
+  .atk-layout>.atk-layout-row>.atk-layout-cell {
+    min-width: @smax;
+  }
+  .atk-wrapper {
+      min-width: @smin;
+      max-width: @smax;
+      .siteMargins(@smin);
+  }
+  .atk-row {
+    & when (ispercentage(@g)) {
+      >*[class*=atk-col] + *[class*=atk-col] {
+        margin-left: @g;
       }
-      & when not (ispercentage(@colsGutter)) {
-        margin-left: -@colsGutter;
-        >*[class*=atk-col] {
-          border-left-width: @colsGutter;
+    }
+    & when not (ispercentage(@g)) {
+      margin-left: -@g;
+      >*[class*=atk-col] {
+        border:0px solid rgba(0,0,0,0);
+        border-left-width: @g;
+        width: 100%;
+      }
+    }
+  }
+  & when (isstring(@c)) {
+    .atk-hide-@{c} {
+      display: none;
+    }
+  }
+  & when (@b = true) {
+    .atk-layout {
+      &, >.atk-layout-column, .atk-layout-cell, .atk-layout-row {
+        display: block;
+      }
+      .atk-layout-row {
+        height: auto;
+      }
+    }
+    *[class*=atk-menu] {
+      >li {
+        >*[class*=atk-menu] {
+          bottom: 0 !important;
+          left: 0 !important;
+          position: relative !important;
+          right: 0 !important;
+          top: 0 !important;
+          &.atk-menu-horizontal>li {
+            display: block;
+            float: none;
+          }
+        }
+        &:hover>*[class*=atk-menu] {
+          display: none !important;
+        }
+        &:focus {
+          display: none !important;
         }
       }
     }
-    & when (@breakLayout = true) {
-      .atk-layout {
-        &, >.atk-layout-column, .atk-layout-cell, .atk-layout-row {
-          display: block;
-        }
-        .atk-layout-row {
-          height: auto;
-        }
-      }
-      *[class*=atk-menu] {
-        >li {
-          >*[class*=atk-menu] {
-            bottom: 0 !important;
-            left: 0 !important;
-            position: relative !important;
-            right: 0 !important;
-            top: 0 !important;
-            &.atk-menu-horizontal>li {
-              display: block;
-              float: none;
-            }
-          }
-          &:hover>*[class*=atk-menu] {
-            display: none !important;
-          }
-          &:focus {
-            display: none !important;
-          }
-        }
-      }
+  }
+}
+
+// Grid System Generator
+.createViewport(@class:false, @min:false, @max:false, @cols, @colsGutter, @breakLayout:false, @siteMinWidth:0, @siteMaxWidth:100%, @siteMargin:0) {
+  & when (isnumber(@min)) and (isnumber(@max)) {
+    @media screen and (min-width: @min) and (max-width: @max) {
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@breakLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+      .generateColumns(@n:@cols,@m:@colsGutter);
+    }
+  }
+  & when (isnumber(@min)) and (@max = false) {
+    @media screen and (min-width: @min) {
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@breakLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+      .generateColumns(@n:@cols,@m:@colsGutter);
+    }
+  }
+  & when (isnumber(@max)) and (@min = false) {
+    @media screen and (max-width: @max) {
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@breakLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+      .generateColumns(@n:@cols,@m:@colsGutter);
     }
   }
 }
