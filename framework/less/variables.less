@@ -10,13 +10,7 @@
 
 // Important: list .createViewport functions in the right order based on @min and @max values otherwise styles get overridden
 .createViewport(
-	@class: 'desktop-large',
-	@viewportMinWidth: 0,
-	@cols:12,
-	@colsGutter: 40px,
-	@wrapperMinWidth: 600px,
-	@wrapperMargin: 50px,
-	@windowMinWidth: 1000px
+	@wrapperMargin:   @margin
 );
 // .createViewport(
 // 	@class: 'desktop',
@@ -27,8 +21,8 @@
 // 	@wrapperMaxWidth: 800px,
 // 	@wrapperMargin: 30px
 // );
-// .createViewport(@class: 'tablet', @max:768px, @cols:6, @colsGutter: 20px, @stackLayout:true, @wrapperMargin: 20px);	
-// .createViewport(@class: 'mobile', @max:479px, @cols:3, @colsGutter: 20px,  @stackLayout:true, @wrapperMargin: 20px);
+.createViewport(@class: 'tablet', @viewportMaxWidth:768px, @cols:6, @colsGutter: 30px, @stackLayout:true, @wrapperMargin: 20px);
+.createViewport(@class: 'mobile', @viewportMaxWidth:479px, @cols:3, @colsGutter: 20px,  @stackLayout:true, @wrapperMargin: 20px);
 
 
 // ==========================================================
@@ -72,7 +66,7 @@
 @atk-swatch-red:	   #f9451f;		.createSwatch(atk-swatch-red);
 @atk-swatch-green:     #00cc66;		.createSwatch(atk-swatch-green);
 @atk-swatch-blue:      #0095ff;		.createSwatch(atk-swatch-blue);
-@swatchText:           50%; // Text color sensitivity based on swatch
+@swatchText:           65%; // Text color sensitivity based on swatch
 
 @effectSuccess:        #25c425;
 @effectWarning:        #f7a600;

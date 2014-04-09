@@ -42,6 +42,9 @@
       min-width: @w;
     }
   }
+  & when (@winmin = false) {
+    .layoutCell(100%);
+  }
   & when (isunit(@wm,'px')) and (isunit(@wmin,'px')), (isunit(@wm,'em')) and (isunit(@wmin,'em')), (isunit(@wm,'%')) and (isunit(@wmin,'%')) {
     .atk-wrapper {
       .box-sizing(content-box);
@@ -116,7 +119,7 @@
 }
 
 // Grid System Generator
-.createViewport(@class:false, @viewportMinWidth:false, @viewportMaxWidth:false, @cols:12, @colsGutter:20px, @stackLayout:false, @wrapperMinWidth:0, @wrapperMaxWidth:100%, @wrapperMargin:0, @windowMinWidth:false) {
+.createViewport(@class:false, @viewportMinWidth:0, @viewportMaxWidth:false, @cols:12, @colsGutter:20px, @stackLayout:false, @wrapperMinWidth:0, @wrapperMaxWidth:100%, @wrapperMargin:0, @windowMinWidth:false) {
   & when (isnumber(@viewportMinWidth)) and (isnumber(@viewportMaxWidth)) {
     @media screen and (min-width: @viewportMinWidth) and (max-width: @viewportMaxWidth) {
       .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @wmin:@wrapperMinWidth, @wmax:@wrapperMaxWidth, @wm:@wrapperMargin, @winmin:@windowMinWidth);

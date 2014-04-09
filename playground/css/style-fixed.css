@@ -6120,30 +6120,22 @@ img.atk-shape-circle {
 }
 /* Helpers, Colors, Boxes, Buttons etc. */
 @media screen and (min-width: 0) {
-  .atk-wrapper {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-  }
   .atk-layout > .atk-layout-row > .atk-layout-cell {
-    min-width: 1000px;
+    min-width: 100%;
   }
   .atk-wrapper {
-    min-width: 600px;
+    min-width: 0;
     max-width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
   .atk-row {
-    margin-left: -40px;
+    margin-left: -20px;
   }
   .atk-row > *[class*=atk-col] {
     border: 0px solid rgba(0, 0, 0, 0);
-    border-left-width: 40px;
+    border-left-width: 20px;
     width: 100%;
-  }
-  .atk-hide-'desktop-large' {
-    display: none;
   }
   .atk-col-1,
   .atk-col-1[class*=atk-col] {
@@ -6191,6 +6183,138 @@ img.atk-shape-circle {
   }
   .atk-col-12,
   .atk-col-12[class*=atk-col] {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 768px) {
+  .atk-layout > .atk-layout-row > .atk-layout-cell {
+    min-width: 100%;
+  }
+  .atk-wrapper {
+    min-width: 0;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .atk-row {
+    margin-left: -30px;
+  }
+  .atk-row > *[class*=atk-col] {
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-left-width: 30px;
+    width: 100%;
+  }
+  .atk-hide-'tablet' {
+    display: none;
+  }
+  .atk-layout,
+  .atk-layout > .atk-layout-column,
+  .atk-layout .atk-layout-cell,
+  .atk-layout .atk-layout-row {
+    display: block;
+  }
+  .atk-layout .atk-layout-row {
+    height: auto;
+  }
+  *[class*=atk-menu] > li > *[class*=atk-menu] {
+    bottom: 0 !important;
+    left: 0 !important;
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+  }
+  *[class*=atk-menu] > li > *[class*=atk-menu].atk-menu-horizontal > li {
+    display: block;
+    float: none;
+  }
+  *[class*=atk-menu] > li:hover > *[class*=atk-menu] {
+    display: none !important;
+  }
+  *[class*=atk-menu] > li:focus {
+    display: none !important;
+  }
+  .atk-col-1,
+  .atk-col-1[class*=atk-col] {
+    width: 16.66666667%;
+  }
+  .atk-col-2,
+  .atk-col-2[class*=atk-col] {
+    width: 33.33333333%;
+  }
+  .atk-col-3,
+  .atk-col-3[class*=atk-col] {
+    width: 50%;
+  }
+  .atk-col-4,
+  .atk-col-4[class*=atk-col] {
+    width: 66.66666667%;
+  }
+  .atk-col-5,
+  .atk-col-5[class*=atk-col] {
+    width: 83.33333333%;
+  }
+  .atk-col-6,
+  .atk-col-6[class*=atk-col] {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 479px) {
+  .atk-layout > .atk-layout-row > .atk-layout-cell {
+    min-width: 100%;
+  }
+  .atk-wrapper {
+    min-width: 0;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .atk-row {
+    margin-left: -20px;
+  }
+  .atk-row > *[class*=atk-col] {
+    border: 0px solid rgba(0, 0, 0, 0);
+    border-left-width: 20px;
+    width: 100%;
+  }
+  .atk-hide-'mobile' {
+    display: none;
+  }
+  .atk-layout,
+  .atk-layout > .atk-layout-column,
+  .atk-layout .atk-layout-cell,
+  .atk-layout .atk-layout-row {
+    display: block;
+  }
+  .atk-layout .atk-layout-row {
+    height: auto;
+  }
+  *[class*=atk-menu] > li > *[class*=atk-menu] {
+    bottom: 0 !important;
+    left: 0 !important;
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+  }
+  *[class*=atk-menu] > li > *[class*=atk-menu].atk-menu-horizontal > li {
+    display: block;
+    float: none;
+  }
+  *[class*=atk-menu] > li:hover > *[class*=atk-menu] {
+    display: none !important;
+  }
+  *[class*=atk-menu] > li:focus {
+    display: none !important;
+  }
+  .atk-col-1,
+  .atk-col-1[class*=atk-col] {
+    width: 33.33333333%;
+  }
+  .atk-col-2,
+  .atk-col-2[class*=atk-col] {
+    width: 66.66666667%;
+  }
+  .atk-col-3,
+  .atk-col-3[class*=atk-col] {
     width: 100%;
   }
 }
@@ -6372,7 +6496,7 @@ a.atk-swatch-ink:hover,
 .atk-swatch-yellow,
 a:link.atk-swatch-yellow,
 .atk-swatch-yellow:visited {
-  color: black;
+  color: white;
 }
 .atk-swatch-yellow hr {
   border-color: #000;
@@ -6384,7 +6508,7 @@ a:link.atk-swatch-yellow,
 .atk-swatch-yellow h4,
 .atk-swatch-yellow h5,
 .atk-swatch-yellow h6 {
-  color: black;
+  color: white;
 }
 .atk-swatch-yellow[class*=icon-],
 a:link.atk-swatch-yellow[class*=icon-] {
@@ -6392,7 +6516,7 @@ a:link.atk-swatch-yellow[class*=icon-] {
   color: #ffcc00;
 }
 .atk-swatch-yellow[class*=icon-][class*=atk-shape] {
-  color: black;
+  color: white;
   background: #ffcc00;
 }
 .atk-swatch-yellow[class*=icon-]:hover {
@@ -6401,7 +6525,7 @@ a:link.atk-swatch-yellow[class*=icon-] {
 }
 a.atk-swatch-yellow:hover,
 .atk-swatch-yellow[class*=atk-button]:hover {
-  color: black;
+  color: white;
   background: #ffd11a;
 }
 .atk-swatch-yellow[class*='atk-button'],
@@ -6409,7 +6533,7 @@ a.atk-swatch-yellow:hover,
 .atk-table td.atk-swatch-yellow,
 .atk-table th.atk-swatch-yellow,
 .atk-swatch-yellow > .atk-popover-arrow:before {
-  color: black;
+  color: white;
   background: #ffcc00;
   border-color: #ffcc00;
 }
@@ -6420,7 +6544,7 @@ a.atk-swatch-yellow:hover,
   border-color: #cca300;
 }
 *[class*=atk-menu] li:hover.atk-swatch-yellow > a {
-  color: black;
+  color: white;
 }
 .atk-swatch-red {
   background: #f9451f;
