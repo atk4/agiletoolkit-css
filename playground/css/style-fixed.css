@@ -4707,6 +4707,9 @@ body > .atk-layout {
   /* NOTE Speed up table rendering */
 }
 .atk-wrapper {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -6190,14 +6193,14 @@ img.atk-shape-circle {
 }
 @media screen and (max-width: 1024px) {
   .atk-layout > .atk-layout-row > .atk-layout-cell {
-    min-width: 900px;
+    min-width: 800px;
   }
   .atk-wrapper {
-    min-width: 900px;
-    max-width: 900px;
+    min-width: 800px;
+    max-width: 800px;
     padding-left: 30px;
     padding-right: 30px;
-    max-width: 960px;
+    max-width: 860px;
   }
   .atk-row {
     margin-left: -30px;

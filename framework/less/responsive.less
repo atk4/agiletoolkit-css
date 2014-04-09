@@ -104,22 +104,22 @@
 }
 
 // Grid System Generator
-.createViewport(@class:false, @min:false, @max:false, @cols, @colsGutter, @breakLayout:false, @siteMinWidth:0, @siteMaxWidth:100%, @siteMargin:0) {
+.createViewport(@class:false, @min:false, @max:false, @cols, @colsGutter, @stackLayout:false, @siteMinWidth:0, @siteMaxWidth:100%, @siteMargin:0) {
   & when (isnumber(@min)) and (isnumber(@max)) {
     @media screen and (min-width: @min) and (max-width: @max) {
-      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@breakLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
       .generateColumns(@n:@cols,@m:@colsGutter);
     }
   }
   & when (isnumber(@min)) and (@max = false) {
     @media screen and (min-width: @min) {
-      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@breakLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
       .generateColumns(@n:@cols,@m:@colsGutter);
     }
   }
   & when (isnumber(@max)) and (@min = false) {
     @media screen and (max-width: @max) {
-      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@breakLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
       .generateColumns(@n:@cols,@m:@colsGutter);
     }
   }
