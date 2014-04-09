@@ -3,32 +3,32 @@
 // ==========================================================
 
 
-// @siteMinWidth:         800px; // Side paddings are dropped if value is in percentages
-// @siteMaxWidth:         1600px; // Put the same value as in @siteMinWidth if fixed layout is required
-// @siteMargin:           80px; // Margin between site's content and browser's edge
+// @wrapperMinWidth:         800px; // Side paddings are dropped if value is in percentages
+// @wrapperMaxWidth:         1600px; // Put the same value as in @wrapperMinWidth if fixed layout is required
+// @wrapperMargin:           80px; // Margin between site's content and browser's edge
 
 
 // Important: list .createViewport functions in the right order based on @min and @max values otherwise styles get overridden
 .createViewport(
 	@class: 'desktop-large',
-	@min: 1025px,
+	@viewportMinWidth: 0,
 	@cols:12,
 	@colsGutter: 40px,
-	@siteMinWidth: 1200px,
-	@siteMaxWidth: 1200px,
-	@siteMargin: 40px
+	@wrapperMinWidth: 600px,
+	@wrapperMargin: 50px,
+	@windowMinWidth: 1000px
 );
-.createViewport(
-	@class: 'desktop',
-	@max: 1024px,
-	@cols:12,
-	@colsGutter: 30px,
-	@siteMinWidth: 800px,
-	@siteMaxWidth: 800px,
-	@siteMargin: 30px
-);
-.createViewport(@class: 'tablet', @max:768px, @cols:6, @colsGutter: 20px, @stackLayout:true, @siteMargin: 20px);	
-.createViewport(@class: 'mobile', @max:479px, @cols:3, @colsGutter: 20px,  @stackLayout:true, @siteMargin: 20px);
+// .createViewport(
+// 	@class: 'desktop',
+// 	@max: 1024px,
+// 	@cols:12,
+// 	@colsGutter: 30px,
+// 	@wrapperMinWidth: 800px,
+// 	@wrapperMaxWidth: 800px,
+// 	@wrapperMargin: 30px
+// );
+// .createViewport(@class: 'tablet', @max:768px, @cols:6, @colsGutter: 20px, @stackLayout:true, @wrapperMargin: 20px);	
+// .createViewport(@class: 'mobile', @max:479px, @cols:3, @colsGutter: 20px,  @stackLayout:true, @wrapperMargin: 20px);
 
 
 // ==========================================================

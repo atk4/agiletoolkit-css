@@ -1,5 +1,5 @@
 // ==========================================================
-// New Grid System
+// Responsive Grid System
 // ==========================================================
 
 .atk-row {
@@ -16,7 +16,6 @@
     .atk-col-@{i} {
       @colsSingleWidth: (100% - @m * (@n - 1)) / @n;
       @colsInnerGutter: @m * (@i - 1);
-      // width: (@colsSingleWidth * @i) + (@i * @m);
       width: @colsSingleWidth * @i + @colsInnerGutter;
       &.atk-col-@{n} {
         width: 100%;
@@ -35,21 +34,34 @@
 }
 
 // Viewport Features
-.viewportFeatures(@c, @g, @b, @smax, @smin, @sm) {
-  @wmin: @smin + @sm*2;
-  .siteMargins(@a) when not (ispercentage(@a)) {
-   padding-left: (@wmin - @smin)/2;
-   padding-right: (@wmin - @smin)/2;
-   max-width: @smax + (@wmin - @smin);
+.viewportFeatures(@c, @g, @b, @wmax, @wmin, @wm, @winmin) { 
+  
+  // Layout
+  .layoutCell(@w) {
+    .atk-layout>.atk-layout-row>.atk-layout-cell {
+      min-width: @w;
+    }
   }
-  .atk-layout>.atk-layout-row>.atk-layout-cell {
-    min-width: @wmin;
+  & when (isunit(@wm,'px')) and (isunit(@wmin,'px')), (isunit(@wm,'em')) and (isunit(@wmin,'em')), (isunit(@wm,'%')) and (isunit(@wmin,'%')) {
+    .atk-wrapper {
+      .box-sizing(content-box);
+    }
+    & when (@winmin = false) {
+      .layoutCell(@wmin + @wm*2);
+    }
   }
+  & when not (@winmin = false) {
+    .layoutCell(@winmin);
+  }
+
   .atk-wrapper {
-      min-width: @smin;
-      max-width: @smax;
-      .siteMargins(@smin);
+      min-width: @wmin;
+      max-width: @wmax;
+      padding-left: @wm;
+      padding-right: @wm;
   }
+
+  // Grid System
   .atk-row {
     & when (ispercentage(@g)) {
       >*[class*=atk-col] + *[class*=atk-col] {
@@ -104,22 +116,22 @@
 }
 
 // Grid System Generator
-.createViewport(@class:false, @min:false, @max:false, @cols, @colsGutter, @stackLayout:false, @siteMinWidth:0, @siteMaxWidth:100%, @siteMargin:0) {
-  & when (isnumber(@min)) and (isnumber(@max)) {
-    @media screen and (min-width: @min) and (max-width: @max) {
-      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+.createViewport(@class:false, @viewportMinWidth:false, @viewportMaxWidth:false, @cols:12, @colsGutter:20px, @stackLayout:false, @wrapperMinWidth:0, @wrapperMaxWidth:100%, @wrapperMargin:0, @windowMinWidth:false) {
+  & when (isnumber(@viewportMinWidth)) and (isnumber(@viewportMaxWidth)) {
+    @media screen and (min-width: @viewportMinWidth) and (max-width: @viewportMaxWidth) {
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @wmin:@wrapperMinWidth, @wmax:@wrapperMaxWidth, @wm:@wrapperMargin, @winmin:@windowMinWidth);
       .generateColumns(@n:@cols,@m:@colsGutter);
     }
   }
-  & when (isnumber(@min)) and (@max = false) {
-    @media screen and (min-width: @min) {
-      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+  & when (isnumber(@viewportMinWidth)) and (@viewportMaxWidth = false) {
+    @media screen and (min-width: @viewportMinWidth) {
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @wmin:@wrapperMinWidth, @wmax:@wrapperMaxWidth, @wm:@wrapperMargin, @winmin:@windowMinWidth);
       .generateColumns(@n:@cols,@m:@colsGutter);
     }
   }
-  & when (isnumber(@max)) and (@min = false) {
-    @media screen and (max-width: @max) {
-      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @smin:@siteMinWidth, @smax:@siteMaxWidth, @sm:@siteMargin);
+  & when (isnumber(@viewportMaxWidth)) and (@viewportMinWidth = false) {
+    @media screen and (max-width: @viewportMaxWidth) {
+      .viewportFeatures(@c:@class, @g:@colsGutter, @b:@stackLayout, @wmin:@wrapperMinWidth, @wmax:@wrapperMaxWidth, @wm:@wrapperMargin, @winmin:@windowMinWidth);
       .generateColumns(@n:@cols,@m:@colsGutter);
     }
   }
