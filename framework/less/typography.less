@@ -26,9 +26,10 @@ h1, h2, h3, h4, h5, h6 {
     color: @headingColor;
     font-family: @headingFamily;
     font-weight: @headingWeight;
-    line-height: @headingBaseline;
     text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+    text-transform: @headingCase;
     margin: @margin 0 round(@margin/2,2) 0;
+    &:extend(.atk-text-lead);
     &:first-child {
         margin-top: 0;
     }
@@ -36,10 +37,6 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: @margin;
     }
 }
-h5 {
-    font-weight: bold;
-}
-
 .atk-size-yotta {
     font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5.5);
 }
@@ -72,6 +69,15 @@ h6, small, .atk-size-milli {
 }
 .atk-size-micro {
     font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1);
+}
+
+
+// ==========================================================
+// Text Styles
+// ==========================================================
+
+.atk-text-lead {
+    line-height: @headingBaseline;
 }
 
 

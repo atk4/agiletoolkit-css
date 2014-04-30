@@ -50,16 +50,28 @@
 .atk-actions-xlarge {
     >* {
         + * {
-            margin-left: (2em * @baselineDestroyer);
+            margin-left: (1.5em * @baselineDestroyer);
         }
         &.atk-sep + * {
             margin-left: 0;
         }
     }
 }
+.atk-sep-small {
+    margin-left: @margin/4 !important;
+    margin-right: @margin/4 !important;
+}
 .atk-sep {
     margin-left: @margin/3 !important;
     margin-right: @margin/3 !important;
+}
+.atk-sep-large {
+    margin-left: @margin/2 !important;
+    margin-right: @margin/2 !important;
+}
+.atk-sep-xlarge {
+    margin-left: @margin !important;
+    margin-right: @margin !important;
 }
 
 // Layout
@@ -243,7 +255,6 @@ ul[class*=atk-menu] {
         display: block;
         >li {
             display: block;
-            text-align: left;
             a {
                 display: block;
                 float: none;
@@ -425,6 +436,14 @@ ul[class*=atk-menu] {
             &:not([class*=atk-section]) {
                 padding-bottom: @margin*2;
                 padding-top: @margin*2;
+            }
+        }
+        &.atk-padding-xlarge {
+            padding-left: @margin*3;
+            padding-right: @margin*3;
+            &:not([class*=atk-section]) {
+                padding-bottom: @margin*3;
+                padding-top: @margin*3;
             }
         }
         &.atk-padding-reset {
