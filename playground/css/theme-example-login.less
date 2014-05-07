@@ -1,3 +1,27 @@
+
+/**
+ * Agile Toolkit CSS Framework (c) 2013-2014 v0.904
+ *  http://www4.agiletoolkit.org/css
+ */
+
+@import '/less/agiletoolkit.less';
+
+
+// ==========================================================
+// Layout
+// ==========================================================
+
+// Important: list .createViewport functions in the right order based on @min and @max values otherwise styles get overridden
+.createViewport(
+	@wrapperMargin: @margin,
+	@colsGutter: @margin,
+	@cols: 12,
+	@viewportMinWidth: 320px,
+	@wrapperMinWidth: 320px,
+	@wrapperMaxWidth: 320px
+);
+
+
 // ==========================================================
 // Typography
 // ==========================================================
@@ -20,7 +44,7 @@
 // Styles & Colors
 // ==========================================================
 
-@bodyBackground:       #fff;
+@bodyBackground:       @atk-swatch-gray;
 
 @cornerRadius:         5px;
 
@@ -72,3 +96,10 @@
 @inputFocus:           @atk-swatch-blue;
 
 @popoverArrow:        12px;
+
+
+// ==========================================================
+// Your Code Goes Here
+// ==========================================================
+
+@import 'playground.less';
