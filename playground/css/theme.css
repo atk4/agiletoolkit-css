@@ -5173,6 +5173,28 @@ label.atk-input-label em {
 body {
   background: #f5f6f7;
 }
+.atk-background-cover {
+  background-attachment: fixed;
+  background-image: url(inherit);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+*[class*=atk-box].atk-border-static,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-static,
+*[class*=atk-swatch] hr.atk-border-static {
+  border-color: #e1e1e1;
+}
+*[class*=atk-box].atk-border-active,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-active,
+*[class*=atk-swatch] hr.atk-border-active {
+  border-color: #c8c8c8;
+}
+*[class*=atk-box].atk-border-overlay,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-overlay,
+*[class*=atk-swatch] hr.atk-border-overlay {
+  border-color: #a1a1a1;
+}
 ::selection {
   background: #1c2933;
   color: white;

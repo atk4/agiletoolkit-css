@@ -22,6 +22,27 @@ body {
 
 
 // ==========================================================
+// Effects
+// ==========================================================
+
+.atk-background-cover {
+  .background-cover(inherit);
+}
+
+*[class*=atk-box], .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content, *[class*=atk-swatch] hr {
+  &.atk-border-static {
+    border-color: @borderStatic;
+  }
+  &.atk-border-active {
+    border-color: @borderClickable;
+  }
+  &.atk-border-overlay {
+    border-color: @borderOverlay;
+  }
+}
+
+
+// ==========================================================
 // Selection Colors
 // ==========================================================
 
