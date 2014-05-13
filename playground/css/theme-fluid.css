@@ -6304,7 +6304,7 @@ a:link.atk-swatch-gray[class*=icon-] {
 a.atk-swatch-gray:hover,
 .atk-swatch-gray[class*=atk-button]:hover {
   color: black;
-  background: #ffffff;
+  background: #f6f7f8;
 }
 .atk-swatch-gray[class*='atk-button'],
 .atk-swatch-gray.atk-label,
@@ -6361,7 +6361,7 @@ a:link.atk-swatch-ink[class*=icon-] {
 a.atk-swatch-ink:hover,
 .atk-swatch-ink[class*=atk-button]:hover {
   color: white;
-  background: #253643;
+  background: #333e47;
 }
 .atk-swatch-ink[class*='atk-button'],
 .atk-swatch-ink.atk-label,
@@ -6418,7 +6418,7 @@ a:link.atk-swatch-yellow[class*=icon-] {
 a.atk-swatch-yellow:hover,
 .atk-swatch-yellow[class*=atk-button]:hover {
   color: black;
-  background: #ffd11a;
+  background: #ffd119;
 }
 .atk-swatch-yellow[class*='atk-button'],
 .atk-swatch-yellow.atk-label,
@@ -6475,7 +6475,7 @@ a:link.atk-swatch-red[class*=icon-] {
 a.atk-swatch-red:hover,
 .atk-swatch-red[class*=atk-button]:hover {
   color: white;
-  background: #fa5a38;
+  background: #fa5835;
 }
 .atk-swatch-red[class*='atk-button'],
 .atk-swatch-red.atk-label,
@@ -6532,7 +6532,7 @@ a:link.atk-swatch-green[class*=icon-] {
 a.atk-swatch-green:hover,
 .atk-swatch-green[class*=atk-button]:hover {
   color: white;
-  background: #00e673;
+  background: #19d175;
 }
 .atk-swatch-green[class*='atk-button'],
 .atk-swatch-green.atk-label,
@@ -6589,7 +6589,7 @@ a:link.atk-swatch-blue[class*=icon-] {
 a.atk-swatch-blue:hover,
 .atk-swatch-blue[class*=atk-button]:hover {
   color: white;
-  background: #1aa0ff;
+  background: #19a0ff;
 }
 .atk-swatch-blue[class*='atk-button'],
 .atk-swatch-blue.atk-label,
@@ -6772,7 +6772,7 @@ a:link.atk-swatch-gray[class*=icon-] {
 a.atk-swatch-gray:hover,
 .atk-swatch-gray[class*=atk-button]:hover {
   color: black;
-  background: #ffffff;
+  background: #f6f7f8;
 }
 .atk-swatch-gray[class*='atk-button'],
 .atk-swatch-gray.atk-label,
@@ -6829,7 +6829,7 @@ a:link.atk-swatch-ink[class*=icon-] {
 a.atk-swatch-ink:hover,
 .atk-swatch-ink[class*=atk-button]:hover {
   color: white;
-  background: #253643;
+  background: #333e47;
 }
 .atk-swatch-ink[class*='atk-button'],
 .atk-swatch-ink.atk-label,
@@ -6886,7 +6886,7 @@ a:link.atk-swatch-yellow[class*=icon-] {
 a.atk-swatch-yellow:hover,
 .atk-swatch-yellow[class*=atk-button]:hover {
   color: black;
-  background: #ffd11a;
+  background: #ffd119;
 }
 .atk-swatch-yellow[class*='atk-button'],
 .atk-swatch-yellow.atk-label,
@@ -6943,7 +6943,7 @@ a:link.atk-swatch-red[class*=icon-] {
 a.atk-swatch-red:hover,
 .atk-swatch-red[class*=atk-button]:hover {
   color: white;
-  background: #fa5a38;
+  background: #fa5835;
 }
 .atk-swatch-red[class*='atk-button'],
 .atk-swatch-red.atk-label,
@@ -7000,7 +7000,7 @@ a:link.atk-swatch-green[class*=icon-] {
 a.atk-swatch-green:hover,
 .atk-swatch-green[class*=atk-button]:hover {
   color: white;
-  background: #00e673;
+  background: #19d175;
 }
 .atk-swatch-green[class*='atk-button'],
 .atk-swatch-green.atk-label,
@@ -7057,7 +7057,7 @@ a:link.atk-swatch-blue[class*=icon-] {
 a.atk-swatch-blue:hover,
 .atk-swatch-blue[class*=atk-button]:hover {
   color: white;
-  background: #1aa0ff;
+  background: #19a0ff;
 }
 .atk-swatch-blue[class*='atk-button'],
 .atk-swatch-blue.atk-label,
