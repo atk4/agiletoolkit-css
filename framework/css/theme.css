@@ -5602,22 +5602,28 @@ a:focus {
   border-collapse: collapse;
   border-style: hidden;
 }
-*[class*=atk-cells-gutter].atk-cells > .atk-cell,
-*[class*=atk-cells-gutter].atk-cells-group > .atk-cells > .atk-cell {
-  border-color: transparent;
-  border-style: solid;
-}
 *[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-large > .atk-cell,
 *[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-large > .atk-cells > .atk-cell {
-  border-width: 0 2em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 *[class*=atk-cells-gutter].atk-cells.atk-cells-gutter > .atk-cell,
 *[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter > .atk-cells > .atk-cell {
-  border-width: 0 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 *[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-small > .atk-cell,
 *[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-small > .atk-cells > .atk-cell {
-  border-width: 0 0.5em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+*[class*=atk-cells-gutter].atk-cells > .atk-cell:first-child,
+*[class*=atk-cells-gutter].atk-cells-group > .atk-cells > .atk-cell:first-child {
+  padding-left: 0;
+}
+*[class*=atk-cells-gutter].atk-cells > .atk-cell:last-child,
+*[class*=atk-cells-gutter].atk-cells-group > .atk-cells > .atk-cell:last-child {
+  padding-right: 0;
 }
 a[class*='atk-button'],
 button[class*='atk-button'],

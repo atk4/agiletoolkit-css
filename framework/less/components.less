@@ -81,22 +81,29 @@
 *[class*=atk-cells-gutter] {
     border-collapse: collapse;
     border-style: hidden;
-    &.atk-cells>.atk-cell,
-    &.atk-cells-group>.atk-cells>.atk-cell {
-        border-color: transparent;
-        border-style: solid;
-    }
     &.atk-cells.atk-cells-gutter-large>.atk-cell,
     &.atk-cells-group.atk-cells-gutter-large>.atk-cells>.atk-cell {
-        border-width: 0 (2em * @baselineDestroyer);
+        padding-left: (2em * @baselineDestroyer)/2;
+        padding-right: (2em * @baselineDestroyer)/2;
     }
     &.atk-cells.atk-cells-gutter>.atk-cell,
     &.atk-cells-group.atk-cells-gutter>.atk-cells>.atk-cell {
-        border-width: 0 (1em * @baselineDestroyer);
+        padding-left: (1em * @baselineDestroyer)/2;
+        padding-right: (1em * @baselineDestroyer)/2;
     }
     &.atk-cells.atk-cells-gutter-small>.atk-cell,
     &.atk-cells-group.atk-cells-gutter-small>.atk-cells>.atk-cell {
-        border-width: 0 (0.5em * @baselineDestroyer);
+        padding-left: (0.5em * @baselineDestroyer)/2;
+        padding-right: (0.5em * @baselineDestroyer)/2;
+    }
+    &.atk-cells>.atk-cell,
+    &.atk-cells-group>.atk-cells>.atk-cell {
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
     }
 }
 
