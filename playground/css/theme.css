@@ -5870,6 +5870,9 @@ ul[class*=atk-menu].atk-menu-vertical > li a {
   display: block;
   float: none;
 }
+ul[class*=atk-menu].atk-menu-vertical > li a[class*=atk-button] {
+  text-align: left;
+}
 ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
   position: absolute;
   top: 0;

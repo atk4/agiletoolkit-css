@@ -248,6 +248,9 @@ ul[class*=atk-menu] {
             a {
                 display: block;
                 float: none;
+                &[class*=atk-button] {
+                    text-align: left;
+                }
             }
             *[class*=atk-menu] {
                 .position(@t:0, @l:100%);
