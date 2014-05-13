@@ -2,29 +2,6 @@
 // Components
 // ==========================================================
 
-// Text
-.atk-text-dimmed {
-    @c: lighten(@bodyColor, @textDimmed);
-    color: @c;
-    a:hover& {
-        color: shade(@c, 15%);
-    }
-}
-.atk-text-nowrap {
-    white-space: nowrap;
-}
-.atk-text-reset {
-    .clear-font;
-}
-.atk-text-baseline-reset {
-    line-height: 1;
-}
-.atk-text-ellipsis {
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
 
 // Item List
 .atk-actions {
@@ -111,15 +88,15 @@
     }
     &.atk-cells.atk-cells-gutter-large>.atk-cell,
     &.atk-cells-group.atk-cells-gutter-large>.atk-cells>.atk-cell {
-        border-left-width: (2em * @baselineDestroyer);
+        border-width: 0 (2em * @baselineDestroyer);
     }
     &.atk-cells.atk-cells-gutter>.atk-cell,
     &.atk-cells-group.atk-cells-gutter>.atk-cells>.atk-cell {
-        border-width: (1em * @baselineDestroyer);
+        border-width: 0 (1em * @baselineDestroyer);
     }
     &.atk-cells.atk-cells-gutter-small>.atk-cell,
     &.atk-cells-group.atk-cells-gutter-small>.atk-cells>.atk-cell {
-        border-width: (0.5em * @baselineDestroyer);
+        border-width: 0 (0.5em * @baselineDestroyer);
     }
 }
 

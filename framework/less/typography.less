@@ -86,7 +86,28 @@ h6, small, .atk-size-milli {
     font-weight: normal;
     text-transform: normal;
 }
-
+.atk-text-dimmed {
+    @c: lighten(@bodyColor, @textDimmed);
+    color: @c;
+    a:hover& {
+        color: shade(@c, 15%);
+    }
+}
+.atk-text-nowrap {
+    white-space: nowrap;
+}
+.atk-text-reset {
+    .clear-font;
+}
+.atk-text-baseline-reset {
+    line-height: 1;
+}
+.atk-text-ellipsis {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 // ==========================================================
 // Images
