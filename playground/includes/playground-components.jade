@@ -124,6 +124,75 @@ section#components
     button.atk-button-small .atk-button-small
     button.atk-button.atk-swatch-yellow .atk-button
     button.atk-button-large.atk-swatch-ink(href='javascript:void(0)') .atk-button-large
+  h3 Cells
+  p 
+    | Component&nbsp;
+    span.atk-label.atk-effect-info .atk-cells
+    | &nbsp;is used for side by side positioning of several elements. 
+    strong Options: 
+    span.atk-label.atk-effect-info .atk-cells-gutter-small
+    | , 
+    span.atk-label.atk-effect-info .atk-cells-gutter
+    | , 
+    span.atk-label.atk-effect-info .atk-cells-gutter-large
+    | , 
+    span.atk-label.atk-effect-info .atk-cells-justified
+    | .
+  .atk-box
+    .atk-cells.atk-align-center
+      .atk-cell.atk-padding-small.atk-swatch-gray
+        | Cell #1
+      .atk-cell.atk-padding-small.atk-swatch-white
+        | Cell #2
+      .atk-cell.atk-padding-small.atk-swatch-gray
+        | Cell #3
+      .atk-cell.atk-padding-small.atk-swatch-white
+        | Cell #4
+      .atk-cell.atk-padding-small.atk-swatch-gray
+        | Cell #5
+  p 
+    | Component&nbsp;
+    span.atk-label.atk-effect-info .atk-cells
+    | &nbsp;combined with&nbsp;
+    span.atk-label.atk-effect-info .atk-cells-gutter-*
+    | &nbsp;option.
+  .atk-box
+    h5.atk-text-bold.atk-text-dimmed Regular Gutter
+    .atk-cells.atk-cells-gutter.atk-push
+        .atk-cell.atk-jackscrew
+          .atk-swatch-gray.atk-box-small
+            | Cell #1 with 
+            strong .atk-jackscrew
+        .atk-cell
+          .atk-swatch-gray.atk-box-small.atk-text-nowrap Cell #2
+        .atk-cell
+          .atk-swatch-gray.atk-box-small.atk-text-nowrap Cell #3
+    h5.atk-text-bold.atk-text-dimmed Large Gutter
+    .atk-cells.atk-cells-gutter-large
+        .atk-cell
+          .atk-swatch-gray.atk-box-small Cell #1
+        .atk-cell
+          .atk-swatch-gray.atk-box-small Cell #2
+        .atk-cell
+          .atk-swatch-gray.atk-box-small Cell #3
+  p 
+    | Component&nbsp;
+    span.atk-label.atk-effect-info .atk-cells
+    | &nbsp;combined with&nbsp;
+    span.atk-label.atk-effect-info .atk-cells-justfied
+    | ,&nbsp;
+    span.atk-label.atk-effect-info .atk-cells-gutter
+    | &nbsp;option.
+  p
+    .atk-label.atk-effect-warning 
+      span.icon-attention
+      | &nbsp;Width is distributed equally only for two cells when using combination of .atk-cells-justified and .atk-cells-gutter options.
+  .atk-box.atk-col-6
+    .atk-cells.atk-cells-gutter-small.atk-cells-justified
+        .atk-cell
+          button.atk-button.atk-jackscrew Button
+        .atk-cell
+          button.atk-button.atk-jackscrew Button
   h3 Menu
   p
     | Component&nbsp;

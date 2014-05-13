@@ -4815,6 +4815,13 @@ h5,
 h6 {
   line-height: 1.2;
 }
+.atk-text-bold {
+  font-weight: bold;
+}
+.atk-text-normal {
+  font-weight: normal;
+  text-transform: normal;
+}
 figure img {
   display: block;
   height: auto;
@@ -5577,7 +5584,6 @@ a:hover.atk-text-dimmed {
 .atk-cells > .atk-cell {
   display: table-cell;
   vertical-align: middle;
-  border-left: 0px solid transparent;
 }
 .atk-cells.atk-cells-justified {
   table-layout: fixed;
@@ -5597,17 +5603,26 @@ a:hover.atk-text-dimmed {
 .atk-cells-table > .atk-cells {
   display: table-row;
 }
-*[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-large > .atk-cell + .atk-cell,
-*[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-large > .atk-cells > .atk-cell + .atk-cell {
+*[class*=atk-cells-gutter] {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+*[class*=atk-cells-gutter].atk-cells > .atk-cell,
+*[class*=atk-cells-gutter].atk-cells-group > .atk-cells > .atk-cell {
+  border-color: transparent;
+  border-style: solid;
+}
+*[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-large > .atk-cell,
+*[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-large > .atk-cells > .atk-cell {
   border-left-width: 2em;
 }
-*[class*=atk-cells-gutter].atk-cells.atk-cells-gutter > .atk-cell + .atk-cell,
-*[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter > .atk-cells > .atk-cell + .atk-cell {
-  border-left-width: 1em;
+*[class*=atk-cells-gutter].atk-cells.atk-cells-gutter > .atk-cell,
+*[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter > .atk-cells > .atk-cell {
+  border-width: 1em;
 }
-*[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-small > .atk-cell + .atk-cell,
-*[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-small > .atk-cells > .atk-cell + .atk-cell {
-  border-left-width: 0.5em;
+*[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-small > .atk-cell,
+*[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-small > .atk-cells > .atk-cell {
+  border-width: 0.5em;
 }
 a[class*='atk-button'],
 button[class*='atk-button'],
@@ -5884,6 +5899,7 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
   display: inline;
   font-weight: bold;
   padding: 0.2em 0.4em;
+  white-space: nowrap;
 }
 .atk-inline {
   display: inline-block;
