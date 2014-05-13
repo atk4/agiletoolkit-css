@@ -5578,6 +5578,7 @@ a:hover.atk-text-dimmed {
 .atk-cells > .atk-cell {
   display: table-cell;
   vertical-align: middle;
+  border-left: 0px solid transparent;
 }
 .atk-cells.atk-cells-justified {
   table-layout: fixed;
@@ -5599,15 +5600,15 @@ a:hover.atk-text-dimmed {
 }
 *[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-large > .atk-cell + .atk-cell,
 *[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-large > .atk-cells > .atk-cell + .atk-cell {
-  padding-left: 2em;
+  border-left-width: 2em;
 }
 *[class*=atk-cells-gutter].atk-cells.atk-cells-gutter > .atk-cell + .atk-cell,
 *[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter > .atk-cells > .atk-cell + .atk-cell {
-  padding-left: 1em;
+  border-left-width: 1em;
 }
 *[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-small > .atk-cell + .atk-cell,
 *[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-small > .atk-cells > .atk-cell + .atk-cell {
-  padding-left: 0.5em;
+  border-left-width: 0.5em;
 }
 a[class*='atk-button'],
 button[class*='atk-button'],
@@ -5628,6 +5629,7 @@ input.ui-button {
   font-weight: bold;
   line-height: 1.618;
   padding: 0.5em 1em;
+  text-align: center;
   white-space: nowrap;
 }
 a[class*='atk-button']:hover,
