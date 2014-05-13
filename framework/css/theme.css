@@ -5598,10 +5598,6 @@ a:focus {
 .atk-cells-table > .atk-cells {
   display: table-row;
 }
-*[class*=atk-cells-gutter] {
-  border-collapse: collapse;
-  border-style: hidden;
-}
 *[class*=atk-cells-gutter].atk-cells.atk-cells-gutter-large > .atk-cell,
 *[class*=atk-cells-gutter].atk-cells-group.atk-cells-gutter-large > .atk-cells > .atk-cell {
   padding-left: 1em;
