@@ -4845,6 +4845,15 @@ a:hover.atk-text-dimmed {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.atk-text-left {
+  text-align: left;
+}
+.atk-text-right {
+  text-align: right;
+}
+.atk-text-center {
+  text-align: center;
+}
 figure img {
   display: block;
   height: auto;
@@ -5932,15 +5941,6 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 }
 .atk-move-right {
   float: right;
-}
-.atk-align-left {
-  text-align: left;
-}
-.atk-align-right {
-  text-align: right;
-}
-.atk-align-center {
-  text-align: center;
 }
 .atk-cells-group.atk-valign-top > .atk-cells > .atk-cell,
 .atk-valign-top {
