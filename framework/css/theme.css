@@ -4318,14 +4318,14 @@ table {
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
   background: #ffffff;
-  border: 0.1em solid #c8c8c8;
+  border: 1px solid #c8c8c8;
   color: #000000;
 }
 .ui-state-default.ui-state-hover,
 .ui-widget-content .ui-state-default.ui-state-hover,
 .ui-widget-header .ui-state-default.ui-state-hover {
   background: #f5f5f5;
-  border: 0.1em solid #c8c8c8;
+  border: 1px solid #c8c8c8;
   color: #000000;
 }
 .ui-state-default.ui-state-active,
@@ -4335,7 +4335,7 @@ table {
 .ui-widget-content .ui-state-default.ui-state-focus,
 .ui-widget-header .ui-state-default.ui-state-focus {
   background: #eeeeee;
-  border: 0.1em solid #c8c8c8;
+  border: 1px solid #c8c8c8;
   color: #000000;
 }
 .ui-state-hover,
@@ -4646,9 +4646,6 @@ table {
   background: rgba(28, 41, 51, 0.9);
   border: none;
   padding: 0.4rem 0.53rem 0.27rem 0.53rem;
-}
-form .ui-selectmenu-button {
-  width: 100% !important;
 }
 .ui-icon {
   background-image: none !important;
@@ -5087,6 +5084,9 @@ label.atk-input-label em {
 .atk-form .ui-selectmenu-button,
 .atk-form .atk-input-icon {
   display: block;
+  width: 100%;
+}
+.atk-form .ui-selectmenu-button {
   width: 100% !important;
 }
 * {
@@ -5593,7 +5593,7 @@ input.ui-button {
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07);
   background: #ffffff;
-  border: 0.1em solid #c8c8c8;
+  border: 1px solid #c8c8c8;
   color: #000000;
   display: inline-block;
   font-weight: bold;
@@ -5609,7 +5609,7 @@ a.ui-button:hover,
 button.ui-button:hover,
 input.ui-button:hover {
   background: #f5f5f5;
-  border: 0.1em solid #c8c8c8;
+  border: 1px solid #c8c8c8;
   color: #000000;
 }
 a[class*='atk-button'].atk-button-small,
