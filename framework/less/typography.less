@@ -88,9 +88,16 @@ h6, small, .atk-size-milli {
 }
 .atk-text-dimmed {
     @c: lighten(@bodyColor, @textDimmed);
-    color: @c;
-    a:hover& {
-        color: shade(@c, 15%);
+    &, *[class*=atk-swatch] & {
+        color: @c;
+    }
+    a& {
+        &, *[class*=atk-swatch] & {
+            color: @c;
+            &:hover {
+                color: shade(@c, 15%);
+            }
+        }
     }
 }
 .atk-text-nowrap {

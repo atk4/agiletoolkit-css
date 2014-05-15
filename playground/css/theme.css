@@ -4708,6 +4708,7 @@ body {
 .atk-layout > .atk-layout-column {
   display: table-cell;
   min-width: 1px;
+  position: relative;
   vertical-align: top;
 }
 body > .atk-layout {
@@ -4823,10 +4824,16 @@ h6 {
   font-weight: normal;
   text-transform: normal;
 }
-.atk-text-dimmed {
+.atk-text-dimmed,
+*[class*=atk-swatch] .atk-text-dimmed {
   color: #666666;
 }
-a:hover.atk-text-dimmed {
+a.atk-text-dimmed,
+*[class*=atk-swatch] a.atk-text-dimmed {
+  color: #666666;
+}
+a.atk-text-dimmed:hover,
+*[class*=atk-swatch] a.atk-text-dimmed:hover {
   color: #575757;
 }
 .atk-text-nowrap {
@@ -6215,7 +6222,7 @@ img.atk-shape-circle {
   background: #ffffff;
   border-color: #ffffff;
 }
-.atk-swatch-white,
+.atk-swatch-white a,
 a:link.atk-swatch-white,
 .atk-swatch-white:visited {
   color: black;
@@ -6223,7 +6230,7 @@ a:link.atk-swatch-white,
 .atk-swatch-white hr {
   border-color: #000;
 }
-.atk-swatch-white a,
+.atk-swatch-white,
 .atk-swatch-white h1,
 .atk-swatch-white h2,
 .atk-swatch-white h3,
@@ -6272,7 +6279,7 @@ a.atk-swatch-white:hover,
   background: #f5f6f7;
   border-color: #f5f6f7;
 }
-.atk-swatch-gray,
+.atk-swatch-gray a,
 a:link.atk-swatch-gray,
 .atk-swatch-gray:visited {
   color: black;
@@ -6280,7 +6287,7 @@ a:link.atk-swatch-gray,
 .atk-swatch-gray hr {
   border-color: #000;
 }
-.atk-swatch-gray a,
+.atk-swatch-gray,
 .atk-swatch-gray h1,
 .atk-swatch-gray h2,
 .atk-swatch-gray h3,
@@ -6329,7 +6336,7 @@ a.atk-swatch-gray:hover,
   background: #1c2933;
   border-color: #1c2933;
 }
-.atk-swatch-ink,
+.atk-swatch-ink a,
 a:link.atk-swatch-ink,
 .atk-swatch-ink:visited {
   color: white;
@@ -6337,7 +6344,7 @@ a:link.atk-swatch-ink,
 .atk-swatch-ink hr {
   border-color: #000;
 }
-.atk-swatch-ink a,
+.atk-swatch-ink,
 .atk-swatch-ink h1,
 .atk-swatch-ink h2,
 .atk-swatch-ink h3,
@@ -6386,7 +6393,7 @@ a.atk-swatch-ink:hover,
   background: #ffcc00;
   border-color: #ffcc00;
 }
-.atk-swatch-yellow,
+.atk-swatch-yellow a,
 a:link.atk-swatch-yellow,
 .atk-swatch-yellow:visited {
   color: black;
@@ -6394,7 +6401,7 @@ a:link.atk-swatch-yellow,
 .atk-swatch-yellow hr {
   border-color: #000;
 }
-.atk-swatch-yellow a,
+.atk-swatch-yellow,
 .atk-swatch-yellow h1,
 .atk-swatch-yellow h2,
 .atk-swatch-yellow h3,
@@ -6443,7 +6450,7 @@ a.atk-swatch-yellow:hover,
   background: #f9451f;
   border-color: #f9451f;
 }
-.atk-swatch-red,
+.atk-swatch-red a,
 a:link.atk-swatch-red,
 .atk-swatch-red:visited {
   color: white;
@@ -6451,7 +6458,7 @@ a:link.atk-swatch-red,
 .atk-swatch-red hr {
   border-color: #000;
 }
-.atk-swatch-red a,
+.atk-swatch-red,
 .atk-swatch-red h1,
 .atk-swatch-red h2,
 .atk-swatch-red h3,
@@ -6500,7 +6507,7 @@ a.atk-swatch-red:hover,
   background: #00cc66;
   border-color: #00cc66;
 }
-.atk-swatch-green,
+.atk-swatch-green a,
 a:link.atk-swatch-green,
 .atk-swatch-green:visited {
   color: white;
@@ -6508,7 +6515,7 @@ a:link.atk-swatch-green,
 .atk-swatch-green hr {
   border-color: #000;
 }
-.atk-swatch-green a,
+.atk-swatch-green,
 .atk-swatch-green h1,
 .atk-swatch-green h2,
 .atk-swatch-green h3,
@@ -6557,7 +6564,7 @@ a.atk-swatch-green:hover,
   background: #0095ff;
   border-color: #0095ff;
 }
-.atk-swatch-blue,
+.atk-swatch-blue a,
 a:link.atk-swatch-blue,
 .atk-swatch-blue:visited {
   color: white;
@@ -6565,7 +6572,7 @@ a:link.atk-swatch-blue,
 .atk-swatch-blue hr {
   border-color: #000;
 }
-.atk-swatch-blue a,
+.atk-swatch-blue,
 .atk-swatch-blue h1,
 .atk-swatch-blue h2,
 .atk-swatch-blue h3,
@@ -6813,7 +6820,7 @@ a.atk-swatch-blue:hover,
   background: #ffffff;
   border-color: #ffffff;
 }
-.atk-swatch-white,
+.atk-swatch-white a,
 a:link.atk-swatch-white,
 .atk-swatch-white:visited {
   color: black;
@@ -6821,7 +6828,7 @@ a:link.atk-swatch-white,
 .atk-swatch-white hr {
   border-color: #000;
 }
-.atk-swatch-white a,
+.atk-swatch-white,
 .atk-swatch-white h1,
 .atk-swatch-white h2,
 .atk-swatch-white h3,
@@ -6870,7 +6877,7 @@ a.atk-swatch-white:hover,
   background: #f5f6f7;
   border-color: #f5f6f7;
 }
-.atk-swatch-gray,
+.atk-swatch-gray a,
 a:link.atk-swatch-gray,
 .atk-swatch-gray:visited {
   color: black;
@@ -6878,7 +6885,7 @@ a:link.atk-swatch-gray,
 .atk-swatch-gray hr {
   border-color: #000;
 }
-.atk-swatch-gray a,
+.atk-swatch-gray,
 .atk-swatch-gray h1,
 .atk-swatch-gray h2,
 .atk-swatch-gray h3,
@@ -6927,7 +6934,7 @@ a.atk-swatch-gray:hover,
   background: #1c2933;
   border-color: #1c2933;
 }
-.atk-swatch-ink,
+.atk-swatch-ink a,
 a:link.atk-swatch-ink,
 .atk-swatch-ink:visited {
   color: white;
@@ -6935,7 +6942,7 @@ a:link.atk-swatch-ink,
 .atk-swatch-ink hr {
   border-color: #000;
 }
-.atk-swatch-ink a,
+.atk-swatch-ink,
 .atk-swatch-ink h1,
 .atk-swatch-ink h2,
 .atk-swatch-ink h3,
@@ -6984,7 +6991,7 @@ a.atk-swatch-ink:hover,
   background: #ffcc00;
   border-color: #ffcc00;
 }
-.atk-swatch-yellow,
+.atk-swatch-yellow a,
 a:link.atk-swatch-yellow,
 .atk-swatch-yellow:visited {
   color: black;
@@ -6992,7 +6999,7 @@ a:link.atk-swatch-yellow,
 .atk-swatch-yellow hr {
   border-color: #000;
 }
-.atk-swatch-yellow a,
+.atk-swatch-yellow,
 .atk-swatch-yellow h1,
 .atk-swatch-yellow h2,
 .atk-swatch-yellow h3,
@@ -7041,7 +7048,7 @@ a.atk-swatch-yellow:hover,
   background: #f9451f;
   border-color: #f9451f;
 }
-.atk-swatch-red,
+.atk-swatch-red a,
 a:link.atk-swatch-red,
 .atk-swatch-red:visited {
   color: white;
@@ -7049,7 +7056,7 @@ a:link.atk-swatch-red,
 .atk-swatch-red hr {
   border-color: #000;
 }
-.atk-swatch-red a,
+.atk-swatch-red,
 .atk-swatch-red h1,
 .atk-swatch-red h2,
 .atk-swatch-red h3,
@@ -7098,7 +7105,7 @@ a.atk-swatch-red:hover,
   background: #00cc66;
   border-color: #00cc66;
 }
-.atk-swatch-green,
+.atk-swatch-green a,
 a:link.atk-swatch-green,
 .atk-swatch-green:visited {
   color: white;
@@ -7106,7 +7113,7 @@ a:link.atk-swatch-green,
 .atk-swatch-green hr {
   border-color: #000;
 }
-.atk-swatch-green a,
+.atk-swatch-green,
 .atk-swatch-green h1,
 .atk-swatch-green h2,
 .atk-swatch-green h3,
@@ -7155,7 +7162,7 @@ a.atk-swatch-green:hover,
   background: #0095ff;
   border-color: #0095ff;
 }
-.atk-swatch-blue,
+.atk-swatch-blue a,
 a:link.atk-swatch-blue,
 .atk-swatch-blue:visited {
   color: white;
@@ -7163,7 +7170,7 @@ a:link.atk-swatch-blue,
 .atk-swatch-blue hr {
   border-color: #000;
 }
-.atk-swatch-blue a,
+.atk-swatch-blue,
 .atk-swatch-blue h1,
 .atk-swatch-blue h2,
 .atk-swatch-blue h3,

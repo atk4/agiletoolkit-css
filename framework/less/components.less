@@ -487,17 +487,22 @@ ul[class*=atk-menu] {
 }
 
 // Swatches
-.createSwatch(@color) {
+.createSwatch(@color, @link:auto) {
     .@{color} {
         background: @@color;
         border-color: @@color;
-        &, a:link&, &:visited {
-            .colorCheck(@@color);
+        a, a:link&, &:visited {
+            & when not (@link = auto) {
+                color: @link;
+            }
+            & when (@link = auto) {
+                .colorCheck(@@color);
+            }
         }
         hr {
             border-color: #000;
         }
-        a, h1, h2, h3, h4, h5, h6 {
+        &, h1, h2, h3, h4, h5, h6 {
             .colorCheck(@@color);
         }
         &[class*=icon-] {
