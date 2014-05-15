@@ -134,99 +134,112 @@ label.atk-input-label {
 
 // Form Classes
 .atk-form {
-    form {
-        display: table;
-        &:not(.row) {
-            width: 100%;
-        }
-        .atk-form-fieldset {
-            display: table-row-group;
-            >.atk-cells {
-                >.atk-cell {
-                    padding-bottom: @margin;
-                    vertical-align: top;
-                    input[type=text]:not([class*="span"]),
-                    input[type=password]:not([class*="span"]),
-                    input[readonly]:not([class*="span"]),
-                    textarea:not([class*="span"]),
-                    div.atk-form-field-readonly:not([class*="span"]),
-                    select,
-                    .ui-selectmenu-button,
-                    .atk-input-icon {
-                        width: 100% !important;
-                    }
-                    >*:not(select) + * {
-                        margin: round(@margin/4,2) 0 0 0;
-                    }
-                    &:first-child label {
-                        display: inline-block;
-                        font-weight: bold;
-                        margin: 0.5em 0;
-                    }
-                }
-                &.atk-form-error {
-                    label {
-                        color: @effectDanger;
-                    }
-                    input, textarea {
-                        border-color: @effectDanger;
-                    }
-                }
-            }
-            >.atk-cells, +.atk-cells {
-                display: table-row;
-            }
-            &:last-child {
-                >.atk-cells {
-                    &:last-child .atk-cell {
-                        padding-bottom: 0 !important;
-                    }
-                }
-            }
-        }
-        >.atk-actions {
-            hr {
-                margin-top: 0;
-                + * {
-                    margin-left: 0;
-                }
-            }
-        }
-    }
-}
-.atk-form-compact {
-    form .atk-form-fieldset>.atk-cells>.atk-cell,
-    &.atk-form-fieldset>.atk-cells>.atk-cell {
-        padding-bottom: round(@margin/3,2);
-    }
-}
-.atk-form-stacked {
-    form,
-    form .atk-form-fieldset,
-    form .atk-form-fieldset>.atk-cells,
-    form .atk-form-fieldset>.atk-cells>.atk-cell,
-    &.atk-form-fieldset,
-    &.atk-form-fieldset>.atk-cells,
-    &.atk-form-fieldset>.atk-cells>.atk-cell {
-        display: block !important;
-    }
-    form .atk-form-fieldset, &.atk-form-fieldset {
-        >.atk-cells>.atk-cell:first-child {
-            padding-bottom: 0;
-            label {
-                margin-top: 0;
-            }
-        }
-    }
-    form .atk-form-fieldset+.atk-cells {
-        display: table;
-    }
-}
-.atk-form-hybrid.atk-form {
-    form {
+    input[type=text]:not([class*="span"]),
+    input[type=password]:not([class*="span"]),
+    input[readonly]:not([class*="span"]),
+    textarea:not([class*="span"]),
+    div.atk-form-field-readonly:not([class*="span"]),
+    select,
+    .ui-selectmenu-button,
+    .atk-input-icon {
         display: block;
-    }
-    .atk-form-fieldset {
-        display: table;
+        width: 100% !important;
     }
 }
+// .atk-form {
+//     form {
+//         display: table;
+//         &:not(.row) {
+//             width: 100%;
+//         }
+//         .atk-form-fieldset {
+//             display: table-row-group;
+//             >.atk-cells {
+//                 >.atk-cell {
+//                     padding-bottom: @margin;
+//                     vertical-align: top;
+//                     input[type=text]:not([class*="span"]),
+//                     input[type=password]:not([class*="span"]),
+//                     input[readonly]:not([class*="span"]),
+//                     textarea:not([class*="span"]),
+//                     div.atk-form-field-readonly:not([class*="span"]),
+//                     select,
+//                     .ui-selectmenu-button,
+//                     .atk-input-icon {
+//                         width: 100% !important;
+//                     }
+//                     >*:not(select) + * {
+//                         margin: round(@margin/4,2) 0 0 0;
+//                     }
+//                     &:first-child label {
+//                         display: inline-block;
+//                         font-weight: bold;
+//                         margin: 0.5em 0;
+//                     }
+//                 }
+//                 &.atk-form-error {
+//                     label {
+//                         color: @effectDanger;
+//                     }
+//                     input, textarea {
+//                         border-color: @effectDanger;
+//                     }
+//                 }
+//             }
+//             >.atk-cells, +.atk-cells {
+//                 display: table-row;
+//             }
+//             &:last-child {
+//                 >.atk-cells {
+//                     &:last-child .atk-cell {
+//                         padding-bottom: 0 !important;
+//                     }
+//                 }
+//             }
+//         }
+//         >.atk-actions {
+//             hr {
+//                 margin-top: 0;
+//                 + * {
+//                     margin-left: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+// .atk-form-compact {
+//     form .atk-form-fieldset>.atk-cells>.atk-cell,
+//     &.atk-form-fieldset>.atk-cells>.atk-cell {
+//         padding-bottom: round(@margin/3,2);
+//     }
+// }
+// .atk-form-stacked {
+//     form,
+//     form .atk-form-fieldset,
+//     form .atk-form-fieldset>.atk-cells,
+//     form .atk-form-fieldset>.atk-cells>.atk-cell,
+//     &.atk-form-fieldset,
+//     &.atk-form-fieldset>.atk-cells,
+//     &.atk-form-fieldset>.atk-cells>.atk-cell {
+//         display: block !important;
+//     }
+//     form .atk-form-fieldset, &.atk-form-fieldset {
+//         >.atk-cells>.atk-cell:first-child {
+//             padding-bottom: 0;
+//             label {
+//                 margin-top: 0;
+//             }
+//         }
+//     }
+//     form .atk-form-fieldset+.atk-cells {
+//         display: table;
+//     }
+// }
+// .atk-form-hybrid.atk-form {
+//     form {
+//         display: block;
+//     }
+//     .atk-form-fieldset {
+//         display: table;
+//     }
+// }

@@ -4851,15 +4851,6 @@ a.atk-text-dimmed:hover,
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.atk-text-left {
-  text-align: left;
-}
-.atk-text-right {
-  text-align: right;
-}
-.atk-text-center {
-  text-align: center;
-}
 figure img {
   display: block;
   height: auto;
@@ -5086,86 +5077,16 @@ label.atk-input-label em {
 .atk-input-radio.atk-input-radio-stacked span {
   display: block;
 }
-.atk-form form {
-  display: table;
-}
-.atk-form form:not(.row) {
-  width: 100%;
-}
-.atk-form form .atk-form-fieldset {
-  display: table-row-group;
-}
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell {
-  padding-bottom: 1.6rem;
-  vertical-align: top;
-}
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell input[type=text]:not([class*="span"]),
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell input[type=password]:not([class*="span"]),
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell input[readonly]:not([class*="span"]),
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell textarea:not([class*="span"]),
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell div.atk-form-field-readonly:not([class*="span"]),
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell select,
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell .ui-selectmenu-button,
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell .atk-input-icon {
-  width: 100% !important;
-}
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell > *:not(select) + * {
-  margin: 0.4rem 0 0 0;
-}
-.atk-form form .atk-form-fieldset > .atk-cells > .atk-cell:first-child label {
-  display: inline-block;
-  font-weight: bold;
-  margin: 0.5em 0;
-}
-.atk-form form .atk-form-fieldset > .atk-cells.atk-form-error label {
-  color: #ff2d1a;
-}
-.atk-form form .atk-form-fieldset > .atk-cells.atk-form-error input,
-.atk-form form .atk-form-fieldset > .atk-cells.atk-form-error textarea {
-  border-color: #ff2d1a;
-}
-.atk-form form .atk-form-fieldset > .atk-cells,
-.atk-form form .atk-form-fieldset + .atk-cells {
-  display: table-row;
-}
-.atk-form form .atk-form-fieldset:last-child > .atk-cells:last-child .atk-cell {
-  padding-bottom: 0 !important;
-}
-.atk-form form > .atk-actions hr {
-  margin-top: 0;
-}
-.atk-form form > .atk-actions hr + * {
-  margin-left: 0;
-}
-.atk-form-compact form .atk-form-fieldset > .atk-cells > .atk-cell,
-.atk-form-compact.atk-form-fieldset > .atk-cells > .atk-cell {
-  padding-bottom: 0.53rem;
-}
-.atk-form-stacked form,
-.atk-form-stacked form .atk-form-fieldset,
-.atk-form-stacked form .atk-form-fieldset > .atk-cells,
-.atk-form-stacked form .atk-form-fieldset > .atk-cells > .atk-cell,
-.atk-form-stacked.atk-form-fieldset,
-.atk-form-stacked.atk-form-fieldset > .atk-cells,
-.atk-form-stacked.atk-form-fieldset > .atk-cells > .atk-cell {
-  display: block !important;
-}
-.atk-form-stacked form .atk-form-fieldset > .atk-cells > .atk-cell:first-child,
-.atk-form-stacked.atk-form-fieldset > .atk-cells > .atk-cell:first-child {
-  padding-bottom: 0;
-}
-.atk-form-stacked form .atk-form-fieldset > .atk-cells > .atk-cell:first-child label,
-.atk-form-stacked.atk-form-fieldset > .atk-cells > .atk-cell:first-child label {
-  margin-top: 0;
-}
-.atk-form-stacked form .atk-form-fieldset + .atk-cells {
-  display: table;
-}
-.atk-form-hybrid.atk-form form {
+.atk-form input[type=text]:not([class*="span"]),
+.atk-form input[type=password]:not([class*="span"]),
+.atk-form input[readonly]:not([class*="span"]),
+.atk-form textarea:not([class*="span"]),
+.atk-form div.atk-form-field-readonly:not([class*="span"]),
+.atk-form select,
+.atk-form .ui-selectmenu-button,
+.atk-form .atk-input-icon {
   display: block;
-}
-.atk-form-hybrid.atk-form .atk-form-fieldset {
-  display: table;
+  width: 100% !important;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -5972,6 +5893,15 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 }
 .atk-move-right {
   float: right;
+}
+.atk-align-left {
+  text-align: left;
+}
+.atk-align-right {
+  text-align: right;
+}
+.atk-align-center {
+  text-align: center;
 }
 .atk-cells-group.atk-valign-top > .atk-cells > .atk-cell,
 .atk-valign-top {

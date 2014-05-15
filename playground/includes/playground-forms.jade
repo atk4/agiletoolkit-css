@@ -2,7 +2,7 @@ section#forms
   h2 Forms
   h3 Regular Form
   .atk-box.atk-col-6
-    form.atk-cells-group.atk-cells-gutter-large.atk-valign-top
+    form.atk-form.atk-cells-group.atk-cells-gutter-large.atk-valign-top
       .atk-cells.atk-push
         .atk-cell.atk-text-nowrap
           label.atk-input-label 
@@ -30,7 +30,7 @@ section#forms
 
   h3 Compact Form
   .atk-box.atk-col-6
-    form.atk-cells-group.atk-cells-gutter-large
+    form.atk-form.atk-cells-group.atk-cells-gutter-large
       .atk-cells.atk-push-small
         .atk-cell.atk-text-nowrap
           label.atk-input-label
@@ -50,7 +50,7 @@ section#forms
           button.atk-button Cancel
   h3 Stacked Form
   .atk-box.atk-col-6
-    form
+    form.atk-form
       .atk-push-xsmall
         label
           strong Input:
@@ -66,8 +66,8 @@ section#forms
         button.atk-button Cancel
 
   h3 Stacked Compact Form
-  .atk-box.atk-col-6
-    form
+  .atk-box.atk-col-10
+    form.atk-form
       .atk-push-small
         div.atk-push-small
           label
@@ -77,30 +77,28 @@ section#forms
         div.atk-push-xsmall
           label
              strong Password:
-        input(type='password',class='atk-jackscrew atk-push-small')
+        input(type='password',class='atk-jackscrew atk-push-xsmall')
         p
           span.icon-attention
           | &nbsp;This is error
+      .atk-cells.atk-push-small.atk-cells-gutter-small
+        .atk-cell
+          input(type="text")
+        .atk-cell
+          select
+            option Option #1
+            option Option #2
       .atk-actions
         button.atk-button Okay
         button.atk-button Cancel
   h3 Minimal Form
   .atk-box.atk-col-3
-    .atk-form.atk-form-stacked.atk-form-compact
-      form
-        .atk-form-fieldset
-          .atk-cells
-            .atk-cell
-            .atk-cell
-              input(type='text', placeholder='Input')
-          .atk-cells
-            .atk-cell
-            .atk-cell
-              span.atk-input-icon
-                input(type='password', placeholder='Password')
-                a.icon-help-circled-1(href='javascript:void(0)')
-        .atk-actions
-          button.atk-button.atk-jackscrew Okay
+    form.atk-form
+      .atk-push-xsmall
+        input(type='text',class='atk-jackscrew',placeholder="Username")
+      .atk-push-xsmall
+        input(type='password',class='atk-jackscrew',placeholder="Password")
+      button.atk-button.atk-swatch-green.atk-jackscrew Okay
   //- h3 Hybrid Form
   //- p
   //-   span.atk-label.atk-effect-info .atk-form-hybrid
