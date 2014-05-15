@@ -10,21 +10,12 @@ section#jqueryui
   #dialog(title='Basic dialog')
     p.atk-push-small
       | Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.
-    .atk-form.atk-form-stacked.atk-form-compact
-      form
-        .atk-form-fieldset
-          .atk-cells
-            .atk-cell
-            .atk-cell
-              input(type='text', placeholder='Input')
-          .atk-cells
-            .atk-cell
-            .atk-cell
-              span.atk-input-icon
-                input(type='password', placeholder='Password')
-                a.icon-help-circled-1(href='javascript:void(0)')
-        .atk-actions
-          button.atk-button.atk-swatch-green.atk-jackscrew Okay
+    form.atk-form
+      .atk-push-xsmall
+        input(type='text',class='atk-jackscrew',placeholder="Username")
+      .atk-push-xsmall
+        input(type='password',class='atk-jackscrew',placeholder="Password")
+      button.atk-button.atk-swatch-green.atk-jackscrew Okay
   p
     | Modal&nbsp;
     span.atk-label.atk-effect-info .ui-dialog
