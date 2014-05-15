@@ -491,9 +491,12 @@ ul[class*=atk-menu] {
     .@{color} {
         background: @@color;
         border-color: @@color;
-        a, a:link&, &:visited {
+        a {
             & when not (@link = auto) {
                 color: @link;
+                &:hover {
+                    color: shade(@link, 15%);
+                }
             }
             & when (@link = auto) {
                 .colorCheck(@@color);
@@ -506,7 +509,7 @@ ul[class*=atk-menu] {
             .colorCheck(@@color);
         }
         &[class*=icon-] {
-            &, a:link& {
+            &, a& {
                 background: none;
                 color: @@color;
             }

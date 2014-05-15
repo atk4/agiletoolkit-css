@@ -1,0 +1,67 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html(class='no-js')
+  <!--<![endif]-->
+  head
+    meta(charset='utf-8')
+    <!--[if IE]><!-->
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    <!--[endif]-->
+    title Agile Toolkit CSS
+    meta(name='description', content='')
+    link(rel='stylesheet', href='../css/theme-fluid.css')
+  body
+    include ../includes/browsehappy
+    include ../includes/analytics
+    div.atk-layout
+      div.atk-layout-row
+        div.atk-layout-cell.atk-swatch-ink
+          div.atk-wrapper.atk-padding-small
+            h2 Header Area
+      div.atk-layout-row.atk-layout-fluid
+        div.atk-layout.atk-layout-cell
+          div.atk-layout-column.atk-swatch-gray.atk-col-3
+            div.atk-padding
+              h3 Stacked Form
+              form
+                .atk-push-xsmall
+                  label
+                    strong Input:
+                .atk-push
+                  input(type='text',class='atk-jackscrew')
+                .atk-push-xsmall
+                  label
+                    strong Password:
+                .atk-push
+                  input(type='password',class='atk-jackscrew')
+                .atk-actions
+                  button.atk-button Okay
+                  button.atk-button Cancel
+          div.atk-layout-column
+            #map-canvas
+            style.
+              html, body, #map-canvas {
+                height: 100%;
+                margin: 0px;
+                padding: 0px
+              }
+            script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
+            script.
+              var map;
+              function initialize() {
+                var mapOptions = {
+                  zoom: 8,
+                  center: new google.maps.LatLng(-34.397, 150.644)
+                };
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+                    mapOptions);
+              }
+
+              google.maps.event.addDomListener(window, 'load', initialize);
+      div.atk-layout-row
+        div.atk-layout-cell.atk-swatch-ink
+          div.atk-wrapper.atk-padding
+            h2 Footer Area

@@ -6221,9 +6221,7 @@ img.atk-shape-circle {
   background: #ffffff;
   border-color: #ffffff;
 }
-.atk-swatch-white a,
-a:link.atk-swatch-white,
-.atk-swatch-white:visited {
+.atk-swatch-white a {
   color: black;
 }
 .atk-swatch-white hr {
@@ -6239,7 +6237,7 @@ a:link.atk-swatch-white,
   color: black;
 }
 .atk-swatch-white[class*=icon-],
-a:link.atk-swatch-white[class*=icon-] {
+a.atk-swatch-white[class*=icon-] {
   background: none;
   color: #ffffff;
 }
@@ -6278,9 +6276,7 @@ a.atk-swatch-white:hover,
   background: #f5f6f7;
   border-color: #f5f6f7;
 }
-.atk-swatch-gray a,
-a:link.atk-swatch-gray,
-.atk-swatch-gray:visited {
+.atk-swatch-gray a {
   color: black;
 }
 .atk-swatch-gray hr {
@@ -6296,7 +6292,7 @@ a:link.atk-swatch-gray,
   color: black;
 }
 .atk-swatch-gray[class*=icon-],
-a:link.atk-swatch-gray[class*=icon-] {
+a.atk-swatch-gray[class*=icon-] {
   background: none;
   color: #f5f6f7;
 }
@@ -6335,9 +6331,7 @@ a.atk-swatch-gray:hover,
   background: #1c2933;
   border-color: #1c2933;
 }
-.atk-swatch-ink a,
-a:link.atk-swatch-ink,
-.atk-swatch-ink:visited {
+.atk-swatch-ink a {
   color: white;
 }
 .atk-swatch-ink hr {
@@ -6353,7 +6347,7 @@ a:link.atk-swatch-ink,
   color: white;
 }
 .atk-swatch-ink[class*=icon-],
-a:link.atk-swatch-ink[class*=icon-] {
+a.atk-swatch-ink[class*=icon-] {
   background: none;
   color: #1c2933;
 }
@@ -6392,9 +6386,7 @@ a.atk-swatch-ink:hover,
   background: #ffcc00;
   border-color: #ffcc00;
 }
-.atk-swatch-yellow a,
-a:link.atk-swatch-yellow,
-.atk-swatch-yellow:visited {
+.atk-swatch-yellow a {
   color: black;
 }
 .atk-swatch-yellow hr {
@@ -6410,7 +6402,7 @@ a:link.atk-swatch-yellow,
   color: black;
 }
 .atk-swatch-yellow[class*=icon-],
-a:link.atk-swatch-yellow[class*=icon-] {
+a.atk-swatch-yellow[class*=icon-] {
   background: none;
   color: #ffcc00;
 }
@@ -6449,9 +6441,7 @@ a.atk-swatch-yellow:hover,
   background: #f9451f;
   border-color: #f9451f;
 }
-.atk-swatch-red a,
-a:link.atk-swatch-red,
-.atk-swatch-red:visited {
+.atk-swatch-red a {
   color: white;
 }
 .atk-swatch-red hr {
@@ -6467,7 +6457,7 @@ a:link.atk-swatch-red,
   color: white;
 }
 .atk-swatch-red[class*=icon-],
-a:link.atk-swatch-red[class*=icon-] {
+a.atk-swatch-red[class*=icon-] {
   background: none;
   color: #f9451f;
 }
@@ -6506,9 +6496,7 @@ a.atk-swatch-red:hover,
   background: #00cc66;
   border-color: #00cc66;
 }
-.atk-swatch-green a,
-a:link.atk-swatch-green,
-.atk-swatch-green:visited {
+.atk-swatch-green a {
   color: white;
 }
 .atk-swatch-green hr {
@@ -6524,7 +6512,7 @@ a:link.atk-swatch-green,
   color: white;
 }
 .atk-swatch-green[class*=icon-],
-a:link.atk-swatch-green[class*=icon-] {
+a.atk-swatch-green[class*=icon-] {
   background: none;
   color: #00cc66;
 }
@@ -6563,9 +6551,7 @@ a.atk-swatch-green:hover,
   background: #0095ff;
   border-color: #0095ff;
 }
-.atk-swatch-blue a,
-a:link.atk-swatch-blue,
-.atk-swatch-blue:visited {
+.atk-swatch-blue a {
   color: white;
 }
 .atk-swatch-blue hr {
@@ -6581,7 +6567,7 @@ a:link.atk-swatch-blue,
   color: white;
 }
 .atk-swatch-blue[class*=icon-],
-a:link.atk-swatch-blue[class*=icon-] {
+a.atk-swatch-blue[class*=icon-] {
   background: none;
   color: #0095ff;
 }
@@ -6689,9 +6675,7 @@ a.atk-swatch-blue:hover,
   background: #ffffff;
   border-color: #ffffff;
 }
-.atk-swatch-white a,
-a:link.atk-swatch-white,
-.atk-swatch-white:visited {
+.atk-swatch-white a {
   color: black;
 }
 .atk-swatch-white hr {
@@ -6707,7 +6691,7 @@ a:link.atk-swatch-white,
   color: black;
 }
 .atk-swatch-white[class*=icon-],
-a:link.atk-swatch-white[class*=icon-] {
+a.atk-swatch-white[class*=icon-] {
   background: none;
   color: #ffffff;
 }
@@ -6746,9 +6730,7 @@ a.atk-swatch-white:hover,
   background: #f5f6f7;
   border-color: #f5f6f7;
 }
-.atk-swatch-gray a,
-a:link.atk-swatch-gray,
-.atk-swatch-gray:visited {
+.atk-swatch-gray a {
   color: black;
 }
 .atk-swatch-gray hr {
@@ -6764,7 +6746,7 @@ a:link.atk-swatch-gray,
   color: black;
 }
 .atk-swatch-gray[class*=icon-],
-a:link.atk-swatch-gray[class*=icon-] {
+a.atk-swatch-gray[class*=icon-] {
   background: none;
   color: #f5f6f7;
 }
@@ -6803,9 +6785,7 @@ a.atk-swatch-gray:hover,
   background: #1c2933;
   border-color: #1c2933;
 }
-.atk-swatch-ink a,
-a:link.atk-swatch-ink,
-.atk-swatch-ink:visited {
+.atk-swatch-ink a {
   color: white;
 }
 .atk-swatch-ink hr {
@@ -6821,7 +6801,7 @@ a:link.atk-swatch-ink,
   color: white;
 }
 .atk-swatch-ink[class*=icon-],
-a:link.atk-swatch-ink[class*=icon-] {
+a.atk-swatch-ink[class*=icon-] {
   background: none;
   color: #1c2933;
 }
@@ -6860,9 +6840,7 @@ a.atk-swatch-ink:hover,
   background: #ffcc00;
   border-color: #ffcc00;
 }
-.atk-swatch-yellow a,
-a:link.atk-swatch-yellow,
-.atk-swatch-yellow:visited {
+.atk-swatch-yellow a {
   color: black;
 }
 .atk-swatch-yellow hr {
@@ -6878,7 +6856,7 @@ a:link.atk-swatch-yellow,
   color: black;
 }
 .atk-swatch-yellow[class*=icon-],
-a:link.atk-swatch-yellow[class*=icon-] {
+a.atk-swatch-yellow[class*=icon-] {
   background: none;
   color: #ffcc00;
 }
@@ -6917,9 +6895,7 @@ a.atk-swatch-yellow:hover,
   background: #f9451f;
   border-color: #f9451f;
 }
-.atk-swatch-red a,
-a:link.atk-swatch-red,
-.atk-swatch-red:visited {
+.atk-swatch-red a {
   color: white;
 }
 .atk-swatch-red hr {
@@ -6935,7 +6911,7 @@ a:link.atk-swatch-red,
   color: white;
 }
 .atk-swatch-red[class*=icon-],
-a:link.atk-swatch-red[class*=icon-] {
+a.atk-swatch-red[class*=icon-] {
   background: none;
   color: #f9451f;
 }
@@ -6974,9 +6950,7 @@ a.atk-swatch-red:hover,
   background: #00cc66;
   border-color: #00cc66;
 }
-.atk-swatch-green a,
-a:link.atk-swatch-green,
-.atk-swatch-green:visited {
+.atk-swatch-green a {
   color: white;
 }
 .atk-swatch-green hr {
@@ -6992,7 +6966,7 @@ a:link.atk-swatch-green,
   color: white;
 }
 .atk-swatch-green[class*=icon-],
-a:link.atk-swatch-green[class*=icon-] {
+a.atk-swatch-green[class*=icon-] {
   background: none;
   color: #00cc66;
 }
@@ -7031,9 +7005,7 @@ a.atk-swatch-green:hover,
   background: #0095ff;
   border-color: #0095ff;
 }
-.atk-swatch-blue a,
-a:link.atk-swatch-blue,
-.atk-swatch-blue:visited {
+.atk-swatch-blue a {
   color: white;
 }
 .atk-swatch-blue hr {
@@ -7049,7 +7021,7 @@ a:link.atk-swatch-blue,
   color: white;
 }
 .atk-swatch-blue[class*=icon-],
-a:link.atk-swatch-blue[class*=icon-] {
+a.atk-swatch-blue[class*=icon-] {
   background: none;
   color: #0095ff;
 }
