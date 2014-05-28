@@ -30,8 +30,10 @@ textarea {
     border: 1px solid @borderClickable;
     border-radius: @cornerRadius;
     box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03) inset;
+    color: @bodyColor;
     line-height: @bodyBaseline;
     padding: (0.5em * @baselineDestroyer) (0.7em * @baselineDestroyer);
+    .placeholder(@inputPlaceholder);
 }
 textarea {
     min-height: @margin * 3 + round(@margin/2,2);
