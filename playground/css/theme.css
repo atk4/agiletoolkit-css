@@ -6108,7 +6108,8 @@ img.atk-shape-circle {
 *[class*=atk-effect].atk-effect-danger input[type="datetime"],
 *[class*=atk-effect].atk-effect-danger input[type="datetime-local"],
 *[class*=atk-effect].atk-effect-danger input[type="tel"],
-*[class*=atk-effect].atk-effect-danger textarea {
+*[class*=atk-effect].atk-effect-danger textarea,
+*[class*=atk-effect].atk-effect-danger .ui-selectmenu-button {
   border-color: #ff2d1a;
 }
 .atk-disabled {
