@@ -22,6 +22,19 @@ section#forms
             strong About:
         .atk-cell.atk-jackscrew
           textarea(class="atk-jackscrew")
+      .atk-cells.atk-push
+        .atk-cell
+        .atk-cell.atk-jackscrew
+          .atk-input-radio.atk-push-xsmall
+              span
+                input(type='checkbox')
+                label
+                  | Accept 
+                  a(href='#') Terms &amp; Conditions
+                  | .
+          p.atk-effect-danger
+            span.icon-attention
+            | &nbsp;Please accept Terms &amp; Conditions to continue.
       .atk-cells
         .atk-cell 
         .atk-cell.atk-actions.atk-jackscrew
@@ -81,7 +94,7 @@ section#forms
         p
           span.icon-attention
           | &nbsp;This is error
-      .atk-cells.atk-push-small.atk-cells-gutter-small
+      .atk-cells.atk-push-small.atk-cells-gutter-small.atk-effect-danger
         .atk-cell
           input(type="text")
         .atk-cell
