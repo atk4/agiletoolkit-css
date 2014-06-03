@@ -5989,6 +5989,9 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 .atk-valign-bottom {
   vertical-align: bottom !important;
 }
+*[class*=atk-push].atk-row:before {
+  float: left;
+}
 *[class*=atk-push].atk-push-xsmall {
   margin-bottom: 0.53rem;
 }

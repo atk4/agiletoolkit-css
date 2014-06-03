@@ -348,6 +348,9 @@ ul[class*=atk-menu] {
 
 // Pushes
 *[class*=atk-push] {
+    &.atk-row:before {
+        float: left;
+    }
     &.atk-push-xsmall {
         @m: round(@margin/3, 2);
         margin-bottom: @m;
