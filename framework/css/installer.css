@@ -4840,7 +4840,13 @@ a.atk-text-dimmed:hover,
   font-size: 0;
   line-height: 0;
 }
-.atk-text-baseline-reset {
+.atk-text-baseline-reset,
+a.atk-text-baseline-reset[class*='atk-button'],
+button.atk-text-baseline-reset[class*='atk-button'],
+input.atk-text-baseline-reset[class*='atk-button'],
+a.atk-text-baseline-reset.ui-button,
+button.atk-text-baseline-reset.ui-button,
+input.atk-text-baseline-reset.ui-button {
   line-height: 1;
 }
 .atk-text-ellipsis {
@@ -4848,6 +4854,9 @@ a.atk-text-dimmed:hover,
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.atk-text-inherit {
+  color: inherit;
 }
 figure img {
   display: block;
@@ -4926,10 +4935,10 @@ hr {
   background: none;
   border: none;
   border-top: 1px solid #e1e1e1;
+  clear: both;
+  height: 0;
   margin: 1.6rem 0;
   width: 100%;
-  height: 1px;
-  clear: both;
 }
 hr.atk-hr-small {
   margin: 0.8rem 0;
@@ -5584,6 +5593,12 @@ a:focus {
 .atk-actions-xlarge > *.atk-sep + * {
   margin-left: 0;
 }
+.atk-actions-xxlarge > * + * {
+  margin-left: 2em;
+}
+.atk-actions-xxlarge > *.atk-sep + * {
+  margin-left: 0;
+}
 .atk-sep-small {
   margin-left: 0.4rem !important;
   margin-right: 0.4rem !important;
@@ -5714,16 +5729,14 @@ a.ui-button.atk-button-outline,
 button.ui-button.atk-button-outline,
 input.ui-button.atk-button-outline {
   background: none;
-  border-color: #fff;
   box-shadow: none !important;
-  color: #fff !important;
 }
-*[class*='atk-menu'] a[class*='atk-button'],
-*[class*='atk-menu'] button[class*='atk-button'],
-*[class*='atk-menu'] input[class*='atk-button'],
-*[class*='atk-menu'] a.ui-button,
-*[class*='atk-menu'] button.ui-button,
-*[class*='atk-menu'] input.ui-button {
+*[class*='atk-menu'] > lia[class*='atk-button'],
+*[class*='atk-menu'] > libutton[class*='atk-button'],
+*[class*='atk-menu'] > liinput[class*='atk-button'],
+*[class*='atk-menu'] > lia.ui-button,
+*[class*='atk-menu'] > libutton.ui-button,
+*[class*='atk-menu'] > liinput.ui-button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -5754,12 +5767,12 @@ input.ui-button.atk-button-outline {
   -moz-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.atk-menu-horizontal li + li a[class*='atk-button'],
-.atk-menu-horizontal li + li button[class*='atk-button'],
-.atk-menu-horizontal li + li input[class*='atk-button'],
-.atk-menu-horizontal li + li a.ui-button,
-.atk-menu-horizontal li + li button.ui-button,
-.atk-menu-horizontal li + li input.ui-button {
+.atk-menu-horizontal li + lia[class*='atk-button'],
+.atk-menu-horizontal li + libutton[class*='atk-button'],
+.atk-menu-horizontal li + liinput[class*='atk-button'],
+.atk-menu-horizontal li + lia.ui-button,
+.atk-menu-horizontal li + libutton.ui-button,
+.atk-menu-horizontal li + liinput.ui-button {
   border-left: none;
 }
 .atk-menu-vertical li:first-child a[class*='atk-button'],
@@ -6040,6 +6053,18 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 *[class*=atk-push].atk-push-large.atk-row > *[class*=atk-col] {
   margin-bottom: 3.2rem;
 }
+*[class*=atk-push].atk-push-xlarge {
+  margin-bottom: 4.8rem;
+}
+.atk-cells-group > *[class*=atk-push].atk-push-xlarge > .atk-cell {
+  padding-bottom: 4.8rem;
+}
+*[class*=atk-push].atk-push-xlarge.atk-row {
+  margin-bottom: -4.8rem;
+}
+*[class*=atk-push].atk-push-xlarge.atk-row > *[class*=atk-col] {
+  margin-bottom: 4.8rem;
+}
 *[class*=atk-push].atk-push-reset {
   margin-bottom: 0;
 }
@@ -6122,7 +6147,13 @@ img.atk-shape-rounded {
   border-radius: 5px;
 }
 .atk-shape-circle,
-img.atk-shape-circle {
+img.atk-shape-circle,
+a.atk-shape-circle[class*='atk-button'],
+button.atk-shape-circle[class*='atk-button'],
+input.atk-shape-circle[class*='atk-button'],
+a.atk-shape-circle.ui-button,
+button.atk-shape-circle.ui-button,
+input.atk-shape-circle.ui-button {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -6221,390 +6252,418 @@ img.atk-shape-circle {
 *[class*=atk-show-] {
   display: none !important;
 }
+.atk-swatch-white:not(.atk-text-inherit) {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit) a {
+  color: black;
+}
+.atk-swatch-white:not(.atk-text-inherit) hr {
+  border-color: #000;
+}
+.atk-swatch-white:not(.atk-text-inherit),
+.atk-swatch-white:not(.atk-text-inherit) h1,
+.atk-swatch-white:not(.atk-text-inherit) h2,
+.atk-swatch-white:not(.atk-text-inherit) h3,
+.atk-swatch-white:not(.atk-text-inherit) h4,
+.atk-swatch-white:not(.atk-text-inherit) h5,
+.atk-swatch-white:not(.atk-text-inherit) h6 {
+  color: black;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-white:not(.atk-text-inherit)[class*=icon-] {
+  background: none;
+  color: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: black;
+  background: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*=icon-]:hover {
+  background: none;
+  color: #ffffff;
+}
+a.atk-swatch-white:not(.atk-text-inherit):hover,
+.atk-swatch-white:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: black;
+  background: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-white:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-white:not(.atk-text-inherit),
+.atk-table th.atk-swatch-white:not(.atk-text-inherit),
+.atk-swatch-white:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: black;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #e6e6e6;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #e6e6e6;
+}
+*[class*=atk-menu] li:hover.atk-swatch-white:not(.atk-text-inherit) > a {
+  color: black;
+}
 .atk-swatch-white {
   background: #ffffff;
   border-color: #ffffff;
 }
-.atk-swatch-white a {
+.atk-swatch-gray:not(.atk-text-inherit) {
+  background: #f5f6f7;
+  border-color: #f5f6f7;
+}
+.atk-swatch-gray:not(.atk-text-inherit) a {
   color: black;
 }
-.atk-swatch-white hr {
+.atk-swatch-gray:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-white,
-.atk-swatch-white h1,
-.atk-swatch-white h2,
-.atk-swatch-white h3,
-.atk-swatch-white h4,
-.atk-swatch-white h5,
-.atk-swatch-white h6 {
+.atk-swatch-gray:not(.atk-text-inherit),
+.atk-swatch-gray:not(.atk-text-inherit) h1,
+.atk-swatch-gray:not(.atk-text-inherit) h2,
+.atk-swatch-gray:not(.atk-text-inherit) h3,
+.atk-swatch-gray:not(.atk-text-inherit) h4,
+.atk-swatch-gray:not(.atk-text-inherit) h5,
+.atk-swatch-gray:not(.atk-text-inherit) h6 {
   color: black;
 }
-.atk-swatch-white[class*=icon-],
-a.atk-swatch-white[class*=icon-] {
+.atk-swatch-gray:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-gray:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #ffffff;
+  color: #f5f6f7;
 }
-.atk-swatch-white[class*=icon-][class*=atk-shape] {
+.atk-swatch-gray:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
   color: black;
-  background: #ffffff;
+  background: #f5f6f7;
 }
-.atk-swatch-white[class*=icon-]:hover {
+.atk-swatch-gray:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #ffffff;
+  color: #f5f6f7;
 }
-a.atk-swatch-white:hover,
-.atk-swatch-white[class*=atk-button]:hover {
+a.atk-swatch-gray:not(.atk-text-inherit):hover,
+.atk-swatch-gray:not(.atk-text-inherit)[class*=atk-button]:hover {
   color: black;
-  background: #ffffff;
+  background: #f6f7f8;
 }
-.atk-swatch-white[class*='atk-button'],
-.atk-swatch-white.atk-label,
-.atk-table td.atk-swatch-white,
-.atk-table th.atk-swatch-white,
-.atk-swatch-white > .atk-popover-arrow:before {
+.atk-swatch-gray:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-gray:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-gray:not(.atk-text-inherit),
+.atk-table th.atk-swatch-gray:not(.atk-text-inherit),
+.atk-swatch-gray:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: black;
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #f5f6f7;
+  border-color: #f5f6f7;
 }
-.atk-swatch-white[class*='atk-button'] {
-  border-color: #e6e6e6;
+.atk-swatch-gray:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #d9dde0;
 }
-.atk-swatch-white[class*='atk-button']:hover {
-  border-color: #e6e6e6;
+.atk-swatch-gray:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #d9dde0;
 }
-*[class*=atk-menu] li:hover.atk-swatch-white > a {
+*[class*=atk-menu] li:hover.atk-swatch-gray:not(.atk-text-inherit) > a {
   color: black;
 }
 .atk-swatch-gray {
   background: #f5f6f7;
   border-color: #f5f6f7;
 }
-.atk-swatch-gray a {
-  color: black;
+.atk-swatch-ink:not(.atk-text-inherit) {
+  background: #1c2933;
+  border-color: #1c2933;
 }
-.atk-swatch-gray hr {
+.atk-swatch-ink:not(.atk-text-inherit) a {
+  color: white;
+}
+.atk-swatch-ink:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-gray,
-.atk-swatch-gray h1,
-.atk-swatch-gray h2,
-.atk-swatch-gray h3,
-.atk-swatch-gray h4,
-.atk-swatch-gray h5,
-.atk-swatch-gray h6 {
-  color: black;
+.atk-swatch-ink:not(.atk-text-inherit),
+.atk-swatch-ink:not(.atk-text-inherit) h1,
+.atk-swatch-ink:not(.atk-text-inherit) h2,
+.atk-swatch-ink:not(.atk-text-inherit) h3,
+.atk-swatch-ink:not(.atk-text-inherit) h4,
+.atk-swatch-ink:not(.atk-text-inherit) h5,
+.atk-swatch-ink:not(.atk-text-inherit) h6 {
+  color: white;
 }
-.atk-swatch-gray[class*=icon-],
-a.atk-swatch-gray[class*=icon-] {
+.atk-swatch-ink:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-ink:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #f5f6f7;
+  color: #1c2933;
 }
-.atk-swatch-gray[class*=icon-][class*=atk-shape] {
-  color: black;
-  background: #f5f6f7;
+.atk-swatch-ink:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: white;
+  background: #1c2933;
 }
-.atk-swatch-gray[class*=icon-]:hover {
+.atk-swatch-ink:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #f5f6f7;
+  color: #1c2933;
 }
-a.atk-swatch-gray:hover,
-.atk-swatch-gray[class*=atk-button]:hover {
-  color: black;
-  background: #f6f7f8;
+a.atk-swatch-ink:not(.atk-text-inherit):hover,
+.atk-swatch-ink:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: white;
+  background: #333e47;
 }
-.atk-swatch-gray[class*='atk-button'],
-.atk-swatch-gray.atk-label,
-.atk-table td.atk-swatch-gray,
-.atk-table th.atk-swatch-gray,
-.atk-swatch-gray > .atk-popover-arrow:before {
-  color: black;
-  background: #f5f6f7;
-  border-color: #f5f6f7;
+.atk-swatch-ink:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-ink:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-ink:not(.atk-text-inherit),
+.atk-table th.atk-swatch-ink:not(.atk-text-inherit),
+.atk-swatch-ink:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: white;
+  background: #1c2933;
+  border-color: #1c2933;
 }
-.atk-swatch-gray[class*='atk-button'] {
-  border-color: #d9dde0;
+.atk-swatch-ink:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #0a0f12;
 }
-.atk-swatch-gray[class*='atk-button']:hover {
-  border-color: #d9dde0;
+.atk-swatch-ink:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #0a0f12;
 }
-*[class*=atk-menu] li:hover.atk-swatch-gray > a {
-  color: black;
+*[class*=atk-menu] li:hover.atk-swatch-ink:not(.atk-text-inherit) > a {
+  color: white;
 }
 .atk-swatch-ink {
   background: #1c2933;
   border-color: #1c2933;
 }
-.atk-swatch-ink a {
-  color: white;
+.atk-swatch-yellow:not(.atk-text-inherit) {
+  background: #ffcc00;
+  border-color: #ffcc00;
 }
-.atk-swatch-ink hr {
+.atk-swatch-yellow:not(.atk-text-inherit) a {
+  color: black;
+}
+.atk-swatch-yellow:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-ink,
-.atk-swatch-ink h1,
-.atk-swatch-ink h2,
-.atk-swatch-ink h3,
-.atk-swatch-ink h4,
-.atk-swatch-ink h5,
-.atk-swatch-ink h6 {
-  color: white;
+.atk-swatch-yellow:not(.atk-text-inherit),
+.atk-swatch-yellow:not(.atk-text-inherit) h1,
+.atk-swatch-yellow:not(.atk-text-inherit) h2,
+.atk-swatch-yellow:not(.atk-text-inherit) h3,
+.atk-swatch-yellow:not(.atk-text-inherit) h4,
+.atk-swatch-yellow:not(.atk-text-inherit) h5,
+.atk-swatch-yellow:not(.atk-text-inherit) h6 {
+  color: black;
 }
-.atk-swatch-ink[class*=icon-],
-a.atk-swatch-ink[class*=icon-] {
+.atk-swatch-yellow:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-yellow:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #1c2933;
+  color: #ffcc00;
 }
-.atk-swatch-ink[class*=icon-][class*=atk-shape] {
-  color: white;
-  background: #1c2933;
+.atk-swatch-yellow:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: black;
+  background: #ffcc00;
 }
-.atk-swatch-ink[class*=icon-]:hover {
+.atk-swatch-yellow:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #1c2933;
+  color: #ffcc00;
 }
-a.atk-swatch-ink:hover,
-.atk-swatch-ink[class*=atk-button]:hover {
-  color: white;
-  background: #333e47;
+a.atk-swatch-yellow:not(.atk-text-inherit):hover,
+.atk-swatch-yellow:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: black;
+  background: #ffd119;
 }
-.atk-swatch-ink[class*='atk-button'],
-.atk-swatch-ink.atk-label,
-.atk-table td.atk-swatch-ink,
-.atk-table th.atk-swatch-ink,
-.atk-swatch-ink > .atk-popover-arrow:before {
-  color: white;
-  background: #1c2933;
-  border-color: #1c2933;
+.atk-swatch-yellow:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-yellow:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-yellow:not(.atk-text-inherit),
+.atk-table th.atk-swatch-yellow:not(.atk-text-inherit),
+.atk-swatch-yellow:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: black;
+  background: #ffcc00;
+  border-color: #ffcc00;
 }
-.atk-swatch-ink[class*='atk-button'] {
-  border-color: #0a0f12;
+.atk-swatch-yellow:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #cca300;
 }
-.atk-swatch-ink[class*='atk-button']:hover {
-  border-color: #0a0f12;
+.atk-swatch-yellow:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #cca300;
 }
-*[class*=atk-menu] li:hover.atk-swatch-ink > a {
-  color: white;
+*[class*=atk-menu] li:hover.atk-swatch-yellow:not(.atk-text-inherit) > a {
+  color: black;
 }
 .atk-swatch-yellow {
   background: #ffcc00;
   border-color: #ffcc00;
 }
-.atk-swatch-yellow a {
-  color: black;
+.atk-swatch-red:not(.atk-text-inherit) {
+  background: #f9451f;
+  border-color: #f9451f;
 }
-.atk-swatch-yellow hr {
+.atk-swatch-red:not(.atk-text-inherit) a {
+  color: white;
+}
+.atk-swatch-red:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-yellow,
-.atk-swatch-yellow h1,
-.atk-swatch-yellow h2,
-.atk-swatch-yellow h3,
-.atk-swatch-yellow h4,
-.atk-swatch-yellow h5,
-.atk-swatch-yellow h6 {
-  color: black;
+.atk-swatch-red:not(.atk-text-inherit),
+.atk-swatch-red:not(.atk-text-inherit) h1,
+.atk-swatch-red:not(.atk-text-inherit) h2,
+.atk-swatch-red:not(.atk-text-inherit) h3,
+.atk-swatch-red:not(.atk-text-inherit) h4,
+.atk-swatch-red:not(.atk-text-inherit) h5,
+.atk-swatch-red:not(.atk-text-inherit) h6 {
+  color: white;
 }
-.atk-swatch-yellow[class*=icon-],
-a.atk-swatch-yellow[class*=icon-] {
+.atk-swatch-red:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-red:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #ffcc00;
+  color: #f9451f;
 }
-.atk-swatch-yellow[class*=icon-][class*=atk-shape] {
-  color: black;
-  background: #ffcc00;
+.atk-swatch-red:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: white;
+  background: #f9451f;
 }
-.atk-swatch-yellow[class*=icon-]:hover {
+.atk-swatch-red:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #ffcc00;
+  color: #f9451f;
 }
-a.atk-swatch-yellow:hover,
-.atk-swatch-yellow[class*=atk-button]:hover {
-  color: black;
-  background: #ffd119;
+a.atk-swatch-red:not(.atk-text-inherit):hover,
+.atk-swatch-red:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: white;
+  background: #fa5835;
 }
-.atk-swatch-yellow[class*='atk-button'],
-.atk-swatch-yellow.atk-label,
-.atk-table td.atk-swatch-yellow,
-.atk-table th.atk-swatch-yellow,
-.atk-swatch-yellow > .atk-popover-arrow:before {
-  color: black;
-  background: #ffcc00;
-  border-color: #ffcc00;
+.atk-swatch-red:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-red:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-red:not(.atk-text-inherit),
+.atk-table th.atk-swatch-red:not(.atk-text-inherit),
+.atk-swatch-red:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: white;
+  background: #f9451f;
+  border-color: #f9451f;
 }
-.atk-swatch-yellow[class*='atk-button'] {
-  border-color: #cca300;
+.atk-swatch-red:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #df2c06;
 }
-.atk-swatch-yellow[class*='atk-button']:hover {
-  border-color: #cca300;
+.atk-swatch-red:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #df2c06;
 }
-*[class*=atk-menu] li:hover.atk-swatch-yellow > a {
-  color: black;
+*[class*=atk-menu] li:hover.atk-swatch-red:not(.atk-text-inherit) > a {
+  color: white;
 }
 .atk-swatch-red {
   background: #f9451f;
   border-color: #f9451f;
 }
-.atk-swatch-red a {
+.atk-swatch-green:not(.atk-text-inherit) {
+  background: #00cc66;
+  border-color: #00cc66;
+}
+.atk-swatch-green:not(.atk-text-inherit) a {
   color: white;
 }
-.atk-swatch-red hr {
+.atk-swatch-green:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-red,
-.atk-swatch-red h1,
-.atk-swatch-red h2,
-.atk-swatch-red h3,
-.atk-swatch-red h4,
-.atk-swatch-red h5,
-.atk-swatch-red h6 {
+.atk-swatch-green:not(.atk-text-inherit),
+.atk-swatch-green:not(.atk-text-inherit) h1,
+.atk-swatch-green:not(.atk-text-inherit) h2,
+.atk-swatch-green:not(.atk-text-inherit) h3,
+.atk-swatch-green:not(.atk-text-inherit) h4,
+.atk-swatch-green:not(.atk-text-inherit) h5,
+.atk-swatch-green:not(.atk-text-inherit) h6 {
   color: white;
 }
-.atk-swatch-red[class*=icon-],
-a.atk-swatch-red[class*=icon-] {
+.atk-swatch-green:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-green:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #f9451f;
+  color: #00cc66;
 }
-.atk-swatch-red[class*=icon-][class*=atk-shape] {
+.atk-swatch-green:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
   color: white;
-  background: #f9451f;
+  background: #00cc66;
 }
-.atk-swatch-red[class*=icon-]:hover {
+.atk-swatch-green:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #f9451f;
+  color: #00cc66;
 }
-a.atk-swatch-red:hover,
-.atk-swatch-red[class*=atk-button]:hover {
+a.atk-swatch-green:not(.atk-text-inherit):hover,
+.atk-swatch-green:not(.atk-text-inherit)[class*=atk-button]:hover {
   color: white;
-  background: #fa5835;
+  background: #19d175;
 }
-.atk-swatch-red[class*='atk-button'],
-.atk-swatch-red.atk-label,
-.atk-table td.atk-swatch-red,
-.atk-table th.atk-swatch-red,
-.atk-swatch-red > .atk-popover-arrow:before {
+.atk-swatch-green:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-green:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-green:not(.atk-text-inherit),
+.atk-table th.atk-swatch-green:not(.atk-text-inherit),
+.atk-swatch-green:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
-  background: #f9451f;
-  border-color: #f9451f;
+  background: #00cc66;
+  border-color: #00cc66;
 }
-.atk-swatch-red[class*='atk-button'] {
-  border-color: #df2c06;
+.atk-swatch-green:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #00994d;
 }
-.atk-swatch-red[class*='atk-button']:hover {
-  border-color: #df2c06;
+.atk-swatch-green:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #00994d;
 }
-*[class*=atk-menu] li:hover.atk-swatch-red > a {
+*[class*=atk-menu] li:hover.atk-swatch-green:not(.atk-text-inherit) > a {
   color: white;
 }
 .atk-swatch-green {
   background: #00cc66;
   border-color: #00cc66;
 }
-.atk-swatch-green a {
+.atk-swatch-blue:not(.atk-text-inherit) {
+  background: #0095ff;
+  border-color: #0095ff;
+}
+.atk-swatch-blue:not(.atk-text-inherit) a {
   color: white;
 }
-.atk-swatch-green hr {
+.atk-swatch-blue:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-green,
-.atk-swatch-green h1,
-.atk-swatch-green h2,
-.atk-swatch-green h3,
-.atk-swatch-green h4,
-.atk-swatch-green h5,
-.atk-swatch-green h6 {
+.atk-swatch-blue:not(.atk-text-inherit),
+.atk-swatch-blue:not(.atk-text-inherit) h1,
+.atk-swatch-blue:not(.atk-text-inherit) h2,
+.atk-swatch-blue:not(.atk-text-inherit) h3,
+.atk-swatch-blue:not(.atk-text-inherit) h4,
+.atk-swatch-blue:not(.atk-text-inherit) h5,
+.atk-swatch-blue:not(.atk-text-inherit) h6 {
   color: white;
 }
-.atk-swatch-green[class*=icon-],
-a.atk-swatch-green[class*=icon-] {
+.atk-swatch-blue:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-blue:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #00cc66;
+  color: #0095ff;
 }
-.atk-swatch-green[class*=icon-][class*=atk-shape] {
+.atk-swatch-blue:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
   color: white;
-  background: #00cc66;
+  background: #0095ff;
 }
-.atk-swatch-green[class*=icon-]:hover {
+.atk-swatch-blue:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #00cc66;
+  color: #0095ff;
 }
-a.atk-swatch-green:hover,
-.atk-swatch-green[class*=atk-button]:hover {
+a.atk-swatch-blue:not(.atk-text-inherit):hover,
+.atk-swatch-blue:not(.atk-text-inherit)[class*=atk-button]:hover {
   color: white;
-  background: #19d175;
+  background: #19a0ff;
 }
-.atk-swatch-green[class*='atk-button'],
-.atk-swatch-green.atk-label,
-.atk-table td.atk-swatch-green,
-.atk-table th.atk-swatch-green,
-.atk-swatch-green > .atk-popover-arrow:before {
+.atk-swatch-blue:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-blue:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-blue:not(.atk-text-inherit),
+.atk-table th.atk-swatch-blue:not(.atk-text-inherit),
+.atk-swatch-blue:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
-  background: #00cc66;
-  border-color: #00cc66;
+  background: #0095ff;
+  border-color: #0095ff;
 }
-.atk-swatch-green[class*='atk-button'] {
-  border-color: #00994d;
+.atk-swatch-blue:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #0077cc;
 }
-.atk-swatch-green[class*='atk-button']:hover {
-  border-color: #00994d;
+.atk-swatch-blue:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #0077cc;
 }
-*[class*=atk-menu] li:hover.atk-swatch-green > a {
+*[class*=atk-menu] li:hover.atk-swatch-blue:not(.atk-text-inherit) > a {
   color: white;
 }
 .atk-swatch-blue {
   background: #0095ff;
   border-color: #0095ff;
-}
-.atk-swatch-blue a {
-  color: white;
-}
-.atk-swatch-blue hr {
-  border-color: #000;
-}
-.atk-swatch-blue,
-.atk-swatch-blue h1,
-.atk-swatch-blue h2,
-.atk-swatch-blue h3,
-.atk-swatch-blue h4,
-.atk-swatch-blue h5,
-.atk-swatch-blue h6 {
-  color: white;
-}
-.atk-swatch-blue[class*=icon-],
-a.atk-swatch-blue[class*=icon-] {
-  background: none;
-  color: #0095ff;
-}
-.atk-swatch-blue[class*=icon-][class*=atk-shape] {
-  color: white;
-  background: #0095ff;
-}
-.atk-swatch-blue[class*=icon-]:hover {
-  background: none;
-  color: #0095ff;
-}
-a.atk-swatch-blue:hover,
-.atk-swatch-blue[class*=atk-button]:hover {
-  color: white;
-  background: #19a0ff;
-}
-.atk-swatch-blue[class*='atk-button'],
-.atk-swatch-blue.atk-label,
-.atk-table td.atk-swatch-blue,
-.atk-table th.atk-swatch-blue,
-.atk-swatch-blue > .atk-popover-arrow:before {
-  color: white;
-  background: #0095ff;
-  border-color: #0095ff;
-}
-.atk-swatch-blue[class*='atk-button'] {
-  border-color: #0077cc;
-}
-.atk-swatch-blue[class*='atk-button']:hover {
-  border-color: #0077cc;
-}
-*[class*=atk-menu] li:hover.atk-swatch-blue > a {
-  color: white;
 }
 @media screen and (min-width: 0) {
   .atk-layout > .atk-layout-row > .atk-layout-cell {
@@ -6659,393 +6718,421 @@ a.atk-swatch-blue:hover,
     width: 100%;
   }
 }
+.atk-swatch-white:not(.atk-text-inherit) {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit) a {
+  color: black;
+}
+.atk-swatch-white:not(.atk-text-inherit) hr {
+  border-color: #000;
+}
+.atk-swatch-white:not(.atk-text-inherit),
+.atk-swatch-white:not(.atk-text-inherit) h1,
+.atk-swatch-white:not(.atk-text-inherit) h2,
+.atk-swatch-white:not(.atk-text-inherit) h3,
+.atk-swatch-white:not(.atk-text-inherit) h4,
+.atk-swatch-white:not(.atk-text-inherit) h5,
+.atk-swatch-white:not(.atk-text-inherit) h6 {
+  color: black;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-white:not(.atk-text-inherit)[class*=icon-] {
+  background: none;
+  color: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: black;
+  background: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*=icon-]:hover {
+  background: none;
+  color: #ffffff;
+}
+a.atk-swatch-white:not(.atk-text-inherit):hover,
+.atk-swatch-white:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: black;
+  background: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-white:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-white:not(.atk-text-inherit),
+.atk-table th.atk-swatch-white:not(.atk-text-inherit),
+.atk-swatch-white:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: black;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #e6e6e6;
+}
+.atk-swatch-white:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #e6e6e6;
+}
+*[class*=atk-menu] li:hover.atk-swatch-white:not(.atk-text-inherit) > a {
+  color: black;
+}
 .atk-swatch-white {
   background: #ffffff;
   border-color: #ffffff;
 }
-.atk-swatch-white a {
-  color: black;
+.atk-swatch-gray:not(.atk-text-inherit) {
+  background: #f5f6f7;
+  border-color: #f5f6f7;
 }
-.atk-swatch-white hr {
+.atk-swatch-gray:not(.atk-text-inherit) a {
+  color: #0095ff;
+}
+.atk-swatch-gray:not(.atk-text-inherit) a:hover {
+  color: #007fd9;
+}
+.atk-swatch-gray:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-white,
-.atk-swatch-white h1,
-.atk-swatch-white h2,
-.atk-swatch-white h3,
-.atk-swatch-white h4,
-.atk-swatch-white h5,
-.atk-swatch-white h6 {
+.atk-swatch-gray:not(.atk-text-inherit),
+.atk-swatch-gray:not(.atk-text-inherit) h1,
+.atk-swatch-gray:not(.atk-text-inherit) h2,
+.atk-swatch-gray:not(.atk-text-inherit) h3,
+.atk-swatch-gray:not(.atk-text-inherit) h4,
+.atk-swatch-gray:not(.atk-text-inherit) h5,
+.atk-swatch-gray:not(.atk-text-inherit) h6 {
   color: black;
 }
-.atk-swatch-white[class*=icon-],
-a.atk-swatch-white[class*=icon-] {
+.atk-swatch-gray:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-gray:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #ffffff;
+  color: #f5f6f7;
 }
-.atk-swatch-white[class*=icon-][class*=atk-shape] {
+.atk-swatch-gray:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
   color: black;
-  background: #ffffff;
+  background: #f5f6f7;
 }
-.atk-swatch-white[class*=icon-]:hover {
+.atk-swatch-gray:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #ffffff;
+  color: #f5f6f7;
 }
-a.atk-swatch-white:hover,
-.atk-swatch-white[class*=atk-button]:hover {
+a.atk-swatch-gray:not(.atk-text-inherit):hover,
+.atk-swatch-gray:not(.atk-text-inherit)[class*=atk-button]:hover {
   color: black;
-  background: #ffffff;
+  background: #f6f7f8;
 }
-.atk-swatch-white[class*='atk-button'],
-.atk-swatch-white.atk-label,
-.atk-table td.atk-swatch-white,
-.atk-table th.atk-swatch-white,
-.atk-swatch-white > .atk-popover-arrow:before {
+.atk-swatch-gray:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-gray:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-gray:not(.atk-text-inherit),
+.atk-table th.atk-swatch-gray:not(.atk-text-inherit),
+.atk-swatch-gray:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: black;
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #f5f6f7;
+  border-color: #f5f6f7;
 }
-.atk-swatch-white[class*='atk-button'] {
-  border-color: #e6e6e6;
+.atk-swatch-gray:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #d9dde0;
 }
-.atk-swatch-white[class*='atk-button']:hover {
-  border-color: #e6e6e6;
+.atk-swatch-gray:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #d9dde0;
 }
-*[class*=atk-menu] li:hover.atk-swatch-white > a {
+*[class*=atk-menu] li:hover.atk-swatch-gray:not(.atk-text-inherit) > a {
   color: black;
 }
 .atk-swatch-gray {
   background: #f5f6f7;
   border-color: #f5f6f7;
 }
-.atk-swatch-gray a {
-  color: #0095ff;
+.atk-swatch-ink:not(.atk-text-inherit) {
+  background: #1c2933;
+  border-color: #1c2933;
 }
-.atk-swatch-gray a:hover {
-  color: #007fd9;
+.atk-swatch-ink:not(.atk-text-inherit) a {
+  color: white;
 }
-.atk-swatch-gray hr {
+.atk-swatch-ink:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-gray,
-.atk-swatch-gray h1,
-.atk-swatch-gray h2,
-.atk-swatch-gray h3,
-.atk-swatch-gray h4,
-.atk-swatch-gray h5,
-.atk-swatch-gray h6 {
-  color: black;
+.atk-swatch-ink:not(.atk-text-inherit),
+.atk-swatch-ink:not(.atk-text-inherit) h1,
+.atk-swatch-ink:not(.atk-text-inherit) h2,
+.atk-swatch-ink:not(.atk-text-inherit) h3,
+.atk-swatch-ink:not(.atk-text-inherit) h4,
+.atk-swatch-ink:not(.atk-text-inherit) h5,
+.atk-swatch-ink:not(.atk-text-inherit) h6 {
+  color: white;
 }
-.atk-swatch-gray[class*=icon-],
-a.atk-swatch-gray[class*=icon-] {
+.atk-swatch-ink:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-ink:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #f5f6f7;
+  color: #1c2933;
 }
-.atk-swatch-gray[class*=icon-][class*=atk-shape] {
-  color: black;
-  background: #f5f6f7;
+.atk-swatch-ink:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: white;
+  background: #1c2933;
 }
-.atk-swatch-gray[class*=icon-]:hover {
+.atk-swatch-ink:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #f5f6f7;
+  color: #1c2933;
 }
-a.atk-swatch-gray:hover,
-.atk-swatch-gray[class*=atk-button]:hover {
-  color: black;
-  background: #f6f7f8;
+a.atk-swatch-ink:not(.atk-text-inherit):hover,
+.atk-swatch-ink:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: white;
+  background: #333e47;
 }
-.atk-swatch-gray[class*='atk-button'],
-.atk-swatch-gray.atk-label,
-.atk-table td.atk-swatch-gray,
-.atk-table th.atk-swatch-gray,
-.atk-swatch-gray > .atk-popover-arrow:before {
-  color: black;
-  background: #f5f6f7;
-  border-color: #f5f6f7;
+.atk-swatch-ink:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-ink:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-ink:not(.atk-text-inherit),
+.atk-table th.atk-swatch-ink:not(.atk-text-inherit),
+.atk-swatch-ink:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: white;
+  background: #1c2933;
+  border-color: #1c2933;
 }
-.atk-swatch-gray[class*='atk-button'] {
-  border-color: #d9dde0;
+.atk-swatch-ink:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #0a0f12;
 }
-.atk-swatch-gray[class*='atk-button']:hover {
-  border-color: #d9dde0;
+.atk-swatch-ink:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #0a0f12;
 }
-*[class*=atk-menu] li:hover.atk-swatch-gray > a {
-  color: black;
+*[class*=atk-menu] li:hover.atk-swatch-ink:not(.atk-text-inherit) > a {
+  color: white;
 }
 .atk-swatch-ink {
   background: #1c2933;
   border-color: #1c2933;
 }
-.atk-swatch-ink a {
-  color: white;
+.atk-swatch-yellow:not(.atk-text-inherit) {
+  background: #ffcc00;
+  border-color: #ffcc00;
 }
-.atk-swatch-ink hr {
+.atk-swatch-yellow:not(.atk-text-inherit) a {
+  color: black;
+}
+.atk-swatch-yellow:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-ink,
-.atk-swatch-ink h1,
-.atk-swatch-ink h2,
-.atk-swatch-ink h3,
-.atk-swatch-ink h4,
-.atk-swatch-ink h5,
-.atk-swatch-ink h6 {
-  color: white;
+.atk-swatch-yellow:not(.atk-text-inherit),
+.atk-swatch-yellow:not(.atk-text-inherit) h1,
+.atk-swatch-yellow:not(.atk-text-inherit) h2,
+.atk-swatch-yellow:not(.atk-text-inherit) h3,
+.atk-swatch-yellow:not(.atk-text-inherit) h4,
+.atk-swatch-yellow:not(.atk-text-inherit) h5,
+.atk-swatch-yellow:not(.atk-text-inherit) h6 {
+  color: black;
 }
-.atk-swatch-ink[class*=icon-],
-a.atk-swatch-ink[class*=icon-] {
+.atk-swatch-yellow:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-yellow:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #1c2933;
+  color: #ffcc00;
 }
-.atk-swatch-ink[class*=icon-][class*=atk-shape] {
-  color: white;
-  background: #1c2933;
+.atk-swatch-yellow:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: black;
+  background: #ffcc00;
 }
-.atk-swatch-ink[class*=icon-]:hover {
+.atk-swatch-yellow:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #1c2933;
+  color: #ffcc00;
 }
-a.atk-swatch-ink:hover,
-.atk-swatch-ink[class*=atk-button]:hover {
-  color: white;
-  background: #333e47;
+a.atk-swatch-yellow:not(.atk-text-inherit):hover,
+.atk-swatch-yellow:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: black;
+  background: #ffd119;
 }
-.atk-swatch-ink[class*='atk-button'],
-.atk-swatch-ink.atk-label,
-.atk-table td.atk-swatch-ink,
-.atk-table th.atk-swatch-ink,
-.atk-swatch-ink > .atk-popover-arrow:before {
-  color: white;
-  background: #1c2933;
-  border-color: #1c2933;
+.atk-swatch-yellow:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-yellow:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-yellow:not(.atk-text-inherit),
+.atk-table th.atk-swatch-yellow:not(.atk-text-inherit),
+.atk-swatch-yellow:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: black;
+  background: #ffcc00;
+  border-color: #ffcc00;
 }
-.atk-swatch-ink[class*='atk-button'] {
-  border-color: #0a0f12;
+.atk-swatch-yellow:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #cca300;
 }
-.atk-swatch-ink[class*='atk-button']:hover {
-  border-color: #0a0f12;
+.atk-swatch-yellow:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #cca300;
 }
-*[class*=atk-menu] li:hover.atk-swatch-ink > a {
-  color: white;
+*[class*=atk-menu] li:hover.atk-swatch-yellow:not(.atk-text-inherit) > a {
+  color: black;
 }
 .atk-swatch-yellow {
   background: #ffcc00;
   border-color: #ffcc00;
 }
-.atk-swatch-yellow a {
-  color: black;
+.atk-swatch-red:not(.atk-text-inherit) {
+  background: #f9451f;
+  border-color: #f9451f;
 }
-.atk-swatch-yellow hr {
+.atk-swatch-red:not(.atk-text-inherit) a {
+  color: white;
+}
+.atk-swatch-red:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-yellow,
-.atk-swatch-yellow h1,
-.atk-swatch-yellow h2,
-.atk-swatch-yellow h3,
-.atk-swatch-yellow h4,
-.atk-swatch-yellow h5,
-.atk-swatch-yellow h6 {
-  color: black;
+.atk-swatch-red:not(.atk-text-inherit),
+.atk-swatch-red:not(.atk-text-inherit) h1,
+.atk-swatch-red:not(.atk-text-inherit) h2,
+.atk-swatch-red:not(.atk-text-inherit) h3,
+.atk-swatch-red:not(.atk-text-inherit) h4,
+.atk-swatch-red:not(.atk-text-inherit) h5,
+.atk-swatch-red:not(.atk-text-inherit) h6 {
+  color: white;
 }
-.atk-swatch-yellow[class*=icon-],
-a.atk-swatch-yellow[class*=icon-] {
+.atk-swatch-red:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-red:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #ffcc00;
+  color: #f9451f;
 }
-.atk-swatch-yellow[class*=icon-][class*=atk-shape] {
-  color: black;
-  background: #ffcc00;
+.atk-swatch-red:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: white;
+  background: #f9451f;
 }
-.atk-swatch-yellow[class*=icon-]:hover {
+.atk-swatch-red:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #ffcc00;
+  color: #f9451f;
 }
-a.atk-swatch-yellow:hover,
-.atk-swatch-yellow[class*=atk-button]:hover {
-  color: black;
-  background: #ffd119;
+a.atk-swatch-red:not(.atk-text-inherit):hover,
+.atk-swatch-red:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: white;
+  background: #fa5835;
 }
-.atk-swatch-yellow[class*='atk-button'],
-.atk-swatch-yellow.atk-label,
-.atk-table td.atk-swatch-yellow,
-.atk-table th.atk-swatch-yellow,
-.atk-swatch-yellow > .atk-popover-arrow:before {
-  color: black;
-  background: #ffcc00;
-  border-color: #ffcc00;
+.atk-swatch-red:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-red:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-red:not(.atk-text-inherit),
+.atk-table th.atk-swatch-red:not(.atk-text-inherit),
+.atk-swatch-red:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: white;
+  background: #f9451f;
+  border-color: #f9451f;
 }
-.atk-swatch-yellow[class*='atk-button'] {
-  border-color: #cca300;
+.atk-swatch-red:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #df2c06;
 }
-.atk-swatch-yellow[class*='atk-button']:hover {
-  border-color: #cca300;
+.atk-swatch-red:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #df2c06;
 }
-*[class*=atk-menu] li:hover.atk-swatch-yellow > a {
-  color: black;
+*[class*=atk-menu] li:hover.atk-swatch-red:not(.atk-text-inherit) > a {
+  color: white;
 }
 .atk-swatch-red {
   background: #f9451f;
   border-color: #f9451f;
 }
-.atk-swatch-red a {
+.atk-swatch-green:not(.atk-text-inherit) {
+  background: #00cc66;
+  border-color: #00cc66;
+}
+.atk-swatch-green:not(.atk-text-inherit) a {
   color: white;
 }
-.atk-swatch-red hr {
+.atk-swatch-green:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-red,
-.atk-swatch-red h1,
-.atk-swatch-red h2,
-.atk-swatch-red h3,
-.atk-swatch-red h4,
-.atk-swatch-red h5,
-.atk-swatch-red h6 {
+.atk-swatch-green:not(.atk-text-inherit),
+.atk-swatch-green:not(.atk-text-inherit) h1,
+.atk-swatch-green:not(.atk-text-inherit) h2,
+.atk-swatch-green:not(.atk-text-inherit) h3,
+.atk-swatch-green:not(.atk-text-inherit) h4,
+.atk-swatch-green:not(.atk-text-inherit) h5,
+.atk-swatch-green:not(.atk-text-inherit) h6 {
   color: white;
 }
-.atk-swatch-red[class*=icon-],
-a.atk-swatch-red[class*=icon-] {
+.atk-swatch-green:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-green:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #f9451f;
+  color: #00cc66;
 }
-.atk-swatch-red[class*=icon-][class*=atk-shape] {
+.atk-swatch-green:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
   color: white;
-  background: #f9451f;
+  background: #00cc66;
 }
-.atk-swatch-red[class*=icon-]:hover {
+.atk-swatch-green:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #f9451f;
+  color: #00cc66;
 }
-a.atk-swatch-red:hover,
-.atk-swatch-red[class*=atk-button]:hover {
+a.atk-swatch-green:not(.atk-text-inherit):hover,
+.atk-swatch-green:not(.atk-text-inherit)[class*=atk-button]:hover {
   color: white;
-  background: #fa5835;
+  background: #19d175;
 }
-.atk-swatch-red[class*='atk-button'],
-.atk-swatch-red.atk-label,
-.atk-table td.atk-swatch-red,
-.atk-table th.atk-swatch-red,
-.atk-swatch-red > .atk-popover-arrow:before {
+.atk-swatch-green:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-green:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-green:not(.atk-text-inherit),
+.atk-table th.atk-swatch-green:not(.atk-text-inherit),
+.atk-swatch-green:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
-  background: #f9451f;
-  border-color: #f9451f;
+  background: #00cc66;
+  border-color: #00cc66;
 }
-.atk-swatch-red[class*='atk-button'] {
-  border-color: #df2c06;
+.atk-swatch-green:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #00994d;
 }
-.atk-swatch-red[class*='atk-button']:hover {
-  border-color: #df2c06;
+.atk-swatch-green:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #00994d;
 }
-*[class*=atk-menu] li:hover.atk-swatch-red > a {
+*[class*=atk-menu] li:hover.atk-swatch-green:not(.atk-text-inherit) > a {
   color: white;
 }
 .atk-swatch-green {
   background: #00cc66;
   border-color: #00cc66;
 }
-.atk-swatch-green a {
+.atk-swatch-blue:not(.atk-text-inherit) {
+  background: #0095ff;
+  border-color: #0095ff;
+}
+.atk-swatch-blue:not(.atk-text-inherit) a {
   color: white;
 }
-.atk-swatch-green hr {
+.atk-swatch-blue:not(.atk-text-inherit) hr {
   border-color: #000;
 }
-.atk-swatch-green,
-.atk-swatch-green h1,
-.atk-swatch-green h2,
-.atk-swatch-green h3,
-.atk-swatch-green h4,
-.atk-swatch-green h5,
-.atk-swatch-green h6 {
+.atk-swatch-blue:not(.atk-text-inherit),
+.atk-swatch-blue:not(.atk-text-inherit) h1,
+.atk-swatch-blue:not(.atk-text-inherit) h2,
+.atk-swatch-blue:not(.atk-text-inherit) h3,
+.atk-swatch-blue:not(.atk-text-inherit) h4,
+.atk-swatch-blue:not(.atk-text-inherit) h5,
+.atk-swatch-blue:not(.atk-text-inherit) h6 {
   color: white;
 }
-.atk-swatch-green[class*=icon-],
-a.atk-swatch-green[class*=icon-] {
+.atk-swatch-blue:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-blue:not(.atk-text-inherit)[class*=icon-] {
   background: none;
-  color: #00cc66;
+  color: #0095ff;
 }
-.atk-swatch-green[class*=icon-][class*=atk-shape] {
+.atk-swatch-blue:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
   color: white;
-  background: #00cc66;
+  background: #0095ff;
 }
-.atk-swatch-green[class*=icon-]:hover {
+.atk-swatch-blue:not(.atk-text-inherit)[class*=icon-]:hover {
   background: none;
-  color: #00cc66;
+  color: #0095ff;
 }
-a.atk-swatch-green:hover,
-.atk-swatch-green[class*=atk-button]:hover {
+a.atk-swatch-blue:not(.atk-text-inherit):hover,
+.atk-swatch-blue:not(.atk-text-inherit)[class*=atk-button]:hover {
   color: white;
-  background: #19d175;
+  background: #19a0ff;
 }
-.atk-swatch-green[class*='atk-button'],
-.atk-swatch-green.atk-label,
-.atk-table td.atk-swatch-green,
-.atk-table th.atk-swatch-green,
-.atk-swatch-green > .atk-popover-arrow:before {
+.atk-swatch-blue:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-blue:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-blue:not(.atk-text-inherit),
+.atk-table th.atk-swatch-blue:not(.atk-text-inherit),
+.atk-swatch-blue:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
-  background: #00cc66;
-  border-color: #00cc66;
+  background: #0095ff;
+  border-color: #0095ff;
 }
-.atk-swatch-green[class*='atk-button'] {
-  border-color: #00994d;
+.atk-swatch-blue:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #0077cc;
 }
-.atk-swatch-green[class*='atk-button']:hover {
-  border-color: #00994d;
+.atk-swatch-blue:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #0077cc;
 }
-*[class*=atk-menu] li:hover.atk-swatch-green > a {
+*[class*=atk-menu] li:hover.atk-swatch-blue:not(.atk-text-inherit) > a {
   color: white;
 }
 .atk-swatch-blue {
   background: #0095ff;
   border-color: #0095ff;
-}
-.atk-swatch-blue a {
-  color: white;
-}
-.atk-swatch-blue hr {
-  border-color: #000;
-}
-.atk-swatch-blue,
-.atk-swatch-blue h1,
-.atk-swatch-blue h2,
-.atk-swatch-blue h3,
-.atk-swatch-blue h4,
-.atk-swatch-blue h5,
-.atk-swatch-blue h6 {
-  color: white;
-}
-.atk-swatch-blue[class*=icon-],
-a.atk-swatch-blue[class*=icon-] {
-  background: none;
-  color: #0095ff;
-}
-.atk-swatch-blue[class*=icon-][class*=atk-shape] {
-  color: white;
-  background: #0095ff;
-}
-.atk-swatch-blue[class*=icon-]:hover {
-  background: none;
-  color: #0095ff;
-}
-a.atk-swatch-blue:hover,
-.atk-swatch-blue[class*=atk-button]:hover {
-  color: white;
-  background: #19a0ff;
-}
-.atk-swatch-blue[class*='atk-button'],
-.atk-swatch-blue.atk-label,
-.atk-table td.atk-swatch-blue,
-.atk-table th.atk-swatch-blue,
-.atk-swatch-blue > .atk-popover-arrow:before {
-  color: white;
-  background: #0095ff;
-  border-color: #0095ff;
-}
-.atk-swatch-blue[class*='atk-button'] {
-  border-color: #0077cc;
-}
-.atk-swatch-blue[class*='atk-button']:hover {
-  border-color: #0077cc;
-}
-*[class*=atk-menu] li:hover.atk-swatch-blue > a {
-  color: white;
 }
 body {
   background-attachment: fixed;

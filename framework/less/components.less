@@ -34,6 +34,16 @@
         }
     }
 }
+.atk-actions-xxlarge {
+    >* {
+        + * {
+            margin-left: (2em * @baselineDestroyer);
+        }
+        &.atk-sep + * {
+            margin-left: 0;
+        }
+    }
+}
 .atk-sep-small {
     margin-left: @margin/4 !important;
     margin-right: @margin/4 !important;
@@ -133,7 +143,7 @@ input {
         &.atk-button-outline {
             .buttonOutline;
         }
-        *[class*='atk-menu'] & {
+        *[class*='atk-menu']>li& {
             .border-radius(0);
         }
         .atk-menu-horizontal li:first-child & {
@@ -142,7 +152,7 @@ input {
         .atk-menu-horizontal li:last-child & {
             .border-right-radius(@cornerRadius);
         }
-        .atk-menu-horizontal li + li & {
+        .atk-menu-horizontal li + li& {
             border-left: none;
         }
         .atk-menu-vertical li:first-child & {
@@ -166,9 +176,9 @@ input {
 }
 .buttonOutline() {
     background: none;
-    border-color: #fff;
+    // border-color: #fff;
     box-shadow: none !important;
-    color: #fff !important;
+    // color: #fff !important;
 }
 ul[class*=atk-menu] {
     display: inline-block;
@@ -403,6 +413,19 @@ ul[class*=atk-menu] {
             }
         }
     }
+    &.atk-push-xlarge {
+        @m: @margin*3;
+        margin-bottom: @m; 
+        .atk-cells-group>&>.atk-cell {
+           padding-bottom: @m;
+        }
+        &.atk-row {
+            margin-bottom: -@m;
+            >*[class*=atk-col] {
+                margin-bottom: @m;
+            }
+        }
+    }
     &.atk-push-reset {
         margin-bottom: 0;
     }
@@ -481,7 +504,7 @@ ul[class*=atk-menu] {
     }
 }
 .atk-shape-circle {
-    &, img& {
+    &, img&, a&[class*='atk-button'], button&[class*='atk-button'], input&[class*='atk-button'], a&.ui-button, button&.ui-button, input&.ui-button {
         .border-radius(50%);
     }
 }
@@ -500,7 +523,7 @@ ul[class*=atk-menu] {
 
 // Swatches
 .createSwatch(@color, @link:auto) {
-    .@{color} {
+    .@{color}:not(.atk-text-inherit) {
         background: @@color;
         border-color: @@color;
         a {
@@ -553,6 +576,10 @@ ul[class*=atk-menu] {
             .colorCheck(@@color);
         }
     }
+    .@{color} {
+        background: @@color;
+        border-color: @@color;
+    }    
 }
 
 // Effects
