@@ -6129,8 +6129,8 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 }
 *[class*=atk-section].atk-section-xlarge,
 .ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-xlarge {
-  padding-bottom: 4.8rem;
-  padding-top: 4.8rem;
+  padding-bottom: 6.4rem;
+  padding-top: 6.4rem;
 }
 *[class*=atk-section].atk-section-reset,
 .ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-reset {
