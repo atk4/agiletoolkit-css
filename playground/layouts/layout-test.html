@@ -89,24 +89,24 @@
 
 <!-- INFO Some Chrome extensions need the display-property of the body to be 'block' -->
 <body>
-	<div class="Grid">
-	<div id="Header" class="Row">
+	<div class="atk-layout">
+	<div id="Header" class="atk-layout-row">
 		<h1>Header (70pt)</h1>
 	</div>
-	<div id="Main" class="Row Expand">
-		<div id="Inside" class="Grid">
-			<div id="LSide" class="Column">
+	<div id="Main" class="atk-layout-row atk-layout-fluid">
+		<div id="Inside" class="atk-layout atk-layout-cell">
+			<div id="LSide" class="atk-layout atk-layout-cell">
 				<p>LSide (auto)</p>
 			</div>
-			<div id="Content" class="Column Expand">
+			<div id="Content" class="atk-layout atk-layout-cell Expand">
 				<h2>Content (expands)</h2>
 			</div>
-			<div id="RSide" class="Column">
+			<div id="RSide" class="atk-layout-cell">
 				<p>RSide (100pt)</p>
 			</div>
 		</div>
 	</div>
-	<div id="Footer" class="Row">
+	<div id="Footer" class="atk-layout-row">
 		<h3>Footer (auto)</h3>
 	</div>
 

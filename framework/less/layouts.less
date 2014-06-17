@@ -1,70 +1,33 @@
 // ==========================================================
 // Layouts (credit: Pixel vs. Bytes)
 // ==========================================================
-html, body  {
-	height: 100%; /* INFO Optional CSS for a sticky footer */
+html, body, .atk-layout  {
+	height: 100%;
 }
-
-
-// .atk-layout {
-// 	.box-sizing;
-// 	display: table;
-// 	height: 100%;
-// 	width: 100%;
-// 	>.atk-layout-row, >.atk-layout-row>.atk-layout-cell, >.atk-layout-column {
-// 		height: 0.1%;
-// 		position: relative;
-// 	}
-// 	>.atk-layout-row {
-// 		display: table-row;
-// 		height: 1px;
-// 		>.atk-layout-cell {
-// 			min-width: 100%;
-// 		}
-// 		&.atk-layout-expand, &.atk-layout-fluid {
-// 			height: auto;
-// 		}
-// 	}
-// 	>.atk-layout-column {
-// 		display: table-cell;
-// 		height: auto;
-// 		vertical-align: top;
-// 		width: 1px;
-// 		&.atk-layout-expand, &.atk-layout-fluid {
-// 			width: auto;
-// 		}
-// 	}
-// }
-
-*>.atk-layout {
+.atk-layout {
 	.box-sizing;
 	display: table;
 	width: 100%;
-	height: 100%;
+	>.atk-layout-row, >.atk-layout-column, .atk-layout-row>.atk-layout-column {
+		height: 0.1%; /* NOTE: Forces child-margins inside the box */
+		position: relative;
+	}
+	>.atk-layout-row {
+		display: table-row;
+		height: 1px;
+		&.atk-layout-fluid, &.atk-layout-expand {
+			height: auto;
+		}
+	}
+	>.atk-layout-column, >.atk-layout-row>.atk-layout-column {
+		display: table-cell;
+		height: auto; /* NOTE Just to reset the IE7 fix */
+		width: 1px;
+		&.atk-layout-fluid, &.atk-layout-expand {
+			width: auto;
+		}
+	}
 }
-/* NOTE This is the only block IE7- should read */
-.atk-layout>.atk-layout-row, .atk-layout>.atk-layout-column, .atk-layout>.atk-layout-row>.atk-layout-column {
-	height: 0.1%; /* NOTE: Forces child-margins inside the box */
-	position: relative;
-}
-.atk-layout>.atk-layout-row {
-	display: table-row;
-	height: 1px;
-}
-.atk-layout>.atk-layout-row.atk-layout-fluid {
-	height: auto;
-}
-.atk-layout>.atk-layout-column, .atk-layout>.atk-layout-row>.atk-layout-column {
-	display: table-cell;
-	height: auto; /* NOTE Just to reset the IE7 fix */
-	width: 1px;
-}
-.atk-layout>.atk-layout-column.atk-layout-fluid, .atk-layout>.atk-layout-row>.atk-layout-column.atk-layout-fluid {
-	width: auto;
-}
-
-
-
 .atk-wrapper {
     margin-left: auto;
     margin-right: auto;

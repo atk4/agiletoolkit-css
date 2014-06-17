@@ -4679,22 +4679,20 @@ table {
   content: '\e97b';
 }
 html,
-body {
+body,
+.atk-layout {
   height: 100%;
-  /* INFO Optional CSS for a sticky footer */
 }
-* > .atk-layout {
+.atk-layout {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: table;
   width: 100%;
-  height: 100%;
 }
-/* NOTE This is the only block IE7- should read */
 .atk-layout > .atk-layout-row,
 .atk-layout > .atk-layout-column,
-.atk-layout > .atk-layout-row > .atk-layout-column {
+.atk-layout .atk-layout-row > .atk-layout-column {
   height: 0.1%;
   /* NOTE: Forces child-margins inside the box */
   position: relative;
@@ -4703,7 +4701,8 @@ body {
   display: table-row;
   height: 1px;
 }
-.atk-layout > .atk-layout-row.atk-layout-fluid {
+.atk-layout > .atk-layout-row.atk-layout-fluid,
+.atk-layout > .atk-layout-row.atk-layout-expand {
   height: auto;
 }
 .atk-layout > .atk-layout-column,
@@ -4714,7 +4713,9 @@ body {
   width: 1px;
 }
 .atk-layout > .atk-layout-column.atk-layout-fluid,
-.atk-layout > .atk-layout-row > .atk-layout-column.atk-layout-fluid {
+.atk-layout > .atk-layout-row > .atk-layout-column.atk-layout-fluid,
+.atk-layout > .atk-layout-column.atk-layout-expand,
+.atk-layout > .atk-layout-row > .atk-layout-column.atk-layout-expand {
   width: auto;
 }
 .atk-wrapper {
@@ -5915,7 +5916,8 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu] {
 .atk-block {
   display: block;
 }
-.atk-jackscrew {
+.atk-jackscrew,
+.atk-expand {
   width: 100%;
 }
 .atk-clear-fix {
