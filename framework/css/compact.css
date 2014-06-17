@@ -5276,10 +5276,6 @@ a:focus {
 .atk-table table {
   width: 100%;
 }
-.atk-table table thead th,
-.atk-table table tbody td {
-  background: #fff;
-}
 .atk-table table thead th:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort),
 .atk-table table tbody td:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort) {
   padding-bottom: 0.23rem;
