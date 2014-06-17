@@ -5730,22 +5730,22 @@ input.ui-button.atk-button-outline {
   background: none;
   box-shadow: none !important;
 }
-*[class*='atk-menu'] > lia[class*='atk-button'],
-*[class*='atk-menu'] > libutton[class*='atk-button'],
-*[class*='atk-menu'] > liinput[class*='atk-button'],
-*[class*='atk-menu'] > lia.ui-button,
-*[class*='atk-menu'] > libutton.ui-button,
-*[class*='atk-menu'] > liinput.ui-button {
+.atk-buttonset > a[class*='atk-button'],
+.atk-buttonset > button[class*='atk-button'],
+.atk-buttonset > input[class*='atk-button'],
+.atk-buttonset > a.ui-button,
+.atk-buttonset > button.ui-button,
+.atk-buttonset > input.ui-button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.atk-menu-horizontal li:first-child a[class*='atk-button'],
-.atk-menu-horizontal li:first-child button[class*='atk-button'],
-.atk-menu-horizontal li:first-child input[class*='atk-button'],
-.atk-menu-horizontal li:first-child a.ui-button,
-.atk-menu-horizontal li:first-child button.ui-button,
-.atk-menu-horizontal li:first-child input.ui-button {
+.atk-buttonset > a[class*='atk-button']:first-child,
+.atk-buttonset > button[class*='atk-button']:first-child,
+.atk-buttonset > input[class*='atk-button']:first-child,
+.atk-buttonset > a.ui-button:first-child,
+.atk-buttonset > button.ui-button:first-child,
+.atk-buttonset > input.ui-button:first-child {
   -webkit-border-top-left-radius: 5px;
   -moz-border-top-left-radius: 5px;
   border-top-left-radius: 5px;
@@ -5753,12 +5753,12 @@ input.ui-button.atk-button-outline {
   -moz-border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.atk-menu-horizontal li:last-child a[class*='atk-button'],
-.atk-menu-horizontal li:last-child button[class*='atk-button'],
-.atk-menu-horizontal li:last-child input[class*='atk-button'],
-.atk-menu-horizontal li:last-child a.ui-button,
-.atk-menu-horizontal li:last-child button.ui-button,
-.atk-menu-horizontal li:last-child input.ui-button {
+.atk-buttonset > a[class*='atk-button']:last-child,
+.atk-buttonset > button[class*='atk-button']:last-child,
+.atk-buttonset > input[class*='atk-button']:last-child,
+.atk-buttonset > a.ui-button:last-child,
+.atk-buttonset > button.ui-button:last-child,
+.atk-buttonset > input.ui-button:last-child {
   -webkit-border-top-right-radius: 5px;
   -moz-border-top-right-radius: 5px;
   border-top-right-radius: 5px;
@@ -5766,47 +5766,13 @@ input.ui-button.atk-button-outline {
   -moz-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.atk-menu-horizontal li + lia[class*='atk-button'],
-.atk-menu-horizontal li + libutton[class*='atk-button'],
-.atk-menu-horizontal li + liinput[class*='atk-button'],
-.atk-menu-horizontal li + lia.ui-button,
-.atk-menu-horizontal li + libutton.ui-button,
-.atk-menu-horizontal li + liinput.ui-button {
+.atk-buttonset > a[class*='atk-button'] + *,
+.atk-buttonset > button[class*='atk-button'] + *,
+.atk-buttonset > input[class*='atk-button'] + *,
+.atk-buttonset > a.ui-button + *,
+.atk-buttonset > button.ui-button + *,
+.atk-buttonset > input.ui-button + * {
   border-left: none;
-}
-.atk-menu-vertical li:first-child a[class*='atk-button'],
-.atk-menu-vertical li:first-child button[class*='atk-button'],
-.atk-menu-vertical li:first-child input[class*='atk-button'],
-.atk-menu-vertical li:first-child a.ui-button,
-.atk-menu-vertical li:first-child button.ui-button,
-.atk-menu-vertical li:first-child input.ui-button {
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.atk-menu-vertical li:last-child a[class*='atk-button'],
-.atk-menu-vertical li:last-child button[class*='atk-button'],
-.atk-menu-vertical li:last-child input[class*='atk-button'],
-.atk-menu-vertical li:last-child a.ui-button,
-.atk-menu-vertical li:last-child button.ui-button,
-.atk-menu-vertical li:last-child input.ui-button {
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.atk-menu-vertical li + li a[class*='atk-button'],
-.atk-menu-vertical li + li button[class*='atk-button'],
-.atk-menu-vertical li + li input[class*='atk-button'],
-.atk-menu-vertical li + li a.ui-button,
-.atk-menu-vertical li + li button.ui-button,
-.atk-menu-vertical li + li input.ui-button {
-  border-top: none;
 }
 .atk-button-blank {
   background: none !important;

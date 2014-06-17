@@ -143,26 +143,17 @@ input {
         &.atk-button-outline {
             .buttonOutline;
         }
-        *[class*='atk-menu']>li& {
+        .atk-buttonset>& {
             .border-radius(0);
-        }
-        .atk-menu-horizontal li:first-child & {
-            .border-left-radius(@cornerRadius);
-        }
-        .atk-menu-horizontal li:last-child & {
-            .border-right-radius(@cornerRadius);
-        }
-        .atk-menu-horizontal li + li& {
-            border-left: none;
-        }
-        .atk-menu-vertical li:first-child & {
-            .border-top-radius(@cornerRadius);
-        }
-        .atk-menu-vertical li:last-child & {
-            .border-bottom-radius(@cornerRadius);
-        }
-        .atk-menu-vertical li + li & {
-            border-top: none;
+            &:first-child {
+                .border-left-radius(@cornerRadius);
+            }
+            &:last-child {
+                .border-right-radius(@cornerRadius);
+            }
+            + * {
+                border-left: none;
+            }
         }
     }
 }
