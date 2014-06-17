@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8"> 
+	<style type="text/css">
+		/* INFO Essential CSS for the grid layout */
+
+		/* NOTE IE7 and older explorers don't know anything about CSS-tables,
+		        so we use a CSS hack to exclude them. */
+		*>/**/.Grid {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
+		/* NOTE This is the only block IE7- should read */
+		.Grid>.Row, .Grid>.Column, .Grid>.Row>.Column {
+			height: 0.1%; /* NOTE: Forces child-margins inside the box */
+			position: relative;
+		}
+		.Grid>/**/.Row {
+			display: table-row;
+			height: 1px;
+		}
+		.Grid>/**/.Row.Expand {
+			height: auto;
+		}
+		.Grid>/**/.Column, .Grid>/**/.Row>.Column {
+			display: table-cell;
+			height: auto; /* NOTE Just to reset the IE7 fix */
+			width: 1px;
+		}
+		.Grid>/**/.Column.Expand, .Grid>/**/.Row>.Column.Expand {
+			width: auto;
+		}
+
+		/* INFO Optional CSS for a sticky footer */
+
+		html, body  {
+			height: 100%;
+		}
+
+		/* INFO Some other CSS for the look */
+		
+		html, body {
+			margin: 0em;
+		}	
+
+		body>.Grid {
+			background: #999;
+			margin: 0em;
+			padding: 1em;
+			table-layout: fixed; /* NOTE Speed up table rendering */
+		}
+		
+		#Header {
+			background: #fcc;
+			height: 70pt;
+		}
+		#Main {
+			background: #cfc;
+		}
+		#Footer {
+			background: #ccf;
+		}
+
+		#LSide {
+			background: #fcf;
+		}
+		#Content {
+			background: #ffc;
+		}
+		#RSide {
+			background: #cff;
+			width:150pt;
+		}
+		
+		p, h1, h2, h3 {
+			margin: 10pt;
+		}
+	</style>
+	<title>Pixels vs. Bytes | Example: This CSS layout grid is no Holy Grail</title>
+</head>
+
+<!-- INFO Some Chrome extensions need the display-property of the body to be 'block' -->
+<body>
+	<div class="Grid">
+	<div id="Header" class="Row">
+		<h1>Header (70pt)</h1>
+	</div>
+	<div id="Main" class="Row Expand">
+		<div id="Inside" class="Grid">
+			<div id="LSide" class="Column">
+				<p>LSide (auto)</p>
+			</div>
+			<div id="Content" class="Column Expand">
+				<h2>Content (expands)</h2>
+			</div>
+			<div id="RSide" class="Column">
+				<p>RSide (100pt)</p>
+			</div>
+		</div>
+	</div>
+	<div id="Footer" class="Row">
+		<h3>Footer (auto)</h3>
+	</div>
+
+	<script type="text/javascript">
+		// INFO IE and Opera need some fixing to display the correct height of nested grids.
+
+		// NOTE Fortunately IE *and* Opera both implement attachEvent() and they seem to be
+		//      the only browsers, so we can use it as a filter as well.
+		if (window.attachEvent) {
+			function fixGrid() {
+				var grid = document.getElementById('Inside');
+				grid.style.height = null; // NOTE Remove old height before getting new value.
+				grid.style.height = grid.parentNode.offsetHeight+'px';
+			}
+			window.attachEvent('onload', fixGrid);
+			window.attachEvent('onresize', fixGrid);
+		}
+	</script>
+</div></body>
+
+</html>
