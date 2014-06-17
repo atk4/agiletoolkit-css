@@ -11,8 +11,8 @@ html(class='no-js')
     .atk-layout
       include includes/header
       .atk-layout-row.atk-layout-fluid
-          .atk-layout.atk-layout-cell
-              .atk-layout-column.atk-layout-fluid
+          .atk-layout.atk-layout-cell#atk-layout-content
+              .atk-layout-column.atk-layout-expand
                 .atk-wrapper.atk-section-large
                   h2 Examples
                   p List of pre-cooked examples that can be used in your projects.
@@ -21,5 +21,6 @@ html(class='no-js')
                       a(href='examples/form-login.html') Login Form
                     li
                       a(href='examples/map-browser.html') Map Browser
+                      span.atk-text-dimmed &nbsp;(Doesn't work in Firefox because there is no support of 'position:relative' with 'display:table-cell')
     include includes/scripts
     include includes/analytics
