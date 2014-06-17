@@ -1,16 +1,13 @@
-// INFO IE and Opera need some fixing to display the correct height of nested layouts.
+// INFO IE and Opera need some fixing to display the correct height of nested grids.
 
-function fixLayout() {
-	var container = $('.atk-layout.atk-layout-cell');
-	var height = $('.atk-layout.atk-layout-cell').parent().outerHeight();
-	container.height(height);
-}
-
-$(function() {
-	if ((navigator.userAgent.match(/msie/i)) || (navigator.userAgent.match(/opera/i))){
-		fixLayout();
-		$(window).resize(function() {
-        	fixLayout();
-    	});
+// NOTE Fortunately IE *and* Opera both implement attachEvent() and they seem to be
+//      the only browsers, so we can use it as a filter as well.
+if (window.attachEvent) {
+	function fixGrid() {
+		var grid = document.getElementById('Inside');
+		grid.style.height = null; // NOTE Remove old height before getting new value.
+		grid.style.height = grid.parentNode.offsetHeight+'px';
 	}
-});
+	window.attachEvent('onload', fixGrid);
+	window.attachEvent('onresize', fixGrid);
+}
