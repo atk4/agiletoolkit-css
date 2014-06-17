@@ -4694,7 +4694,6 @@ body,
 .atk-layout > .atk-layout-column,
 .atk-layout .atk-layout-row > .atk-layout-column {
   height: 0.1%;
-  /* NOTE: Forces child-margins inside the box */
   position: relative;
 }
 .atk-layout > .atk-layout-row {
@@ -4709,7 +4708,6 @@ body,
 .atk-layout > .atk-layout-row > .atk-layout-column {
   display: table-cell;
   height: auto;
-  /* NOTE Just to reset the IE7 fix */
   width: 1px;
 }
 .atk-layout > .atk-layout-column.atk-layout-fluid,

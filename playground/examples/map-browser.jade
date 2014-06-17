@@ -17,15 +17,15 @@ html(class='no-js')
   body
     include ../includes/browsehappy
     include ../includes/analytics
-    div.atk-layout
-      div.atk-layout-row
-        div.atk-layout-cell.atk-swatch-ink
-          div.atk-wrapper.atk-padding-small
+    .atk-layout
+      .atk-layout-row
+        .atk-layout-cell.atk-swatch-ink
+          .atk-wrapper.atk-padding-small
             h2 Header Area
-      div.atk-layout-row.atk-layout-fluid
-        div.atk-layout.atk-layout-cell
-          div.atk-layout-column.atk-swatch-gray.atk-col-3
-            div.atk-padding
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell#atk-layout-content
+          .atk-layout-column.atk-swatch-gray.atk-col-3
+            .atk-padding
               h3 Stacked Form
               form
                 .atk-push-xsmall
@@ -41,7 +41,7 @@ html(class='no-js')
                 .atk-actions
                   button.atk-button Okay
                   button.atk-button Cancel
-          div.atk-layout-column
+          .atk-layout-column.atk-layout-expand
             #map-canvas
             style.
               html, body, #map-canvas {
@@ -62,7 +62,7 @@ html(class='no-js')
               }
 
               google.maps.event.addDomListener(window, 'load', initialize);
-      div.atk-layout-row
-        div.atk-layout-cell.atk-swatch-ink
-          div.atk-wrapper.atk-padding
+      .atk-layout-row
+        .atk-layout-cell.atk-swatch-ink
+          .atk-wrapper.atk-padding
             h2 Footer Area
