@@ -4691,6 +4691,12 @@ body {
   height: 100%;
   width: 100%;
 }
+.atk-layout > .atk-layout-row,
+.atk-layout > .atk-layout-row > .atk-layout-cell,
+.atk-layout > .atk-layout-column {
+  height: 0.1%;
+  position: relative;
+}
 .atk-layout > .atk-layout-row {
   display: table-row;
   height: 1px;
@@ -4698,14 +4704,17 @@ body {
 .atk-layout > .atk-layout-row > .atk-layout-cell {
   min-width: 100%;
 }
-.atk-layout > .atk-layout-row.atk-layout-fluid {
-  height: 100%;
+.atk-layout > .atk-layout-row.atk-layout-expand {
+  height: auto;
 }
 .atk-layout > .atk-layout-column {
   display: table-cell;
-  min-width: 1px;
-  position: relative;
+  height: auto;
   vertical-align: top;
+  width: 1px;
+}
+.atk-layout > .atk-layout-column.atk-layout-expand {
+  width: auto;
 }
 body > .atk-layout {
   table-layout: fixed;
