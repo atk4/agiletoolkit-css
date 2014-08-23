@@ -72,6 +72,9 @@
     &.atk-cells-justified {
         table-layout: fixed;
     }
+    &[class*=atk-move] {
+        width: auto;
+    }
 }
 .atk-cells-group {
     display: table;
@@ -103,6 +106,11 @@
     &.atk-cells-group.atk-cells-gutter-small>.atk-cells>.atk-cell {
         padding-left: (0.5em * @baselineDestroyer)/2;
         padding-right: (0.5em * @baselineDestroyer)/2;
+    }
+    &.atk-cells.atk-cells-gutter-xsmall>.atk-cell,
+    &.atk-cells-group.atk-cells-gutter-xsmall>.atk-cells>.atk-cell {
+        padding-left: (0.25em * @baselineDestroyer)/2;
+        padding-right: (0.25em * @baselineDestroyer)/2;
     }
     &.atk-cells>.atk-cell,
     &.atk-cells-group>.atk-cells>.atk-cell {
@@ -203,7 +211,7 @@ ul[class*=atk-menu] {
             display: inline-block;
             white-space: nowrap;
         }
-        *[class*=atk-menu] {
+        *[class*=atk-menu]:not(.atk-menu-separated) {
             .clear-ul;
             display: none;
             z-index: 99;
@@ -236,9 +244,13 @@ ul[class*=atk-menu] {
                     margin: 0;
                 }
             }
-            *[class*=atk-menu] {
+            *[class*=atk-menu]:not(.atk-menu-separated) {
                 .position(@t:100%, @l:0);
                 min-width: 100%;
+                &.atk-menu-right {
+                    left: auto;
+                    right: 0;
+                }
             }
         }
     }
@@ -253,7 +265,7 @@ ul[class*=atk-menu] {
                     text-align: left;
                 }
             }
-            *[class*=atk-menu] {
+            *[class*=atk-menu]:not(.atk-menu-separated) {
                 .position(@t:0, @l:100%);
             }
         }
@@ -494,6 +506,46 @@ ul[class*=atk-menu] {
         .border-radius(@cornerRadius);
     }
 }
+.atk-shape-rounded-top {
+     &, img& {
+        .border-top-radius(@cornerRadius);
+    }   
+}
+.atk-shape-rounded-bottom {
+     &, img& {
+        .border-bottom-radius(@cornerRadius);
+    }   
+}
+.atk-shape-rounded-left {
+     &, img& {
+        .border-left-radius(@cornerRadius);
+    }   
+}
+.atk-shape-rounded-right {
+     &, img& {
+        .border-right-radius(@cornerRadius);
+    }   
+}
+.atk-shape-rounded-top-left {
+     &, img& {
+        .border-top-left-radius(@cornerRadius);
+    }   
+}
+.atk-shape-rounded-top-right {
+     &, img& {
+        .border-top-right-radius(@cornerRadius);
+    }   
+}
+.atk-shape-rounded-bottom-left {
+     &, img& {
+        .border-bottom-left-radius(@cornerRadius);
+    }   
+}
+.atk-shape-rounded-bottom-right {
+     &, img& {
+        .border-bottom-right-radius(@cornerRadius);
+    }   
+}
 .atk-shape-circle {
     &, img&, a&[class*='atk-button'], button&[class*='atk-button'], input&[class*='atk-button'], a&.ui-button, button&.ui-button, input&.ui-button {
         .border-radius(50%);
@@ -505,12 +557,31 @@ ul[class*=atk-menu] {
 // Colors
 // ==========================================================
 
-.colorCheck (@a) when (luma(@a) >= @swatchText) {
+.colorCheck (@a,@b:auto) when (luma(@a) >= @swatchText) {
   color: black;
+  & when (@b = important) {
+    color: black !important;
+  }
 }
-.colorCheck (@a) when (luma(@a) < @swatchText) {
+.colorCheck (@a,@b:auto) when (luma(@a) < @swatchText) {
   color: white;
+  & when (@b = important) {
+    color: white !important;
+  }
 }
+.backgroundColorCheck (@a) when (luma(@a) >= @swatchText) {
+  background-color: shade(@a, @hoverIntensity);
+}
+.backgroundColorCheck (@a) when (luma(@a) < @swatchText) {
+  background-color: tint(@a, @hoverIntensity);
+}
+.borderColorCheck (@a) when (luma(@a) >= @swatchText) {
+  border-color: shade(@a, @hoverIntensity%);
+}
+.borderColorCheck (@a) when (luma(@a) < @swatchText) {
+  border-color: tint(@a, @hoverIntensity);
+}
+
 
 // Swatches
 .createSwatch(@color, @link:auto) {
@@ -526,6 +597,17 @@ ul[class*=atk-menu] {
             }
             & when (@link = auto) {
                 .colorCheck(@@color);
+            }
+            *[class*=atk-swatch] & {
+                & when not (@link = auto) {
+                    color: @link;
+                    &:hover {
+                        color: shade(@link, 15%);
+                    }
+                }
+                & when (@link = auto) {
+                    .colorCheck(@@color);
+                }
             }
         }
         hr {
@@ -550,7 +632,7 @@ ul[class*=atk-menu] {
         }
         a&:hover, &[class*=atk-button]:hover {
             .colorCheck(@@color);
-            background: tint(@@color, 10%);
+            .backgroundColorCheck(@@color);
         }
         &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, >.atk-popover-arrow:before { 
             .colorCheck(@@color);
@@ -563,8 +645,16 @@ ul[class*=atk-menu] {
                 border-color: darken(@@color, 10%);
             }
         }
-        *[class*=atk-menu] li:hover&>a {
+        *[class*=atk-menu]>li.atk-menu-separated:not(:first-child)>a& {
+            .borderColorCheck(@@color);
+            border-style: solid;
+            border-width: 1px 0 0 0;
+        }
+        *[class*=atk-menu] li[class*=atk-swatch] a& {
             .colorCheck(@@color);
+        }
+        *[class*=atk-menu] li:hover&>a {
+            .colorCheck(@@color, important);
         }
     }
     .@{color} {

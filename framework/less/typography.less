@@ -61,7 +61,7 @@ h3, .atk-size-mega {
 h4, .atk-size-kilo {
     font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1.5);
 }
-h5, .atk-size-reset {
+h5, .atk-size-default, .atk-size-reset {
     font-size: @bodySize;
 }
 h6, small, .atk-size-milli {
@@ -110,6 +110,9 @@ h6, small, .atk-size-milli {
     &, a&[class*='atk-button'], button&[class*='atk-button'], input&[class*='atk-button'], a&.ui-button, button&.ui-button, input&.ui-button {
         line-height: 1;
     }
+}
+.atk-text-baseline-default {
+    line-height: @bodyBaseline;
 }
 .atk-text-ellipsis {
     display: inline-block;
