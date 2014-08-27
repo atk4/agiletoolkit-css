@@ -82,20 +82,29 @@ h6, small, .atk-size-milli {
 .atk-text-bold {
     font-weight: bold;
 }
+.atk-text-medium {
+    font-weight: 600;
+}
 .atk-text-normal {
     font-weight: normal;
     text-transform: normal;
 }
 .atk-text-dimmed {
-    @c: lighten(@bodyColor, @textDimmed);
     &, *[class*=atk-swatch] & {
-        color: @c;
+        color: @textDimmed;
+    }
+    a, *[class*=atk-swatch]:not(.atk-text-inherit) & a:link {
+        @newC: darken(@textDimmed, 10%);
+        color: @newC;
+        &:hover {
+            color:darken(@newC, @hoverIntensity*2);
+        }
     }
     a& {
         &, *[class*=atk-swatch] & {
-            color: @c;
+            color: @textDimmed;
             &:hover {
-                color: shade(@c, 15%);
+                color: darken(@textDimmed, @hoverIntensity*2);
             }
         }
     }

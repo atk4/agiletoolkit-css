@@ -304,6 +304,33 @@ ul[class*=atk-menu] {
     white-space: nowrap;
 }
 
+
+// Grid
+.atk-grid.atk-row {
+    margin-left: -@margin  * @baselineDestroyer;
+    margin-top: -@margin  * @baselineDestroyer;
+    *[class^=atk-col] {
+        border-left-width: @margin  * @baselineDestroyer;
+        margin-top: @margin  * @baselineDestroyer;
+    }
+    &.atk-grid-gutter-small {
+        margin-left: (-@margin  * @baselineDestroyer)/2;
+        margin-top: (-@margin  * @baselineDestroyer)/2;
+        *[class^=atk-col] {
+            border-left-width: (@margin  * @baselineDestroyer)/2;
+            margin-top: (@margin  * @baselineDestroyer)/2;
+        }
+    }
+    &.atk-grid-gutter-large {
+        margin-left: (-@margin  * @baselineDestroyer)*2;
+        margin-top: (-@margin  * @baselineDestroyer)*2;
+        *[class^=atk-col] {
+            border-left-width: (@margin  * @baselineDestroyer)*2;
+            margin-top: (@margin  * @baselineDestroyer)*2;
+        }
+    }
+}
+
 // Helpers
 .atk-inline {
     display: inline-block;
@@ -360,7 +387,7 @@ ul[class*=atk-menu] {
 }
 
 // Pushes
-*[class*=atk-push] {
+*[class*=atk-push]:not(:last-child) {
     &.atk-row:before {
         float: left;
     }
@@ -558,9 +585,9 @@ ul[class*=atk-menu] {
 // ==========================================================
 
 .colorCheck (@a,@b:auto) when (luma(@a) >= @swatchText) {
-  color: black;
+  color: multiply(@bodyColor, @a);
   & when (@b = important) {
-    color: black !important;
+    color: multiply(@a, @bodyColor) !important;
   }
 }
 .colorCheck (@a,@b:auto) when (luma(@a) < @swatchText) {
@@ -570,51 +597,55 @@ ul[class*=atk-menu] {
   }
 }
 .backgroundColorCheck (@a) when (luma(@a) >= @swatchText) {
-  background-color: shade(@a, @hoverIntensity);
+  background-color: darken(@a, @hoverIntensity);
 }
 .backgroundColorCheck (@a) when (luma(@a) < @swatchText) {
-  background-color: tint(@a, @hoverIntensity);
+  background-color: lighten(@a, @hoverIntensity);
 }
-.borderColorCheck (@a) when (luma(@a) >= @swatchText) {
-  border-color: shade(@a, @hoverIntensity%);
+.borderColorCheck (@a, @b:0) when (luma(@a) >= @swatchText) {
+  border-color: darken(@a, @hoverIntensity + @b);
 }
-.borderColorCheck (@a) when (luma(@a) < @swatchText) {
-  border-color: tint(@a, @hoverIntensity);
+.borderColorCheck (@a, @b:0) when (luma(@a) < @swatchText) {
+  border-color: lighten(@a, @hoverIntensity + @b);
 }
 
 
 // Swatches
-.createSwatch(@color, @link:auto) {
+.createSwatch(@color, @swatchLinkColor:auto, @swatchTextColor:auto, @swatchHeadingColor:auto) {
     .@{color}:not(.atk-text-inherit) {
         background: @@color;
         border-color: @@color;
         a {
-            & when not (@link = auto) {
-                color: @link;
-                &:hover {
-                    color: shade(@link, 15%);
-                }
-            }
-            & when (@link = auto) {
-                .colorCheck(@@color);
-            }
-            *[class*=atk-swatch] & {
-                & when not (@link = auto) {
-                    color: @link;
+            &, *[class*=atk-swatch] & {
+                & when not (@swatchLinkColor = auto) {
+                    color: @swatchLinkColor;
                     &:hover {
-                        color: shade(@link, 15%);
+                        color: darken(@swatchLinkColor, @hoverIntensity * 3);
                     }
                 }
-                & when (@link = auto) {
+                & when (@swatchLinkColor = auto) {
                     .colorCheck(@@color);
                 }
             }
         }
         hr {
-            border-color: #000;
+            .borderColorCheck(@@color, 1%);
         }
-        &, h1, h2, h3, h4, h5, h6 {
-            .colorCheck(@@color);
+        & {
+            & when not (@swatchTextColor = auto) {
+                color: @swatchTextColor;
+            }
+            & when (@swatchTextColor = auto) {
+                .colorCheck(@@color);
+            }
+        }
+        h1, h2, h3, h4, h5, h6 {
+            & when not (@swatchHeadingColor = auto) {
+                color: @swatchHeadingColor;
+            }
+            & when (@swatchHeadingColor = auto) {
+                .colorCheck(@@color);
+            }
         }
         &[class*=icon-] {
             &, a& {
@@ -680,23 +711,27 @@ ul[class*=atk-menu] {
         }
     }
     &.atk-label, &[class*=atk-box] {
-        color: @bodyColor;
+        // color: @bodyColor;
         &.atk-effect-danger {
+            .colorCheck(@color);
             @color: tint(@effectDanger, 80%);
             background: @color;
             border-color: @color;
         }
         &.atk-effect-warning {
+            .colorCheck(@color);
             @color: tint(@effectWarning, 80%);
             background: @color;
             border-color: @color;
         }
         &.atk-effect-success {
+            .colorCheck(@color);
             @color: tint(@effectSuccess, 80%);
             background: @color;
             border-color: @color; 
         }
         &.atk-effect-info {
+            .colorCheck(@color);
             @color: tint(@effectInfo, 80%);
             background: @color;
             border-color: @color;
