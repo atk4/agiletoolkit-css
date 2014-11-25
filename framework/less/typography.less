@@ -38,13 +38,13 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .atk-size-yotta {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5.5);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*7);
 }
 .atk-size-zetta {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*6);
 }
 .atk-size-exa {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4.5);
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5);
 }
 .atk-size-peta {
     font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4);
@@ -94,7 +94,7 @@ h6, small, .atk-size-milli {
         color: @textDimmed;
     }
     a, *[class*=atk-swatch]:not(.atk-text-inherit) & a:link {
-        @newC: darken(@textDimmed, 10%);
+        @newC: darken(@textDimmed, 15%);
         color: @newC;
         &:hover {
             color:darken(@newC, @hoverIntensity*2);
