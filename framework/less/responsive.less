@@ -104,9 +104,11 @@
     }
   & when (iskeyword(@c)) and not (@c = false) {
     .atk-stack-@{c} {
-      &, &.atk-cells, &.atk-cells>.atk-cell {
+      &, &.atk-cells, &.atk-cells>.atk-cell, &.atk-row>[class*=atk-col] {
         display: block;
         border-width: 0;
+        float: none;
+        width: auto;
       }
       table& {
         &, >tbody, >tbody>tr, >tbody>tr>td {
