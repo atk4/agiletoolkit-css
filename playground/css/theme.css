@@ -5349,8 +5349,7 @@ a:focus {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.atk-table.atk-table-zebra tbody tr:nth-child(odd) td:not([class*='atk-swatch']),
-.atk-table.atk-table-zebra tbody tr:nth-child(odd):not([class*='atk-swatch']) td {
+.atk-table.atk-table-zebra tbody tr:nth-child(odd) td:not([class*='atk-swatch']) {
   background: #f3f4f5;
 }
 .atk-table.atk-table-outline > table {
@@ -6468,6 +6467,8 @@ a.atk-swatch-white:not(.atk-text-inherit):hover,
 .atk-swatch-white:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-white:not(.atk-text-inherit),
 .atk-table th.atk-swatch-white:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-white:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-white:not(.atk-text-inherit),
 .atk-swatch-white:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: #4c5359;
   background: #ffffff;
@@ -6537,6 +6538,8 @@ a.atk-swatch-black:not(.atk-text-inherit):hover,
 .atk-swatch-black:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-black:not(.atk-text-inherit),
 .atk-table th.atk-swatch-black:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-black:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-black:not(.atk-text-inherit),
 .atk-swatch-black:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #000000;
@@ -6606,6 +6609,8 @@ a.atk-swatch-gray:not(.atk-text-inherit):hover,
 .atk-swatch-gray:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-gray:not(.atk-text-inherit),
 .atk-table th.atk-swatch-gray:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-gray:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-gray:not(.atk-text-inherit),
 .atk-swatch-gray:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: #495056;
   background: #f5f6f7;
@@ -6675,6 +6680,8 @@ a.atk-swatch-ink:not(.atk-text-inherit):hover,
 .atk-swatch-ink:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-ink:not(.atk-text-inherit),
 .atk-table th.atk-swatch-ink:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-ink:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-ink:not(.atk-text-inherit),
 .atk-swatch-ink:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #1c2933;
@@ -6744,6 +6751,8 @@ a.atk-swatch-yellow:not(.atk-text-inherit):hover,
 .atk-swatch-yellow:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-yellow:not(.atk-text-inherit),
 .atk-table th.atk-swatch-yellow:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-yellow:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-yellow:not(.atk-text-inherit),
 .atk-swatch-yellow:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: #4c4200;
   background: #ffcc00;
@@ -6813,6 +6822,8 @@ a.atk-swatch-red:not(.atk-text-inherit):hover,
 .atk-swatch-red:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-red:not(.atk-text-inherit),
 .atk-table th.atk-swatch-red:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-red:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-red:not(.atk-text-inherit),
 .atk-swatch-red:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #f9451f;
@@ -6882,6 +6893,8 @@ a.atk-swatch-green:not(.atk-text-inherit):hover,
 .atk-swatch-green:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-green:not(.atk-text-inherit),
 .atk-table th.atk-swatch-green:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-green:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-green:not(.atk-text-inherit),
 .atk-swatch-green:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #00cc66;
@@ -6951,6 +6964,8 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
 .atk-swatch-blue:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-blue:not(.atk-text-inherit),
 .atk-table th.atk-swatch-blue:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-blue:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-blue:not(.atk-text-inherit),
 .atk-swatch-blue:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #0095ff;
@@ -7224,6 +7239,8 @@ a.atk-swatch-white:not(.atk-text-inherit):hover,
 .atk-swatch-white:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-white:not(.atk-text-inherit),
 .atk-table th.atk-swatch-white:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-white:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-white:not(.atk-text-inherit),
 .atk-swatch-white:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: #4c5359;
   background: #ffffff;
@@ -7293,6 +7310,8 @@ a.atk-swatch-gray:not(.atk-text-inherit):hover,
 .atk-swatch-gray:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-gray:not(.atk-text-inherit),
 .atk-table th.atk-swatch-gray:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-gray:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-gray:not(.atk-text-inherit),
 .atk-swatch-gray:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: #495056;
   background: #f5f6f7;
@@ -7362,6 +7381,8 @@ a.atk-swatch-ink:not(.atk-text-inherit):hover,
 .atk-swatch-ink:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-ink:not(.atk-text-inherit),
 .atk-table th.atk-swatch-ink:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-ink:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-ink:not(.atk-text-inherit),
 .atk-swatch-ink:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #1c2933;
@@ -7431,6 +7452,8 @@ a.atk-swatch-yellow:not(.atk-text-inherit):hover,
 .atk-swatch-yellow:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-yellow:not(.atk-text-inherit),
 .atk-table th.atk-swatch-yellow:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-yellow:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-yellow:not(.atk-text-inherit),
 .atk-swatch-yellow:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: #4c4200;
   background: #ffcc00;
@@ -7500,6 +7523,8 @@ a.atk-swatch-red:not(.atk-text-inherit):hover,
 .atk-swatch-red:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-red:not(.atk-text-inherit),
 .atk-table th.atk-swatch-red:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-red:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-red:not(.atk-text-inherit),
 .atk-swatch-red:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #f9451f;
@@ -7569,6 +7594,8 @@ a.atk-swatch-green:not(.atk-text-inherit):hover,
 .atk-swatch-green:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-green:not(.atk-text-inherit),
 .atk-table th.atk-swatch-green:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-green:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-green:not(.atk-text-inherit),
 .atk-swatch-green:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #00cc66;
@@ -7638,6 +7665,8 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
 .atk-swatch-blue:not(.atk-text-inherit).atk-label,
 .atk-table td.atk-swatch-blue:not(.atk-text-inherit),
 .atk-table th.atk-swatch-blue:not(.atk-text-inherit),
+.atk-table.atk-table-zebra tr.atk-swatch-blue:not(.atk-text-inherit) > td,
+.atk-table.atk-table-zebra tbody > tr > td.atk-swatch-blue:not(.atk-text-inherit),
 .atk-swatch-blue:not(.atk-text-inherit) > .atk-popover-arrow:before {
   color: white;
   background: #0095ff;
