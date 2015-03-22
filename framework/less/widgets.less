@@ -95,7 +95,8 @@
         }
     }
     &.atk-table-zebra {
-        tbody tr:nth-child(odd) td:not([class*='atk-swatch']) {
+        tbody tr:nth-child(odd) td:not([class*='atk-swatch']),
+        tbody tr:nth-child(odd):not([class*='atk-swatch']) td {
             background: lighten(@borderStatic, 9%);
         }
     }

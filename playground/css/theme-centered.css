@@ -5348,7 +5348,8 @@ a:focus {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.atk-table.atk-table-zebra tbody tr:nth-child(odd) td:not([class*='atk-swatch']) {
+.atk-table.atk-table-zebra tbody tr:nth-child(odd) td:not([class*='atk-swatch']),
+.atk-table.atk-table-zebra tbody tr:nth-child(odd):not([class*='atk-swatch']) td {
   background: #f8f8f8;
 }
 .atk-table.atk-table-outline > table {
@@ -6492,6 +6493,75 @@ a.atk-swatch-white:not(.atk-text-inherit):hover,
 .atk-swatch-white {
   background: #ffffff;
   border-color: #ffffff;
+}
+.atk-swatch-black:not(.atk-text-inherit) {
+  background: #000000;
+  border-color: #000000;
+  color: white;
+}
+.atk-swatch-black:not(.atk-text-inherit) a,
+*[class*=atk-swatch] .atk-swatch-black:not(.atk-text-inherit) a {
+  color: white;
+}
+.atk-swatch-black:not(.atk-text-inherit) hr {
+  border-color: #0a0a0a;
+}
+.atk-swatch-black:not(.atk-text-inherit) h1,
+.atk-swatch-black:not(.atk-text-inherit) h2,
+.atk-swatch-black:not(.atk-text-inherit) h3,
+.atk-swatch-black:not(.atk-text-inherit) h4,
+.atk-swatch-black:not(.atk-text-inherit) h5,
+.atk-swatch-black:not(.atk-text-inherit) h6 {
+  color: white;
+}
+.atk-swatch-black:not(.atk-text-inherit)[class*=icon-],
+a.atk-swatch-black:not(.atk-text-inherit)[class*=icon-] {
+  background: none;
+  color: #000000;
+}
+.atk-swatch-black:not(.atk-text-inherit)[class*=icon-][class*=atk-shape] {
+  color: white;
+  background: #000000;
+}
+.atk-swatch-black:not(.atk-text-inherit)[class*=icon-]:hover {
+  background: none;
+  color: #000000;
+}
+a.atk-swatch-black:not(.atk-text-inherit):hover,
+.atk-swatch-black:not(.atk-text-inherit)[class*=atk-button]:hover {
+  color: white;
+  background-color: #080808;
+}
+.atk-swatch-black:not(.atk-text-inherit)[class*='atk-button'],
+.atk-swatch-black:not(.atk-text-inherit).atk-label,
+.atk-table td.atk-swatch-black:not(.atk-text-inherit),
+.atk-table th.atk-swatch-black:not(.atk-text-inherit),
+.atk-swatch-black:not(.atk-text-inherit) > .atk-popover-arrow:before {
+  color: white;
+  background: #000000;
+  border-color: #000000;
+}
+.atk-swatch-black:not(.atk-text-inherit)[class*='atk-button'] {
+  border-color: #000000;
+}
+.atk-swatch-black:not(.atk-text-inherit)[class*='atk-button']:hover {
+  border-color: #000000;
+}
+*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-black:not(.atk-text-inherit) {
+  border-color: #080808;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+}
+*[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-black:not(.atk-text-inherit) {
+  color: white;
+}
+*[class*=atk-menu] li:hover.atk-swatch-black:not(.atk-text-inherit) > a {
+  color: white;
+  color: white !important;
+}
+.atk-swatch-black {
+  background: #000000;
+  border-color: #000000;
 }
 .atk-swatch-gray:not(.atk-text-inherit) {
   background: #f5f6f7;
