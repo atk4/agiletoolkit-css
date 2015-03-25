@@ -2,6 +2,8 @@
 // Components
 // ==========================================================
 
+// Settings
+@buttonDefaultShadow: 0 1px 0 rgba(0,0,0,0.07);
 
 // Item List
 .atk-actions {
@@ -27,7 +29,7 @@
 .atk-actions-xlarge {
     >* {
         + * {
-            margin-left: (1.5em * @baselineDestroyer);
+            margin-left: (2em * @baselineDestroyer);
         }
         &.atk-sep + * {
             margin-left: 0;
@@ -37,7 +39,7 @@
 .atk-actions-xxlarge {
     >* {
         + * {
-            margin-left: (2em * @baselineDestroyer);
+            margin-left: (3em * @baselineDestroyer);
         }
         &.atk-sep + * {
             margin-left: 0;
@@ -76,9 +78,6 @@
         display: table-cell;
         vertical-align: middle;
     }
-    &.atk-cells-justified {
-        table-layout: fixed;
-    }
     &[class*=atk-move] {
         width: auto;
     }
@@ -98,7 +97,15 @@
         display: table-row;
     }
 }
+.atk-cells-justified {
+    table-layout: fixed;
+}
 *[class*=atk-cells-gutter] {
+    &.atk-cells.atk-cells-gutter-xxlarge>.atk-cell,
+    &.atk-cells-group.atk-cells-gutter-xxlarge>.atk-cells>.atk-cell {
+        padding-left: (4em * @baselineDestroyer)/2;
+        padding-right: (4em * @baselineDestroyer)/2;
+    }
     &.atk-cells.atk-cells-gutter-xlarge>.atk-cell,
     &.atk-cells-group.atk-cells-gutter-xlarge>.atk-cells>.atk-cell {
         padding-left: (3em * @baselineDestroyer)/2;
@@ -456,7 +463,7 @@ ul[class*=atk-menu] {
         }
     }
     &.atk-pull-xlarge {
-        @m: @margin*4;
+        @m: @margin*3;
         margin-top: @m; 
         .atk-cells-group>&>.atk-cell {
            padding-top: @m;
@@ -530,7 +537,7 @@ ul[class*=atk-menu] {
         }
     }
     &.atk-push-xlarge {
-        @m: @margin*4;
+        @m: @margin*3;
         margin-bottom: @m; 
         .atk-cells-group>&>.atk-cell {
            padding-bottom: @m;
@@ -608,8 +615,8 @@ ul[class*=atk-menu] {
             padding-top: @margin*2;
         }
         &.atk-section-xlarge {
-            padding-bottom: @margin*4;
-            padding-top: @margin*4;
+            padding-bottom: @margin*3;
+            padding-top: @margin*3;
         }
         &.atk-section-reset {
             padding-top: 0;
@@ -705,7 +712,7 @@ ul[class*=atk-menu] {
 
 
 // Swatches
-.createSwatch(@color, @swatchLinkColor:auto, @swatchTextColor:auto, @swatchHeadingColor:auto) {
+.createSwatch(@color, @swatchLinkColor:auto, @swatchTextColor:auto, @swatchHeadingColor:auto, @buttonBorderWidth:1px, @buttonShadow: @buttonDefaultShadow, @borderColor: auto, @hoverColor: auto) {
     .@{color}:not(.atk-text-inherit) {
         background: @@color;
         border-color: @@color;
@@ -721,9 +728,6 @@ ul[class*=atk-menu] {
                     .colorCheck(@@color);
                 }
             }
-        }
-        hr {
-            .borderColorCheck(@@color, 1%);
         }
         & {
             & when not (@swatchTextColor = auto) {
@@ -756,22 +760,29 @@ ul[class*=atk-menu] {
             }
         }
         a&:hover, &[class*=atk-button]:hover {
-            .colorCheck(@@color);
-            .backgroundColorCheck(@@color);
+            & when (@hoverColor = auto) {
+                .colorCheck(@@color);
+                .backgroundColorCheck(@@color);
+            }
+            & when not (@hoverColor = auto) {
+                .colorCheck(@hoverColor);
+                background-color: @hoverColor;
+            }
         }
-        &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before { 
+        &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
             .colorCheck(@@color);
             background: @@color;
             border-color: @@color;
         }
         &[class*='atk-button'] {
             border-color: darken(@@color, 10%);
+            border-width: @buttonBorderWidth;
+            .box-shadow(@buttonShadow);
             &:hover {
                 border-color: darken(@@color, 10%);
             }
         }
         *[class*=atk-menu]>li.atk-menu-separated:not(:first-child)>a& {
-            .borderColorCheck(@@color);
             border-style: solid;
             border-width: 1px 0 0 0;
         }
@@ -781,11 +792,24 @@ ul[class*=atk-menu] {
         *[class*=atk-menu] li:hover&>a {
             .colorCheck(@@color, important);
         }
+        & when (@borderColor = auto) {
+            hr {
+                .borderColorCheck(@@color, 1%);
+            }
+            *[class*=atk-menu]>li.atk-menu-separated:not(:first-child)>a& {
+                .borderColorCheck(@@color);
+            }
+        }
+        & when not (@borderColor = auto) {
+            hr, *[class*=atk-menu]>li.atk-menu-separated:not(:first-child)>a& {
+                border-color: @borderColor;
+            }
+        }
     }
     .@{color} {
         background: @@color;
         border-color: @@color;
-    }    
+    }
 }
 
 // Effects
@@ -854,7 +878,7 @@ ul[class*=atk-menu] {
 
 // States
 .buttonDefault() {
-    .box-shadow(0 1px 0 rgba(0,0,0,0.07));
+    .box-shadow(@buttonDefaultShadow);
     background: @buttonDefault;
     border: 1px solid @borderClickable;
     color: @bodyColor;

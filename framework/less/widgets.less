@@ -159,8 +159,8 @@
 
 // Popover
 .atk-popover {
-    @x: @popoverArrow - 2px;
-    @d: round((@x * sqrt(2)), 2);
+    @x: @popoverArrow;
+    @d: round((@x * sqrt(2)), 2) + 4px;
     @s: (@d - @x)/2;
     .position();
     
@@ -176,6 +176,7 @@
         }
     }
     .atk-popover-arrow {
+        background: none !important;
         position: absolute;
         height: @d/2;
         overflow: hidden;
