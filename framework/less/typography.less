@@ -70,6 +70,9 @@ h6, small, .atk-size-milli {
 .atk-size-micro {
     font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1);
 }
+.atk-size-nano {
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-2);
+}
 
 
 // ==========================================================
@@ -88,6 +91,9 @@ h6, small, .atk-size-milli {
 .atk-text-normal {
     font-weight: normal;
     text-transform: normal;
+}
+.atk-text-light {
+    font-weight: 300;
 }
 .atk-text-dimmed {
     &, *[class*=atk-swatch] & {
