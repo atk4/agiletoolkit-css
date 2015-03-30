@@ -354,7 +354,7 @@ ul[class*=atk-menu] {
     display: block;
 }
 .atk-jackscrew, .atk-expand {
-    width: 100%;
+    width: 100% !important;
 }
 .atk-clear-fix {
     .clear-fix;
@@ -444,7 +444,7 @@ ul[class*=atk-menu] {
     }
     &.atk-pull-large {
         @m: @margin*2;
-        margin-top: @m; 
+        margin-top: @m;
         .atk-cells-group>&>.atk-cell {
            padding-top: @m;
         }
@@ -457,7 +457,7 @@ ul[class*=atk-menu] {
     }
     &.atk-pull-xlarge {
         @m: @margin*4;
-        margin-top: @m; 
+        margin-top: @m;
         .atk-cells-group>&>.atk-cell {
            padding-top: @m;
         }
@@ -518,7 +518,7 @@ ul[class*=atk-menu] {
     }
     &.atk-push-large {
         @m: @margin*2;
-        margin-bottom: @m; 
+        margin-bottom: @m;
         .atk-cells-group>&>.atk-cell {
            padding-bottom: @m;
         }
@@ -531,7 +531,7 @@ ul[class*=atk-menu] {
     }
     &.atk-push-xlarge {
         @m: @margin*4;
-        margin-bottom: @m; 
+        margin-bottom: @m;
         .atk-cells-group>&>.atk-cell {
            padding-bottom: @m;
         }
@@ -594,7 +594,7 @@ ul[class*=atk-menu] {
     }
 }
 
-// Sections 
+// Sections
 *[class*=atk-section] {
     &, .ui-tabs &.ui-tabs-panel.ui-widget-content {
         padding-bottom: @margin;
@@ -630,42 +630,42 @@ ul[class*=atk-menu] {
 .atk-shape-rounded-top {
      &, img& {
         .border-top-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-bottom {
      &, img& {
         .border-bottom-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-left {
      &, img& {
         .border-left-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-right {
      &, img& {
         .border-right-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-top-left {
      &, img& {
         .border-top-left-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-top-right {
      &, img& {
         .border-top-right-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-bottom-left {
      &, img& {
         .border-bottom-left-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-bottom-right {
      &, img& {
         .border-bottom-right-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-circle {
     &, img&, a&[class*='atk-button'], button&[class*='atk-button'], input&[class*='atk-button'], a&.ui-button, button&.ui-button, input&.ui-button {
@@ -759,7 +759,7 @@ ul[class*=atk-menu] {
             .colorCheck(@@color);
             .backgroundColorCheck(@@color);
         }
-        &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before { 
+        &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before {
             .colorCheck(@@color);
             background: @@color;
             border-color: @@color;
@@ -785,7 +785,7 @@ ul[class*=atk-menu] {
     .@{color} {
         background: @@color;
         border-color: @@color;
-    }    
+    }
 }
 
 // Effects
@@ -822,7 +822,7 @@ ul[class*=atk-menu] {
             .colorCheck(@color);
             @color: tint(@effectSuccess, 80%);
             background: @color;
-            border-color: @color; 
+            border-color: @color;
         }
         &.atk-effect-info {
             .colorCheck(@color);
