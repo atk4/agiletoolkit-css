@@ -5,3 +5,5 @@ playground/js/demo-min.js
 tests
 
 *.codekit
+
+framework/less/agiletoolkit.less

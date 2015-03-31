@@ -370,9 +370,12 @@ ul[class*=atk-menu] {
 }
 .atk-jackscrew, .atk-expand {
     width: 100% !important;
+<<<<<<< HEAD
 }
 .atk-width-auto {
     width: auto !important;
+=======
+>>>>>>> origin/master
 }
 .atk-clear-fix {
     .clear-fix;
@@ -462,7 +465,7 @@ ul[class*=atk-menu] {
     }
     &.atk-pull-large {
         @m: @margin*2;
-        margin-top: @m; 
+        margin-top: @m;
         .atk-cells-group>&>.atk-cell {
            padding-top: @m;
         }
@@ -536,7 +539,7 @@ ul[class*=atk-menu] {
     }
     &.atk-push-large {
         @m: @margin*2;
-        margin-bottom: @m; 
+        margin-bottom: @m;
         .atk-cells-group>&>.atk-cell {
            padding-bottom: @m;
         }
@@ -612,7 +615,7 @@ ul[class*=atk-menu] {
     }
 }
 
-// Sections 
+// Sections
 *[class*=atk-section] {
     &, .ui-tabs &.ui-tabs-panel.ui-widget-content {
         padding-bottom: @margin;
@@ -648,42 +651,42 @@ ul[class*=atk-menu] {
 .atk-shape-rounded-top {
      &, img& {
         .border-top-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-bottom {
      &, img& {
         .border-bottom-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-left {
      &, img& {
         .border-left-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-right {
      &, img& {
         .border-right-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-top-left {
      &, img& {
         .border-top-left-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-top-right {
      &, img& {
         .border-top-right-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-bottom-left {
      &, img& {
         .border-bottom-left-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-rounded-bottom-right {
      &, img& {
         .border-bottom-right-radius(@cornerRadius);
-    }   
+    }
 }
 .atk-shape-circle {
     &, img&, a&[class*='atk-button'], button&[class*='atk-button'], input&[class*='atk-button'], a&.ui-button, button&.ui-button, input&.ui-button {
@@ -860,8 +863,13 @@ ul[class*=atk-menu] {
         &.atk-effect-success {
             .colorCheck(@color);
             @color: tint(@effectSuccess, 80%);
+<<<<<<< HEAD
             background-color: @color;
             border-color: @color; 
+=======
+            background: @color;
+            border-color: @color;
+>>>>>>> origin/master
         }
         &.atk-effect-info {
             .colorCheck(@color);

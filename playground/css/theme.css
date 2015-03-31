@@ -4,7 +4,7 @@
  *  Theme: Playground (Based on default)
  */
 /**
- * Agile Toolkit CSS Framework (c) 2013-2014 v0.912
+ * Agile Toolkit CSS Framework (c) 2013-2014 v0.913
  *  http://www4.agiletoolkit.org/css
  */
 /*! jQuery UI - v1.10.3 - 2013-12-23
@@ -6249,9 +6249,15 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
 .icon-keyboard-1:before {
   content: '\e9a2';
 }
+<<<<<<< HEAD
+.atk-jackscrew,
+.atk-expand {
+  width: 100% !important;
+=======
 /* '' */
 .icon-comment-1:before {
   content: '\e9a3';
+>>>>>>> 52c8f22c8026cba4fac9572cbf42e219b0e9f54d
 }
 /* '' */
 .icon-chat-1:before {
