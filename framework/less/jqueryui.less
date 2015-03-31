@@ -49,8 +49,10 @@
 }
 .ui-widget {
     color: @bodyColor;
-    font-family: @bodyFamily;
     font-size: 1em;
+    &, input, select, textarea, button {
+        font-family: @bodyFamily;
+    }
 }
 .ui-widget-header {
     .clear-area;
@@ -219,16 +221,21 @@
     .clear-area;
     .ui-tabs-nav.ui-widget-header {
         border-radius: @cornerRadius @cornerRadius 0 0;
-        border-bottom: 1px solid @borderStatic;
+        border-bottom: 1px solid @borderClickable;
         padding: 0;
         .ui-state-default {
             .box-shadow(none);
             background: none;
             border-bottom: none;
             border-color: transparent;
+            a {
+                display: block;
+                float: none;
+                text-align: center;
+            }
             &.ui-state-active {
                 background: #fff;
-                border-color: @borderStatic;
+                border-color: @borderClickable;
             }
         }
     }

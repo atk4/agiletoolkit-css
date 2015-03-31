@@ -335,6 +335,14 @@ ul[class*=atk-menu] {
         border-left-width: @margin  * @baselineDestroyer;
         margin-top: @margin  * @baselineDestroyer;
     }
+    &.atk-grid-gutter-xsmall {
+        margin-left: (-@margin  * @baselineDestroyer)/4;
+        margin-top: (-@margin  * @baselineDestroyer)/4;
+        *[class^=atk-col] {
+            border-left-width: (@margin  * @baselineDestroyer)/4;
+            margin-top: (@margin  * @baselineDestroyer)/4;
+        }
+    }
     &.atk-grid-gutter-small {
         margin-left: (-@margin  * @baselineDestroyer)/2;
         margin-top: (-@margin  * @baselineDestroyer)/2;
@@ -361,7 +369,10 @@ ul[class*=atk-menu] {
     display: block;
 }
 .atk-jackscrew, .atk-expand {
-    width: 100%;
+    width: 100% !important;
+}
+.atk-width-auto {
+    width: auto !important;
 }
 .atk-clear-fix {
     .clear-fix;
@@ -714,9 +725,9 @@ ul[class*=atk-menu] {
 // Swatches
 .createSwatch(@color, @swatchLinkColor:auto, @swatchTextColor:auto, @swatchHeadingColor:auto, @buttonBorderWidth:1px, @buttonShadow: @buttonDefaultShadow, @borderColor: auto, @hoverColor: auto) {
     .@{color}:not(.atk-text-inherit) {
-        background: @@color;
+        background-color: @@color;
         border-color: @@color;
-        a {
+        a, a& {
             &, *[class*=atk-swatch] & {
                 & when not (@swatchLinkColor = auto) {
                     color: @swatchLinkColor;
@@ -745,6 +756,10 @@ ul[class*=atk-menu] {
                 .colorCheck(@@color);
             }
         }
+        .atk-text-dimmed {
+            .colorCheck(@@color);
+            .opacity(50);
+        }
         &[class*=icon-] {
             &, a& {
                 background: none;
@@ -752,7 +767,7 @@ ul[class*=atk-menu] {
             }
             &[class*=atk-shape] {
                 .colorCheck(@@color);
-                background: @@color;
+                background-color: @@color;
             }
             &:hover {
                 background: none;
@@ -771,7 +786,7 @@ ul[class*=atk-menu] {
         }
         &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
             .colorCheck(@@color);
-            background: @@color;
+            background-color: @@color;
             border-color: @@color;
         }
         &[class*='atk-button'] {
@@ -807,7 +822,7 @@ ul[class*=atk-menu] {
         }
     }
     .@{color} {
-        background: @@color;
+        background-color: @@color;
         border-color: @@color;
     }
 }
@@ -833,25 +848,25 @@ ul[class*=atk-menu] {
         &.atk-effect-danger {
             .colorCheck(@color);
             @color: tint(@effectDanger, 80%);
-            background: @color;
+            background-color: @color;
             border-color: @color;
         }
         &.atk-effect-warning {
             .colorCheck(@color);
             @color: tint(@effectWarning, 80%);
-            background: @color;
+            background-color: @color;
             border-color: @color;
         }
         &.atk-effect-success {
             .colorCheck(@color);
             @color: tint(@effectSuccess, 80%);
-            background: @color;
+            background-color: @color;
             border-color: @color; 
         }
         &.atk-effect-info {
             .colorCheck(@color);
             @color: tint(@effectInfo, 80%);
-            background: @color;
+            background-color: @color;
             border-color: @color;
         }
     }
