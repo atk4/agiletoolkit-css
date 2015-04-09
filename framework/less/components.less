@@ -617,6 +617,10 @@ ul[class*=atk-menu] {
     &, .ui-tabs &.ui-tabs-panel.ui-widget-content {
         padding-bottom: @margin;
         padding-top: @margin;
+        &.atk-section-xsmall {
+            padding-bottom: round(@margin/3, 2);
+            padding-top: round(@margin/3, 2);
+        }
         &.atk-section-small {
             padding-bottom: round(@margin/2, 2);
             padding-top: round(@margin/2, 2);

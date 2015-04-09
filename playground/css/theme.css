@@ -3642,6 +3642,11 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   padding-bottom: 1.6rem;
   padding-top: 1.6rem;
 }
+*[class*=atk-section].atk-section-xsmall,
+.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-xsmall {
+  padding-bottom: 0.53rem;
+  padding-top: 0.53rem;
+}
 *[class*=atk-section].atk-section-small,
 .ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-small {
   padding-bottom: 0.8rem;
@@ -7211,7 +7216,7 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
   .atk-row {
     margin-left: -1.6rem;
   }
-  .atk-row *[class*=atk-col] {
+  .atk-row > *[class*=atk-col] {
     border-left: 0px solid rgba(0, 0, 0, 0);
     border-right: 0px solid rgba(0, 0, 0, 0);
     border-left-width: 1.6rem;
@@ -7281,7 +7286,7 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
   .atk-row {
     margin-left: -30px;
   }
-  .atk-row *[class*=atk-col] {
+  .atk-row > *[class*=atk-col] {
     border-left: 0px solid rgba(0, 0, 0, 0);
     border-right: 0px solid rgba(0, 0, 0, 0);
     border-left-width: 30px;
@@ -7353,7 +7358,7 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
   .atk-row {
     margin-left: -20px;
   }
-  .atk-row *[class*=atk-col] {
+  .atk-row > *[class*=atk-col] {
     border-left: 0px solid rgba(0, 0, 0, 0);
     border-right: 0px solid rgba(0, 0, 0, 0);
     border-left-width: 20px;

@@ -86,14 +86,14 @@
 
   // Grid System
     & when (ispercentage(@g)) {
-      .atk-row>*[class*=atk-col] + *[class*=atk-col] {
+      .atk-row > *[class*=atk-col] + *[class*=atk-col] {
         margin-left: @g;
       }
     }
     & when not (ispercentage(@g)) {
       .atk-row {
         margin-left: -@g;
-        *[class*=atk-col] {
+        > *[class*=atk-col] {
           border-left:0px solid rgba(0,0,0,0);
           border-right:0px solid rgba(0,0,0,0);
           border-left-width: @g;
