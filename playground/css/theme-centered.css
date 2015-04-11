@@ -2146,6 +2146,15 @@ h5 + .atk-form,
 h6 + .atk-form {
   margin-top: 1.6rem;
 }
+.atk-size-pow10 {
+  font-size: 9.70287953rem;
+}
+.atk-size-pow9 {
+  font-size: 7.62801223rem;
+}
+.atk-size-pow8 {
+  font-size: 5.99683531rem;
+}
 .atk-size-yotta {
   font-size: 4.71446986rem;
 }
@@ -3439,19 +3448,23 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   text-align: center;
 }
 .atk-cells-group.atk-valign-top > .atk-cells > .atk-cell,
-.atk-valign-top {
+.atk-valign-top,
+.atk-cells.atk-valign-top > .atk-cell {
   vertical-align: top !important;
 }
 .atk-cells-group.atk-valign-middle > .atk-cells > .atk-cell,
-.atk-valign-middle {
+.atk-valign-middle,
+.atk-valign-middle.atk-cells > .atk-cell {
   vertical-align: middle !important;
 }
 .atk-cells-group.atk-valign-baseline > .atk-cells > .atk-cell,
-.atk-valign-baseline {
+.atk-valign-baseline,
+.atk-valign-baseline.atk-cells > .atk-cell {
   vertical-align: baseline !important;
 }
 .atk-cells-group.atk-valign-bottom > .atk-cells > .atk-cell,
-.atk-valign-bottom {
+.atk-valign-bottom,
+.atk-valign-bottom.atk-cells > .atk-cell {
   vertical-align: bottom !important;
 }
 *[class*=atk-pull].atk-pull-xsmall {

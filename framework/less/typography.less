@@ -37,6 +37,15 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: @margin;
     }
 }
+.atk-size-pow10 {
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*10);
+}
+.atk-size-pow9 {
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*9);
+}
+.atk-size-pow8 {
+    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*8);
+}
 .atk-size-yotta {
     font-size: @bodySize * pow(@bodyBaseline,@fontScatter*7);
 }
