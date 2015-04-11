@@ -3429,6 +3429,7 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   float: left;
 }
 .atk-move-center {
+  float: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
