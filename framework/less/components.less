@@ -751,10 +751,14 @@ ul[class*=atk-menu] {
         }
         & {
             & when not (@swatchTextColor = auto) {
-                color: @swatchTextColor;
+                &, &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
+                    color: @swatchTextColor;
+                }
             }
             & when (@swatchTextColor = auto) {
-                .colorCheck(@@color);
+                &, &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
+                    .colorCheck(@@color);
+                }
             }
         }
         h1, h2, h3, h4, h5, h6 {
@@ -794,7 +798,6 @@ ul[class*=atk-menu] {
             }
         }
         &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
-            .colorCheck(@@color);
             background-color: @@color;
             border-color: @@color;
         }
