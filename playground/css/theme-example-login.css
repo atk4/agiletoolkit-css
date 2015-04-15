@@ -3686,93 +3686,93 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
 }
 .atk-shape-rounded,
 img.atk-shape-rounded {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
 }
 .atk-shape-rounded-top,
 img.atk-shape-rounded-top {
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px !important;
+  -moz-border-top-left-radius: 5px !important;
+  border-top-left-radius: 5px !important;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px !important;
+  -moz-border-top-right-radius: 5px !important;
+  border-top-right-radius: 5px !important;
 }
 .atk-shape-rounded-bottom,
 img.atk-shape-rounded-bottom {
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px !important;
+  -moz-border-bottom-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px !important;
+  -moz-border-bottom-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
 }
 .atk-shape-rounded-left,
 img.atk-shape-rounded-left {
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px !important;
+  -moz-border-top-left-radius: 5px !important;
+  border-top-left-radius: 5px !important;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px !important;
+  -moz-border-bottom-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
 }
 .atk-shape-rounded-right,
 img.atk-shape-rounded-right {
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px !important;
+  -moz-border-top-right-radius: 5px !important;
+  border-top-right-radius: 5px !important;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px !important;
+  -moz-border-bottom-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
 }
 .atk-shape-rounded-top-left,
 img.atk-shape-rounded-top-left {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px !important;
+  -moz-border-top-left-radius: 5px !important;
+  border-top-left-radius: 5px !important;
 }
 .atk-shape-rounded-top-right,
 img.atk-shape-rounded-top-right {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px !important;
+  -moz-border-top-right-radius: 5px !important;
+  border-top-right-radius: 5px !important;
 }
 .atk-shape-rounded-bottom-left,
 img.atk-shape-rounded-bottom-left {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px !important;
+  -moz-border-bottom-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
 }
 .atk-shape-rounded-bottom-right,
 img.atk-shape-rounded-bottom-right {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px !important;
+  -moz-border-bottom-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
 }
 .atk-shape-circle,
 img.atk-shape-circle,
