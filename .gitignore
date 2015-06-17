@@ -7,3 +7,5 @@ tests
 *.codekit
 
 framework/less/agiletoolkit.less
+
+*.codekit
