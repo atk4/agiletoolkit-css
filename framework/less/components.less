@@ -11,18 +11,12 @@
         + * {
             margin-left: (0.5em * @baselineDestroyer);
         }
-        &.atk-sep + * {
-            margin-left: 0;
-        }
     }
 }
 .atk-actions-large {
     >* {
         + * {
             margin-left: (1em * @baselineDestroyer);
-        }
-        &.atk-sep + * {
-            margin-left: 0;
         }
     }
 }
@@ -31,9 +25,6 @@
         + * {
             margin-left: (2em * @baselineDestroyer);
         }
-        &.atk-sep + * {
-            margin-left: 0;
-        }
     }
 }
 .atk-actions-xxlarge {
@@ -41,9 +32,11 @@
         + * {
             margin-left: (3em * @baselineDestroyer);
         }
-        &.atk-sep + * {
-            margin-left: 0;
-        }
+    }
+}
+*[class*=atk-actions] {
+    *[class*=atk-sep] + * {
+        margin-left: 0;
     }
 }
 .atk-sep-xsmall {
@@ -845,6 +838,9 @@ ul[class*=atk-menu] {
         background-color: @@color;
         border-color: @@color;
     }
+    .@{color}-text {
+        color: @@color;
+    }
 }
 
 // Effects
@@ -916,7 +912,9 @@ ul[class*=atk-menu] {
     .box-shadow(@buttonDefaultShadow);
     background: @buttonDefault;
     border: 1px solid @borderClickable;
-    color: @bodyColor;
+    &, *[class*='atk-swatch']:not(.atk-text-inherit) &:not([class*=atk-swatch]) {
+        color: @bodyColor;
+    }
 }
 .buttonHover() {
     background: @buttonHover;

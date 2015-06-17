@@ -104,6 +104,9 @@ h6, small, .atk-size-milli {
 .atk-text-light {
     font-weight: 300;
 }
+.atk-text-italic {
+    font-style: italic;
+}
 .atk-text-dimmed {
     &, *[class*=atk-swatch] & {
         color: @textDimmed;
@@ -247,6 +250,9 @@ hr {
     height: 0;
     margin: @margin 0;
     width: 100%;
+    &.atk-hr-xsmall {
+        margin: round(@margin/3,2) 0;
+    }
     &.atk-hr-small {
         margin: round(@margin/2,2) 0;
     }

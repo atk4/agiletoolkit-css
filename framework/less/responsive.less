@@ -111,6 +111,11 @@
         float: none;
         width: auto;
       }
+      &.atk-row {
+        &, >[class*=atk-col] {
+          margin-left: 0;
+        }
+      }
       table& {
         &, >tbody, >tbody>tr, >tbody>tr>td {
           display: block;
@@ -129,6 +134,12 @@
           }
         }
       }
+      &[class*=atk-actions] {
+        >* {
+          display: block;
+          margin-left: 0;
+        }
+      }
     }
     .atk-hide-@{c} {
       &, &[class*=atk-button] {
@@ -136,11 +147,14 @@
       }
     }
     .atk-show-@{c} {
-      &[class*=icon], &[class*=atk-button], &[class*=atk-sep] {
+      &, &[class*=icon], &[class*=atk-button], &[class*=atk-sep] {
         display: inline-block !important;
       }
     }
-
+    .atk-expand-@{c} {
+      display: block !important;
+      width: 100% !important;
+    }
   }
   & when (@b = true) {
     .atk-layout {
