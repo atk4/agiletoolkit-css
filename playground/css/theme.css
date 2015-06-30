@@ -2204,7 +2204,8 @@ h6 {
 .atk-text-bold {
   font-weight: bold;
 }
-.atk-text-medium {
+.atk-text-medium,
+.atk-text-semibold {
   font-weight: 600;
 }
 .atk-text-normal {
@@ -2307,6 +2308,14 @@ ol.atk-list-inline li {
 ul.atk-list-inline li:first-child .atk-sep,
 ol.atk-list-inline li:first-child .atk-sep {
   display: none;
+}
+ul.atk-list-nomargin,
+ol.atk-list-nomargin,
+ul.atk-list-nomargin ul,
+ol.atk-list-nomargin ul,
+ul.atk-list-nomargin ol,
+ol.atk-list-nomargin ol {
+  padding-left: 1em;
 }
 p {
   margin: 0 0 1.6rem 0;

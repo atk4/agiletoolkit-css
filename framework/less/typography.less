@@ -94,7 +94,7 @@ h6, small, .atk-size-milli {
 .atk-text-bold {
     font-weight: bold;
 }
-.atk-text-medium {
+.atk-text-medium, .atk-text-semibold {
     font-weight: 600;
 }
 .atk-text-normal {
@@ -200,6 +200,11 @@ ul, ol {
                     display: none;
                 }
             }
+        }
+    }
+    &.atk-list-nomargin {
+        &, ul, ol {
+            padding-left: 1em;
         }
     }
 }
