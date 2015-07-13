@@ -40,15 +40,15 @@ Note: Once the above settings are defined, framework makes use of your
 
 We are supplying you with a working "playground", which is already configured with one of our themes. Start by looking at the following files:
 
-- [playground/index.html]() in your browser
-- [playground/includes/]() for JADE sources on how to use Agile CSS in your HTML
-- [playgnound/less/theme.less]() for example on how to create a theme
-- [themes/]() for more themes
+- [playground/index.html](playground/index.html) in your browser
+- [playground/includes/](playground/includes/) for JADE sources on how to use Agile CSS in your HTML
+- [playgnound/less/theme.less](playgnound/less/theme.less) for example on how to create a theme
+- [themes/](themes/) for more themes
 
 ### Important Agile Toolkit CSS files
 
- - [framework/less/variables.less]() Default variables which you can override
- - [framework/less/widgets.less]() 
+ - [framework/less/variables.less](framework/less/variables.less) Default variables which you can override
+ - [framework/less/widgets.less](framework/less/widgets.less) 
  
 ### Documentation
 
