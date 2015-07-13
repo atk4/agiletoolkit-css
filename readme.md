@@ -48,7 +48,7 @@ We are supplying you with a working "playground", which is already configured wi
 ### Important Agile Toolkit CSS files
 
  - [framework/less/variables.less](framework/less/variables.less) Default variables which you can override
- - [framework/less/widgets.less](framework/less/widgets.less) 
+ - [framework/less/widgets.less](framework/less/widgets.less) Some great examples at how to build widgets
  
 ### Documentation
 
