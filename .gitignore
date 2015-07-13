@@ -1,11 +1,3 @@
-
-playground/codekit-config.json
-
-playground/js/demo-min.js
-tests
-
+.DS_Store
 *.codekit
-
-framework/less/agiletoolkit.less
-
-*.codekit
+/tests
