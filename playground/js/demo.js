@@ -5,17 +5,6 @@ $(function(){
       $('link').attr('href','css/'+$(this).data('file')+'?'+(Math.random()*10000));
   });
 
-  // Icons
-  $('#icons-library').hide();
-  $('#example-icons').click(
-    function(){
-      $('#icons-library').fadeIn();
-      $('#toggler').fadeOut();
-      $(this).removeClass('atk-inline');
-      $(this).parent().removeClass('atk-inline');
-    }
-  );
-
   // Select
   $('select').selectmenu();
 
