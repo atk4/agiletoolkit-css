@@ -2029,19 +2029,19 @@ table {
   width: 1em;
 }
 .ui-icon.ui-icon-triangle-1-s:before {
-  content: '\e870';
+  content: '\e8b0';
 }
 .ui-icon.ui-icon-triangle-1-e:before {
-  content: '\e873';
+  content: '\e8ae';
 }
 .ui-icon.ui-icon-circle-triangle-e:before {
-  content: '\ea61';
+  content: '\e8ae';
 }
 .ui-icon.ui-icon-circle-triangle-w:before {
-  content: '\ea60';
+  content: '\e8ad';
 }
 .ui-icon.ui-icon-closethick:before {
-  content: '\e97b';
+  content: '\e821';
 }
 html,
 body,
@@ -2885,7 +2885,7 @@ a:focus {
 }
 .atk-banner .atk-box.atk-banner-cogs:after,
 .atk-banner .atk-box.atk-banner-cogs:before {
-  content: '\ea8a';
+  content: '\e800';
   display: inline-block;
   font-family: fontello;
   height: 1em;

@@ -1,1 +1,0 @@
-function fixGrid(){var t=document.getElementById("atk-layout-content");t.style.height=null,t.style.height=t.parentNode.offsetHeight+"px"}window.attachEvent&&(window.attachEvent("onload",fixGrid),window.attachEvent("onresize",fixGrid));

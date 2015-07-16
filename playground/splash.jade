@@ -1,0 +1,26 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  include includes/head
+  body
+    include includes/browsehappy
+    .atk-layout
+      .atk-layout-row
+        .atk-layout-cell
+          .atk-wrapper
+            | Header Area
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell
+          .atk-layout-column.atk-layout-expand
+            .atk-wrapper
+              | Content Area
+      .atk-layout-row
+        .atk-layout-cell
+          .atk-wrapper
+            | Footer Area
+    include includes/scripts
+    include includes/analytics
