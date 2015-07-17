@@ -1,0 +1,23 @@
+block link
+  -var selected = 'docs'; // by default
+
+-var menu = { 'Getting Started': 'getting-started', 'Layout': 'layout', 'Grid System': 'grid-system', 'Icons': 'icons' };
+
+
+aside.atk-layout-column#sidebar
+  nav.atk-swatch-ink.scrollable
+    a(href='splash.html').atk-text-bold.atk-text-lead.atk-padding.atk-inline AgileToolkit CSS
+    hr.atk-hr-reset.atk-push-xsmall
+    ul.atk-list-nobullets.atk-menu-vertical.atk-push-xsmall
+      each val, key in menu
+        li
+          if selected === key
+            a(href=val, title=key).atk-swatch-ink.atk-padding.atk-section-xsmall.atk-swatch-blue= key
+          else
+            a(href=val, title=key).atk-swatch-ink.atk-padding.atk-section-xsmall= key
+    hr.atk-hr-reset.atk-push-xsmall
+    ul.atk-list-nobullets.atk-menu-vertical
+      li
+        a(href="/index.html").atk-swatch-ink.atk-padding.atk-section-xsmall Playground
+      li
+        a(href="/examples.html").atk-swatch-ink.atk-padding.atk-section-xsmall Examples

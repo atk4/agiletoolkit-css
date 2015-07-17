@@ -1,0 +1,189 @@
+extend ../includes/section
+
+block link
+  -var selected = 'Layout';
+
+block content
+  h1.atk-push-reset Layout
+  hr
+  p.atk-size-mega.atk-text-light.atk-push-large Agile Toolkit CSS allows you to create any desirable page layouts without major changes in a page structure.
+  h2 Basic layout
+  p 
+    | Start with this example code and create as many sections as you need with 
+    span.atk-label.atk-swatch-lightRed atk-layout-row
+    | . Toolkit's layout covers 100% of available browser space and divides it between layout rows.
+  pre.atk-push-large
+    code.html.atk-padding.atk-shape-rounded
+      = '<div class="atk-layout">'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">Header</div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">Content</div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">Footer</div>'
+      br
+      = '  </div>'
+      br
+      = '</div>'
+  h2 Layout expander
+  p 
+    | Add a  
+    span.atk-label.atk-swatch-lightRed .atk-layout-expand
+    |  class to expand one of the layout rows. This comes especially handy when you need to create a sticky footer.
+  pre.atk-push-large
+    code.html.atk-padding.atk-shape-rounded
+      = '<div class="atk-layout">'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">Header</div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row atk-layout-expand">'
+      br
+      = '    <div class="atk-layout-cell">Content</div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">Sticky Footer</div>'
+      br
+      = '  </div>'
+      br
+      = '</div>'
+  h2 Wrappers
+  p
+    | Use 
+    span.atk-label.atk-swatch-lightRed .atk-wrapper
+    |  to keep your content centered and 
+    a(href='responsive') responsive
+    | .
+  pre.atk-push-large
+    code.html.atk-padding.atk-shape-rounded
+      = '<div class="atk-layout">'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">'
+      br
+      = '      <div class="atk-wrapper">Header</div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row atk-layout-expand">'
+      br
+      = '    <div class="atk-layout-cell">'
+      br
+      = '      <div class="atk-wrapper">Content</div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">'
+      br
+      = '      <div class="atk-wrapper">Footer</div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '</div>'
+  h2 Layout columns
+  p Create as many columns as you need with the help of a .atk-layout-column. Same as rows, columns can be expanded with a 'atk-layout-expand' class.
+  pre.atk-push-large
+    code.html.atk-padding.atk-shape-rounded
+      = '<div class="atk-layout">'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">'
+      br
+      = '      <div class="atk-wrapper">Header</div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row atk-layout-expand">'
+      br
+      = '    <div class="atk-layout-cell atk-layout">'
+      br
+      = '      <div class="atk-layout-column">Left Sidebar</div>'
+      br
+      = '      <div class="atk-layout-column atk-layout-expand">'
+      br
+      = '        <div class="atk-wrapper">Content</div>'
+      br
+      = '      </div>'
+      br
+      = '      <div class="atk-layout-column">Right Sidebar</div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">'
+      br
+      = '      <div class="atk-wrapper">Footer</div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '</div>'
+  h2 Vertical alignment of content
+  p
+    | Combine 
+    span.atk-label.atk-swatch-lightRed .atk-valign-*
+    |  classes with layout columns to align content vertically. Works like a charm when you need to center that 
+    a(href='#') login box.
+  pre
+    code.html.atk-padding.atk-shape-rounded
+      = '<div class="atk-layout">'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">Header</div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row atk-layout-expand">'
+      br
+      = '    <div class="atk-layout-cell atk-layout">'
+      br
+      = '      <div class="atk-layout-column atk-layout-expand atk-valign-middle">'
+      br
+      = '        Centered Content'
+      br
+      = '      </div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-layout-row">'
+      br
+      = '    <div class="atk-layout-cell">Footer</div>'
+      br
+      = '  </div>'
+      br
+      = '</div>'

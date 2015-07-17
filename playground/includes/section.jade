@@ -1,0 +1,21 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html
+  <!--<![endif]-->
+  include head-docs
+  body
+    include browsehappy
+    .atk-layout
+      //- include includes/header
+      .atk-layout-row.atk-layout-expand
+        .atk-layout.atk-layout-cell
+          include sidebar
+          .atk-layout-column.atk-layout-expand
+            .atk-wrapper.atk-section-large
+              block content
+      //- include includes/footer
+    include scripts-docs
+    include analytics

@@ -313,7 +313,7 @@ ul[class*=atk-menu] {
     .border-radius(@cornerRadius);
     // display: inline-block;
     display: inline;
-    font-weight: bold;
+    // font-weight: bold;
     // line-height: @bodyBaseline;
     padding: (0.2em * @baselineDestroyer) (0.4em * @baselineDestroyer);
     white-space: nowrap;
@@ -862,28 +862,33 @@ ul[class*=atk-menu] {
     &.atk-label, &[class*=atk-box] {
         // color: @bodyColor;
         &.atk-effect-danger {
-            .colorCheck(@color);
-            @color: tint(@effectDanger, 80%);
+            // .colorCheck(@color);
+            @color: tint(@effectDanger, 90%);
+            // color: contrast(@color, black, white, 50%);
             background-color: @color;
             border-color: @color;
+            color: multiply(@effectDanger, #999);
         }
         &.atk-effect-warning {
-            .colorCheck(@color);
-            @color: tint(@effectWarning, 80%);
+            // .colorCheck(@color);
+            @color: tint(@effectWarning, 90%);
             background-color: @color;
             border-color: @color;
+            color: multiply(@effectWarning, #999);
         }
         &.atk-effect-success {
-            .colorCheck(@color);
-            @color: tint(@effectSuccess, 80%);
+            // .colorCheck(@color);
+            @color: tint(@effectSuccess, 90%);
             background: @color;
             border-color: @color;
+            color: multiply(@effectSuccess, #999);
         }
         &.atk-effect-info {
-            .colorCheck(@color);
-            @color: tint(@effectInfo, 80%);
+            // .colorCheck(@color);
+            @color: tint(@effectInfo, 90%);
             background-color: @color;
             border-color: @color;
+            color: multiply(@effectInfo, #999);
         }
     }
     &.atk-effect-danger {

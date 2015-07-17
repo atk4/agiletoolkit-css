@@ -33,16 +33,18 @@ usort($json,function($a,$b){
 $json = array_chunk($json, ceil(count($json)/4));
 header('Content-type: text/plain');
 
-echo ".atk-cells.atk-cells-gutter-small\n";
+echo ".atk-row\n";
 
 foreach($json as $column){
-    echo "  .atk-cell\n";
+    echo "  .atk-col-3\n";
 
     foreach($column as $icon){
-        echo "    .the-icons(title='Code: ".$icon['code'].", ".$icon['src']."')\n";
-        echo "        i.icon-".$icon['css']."\n";
+        echo "    .atk-cells.atk-cells-gutter.atk-padding-xsmall(title='Code: ".$icon['code'].", ".$icon['src']."')\n";
+        echo "      .atk-cell\n";
+        echo "        span.icon-".$icon['css']."\n";
+        echo "      .atk-cell.atk-expand\n";
         echo "        span.i-name ".$icon['css']."\n";
-        echo "        span.i-code ".$icon['code']."\n";
+        // echo "        span.i-code ".$icon['code']."\n";
     }
 
 }
