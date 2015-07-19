@@ -16,6 +16,14 @@ section+section {
     position: relative;
   }
 }
+pre {
+  white-space: nowrap;
+  word-break: normal;
+  code {
+    white-space: pre-wrap;
+    display: inline-block;
+  }
+}
 
 
 // Highlight JS
@@ -101,7 +109,7 @@ section+section {
 .markdown .hljs-bullet,
 .asciidoc .hljs-link_url,
 .markdown .hljs-link_url {
-  color: #080;
+  color: @codeRed;
 }
 
 .hljs-label,

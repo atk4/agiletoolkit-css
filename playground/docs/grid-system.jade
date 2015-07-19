@@ -5,4 +5,124 @@ block link
 
 block content
   //- h1 Grid System
-  include ../includes/playground-gridsystem
+  //- include ../includes/playground-gridsystem
+  h1 Grid system
+  hr
+  p.atk-size-mega.atk-text-light.atk-push-large Need to change this text — outlines benefits. Meet our fluid grid system. Responsive. No need in any extra classes to make it responsive. Unlimited viewports. Adjustable columns for every viewport. Clean HTML markup.
+  h2 Basic grid
+  p
+    | Our grid is percentage based so width of the columns depends on the size of the container. It is recommended to keep grids under 
+    span.atk-label.atk-swatch-lightRed .atk-wrapper
+    |  in order to have responsive features enabled.
+  pre.atk-push
+    code.html.atk-shape-rounded-top.atk-box
+      = '<div class="atk-row">'
+      br
+      = '  <div class="atk-col-5">.atk-col-5</div>'
+      br
+      = '  <div class="atk-col-3">.atk-col-3</div>'
+      br
+      = '  <div class="atk-col-4">.atk-col-4</div>'
+      br
+      = '</div>'
+  .atk-push-large
+    .atk-row.atk-align-center
+      .atk-col-5
+        .atk-box .atk-col-5
+      .atk-col-3
+        .atk-box .atk-col-3
+      .atk-col-4
+        .atk-box .atk-col-4
+  h2 Nested grids
+  p
+    | To have a nested set of columns create a new 
+    span.atk-label.atk-swatch-lightRed .atk-row
+    |  within an existing 
+    span.atk-label.atk-swatch-lightRed .atk-col-*
+    | .
+  pre.atk-push
+    code.html.atk-shape-rounded-top.atk-box
+      = '<div class="atk-row">'
+      br
+      = '  <div class="atk-col-7">'
+      br
+      = '    .atk-col-7'
+      br
+      = '    <div class="atk-row">'
+      br
+      = '      <div class="atk-col-4">.atk-col-4</div>'
+      br
+      = '      <div class="atk-col-4">.atk-col-4</div>'
+      br
+      = '      <div class="atk-col-4">.atk-col-4</div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '  <div class="atk-col-5">'
+      br
+      = '    .atk-col-5'
+      br
+      = '    <div class="atk-row">'
+      br
+      = '      <div class="atk-col-6">.atk-col-6</div>'
+      br
+      = '      <div class="atk-col-6">.atk-col-6</div>'
+      br
+      = '    </div>'
+      br
+      = '  </div>'
+      br
+      = '</div>'
+  .atk-push-large
+    .atk-row.atk-align-center
+      .atk-col-7
+        .atk-box
+          .atk-push .atk-col-7
+          .atk-row
+            .atk-col-4 
+              .atk-box-small .atk-col-4
+            .atk-col-4
+              .atk-box-small .atk-col-4
+            .atk-col-4
+              .atk-box-small .atk-col-4
+      .atk-col-5
+        .atk-box
+          .atk-push .atk-col-5
+          .atk-row
+            .atk-col-6 
+              .atk-box-small .atk-col-6
+            .atk-col-6
+              .atk-box-small .atk-col-6
+  h2 Grid adjustments
+  p
+    | To make adjustments to the grid system, open 
+    span.atk-label.atk-swatch-lightRed theme-default.less
+    |  file and find 
+    span.atk-label.atk-swatch-lightRed .createViewport()
+    |  function under 'Layout' section.
+  pre.atk-push-reset
+    code.less.atk-box
+      ='.createViewport('
+      br
+      ='  @cols:             12,     /* Number of columns in this particular viewport. */'
+      br
+      ='  @colsGutter:       20px,   /* Spacing between columns in this particular viewport. */'
+      br
+      ='  @viewportMinWidth: 0px     /* Viewport target area is from 0px to infinity. */'
+      br
+      =');'
+  //- h2 Responsive
+  //- p To make your grid system responsive you need to specify at least 2 viewports using .createViewport function in the same theme-default.less file.
+  //- pre.atk-push-reset
+  //-   code.less.atk-box
+  //-     ='.createViewport('
+  //-     br
+  //-     ='  @cols:             12,     /* Number of columns in this particular viewport. */'
+  //-     br
+  //-     ='  @colsGutter:       20px,   /* Spacing between columns in this particular viewport. */'
+  //-     br
+  //-     ='  @viewportMinWidth: 0px     /* Viewport target area is from 0px to infinity. */'
+  //-     br
+  //-     =');'

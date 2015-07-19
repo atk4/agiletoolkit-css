@@ -4683,6 +4683,14 @@ section + section {
 #example-widgets-popover .atk-popover {
   position: relative;
 }
+pre {
+  white-space: nowrap;
+  word-break: normal;
+}
+pre code {
+  white-space: pre-wrap;
+  display: inline-block;
+}
 .hljs {
   background: #f5f6f7;
   color: #000000;
@@ -4755,7 +4763,7 @@ section + section {
 .markdown .hljs-bullet,
 .asciidoc .hljs-link_url,
 .markdown .hljs-link_url {
-  color: #080;
+  color: #f9451f;
 }
 .hljs-label,
 .ruby .hljs-string,
