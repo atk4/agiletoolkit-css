@@ -6,5 +6,111 @@ block link
 block content
   h1.atk-push-reset Getting Started
   hr
-  p.atk-size-kilo  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolor suscipit blanditiis architecto eligendi perspiciatis totam ipsa qui reiciendis illo voluptate ea, vero, eum nostrum voluptas, amet dignissimos. Aspernatur, similique.
-  
+  p.atk-size-kilo
+    | Agile CSS can be used out-of-the-box without any additional
+    | dependencies. Simply download and unpack anywhere on your hard-drive.
+
+  a.atk-button.atk-swatch-blue(href="https://github.com/atk4/agiletoolkit-css/archive/master.zip") Download Agile CSS
+
+  h2 Introducing Utility Components
+  .atk-box.atk-move-right.atk-col-3.atk-swatch-ink
+    | Hello from Agile CSS
+  p
+    | Agile CSS differs from other frameworks by focusing on flexibility and
+    | reusability of its design elements. The most basic components in
+    | Agile CSS bring a lot of utility into HTML.
+
+  p
+    | The sample box on the right was entirely composed out of standard
+    | classes without the need to write even a single line of CSS code:
+
+  pre.atk-push
+    code.html.atk-shape-rounded-top.atk-box
+      = '<div class="atk-box atk-move-right atk-col-3 atk-swatch-ink">'
+      br
+      = '  Hello from Agile CSS'
+      br
+      = '</div>'
+
+  p
+    | Inside this short snippet of HTML we defined
+    span.atk-label.atk-swatch-lightRed palette
+    | ,&nbsp;
+    span.atk-label.atk-swatch-lightRed shape
+    | ,&nbsp;
+    span.atk-label.atk-swatch-lightRed position
+    | ,&nbsp;
+    span.atk-label.atk-swatch-lightRed size
+    | and
+    span.atk-label.atk-swatch-lightRed spacing
+    | of our element.
+
+  p
+    | As a first step working with Agile Toolkit, you need to learn about
+    | all the existing components and use them for their purpose.
+
+  p
+    | The benefit of using standard styling tools is that Agile CSS makes
+    | sure that any combination of components works
+    | reliably and that your element interacts properly with surrounding
+    | elements. For example, you could have used dark background yourself,
+    | but you would have to also think about font color. Agile Toolkit
+    | automatically comes up with a best text color for your selected
+    | background.
+
+  h2 Viewport-based responsive layouts
+  p
+    | With a wide varietty of different devices it's no longer optimal
+    | to adopt your design for specific screen sizes. In Agile CSS you
+    | define viewports based around your content.
+  p
+    | Fill your page with content, and measure what's the smallest
+    | device width that can display your content reliably. Use the break point
+    | to define appearance on a narrower devices or configure stretching for
+    | larger devices. Agile CSS can easily shift your content between fixed
+    | and fluid layouts.
+
+  p
+    | Agile CSS layouts are not based on Grid System, instead they will
+    | adopt different characteristics based on size of the viewport. Grid
+    | system is then used to arrange content inside areas of your layout.
+
+  h2 Responsive Grid System
+  p
+    | You will find a familiar 12-column grid inside Agile Toolkit. The
+    | grid is responsive and can be switched to 6, 4, 3 or 2 columns on
+    | smaller devices.
+
+  p
+    | In addition to Grid system, Agile CSS also offers you cell-based
+    | flexible sizing. Your cells will automatically adopt the necessary
+    | width to hold your content.
+
+  p
+    | Both cell layouts and grid layouts are used in navigation bars, menus,
+    | forms, footers and side-bars.
+
+  h2 Widget Library
+  p
+    | Agile CSS contains an extensive library of HTML widgets you can
+    | easily use on your page. Unlike other frameworks, each widget does
+    | not come with a thick set of styles, instead widgets rely on base
+    | components.
+
+  p
+    | A theme designer for Agile CSS will be introducing new widgets but
+    | when those are developed correctly, two characteristics will apply:
+    ul
+        li Each widget will still look OK if HTML is copied to other theme.
+        li
+            | Widget can be moved to other page or inside other widget with no
+            | visible deffects
+
+  p
+    | That means that a
+    span.atk-label.atk-swatch-lightRed Vertical Menu
+    | component can be placed inside left side-bar, top-menu pull-down or inisde
+    | grid column in the center of your page.
+
+  h2 jQuery UI CSS
+
