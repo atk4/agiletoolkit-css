@@ -46,6 +46,16 @@ body {
     border-color: @borderOverlay;
   }
 }
+*[class*=atk-border-outline] {
+    &, &[class*=atk-swatch]:not(.atk-text-inherit) {
+        background: none;
+        border-width: 0.1em;
+        border-style: solid;
+        &.atk-border-outline-thick {
+            border-width: 0.2em;
+        }
+    }
+}
 
 
 // ==========================================================

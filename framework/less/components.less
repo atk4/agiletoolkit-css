@@ -705,16 +705,6 @@ ul[class*=atk-menu] {
         .border-radius(50%);
     }
 }
-*[class*=atk-shape-outline] {
-    &, &[class*=atk-swatch]:not(.atk-text-inherit) {
-        background: none;
-        border-width: 0.1em;
-        border-style: solid;
-        &.atk-shape-outline-thick {
-            border-width: 0.2em;
-        }
-    }
-}
 
 
 // ==========================================================
@@ -789,7 +779,7 @@ ul[class*=atk-menu] {
             .colorCheck(@@color);
             .opacity(0.5);
         }
-        &[class*=atk-shape-outline] {
+        &[class*=atk-border-outline] {
             border-color: @@color;
             color: @@color;
         }
