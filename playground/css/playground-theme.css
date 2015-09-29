@@ -2258,7 +2258,7 @@ input.atk-text-baseline-reset.ui-button {
   line-height: 1.5;
 }
 .atk-text-ellipsis {
-  display: inline-block;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
