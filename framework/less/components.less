@@ -160,7 +160,7 @@ input {
         &.atk-button-blank {
             .buttonBlank;
         }
-        &.atk-button-outline {
+        &.atk-button-outline, &[class*=atk-border-outline] {
             .buttonOutline;
         }
         .atk-buttonset>& {
@@ -818,7 +818,7 @@ ul[class*=atk-menu] {
             &:hover {
                 border-color: darken(@@color, 10%);
             }
-            &.atk-button-outline {
+            &.atk-button-outline, &[class*=atk-border-outline] {
                 background: fade(@@color, 0%);
                 border-color: @@color;
                 color: @@color;
