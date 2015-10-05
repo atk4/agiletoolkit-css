@@ -249,12 +249,16 @@ pre {
 }
 hr {
     background: none;
-    border: none;
-    border-top: 1px solid @borderStatic;
+    border-width: 0;
+    border-top-width: 1px;
+    border-style: solid;
     clear: both;
     height: 0;
     margin: @margin 0;
     width: 100%;
+    &:not([class*=atk-border]) {
+        border-color: @borderStatic;
+    }
     &.atk-hr-xsmall {
         margin: round(@margin/3,2) 0;
     }
