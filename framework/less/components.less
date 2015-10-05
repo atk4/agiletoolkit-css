@@ -145,17 +145,19 @@ input {
         display: inline-block;
         font-weight: bold;
         line-height: @bodyBaseline;
-        padding: (0.5em * @baselineDestroyer) (1em * @baselineDestroyer);
         text-align: center;
         white-space: nowrap;
         &:hover {
             .buttonHover;
         }
-        &.atk-button-small {
-            padding: (0.25em * @baselineDestroyer) (0.5em * @baselineDestroyer);
-        }
-        &.atk-button-large {
-            padding: (0.75em * @baselineDestroyer) (1.5em * @baselineDestroyer);
+        &:not([class*=atk-section]) {
+            padding: (0.5em * @baselineDestroyer) (1em * @baselineDestroyer);
+            &.atk-button-small {
+                padding: (0.25em * @baselineDestroyer) (0.5em * @baselineDestroyer);
+            }
+            &.atk-button-large {
+                padding: (0.75em * @baselineDestroyer) (1.5em * @baselineDestroyer);
+            }
         }
         &.atk-button-blank {
             .buttonBlank;

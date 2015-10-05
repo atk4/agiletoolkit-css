@@ -2639,13 +2639,15 @@ hr.atk-border-overlay {
   border-color: #a1a1a1;
 }
 *[class*=atk-border-outline],
-*[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit) {
+*[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit),
+*[class*=atk-border-outline][class*=atk-box] {
   background: none;
   border-width: 0.1em;
   border-style: solid;
 }
 *[class*=atk-border-outline].atk-border-outline-thick,
-*[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-thick {
+*[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-thick,
+*[class*=atk-border-outline][class*=atk-box].atk-border-outline-thick {
   border-width: 0.2em;
 }
 ::selection {
@@ -3141,7 +3143,6 @@ input.ui-button {
   display: inline-block;
   font-weight: bold;
   line-height: 1.5;
-  padding: 0.5em 1em;
   text-align: center;
   white-space: nowrap;
 }
@@ -3169,20 +3170,28 @@ input.ui-button:hover {
   border: 1px solid #c8c8c8;
   color: #000000;
 }
-a[class*='atk-button'].atk-button-small,
-button[class*='atk-button'].atk-button-small,
-input[class*='atk-button'].atk-button-small,
-a.ui-button.atk-button-small,
-button.ui-button.atk-button-small,
-input.ui-button.atk-button-small {
+a[class*='atk-button']:not([class*=atk-section]),
+button[class*='atk-button']:not([class*=atk-section]),
+input[class*='atk-button']:not([class*=atk-section]),
+a.ui-button:not([class*=atk-section]),
+button.ui-button:not([class*=atk-section]),
+input.ui-button:not([class*=atk-section]) {
+  padding: 0.5em 1em;
+}
+a[class*='atk-button']:not([class*=atk-section]).atk-button-small,
+button[class*='atk-button']:not([class*=atk-section]).atk-button-small,
+input[class*='atk-button']:not([class*=atk-section]).atk-button-small,
+a.ui-button:not([class*=atk-section]).atk-button-small,
+button.ui-button:not([class*=atk-section]).atk-button-small,
+input.ui-button:not([class*=atk-section]).atk-button-small {
   padding: 0.25em 0.5em;
 }
-a[class*='atk-button'].atk-button-large,
-button[class*='atk-button'].atk-button-large,
-input[class*='atk-button'].atk-button-large,
-a.ui-button.atk-button-large,
-button.ui-button.atk-button-large,
-input.ui-button.atk-button-large {
+a[class*='atk-button']:not([class*=atk-section]).atk-button-large,
+button[class*='atk-button']:not([class*=atk-section]).atk-button-large,
+input[class*='atk-button']:not([class*=atk-section]).atk-button-large,
+a.ui-button:not([class*=atk-section]).atk-button-large,
+button.ui-button:not([class*=atk-section]).atk-button-large,
+input.ui-button:not([class*=atk-section]).atk-button-large {
   padding: 0.75em 1.5em;
 }
 a[class*='atk-button'].atk-button-blank,
