@@ -47,6 +47,7 @@
             }
         }
         >thead>tr>th {
+            border-bottom: 1px solid @borderStatic;
             text-align: left;
             &.atk-table-sort {
                 >a {
@@ -69,7 +70,7 @@
             }
         }
         tbody tr {
-            td {
+            + tr td {
                 border-top: 1px solid @borderStatic;
             }
             &.atk-table-expander {

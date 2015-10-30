@@ -135,6 +135,38 @@
     }
 }
 
+
+// Lister
+*[class*=atk-lister] {
+    >* {
+        padding-bottom: @margin;
+        + * {
+            border-top: 1px solid @borderDisabled;
+            padding-top: @margin;
+        }
+        &:last-child {
+            padding-bottom: 0 !important;
+        }
+    }
+    &.atk-lister-small {
+        >* {
+            padding-bottom: @margin/2;
+            + * {
+                padding-top: @margin/2;
+            }
+        }
+    }
+    &.atk-lister-large {
+        >* {
+            padding-bottom: @margin*2;
+            + * {
+                padding-top: @margin*2;
+            }
+        }
+    }
+}
+
+
 // Buttons
 a,
 button,
@@ -152,11 +184,17 @@ input {
         }
         &:not([class*=atk-section]) {
             padding: (0.5em * @baselineDestroyer) (1em * @baselineDestroyer);
+            &.atk-button-xsmall {
+                padding: (0.12em * @baselineDestroyer) (0.25em * @baselineDestroyer);
+            }
             &.atk-button-small {
                 padding: (0.25em * @baselineDestroyer) (0.5em * @baselineDestroyer);
             }
             &.atk-button-large {
                 padding: (0.75em * @baselineDestroyer) (1.5em * @baselineDestroyer);
+            }
+            &.atk-button-xlarge {
+                padding: (1em * @baselineDestroyer) (2em * @baselineDestroyer);
             }
         }
         &.atk-button-blank {
@@ -164,6 +202,10 @@ input {
         }
         &.atk-button-outline, &[class*=atk-border-outline] {
             .buttonOutline;
+        }
+        &.atk-button-active {
+            .buttonActive;
+            cursor: default;
         }
         .atk-buttonset>& {
             .border-radius(0);
@@ -194,7 +236,9 @@ input {
     // color: #fff !important;
 }
 ul[class*=atk-menu] {
-    display: inline-block;
+    &:not(.atk-cells) {
+        display: inline-block;
+    }
     list-style-type: none;
     margin-bottom: 0;
     margin-right: 0;
@@ -316,11 +360,8 @@ ul[class*=atk-menu] {
 // Label
 .atk-label {
     .border-radius(@cornerRadius);
-    // display: inline-block;
     display: inline;
-    // font-weight: bold;
-    // line-height: @bodyBaseline;
-    padding: (0.2em * @baselineDestroyer) (0.4em * @baselineDestroyer);
+    padding: (0.2em * @baselineDestroyer) (0.5em * @baselineDestroyer);
     white-space: nowrap;
 }
 
@@ -361,10 +402,10 @@ ul[class*=atk-menu] {
 
 // Helpers
 .atk-inline {
-    display: inline-block;
+    display: inline-block !important;
 }
 .atk-block {
-    display: block;
+    display: block !important;
 }
 .atk-jackscrew, .atk-expand {
     width: 100% !important;
@@ -612,6 +653,18 @@ ul[class*=atk-menu] {
         &.atk-padding-reset {
             padding: 0;
         }
+        &.atk-padding-top-reset {
+            padding-top: 0;
+        }
+        &.atk-padding-bottom-reset {
+            padding-bottom: 0;
+        }
+        &.atk-padding-left-reset {
+            padding-left: 0;
+        }
+        &.atk-padding-right-reset {
+            padding-right: 0;
+        }
     }
 }
 
@@ -813,6 +866,11 @@ ul[class*=atk-menu] {
             background-color: @@color;
             border-color: @@color;
         }
+        &.atk-label[class*=atk-border-outline] {
+            background: none;
+            border-color: @@color;
+            color: @@color;
+        }
         &[class*='atk-button'] {
             border-color: darken(@@color, 10%);
             border-width: @buttonBorderWidth;
@@ -957,16 +1015,12 @@ ul[class*=atk-menu] {
     color: @bodyColor;
 }
 .buttonActive() {
+    .box-shadow(@buttonDefaultShadow ~'inset');
     background: @buttonActive;
     border: 1px solid @borderClickable;
     color: @bodyColor;
 }
-.atk-disabled {
+.atk-state-disabled {
     .opacity(50);
     pointer-events: none;
-}
-
-// Special Effects
-.atk-blur {
-    .blur(@blur);
 }

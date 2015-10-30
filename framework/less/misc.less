@@ -32,6 +32,7 @@ body {
   .background-fixed;
 }
 
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch],
 *[class*=atk-box], .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content, *[class*=atk-swatch] hr, hr {
   &.atk-border-disabled {
     border-color: @borderDisabled;
@@ -51,10 +52,16 @@ body {
         background: none;
         border-width: 0.1em;
         border-style: solid;
-        &.atk-border-outline-thick {
+        &.atk-border-outline-small {
+            border-width: 0.05em;
+        }
+        &.atk-border-outline-large {
             border-width: 0.2em;
         }
     }
+}
+.atk-blur {
+    .blur(@blur);
 }
 
 
@@ -88,6 +95,15 @@ a {
     &:hover, &:focus{
         color: @linkColorHover;
     }
+}
+
+
+// ==========================================================
+// Common
+// ==========================================================
+
+.atk-overflow {
+  overflow: hidden;
 }
 
 
