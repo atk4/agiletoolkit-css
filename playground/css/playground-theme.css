@@ -1,6 +1,6 @@
 /** Playground Theme */
 /**
- * Agile CSS Framework (c) 2013–2015 v0.917
+ * Agile CSS Framework (c) 2013–2015 v0.918
  *  http://www4.agiletoolkit.org/css
  */
 /*! jQuery UI - v1.10.3 - 2013-12-23
@@ -2494,9 +2494,9 @@ input[type=text]:focus,
 input[type=password]:focus,
 textarea:focus {
   border-color: #0095ff !important;
-  -webkit-box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 10px rgba(0, 149, 255, 0.3);
-  -moz-box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 10px rgba(0, 149, 255, 0.3);
-  box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 10px rgba(0, 149, 255, 0.3);
+  -webkit-box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 6px rgba(0, 149, 255, 0.3);
+  -moz-box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 6px rgba(0, 149, 255, 0.3);
+  box-shadow: 0 0 3px rgba(0, 149, 255, 0.7), 0 0 6px rgba(0, 149, 255, 0.3);
   outline: none;
 }
 label.atk-input-label {
@@ -3392,6 +3392,10 @@ ul[class*=atk-menu] > li *[class*=atk-menu]:not(.atk-menu-separated) li {
   padding: 0;
   list-style-type: none;
 }
+ul[class*=atk-menu] > li *[class*=atk-menu]:not(.atk-menu-separated)[data-menu-position="right"] {
+  left: auto !important;
+  right: 0;
+}
 ul[class*=atk-menu] > li:hover *[class*=atk-menu] {
   display: block;
 }
@@ -3707,104 +3711,149 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
 *[class*=atk-push].atk-push-reset {
   margin-bottom: 0;
 }
-*[class*=atk-padding],
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.atk-padding-xsmall {
+  padding: 0.5rem;
 }
-*[class*=atk-padding]:not([class*=atk-section]),
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content:not([class*=atk-section]) {
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+.atk-padding-small {
+  padding: 0.75rem;
 }
-*[class*=atk-padding].atk-padding-xsmall,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-xsmall {
+.atk-padding {
+  padding: 1.5rem;
+}
+.atk-padding-large {
+  padding: 3rem;
+}
+.atk-padding-xlarge {
+  padding: 4.5rem;
+}
+.atk-padding-xsmall {
+  padding: 0.5rem;
+}
+.atk-padding-small {
+  padding: 0.75rem;
+}
+.atk-padding {
+  padding: 1.5rem;
+}
+.atk-padding-large {
+  padding: 3rem;
+}
+.atk-padding-xlarge {
+  padding: 4.5rem;
+}
+.atk-padding-horizontal-xsmall {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-*[class*=atk-padding].atk-padding-xsmall:not([class*=atk-section]),
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-xsmall:not([class*=atk-section]) {
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-}
-*[class*=atk-padding].atk-padding-small,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-small {
+.atk-padding-horizontal-small {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
-*[class*=atk-padding].atk-padding-small:not([class*=atk-section]),
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-small:not([class*=atk-section]) {
-  padding-bottom: 0.75rem;
-  padding-top: 0.75rem;
+.atk-padding-horizontal {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
-*[class*=atk-padding].atk-padding-large,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-large {
+.atk-padding-horizontal-large {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-*[class*=atk-padding].atk-padding-large:not([class*=atk-section]),
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-large:not([class*=atk-section]) {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
-}
-*[class*=atk-padding].atk-padding-xlarge,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-xlarge {
+.atk-padding-horizontal-xlarge {
   padding-left: 4.5rem;
   padding-right: 4.5rem;
 }
-*[class*=atk-padding].atk-padding-xlarge:not([class*=atk-section]),
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-xlarge:not([class*=atk-section]) {
-  padding-bottom: 4.5rem;
-  padding-top: 4.5rem;
-}
-*[class*=atk-padding].atk-padding-reset,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-reset {
-  padding: 0;
-}
-*[class*=atk-padding].atk-padding-top-reset,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-top-reset {
-  padding-top: 0;
-}
-*[class*=atk-padding].atk-padding-bottom-reset,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-bottom-reset {
-  padding-bottom: 0;
-}
-*[class*=atk-padding].atk-padding-left-reset,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-left-reset {
-  padding-left: 0;
-}
-*[class*=atk-padding].atk-padding-right-reset,
-.ui-tabs *[class*=atk-padding].ui-tabs-panel.ui-widget-content.atk-padding-right-reset {
-  padding-right: 0;
-}
-*[class*=atk-section],
-.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content {
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
-}
-*[class*=atk-section].atk-section-xsmall,
-.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-xsmall {
+.atk-padding-vertical-xsmall {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
 }
-*[class*=atk-section].atk-section-small,
-.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-small {
+.atk-padding-vertical-small {
   padding-bottom: 0.75rem;
   padding-top: 0.75rem;
 }
-*[class*=atk-section].atk-section-large,
-.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-large {
+.atk-padding-vertical {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+.atk-padding-vertical-large {
   padding-bottom: 3rem;
   padding-top: 3rem;
 }
-*[class*=atk-section].atk-section-xlarge,
-.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-xlarge {
+.atk-padding-vertical-xlarge {
   padding-bottom: 4.5rem;
   padding-top: 4.5rem;
 }
-*[class*=atk-section].atk-section-reset,
-.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-reset {
+.atk-padding-left-xsmall {
+  padding-left: 0.5rem;
+}
+.atk-padding-left-small {
+  padding-left: 0.75rem;
+}
+.atk-padding-left {
+  padding-left: 1.5rem;
+}
+.atk-padding-left-large {
+  padding-left: 3rem;
+}
+.atk-padding-left-xlarge {
+  padding-left: 4.5rem;
+}
+.atk-padding-right-xsmall {
+  padding-right: 0.5rem;
+}
+.atk-padding-right-small {
+  padding-right: 0.75rem;
+}
+.atk-padding-right {
+  padding-right: 1.5rem;
+}
+.atk-padding-right-large {
+  padding-right: 3rem;
+}
+.atk-padding-right-xlarge {
+  padding-right: 4.5rem;
+}
+.atk-padding-top-xsmall {
+  padding-top: 0.5rem;
+}
+.atk-padding-top-small {
+  padding-top: 0.75rem;
+}
+.atk-padding-top {
+  padding-top: 1.5rem;
+}
+.atk-padding-top-large {
+  padding-top: 3rem;
+}
+.atk-padding-top-xlarge {
+  padding-top: 4.5rem;
+}
+.atk-padding-bottom-xsmall {
+  padding-bottom: 0.5rem;
+}
+.atk-padding-bottom-small {
+  padding-bottom: 0.75rem;
+}
+.atk-padding-bottom {
+  padding-bottom: 1.5rem;
+}
+.atk-padding-bottom-large {
+  padding-bottom: 3rem;
+}
+.atk-padding-bottom-xlarge {
+  padding-bottom: 4.5rem;
+}
+.atk-padding-reset {
+  padding: 0;
+}
+.atk-padding-left-reset {
+  padding-left: 0;
+}
+.atk-padding-right-reset {
+  padding-right: 0;
+}
+.atk-padding-top-reset {
   padding-top: 0;
+}
+.atk-padding-bottom-reset {
   padding-bottom: 0;
 }
 .atk-shape-rectangle,
@@ -4075,6 +4124,36 @@ input.atk-shape-circle.ui-button {
  *  http://www4.agiletoolkit.org/css
  *  Theme: Default
  */
+*[class*=atk-section],
+.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+*[class*=atk-section].atk-section-xsmall,
+.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-xsmall {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+*[class*=atk-section].atk-section-small,
+.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-small {
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+}
+*[class*=atk-section].atk-section-large,
+.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-large {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+*[class*=atk-section].atk-section-xlarge,
+.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-xlarge {
+  padding-bottom: 4.5rem;
+  padding-top: 4.5rem;
+}
+*[class*=atk-section].atk-section-reset,
+.ui-tabs *[class*=atk-section].ui-tabs-panel.ui-widget-content.atk-section-reset {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 /* Icon library generated by www.fontello.com */
 .atk-swatch-white:not(.atk-text-inherit) {
   background-color: #ffffff;
@@ -4107,8 +4186,8 @@ a.atk-swatch-white:not(.atk-text-inherit),
 }
 .atk-swatch-white:not(.atk-text-inherit) .atk-text-dimmed {
   color: #000000;
-  opacity: 0.005;
-  filter: alpha(opacity=0.5);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .atk-swatch-white:not(.atk-text-inherit)[class*=atk-border-outline] {
   border-color: #ffffff;
@@ -4168,9 +4247,13 @@ a.atk-swatch-white:not(.atk-text-inherit):hover,
 .atk-swatch-white:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline]:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-white:not(.atk-text-inherit) {
+.atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-white:not(.atk-text-inherit) {
   border-style: solid;
   border-width: 1px 0 0 0;
+}
+.atk-menu-horizontal > li.atk-menu-separated:not(:first-child) > a.atk-swatch-white:not(.atk-text-inherit) {
+  border-style: solid;
+  border-width: 0 0 0 1px;
 }
 *[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-white:not(.atk-text-inherit) {
   color: #000000;
@@ -4179,7 +4262,8 @@ a.atk-swatch-white:not(.atk-text-inherit):hover,
   color: #000000;
   color: #000000 !important;
 }
-.atk-swatch-white:not(.atk-text-inherit) hr {
+.atk-swatch-white:not(.atk-text-inherit) hr,
+*[class*=atk-swatch] .atk-swatch-white:not(.atk-text-inherit) hr {
   border-color: #f5f5f5;
 }
 *[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-white:not(.atk-text-inherit) {
@@ -4226,8 +4310,8 @@ a.atk-swatch-gray:not(.atk-text-inherit),
 }
 .atk-swatch-gray:not(.atk-text-inherit) .atk-text-dimmed {
   color: #000000;
-  opacity: 0.005;
-  filter: alpha(opacity=0.5);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .atk-swatch-gray:not(.atk-text-inherit)[class*=atk-border-outline] {
   border-color: #f5f6f7;
@@ -4287,9 +4371,13 @@ a.atk-swatch-gray:not(.atk-text-inherit):hover,
 .atk-swatch-gray:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline]:hover {
   background: rgba(245, 246, 247, 0.2);
 }
-*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-gray:not(.atk-text-inherit) {
+.atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-gray:not(.atk-text-inherit) {
   border-style: solid;
   border-width: 1px 0 0 0;
+}
+.atk-menu-horizontal > li.atk-menu-separated:not(:first-child) > a.atk-swatch-gray:not(.atk-text-inherit) {
+  border-style: solid;
+  border-width: 0 0 0 1px;
 }
 *[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-gray:not(.atk-text-inherit) {
   color: #000000;
@@ -4298,7 +4386,8 @@ a.atk-swatch-gray:not(.atk-text-inherit):hover,
   color: #000000;
   color: #000000 !important;
 }
-.atk-swatch-gray:not(.atk-text-inherit) hr {
+.atk-swatch-gray:not(.atk-text-inherit) hr,
+*[class*=atk-swatch] .atk-swatch-gray:not(.atk-text-inherit) hr {
   border-color: #eaecee;
 }
 *[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-gray:not(.atk-text-inherit) {
@@ -4345,8 +4434,8 @@ a.atk-swatch-ink:not(.atk-text-inherit),
 }
 .atk-swatch-ink:not(.atk-text-inherit) .atk-text-dimmed {
   color: white;
-  opacity: 0.005;
-  filter: alpha(opacity=0.5);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .atk-swatch-ink:not(.atk-text-inherit)[class*=atk-border-outline] {
   border-color: #1c2933;
@@ -4406,9 +4495,13 @@ a.atk-swatch-ink:not(.atk-text-inherit):hover,
 .atk-swatch-ink:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline]:hover {
   background: rgba(28, 41, 51, 0.2);
 }
-*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-ink:not(.atk-text-inherit) {
+.atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-ink:not(.atk-text-inherit) {
   border-style: solid;
   border-width: 1px 0 0 0;
+}
+.atk-menu-horizontal > li.atk-menu-separated:not(:first-child) > a.atk-swatch-ink:not(.atk-text-inherit) {
+  border-style: solid;
+  border-width: 0 0 0 1px;
 }
 *[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-ink:not(.atk-text-inherit) {
   color: white;
@@ -4417,7 +4510,8 @@ a.atk-swatch-ink:not(.atk-text-inherit):hover,
   color: white;
   color: white !important;
 }
-.atk-swatch-ink:not(.atk-text-inherit) hr {
+.atk-swatch-ink:not(.atk-text-inherit) hr,
+*[class*=atk-swatch] .atk-swatch-ink:not(.atk-text-inherit) hr {
   border-color: #233440;
 }
 *[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-ink:not(.atk-text-inherit) {
@@ -4464,8 +4558,8 @@ a.atk-swatch-yellow:not(.atk-text-inherit),
 }
 .atk-swatch-yellow:not(.atk-text-inherit) .atk-text-dimmed {
   color: #000000;
-  opacity: 0.005;
-  filter: alpha(opacity=0.5);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .atk-swatch-yellow:not(.atk-text-inherit)[class*=atk-border-outline] {
   border-color: #ffcc00;
@@ -4525,9 +4619,13 @@ a.atk-swatch-yellow:not(.atk-text-inherit):hover,
 .atk-swatch-yellow:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline]:hover {
   background: rgba(255, 204, 0, 0.2);
 }
-*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-yellow:not(.atk-text-inherit) {
+.atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-yellow:not(.atk-text-inherit) {
   border-style: solid;
   border-width: 1px 0 0 0;
+}
+.atk-menu-horizontal > li.atk-menu-separated:not(:first-child) > a.atk-swatch-yellow:not(.atk-text-inherit) {
+  border-style: solid;
+  border-width: 0 0 0 1px;
 }
 *[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-yellow:not(.atk-text-inherit) {
   color: #000000;
@@ -4536,7 +4634,8 @@ a.atk-swatch-yellow:not(.atk-text-inherit):hover,
   color: #000000;
   color: #000000 !important;
 }
-.atk-swatch-yellow:not(.atk-text-inherit) hr {
+.atk-swatch-yellow:not(.atk-text-inherit) hr,
+*[class*=atk-swatch] .atk-swatch-yellow:not(.atk-text-inherit) hr {
   border-color: #ebbc00;
 }
 *[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-yellow:not(.atk-text-inherit) {
@@ -4583,8 +4682,8 @@ a.atk-swatch-red:not(.atk-text-inherit),
 }
 .atk-swatch-red:not(.atk-text-inherit) .atk-text-dimmed {
   color: white;
-  opacity: 0.005;
-  filter: alpha(opacity=0.5);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .atk-swatch-red:not(.atk-text-inherit)[class*=atk-border-outline] {
   border-color: #f9451f;
@@ -4644,9 +4743,13 @@ a.atk-swatch-red:not(.atk-text-inherit):hover,
 .atk-swatch-red:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline]:hover {
   background: rgba(249, 69, 31, 0.2);
 }
-*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-red:not(.atk-text-inherit) {
+.atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-red:not(.atk-text-inherit) {
   border-style: solid;
   border-width: 1px 0 0 0;
+}
+.atk-menu-horizontal > li.atk-menu-separated:not(:first-child) > a.atk-swatch-red:not(.atk-text-inherit) {
+  border-style: solid;
+  border-width: 0 0 0 1px;
 }
 *[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-red:not(.atk-text-inherit) {
   color: white;
@@ -4655,7 +4758,8 @@ a.atk-swatch-red:not(.atk-text-inherit):hover,
   color: white;
   color: white !important;
 }
-.atk-swatch-red:not(.atk-text-inherit) hr {
+.atk-swatch-red:not(.atk-text-inherit) hr,
+*[class*=atk-swatch] .atk-swatch-red:not(.atk-text-inherit) hr {
   border-color: #fa5533;
 }
 *[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-red:not(.atk-text-inherit) {
@@ -4702,8 +4806,8 @@ a.atk-swatch-green:not(.atk-text-inherit),
 }
 .atk-swatch-green:not(.atk-text-inherit) .atk-text-dimmed {
   color: white;
-  opacity: 0.005;
-  filter: alpha(opacity=0.5);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .atk-swatch-green:not(.atk-text-inherit)[class*=atk-border-outline] {
   border-color: #00cc66;
@@ -4763,9 +4867,13 @@ a.atk-swatch-green:not(.atk-text-inherit):hover,
 .atk-swatch-green:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline]:hover {
   background: rgba(0, 204, 102, 0.2);
 }
-*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-green:not(.atk-text-inherit) {
+.atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-green:not(.atk-text-inherit) {
   border-style: solid;
   border-width: 1px 0 0 0;
+}
+.atk-menu-horizontal > li.atk-menu-separated:not(:first-child) > a.atk-swatch-green:not(.atk-text-inherit) {
+  border-style: solid;
+  border-width: 0 0 0 1px;
 }
 *[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-green:not(.atk-text-inherit) {
   color: white;
@@ -4774,7 +4882,8 @@ a.atk-swatch-green:not(.atk-text-inherit):hover,
   color: white;
   color: white !important;
 }
-.atk-swatch-green:not(.atk-text-inherit) hr {
+.atk-swatch-green:not(.atk-text-inherit) hr,
+*[class*=atk-swatch] .atk-swatch-green:not(.atk-text-inherit) hr {
   border-color: #00e070;
 }
 *[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-green:not(.atk-text-inherit) {
@@ -4821,8 +4930,8 @@ a.atk-swatch-blue:not(.atk-text-inherit),
 }
 .atk-swatch-blue:not(.atk-text-inherit) .atk-text-dimmed {
   color: white;
-  opacity: 0.005;
-  filter: alpha(opacity=0.5);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .atk-swatch-blue:not(.atk-text-inherit)[class*=atk-border-outline] {
   border-color: #0095ff;
@@ -4882,9 +4991,13 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
 .atk-swatch-blue:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline]:hover {
   background: rgba(0, 149, 255, 0.2);
 }
-*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-blue:not(.atk-text-inherit) {
+.atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-blue:not(.atk-text-inherit) {
   border-style: solid;
   border-width: 1px 0 0 0;
+}
+.atk-menu-horizontal > li.atk-menu-separated:not(:first-child) > a.atk-swatch-blue:not(.atk-text-inherit) {
+  border-style: solid;
+  border-width: 0 0 0 1px;
 }
 *[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-blue:not(.atk-text-inherit) {
   color: white;
@@ -4893,7 +5006,8 @@ a.atk-swatch-blue:not(.atk-text-inherit):hover,
   color: white;
   color: white !important;
 }
-.atk-swatch-blue:not(.atk-text-inherit) hr {
+.atk-swatch-blue:not(.atk-text-inherit) hr,
+*[class*=atk-swatch] .atk-swatch-blue:not(.atk-text-inherit) hr {
   border-color: #149dff;
 }
 *[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-blue:not(.atk-text-inherit) {
@@ -4940,8 +5054,8 @@ a.atk-swatch-lightRed:not(.atk-text-inherit),
 }
 .atk-swatch-lightRed:not(.atk-text-inherit) .atk-text-dimmed {
   color: #000000;
-  opacity: 0.005;
-  filter: alpha(opacity=0.5);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .atk-swatch-lightRed:not(.atk-text-inherit)[class*=atk-border-outline] {
   border-color: #fff4f2;
@@ -5001,9 +5115,13 @@ a.atk-swatch-lightRed:not(.atk-text-inherit):hover,
 .atk-swatch-lightRed:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline]:hover {
   background: rgba(255, 244, 242, 0.2);
 }
-*[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-lightRed:not(.atk-text-inherit) {
+.atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-lightRed:not(.atk-text-inherit) {
   border-style: solid;
   border-width: 1px 0 0 0;
+}
+.atk-menu-horizontal > li.atk-menu-separated:not(:first-child) > a.atk-swatch-lightRed:not(.atk-text-inherit) {
+  border-style: solid;
+  border-width: 0 0 0 1px;
 }
 *[class*=atk-menu] li[class*=atk-swatch] a.atk-swatch-lightRed:not(.atk-text-inherit) {
   color: #000000;
@@ -5012,7 +5130,8 @@ a.atk-swatch-lightRed:not(.atk-text-inherit):hover,
   color: #000000;
   color: #000000 !important;
 }
-.atk-swatch-lightRed:not(.atk-text-inherit) hr {
+.atk-swatch-lightRed:not(.atk-text-inherit) hr,
+*[class*=atk-swatch] .atk-swatch-lightRed:not(.atk-text-inherit) hr {
   border-color: #ffe3de;
 }
 *[class*=atk-menu] > li.atk-menu-separated:not(:first-child) > a.atk-swatch-lightRed:not(.atk-text-inherit) {

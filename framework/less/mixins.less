@@ -353,6 +353,25 @@
 }
 
 
+// ==========================================================
+// Misc
+// ==========================================================
+
+.iconGen(@icon) {
+  position: relative;
+  &:before {
+    .position(@t:50%,@l:50%);
+    content: @icon;
+    font-family: fontello;
+    font-size: 1em;
+    height: 1em;
+    line-height: 1em;
+    margin: -0.5em 0 0 -0.5em;
+    text-align: center;
+    width: 1em;
+  }
+}
+
 
 // CUSTOM JQUERY UI STYLES
 // --------------------------------------------------------
