@@ -31,6 +31,7 @@
     @p: @py @px;
     @px: round(@margin/2,2);
     @py: round(@margin/4,2);
+    position: relative;
     table {
         width: 100%;
         thead th, tbody td {
@@ -80,6 +81,16 @@
                 }
 
             }
+            td.atk-table-row-icon {
+                .position(@l:100%);
+                margin-top: -1px;
+                opacity: 0;
+                vertical-align: middle;
+            }
+            &:hover td.atk-table-row-icon {
+                border: none;
+                opacity: 1;
+            }
         }
     }
     >*[class*=atk-box] {
@@ -107,6 +118,26 @@
         th, td {
             border: 1px solid @borderStatic;
         }
+    }
+    &[data-table-padding='large'] {
+        @p: @py @px;
+        @px: round(@margin,2);
+        @py: round(@margin/2,2);
+        table {
+            thead th, tbody td {
+                // background: #fff;
+                &:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort) {
+                    padding-bottom: @py;
+                    padding-left: @px;
+                    padding-right: @px;
+                    padding-top: @py;   
+                }
+                &[class*=atk-section] {
+                    padding-left: @px;
+                    padding-right: @px;
+                }
+            }
+        }   
     }
 }
 

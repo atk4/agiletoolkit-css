@@ -2687,6 +2687,12 @@ a:focus {
 .atk-overflow {
   overflow: hidden;
 }
+.atk-show {
+  display: block !important;
+}
+.atk-hide {
+  display: none !important;
+}
 .row {
   *zoom: 1;
 }
@@ -2737,6 +2743,9 @@ a:focus {
   opacity: 1;
   filter: alpha(opacity=100);
 }
+.atk-table {
+  position: relative;
+}
 .atk-table table {
   width: 100%;
 }
@@ -2784,6 +2793,17 @@ a:focus {
 .atk-table table tbody tr.atk-table-expander td {
   border-top: none;
 }
+.atk-table table tbody tr td.atk-table-row-icon {
+  position: absolute;
+  left: 100%;
+  margin-top: -1px;
+  opacity: 0;
+  vertical-align: middle;
+}
+.atk-table table tbody tr:hover td.atk-table-row-icon {
+  border: none;
+  opacity: 1;
+}
 .atk-table > *[class*=atk-box]:first-child {
   border-bottom: none;
   border-bottom-left-radius: 0;
@@ -2804,6 +2824,18 @@ a:focus {
 .atk-table.atk-table-bordered th,
 .atk-table.atk-table-bordered td {
   border: 1px solid #e1e1e1;
+}
+.atk-table[data-table-padding='large'] table thead th:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort),
+.atk-table[data-table-padding='large'] table tbody td:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort) {
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+}
+.atk-table[data-table-padding='large'] table thead th[class*=atk-section],
+.atk-table[data-table-padding='large'] table tbody td[class*=atk-section] {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .atk-pagination {
   font-size: 0;

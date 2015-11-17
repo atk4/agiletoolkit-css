@@ -357,7 +357,12 @@
 // Misc
 // ==========================================================
 
-.iconGen(@icon) {
+.icon-center() {
+  .position(@t:50%,@l:50%);
+  line-height: 1;
+  margin: -0.5em 0 0 -0.5em;
+}
+.icon-generator(@icon) {
   position: relative;
   &:before {
     .position(@t:50%,@l:50%);
