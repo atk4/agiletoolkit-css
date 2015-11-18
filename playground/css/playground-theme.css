@@ -2687,12 +2687,6 @@ a:focus {
 .atk-overflow {
   overflow: hidden;
 }
-.atk-show {
-  display: block !important;
-}
-.atk-hide {
-  display: none !important;
-}
 .row {
   *zoom: 1;
 }
