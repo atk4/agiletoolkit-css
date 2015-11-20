@@ -2640,20 +2640,23 @@ hr.atk-border-overlay {
 }
 *[class*=atk-border-outline],
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit),
-*[class*=atk-border-outline][class*=atk-box] {
+*[class*=atk-border-outline][class*=atk-box],
+*[class*=atk-border-outline][class*=atk-button] {
   background: none;
-  border-width: 0.1em;
+  border-width: 0.1em !important;
   border-style: solid;
 }
 *[class*=atk-border-outline].atk-border-outline-small,
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-small,
-*[class*=atk-border-outline][class*=atk-box].atk-border-outline-small {
-  border-width: 0.05em;
+*[class*=atk-border-outline][class*=atk-box].atk-border-outline-small,
+*[class*=atk-border-outline][class*=atk-button].atk-border-outline-small {
+  border-width: 0.05em !important;
 }
 *[class*=atk-border-outline].atk-border-outline-large,
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-large,
-*[class*=atk-border-outline][class*=atk-box].atk-border-outline-large {
-  border-width: 0.2em;
+*[class*=atk-border-outline][class*=atk-box].atk-border-outline-large,
+*[class*=atk-border-outline][class*=atk-button].atk-border-outline-large {
+  border-width: 0.2em !important;
 }
 .atk-blur {
   -webkit-filter: blur(5px);
