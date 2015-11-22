@@ -3611,6 +3611,21 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
 .atk-valign-bottom.atk-cells > .atk-cell {
   vertical-align: bottom !important;
 }
+.atk-spacing-xsmall {
+  height: 0.375rem;
+}
+.atk-spacing-small {
+  height: 0.75rem;
+}
+.atk-spacing {
+  height: 1.5rem;
+}
+.atk-spacing-large {
+  height: 3rem;
+}
+.atk-spacing-xlarge {
+  height: 6rem;
+}
 *[class*=atk-pull].atk-pull-xsmall {
   margin-top: 0.5rem;
 }
