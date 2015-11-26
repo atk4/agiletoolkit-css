@@ -2213,6 +2213,10 @@ h6 {
 .atk-text-italic {
   font-style: italic;
 }
+.atk-text-caps {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 .atk-text-dimmed,
 *[class*=atk-swatch] .atk-text-dimmed {
   color: #666666;
@@ -2574,6 +2578,20 @@ label.atk-input-label em {
 .atk-input-radio.atk-input-radio-stacked span {
   display: block;
 }
+input.atk-option[type=radio] {
+  display: none;
+}
+input.atk-option[type=radio]:checked + label {
+  border-color: #0095ff;
+  cursor: default;
+}
+input.atk-option[type=radio]:checked + label,
+input.atk-option[type=radio]:checked + label .atk-text-dimmed {
+  color: #0095ff;
+}
+input.atk-option[type=radio] + label {
+  cursor: pointer;
+}
 .atk-form input[type=text]:not([class*="span"]),
 .atk-form input[type=email]:not([class*="span"]),
 .atk-form input[type=password]:not([class*="span"]),
@@ -2656,7 +2674,7 @@ hr.atk-border-overlay {
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-large,
 *[class*=atk-border-outline][class*=atk-box].atk-border-outline-large,
 *[class*=atk-border-outline][class*=atk-button].atk-border-outline-large {
-  border-width: 0.2em !important;
+  border-width: 0.15em !important;
 }
 .atk-blur {
   -webkit-filter: blur(5px);
