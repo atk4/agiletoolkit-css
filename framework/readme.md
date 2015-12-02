@@ -26,7 +26,7 @@ The rest of us are working on a limited budgets or maybe even lack knowledge of 
 
 We decided to create AgileToolkit CSS to make it super easy for designers and developers to create a great looking websites with minimum effort and knowledge.
 
-### Widgets built with Componentns
+### Widgets built with Components
 
 AgileToolkit CSS uses a concept of Widgets and Components. Below is a widget example. Each class starting with "atk-" is what we call a component (atk-box, atk-jackscrew, etc)
 
@@ -42,7 +42,7 @@ AgileToolkit CSS uses a concept of Widgets and Components. Below is a widget exa
         </div>
     </div>
 
-![Tomatoes Example](doc/tomatoes.png)
+![Tomatoes Example](../doc/tomatoes.png)
 
 [View full example](http://cdpn.io/KGBJx)
 
@@ -64,7 +64,7 @@ The previous example enables you to use round corners, paddings and layouts but 
 
 Implied limitations and variety of components makes it possible to create interfaces in only one possible way: how the theme designer have intended. On other hand, it gives a freedom to create any content variations which will still be consistent with theme settings.
 
-![LESS Variables](doc/variables.png)
+![LESS Variables](../doc/variables.png)
 
 
 ### Simple to configure and customize
@@ -81,7 +81,7 @@ Without reliance on JavaScript - AgileToolkit CSS makes it easy to build any pag
 
 ### Integrated with jQuery UI, Gridpack and Fontello
 
-![jQuery UI comparison](doc/jqueryui.png)
+![jQuery UI comparison](../doc/jqueryui.png)
 
 
 AgileToolkit CSS is a great way how to make jQuery UI stylesheet look nicely and respect your overall site settings. The effect will apply to default jQuery UI widgets and also third party jQuery add-ons.
@@ -177,7 +177,7 @@ Currently there are many incomplete features in Agile Toolkit CSS:
 
 ## Documentation
 
-Documentation is located inside [doc folder](doc/).
+Documentation is located inside [doc folder](../doc/).
 
 ## Authors
 
