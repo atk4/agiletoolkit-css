@@ -35,7 +35,6 @@
     table {
         width: 100%;
         thead th, tbody td {
-            // background: #fff;
             &:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort) {
                 padding-bottom: @py;
                 padding-left: @px;
@@ -83,13 +82,13 @@
             }
             td.atk-table-row-icon {
                 .position(@l:100%);
+                background: none !important;
                 border-color: transparent;
-                margin-top: -1px;
                 opacity: 0;
                 vertical-align: middle;
             }
             &:hover td.atk-table-row-icon {
-                border: none;
+                background: none !important;
                 opacity: 1;
             }
         }

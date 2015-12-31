@@ -177,7 +177,7 @@ input {
         &:hover {
             .buttonHover;
         }
-        &:not([class*=atk-section]) {
+        &:not([class*=atk-padding]) {
             padding: (0.5em * @baselineDestroyer) (1em * @baselineDestroyer);
             &.atk-button-xsmall {
                 padding: (0.12em * @baselineDestroyer) (0.25em * @baselineDestroyer);
@@ -434,13 +434,13 @@ ul[class*=atk-menu] {
     float: right;
 }
 .atk-align-left {
-    text-align: left;
+    text-align: left !important;
 }
 .atk-align-right {
-    text-align: right;
+    text-align: right !important;
 }
 .atk-align-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .atk-cells-group.atk-valign-top>.atk-cells>.atk-cell,
