@@ -2,8 +2,10 @@
 // Components
 // ==========================================================
 
+
 // Settings
 @buttonDefaultShadow: 0 1px 0 rgba(0,0,0,0.07);
+
 
 // Item List
 .atk-actions {
@@ -354,6 +356,12 @@ ul[class*=atk-menu] {
         }
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+    &:not([class*=atk-swatch]) {
+        color: @bodyColor;
+        h1, h2, h3, h4, h5, h6 {
+            color: @headingColor;
         }
     }
 }
@@ -872,11 +880,117 @@ ul[class*=atk-menu] {
 }
 
 
+// Effects
+*[class*=atk-effect] {
+    &, &[class*='atk-button'] {
+        &.atk-effect-danger {
+            color: @effectDanger;
+        }
+        &.atk-effect-warning {
+            color: @effectWarning;
+        }
+        &.atk-effect-success {
+            color: @effectSuccess;
+        }
+        &.atk-effect-info {
+            color: @effectInfo;
+        }
+    }
+    &.atk-label, &[class*=atk-box] {
+        // color: @bodyColor;
+        &.atk-effect-danger {
+            // .colorCheck(@color);
+            @color: tint(@effectDanger, 90%);
+            // color: contrast(@color, black, white, 50%);
+            background-color: @color;
+            border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectDanger, #999);
+            }
+        }
+        &.atk-effect-warning {
+            // .colorCheck(@color);
+            @color: tint(@effectWarning, 90%);
+            background-color: @color;
+            border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectWarning, #999);
+            }
+        }
+        &.atk-effect-success {
+            // .colorCheck(@color);
+            @color: tint(@effectSuccess, 90%);
+            background: @color;
+            border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectSuccess, #999);
+            }
+        }
+        &.atk-effect-info {
+            // .colorCheck(@color);
+            @color: tint(@effectInfo, 90%);
+            background-color: @color;
+            border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectInfo, #999);
+            }
+        }
+    }
+    &.atk-effect-danger {
+        input[type="text"],
+        input[type="url"],
+        input[type="email"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="date"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="tel"],
+        textarea,
+        .ui-selectmenu-button  {
+            border-color: @effectDanger;
+        }
+    }
+}
+
+// States
+.buttonDefault() {
+    .box-shadow(@buttonDefaultShadow);
+    background: @buttonDefault;
+    border: 1px solid @borderClickable;
+    &, *[class*='atk-swatch'] &:not([class*=atk-swatch]) {
+        color: @bodyColor;
+    }
+}
+.buttonHover() {
+    background: @buttonHover;
+    border: 1px solid @borderClickable;
+    color: @bodyColor;
+}
+.buttonActive() {
+    .box-shadow(@buttonDefaultShadow ~'inset');
+    background: @buttonActive;
+    border: 1px solid @borderClickable;
+    color: @bodyColor;
+}
+.atk-state-disabled {
+    .opacity(50);
+    pointer-events: none;
+}
+
+
+
 // Swatches
 .createSwatch(@color, @swatchLinkColor:auto, @swatchTextColor:auto, @swatchHeadingColor:auto, @buttonBorderWidth:1px, @buttonShadow: @buttonDefaultShadow, @borderColor: auto, @hoverColor: auto) {
-    .@{color}:not(.atk-text-inherit) {
+    .@{color} {
         background-color: @@color;
         border-color: @@color;
+
+        // Text Colors
         a, a& {
             &, *[class*=atk-swatch] & {
                 & when not (@swatchLinkColor = auto) {
@@ -890,30 +1004,32 @@ ul[class*=atk-menu] {
                 }
             }
         }
-        & {
-            & when not (@swatchTextColor = auto) {
-                &, &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
-                    color: @swatchTextColor;
-                }
-            }
-            & when (@swatchTextColor = auto) {
-                &, &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
-                    .colorCheck(@@color);
-                }
+        & when not (@swatchTextColor = auto) {
+            &, &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
+                color: @swatchTextColor;
             }
         }
-        h1, h2, h3, h4, h5, h6 {
-            & when not (@swatchHeadingColor = auto) {
-                color: @swatchHeadingColor;
-            }
-            & when (@swatchHeadingColor = auto) {
+        & when (@swatchTextColor = auto) {
+            &, &[class*='atk-button'], &.atk-label, .atk-table td&, .atk-table th&, .atk-table.atk-table-zebra tr&>td, .atk-table.atk-table-zebra tbody>tr>td&, >.atk-popover-arrow:before, &.atk-popover-arrow:before { 
                 .colorCheck(@@color);
             }
         }
+        h1, h2, h3, h4, h5, h6 {
+            &, *[class*=atk-box] & {
+                & when not (@swatchHeadingColor = auto) {
+                    color: @swatchHeadingColor;
+                }
+                & when (@swatchHeadingColor = auto) {
+                    .colorCheck(@@color);
+                }
+            }
+        }        
         .atk-text-dimmed {
             .colorCheck(@@color);
             .opacity(50);
         }
+
+        // Misc
         &[class*=atk-border-outline] {
             border-color: @@color;
             color: @@color;
@@ -1009,106 +1125,4 @@ ul[class*=atk-menu] {
     .@{color}-text {
         color: @@color;
     }
-}
-
-// Effects
-*[class*=atk-effect] {
-    &, &[class*='atk-button'] {
-        &.atk-effect-danger {
-            color: @effectDanger;
-        }
-        &.atk-effect-warning {
-            color: @effectWarning;
-        }
-        &.atk-effect-success {
-            color: @effectSuccess;
-        }
-        &.atk-effect-info {
-            color: @effectInfo;
-        }
-    }
-    &.atk-label, &[class*=atk-box] {
-        // color: @bodyColor;
-        &.atk-effect-danger {
-            // .colorCheck(@color);
-            @color: tint(@effectDanger, 90%);
-            // color: contrast(@color, black, white, 50%);
-            background-color: @color;
-            border-color: @color;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectDanger, #999);
-            }
-        }
-        &.atk-effect-warning {
-            // .colorCheck(@color);
-            @color: tint(@effectWarning, 90%);
-            background-color: @color;
-            border-color: @color;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectWarning, #999);
-            }
-        }
-        &.atk-effect-success {
-            // .colorCheck(@color);
-            @color: tint(@effectSuccess, 90%);
-            background: @color;
-            border-color: @color;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectSuccess, #999);
-            }
-        }
-        &.atk-effect-info {
-            // .colorCheck(@color);
-            @color: tint(@effectInfo, 90%);
-            background-color: @color;
-            border-color: @color;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectInfo, #999);
-            }
-        }
-    }
-    &.atk-effect-danger {
-        input[type="text"],
-        input[type="url"],
-        input[type="email"],
-        input[type="password"],
-        input[type="search"],
-        input[type="number"],
-        input[type="date"],
-        input[type="month"],
-        input[type="week"],
-        input[type="time"],
-        input[type="datetime"],
-        input[type="datetime-local"],
-        input[type="tel"],
-        textarea,
-        .ui-selectmenu-button  {
-            border-color: @effectDanger;
-        }
-    }
-}
-
-// States
-.buttonDefault() {
-    .box-shadow(@buttonDefaultShadow);
-    background: @buttonDefault;
-    border: 1px solid @borderClickable;
-    &, *[class*='atk-swatch']:not(.atk-text-inherit) &:not([class*=atk-swatch]) {
-        color: @bodyColor;
-    }
-}
-.buttonHover() {
-    background: @buttonHover;
-    border: 1px solid @borderClickable;
-    color: @bodyColor;
-}
-.buttonActive() {
-    .box-shadow(@buttonDefaultShadow ~'inset');
-    background: @buttonActive;
-    border: 1px solid @borderClickable;
-    color: @bodyColor;
-}
-.atk-state-disabled {
-    .opacity(50);
-    pointer-events: none;
 }
