@@ -128,13 +128,22 @@
 
 // Lister
 *[class*=atk-lister] {
-    > * {    padding-bottom: @margin;
+    > * {
+        padding-bottom: @margin;
         + * {
             border-top: 1px solid @borderDisabled;
             padding-top: @margin;
         }
-        &:last-child {
+        &:last-child:not([class*=atk-padding]) {
             padding-bottom: 0 !important;
+        }
+    }
+    &.atk-lister-xsmall {
+        > * {
+            padding-bottom: @margin/3;
+            + * {
+                padding-top: @margin/3;
+            }
         }
     }
     &.atk-lister-small {
@@ -154,9 +163,9 @@
         }
     }
     &.atk-lister-nomargin {
-        > * {
+        > *:not([class*=atk-padding]) {
             padding-bottom: 0;
-            + * {
+            + *:not([class*=atk-padding]) {
                 padding-top: 0;
             }
         }
@@ -1124,9 +1133,16 @@ ul[class*=atk-menu] {
         border-color: @@color;
     }
     .@{color}-fill {
-        background-color: @@color;
+        &, .atk-popover-arrow:before {
+            background-color: @@color;
+        }
     }
     .@{color}-text {
-        color: @@color;
+        &, a {
+            color: @@color;
+        }
+        & a:hover, a&:hover, & a:active, a&:active, & a:focus, a&:focus {
+            color: darken(@@color,10%);
+        }
     }
 }

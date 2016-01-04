@@ -33,21 +33,31 @@ body {
 }
 
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch],
-*[class*=atk-box], .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content, *[class*=atk-swatch] hr, hr {
+*[class*=atk-box], .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content, *[class*=atk-swatch] hr, hr, .atk-popover {
   &.atk-border-disabled {
-    border-color: @borderDisabled;
+    &, .atk-popover-arrow:before {
+      border-color: @borderDisabled;
+    }
   }
   &.atk-border-static {
-    border-color: @borderStatic;
+    &, .atk-popover-arrow:before {
+      border-color: @borderStatic;
+    }
   }
   &.atk-border-active {
-    border-color: @borderClickable;
+    &, .atk-popover-arrow:before {
+      border-color: @borderClickable;
+    }
   }
   &.atk-border-overlay {
-    border-color: @borderOverlay;
+    &, .atk-popover-arrow:before {
+      border-color: @borderOverlay;
+    }
   }
   &.atk-border-reset {
-    border-width: 0;
+    &, .atk-popover-arrow:before {
+      border-width: 0;
+    }
   }
 }
 *[class*=atk-border-outline] {

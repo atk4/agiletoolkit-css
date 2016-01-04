@@ -2635,35 +2635,70 @@ body {
 *[class*=atk-box].atk-border-disabled,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-disabled,
 *[class*=atk-swatch] hr.atk-border-disabled,
-hr.atk-border-disabled {
+hr.atk-border-disabled,
+.atk-popover.atk-border-disabled,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-disabled .atk-popover-arrow:before,
+*[class*=atk-box].atk-border-disabled .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-disabled .atk-popover-arrow:before,
+*[class*=atk-swatch] hr.atk-border-disabled .atk-popover-arrow:before,
+hr.atk-border-disabled .atk-popover-arrow:before,
+.atk-popover.atk-border-disabled .atk-popover-arrow:before {
   border-color: #fbfbfb;
 }
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-static,
 *[class*=atk-box].atk-border-static,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-static,
 *[class*=atk-swatch] hr.atk-border-static,
-hr.atk-border-static {
+hr.atk-border-static,
+.atk-popover.atk-border-static,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-static .atk-popover-arrow:before,
+*[class*=atk-box].atk-border-static .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-static .atk-popover-arrow:before,
+*[class*=atk-swatch] hr.atk-border-static .atk-popover-arrow:before,
+hr.atk-border-static .atk-popover-arrow:before,
+.atk-popover.atk-border-static .atk-popover-arrow:before {
   border-color: #e1e1e1;
 }
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-active,
 *[class*=atk-box].atk-border-active,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-active,
 *[class*=atk-swatch] hr.atk-border-active,
-hr.atk-border-active {
+hr.atk-border-active,
+.atk-popover.atk-border-active,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-active .atk-popover-arrow:before,
+*[class*=atk-box].atk-border-active .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-active .atk-popover-arrow:before,
+*[class*=atk-swatch] hr.atk-border-active .atk-popover-arrow:before,
+hr.atk-border-active .atk-popover-arrow:before,
+.atk-popover.atk-border-active .atk-popover-arrow:before {
   border-color: #c8c8c8;
 }
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-overlay,
 *[class*=atk-box].atk-border-overlay,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-overlay,
 *[class*=atk-swatch] hr.atk-border-overlay,
-hr.atk-border-overlay {
+hr.atk-border-overlay,
+.atk-popover.atk-border-overlay,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-overlay .atk-popover-arrow:before,
+*[class*=atk-box].atk-border-overlay .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-overlay .atk-popover-arrow:before,
+*[class*=atk-swatch] hr.atk-border-overlay .atk-popover-arrow:before,
+hr.atk-border-overlay .atk-popover-arrow:before,
+.atk-popover.atk-border-overlay .atk-popover-arrow:before {
   border-color: #a1a1a1;
 }
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-reset,
 *[class*=atk-box].atk-border-reset,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-reset,
 *[class*=atk-swatch] hr.atk-border-reset,
-hr.atk-border-reset {
+hr.atk-border-reset,
+.atk-popover.atk-border-reset,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-reset .atk-popover-arrow:before,
+*[class*=atk-box].atk-border-reset .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-reset .atk-popover-arrow:before,
+*[class*=atk-swatch] hr.atk-border-reset .atk-popover-arrow:before,
+hr.atk-border-reset .atk-popover-arrow:before,
+.atk-popover.atk-border-reset .atk-popover-arrow:before {
   border-width: 0;
 }
 *[class*=atk-border-outline],
@@ -2908,12 +2943,15 @@ a:focus {
 .atk-popover {
   position: absolute;
 }
-.atk-popover:not([class*=atk-swatch])[class*=atk-box] {
+.atk-popover:not([class*=atk-swatch])[class*=atk-box]:not([class*=atk-border]),
+.atk-popover:not([class*=atk-swatch])[class*=atk-box]:not([class*=atk-border]) .atk-popover-arrow:before {
   border-color: #a1a1a1;
 }
 .atk-popover .atk-popover-arrow:before {
   background: #fff;
-  border: 1px solid #a1a1a1;
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
 }
 .atk-popover .atk-popover-arrow {
   background: none !important;
@@ -3204,8 +3242,14 @@ a:focus {
   border-top: 1px solid #fbfbfb;
   padding-top: 1.5rem;
 }
-*[class*=atk-lister] > *:last-child {
+*[class*=atk-lister] > *:last-child:not([class*=atk-padding]) {
   padding-bottom: 0 !important;
+}
+*[class*=atk-lister].atk-lister-xsmall > * {
+  padding-bottom: 0.5rem;
+}
+*[class*=atk-lister].atk-lister-xsmall > * + * {
+  padding-top: 0.5rem;
 }
 *[class*=atk-lister].atk-lister-small > * {
   padding-bottom: 0.75rem;
@@ -3219,10 +3263,10 @@ a:focus {
 *[class*=atk-lister].atk-lister-large > * + * {
   padding-top: 3rem;
 }
-*[class*=atk-lister].atk-lister-nomargin > * {
+*[class*=atk-lister].atk-lister-nomargin > *:not([class*=atk-padding]) {
   padding-bottom: 0;
 }
-*[class*=atk-lister].atk-lister-nomargin > * + * {
+*[class*=atk-lister].atk-lister-nomargin > *:not([class*=atk-padding]) + *:not([class*=atk-padding]) {
   padding-top: 0;
 }
 a[class*='atk-button'],
@@ -4361,11 +4405,21 @@ a.atk-swatch-white:hover,
   background-color: #ffffff;
   border-color: #ffffff;
 }
-.atk-swatch-white-fill {
+.atk-swatch-white-fill,
+.atk-swatch-white-fill .atk-popover-arrow:before {
   background-color: #ffffff;
 }
-.atk-swatch-white-text {
+.atk-swatch-white-text,
+.atk-swatch-white-text a {
   color: #ffffff;
+}
+.atk-swatch-white-text a:hover,
+a.atk-swatch-white-text:hover,
+.atk-swatch-white-text a:active,
+a.atk-swatch-white-text:active,
+.atk-swatch-white-text a:focus,
+a.atk-swatch-white-text:focus {
+  color: #e6e6e6;
 }
 .atk-swatch-gray {
   background-color: #f5f6f7;
@@ -4498,11 +4552,21 @@ a.atk-swatch-gray:hover,
   background-color: #f5f6f7;
   border-color: #f5f6f7;
 }
-.atk-swatch-gray-fill {
+.atk-swatch-gray-fill,
+.atk-swatch-gray-fill .atk-popover-arrow:before {
   background-color: #f5f6f7;
 }
-.atk-swatch-gray-text {
+.atk-swatch-gray-text,
+.atk-swatch-gray-text a {
   color: #f5f6f7;
+}
+.atk-swatch-gray-text a:hover,
+a.atk-swatch-gray-text:hover,
+.atk-swatch-gray-text a:active,
+a.atk-swatch-gray-text:active,
+.atk-swatch-gray-text a:focus,
+a.atk-swatch-gray-text:focus {
+  color: #d9dde0;
 }
 .atk-swatch-ink {
   background-color: #1c2933;
@@ -4635,11 +4699,21 @@ a.atk-swatch-ink:hover,
   background-color: #1c2933;
   border-color: #1c2933;
 }
-.atk-swatch-ink-fill {
+.atk-swatch-ink-fill,
+.atk-swatch-ink-fill .atk-popover-arrow:before {
   background-color: #1c2933;
 }
-.atk-swatch-ink-text {
+.atk-swatch-ink-text,
+.atk-swatch-ink-text a {
   color: #1c2933;
+}
+.atk-swatch-ink-text a:hover,
+a.atk-swatch-ink-text:hover,
+.atk-swatch-ink-text a:active,
+a.atk-swatch-ink-text:active,
+.atk-swatch-ink-text a:focus,
+a.atk-swatch-ink-text:focus {
+  color: #0a0f12;
 }
 .atk-swatch-yellow {
   background-color: #ffcc00;
@@ -4772,11 +4846,21 @@ a.atk-swatch-yellow:hover,
   background-color: #ffcc00;
   border-color: #ffcc00;
 }
-.atk-swatch-yellow-fill {
+.atk-swatch-yellow-fill,
+.atk-swatch-yellow-fill .atk-popover-arrow:before {
   background-color: #ffcc00;
 }
-.atk-swatch-yellow-text {
+.atk-swatch-yellow-text,
+.atk-swatch-yellow-text a {
   color: #ffcc00;
+}
+.atk-swatch-yellow-text a:hover,
+a.atk-swatch-yellow-text:hover,
+.atk-swatch-yellow-text a:active,
+a.atk-swatch-yellow-text:active,
+.atk-swatch-yellow-text a:focus,
+a.atk-swatch-yellow-text:focus {
+  color: #cca300;
 }
 .atk-swatch-red {
   background-color: #f9451f;
@@ -4909,11 +4993,21 @@ a.atk-swatch-red:hover,
   background-color: #f9451f;
   border-color: #f9451f;
 }
-.atk-swatch-red-fill {
+.atk-swatch-red-fill,
+.atk-swatch-red-fill .atk-popover-arrow:before {
   background-color: #f9451f;
 }
-.atk-swatch-red-text {
+.atk-swatch-red-text,
+.atk-swatch-red-text a {
   color: #f9451f;
+}
+.atk-swatch-red-text a:hover,
+a.atk-swatch-red-text:hover,
+.atk-swatch-red-text a:active,
+a.atk-swatch-red-text:active,
+.atk-swatch-red-text a:focus,
+a.atk-swatch-red-text:focus {
+  color: #df2c06;
 }
 .atk-swatch-green {
   background-color: #00cc66;
@@ -5046,11 +5140,21 @@ a.atk-swatch-green:hover,
   background-color: #00cc66;
   border-color: #00cc66;
 }
-.atk-swatch-green-fill {
+.atk-swatch-green-fill,
+.atk-swatch-green-fill .atk-popover-arrow:before {
   background-color: #00cc66;
 }
-.atk-swatch-green-text {
+.atk-swatch-green-text,
+.atk-swatch-green-text a {
   color: #00cc66;
+}
+.atk-swatch-green-text a:hover,
+a.atk-swatch-green-text:hover,
+.atk-swatch-green-text a:active,
+a.atk-swatch-green-text:active,
+.atk-swatch-green-text a:focus,
+a.atk-swatch-green-text:focus {
+  color: #00994d;
 }
 .atk-swatch-blue {
   background-color: #0095ff;
@@ -5183,11 +5287,21 @@ a.atk-swatch-blue:hover,
   background-color: #0095ff;
   border-color: #0095ff;
 }
-.atk-swatch-blue-fill {
+.atk-swatch-blue-fill,
+.atk-swatch-blue-fill .atk-popover-arrow:before {
   background-color: #0095ff;
 }
-.atk-swatch-blue-text {
+.atk-swatch-blue-text,
+.atk-swatch-blue-text a {
   color: #0095ff;
+}
+.atk-swatch-blue-text a:hover,
+a.atk-swatch-blue-text:hover,
+.atk-swatch-blue-text a:active,
+a.atk-swatch-blue-text:active,
+.atk-swatch-blue-text a:focus,
+a.atk-swatch-blue-text:focus {
+  color: #0077cc;
 }
 .atk-swatch-lightRed {
   background-color: #fff4f2;
@@ -5320,11 +5434,21 @@ a.atk-swatch-lightRed:hover,
   background-color: #fff4f2;
   border-color: #fff4f2;
 }
-.atk-swatch-lightRed-fill {
+.atk-swatch-lightRed-fill,
+.atk-swatch-lightRed-fill .atk-popover-arrow:before {
   background-color: #fff4f2;
 }
-.atk-swatch-lightRed-text {
+.atk-swatch-lightRed-text,
+.atk-swatch-lightRed-text a {
   color: #fff4f2;
+}
+.atk-swatch-lightRed-text a:hover,
+a.atk-swatch-lightRed-text:hover,
+.atk-swatch-lightRed-text a:active,
+a.atk-swatch-lightRed-text:active,
+.atk-swatch-lightRed-text a:focus,
+a.atk-swatch-lightRed-text:focus {
+  color: #ffc9bf;
 }
 #sidebar {
   min-width: 12rem;

@@ -197,14 +197,18 @@
     .position();
     
     &:not([class*=atk-swatch]) {
-        &[class*=atk-box] {
-            border-color: @borderOverlay;
+        &[class*=atk-box]:not([class*=atk-border]) {
+            &, .atk-popover-arrow:before {
+                border-color: @borderOverlay;
+            }
         }
     }
     .atk-popover-arrow {
         &:before {
             background: @boxColor;
-            border: 1px solid @borderOverlay;
+            border-width: 1px;
+            border-color:transparent;
+            border-style: solid;
         }
     }
     .atk-popover-arrow {
