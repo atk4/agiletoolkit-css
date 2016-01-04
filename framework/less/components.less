@@ -1077,11 +1077,13 @@ ul[class*=atk-menu] {
                 border-color: darken(@@color, 10%);
             }
             &.atk-button-outline, &[class*=atk-border-outline] {
+                .transition(.2s);
                 background: fade(@@color, 0%);
                 border-color: @@color;
                 color: @@color;
                 &:hover {
-                    background: fade(@@color, 20%);
+                    .colorCheck(@@color);
+                    background: @@color;
                 }
             }
         }

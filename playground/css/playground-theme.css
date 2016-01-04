@@ -2561,7 +2561,8 @@ label.atk-input-label em {
   padding-top: 0.5em;
 }
 .atk-form-stacked .atk-input-radio,
-.atk-input-radio.atk-input-radio-stacked {
+.atk-input-radio.atk-input-radio-stacked,
+.atk-input-radio[data-layout='stacked'] {
   padding-top: 0;
 }
 .atk-input-radio span {
@@ -2575,8 +2576,10 @@ label.atk-input-label em {
   position: relative;
   top: -0.05em;
 }
-.atk-input-radio.atk-input-radio-stacked span {
+.atk-input-radio.atk-input-radio-stacked span,
+.atk-input-radio[data-layout='stacked'] span {
   display: block;
+  margin-right: 0;
 }
 input.atk-option[type=radio] {
   display: none;
@@ -4318,13 +4321,19 @@ a.atk-swatch-white:hover,
 }
 .atk-swatch-white[class*='atk-button'].atk-button-outline,
 .atk-swatch-white[class*='atk-button'][class*=atk-border-outline] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: rgba(255, 255, 255, 0);
   border-color: #ffffff;
   color: #ffffff;
 }
 .atk-swatch-white[class*='atk-button'].atk-button-outline:hover,
 .atk-swatch-white[class*='atk-button'][class*=atk-border-outline]:hover {
-  background: rgba(255, 255, 255, 0.2);
+  color: #000000;
+  background: #ffffff;
 }
 .atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-white {
   border-style: solid;
@@ -4449,13 +4458,19 @@ a.atk-swatch-gray:hover,
 }
 .atk-swatch-gray[class*='atk-button'].atk-button-outline,
 .atk-swatch-gray[class*='atk-button'][class*=atk-border-outline] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: rgba(245, 246, 247, 0);
   border-color: #f5f6f7;
   color: #f5f6f7;
 }
 .atk-swatch-gray[class*='atk-button'].atk-button-outline:hover,
 .atk-swatch-gray[class*='atk-button'][class*=atk-border-outline]:hover {
-  background: rgba(245, 246, 247, 0.2);
+  color: #000000;
+  background: #f5f6f7;
 }
 .atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-gray {
   border-style: solid;
@@ -4580,13 +4595,19 @@ a.atk-swatch-ink:hover,
 }
 .atk-swatch-ink[class*='atk-button'].atk-button-outline,
 .atk-swatch-ink[class*='atk-button'][class*=atk-border-outline] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: rgba(28, 41, 51, 0);
   border-color: #1c2933;
   color: #1c2933;
 }
 .atk-swatch-ink[class*='atk-button'].atk-button-outline:hover,
 .atk-swatch-ink[class*='atk-button'][class*=atk-border-outline]:hover {
-  background: rgba(28, 41, 51, 0.2);
+  color: white;
+  background: #1c2933;
 }
 .atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-ink {
   border-style: solid;
@@ -4711,13 +4732,19 @@ a.atk-swatch-yellow:hover,
 }
 .atk-swatch-yellow[class*='atk-button'].atk-button-outline,
 .atk-swatch-yellow[class*='atk-button'][class*=atk-border-outline] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: rgba(255, 204, 0, 0);
   border-color: #ffcc00;
   color: #ffcc00;
 }
 .atk-swatch-yellow[class*='atk-button'].atk-button-outline:hover,
 .atk-swatch-yellow[class*='atk-button'][class*=atk-border-outline]:hover {
-  background: rgba(255, 204, 0, 0.2);
+  color: #000000;
+  background: #ffcc00;
 }
 .atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-yellow {
   border-style: solid;
@@ -4842,13 +4869,19 @@ a.atk-swatch-red:hover,
 }
 .atk-swatch-red[class*='atk-button'].atk-button-outline,
 .atk-swatch-red[class*='atk-button'][class*=atk-border-outline] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: rgba(249, 69, 31, 0);
   border-color: #f9451f;
   color: #f9451f;
 }
 .atk-swatch-red[class*='atk-button'].atk-button-outline:hover,
 .atk-swatch-red[class*='atk-button'][class*=atk-border-outline]:hover {
-  background: rgba(249, 69, 31, 0.2);
+  color: white;
+  background: #f9451f;
 }
 .atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-red {
   border-style: solid;
@@ -4973,13 +5006,19 @@ a.atk-swatch-green:hover,
 }
 .atk-swatch-green[class*='atk-button'].atk-button-outline,
 .atk-swatch-green[class*='atk-button'][class*=atk-border-outline] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: rgba(0, 204, 102, 0);
   border-color: #00cc66;
   color: #00cc66;
 }
 .atk-swatch-green[class*='atk-button'].atk-button-outline:hover,
 .atk-swatch-green[class*='atk-button'][class*=atk-border-outline]:hover {
-  background: rgba(0, 204, 102, 0.2);
+  color: white;
+  background: #00cc66;
 }
 .atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-green {
   border-style: solid;
@@ -5104,13 +5143,19 @@ a.atk-swatch-blue:hover,
 }
 .atk-swatch-blue[class*='atk-button'].atk-button-outline,
 .atk-swatch-blue[class*='atk-button'][class*=atk-border-outline] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: rgba(0, 149, 255, 0);
   border-color: #0095ff;
   color: #0095ff;
 }
 .atk-swatch-blue[class*='atk-button'].atk-button-outline:hover,
 .atk-swatch-blue[class*='atk-button'][class*=atk-border-outline]:hover {
-  background: rgba(0, 149, 255, 0.2);
+  color: white;
+  background: #0095ff;
 }
 .atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-blue {
   border-style: solid;
@@ -5235,13 +5280,19 @@ a.atk-swatch-lightRed:hover,
 }
 .atk-swatch-lightRed[class*='atk-button'].atk-button-outline,
 .atk-swatch-lightRed[class*='atk-button'][class*=atk-border-outline] {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   background: rgba(255, 244, 242, 0);
   border-color: #fff4f2;
   color: #fff4f2;
 }
 .atk-swatch-lightRed[class*='atk-button'].atk-button-outline:hover,
 .atk-swatch-lightRed[class*='atk-button'][class*=atk-border-outline]:hover {
-  background: rgba(255, 244, 242, 0.2);
+  color: #000000;
+  background: #fff4f2;
 }
 .atk-menu-vertical > li.atk-menu-separated:not(:first-child) > a.atk-swatch-lightRed {
   border-style: solid;
