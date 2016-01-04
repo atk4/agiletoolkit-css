@@ -2217,7 +2217,8 @@ h6 {
   text-transform: uppercase;
 }
 .atk-text-dimmed,
-*[class*=atk-swatch] .atk-text-dimmed {
+*[class*=atk-swatch] .atk-text-dimmed,
+*[class*=atk-box]:not([class*=atk-swatch]) .atk-text-dimmed {
   color: #666666;
 }
 .atk-text-dimmed a,
@@ -4253,15 +4254,16 @@ a.atk-swatch-white,
 .atk-swatch-white h4,
 .atk-swatch-white h5,
 .atk-swatch-white h6,
-.atk-swatch-white h1 *[class*=atk-box] *,
-.atk-swatch-white h2 *[class*=atk-box] *,
-.atk-swatch-white h3 *[class*=atk-box] *,
-.atk-swatch-white h4 *[class*=atk-box] *,
-.atk-swatch-white h5 *[class*=atk-box] *,
-.atk-swatch-white h6 *[class*=atk-box] * {
+*[class*=atk-box] .atk-swatch-white h1,
+*[class*=atk-box] .atk-swatch-white h2,
+*[class*=atk-box] .atk-swatch-white h3,
+*[class*=atk-box] .atk-swatch-white h4,
+*[class*=atk-box] .atk-swatch-white h5,
+*[class*=atk-box] .atk-swatch-white h6 {
   color: #000000;
 }
-.atk-swatch-white .atk-text-dimmed {
+.atk-swatch-white .atk-text-dimmed,
+*[class*=atk-box] .atk-swatch-white .atk-text-dimmed {
   color: #000000;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -4383,15 +4385,16 @@ a.atk-swatch-gray,
 .atk-swatch-gray h4,
 .atk-swatch-gray h5,
 .atk-swatch-gray h6,
-.atk-swatch-gray h1 *[class*=atk-box] *,
-.atk-swatch-gray h2 *[class*=atk-box] *,
-.atk-swatch-gray h3 *[class*=atk-box] *,
-.atk-swatch-gray h4 *[class*=atk-box] *,
-.atk-swatch-gray h5 *[class*=atk-box] *,
-.atk-swatch-gray h6 *[class*=atk-box] * {
+*[class*=atk-box] .atk-swatch-gray h1,
+*[class*=atk-box] .atk-swatch-gray h2,
+*[class*=atk-box] .atk-swatch-gray h3,
+*[class*=atk-box] .atk-swatch-gray h4,
+*[class*=atk-box] .atk-swatch-gray h5,
+*[class*=atk-box] .atk-swatch-gray h6 {
   color: #000000;
 }
-.atk-swatch-gray .atk-text-dimmed {
+.atk-swatch-gray .atk-text-dimmed,
+*[class*=atk-box] .atk-swatch-gray .atk-text-dimmed {
   color: #000000;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -4513,15 +4516,16 @@ a.atk-swatch-ink,
 .atk-swatch-ink h4,
 .atk-swatch-ink h5,
 .atk-swatch-ink h6,
-.atk-swatch-ink h1 *[class*=atk-box] *,
-.atk-swatch-ink h2 *[class*=atk-box] *,
-.atk-swatch-ink h3 *[class*=atk-box] *,
-.atk-swatch-ink h4 *[class*=atk-box] *,
-.atk-swatch-ink h5 *[class*=atk-box] *,
-.atk-swatch-ink h6 *[class*=atk-box] * {
+*[class*=atk-box] .atk-swatch-ink h1,
+*[class*=atk-box] .atk-swatch-ink h2,
+*[class*=atk-box] .atk-swatch-ink h3,
+*[class*=atk-box] .atk-swatch-ink h4,
+*[class*=atk-box] .atk-swatch-ink h5,
+*[class*=atk-box] .atk-swatch-ink h6 {
   color: white;
 }
-.atk-swatch-ink .atk-text-dimmed {
+.atk-swatch-ink .atk-text-dimmed,
+*[class*=atk-box] .atk-swatch-ink .atk-text-dimmed {
   color: white;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -4643,15 +4647,16 @@ a.atk-swatch-yellow,
 .atk-swatch-yellow h4,
 .atk-swatch-yellow h5,
 .atk-swatch-yellow h6,
-.atk-swatch-yellow h1 *[class*=atk-box] *,
-.atk-swatch-yellow h2 *[class*=atk-box] *,
-.atk-swatch-yellow h3 *[class*=atk-box] *,
-.atk-swatch-yellow h4 *[class*=atk-box] *,
-.atk-swatch-yellow h5 *[class*=atk-box] *,
-.atk-swatch-yellow h6 *[class*=atk-box] * {
+*[class*=atk-box] .atk-swatch-yellow h1,
+*[class*=atk-box] .atk-swatch-yellow h2,
+*[class*=atk-box] .atk-swatch-yellow h3,
+*[class*=atk-box] .atk-swatch-yellow h4,
+*[class*=atk-box] .atk-swatch-yellow h5,
+*[class*=atk-box] .atk-swatch-yellow h6 {
   color: #000000;
 }
-.atk-swatch-yellow .atk-text-dimmed {
+.atk-swatch-yellow .atk-text-dimmed,
+*[class*=atk-box] .atk-swatch-yellow .atk-text-dimmed {
   color: #000000;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -4773,15 +4778,16 @@ a.atk-swatch-red,
 .atk-swatch-red h4,
 .atk-swatch-red h5,
 .atk-swatch-red h6,
-.atk-swatch-red h1 *[class*=atk-box] *,
-.atk-swatch-red h2 *[class*=atk-box] *,
-.atk-swatch-red h3 *[class*=atk-box] *,
-.atk-swatch-red h4 *[class*=atk-box] *,
-.atk-swatch-red h5 *[class*=atk-box] *,
-.atk-swatch-red h6 *[class*=atk-box] * {
+*[class*=atk-box] .atk-swatch-red h1,
+*[class*=atk-box] .atk-swatch-red h2,
+*[class*=atk-box] .atk-swatch-red h3,
+*[class*=atk-box] .atk-swatch-red h4,
+*[class*=atk-box] .atk-swatch-red h5,
+*[class*=atk-box] .atk-swatch-red h6 {
   color: white;
 }
-.atk-swatch-red .atk-text-dimmed {
+.atk-swatch-red .atk-text-dimmed,
+*[class*=atk-box] .atk-swatch-red .atk-text-dimmed {
   color: white;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -4903,15 +4909,16 @@ a.atk-swatch-green,
 .atk-swatch-green h4,
 .atk-swatch-green h5,
 .atk-swatch-green h6,
-.atk-swatch-green h1 *[class*=atk-box] *,
-.atk-swatch-green h2 *[class*=atk-box] *,
-.atk-swatch-green h3 *[class*=atk-box] *,
-.atk-swatch-green h4 *[class*=atk-box] *,
-.atk-swatch-green h5 *[class*=atk-box] *,
-.atk-swatch-green h6 *[class*=atk-box] * {
+*[class*=atk-box] .atk-swatch-green h1,
+*[class*=atk-box] .atk-swatch-green h2,
+*[class*=atk-box] .atk-swatch-green h3,
+*[class*=atk-box] .atk-swatch-green h4,
+*[class*=atk-box] .atk-swatch-green h5,
+*[class*=atk-box] .atk-swatch-green h6 {
   color: white;
 }
-.atk-swatch-green .atk-text-dimmed {
+.atk-swatch-green .atk-text-dimmed,
+*[class*=atk-box] .atk-swatch-green .atk-text-dimmed {
   color: white;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -5033,15 +5040,16 @@ a.atk-swatch-blue,
 .atk-swatch-blue h4,
 .atk-swatch-blue h5,
 .atk-swatch-blue h6,
-.atk-swatch-blue h1 *[class*=atk-box] *,
-.atk-swatch-blue h2 *[class*=atk-box] *,
-.atk-swatch-blue h3 *[class*=atk-box] *,
-.atk-swatch-blue h4 *[class*=atk-box] *,
-.atk-swatch-blue h5 *[class*=atk-box] *,
-.atk-swatch-blue h6 *[class*=atk-box] * {
+*[class*=atk-box] .atk-swatch-blue h1,
+*[class*=atk-box] .atk-swatch-blue h2,
+*[class*=atk-box] .atk-swatch-blue h3,
+*[class*=atk-box] .atk-swatch-blue h4,
+*[class*=atk-box] .atk-swatch-blue h5,
+*[class*=atk-box] .atk-swatch-blue h6 {
   color: white;
 }
-.atk-swatch-blue .atk-text-dimmed {
+.atk-swatch-blue .atk-text-dimmed,
+*[class*=atk-box] .atk-swatch-blue .atk-text-dimmed {
   color: white;
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -5163,15 +5171,16 @@ a.atk-swatch-lightRed,
 .atk-swatch-lightRed h4,
 .atk-swatch-lightRed h5,
 .atk-swatch-lightRed h6,
-.atk-swatch-lightRed h1 *[class*=atk-box] *,
-.atk-swatch-lightRed h2 *[class*=atk-box] *,
-.atk-swatch-lightRed h3 *[class*=atk-box] *,
-.atk-swatch-lightRed h4 *[class*=atk-box] *,
-.atk-swatch-lightRed h5 *[class*=atk-box] *,
-.atk-swatch-lightRed h6 *[class*=atk-box] * {
+*[class*=atk-box] .atk-swatch-lightRed h1,
+*[class*=atk-box] .atk-swatch-lightRed h2,
+*[class*=atk-box] .atk-swatch-lightRed h3,
+*[class*=atk-box] .atk-swatch-lightRed h4,
+*[class*=atk-box] .atk-swatch-lightRed h5,
+*[class*=atk-box] .atk-swatch-lightRed h6 {
   color: #000000;
 }
-.atk-swatch-lightRed .atk-text-dimmed {
+.atk-swatch-lightRed .atk-text-dimmed,
+*[class*=atk-box] .atk-swatch-lightRed .atk-text-dimmed {
   color: #000000;
   opacity: 0.5;
   filter: alpha(opacity=50);

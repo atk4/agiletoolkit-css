@@ -1025,8 +1025,10 @@ ul[class*=atk-menu] {
             }
         }        
         .atk-text-dimmed {
-            .colorCheck(@@color);
-            .opacity(50);
+            &, *[class*=atk-box] & {
+                .colorCheck(@@color);
+                .opacity(50);
+            }
         }
 
         // Misc

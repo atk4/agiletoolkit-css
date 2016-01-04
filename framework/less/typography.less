@@ -111,7 +111,7 @@ h6, small, .atk-size-milli {
     text-transform: uppercase;
 }
 .atk-text-dimmed {
-    &, *[class*=atk-swatch] & {
+    &, *[class*=atk-swatch] &, *[class*=atk-box]:not([class*=atk-swatch]) & {
         color: @textDimmed;
     }
     a, *[class*=atk-swatch]:not(.atk-text-inherit) & a:link {
