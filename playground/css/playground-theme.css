@@ -2706,20 +2706,20 @@ hr.atk-border-reset .atk-popover-arrow:before,
 *[class*=atk-border-outline][class*=atk-box],
 *[class*=atk-border-outline][class*=atk-button] {
   background: none;
-  border-width: 0.1em !important;
+  border-width: 1px !important;
   border-style: solid;
 }
 *[class*=atk-border-outline].atk-border-outline-small,
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-small,
 *[class*=atk-border-outline][class*=atk-box].atk-border-outline-small,
 *[class*=atk-border-outline][class*=atk-button].atk-border-outline-small {
-  border-width: 0.05em !important;
+  border-width: 0.5px !important;
 }
 *[class*=atk-border-outline].atk-border-outline-large,
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-large,
 *[class*=atk-border-outline][class*=atk-box].atk-border-outline-large,
 *[class*=atk-border-outline][class*=atk-button].atk-border-outline-large {
-  border-width: 0.15em !important;
+  border-width: 2px !important;
 }
 .atk-blur {
   -webkit-filter: blur(5px);
@@ -3974,6 +3974,14 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
 }
 .atk-padding-bottom-reset {
   padding-bottom: 0;
+}
+.atk-padding-horizontal-reset {
+  padding-left: 0;
+  padding-right: 0;
+}
+.atk-padding-vertical-reset {
+  padding-bottom: 0;
+  padding-top: 0;
 }
 .atk-shape-rectangle,
 input.atk-shape-rectangle {
