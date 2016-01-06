@@ -648,131 +648,131 @@ ul[class*=atk-menu] {
 
 // All
 .atk-padding-xsmall {
-    padding: @margin/3;
+    padding: round(@margin/3, 1);
 }
 .atk-padding-small {
-    padding: @margin/2;
+    padding: round(@margin/2, 1);
 }
 .atk-padding {
-    padding: @margin;
+    padding: round(@margin, 1);
 }
 .atk-padding-large {
-    padding: @margin*2;
+    padding: round(@margin*2, 1);
 }
 .atk-padding-xlarge {
-    padding: @margin*3;
+    padding: round(@margin*3, 1);
 }
 
 // Horizontal
 .atk-padding-horizontal-xsmall {
-    padding-left: @margin/3;
-    padding-right: @margin/3;
+    padding-left: round(@margin/3, 1);
+    padding-right: round(@margin/3, 1);
 }
 .atk-padding-horizontal-small {
-    padding-left: @margin/2;
-    padding-right: @margin/2;
+    padding-left: round(@margin/2, 1);
+    padding-right: round(@margin/2, 1);
 }
 .atk-padding-horizontal {
-    padding-left: @margin;
-    padding-right: @margin;
+    padding-left: round(@margin, 1);
+    padding-right: round(@margin, 1);
 }
 .atk-padding-horizontal-large {
-    padding-left: @margin*2;
-    padding-right: @margin*2;
+    padding-left: round(@margin*2, 1);
+    padding-right: round(@margin*2, 1);
 }
 .atk-padding-horizontal-xlarge {
-    padding-left: @margin*3;
-    padding-right: @margin*3;
+    padding-left: round(@margin*3, 1);
+    padding-right: round(@margin*3, 1);
 }
 
 // Vertical
 .atk-padding-vertical-xsmall {
-    padding-bottom: @margin/3;
-    padding-top: @margin/3;
+    padding-bottom: round(@margin/3, 1);
+    padding-top: round(@margin/3, 1);
 }
 .atk-padding-vertical-small {
-    padding-bottom: @margin/2;
-    padding-top: @margin/2;
+    padding-bottom: round(@margin/2, 1);
+    padding-top: round(@margin/2, 1);
 }
 .atk-padding-vertical {
-    padding-bottom: @margin;
-    padding-top: @margin;
+    padding-bottom: round(@margin, 1);
+    padding-top: round(@margin, 1);
 }
 .atk-padding-vertical-large {
-    padding-bottom: @margin*2;
-    padding-top: @margin*2;
+    padding-bottom: round(@margin*2, 1);
+    padding-top: round(@margin*2, 1);
 }
 .atk-padding-vertical-xlarge {
-    padding-bottom: @margin*3;
-    padding-top: @margin*3;
+    padding-bottom: round(@margin*3, 1);
+    padding-top: round(@margin*3, 1);
 }
 
 // Left
 .atk-padding-left-xsmall {
-    padding-left: @margin/3;
+    padding-left: round(@margin/3, 1);
 }
 .atk-padding-left-small {
-    padding-left: @margin/2;
+    padding-left: round(@margin/2, 1);
 }
 .atk-padding-left {
-    padding-left: @margin;
+    padding-left: round(@margin, 1);
 }
 .atk-padding-left-large {
-    padding-left: @margin*2;
+    padding-left: round(@margin*2, 1);
 }
 .atk-padding-left-xlarge {
-    padding-left: @margin*3;
+    padding-left: round(@margin*3, 1);
 }
 
 // Right
 .atk-padding-right-xsmall {
-    padding-right: @margin/3;
+    padding-right: round(@margin/3, 1);
 }
 .atk-padding-right-small {
-    padding-right: @margin/2;
+    padding-right: round(@margin/2, 1);
 }
 .atk-padding-right {
-    padding-right: @margin;
+    padding-right: round(@margin, 1);
 }
 .atk-padding-right-large {
-    padding-right: @margin*2;
+    padding-right: round(@margin*2, 1);
 }
 .atk-padding-right-xlarge {
-    padding-right: @margin*3;
+    padding-right: round(@margin*3, 1);
 }
 
 // Top
 .atk-padding-top-xsmall {
-    padding-top: @margin/3;
+    padding-top: round(@margin/3, 1);
 }
 .atk-padding-top-small {
-    padding-top: @margin/2;
+    padding-top: round(@margin/2, 1);
 }
 .atk-padding-top {
-    padding-top: @margin;
+    padding-top: round(@margin, 1);
 }
 .atk-padding-top-large {
-    padding-top: @margin*2;
+    padding-top: round(@margin*2, 1);
 }
 .atk-padding-top-xlarge {
-    padding-top: @margin*3;
+    padding-top: round(@margin*3, 1);
 }
 
 // Bottom
 .atk-padding-bottom-xsmall {
-    padding-bottom: @margin/3;
+    padding-bottom: round(@margin/3, 1);
 }
 .atk-padding-bottom-small {
-    padding-bottom: @margin/2;
+    padding-bottom: round(@margin/2, 1);
 }
 .atk-padding-bottom {
-    padding-bottom: @margin;
+    padding-bottom: round(@margin, 1);
 }
 .atk-padding-bottom-large {
-    padding-bottom: @margin*2;
+    padding-bottom: round(@margin*2, 1);
 }
 .atk-padding-bottom-xlarge {
-    padding-bottom: @margin*3;
+    padding-bottom: round(@margin*3, 1);
 }
 
 // Reset
@@ -861,6 +861,7 @@ ul[class*=atk-menu] {
     }
 }
 .atk-shape-circle {
+    display: inline-block;
     &, img&, a&[class*='atk-button'], button&[class*='atk-button'], input&[class*='atk-button'], a&.ui-button, button&.ui-button, input&.ui-button {
         .border-radius(50%);
     }

@@ -3855,7 +3855,7 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   padding: 0.5rem;
 }
 .atk-padding-small {
-  padding: 0.75rem;
+  padding: 0.8rem;
 }
 .atk-padding {
   padding: 1.5rem;
@@ -3871,8 +3871,8 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   padding-right: 0.5rem;
 }
 .atk-padding-horizontal-small {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 .atk-padding-horizontal {
   padding-left: 1.5rem;
@@ -3891,8 +3891,8 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   padding-top: 0.5rem;
 }
 .atk-padding-vertical-small {
-  padding-bottom: 0.75rem;
-  padding-top: 0.75rem;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
 }
 .atk-padding-vertical {
   padding-bottom: 1.5rem;
@@ -3910,7 +3910,7 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   padding-left: 0.5rem;
 }
 .atk-padding-left-small {
-  padding-left: 0.75rem;
+  padding-left: 0.8rem;
 }
 .atk-padding-left {
   padding-left: 1.5rem;
@@ -3925,7 +3925,7 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   padding-right: 0.5rem;
 }
 .atk-padding-right-small {
-  padding-right: 0.75rem;
+  padding-right: 0.8rem;
 }
 .atk-padding-right {
   padding-right: 1.5rem;
@@ -3940,7 +3940,7 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   padding-top: 0.5rem;
 }
 .atk-padding-top-small {
-  padding-top: 0.75rem;
+  padding-top: 0.8rem;
 }
 .atk-padding-top {
   padding-top: 1.5rem;
@@ -3955,7 +3955,7 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
   padding-bottom: 0.5rem;
 }
 .atk-padding-bottom-small {
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.8rem;
 }
 .atk-padding-bottom {
   padding-bottom: 1.5rem;
@@ -4091,6 +4091,9 @@ input.atk-shape-rounded-bottom-right {
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.atk-shape-circle {
+  display: inline-block;
 }
 .atk-shape-circle,
 img.atk-shape-circle,
