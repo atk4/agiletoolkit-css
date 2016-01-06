@@ -2854,12 +2854,18 @@ a:focus {
   border-top: none;
 }
 .atk-table table tbody tr td.atk-table-row-icon {
-  position: absolute;
-  left: 100%;
-  background: none !important;
-  border-color: transparent;
+  max-width: 0;
   opacity: 0;
+  padding: 0 !important;
+  position: relative;
+  width: 0;
   vertical-align: middle;
+}
+.atk-table table tbody tr td.atk-table-row-icon > * {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(0.75rem, -50%);
 }
 .atk-table table tbody tr:hover td.atk-table-row-icon {
   background: none !important;
