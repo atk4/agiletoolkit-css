@@ -1003,6 +1003,80 @@ ul[class*=atk-menu] {
 
 
 // Swatches
+.button {
+    border: 1px solid transparent;
+    font-size: 18px;
+    font-weight: bold;
+}
+.box {
+    padding: 20px;
+}
+.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sBorder:auto, @sBorderActive:auto) {
+    .createWidgetColors() {
+        &.box {
+            background-color: @sFill;
+            border-color: @sBorder;
+        }
+        &.button {
+            background-color: @sFill;
+            border-color: @sBorderActive;
+        }
+    }
+    .createTextColors() {
+        h1, h2, h3, h4, h5, h6 {
+            color: @sHeading;
+        }
+        .comment {
+            color: @sComment;
+        }
+        a:link, a:visited, a:active {
+            color: @sLink;
+        }
+    }
+    & when (@sName = swatch-default) {
+        .createWidgetColors();
+        body {
+            color: @sText;
+        }
+        body, *[class*=swatch] .box:not([class*=swatch]),
+        .box:not([class*=swatch]) *[class*=swatch] .box:not([class*=swatch]) {
+            color: @sText;
+            .createTextColors();
+        }
+    }
+    & when not (@sName = swatch-default) {
+        .@{sName} {
+            background-color: @sFill;
+            color: @sText;
+            .createWidgetColors();
+            &, .box:not([class*=swatch]) & {
+                .createTextColors();
+            }
+        }
+    }
+}
+.createSmartSwatch(
+    @sName:            swatch-default,
+    @sFill:            #f5f5f5,
+    @sBorder:          #ccc,
+    @sBorderActive:    #bbb,
+    @sHeading:         #000,
+    @sText:            #555,
+    @sComment:         #777,
+    @sLink:            blue
+);
+
+.createSmartSwatch(
+    @sName:            swatch-blue,
+    @sFill:            #00aaff,
+    @sBorder:          #0099e5,
+    @sBorderActive:    #fff,
+    @sHeading:         #fff,
+    @sText:            fade(#fff, 70%),
+    @sComment:         fade(#fff, 40%),
+    @sLink:            #fff
+);
+
 .createSwatch(@color, @swatchLinkColor:auto, @swatchTextColor:auto, @swatchHeadingColor:auto, @buttonBorderWidth:1px, @buttonShadow: @buttonDefaultShadow, @borderColor: auto, @hoverColor: auto) {
     .@{color} {
         background-color: @@color;

@@ -2637,12 +2637,24 @@ body {
 *[class*=atk-swatch] hr.atk-border-disabled,
 hr.atk-border-disabled,
 .atk-popover.atk-border-disabled,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch][data-border*='disabled'],
+*[class*=atk-box][data-border*='disabled'],
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content[data-border*='disabled'],
+*[class*=atk-swatch] hr[data-border*='disabled'],
+hr[data-border*='disabled'],
+.atk-popover[data-border*='disabled'],
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-disabled .atk-popover-arrow:before,
 *[class*=atk-box].atk-border-disabled .atk-popover-arrow:before,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-disabled .atk-popover-arrow:before,
 *[class*=atk-swatch] hr.atk-border-disabled .atk-popover-arrow:before,
 hr.atk-border-disabled .atk-popover-arrow:before,
-.atk-popover.atk-border-disabled .atk-popover-arrow:before {
+.atk-popover.atk-border-disabled .atk-popover-arrow:before,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch][data-border*='disabled'] .atk-popover-arrow:before,
+*[class*=atk-box][data-border*='disabled'] .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content[data-border*='disabled'] .atk-popover-arrow:before,
+*[class*=atk-swatch] hr[data-border*='disabled'] .atk-popover-arrow:before,
+hr[data-border*='disabled'] .atk-popover-arrow:before,
+.atk-popover[data-border*='disabled'] .atk-popover-arrow:before {
   border-color: #fbfbfb;
 }
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-static,
@@ -2651,12 +2663,24 @@ hr.atk-border-disabled .atk-popover-arrow:before,
 *[class*=atk-swatch] hr.atk-border-static,
 hr.atk-border-static,
 .atk-popover.atk-border-static,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch][data-border*='static'],
+*[class*=atk-box][data-border*='static'],
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content[data-border*='static'],
+*[class*=atk-swatch] hr[data-border*='static'],
+hr[data-border*='static'],
+.atk-popover[data-border*='static'],
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-static .atk-popover-arrow:before,
 *[class*=atk-box].atk-border-static .atk-popover-arrow:before,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-static .atk-popover-arrow:before,
 *[class*=atk-swatch] hr.atk-border-static .atk-popover-arrow:before,
 hr.atk-border-static .atk-popover-arrow:before,
-.atk-popover.atk-border-static .atk-popover-arrow:before {
+.atk-popover.atk-border-static .atk-popover-arrow:before,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch][data-border*='static'] .atk-popover-arrow:before,
+*[class*=atk-box][data-border*='static'] .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content[data-border*='static'] .atk-popover-arrow:before,
+*[class*=atk-swatch] hr[data-border*='static'] .atk-popover-arrow:before,
+hr[data-border*='static'] .atk-popover-arrow:before,
+.atk-popover[data-border*='static'] .atk-popover-arrow:before {
   border-color: #e1e1e1;
 }
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-active,
@@ -2665,12 +2689,24 @@ hr.atk-border-static .atk-popover-arrow:before,
 *[class*=atk-swatch] hr.atk-border-active,
 hr.atk-border-active,
 .atk-popover.atk-border-active,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch][data-border*='active'],
+*[class*=atk-box][data-border*='active'],
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content[data-border*='active'],
+*[class*=atk-swatch] hr[data-border*='active'],
+hr[data-border*='active'],
+.atk-popover[data-border*='active'],
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-active .atk-popover-arrow:before,
 *[class*=atk-box].atk-border-active .atk-popover-arrow:before,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-active .atk-popover-arrow:before,
 *[class*=atk-swatch] hr.atk-border-active .atk-popover-arrow:before,
 hr.atk-border-active .atk-popover-arrow:before,
-.atk-popover.atk-border-active .atk-popover-arrow:before {
+.atk-popover.atk-border-active .atk-popover-arrow:before,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch][data-border*='active'] .atk-popover-arrow:before,
+*[class*=atk-box][data-border*='active'] .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content[data-border*='active'] .atk-popover-arrow:before,
+*[class*=atk-swatch] hr[data-border*='active'] .atk-popover-arrow:before,
+hr[data-border*='active'] .atk-popover-arrow:before,
+.atk-popover[data-border*='active'] .atk-popover-arrow:before {
   border-color: #c8c8c8;
 }
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-overlay,
@@ -2679,12 +2715,24 @@ hr.atk-border-active .atk-popover-arrow:before,
 *[class*=atk-swatch] hr.atk-border-overlay,
 hr.atk-border-overlay,
 .atk-popover.atk-border-overlay,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch][data-border*='overlay'],
+*[class*=atk-box][data-border*='overlay'],
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content[data-border*='overlay'],
+*[class*=atk-swatch] hr[data-border*='overlay'],
+hr[data-border*='overlay'],
+.atk-popover[data-border*='overlay'],
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-overlay .atk-popover-arrow:before,
 *[class*=atk-box].atk-border-overlay .atk-popover-arrow:before,
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content.atk-border-overlay .atk-popover-arrow:before,
 *[class*=atk-swatch] hr.atk-border-overlay .atk-popover-arrow:before,
 hr.atk-border-overlay .atk-popover-arrow:before,
-.atk-popover.atk-border-overlay .atk-popover-arrow:before {
+.atk-popover.atk-border-overlay .atk-popover-arrow:before,
+*:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch][data-border*='overlay'] .atk-popover-arrow:before,
+*[class*=atk-box][data-border*='overlay'] .atk-popover-arrow:before,
+.ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content[data-border*='overlay'] .atk-popover-arrow:before,
+*[class*=atk-swatch] hr[data-border*='overlay'] .atk-popover-arrow:before,
+hr[data-border*='overlay'] .atk-popover-arrow:before,
+.atk-popover[data-border*='overlay'] .atk-popover-arrow:before {
   border-color: #a1a1a1;
 }
 *:not(.atk-text-inherit)[class*='atk-button'][class*=atk-border-outline][class*=atk-swatch].atk-border-reset,
@@ -2702,24 +2750,51 @@ hr.atk-border-reset .atk-popover-arrow:before,
   border-width: 0;
 }
 *[class*=atk-border-outline],
+*[data-border*=outline],
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit),
+*[data-border*=outline][class*=atk-swatch]:not(.atk-text-inherit),
 *[class*=atk-border-outline][class*=atk-box],
-*[class*=atk-border-outline][class*=atk-button] {
+*[data-border*=outline][class*=atk-box],
+*[class*=atk-border-outline][class*=atk-button],
+*[data-border*=outline][class*=atk-button] {
   background: none;
   border-width: 1px !important;
   border-style: solid;
 }
 *[class*=atk-border-outline].atk-border-outline-small,
+*[data-border*=outline].atk-border-outline-small,
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-small,
+*[data-border*=outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-small,
 *[class*=atk-border-outline][class*=atk-box].atk-border-outline-small,
-*[class*=atk-border-outline][class*=atk-button].atk-border-outline-small {
+*[data-border*=outline][class*=atk-box].atk-border-outline-small,
+*[class*=atk-border-outline][class*=atk-button].atk-border-outline-small,
+*[data-border*=outline][class*=atk-button].atk-border-outline-small {
   border-width: 0.5px !important;
 }
 *[class*=atk-border-outline].atk-border-outline-large,
+*[data-border*=outline].atk-border-outline-large,
 *[class*=atk-border-outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-large,
+*[data-border*=outline][class*=atk-swatch]:not(.atk-text-inherit).atk-border-outline-large,
 *[class*=atk-border-outline][class*=atk-box].atk-border-outline-large,
-*[class*=atk-border-outline][class*=atk-button].atk-border-outline-large {
+*[data-border*=outline][class*=atk-box].atk-border-outline-large,
+*[class*=atk-border-outline][class*=atk-button].atk-border-outline-large,
+*[data-border*=outline][class*=atk-button].atk-border-outline-large {
   border-width: 2px !important;
+}
+*[data-border] {
+  border-style: solid;
+}
+*[data-border*=bottom] {
+  border-right-width: 1px;
+}
+*[data-border*=left] {
+  border-left-width: 1px;
+}
+*[data-border*=right] {
+  border-right-width: 1px;
+}
+*[data-border*=top] {
+  border-top-width: 1px;
 }
 .atk-blur {
   -webkit-filter: blur(5px);
