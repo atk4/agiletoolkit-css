@@ -22,12 +22,12 @@
     &,
     .ui-widget-content &,
     .ui-widget-header & {
-        .buttonDefault;
+        // .buttonDefault;
         &.ui-state-hover {
-            .buttonHover;
+            // .buttonHover;
         }
         &.ui-state-active, &.ui-state-focus {
-            .buttonActive;
+            // .buttonActive;
         }
     }
 }
@@ -307,9 +307,11 @@
         background: none;
         border:none;
         .ui-dialog-buttonset {
-            .atk-actions;
             border-top: 1px solid @borderStatic;
             padding: round(@margin/2,2) @margin;
+            >* + * {
+                margin-left: @space;
+            }
         }
         &.ui-dialog-content {
             overflow: auto;

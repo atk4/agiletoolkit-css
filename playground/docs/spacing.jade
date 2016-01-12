@@ -1,0 +1,90 @@
+extend ../includes/section
+
+block link
+  -var selected = 'Spacing';
+
+block content
+  h1 Spacing
+  hr
+  h2 Items
+  .atk-box
+    h3 data-items="spacing-xs"
+    div(data-items="spacing-s")
+      a(href='#') Some Item #1
+      a(href='#') Some Item #2
+      a(href='#') Some Item #3
+      a(href='#') Some Item #4
+      a(href='#') Some Item #5
+    hr
+    h3 data-items="spacing-s"
+    div(data-items="spacing-s")
+      a(href='#') Some Item #1
+      a(href='#') Some Item #2
+      a(href='#') Some Item #3
+      a(href='#') Some Item #4
+      a(href='#') Some Item #5
+    hr
+    h3 data-items="spacing"
+    div(data-items="spacing")
+      a(href='#') Some Item #1
+      a(href='#') Some Item #2
+      a(href='#') Some Item #3
+      a(href='#') Some Item #4
+      a(href='#') Some Item #5
+    hr
+    h3 data-items="spacing-l"
+    div(data-items="spacing-l")
+      a(href='#') Some Item #1
+      a(href='#') Some Item #2
+      a(href='#') Some Item #3
+      a(href='#') Some Item #4
+      a(href='#') Some Item #5
+    hr
+    h3 data-items="spacing-xl"
+    div(data-items="spacing-xl")
+      a(href='#') Some Item #1
+      a(href='#') Some Item #2
+      a(href='#') Some Item #3
+      a(href='#') Some Item #4
+      a(href='#') Some Item #5
+  hr(data-margin="top-l bottom-l")
+  h2 Paddings
+  .atk-cells(data-cells="spacing-xs justified")
+    .atk-cell
+      .atk-box(data-padding="all-xs")
+        p all-xs
+    .atk-cell
+      .atk-box(data-padding="all-s")
+        p all-s
+    .atk-cell
+      .atk-box(data-padding="all")
+        p all
+    .atk-cell
+      .atk-box(data-padding="all-l")
+        p all-l
+    .atk-cell
+      .atk-box(data-padding="all-xl")
+        p all-xl
+  hr(data-margin="top-l bottom-l")
+  h2 Margins
+  .atk-cells(data-cells="spacing-xs")
+    .atk-cell
+      .atk-box(data-margin="bottom-xs")
+        p bottom-xs
+      .atk-space.atk-swatch-yellow
+    .atk-cell
+      .atk-box(data-margin="bottom-s")
+        p bottom-s
+      .atk-space.atk-swatch-yellow
+    .atk-cell
+      .atk-box(data-margin="bottom")
+        p bottom
+      .atk-space.atk-swatch-yellow
+    .atk-cell
+      .atk-box(data-margin="bottom-l")
+        p bottom-l
+      .atk-space.atk-swatch-yellow
+    .atk-cell
+      .atk-box(data-margin="bottom-xl")
+        p bottom-xl
+      .atk-space.atk-swatch-yellow

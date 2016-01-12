@@ -87,70 +87,49 @@ h6, small, .atk-size-milli {
 // Text Styles
 // ==========================================================
 
-.atk-text-lead {
+[data-text*=lead] {
     line-height: @headingBaseline;
 }
-.atk-text-bold {
+[data-text*=bold] {
     font-weight: bold;
 }
-.atk-text-medium, .atk-text-semibold {
+[data-text*=semibold] {
     font-weight: 600;
 }
-.atk-text-normal {
+[data-text*=normal] {
     font-weight: normal;
-    text-transform: normal;
 }
-.atk-text-light {
+[data-text*=light] {
     font-weight: 300;
 }
-.atk-text-italic {
+[data-text*=italic] {
     font-style: italic;
 }
-.atk-text-caps {
+[data-text*=caps] {
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
-.atk-text-dimmed {
-    &, *[class*=atk-swatch] &, *[class*=atk-box]:not([class*=atk-swatch]) & {
-        color: @textDimmed;
-    }
-    a, *[class*=atk-swatch]:not(.atk-text-inherit) & a:link {
-        @newC: darken(@textDimmed, 15%);
-        color: @newC;
-        &:hover {
-            color:darken(@newC, @hoverIntensity*2);
-        }
-    }
-    a& {
-        &, *[class*=atk-swatch] & {
-            color: @textDimmed;
-            &:hover {
-                color: darken(@textDimmed, @hoverIntensity*2);
-            }
-        }
-    }
-}
-.atk-text-nowrap {
+[data-text*=nowrap] {
     white-space: nowrap;
 }
-.atk-text-reset {
+[data-text*=font-reset] {
     .clear-font;
 }
-.atk-text-baseline-reset {
+[data-text*=baseline-reset] {
     &, a&[class*='atk-button'], button&[class*='atk-button'], input&[class*='atk-button'], a&.ui-button, button&.ui-button, input&.ui-button {
         line-height: 1;
     }
 }
-.atk-text-baseline-default {
+[data-text*=baseline-normal] {
     line-height: @bodyBaseline;
 }
-.atk-text-ellipsis {
+[data-text*=ellipsis] {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.atk-text-inherit {
+[data-text*=inherit] {
     color: inherit;
 }
 
@@ -235,14 +214,8 @@ del {
     color: red;
 }
 code, kbd, pre, samp {
-// by romans. Can't stand this any longer.
-//    border-top: 1px solid @borderStatic;
-//    border-bottom: 1px solid @borderStatic;
     cursor: text;
-//    display: block;
     line-height: @bodyBaseline;
-//    margin: 0 0 @margin;
-//    padding: @margin;
 }
 pre {
     font-family: monospace, serif;
@@ -259,25 +232,7 @@ hr {
     height: 0;
     margin: @margin 0;
     width: 100%;
-    &:not([class*=atk-border]) {
-        border-color: @borderStatic;
-    }
-    &.atk-hr-xsmall {
-        margin: round(@margin/3,2) 0;
-    }
-    &.atk-hr-small {
-        margin: round(@margin/2,2) 0;
-    }
-    &.atk-hr-large {
-        margin: round(@margin*2,2) 0;
-    }
-    &.atk-hr-xlarge {
-        margin: round(@margin*3,2) 0;
-    }
     &.atk-hr-dotted {
         border-top-style: dotted;
-    }
-    &.atk-hr-reset {
-        margin: 0;
     }
 }

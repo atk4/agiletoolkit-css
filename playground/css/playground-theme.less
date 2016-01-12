@@ -9,12 +9,10 @@
 // ==========================================================
 
 @bodyFamily:           "Helvetica Neue", "Helvetica", @jui-ffDefault;
-@bodyColor:            #000;
 @bodySize:             1rem; // 16px
 @bodyBaseline:         1.5;
 
 @headingCase:          none; // Options: none, capitalize, uppercase, lowercase
-@headingColor:         #000;
 @headingFamily:        "Helvetica Neue", "Helvetica", @jui-ffDefault;
 @headingWeight:        400;
 @headingBaseline:      1.2; // Minor Third
@@ -28,58 +26,68 @@
 // ==========================================================
 
 @bodyBackground:       #fff;
-
 @cornerRadius:         5px;
-
-@textSelect:           @atk-swatch-ink; // Text selection's color
-@textDimmed:           lighten(@bodyColor, 40%);
-
-@blur:                 5px; // Effect .atk-blur can be applied on any element.
-
-@borderStatic:         #e1e1e1;
-@borderClickable:      darken(@borderStatic, 10%);
-@borderOverlay:        darken(@borderStatic, 25%);
-
-@atk-swatch-white:     #ffffff;     .createSwatch(atk-swatch-white);
-@atk-swatch-gray:      #f5f6f7;     .createSwatch(atk-swatch-gray);
-@atk-swatch-ink:       #1c2933;     .createSwatch(atk-swatch-ink);
-@atk-swatch-yellow:    #ffcc00;     .createSwatch(atk-swatch-yellow);
-@atk-swatch-red:       #f9451f;     .createSwatch(atk-swatch-red);
-@atk-swatch-green:     #00cc66;     .createSwatch(atk-swatch-green);
-@atk-swatch-blue:      #0095ff;     .createSwatch(atk-swatch-blue);
-@atk-swatch-lightRed:  #fff4f2;     .createSwatch(atk-swatch-lightRed, @swatchTextColor: @atk-swatch-red);
-
-@swatchText:           50%; // Text color sensitivity based on swatch
+@textSelect:           red; // Text selection's color
 
 @effectSuccess:        #25c425;
 @effectWarning:        #f7a600;
 @effectDanger:         #ff5c4d;
 @effectInfo:           #2bacd7;
 
+@borderDisabled:       lighten(@borderStatic, 5%);
+@borderStatic:         #e1e1e1;
+@borderClickable:      darken(@borderStatic, 5%);
+@borderOverlay:        darken(@borderStatic, 15%);
+
+@blur:                 5px; // Effect .atk-blur can be applied on any element.
+
+
+// ==========================================================
+// Swatches
+// ==========================================================
+
+.createSmartSwatch(
+    @sName:            default,
+    @sFill:            #fff,
+    @sHeading:         #000,
+    @sText:            #444,
+    @sComment:         #999,
+    @sLink:            blue,
+    @sBorderIntensity: 5%
+);
+.createSmartSwatch(
+    @sName:            atk-swatch-ink,
+    @sFill:            #1c2933
+);
+.createSmartSwatch(
+    @sName:            atk-swatch-gray,
+    @sFill:            #f5f6f7
+);
+.createSmartSwatch(
+    @sName:            atk-swatch-blue,
+    @sFill:            #0095ff
+);
+.createSmartSwatch(
+    @sName:            atk-swatch-red,
+    @sFill:            #f9451f
+);
+.createSmartSwatch(
+    @sName:            atk-swatch-green,
+    @sFill:            #00cc66
+);
+.createSmartSwatch(
+    @sName:            atk-swatch-yellow,
+    @sFill:            #ffcc00
+);
+
 
 // ==========================================================
 // Components & Widgets
 // ==========================================================
 
-@linkColor:            darken(@atk-swatch-blue,10%);
-@linkColorHover:       darken(@linkColor,10%);
-
 @dialogOverlay:        fade(#000, 25%); // Color of modal dialog's overlay
-
-@tooltipColor:         fade(@atk-swatch-ink, 90%);
-
-@menuActive:           @atk-swatch-blue;
-
-@buttonDefault:        #fff;
-@buttonHover:          #f5f5f5;
-@buttonActive:         #eee;
-
-@boxColor:             #fff;
-
-@formMandatory:        #ff0000;
-
-@inputFocus:           @atk-swatch-blue;
-
+@tooltipColor:         fade(#000, 90%);
+@inputFocus:           red;
 @popoverArrow:        12px;
 
 
@@ -116,13 +124,17 @@ pre {
 
 
 // Highlight JS
-@codeBlue: darken(desaturate(@atk-swatch-blue, 10%), 25%);
-@codeLightBlue: lighten(desaturate(@atk-swatch-blue, 50%), 0%);
-@codeRed: darken(desaturate(@atk-swatch-red, 0%), 0%);
+// @codeBlue: darken(desaturate(@atk-swatch-blue, 10%), 25%);
+// @codeLightBlue: lighten(desaturate(@atk-swatch-blue, 50%), 0%);
+// @codeRed: darken(desaturate(@atk-swatch-red, 0%), 0%);
+
+@codeBlue: blue;
+@codeLightBlue: lightblue;
+@codeRed: red;
 @codeBlack: #000;
 
 .hljs {
-  background: @atk-swatch-gray;
+  // background: @atk-swatch-gray;
   color: @codeBlack;
   display: block;
   font-family: 'Droid Sans Mono', monospace, serif;
