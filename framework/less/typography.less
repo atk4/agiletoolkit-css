@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
     text-transform: @headingCase;
     margin: @margin 0 round(@margin/2,2) 0;
-    &:extend(.atk-text-lead);
+    &:extend([data-text*=lead]);
     &:first-child {
         margin-top: 0;
     }
@@ -106,7 +106,7 @@ h6, small, .atk-size-milli {
     font-style: italic;
 }
 [data-text*=caps] {
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 [data-text*=nowrap] {

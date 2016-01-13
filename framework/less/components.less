@@ -2,7 +2,6 @@
 // Components
 // ==========================================================
 
-
 // Settings
 @buttonDefaultShadow: 0 1px 0 rgba(0,0,0,0.07);
 @space:      round(@margin, 1);
@@ -10,7 +9,6 @@
 @space-s:    round(@margin/2, 1);
 @space-l:    round(@margin*2, 1);
 @space-xl:   round(@margin*3, 1);
-
 
 // Cells
 .atk-cells {
@@ -45,8 +43,8 @@
 [data-cells*=spacing] {
     &.atk-cells>.atk-cell,
     &.atk-cells-group>.atk-cells>.atk-cell {
-        padding-left: @space;
-        padding-right: @space;
+        padding-left: @space/2;
+        padding-right: @space/2;
         &:first-child {
             padding-left: 0;
         }
@@ -58,76 +56,85 @@
 [data-cells*=spacing-xl] {
     &.atk-cells>.atk-cell,
     &.atk-cells-group>.atk-cells>.atk-cell {
-        padding-left: @space-xl;
-        padding-right: @space-xl;
+        padding-left: @space-xl/2;
+        padding-right: @space-xl/2;
     }
 }
 [data-cells*=spacing-l] {
     &.atk-cells>.atk-cell,
     &.atk-cells-group>.atk-cells>.atk-cell {
-        padding-left: @space-l;
-        padding-right: @space-l;
+        padding-left: @space-l/2;
+        padding-right: @space-l/2;
     }
 }
 [data-cells*=spacing-s] {
     &.atk-cells>.atk-cell,
     &.atk-cells-group>.atk-cells>.atk-cell {
-        padding-left: @space-s;
-        padding-right: @space-s;
+        padding-left: @space-s/2;
+        padding-right: @space-s/2;
     }
 }
 [data-cells*=spacing-xs] {
     &.atk-cells>.atk-cell,
     &.atk-cells-group>.atk-cells>.atk-cell {
-        padding-left: @space-xs;
-        padding-right: @space-xs;
+        padding-left: @space-xs/2;
+        padding-right: @space-xs/2;
     }
 }
 
 // Lister
-*[class*=atk-lister] {
+.atk-lister {
     > * {
-        padding-bottom: @margin;
+        padding-bottom: @space;
         + * {
-            border-top: 1px solid @borderDisabled;
-            padding-top: @margin;
+            border-top-style: solid;
+            border-top-width: 1px;
+            padding-top: @space;
         }
-        &:last-child:not([class*=atk-padding]) {
+        &:last-child:not([data-padding]) {
             padding-bottom: 0 !important;
         }
     }
-    &.atk-lister-xsmall {
+    &[data-lister*=spacing-xs] {
         > * {
-            padding-bottom: @margin/3;
+            padding-bottom: @space-xs;
             + * {
-                padding-top: @margin/3;
+                padding-top: @space-xs;
             }
         }
     }
-    &.atk-lister-small {
+    &[data-lister*=spacing-s] {
         > * {
-            padding-bottom: @margin/2;
+            padding-bottom: @space-s;
             + * {
-                padding-top: @margin/2;
+                padding-top: @space-s;
             }
         }
     }
-    &.atk-lister-large {
+    &[data-lister*=spacing-l] {
         > * {
-            padding-bottom: @margin*2;
+            padding-bottom: @space-l;
             + * {
-                padding-top: @margin*2;
+                padding-top: @space-l;
             }
         }
     }
-    &.atk-lister-nomargin {
-        > *:not([class*=atk-padding]) {
-            padding-bottom: 0;
-            + *:not([class*=atk-padding]) {
-                padding-top: 0;
+    &[data-lister*=spacing-xl] {
+        > * {
+            padding-bottom: @space-xl;
+            + * {
+                padding-top: @space-xl;
             }
         }
     }
+    // &.atk-lister-nomargin {
+    //     > *:not([class*=atk-padding]) {
+    //         padding-bottom: 0;
+    //         + *:not([class*=atk-padding]) {
+    //             padding-top: 0;
+    //         }
+    //     }
+    // }
 }
 
 // Buttons
@@ -138,9 +145,11 @@
     display: inline-block;
     font-weight: bold;
     line-height: @bodyBaseline;
-    padding: (0.5em * @baselineDestroyer) (1em * @baselineDestroyer);
     text-align: center;
     white-space: nowrap;
+    &:not([data-padding]) {
+        padding: (0.5em * @baselineDestroyer) (1em * @baselineDestroyer);
+    }
 }
 a, button, input {
     &[class*=atk-button] {
@@ -151,7 +160,7 @@ a, button, input {
     .createButton;
 }
 [class*=atk-button] {
-    &:not([class*=atk-padding]) {
+    &:not([data-padding]) {
         &.atk-button-xsmall {
             padding: (0.12em * @baselineDestroyer) (0.25em * @baselineDestroyer);
         }
@@ -205,13 +214,6 @@ ul[class*=atk-menu] {
                 &[class*='icon']:before {
                     margin: 0;
                 }
-                &.atk-shape-circle {
-                    display: inline-block;
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    text-align: center;
-                    width: 1em * @bodyBaseline;
-                }
             }
         >a {
             display: inline-block;
@@ -236,13 +238,13 @@ ul[class*=atk-menu] {
                 }
             }
         }
-        &.atk-menu-active {
-            >a, >a:hover {
-                .colorCheck(@menuActive);
-                background: @menuActive;
-                cursor: default;
-            }
-        }
+        // &.atk-menu-active {
+        //     >a, >a:hover {
+        //         .colorCheck(@menuActive);
+        //         background: @menuActive;
+        //         cursor: default;
+        //     }
+        // }
     }
     &:not([class*=atk-actions])>li {
         margin-left: 0;
@@ -289,21 +291,7 @@ ul[class*=atk-menu] {
         border: 1px solid transparent;
         display: block;
         margin-bottom: @margin;
-        &:not([class*=atk-padding]):not([data-padding]) {
-            padding: @margin;
-            &.atk-box-xsmall {
-                padding: @margin/2;
-            }
-            &.atk-box-small {
-                padding: @margin/1.5;
-            }
-            &.atk-box-large {
-                padding: @margin*1.5;
-            }
-            &.atk-box-xlarge {
-                padding: @margin*2;
-            }
-        }
+        padding: @space;
         &:last-child {
             margin-bottom: 0;
         }
@@ -415,6 +403,87 @@ ul[class*=atk-menu] {
     vertical-align: bottom !important;
 }
 
+// Effects
+*[class*=atk-effect] {
+    &, &[class*='atk-button'] {
+        &.atk-effect-danger {
+            color: @effectDanger;
+        }
+        &.atk-effect-warning {
+            color: @effectWarning;
+        }
+        &.atk-effect-success {
+            color: @effectSuccess;
+        }
+        &.atk-effect-info {
+            color: @effectInfo;
+        }
+    }
+    &.atk-label, &[class*=atk-box] {
+        // color: @bodyColor;
+        &.atk-effect-danger {
+            // .colorCheck(@color);
+            @color: tint(@effectDanger, 90%);
+            // color: contrast(@color, black, white, 50%);
+            background-color: @color;
+            border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectDanger, #999);
+            }
+        }
+        &.atk-effect-warning {
+            // .colorCheck(@color);
+            @color: tint(@effectWarning, 90%);
+            background-color: @color;
+            border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectWarning, #999);
+            }
+        }
+        &.atk-effect-success {
+            // .colorCheck(@color);
+            @color: tint(@effectSuccess, 90%);
+            background: @color;
+            border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectSuccess, #999);
+            }
+        }
+        &.atk-effect-info {
+            // .colorCheck(@color);
+            @color: tint(@effectInfo, 90%);
+            background-color: @color;
+            border-color: @color;
+            &, h1, h2, h3, h4, h5, h6 {
+                color: multiply(@effectInfo, #999);
+            }
+        }
+    }
+    &.atk-effect-danger {
+        input[type="text"],
+        input[type="url"],
+        input[type="email"],
+        input[type="password"],
+        input[type="search"],
+        input[type="number"],
+        input[type="date"],
+        input[type="month"],
+        input[type="week"],
+        input[type="time"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="tel"],
+        textarea,
+        .ui-selectmenu-button  {
+            border-color: @effectDanger;
+        }
+    }
+}
+.atk-disabled {
+    .opacity(50);
+    pointer-events: none;
+}
+
 
 // ==========================================================
 // Spacing
@@ -509,20 +578,20 @@ ul[class*=atk-menu] {
     }
 
     // Reset
-    &[@{data-property}*='reset-all'] {
-        @{property}: 0;
+    &[@{data-property}*='all-reset'] {
+        @{property}: 0 !important;
     }
-    &[@{data-property}*='reset-bottom'] {
-        @{property}-bottom: 0;
+    &[@{data-property}*='bottom-reset'] {
+        @{property}-bottom: 0 !important;
     }
-    &[@{data-property}*='reset-left'] {
-        @{property}-left: 0;
+    &[@{data-property}*='left-reset'] {
+        @{property}-left: 0 !important;
     }
-    &[@{data-property}*='reset-reset'] {
-        @{property}-right: 0;
+    &[@{data-property}*='right-reset'] {
+        @{property}-right: 0 !important;
     }
-    &[@{data-property}*='reset-top'] {
-        @{property}-top: 0;
+    &[@{data-property}*='top-reset'] {
+        @{property}-top: 0 !important;
     }
 }
 .createSpace(padding);
@@ -546,126 +615,26 @@ ul[class*=atk-menu] {
 
 
 // ==========================================================
-// Colors
-// ==========================================================
-
-.colorCheck (@a,@b:auto) when (luma(@a) >= @swatchText) {
-  color: multiply(@bodyColor, @a);
-  & when (@b = important) {
-    color: multiply(@a, @bodyColor) !important;
-  }
-}
-.colorCheck (@a,@b:auto) when (luma(@a) < @swatchText) {
-  color: white;
-  & when (@b = important) {
-    color: white !important;
-  }
-}
-.backgroundColorCheck (@a) when (luma(@a) >= @swatchText) {
-  background-color: darken(@a, @hoverIntensity);
-}
-.backgroundColorCheck (@a) when (luma(@a) < @swatchText) {
-  background-color: lighten(@a, @hoverIntensity);
-}
-.borderColorCheck (@a) when (luma(@a) >= @swatchText) {
-  border-color: white;
-}
-.borderColorCheck (@a) when (luma(@a) < @swatchText) {
-  border-color: black;
-}
-
-
-// Effects
-*[class*=atk-effect] {
-    &, &[class*='atk-button'] {
-        &.atk-effect-danger {
-            color: @effectDanger;
-        }
-        &.atk-effect-warning {
-            color: @effectWarning;
-        }
-        &.atk-effect-success {
-            color: @effectSuccess;
-        }
-        &.atk-effect-info {
-            color: @effectInfo;
-        }
-    }
-    &.atk-label, &[class*=atk-box] {
-        // color: @bodyColor;
-        &.atk-effect-danger {
-            // .colorCheck(@color);
-            @color: tint(@effectDanger, 90%);
-            // color: contrast(@color, black, white, 50%);
-            background-color: @color;
-            border-color: @color;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectDanger, #999);
-            }
-        }
-        &.atk-effect-warning {
-            // .colorCheck(@color);
-            @color: tint(@effectWarning, 90%);
-            background-color: @color;
-            border-color: @color;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectWarning, #999);
-            }
-        }
-        &.atk-effect-success {
-            // .colorCheck(@color);
-            @color: tint(@effectSuccess, 90%);
-            background: @color;
-            border-color: @color;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectSuccess, #999);
-            }
-        }
-        &.atk-effect-info {
-            // .colorCheck(@color);
-            @color: tint(@effectInfo, 90%);
-            background-color: @color;
-            border-color: @color;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectInfo, #999);
-            }
-        }
-    }
-    &.atk-effect-danger {
-        input[type="text"],
-        input[type="url"],
-        input[type="email"],
-        input[type="password"],
-        input[type="search"],
-        input[type="number"],
-        input[type="date"],
-        input[type="month"],
-        input[type="week"],
-        input[type="time"],
-        input[type="datetime"],
-        input[type="datetime-local"],
-        input[type="tel"],
-        textarea,
-        .ui-selectmenu-button  {
-            border-color: @effectDanger;
-        }
-    }
-}
-.atk-disabled {
-    .opacity(50);
-    pointer-events: none;
-}
-
-
-// ==========================================================
 // Swatches
 // ==========================================================
 
-.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sBorderIntensity: 3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5)) {
+.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sSwatchSensitivity: 50%, @sHoverIntensity: 4%, @sBorderIntensity: 3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5)) {
+    .colorCheck (@a,@b:100%) when (luma(@a) >= @sSwatchSensitivity) {
+      color: fade(black, @b);
+    }
+    .colorCheck (@a,@b:100%) when (luma(@a) < @sSwatchSensitivity) {
+      color: fade(white, @b);
+    }
     .createTextColors() {
+        & when (@sText = auto) {
+            .colorCheck(@sFill, 70%);
+        }
+        & when not (@sText = auto) {
+            color: @sText;
+        }
         & when (@sHeading = auto) {
             h1, h2, h3, h4, h5, h6 {
-                .colorCheck(@sFill);
+                .colorCheck(@sFill, 70%);
             }
         }
         & when not (@sHeading = auto) {
@@ -675,7 +644,7 @@ ul[class*=atk-menu] {
         }
         & when (@sComment = auto) {
             .atk-comment {
-                .colorCheck(@sFill);
+                .colorCheck(@sFill, 50%);
             }
         }
         & when not (@sComment = auto) {
@@ -685,30 +654,24 @@ ul[class*=atk-menu] {
         }
         & when (@sLink = auto) {
             a:not([class*=atk-button]) {
-                .colorCheck(@sFill);
+                .colorCheck(@sFill, 90%);
+                &:hover {
+                    .colorCheck(@sFill, (90% + @sHoverIntensity*4));
+                }
             }
         }
         & when not (@sLink = auto) {
             a:not([class*=atk-button]) {
                 color: @sLink;
+                &:hover {
+                    color: darken(@sLink, @sHoverIntensity*4);
+                }
             }
         }
-        & when (@sText = auto) {
-            .colorCheck(@sFill);
-        }
-        & when not (@sText = auto) {
-            color: @sText;
-        }
-        & when (@sBorder = auto) {
-            border-color: darken(@sFill, 6%);
-        }
-        hr {
+        &[data-border*=static], hr {
             border-color: @sBorder;
         }
-        &[data-border*=static] {
-            border-color: @sBorder;
-        }
-        &[data-border*=disabled] {
+        &[data-border*=disabled], .atk-lister>* {
             border-color: @sBorderDisabled;
         }
         &[data-border*=active] {
@@ -719,48 +682,43 @@ ul[class*=atk-menu] {
         }
     }
     .createWidgetColors() {
-        body &[class*=atk-box] {
+        &[class*=atk-box] {
             background-color: @sFill;
             border-color: @sBorder;
         }
-        body &[class*=atk-button],
+        &[class*=atk-button],
         .ui-state-default, .ui-widget-content .ui-state-default {
             background-color: @sFill;
             border-color: @sBorderActive;
             .colorCheck(@sFill);
             &:hover {
-                background-color: darken(@sFill,2%);
-                border-color: darken(@sBorderActive,2%);
-            }
-            &[data-border*=outline] {
-                background: transparent;
-                border-color: @sFill;   
-                color: @sFill;
-                &:hover {
-                    .colorCheck(@sFill);
-                    background-color: @sFill;
-                }
+                background-color: darken(@sFill,@sHoverIntensity);
+                border-color: darken(@sBorderActive,@sHoverIntensity);
             }
         }
-        hr {
-            border-color: @sBorder;
+        &[data-border*=outline] {
+            &, &[class*=atk-button] {
+            background-color: transparent;
+            border-color: @sFill;   
+            color: @sFill;
+            }
+            &[class*=atk-button]:hover {
+                .colorCheck(@sFill);
+                background-color: @sFill;
+                border-color: @sFill;
+            }
         }
         &.atk-popover, &.atk-popover[class*=atk-box] {
             border-color: @sBorderOverlay;
             .atk-popover-arrow:before {
-                background: @sFill;
+                background-color: @sFill;
                 border-color: @sBorderOverlay;
             }
         }
     }
     & when (@sName = default) {
         .createWidgetColors();
-        body {
-            color: @sText;
-        }
-        body,
-        *[class*=atk-swatch] *[class*=atk-box]:not([class*=atk-swatch]),
-        *[class*=atk-box]:not([class*=atk-swatch]) *[class*=atk-swatch] *[class*=atk-box]:not([class*=atk-swatch]) {
+        body, [class*=atk-swatch] [class*=atk-box]:not([class*=atk-swatch]) {
             color: @sText;
             .createTextColors();
         }
@@ -770,12 +728,19 @@ ul[class*=atk-menu] {
             background-color: @sFill;
             color: @sText;
             .createWidgetColors();
-            body &, *[class*=atk-box]:not([class*=swatch]) & {
-                .createTextColors();
-            }
+            .createTextColors();
             &[class*=icon] {
                 background: none;
-                color: @sFill !important;
+                color: @sFill;
+            }
+        }
+        .@{sName}-text {
+            color: @sFill;
+        }
+        .@{sName}-fill {
+            background-color: @sFill;
+            &, &.atk-popover .atk-popover-arrow:before {
+              background-color: @sFill;
             }
         }
     }
@@ -860,12 +825,22 @@ ul[class*=atk-menu] {
 }
 [data-border] {
     border-style: solid;
+    border-width: 1px;
+}
+[data-border*=reset] {
+  &, &.atk-popover .atk-popover-arrow:before {
+    border-width: 0px;
+  }
 }
 [data-border*=thin] {
+  &, &.atk-popover .atk-popover-arrow:before {
     border-width: 0.5px !important;
+  }
 }
 [data-border*=thick] {
+  &, &.atk-popover .atk-popover-arrow:before {
     border-width: 2px !important;
+  }
 }
 [data-border*=bottom] {
   border-right-width: 1px;
