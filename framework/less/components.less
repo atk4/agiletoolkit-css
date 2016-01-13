@@ -235,6 +235,7 @@ ul[class*=atk-menu] {
             &[class*=atk-swatch] {
                 >a[class*=atk-swatch] {
                     background: none;
+                    color: inherit !important;
                 }
             }
         }
@@ -627,10 +628,10 @@ ul[class*=atk-menu] {
     }
     .createTextColors() {
         & when (@sText = auto) {
-            .colorCheck(@sFill, 70%);
+          .colorCheck(@sFill, 70%);
         }
         & when not (@sText = auto) {
-            color: @sText;
+          color: @sText;
         }
         & when (@sHeading = auto) {
             h1, h2, h3, h4, h5, h6 {
@@ -653,7 +654,7 @@ ul[class*=atk-menu] {
             }
         }
         & when (@sLink = auto) {
-            a:not([class*=atk-button]) {
+            a:not([class*=atk-button]):not([class*=atk-swatch]), a&:not([class*=atk-button]) {
                 .colorCheck(@sFill, 90%);
                 &:hover {
                     .colorCheck(@sFill, (90% + @sHoverIntensity*4));
@@ -661,7 +662,7 @@ ul[class*=atk-menu] {
             }
         }
         & when not (@sLink = auto) {
-            a:not([class*=atk-button]) {
+            a:not([class*=atk-button]):not([class*=atk-swatch]), a&:not([class*=atk-button]) {
                 color: @sLink;
                 &:hover {
                     color: darken(@sLink, @sHoverIntensity*4);
@@ -716,17 +717,18 @@ ul[class*=atk-menu] {
             }
         }
     }
-    & when (@sName = default) {
+    & when (@sName = atk-swatch-default) {
         .createWidgetColors();
-        body, [class*=atk-swatch] [class*=atk-box]:not([class*=atk-swatch]) {
-            color: @sText;
+        body, .@{sName}, [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) {
             .createTextColors();
         }
+        .@{sName} {
+          background-color: @sFill;
+        }
     }
-    & when not (@sName = default) {
+    & when not (@sName = atk-swatch-default) {
         .@{sName} {
             background-color: @sFill;
-            color: @sText;
             .createWidgetColors();
             .createTextColors();
             &[class*=icon] {
