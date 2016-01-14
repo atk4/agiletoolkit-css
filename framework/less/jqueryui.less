@@ -138,23 +138,22 @@
             .position(@t:50%);
             cursor: pointer;
             height: 1em;
-            margin-top: -0.5em;
-            // padding: 0.5em;
+            margin-top: -0.5rem;
             text-align: center;
             width: 1em;
             span.ui-icon {
-                color: transparent;
+                color: inherit;
+                font-size: 0;
                 left: auto;
                 margin: 0;
                 position: static;
                 top: auto;
+                width: auto;
                 &:before {
+                    color: inherit;
+                    font-size: 1rem;
                     line-height: 1;
-                    color: @linkColor;
                 }
-            }
-            &:hover span.ui-icon:before {
-                color: @linkColorHover;
             }
             &.ui-state-hover {
                 background: none;
@@ -322,7 +321,7 @@
 .ui-tooltip {
     .atk-size-milli;
     .box-shadow(0 3px 7px rgba(0,0,0,0.5));
-    .colorCheck(@tooltipColor);
+    .colorCheck(color, @tooltipColor, 100%);
     background: @tooltipColor;
     border: none;
     padding: round(@margin/4,2) round(@margin/3,2) round(@margin/6,2) round(@margin/3,2);

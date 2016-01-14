@@ -1464,26 +1464,25 @@ body .ui-tooltip {
   top: 50%;
   cursor: pointer;
   height: 1em;
-  margin-top: -0.5em;
+  margin-top: -0.5rem;
   text-align: center;
   width: 1em;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next span.ui-icon,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev span.ui-icon {
-  color: transparent;
+  color: inherit;
+  font-size: 0;
   left: auto;
   margin: 0;
   position: static;
   top: auto;
+  width: auto;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next span.ui-icon:before,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev span.ui-icon:before {
+  color: inherit;
+  font-size: 1rem;
   line-height: 1;
-  color: #0077cc;
-}
-.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover span.ui-icon:before,
-.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover span.ui-icon:before {
-  color: #005999;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next.ui-state-hover,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev.ui-state-hover {
@@ -2033,7 +2032,7 @@ body,
 }
 .atk-layout > .atk-layout-row {
   display: table-row;
-  height: 0.1em;
+  height: 0.01em;
 }
 .atk-layout > .atk-layout-row.atk-layout-fluid,
 .atk-layout > .atk-layout-row.atk-layout-expand {
@@ -2044,7 +2043,7 @@ body,
   display: table-cell;
   height: auto;
   vertical-align: top;
-  width: 0.1em;
+  width: 0.01em;
 }
 .atk-layout > .atk-layout-column.atk-layout-fluid,
 .atk-layout > .atk-layout-row > .atk-layout-column.atk-layout-fluid,
@@ -2557,11 +2556,9 @@ body {
 }
 ::selection {
   background: red;
-  color: #ffffff;
 }
 ::-moz-selection {
   background: red;
-  color: #ffffff;
 }
 img::selection {
   background: transparent;
@@ -3031,6 +3028,12 @@ a:focus {
 .atk-lister > *:last-child:not([data-padding]) {
   padding-bottom: 0 !important;
 }
+.atk-lister[data-lister*=spacing-reset] > * {
+  padding-bottom: 0;
+}
+.atk-lister[data-lister*=spacing-reset] > * + * {
+  padding-top: 0;
+}
 .atk-lister[data-lister*=spacing-xs] > * {
   padding-bottom: 0.5rem;
 }
@@ -3318,34 +3321,26 @@ ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-sepa
 .atk-move-right {
   float: right;
 }
-.atk-align-left {
+[data-align*=left] {
   text-align: left !important;
 }
-.atk-align-right {
+[data-align*=right] {
   text-align: right !important;
 }
-.atk-align-center {
+[data-align*=center] {
   text-align: center !important;
 }
-.atk-cells-group.atk-valign-top > .atk-cells > .atk-cell,
-.atk-valign-top,
-.atk-cells.atk-valign-top > .atk-cell {
+[data-align*=top],
+[data-align*=top].atk-cells > .atk-cell {
   vertical-align: top !important;
 }
-.atk-cells-group.atk-valign-middle > .atk-cells > .atk-cell,
-.atk-valign-middle,
-.atk-valign-middle.atk-cells > .atk-cell {
-  vertical-align: middle !important;
-}
-.atk-cells-group.atk-valign-baseline > .atk-cells > .atk-cell,
-.atk-valign-baseline,
-.atk-valign-baseline.atk-cells > .atk-cell {
-  vertical-align: baseline !important;
-}
-.atk-cells-group.atk-valign-bottom > .atk-cells > .atk-cell,
-.atk-valign-bottom,
-.atk-valign-bottom.atk-cells > .atk-cell {
+[data-align*=bottom],
+[data-align*=bottom].atk-cells > .atk-cell {
   vertical-align: bottom !important;
+}
+[data-align*=middle],
+[data-align*=middle].atk-cells > .atk-cell {
+  vertical-align: middle !important;
 }
 *[class*=atk-effect].atk-effect-danger,
 *[class*=atk-effect][class*='atk-button'].atk-effect-danger {
@@ -3789,11 +3784,14 @@ input[data-shape*='circle'].ui-button {
 }
 [data-border] {
   border-style: solid;
+  border-width: 0px;
+}
+[data-border]:not([data-border*=left]):not([data-border*=right]):not([data-border*=top]):not([data-border*=bottom]) {
   border-width: 1px;
 }
 [data-border*=reset],
 [data-border*=reset].atk-popover .atk-popover-arrow:before {
-  border-width: 0px;
+  border-width: 0px !important;
 }
 [data-border*=thin],
 [data-border*=thin].atk-popover .atk-popover-arrow:before {
@@ -3929,76 +3927,101 @@ input[data-shape*='circle'].ui-button {
   background-color: #fff;
   border-color: #bfbfbf;
 }
+a[class*=atk-swatch]:not([class*=atk-button]):hover {
+  background: #f5f5f5;
+}
 body,
 .atk-swatch-default,
-[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) {
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]),
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] {
   color: rgba(0, 0, 0, 0.7);
 }
 body h1,
 .atk-swatch-default h1,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) h1,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] h1,
 body h2,
 .atk-swatch-default h2,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) h2,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] h2,
 body h3,
 .atk-swatch-default h3,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) h3,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] h3,
 body h4,
 .atk-swatch-default h4,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) h4,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] h4,
 body h5,
 .atk-swatch-default h5,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) h5,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] h5,
 body h6,
 .atk-swatch-default h6,
-[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) h6 {
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) h6,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] h6 {
   color: rgba(0, 0, 0, 0.7);
 }
 body .atk-comment,
 .atk-swatch-default .atk-comment,
-[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .atk-comment {
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .atk-comment,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .atk-comment {
   color: rgba(0, 0, 0, 0.5);
 }
 body a:not([class*=atk-button]):not([class*=atk-swatch]),
 .atk-swatch-default a:not([class*=atk-button]):not([class*=atk-swatch]),
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) a:not([class*=atk-button]):not([class*=atk-swatch]),
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] a:not([class*=atk-button]):not([class*=atk-swatch]),
 abody:not([class*=atk-button]),
 a.atk-swatch-default:not([class*=atk-button]),
-a[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]):not([class*=atk-button]) {
+a[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]):not([class*=atk-button]),
+a[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default]:not([class*=atk-button]) {
   color: rgba(0, 0, 0, 0.9);
 }
 body a:not([class*=atk-button]):not([class*=atk-swatch]):hover,
 .atk-swatch-default a:not([class*=atk-button]):not([class*=atk-swatch]):hover,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) a:not([class*=atk-button]):not([class*=atk-swatch]):hover,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] a:not([class*=atk-button]):not([class*=atk-swatch]):hover,
 abody:not([class*=atk-button]):hover,
 a.atk-swatch-default:not([class*=atk-button]):hover,
-a[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]):not([class*=atk-button]):hover {
+a[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]):not([class*=atk-button]):hover,
+a[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default]:not([class*=atk-button]):hover {
   color: #000000;
 }
+body[data-border],
+.atk-swatch-default[data-border],
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch])[data-border],
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default][data-border],
 body[data-border*=static],
 .atk-swatch-default[data-border*=static],
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch])[data-border*=static],
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default][data-border*=static],
 body hr,
 .atk-swatch-default hr,
-[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) hr {
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) hr,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] hr {
   border-color: #e6e6e6;
 }
 body[data-border*=disabled],
 .atk-swatch-default[data-border*=disabled],
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch])[data-border*=disabled],
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default][data-border*=disabled],
 body .atk-lister > *,
 .atk-swatch-default .atk-lister > *,
-[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .atk-lister > * {
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .atk-lister > *,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .atk-lister > * {
   border-color: #f2f2f2;
 }
 body[data-border*=active],
 .atk-swatch-default[data-border*=active],
-[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch])[data-border*=active] {
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch])[data-border*=active],
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default][data-border*=active] {
   border-color: #cccccc;
 }
 body[data-border*=overlay],
 .atk-swatch-default[data-border*=overlay],
-[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch])[data-border*=overlay] {
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch])[data-border*=overlay],
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default][data-border*=overlay] {
   border-color: #bfbfbf;
 }
 .atk-swatch-default {
@@ -4045,6 +4068,9 @@ body[data-border*=overlay],
   background-color: #1c2933;
   border-color: #010102;
 }
+a.atk-swatch-ink[class*=atk-swatch]:not([class*=atk-button]):hover {
+  background: #233440;
+}
 .atk-swatch-ink h1,
 .atk-swatch-ink h2,
 .atk-swatch-ink h3,
@@ -4064,6 +4090,7 @@ a.atk-swatch-ink:not([class*=atk-button]) {
 a.atk-swatch-ink:not([class*=atk-button]):hover {
   color: #ffffff;
 }
+.atk-swatch-ink[data-border],
 .atk-swatch-ink[data-border*=static],
 .atk-swatch-ink hr {
   border-color: #11191f;
@@ -4084,6 +4111,9 @@ a.atk-swatch-ink:not([class*=atk-button]):hover {
 }
 .atk-swatch-ink-text {
   color: #1c2933;
+}
+a.atk-swatch-ink-text:hover {
+  color: #000000;
 }
 .atk-swatch-ink-fill {
   background-color: #1c2933;
@@ -4133,6 +4163,9 @@ a.atk-swatch-ink:not([class*=atk-button]):hover {
   background-color: #f5f6f7;
   border-color: #cbd0d5;
 }
+a.atk-swatch-gray[class*=atk-swatch]:not([class*=atk-button]):hover {
+  background: #eaecee;
+}
 .atk-swatch-gray h1,
 .atk-swatch-gray h2,
 .atk-swatch-gray h3,
@@ -4152,6 +4185,7 @@ a.atk-swatch-gray:not([class*=atk-button]) {
 a.atk-swatch-gray:not([class*=atk-button]):hover {
   color: #000000;
 }
+.atk-swatch-gray[data-border],
 .atk-swatch-gray[data-border*=static],
 .atk-swatch-gray hr {
   border-color: #e4e7e9;
@@ -4172,6 +4206,9 @@ a.atk-swatch-gray:not([class*=atk-button]):hover {
 }
 .atk-swatch-gray-text {
   color: #f5f6f7;
+}
+a.atk-swatch-gray-text:hover {
+  color: #c8cdd3;
 }
 .atk-swatch-gray-fill {
   background-color: #f5f6f7;
@@ -4221,6 +4258,9 @@ a.atk-swatch-gray:not([class*=atk-button]):hover {
   background-color: #0095ff;
   border-color: #0068b3;
 }
+a.atk-swatch-blue[class*=atk-swatch]:not([class*=atk-button]):hover {
+  background: #149dff;
+}
 .atk-swatch-blue h1,
 .atk-swatch-blue h2,
 .atk-swatch-blue h3,
@@ -4240,6 +4280,7 @@ a.atk-swatch-blue:not([class*=atk-button]) {
 a.atk-swatch-blue:not([class*=atk-button]):hover {
   color: #ffffff;
 }
+.atk-swatch-blue[data-border],
 .atk-swatch-blue[data-border*=static],
 .atk-swatch-blue hr {
   border-color: #0083e0;
@@ -4260,6 +4301,9 @@ a.atk-swatch-blue:not([class*=atk-button]):hover {
 }
 .atk-swatch-blue-text {
   color: #0095ff;
+}
+a.atk-swatch-blue-text:hover {
+  color: #0065ad;
 }
 .atk-swatch-blue-fill {
   background-color: #0095ff;
@@ -4309,6 +4353,9 @@ a.atk-swatch-blue:not([class*=atk-button]):hover {
   background-color: #f9451f;
   border-color: #c62705;
 }
+a.atk-swatch-red[class*=atk-swatch]:not([class*=atk-button]):hover {
+  background: #fa5533;
+}
 .atk-swatch-red h1,
 .atk-swatch-red h2,
 .atk-swatch-red h3,
@@ -4328,6 +4375,7 @@ a.atk-swatch-red:not([class*=atk-button]) {
 a.atk-swatch-red:not([class*=atk-button]):hover {
   color: #ffffff;
 }
+.atk-swatch-red[data-border],
 .atk-swatch-red[data-border*=static],
 .atk-swatch-red hr {
   border-color: #f33007;
@@ -4348,6 +4396,9 @@ a.atk-swatch-red:not([class*=atk-button]):hover {
 }
 .atk-swatch-red-text {
   color: #f9451f;
+}
+a.atk-swatch-red-text:hover {
+  color: #c12605;
 }
 .atk-swatch-red-fill {
   background-color: #f9451f;
@@ -4397,6 +4448,9 @@ a.atk-swatch-red:not([class*=atk-button]):hover {
   background-color: #00cc66;
   border-color: #008040;
 }
+a.atk-swatch-green[class*=atk-swatch]:not([class*=atk-button]):hover {
+  background: #00e070;
+}
 .atk-swatch-green h1,
 .atk-swatch-green h2,
 .atk-swatch-green h3,
@@ -4416,6 +4470,7 @@ a.atk-swatch-green:not([class*=atk-button]) {
 a.atk-swatch-green:not([class*=atk-button]):hover {
   color: #ffffff;
 }
+.atk-swatch-green[data-border],
 .atk-swatch-green[data-border*=static],
 .atk-swatch-green hr {
   border-color: #00ad57;
@@ -4436,6 +4491,9 @@ a.atk-swatch-green:not([class*=atk-button]):hover {
 }
 .atk-swatch-green-text {
   color: #00cc66;
+}
+a.atk-swatch-green-text:hover {
+  color: #007a3d;
 }
 .atk-swatch-green-fill {
   background-color: #00cc66;
@@ -4485,6 +4543,9 @@ a.atk-swatch-green:not([class*=atk-button]):hover {
   background-color: #ffcc00;
   border-color: #b38f00;
 }
+a.atk-swatch-yellow[class*=atk-swatch]:not([class*=atk-button]):hover {
+  background: #ebbc00;
+}
 .atk-swatch-yellow h1,
 .atk-swatch-yellow h2,
 .atk-swatch-yellow h3,
@@ -4504,6 +4565,7 @@ a.atk-swatch-yellow:not([class*=atk-button]) {
 a.atk-swatch-yellow:not([class*=atk-button]):hover {
   color: #000000;
 }
+.atk-swatch-yellow[data-border],
 .atk-swatch-yellow[data-border*=static],
 .atk-swatch-yellow hr {
   border-color: #e0b400;
@@ -4524,6 +4586,9 @@ a.atk-swatch-yellow:not([class*=atk-button]):hover {
 }
 .atk-swatch-yellow-text {
   color: #ffcc00;
+}
+a.atk-swatch-yellow-text:hover {
+  color: #ad8b00;
 }
 .atk-swatch-yellow-fill {
   background-color: #ffcc00;

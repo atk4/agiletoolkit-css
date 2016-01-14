@@ -95,6 +95,14 @@
             padding-bottom: 0 !important;
         }
     }
+    &[data-lister*=spacing-reset] {
+        > * {
+            padding-bottom: 0;
+            + * {
+                padding-top: 0;
+            }
+        }
+    }
     &[data-lister*=spacing-xs] {
         > * {
             padding-bottom: @space-xs;
@@ -239,13 +247,6 @@ ul[class*=atk-menu] {
                 }
             }
         }
-        // &.atk-menu-active {
-        //     >a, >a:hover {
-        //         .colorCheck(@menuActive);
-        //         background: @menuActive;
-        //         cursor: default;
-        //     }
-        // }
     }
     &:not([class*=atk-actions])>li {
         margin-left: 0;
@@ -373,35 +374,29 @@ ul[class*=atk-menu] {
 .atk-move-right {
     float: right;
 }
-.atk-align-left {
-    text-align: left !important;
+[data-align*=left] {
+  text-align: left !important;
 }
-.atk-align-right {
-    text-align: right !important;
+[data-align*=right] {
+  text-align: right !important;
 }
-.atk-align-center {
-    text-align: center !important;
+[data-align*=center] {
+  text-align: center !important;
 }
-
-.atk-cells-group.atk-valign-top>.atk-cells>.atk-cell,
-.atk-valign-top,
-.atk-cells.atk-valign-top>.atk-cell {
+[data-align*=top] {
+  &, &.atk-cells>.atk-cell {
     vertical-align: top !important;
+  }
 }
-.atk-cells-group.atk-valign-middle>.atk-cells>.atk-cell,
-.atk-valign-middle,
-.atk-valign-middle.atk-cells>.atk-cell {
-    vertical-align: middle !important;
-}
-.atk-cells-group.atk-valign-baseline>.atk-cells>.atk-cell,
-.atk-valign-baseline,
-.atk-valign-baseline.atk-cells>.atk-cell {
-    vertical-align: baseline !important;
-}
-.atk-cells-group.atk-valign-bottom>.atk-cells>.atk-cell,
-.atk-valign-bottom,
-.atk-valign-bottom.atk-cells>.atk-cell {
+[data-align*=bottom] {
+  &, &.atk-cells>.atk-cell {
     vertical-align: bottom !important;
+  }
+}
+[data-align*=middle] {
+  &, &.atk-cells>.atk-cell {
+    vertical-align: middle !important;
+  }
 }
 
 // Effects
@@ -423,7 +418,7 @@ ul[class*=atk-menu] {
     &.atk-label, &[class*=atk-box] {
         // color: @bodyColor;
         &.atk-effect-danger {
-            // .colorCheck(@color);
+            // .colorCheck(color, @color);
             @color: tint(@effectDanger, 90%);
             // color: contrast(@color, black, white, 50%);
             background-color: @color;
@@ -433,7 +428,7 @@ ul[class*=atk-menu] {
             }
         }
         &.atk-effect-warning {
-            // .colorCheck(@color);
+            // .colorCheck(color, @color);
             @color: tint(@effectWarning, 90%);
             background-color: @color;
             border-color: @color;
@@ -442,7 +437,7 @@ ul[class*=atk-menu] {
             }
         }
         &.atk-effect-success {
-            // .colorCheck(@color);
+            // .colorCheck(color, @color);
             @color: tint(@effectSuccess, 90%);
             background: @color;
             border-color: @color;
@@ -451,7 +446,7 @@ ul[class*=atk-menu] {
             }
         }
         &.atk-effect-info {
-            // .colorCheck(@color);
+            // .colorCheck(color, @color);
             @color: tint(@effectInfo, 90%);
             background-color: @color;
             border-color: @color;
@@ -620,22 +615,32 @@ ul[class*=atk-menu] {
 // ==========================================================
 
 .createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sSwatchSensitivity: 50%, @sHoverIntensity: 4%, @sBorderIntensity: 3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5)) {
-    .colorCheck (@a,@b:100%) when (luma(@a) >= @sSwatchSensitivity) {
-      color: fade(black, @b);
+    .colorCheck (@property:color,@color:#fff,@intensity:100%) when (luma(@color) >= @sSwatchSensitivity) {
+      & when (@property = color) {
+        @{property}: fade(black, @intensity);
+      }
+      & when (@property = background) {
+        @{property}: darken(@color, @intensity);
+      }
     }
-    .colorCheck (@a,@b:100%) when (luma(@a) < @sSwatchSensitivity) {
-      color: fade(white, @b);
+    .colorCheck (@property:color,@color:#fff,@intensity:100%) when (luma(@color) < @sSwatchSensitivity) {
+      & when (@property = color) {
+        @{property}: fade(white, @intensity);
+      }
+      & when (@property = background) {
+        @{property}: lighten(@color, @intensity);
+      }
     }
     .createTextColors() {
         & when (@sText = auto) {
-          .colorCheck(@sFill, 70%);
+          .colorCheck(color, @sFill, 70%);
         }
         & when not (@sText = auto) {
           color: @sText;
         }
         & when (@sHeading = auto) {
             h1, h2, h3, h4, h5, h6 {
-                .colorCheck(@sFill, 70%);
+                .colorCheck(color, @sFill, 70%);
             }
         }
         & when not (@sHeading = auto) {
@@ -645,7 +650,7 @@ ul[class*=atk-menu] {
         }
         & when (@sComment = auto) {
             .atk-comment {
-                .colorCheck(@sFill, 50%);
+                .colorCheck(color, @sFill, 50%);
             }
         }
         & when not (@sComment = auto) {
@@ -655,9 +660,9 @@ ul[class*=atk-menu] {
         }
         & when (@sLink = auto) {
             a:not([class*=atk-button]):not([class*=atk-swatch]), a&:not([class*=atk-button]) {
-                .colorCheck(@sFill, 90%);
+                .colorCheck(color, @sFill, 90%);
                 &:hover {
-                    .colorCheck(@sFill, (90% + @sHoverIntensity*4));
+                    .colorCheck(color, @sFill, (90% + @sHoverIntensity*4));
                 }
             }
         }
@@ -669,7 +674,7 @@ ul[class*=atk-menu] {
                 }
             }
         }
-        &[data-border*=static], hr {
+        &[data-border], &[data-border*=static], hr {
             border-color: @sBorder;
         }
         &[data-border*=disabled], .atk-lister>* {
@@ -691,7 +696,7 @@ ul[class*=atk-menu] {
         .ui-state-default, .ui-widget-content .ui-state-default {
             background-color: @sFill;
             border-color: @sBorderActive;
-            .colorCheck(@sFill);
+            .colorCheck(color, @sFill);
             &:hover {
                 background-color: darken(@sFill,@sHoverIntensity);
                 border-color: darken(@sBorderActive,@sHoverIntensity);
@@ -704,7 +709,7 @@ ul[class*=atk-menu] {
             color: @sFill;
             }
             &[class*=atk-button]:hover {
-                .colorCheck(@sFill);
+                .colorCheck(color, @sFill);
                 background-color: @sFill;
                 border-color: @sFill;
             }
@@ -716,10 +721,17 @@ ul[class*=atk-menu] {
                 border-color: @sBorderOverlay;
             }
         }
+        a&[class*=atk-swatch]:not([class*=atk-button]) {
+          &:hover {
+            .colorCheck(background, @sFill, @sHoverIntensity);
+          }
+        }
     }
     & when (@sName = atk-swatch-default) {
         .createWidgetColors();
-        body, .@{sName}, [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) {
+        body, .@{sName},
+        [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]),
+        [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] {
             .createTextColors();
         }
         .@{sName} {
@@ -738,6 +750,9 @@ ul[class*=atk-menu] {
         }
         .@{sName}-text {
             color: @sFill;
+            a&:hover {
+              color: darken(@sFill, @sHoverIntensity*4);
+            }
         }
         .@{sName}-fill {
             background-color: @sFill;
@@ -827,11 +842,14 @@ ul[class*=atk-menu] {
 }
 [data-border] {
     border-style: solid;
-    border-width: 1px;
+    border-width: 0px;
+    &:not([data-border*=left]):not([data-border*=right]):not([data-border*=top]):not([data-border*=bottom]) {
+      border-width: 1px;
+    }
 }
 [data-border*=reset] {
   &, &.atk-popover .atk-popover-arrow:before {
-    border-width: 0px;
+    border-width: 0px !important;
   }
 }
 [data-border*=thin] {
