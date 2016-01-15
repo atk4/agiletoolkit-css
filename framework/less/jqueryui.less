@@ -16,9 +16,9 @@
     .border-top-left-radius(@cornerRadius);
 }
 .ui-state-default {
-    &, a:link, a:visited {
-        color: @bodyColor;
-    }
+    // &, a:link, a:visited {
+    //     color: @bodyColor;
+    // }
     &,
     .ui-widget-content &,
     .ui-widget-header & {
@@ -38,8 +38,8 @@
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
     background: #eee;
-    border-color: @borderStatic;
-    color: @bodyColor;
+    // border-color: @borderStatic;
+    // color: @bodyColor;
     font-weight: bold;
 }
 .ui-button {
@@ -48,7 +48,7 @@
     }
 }
 .ui-widget {
-    color: @bodyColor;
+    // color: @bodyColor;
     font-size: 1em;
     &, input, select, textarea, button {
         font-family: @bodyFamily;
@@ -57,20 +57,20 @@
 .ui-widget-header {
     .clear-area;
     color: inherit;
-    .ui-state-hover {
-        background: @buttonHover;
-    }
+    // .ui-state-hover {
+    //     background: @buttonHover;
+    // }
 }
 .ui-widget-content {
     background: #fff;
-    border-color: @borderOverlay;
+    // border-color: @borderOverlay;
     color: inherit;
-    a {
-        color: @linkColor;
-        &:hover {
-            color: @linkColorHover;
-        }
-    }
+    // a {
+    //     color: @linkColor;
+    //     &:hover {
+    //         color: @linkColorHover;
+    //     }
+    // }
 }
 .ui-widget-overlay {
     .opacity(100);
@@ -96,7 +96,7 @@
 }
 .ui-selectmenu-menu {
     .ui-menu {
-        border: 1px solid @borderOverlay;
+        // border: 1px solid @borderOverlay;
         border-top-width: 0;
         max-height: 240px;
         overflow: auto;
@@ -109,11 +109,11 @@
     }
 }
 .ui-datepicker {
-    border-color: @borderOverlay;
+    // border-color: @borderOverlay;
     padding: round(@margin/2,2);
     .ui-datepicker-header {
         border: none;
-        color: #000;
+        // color: #000;
         line-height: @bodyBaseline;
         margin: round(@margin/4,2) 0 round(@margin/1.5,2) 0;
         padding: 0;
@@ -220,7 +220,7 @@
     .clear-area;
     .ui-tabs-nav.ui-widget-header {
         border-radius: @cornerRadius @cornerRadius 0 0;
-        border-bottom: 1px solid @borderClickable;
+        // border-bottom: 1px solid @borderClickable;
         padding: 0;
         .ui-state-default {
             .box-shadow(none);
@@ -234,7 +234,7 @@
             }
             &.ui-state-active {
                 background: #fff;
-                border-color: @borderClickable;
+                // border-color: @borderClickable;
             }
         }
     }
@@ -260,16 +260,16 @@
             margin-top: -0.5em;
         }
         &.ui-state-active {
-            background: @boxColor;
-            border-color: @borderStatic;
-            border-bottom-color: @boxColor;
+            // background: @boxColor;
+            // border-color: @borderStatic;
+            // border-bottom-color: @boxColor;
             &, +.ui-accordion-content {
                 .box-shadow(none);
             }
         }
     }
     .ui-accordion-content {
-        border-color: @borderStatic;
+        // border-color: @borderStatic;
         padding: round(@margin/2,2);
         + .ui-accordion-header {
             margin-top: 0.2em;
@@ -288,7 +288,7 @@
         .ui-button.ui-dialog-titlebar-close {
             .clear-area;
             .position(@t:round(@margin/4,2), @r:round(@margin/4,2));
-            color: tint(@bodyColor, 80%);
+            // color: tint(@bodyColor, 80%);
             .ui-button-text {
                 display: none;
             }
@@ -297,9 +297,9 @@
                 margin-right: -0.2rem;
                 width: auto;
             }
-            &:hover {
-                color: tint(@bodyColor, 40%);
-            }
+            // &:hover {
+            //     color: tint(@bodyColor, 40%);
+            // }
         }
     }
     >.ui-widget-content {

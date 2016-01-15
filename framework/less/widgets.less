@@ -2,12 +2,6 @@
 // Widgets
 // ==========================================================
 
-
-// Navigation Bar
-.atk-bar.atk-cells {
-    line-height: 1;
-}
-
  // Growl 
 .atk-growl {
     font-weight:bold;
@@ -28,51 +22,18 @@
 
 // Table
 .atk-table {
-    @p: @py @px;
-    @px: round(@margin/2,2);
-    @py: round(@margin/4,2);
     position: relative;
     table {
         width: 100%;
         thead th, tbody td {
-            &:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort) {
-                padding-bottom: @py;
-                padding-left: @px;
-                padding-right: @px;
-                padding-top: @py;   
-            }
-            &[class*=atk-section] {
-                padding-left: @px;
-                padding-right: @px;
+            &:not([data-padding]) {
+                padding: @space; 
             }
         }
-        >thead>tr>th {
-            border-bottom: 1px solid @borderDisabled;
+        thead th {
             text-align: left;
-            &.atk-table-sort {
-                >a {
-                    display: block;
-                    padding: @p;
-                    padding-right: @margin;
-                    position: relative;
-                    *[class*=icon] {
-                        .position(@t:50%, @r:@margin/2);
-                        line-height: 1;
-                        margin-top: -0.5em;
-                        &:before {
-                            margin: 0 -0.2em 0 0;
-                        }
-                    }
-                }
-            }
-            &:not([class*='atk-swatch'])>a {
-                color: @bodyColor;
-            }
         }
         tbody tr {
-            + tr td {
-                border-top: 1px solid @borderDisabled;
-            }
             &.atk-table-expander {
                 display: none;
                 td {
@@ -98,72 +59,99 @@
             }
         }
     }
-    >*[class*=atk-box] {
-        &:first-child {
-            border-bottom: none;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            margin-bottom: 0;
+    &[data-table*=bordered] {
+        thead tr th {
+            border-bottom: 1px solid transparent;
         }
-        &:last-child {
-            border-top: none;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+        tbody tr+tr td {
+            border-top: 1px solid transparent;
         }
     }
-    &.atk-table-zebra {
+    &[data-table*=zebra] {
         tbody tr:nth-child(odd) td:not([class*='atk-swatch']) {
             background: lighten(@borderStatic, 9%);
         }
     }
-    &.atk-table-bordered {
-        th, td {
-            border: 1px solid @borderStatic;
-        }
-    }
-    &[data-table-padding='large'] {
-        @p: @py @px;
-        @px: round(@margin,2);
-        @py: round(@margin/2,2);
+    &[data-table*=spacing-s] {
         table {
             thead th, tbody td {
-                &:not([class*=atk-padding]):not([class*=atk-section]):not(.atk-table-sort) {
-                    padding-bottom: @py;
-                    padding-left: @px;
-                    padding-right: @px;
-                    padding-top: @py;   
-                }
-                &[class*=atk-section] {
-                    padding-left: @px;
-                    padding-right: @px;
+                &:not([data-padding]) {
+                    padding: @space-s;  
                 }
             }
         }   
     }
-}
-
-// Pagination
-.atk-pagination {
-    .clear-font;
-    >a {
-        font-size: @bodySize;
-        *[class*=icon] {
-            .position(relative, @r:-round(@margin/4,2));
-            margin-left: -round(@margin/2,2);
-        }
-        &:first-child {
-            .border-radius(@cornerRadius 0 0 @cornerRadius);
-            border-right-color: @borderStatic;
-        }
-        &:last-child {
-            .border-radius(0 @cornerRadius @cornerRadius 0); 
-            border-left-color: @borderClickable;
-            border-right-color: @borderClickable;
-        }
-        + a {
-            border-left-width: 0;
-            border-right-color: @borderStatic;
-        }
+    &[data-table*=spacing-xs] {
+        table {
+            thead th, tbody td {
+                &:not([data-padding]) {
+                    padding: @space-xs;  
+                }
+            }
+        }   
+    }
+    &[data-table*=spacing-l] {
+        table {
+            thead th, tbody td {
+                &:not([data-padding]) {
+                    padding: @space-l;  
+                }
+            }
+        }   
+    }
+    &[data-table*=spacing-xl] {
+        table {
+            thead th, tbody td {
+                &:not([data-padding]) {
+                    padding: @space-xl;
+                }
+            }
+        }   
+    }
+    &[data-table*=semi-spacing] {
+        table {
+            thead th, tbody td {
+                &:not([data-padding]) {
+                    padding: @space-s @space;  
+                }
+            }
+        }   
+    }
+    &[data-table*=semi-spacing-s] {
+        table {
+            thead th, tbody td {
+                &:not([data-padding]) {
+                    padding: @space-xs @space-s;  
+                }
+            }
+        }   
+    }
+    &[data-table*=semi-spacing-xs] {
+        table {
+            thead th, tbody td {
+                &:not([data-padding]) {
+                    padding: @space-xs/2 @space-xs;  
+                }
+            }
+        }   
+    }
+    &[data-table*=semi-spacing-l] {
+        table {
+            thead th, tbody td {
+                &:not([data-padding]) {
+                    padding: @space @space-l;  
+                }
+            }
+        }   
+    }
+    &[data-table*=semi-spacing-xl] {
+        table {
+            thead th, tbody td {
+                &:not([data-padding]) {
+                    padding: @space-l @space-xl;
+                }
+            }
+        }   
     }
 }
 
@@ -217,36 +205,38 @@
             width: @x;
         }
     }
-    &[class*=atk-popover-bottom] .atk-popover-arrow:before {
+    &[data-popover*=bottom] .atk-popover-arrow:before {
         top: auto;
         bottom: @s;
     }
-    &, &.atk-popover-top-left , &.atk-popover-top-center, &.atk-popover-top-right {
+    &, &[data-popover*=top] {
         .atk-popover-arrow {
             bottom: 100%;
         }
     }
-    &.atk-popover-bottom-left, &.atk-popover-bottom-center, &.atk-popover-bottom-right {
+    &[data-popover*=bottom] {
         .atk-popover-arrow {
             top: 100%;
         }
     }
-    &, &.atk-popover-top-left, &.atk-popover-bottom-left {
+    &, &[data-popover*=left] {
         .atk-popover-arrow {
             left: @cornerRadius + 2px;
             right: auto;
         }
     }
-    &.atk-popover-top-right, &.atk-popover-bottom-right {
+    &[data-popover*=right] {
         .atk-popover-arrow {
             left: auto;
             right: @cornerRadius + 2px;
         }
     }
-    &.atk-popover-top-center .atk-popover-arrow, &.atk-popover-bottom-center .atk-popover-arrow {
-        left: 50%;
-        margin-left: -@d/2;
-        right: auto;
+    &[data-popover*=center] {
+        .atk-popover-arrow {
+            left: 50%;
+            margin-left: -@d/2;
+            right: auto;
+        }
     }
 }
 
@@ -296,45 +286,5 @@
     }
     &.atk-cells.atk-visible {
         display: table;
-    }
-}
-@-ms-keyframes spin {
-    from { -ms-transform: rotate(0deg); }
-    to { -ms-transform: rotate(360deg); }
-}
-@-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-@-ms-keyframes spin2 {
-    from { -ms-transform: rotate(360deg); }
-    to { -ms-transform: rotate(0deg); }
-}
-@-moz-keyframes spin2 {
-    from { -moz-transform: rotate(360deg); }
-    to { -moz-transform: rotate(0deg); }
-}
-@-webkit-keyframes spin2 {
-    from { -webkit-transform: rotate(360deg); }
-    to { -webkit-transform: rotate(0deg); }
-}
-@keyframes spin2 {
-    from {
-        transform:rotate(360deg);
-    }
-    to {
-        transform:rotate(0deg);
     }
 }
