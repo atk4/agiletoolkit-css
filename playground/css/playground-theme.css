@@ -2620,9 +2620,6 @@ a:focus {
 .row:after {
   clear: both;
 }
-*[class*=icon] {
-  line-height: 1;
-}
 *[class*=icon]:before {
   margin-left: 0;
   margin-right: 0;
