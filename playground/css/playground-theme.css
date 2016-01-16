@@ -3697,8 +3697,7 @@ input[data-shape*='circle'].ui-button {
   border-style: solid;
   border-width: 0px;
 }
-[data-border]:not(hr),
-[data-border]:not([data-border*=left]):not([data-border*=right]):not([data-border*=top]):not([data-border*=bottom]) {
+[data-border]:not([data-border*=left]):not([data-border*=right]):not([data-border*=top]):not([data-border*=bottom]):not(hr) {
   border-width: 1px;
 }
 [data-border*=reset],
