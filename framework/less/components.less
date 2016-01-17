@@ -750,12 +750,74 @@ ul[class*=atk-menu] {
           }
         }
     }
+    .createjQueryUI() {
+        .ui-widget {
+            color: @sText;
+        }
+        .ui-widget-hover {
+            &.ui-state-hover {
+                background: darken(@sFill, @sHoverIntensity);
+            }
+        }
+        .ui-widget-content {
+            background: @sFill;
+            border-color: @sBorder;
+        }
+        .ui-tabs {
+            .ui-tabs-nav.ui-widget-header {
+                border-bottom: 1px solid @sBorderActive;
+                .ui-state-default.ui-state-active {
+                    border-color: @sBorderActive;
+                }
+            }
+            .ui-tabs-panel.ui-widget-content {
+                border: 1px solid @sBorder;
+                border-top: none;
+            }
+        }
+        .ui-accordion {
+            .ui-accordion-header {
+                &.ui-state-active {
+                    background: @sFill;
+                    border-color: @sBorder;
+                    border-bottom-color: @sFill;
+                }
+            }
+            .ui-accordion-content {
+                border-color: @sBorder;
+            }
+        }
+        .ui-datepicker {
+            border-color: @sBorderOverlay;
+            .ui-datepicker-header {
+                color: @sText;
+            }
+        }
+        .ui-dialog {
+            border-color: @sBorderOverlay;
+            .ui-widget-header.ui-dialog-titlebar {
+                .ui-button.ui-dialog-titlebar-close {
+                    .colorCheck(color, @sFill, 30%);
+                    &:hover {
+                        .colorCheck(color, @sFill, 40%);
+                    }
+                }
+            }
+            .ui-dialog-buttonset {
+                border-top: 1px solid @borderStatic;
+            }
+        }
+        .ui-selectmenu-menu .ui-menu {
+            border: 1px solid @sBorderOverlay;
+        }
+    }
     & when (@sName = atk-swatch-default) {
         .createWidgetColors();
         body, .@{sName},
         [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]),
         [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] {
             .createTextColors();
+            .createjQueryUI();
         }
         .@{sName} {
           background-color: @sFill;
@@ -766,6 +828,7 @@ ul[class*=atk-menu] {
             background-color: @sFill;
             .createWidgetColors();
             .createTextColors();
+            .createjQueryUI();
             &[class*=icon] {
                 background: none;
                 color: @sFill;

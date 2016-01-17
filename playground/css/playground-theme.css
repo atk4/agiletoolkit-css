@@ -1347,7 +1347,7 @@ body .ui-tooltip {
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
-  background: #eee;
+  background: red;
   font-weight: bold;
 }
 .ui-button .ui-button-text {
@@ -1372,7 +1372,6 @@ body .ui-tooltip {
   color: inherit;
 }
 .ui-widget-content {
-  background: #fff;
   color: inherit;
 }
 .ui-widget-overlay {
@@ -1609,11 +1608,10 @@ body .ui-tooltip {
   border: none;
 }
 .ui-dialog > .ui-widget-content .ui-dialog-buttonset {
-  border-top: 1px solid #e1e1e1;
   padding: 0.75rem 1.5rem;
 }
 .ui-dialog > .ui-widget-content .ui-dialog-buttonset > * + * {
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
 }
 .ui-dialog > .ui-widget-content.ui-dialog-content {
   overflow: auto;
@@ -3993,6 +3991,100 @@ body.atk-menu[data-menu*=separated] > li + li:not([data-border]),
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default].atk-menu[data-menu*=separated] > li + li:not([data-border]) {
   border-color: #e6e6e6;
 }
+body .ui-widget,
+.atk-swatch-default .ui-widget,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-widget,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-widget {
+  color: auto;
+}
+body .ui-widget-hover.ui-state-hover,
+.atk-swatch-default .ui-widget-hover.ui-state-hover,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-widget-hover.ui-state-hover,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-widget-hover.ui-state-hover {
+  background: #f5f5f5;
+}
+body .ui-widget-content,
+.atk-swatch-default .ui-widget-content,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-widget-content,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-widget-content {
+  background: #fff;
+  border-color: #e6e6e6;
+}
+body .ui-tabs .ui-tabs-nav.ui-widget-header,
+.atk-swatch-default .ui-tabs .ui-tabs-nav.ui-widget-header,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-tabs .ui-tabs-nav.ui-widget-header,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-tabs .ui-tabs-nav.ui-widget-header {
+  border-bottom: 1px solid #cccccc;
+}
+body .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active,
+.atk-swatch-default .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
+  border-color: #cccccc;
+}
+body .ui-tabs .ui-tabs-panel.ui-widget-content,
+.atk-swatch-default .ui-tabs .ui-tabs-panel.ui-widget-content,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-tabs .ui-tabs-panel.ui-widget-content,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-tabs .ui-tabs-panel.ui-widget-content {
+  border: 1px solid #e6e6e6;
+  border-top: none;
+}
+body .ui-accordion .ui-accordion-header.ui-state-active,
+.atk-swatch-default .ui-accordion .ui-accordion-header.ui-state-active,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-accordion .ui-accordion-header.ui-state-active,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-accordion .ui-accordion-header.ui-state-active {
+  background: #fff;
+  border-color: #e6e6e6;
+  border-bottom-color: #fff;
+}
+body .ui-accordion .ui-accordion-content,
+.atk-swatch-default .ui-accordion .ui-accordion-content,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-accordion .ui-accordion-content,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-accordion .ui-accordion-content {
+  border-color: #e6e6e6;
+}
+body .ui-datepicker,
+.atk-swatch-default .ui-datepicker,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-datepicker,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-datepicker {
+  border-color: #bfbfbf;
+}
+body .ui-datepicker .ui-datepicker-header,
+.atk-swatch-default .ui-datepicker .ui-datepicker-header,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-datepicker .ui-datepicker-header,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-datepicker .ui-datepicker-header {
+  color: auto;
+}
+body .ui-dialog,
+.atk-swatch-default .ui-dialog,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-dialog,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-dialog {
+  border-color: #bfbfbf;
+}
+body .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close,
+.atk-swatch-default .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
+  color: rgba(0, 0, 0, 0.3);
+}
+body .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover,
+.atk-swatch-default .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+body .ui-dialog .ui-dialog-buttonset,
+.atk-swatch-default .ui-dialog .ui-dialog-buttonset,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-dialog .ui-dialog-buttonset,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-dialog .ui-dialog-buttonset {
+  border-top: 1px solid #e1e1e1;
+}
+body .ui-selectmenu-menu .ui-menu,
+.atk-swatch-default .ui-selectmenu-menu .ui-menu,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-selectmenu-menu .ui-menu,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-selectmenu-menu .ui-menu {
+  border: 1px solid #bfbfbf;
+}
 .atk-swatch-default {
   background-color: #fff;
 }
@@ -4092,6 +4184,55 @@ a.atk-swatch-ink:not([class*=atk-button]):hover {
 .atk-swatch-ink .atk-menu[data-menu*=separated] > li + li:not([data-border]),
 .atk-swatch-ink.atk-menu[data-menu*=separated] > li + li:not([data-border]) {
   border-color: #11191f;
+}
+.atk-swatch-ink .ui-widget {
+  color: auto;
+}
+.atk-swatch-ink .ui-widget-hover.ui-state-hover {
+  background: #151e26;
+}
+.atk-swatch-ink .ui-widget-content {
+  background: #1c2933;
+  border-color: #11191f;
+}
+.atk-swatch-ink .ui-tabs .ui-tabs-nav.ui-widget-header {
+  border-bottom: 1px solid #06090b;
+}
+.atk-swatch-ink .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
+  border-color: #06090b;
+}
+.atk-swatch-ink .ui-tabs .ui-tabs-panel.ui-widget-content {
+  border: 1px solid #11191f;
+  border-top: none;
+}
+.atk-swatch-ink .ui-accordion .ui-accordion-header.ui-state-active {
+  background: #1c2933;
+  border-color: #11191f;
+  border-bottom-color: #1c2933;
+}
+.atk-swatch-ink .ui-accordion .ui-accordion-content {
+  border-color: #11191f;
+}
+.atk-swatch-ink .ui-datepicker {
+  border-color: #010102;
+}
+.atk-swatch-ink .ui-datepicker .ui-datepicker-header {
+  color: auto;
+}
+.atk-swatch-ink .ui-dialog {
+  border-color: #010102;
+}
+.atk-swatch-ink .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
+  color: rgba(255, 255, 255, 0.3);
+}
+.atk-swatch-ink .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+.atk-swatch-ink .ui-dialog .ui-dialog-buttonset {
+  border-top: 1px solid #e1e1e1;
+}
+.atk-swatch-ink .ui-selectmenu-menu .ui-menu {
+  border: 1px solid #010102;
 }
 .atk-swatch-ink[class*=icon] {
   background: none;
@@ -4207,6 +4348,55 @@ a.atk-swatch-gray:not([class*=atk-button]):hover {
 .atk-swatch-gray.atk-menu[data-menu*=separated] > li + li:not([data-border]) {
   border-color: #e4e7e9;
 }
+.atk-swatch-gray .ui-widget {
+  color: auto;
+}
+.atk-swatch-gray .ui-widget-hover.ui-state-hover {
+  background: #eaecee;
+}
+.atk-swatch-gray .ui-widget-content {
+  background: #f5f6f7;
+  border-color: #e4e7e9;
+}
+.atk-swatch-gray .ui-tabs .ui-tabs-nav.ui-widget-header {
+  border-bottom: 1px solid #d3d7dc;
+}
+.atk-swatch-gray .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
+  border-color: #d3d7dc;
+}
+.atk-swatch-gray .ui-tabs .ui-tabs-panel.ui-widget-content {
+  border: 1px solid #e4e7e9;
+  border-top: none;
+}
+.atk-swatch-gray .ui-accordion .ui-accordion-header.ui-state-active {
+  background: #f5f6f7;
+  border-color: #e4e7e9;
+  border-bottom-color: #f5f6f7;
+}
+.atk-swatch-gray .ui-accordion .ui-accordion-content {
+  border-color: #e4e7e9;
+}
+.atk-swatch-gray .ui-datepicker {
+  border-color: #cbd0d5;
+}
+.atk-swatch-gray .ui-datepicker .ui-datepicker-header {
+  color: auto;
+}
+.atk-swatch-gray .ui-dialog {
+  border-color: #cbd0d5;
+}
+.atk-swatch-gray .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
+  color: rgba(0, 0, 0, 0.3);
+}
+.atk-swatch-gray .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+.atk-swatch-gray .ui-dialog .ui-dialog-buttonset {
+  border-top: 1px solid #e1e1e1;
+}
+.atk-swatch-gray .ui-selectmenu-menu .ui-menu {
+  border: 1px solid #cbd0d5;
+}
 .atk-swatch-gray[class*=icon] {
   background: none;
   color: #f5f6f7;
@@ -4320,6 +4510,55 @@ a.atk-swatch-blue:not([class*=atk-button]):hover {
 .atk-swatch-blue .atk-menu[data-menu*=separated] > li + li:not([data-border]),
 .atk-swatch-blue.atk-menu[data-menu*=separated] > li + li:not([data-border]) {
   border-color: #0083e0;
+}
+.atk-swatch-blue .ui-widget {
+  color: auto;
+}
+.atk-swatch-blue .ui-widget-hover.ui-state-hover {
+  background: #0089eb;
+}
+.atk-swatch-blue .ui-widget-content {
+  background: #0095ff;
+  border-color: #0083e0;
+}
+.atk-swatch-blue .ui-tabs .ui-tabs-nav.ui-widget-header {
+  border-bottom: 1px solid #0071c2;
+}
+.atk-swatch-blue .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
+  border-color: #0071c2;
+}
+.atk-swatch-blue .ui-tabs .ui-tabs-panel.ui-widget-content {
+  border: 1px solid #0083e0;
+  border-top: none;
+}
+.atk-swatch-blue .ui-accordion .ui-accordion-header.ui-state-active {
+  background: #0095ff;
+  border-color: #0083e0;
+  border-bottom-color: #0095ff;
+}
+.atk-swatch-blue .ui-accordion .ui-accordion-content {
+  border-color: #0083e0;
+}
+.atk-swatch-blue .ui-datepicker {
+  border-color: #0068b3;
+}
+.atk-swatch-blue .ui-datepicker .ui-datepicker-header {
+  color: auto;
+}
+.atk-swatch-blue .ui-dialog {
+  border-color: #0068b3;
+}
+.atk-swatch-blue .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
+  color: rgba(255, 255, 255, 0.3);
+}
+.atk-swatch-blue .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+.atk-swatch-blue .ui-dialog .ui-dialog-buttonset {
+  border-top: 1px solid #e1e1e1;
+}
+.atk-swatch-blue .ui-selectmenu-menu .ui-menu {
+  border: 1px solid #0068b3;
 }
 .atk-swatch-blue[class*=icon] {
   background: none;
@@ -4435,6 +4674,55 @@ a.atk-swatch-red:not([class*=atk-button]):hover {
 .atk-swatch-red.atk-menu[data-menu*=separated] > li + li:not([data-border]) {
   border-color: #f33007;
 }
+.atk-swatch-red .ui-widget {
+  color: auto;
+}
+.atk-swatch-red .ui-widget-hover.ui-state-hover {
+  background: #f8350b;
+}
+.atk-swatch-red .ui-widget-content {
+  background: #f9451f;
+  border-color: #f33007;
+}
+.atk-swatch-red .ui-tabs .ui-tabs-nav.ui-widget-header {
+  border-bottom: 1px solid #d52a06;
+}
+.atk-swatch-red .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
+  border-color: #d52a06;
+}
+.atk-swatch-red .ui-tabs .ui-tabs-panel.ui-widget-content {
+  border: 1px solid #f33007;
+  border-top: none;
+}
+.atk-swatch-red .ui-accordion .ui-accordion-header.ui-state-active {
+  background: #f9451f;
+  border-color: #f33007;
+  border-bottom-color: #f9451f;
+}
+.atk-swatch-red .ui-accordion .ui-accordion-content {
+  border-color: #f33007;
+}
+.atk-swatch-red .ui-datepicker {
+  border-color: #c62705;
+}
+.atk-swatch-red .ui-datepicker .ui-datepicker-header {
+  color: auto;
+}
+.atk-swatch-red .ui-dialog {
+  border-color: #c62705;
+}
+.atk-swatch-red .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
+  color: rgba(255, 255, 255, 0.3);
+}
+.atk-swatch-red .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+.atk-swatch-red .ui-dialog .ui-dialog-buttonset {
+  border-top: 1px solid #e1e1e1;
+}
+.atk-swatch-red .ui-selectmenu-menu .ui-menu {
+  border: 1px solid #c62705;
+}
 .atk-swatch-red[class*=icon] {
   background: none;
   color: #f9451f;
@@ -4549,6 +4837,55 @@ a.atk-swatch-green:not([class*=atk-button]):hover {
 .atk-swatch-green.atk-menu[data-menu*=separated] > li + li:not([data-border]) {
   border-color: #00ad57;
 }
+.atk-swatch-green .ui-widget {
+  color: auto;
+}
+.atk-swatch-green .ui-widget-hover.ui-state-hover {
+  background: #00b85c;
+}
+.atk-swatch-green .ui-widget-content {
+  background: #00cc66;
+  border-color: #00ad57;
+}
+.atk-swatch-green .ui-tabs .ui-tabs-nav.ui-widget-header {
+  border-bottom: 1px solid #008f47;
+}
+.atk-swatch-green .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
+  border-color: #008f47;
+}
+.atk-swatch-green .ui-tabs .ui-tabs-panel.ui-widget-content {
+  border: 1px solid #00ad57;
+  border-top: none;
+}
+.atk-swatch-green .ui-accordion .ui-accordion-header.ui-state-active {
+  background: #00cc66;
+  border-color: #00ad57;
+  border-bottom-color: #00cc66;
+}
+.atk-swatch-green .ui-accordion .ui-accordion-content {
+  border-color: #00ad57;
+}
+.atk-swatch-green .ui-datepicker {
+  border-color: #008040;
+}
+.atk-swatch-green .ui-datepicker .ui-datepicker-header {
+  color: auto;
+}
+.atk-swatch-green .ui-dialog {
+  border-color: #008040;
+}
+.atk-swatch-green .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
+  color: rgba(255, 255, 255, 0.3);
+}
+.atk-swatch-green .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+.atk-swatch-green .ui-dialog .ui-dialog-buttonset {
+  border-top: 1px solid #e1e1e1;
+}
+.atk-swatch-green .ui-selectmenu-menu .ui-menu {
+  border: 1px solid #008040;
+}
 .atk-swatch-green[class*=icon] {
   background: none;
   color: #00cc66;
@@ -4662,6 +4999,55 @@ a.atk-swatch-yellow:not([class*=atk-button]):hover {
 .atk-swatch-yellow .atk-menu[data-menu*=separated] > li + li:not([data-border]),
 .atk-swatch-yellow.atk-menu[data-menu*=separated] > li + li:not([data-border]) {
   border-color: #e0b400;
+}
+.atk-swatch-yellow .ui-widget {
+  color: auto;
+}
+.atk-swatch-yellow .ui-widget-hover.ui-state-hover {
+  background: #ebbc00;
+}
+.atk-swatch-yellow .ui-widget-content {
+  background: #ffcc00;
+  border-color: #e0b400;
+}
+.atk-swatch-yellow .ui-tabs .ui-tabs-nav.ui-widget-header {
+  border-bottom: 1px solid #c29b00;
+}
+.atk-swatch-yellow .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
+  border-color: #c29b00;
+}
+.atk-swatch-yellow .ui-tabs .ui-tabs-panel.ui-widget-content {
+  border: 1px solid #e0b400;
+  border-top: none;
+}
+.atk-swatch-yellow .ui-accordion .ui-accordion-header.ui-state-active {
+  background: #ffcc00;
+  border-color: #e0b400;
+  border-bottom-color: #ffcc00;
+}
+.atk-swatch-yellow .ui-accordion .ui-accordion-content {
+  border-color: #e0b400;
+}
+.atk-swatch-yellow .ui-datepicker {
+  border-color: #b38f00;
+}
+.atk-swatch-yellow .ui-datepicker .ui-datepicker-header {
+  color: auto;
+}
+.atk-swatch-yellow .ui-dialog {
+  border-color: #b38f00;
+}
+.atk-swatch-yellow .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
+  color: rgba(0, 0, 0, 0.3);
+}
+.atk-swatch-yellow .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+.atk-swatch-yellow .ui-dialog .ui-dialog-buttonset {
+  border-top: 1px solid #e1e1e1;
+}
+.atk-swatch-yellow .ui-selectmenu-menu .ui-menu {
+  border: 1px solid #b38f00;
 }
 .atk-swatch-yellow[class*=icon] {
   background: none;
