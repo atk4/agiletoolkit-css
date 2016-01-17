@@ -169,18 +169,23 @@ a, button, input {
 }
 [class*=atk-button] {
     &:not([data-padding]) {
-        &.atk-button-xsmall {
-            padding: (0.12em * @baselineDestroyer) (0.25em * @baselineDestroyer);
-        }
-        &.atk-button-small {
+        &[data-button*=spacing-s] {
             padding: (0.25em * @baselineDestroyer) (0.5em * @baselineDestroyer);
         }
-        &.atk-button-large {
+        &[data-button*=spacing-xs] {
+            padding: (0.12em * @baselineDestroyer) (0.25em * @baselineDestroyer);
+        }
+        &[data-button*=spacing-l] {
             padding: (0.75em * @baselineDestroyer) (1.5em * @baselineDestroyer);
         }
-        &.atk-button-xlarge {
+        &[data-button*=spacing-xl] {
             padding: (1em * @baselineDestroyer) (2em * @baselineDestroyer);
         }
+    }
+    &[data-button*=blank] {
+        background: none !important;
+        border-color: transparent !important;
+        box-shadow: none !important;
     }
     .atk-buttonset>& {
         .border-radius(0);
@@ -194,11 +199,6 @@ a, button, input {
             border-left: none;
         }
     }
-}
-.atk-button-blank {
-    background: none !important;
-    border-color: transparent !important;
-    box-shadow: none !important;
 }
 ul[class*=atk-menu] {
     &:not(.atk-cells) {
@@ -688,6 +688,11 @@ ul[class*=atk-menu] {
         &[data-border*=overlay], & hr[data-border*=overlay] {
             border-color: @sBorderOverlay;
         }
+        .atk-table[data-table*=hover] {
+            table tbody tr:hover td {
+                background: darken(@sFill, @sHoverIntensity/2);
+            }
+        }
     }
     .createWidgetColors() {
         &[class*=atk-box] {
@@ -703,6 +708,9 @@ ul[class*=atk-menu] {
                 background-color: darken(@sFill,@sHoverIntensity);
                 border-color: darken(@sBorderActive,@sHoverIntensity);
             }
+        }
+        &.atk-button[data-button*=blank] {
+            color: @sFill !important;
         }
         &[data-border*=outline] {
             &, &[class*=atk-button] {
