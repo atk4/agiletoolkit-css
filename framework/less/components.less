@@ -406,55 +406,49 @@ ul[class*=atk-menu] {
 *[class*=atk-effect] {
     &, &[class*='atk-button'] {
         &.atk-effect-danger {
-            color: @effectDanger;
+            color: @effectDanger !important;
         }
         &.atk-effect-warning {
-            color: @effectWarning;
+            color: @effectWarning !important;
         }
         &.atk-effect-success {
-            color: @effectSuccess;
+            color: @effectSuccess !important;
         }
         &.atk-effect-info {
-            color: @effectInfo;
+            color: @effectInfo !important;
         }
     }
     &.atk-label, &[class*=atk-box] {
-        // color: @bodyColor;
         &.atk-effect-danger {
-            // .colorCheck(color, @color);
             @color: tint(@effectDanger, 90%);
-            // color: contrast(@color, black, white, 50%);
-            background-color: @color;
-            border-color: @color;
+            background-color: @color !important;;
+            border-color: @color !important;;
             &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectDanger, #999);
+                color: multiply(@effectDanger, #999) !important;;
             }
         }
         &.atk-effect-warning {
-            // .colorCheck(color, @color);
             @color: tint(@effectWarning, 90%);
-            background-color: @color;
-            border-color: @color;
+            background-color: @color !important;;
+            border-color: @color !important;;
             &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectWarning, #999);
+                color: multiply(@effectWarning, #999) !important;;
             }
         }
         &.atk-effect-success {
-            // .colorCheck(color, @color);
             @color: tint(@effectSuccess, 90%);
-            background: @color;
-            border-color: @color;
+            background: @color !important;;
+            border-color: @color !important;;
             &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectSuccess, #999);
+                color: multiply(@effectSuccess, #999) !important;;
             }
         }
         &.atk-effect-info {
-            // .colorCheck(color, @color);
             @color: tint(@effectInfo, 90%);
-            background-color: @color;
-            border-color: @color;
+            background-color: @color !important;;
+            border-color: @color !important;;
             &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectInfo, #999);
+                color: multiply(@effectInfo, #999) !important;;
             }
         }
     }

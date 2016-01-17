@@ -3256,24 +3256,24 @@ ul[class*=atk-menu][data-menu*=separated] > li + li {
 }
 *[class*=atk-effect].atk-effect-danger,
 *[class*=atk-effect][class*='atk-button'].atk-effect-danger {
-  color: #ff5c4d;
+  color: #ff5c4d !important;
 }
 *[class*=atk-effect].atk-effect-warning,
 *[class*=atk-effect][class*='atk-button'].atk-effect-warning {
-  color: #f7a600;
+  color: #f7a600 !important;
 }
 *[class*=atk-effect].atk-effect-success,
 *[class*=atk-effect][class*='atk-button'].atk-effect-success {
-  color: #25c425;
+  color: #25c425 !important;
 }
 *[class*=atk-effect].atk-effect-info,
 *[class*=atk-effect][class*='atk-button'].atk-effect-info {
-  color: #2bacd7;
+  color: #2bacd7 !important;
 }
 *[class*=atk-effect].atk-label.atk-effect-danger,
 *[class*=atk-effect][class*=atk-box].atk-effect-danger {
-  background-color: #ffefed;
-  border-color: #ffefed;
+  background-color: #ffefed !important;
+  border-color: #ffefed !important;
 }
 *[class*=atk-effect].atk-label.atk-effect-danger,
 *[class*=atk-effect][class*=atk-box].atk-effect-danger,
@@ -3289,12 +3289,12 @@ ul[class*=atk-menu][data-menu*=separated] > li + li {
 *[class*=atk-effect][class*=atk-box].atk-effect-danger h5,
 *[class*=atk-effect].atk-label.atk-effect-danger h6,
 *[class*=atk-effect][class*=atk-box].atk-effect-danger h6 {
-  color: #99372e;
+  color: #99372e !important;
 }
 *[class*=atk-effect].atk-label.atk-effect-warning,
 *[class*=atk-effect][class*=atk-box].atk-effect-warning {
-  background-color: #fef6e6;
-  border-color: #fef6e6;
+  background-color: #fef6e6 !important;
+  border-color: #fef6e6 !important;
 }
 *[class*=atk-effect].atk-label.atk-effect-warning,
 *[class*=atk-effect][class*=atk-box].atk-effect-warning,
@@ -3310,12 +3310,12 @@ ul[class*=atk-menu][data-menu*=separated] > li + li {
 *[class*=atk-effect][class*=atk-box].atk-effect-warning h5,
 *[class*=atk-effect].atk-label.atk-effect-warning h6,
 *[class*=atk-effect][class*=atk-box].atk-effect-warning h6 {
-  color: #946400;
+  color: #946400 !important;
 }
 *[class*=atk-effect].atk-label.atk-effect-success,
 *[class*=atk-effect][class*=atk-box].atk-effect-success {
-  background: #e9f9e9;
-  border-color: #e9f9e9;
+  background: #e9f9e9 !important;
+  border-color: #e9f9e9 !important;
 }
 *[class*=atk-effect].atk-label.atk-effect-success,
 *[class*=atk-effect][class*=atk-box].atk-effect-success,
@@ -3331,12 +3331,12 @@ ul[class*=atk-menu][data-menu*=separated] > li + li {
 *[class*=atk-effect][class*=atk-box].atk-effect-success h5,
 *[class*=atk-effect].atk-label.atk-effect-success h6,
 *[class*=atk-effect][class*=atk-box].atk-effect-success h6 {
-  color: #167616;
+  color: #167616 !important;
 }
 *[class*=atk-effect].atk-label.atk-effect-info,
 *[class*=atk-effect][class*=atk-box].atk-effect-info {
-  background-color: #eaf7fb;
-  border-color: #eaf7fb;
+  background-color: #eaf7fb !important;
+  border-color: #eaf7fb !important;
 }
 *[class*=atk-effect].atk-label.atk-effect-info,
 *[class*=atk-effect][class*=atk-box].atk-effect-info,
@@ -3352,7 +3352,7 @@ ul[class*=atk-menu][data-menu*=separated] > li + li {
 *[class*=atk-effect][class*=atk-box].atk-effect-info h5,
 *[class*=atk-effect].atk-label.atk-effect-info h6,
 *[class*=atk-effect][class*=atk-box].atk-effect-info h6 {
-  color: #1a6781;
+  color: #1a6781 !important;
 }
 *[class*=atk-effect].atk-effect-danger input[type="text"],
 *[class*=atk-effect].atk-effect-danger input[type="url"],
