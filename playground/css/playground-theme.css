@@ -3104,39 +3104,40 @@ ul[class*=atk-menu] > li:hover[class*=atk-swatch] > a[class*=atk-swatch] {
   background: none;
   color: inherit !important;
 }
-ul[class*=atk-menu]:not([class*=atk-actions]) > li {
-  margin-left: 0;
-}
-ul[class*=atk-menu].atk-menu-horizontal > li > a *[class*='icon']:before {
+ul[class*=atk-menu][data-menu*=horizontal] > li > a *[class*='icon']:before {
   margin: 0;
 }
-ul[class*=atk-menu].atk-menu-horizontal > li *[class*=atk-menu]:not(.atk-menu-separated) {
+ul[class*=atk-menu][data-menu*=horizontal] > li *[class*=atk-menu]:not([data-menu*=separated]) {
   position: absolute;
   top: 100%;
   left: 0;
   min-width: 100%;
 }
-ul[class*=atk-menu].atk-menu-horizontal > li *[class*=atk-menu]:not(.atk-menu-separated).atk-menu-right {
+ul[class*=atk-menu][data-menu*=horizontal] > li *[class*=atk-menu]:not([data-menu*=separated])[data-menu*=right] {
   left: auto;
   right: 0;
 }
-ul[class*=atk-menu].atk-menu-vertical {
+ul[class*=atk-menu][data-menu*=vertical] {
   display: block;
 }
-ul[class*=atk-menu].atk-menu-vertical > li {
+ul[class*=atk-menu][data-menu*=vertical] > li {
   display: block;
 }
-ul[class*=atk-menu].atk-menu-vertical > li a {
+ul[class*=atk-menu][data-menu*=vertical] > li a {
   display: block;
   float: none;
 }
-ul[class*=atk-menu].atk-menu-vertical > li a[class*=atk-button] {
+ul[class*=atk-menu][data-menu*=vertical] > li a[class*=atk-button] {
   text-align: left;
 }
-ul[class*=atk-menu].atk-menu-vertical > li *[class*=atk-menu]:not(.atk-menu-separated) {
+ul[class*=atk-menu][data-menu*=vertical] > li *[class*=atk-menu]:not([data-menu*=separated]) {
   position: absolute;
   top: 0;
   left: 100%;
+}
+ul[class*=atk-menu][data-menu*=separated] > li + li {
+  border-left-width: 1px;
+  border-left-style: solid;
 }
 *[class*=atk-box],
 .ui-tabs *[class*=atk-box].ui-tabs-panel.ui-widget-content {
@@ -3963,6 +3964,16 @@ body .atk-table[data-table*=hover] table tbody tr:hover td,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .atk-table[data-table*=hover] table tbody tr:hover td {
   background: #fafafa;
 }
+body .atk-menu[data-menu*=separated] > li + li,
+.atk-swatch-default .atk-menu[data-menu*=separated] > li + li,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .atk-menu[data-menu*=separated] > li + li,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .atk-menu[data-menu*=separated] > li + li,
+body.atk-menu[data-menu*=separated] > li + li,
+.atk-swatch-default.atk-menu[data-menu*=separated] > li + li,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]).atk-menu[data-menu*=separated] > li + li,
+[class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default].atk-menu[data-menu*=separated] > li + li {
+  border-color: #e6e6e6;
+}
 .atk-swatch-default {
   background-color: #fff;
 }
@@ -4054,6 +4065,10 @@ a.atk-swatch-ink:not([class*=atk-button]):hover {
 }
 .atk-swatch-ink .atk-table[data-table*=hover] table tbody tr:hover td {
   background: #18242c;
+}
+.atk-swatch-ink .atk-menu[data-menu*=separated] > li + li,
+.atk-swatch-ink.atk-menu[data-menu*=separated] > li + li {
+  border-color: #11191f;
 }
 .atk-swatch-ink[class*=icon] {
   background: none;
@@ -4161,6 +4176,10 @@ a.atk-swatch-gray:not([class*=atk-button]):hover {
 .atk-swatch-gray .atk-table[data-table*=hover] table tbody tr:hover td {
   background: #eff1f2;
 }
+.atk-swatch-gray .atk-menu[data-menu*=separated] > li + li,
+.atk-swatch-gray.atk-menu[data-menu*=separated] > li + li {
+  border-color: #e4e7e9;
+}
 .atk-swatch-gray[class*=icon] {
   background: none;
   color: #f5f6f7;
@@ -4266,6 +4285,10 @@ a.atk-swatch-blue:not([class*=atk-button]):hover {
 }
 .atk-swatch-blue .atk-table[data-table*=hover] table tbody tr:hover td {
   background: #008ff5;
+}
+.atk-swatch-blue .atk-menu[data-menu*=separated] > li + li,
+.atk-swatch-blue.atk-menu[data-menu*=separated] > li + li {
+  border-color: #0083e0;
 }
 .atk-swatch-blue[class*=icon] {
   background: none;
@@ -4373,6 +4396,10 @@ a.atk-swatch-red:not([class*=atk-button]):hover {
 .atk-swatch-red .atk-table[data-table*=hover] table tbody tr:hover td {
   background: #f93d15;
 }
+.atk-swatch-red .atk-menu[data-menu*=separated] > li + li,
+.atk-swatch-red.atk-menu[data-menu*=separated] > li + li {
+  border-color: #f33007;
+}
 .atk-swatch-red[class*=icon] {
   background: none;
   color: #f9451f;
@@ -4479,6 +4506,10 @@ a.atk-swatch-green:not([class*=atk-button]):hover {
 .atk-swatch-green .atk-table[data-table*=hover] table tbody tr:hover td {
   background: #00c261;
 }
+.atk-swatch-green .atk-menu[data-menu*=separated] > li + li,
+.atk-swatch-green.atk-menu[data-menu*=separated] > li + li {
+  border-color: #00ad57;
+}
 .atk-swatch-green[class*=icon] {
   background: none;
   color: #00cc66;
@@ -4584,6 +4615,10 @@ a.atk-swatch-yellow:not([class*=atk-button]):hover {
 }
 .atk-swatch-yellow .atk-table[data-table*=hover] table tbody tr:hover td {
   background: #f5c400;
+}
+.atk-swatch-yellow .atk-menu[data-menu*=separated] > li + li,
+.atk-swatch-yellow.atk-menu[data-menu*=separated] > li + li {
+  border-color: #e0b400;
 }
 .atk-swatch-yellow[class*=icon] {
   background: none;
