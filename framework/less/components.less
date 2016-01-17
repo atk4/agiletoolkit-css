@@ -617,8 +617,8 @@ ul[class*=atk-menu] {
 // Swatches
 // ==========================================================
 
-.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sSwatchSensitivity: 50%, @sHoverIntensity: 4%, @sBorderIntensity: 3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5)) {
-    .colorCheck (@property:color,@color:#fff,@intensity:100%) when (luma(@color) >= @sSwatchSensitivity) {
+.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sLinkHover:auto, @sSwatchSensitivity:50%, @sHoverIntensity:4%, @sBorderIntensity:3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5)) {
+    .colorCheck (@property:color, @color:#fff, @intensity:100%) when (luma(@color) >= @sSwatchSensitivity) {
       & when (@property = color) {
         @{property}: fade(black, @intensity);
       }
@@ -626,7 +626,7 @@ ul[class*=atk-menu] {
         @{property}: darken(@color, @intensity);
       }
     }
-    .colorCheck (@property:color,@color:#fff,@intensity:100%) when (luma(@color) < @sSwatchSensitivity) {
+    .colorCheck (@property:color, @color:#fff, @intensity:100%) when (luma(@color) < @sSwatchSensitivity) {
       & when (@property = color) {
         @{property}: fade(white, @intensity);
       }
@@ -664,16 +664,27 @@ ul[class*=atk-menu] {
         & when (@sLink = auto) {
             a:not([class*=atk-button]):not([class*=atk-swatch]), a&:not([class*=atk-button]) {
                 .colorCheck(color, @sFill, 90%);
-                &:hover {
-                    .colorCheck(color, @sFill, (90% + @sHoverIntensity*4));
+                & when (@sLinkHover = auto) {
+                    &:hover {
+                        .colorCheck(color, @sFill, (90% + @sHoverIntensity*4));
+                    }
                 }
             }
         }
         & when not (@sLink = auto) {
             a:not([class*=atk-button]):not([class*=atk-swatch]), a&:not([class*=atk-button]) {
                 color: @sLink;
+                & when (@sLinkHover = auto) {
+                    &:hover {
+                        color: darken(@sLink, @sHoverIntensity*4);
+                    }
+                }
+            }
+        }
+        & when not (@sLinkHover = auto) {
+            a:not([class*=atk-button]):not([class*=atk-swatch]), a&:not([class*=atk-button]) {
                 &:hover {
-                    color: darken(@sLink, @sHoverIntensity*4);
+                    color: @sLinkHover;
                 }
             }
         }
