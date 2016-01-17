@@ -2257,35 +2257,35 @@ ol:last-child,
 dl:last-child {
   margin-bottom: 0;
 }
-ul.atk-list-nobullets,
-ol.atk-list-nobullets {
+ul[data-list*=no-bullets],
+ol[data-list*=no-bullets] {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
 }
-ul.atk-list-nobullets ul,
-ol.atk-list-nobullets ul,
-ul.atk-list-nobullets ol,
-ol.atk-list-nobullets ol {
+ul[data-list*=no-bullets] ul,
+ol[data-list*=no-bullets] ul,
+ul[data-list*=no-bullets] ol,
+ol[data-list*=no-bullets] ol {
   list-style-type: none;
   padding-left: 1em;
 }
-ul.atk-list-inline li,
-ol.atk-list-inline li {
+ul[data-list*=inline] li,
+ol[data-list*=inline] li {
   display: inline;
   margin: 0;
   padding: 0;
 }
-ul.atk-list-inline li:first-child .atk-sep,
-ol.atk-list-inline li:first-child .atk-sep {
+ul[data-list*=inline] li:first-child .atk-sep,
+ol[data-list*=inline] li:first-child .atk-sep {
   display: none;
 }
-ul.atk-list-nomargin,
-ol.atk-list-nomargin,
-ul.atk-list-nomargin ul,
-ol.atk-list-nomargin ul,
-ul.atk-list-nomargin ol,
-ol.atk-list-nomargin ol {
+ul[data-list*=no-margin],
+ol[data-list*=no-margin],
+ul[data-list*=no-margin] ul,
+ol[data-list*=no-margin] ul,
+ul[data-list*=no-margin] ol,
+ol[data-list*=no-margin] ol {
   padding-left: 1em;
 }
 p {

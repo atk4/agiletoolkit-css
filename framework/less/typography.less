@@ -165,7 +165,7 @@ ul, ol, dl {
     }
 }
 ul, ol {
-    &.atk-list-nobullets {
+    &[data-list*=no-bullets] {
         margin-left: 0;
         padding-left: 0;
         list-style-type: none;
@@ -174,7 +174,7 @@ ul, ol {
             padding-left: 1em;
         }
     }
-    &.atk-list-inline {
+    &[data-list*=inline] {
         li {
             display: inline;
             margin: 0;
@@ -186,7 +186,7 @@ ul, ol {
             }
         }
     }
-    &.atk-list-nomargin {
+    &[data-list*=no-margin] {
         &, ul, ol {
             padding-left: 1em;
         }
