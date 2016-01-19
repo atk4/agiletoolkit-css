@@ -4065,13 +4065,13 @@ body .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titleb
 .atk-swatch-default .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.2);
 }
 body .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover,
 .atk-swatch-default .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-box]:not([class*=atk-swatch]) .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover,
 [class*=atk-swatch]:not([class*=atk-swatch-default]) [class*=atk-swatch-default] .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.3);
 }
 body .ui-dialog .ui-dialog-buttonset,
 .atk-swatch-default .ui-dialog .ui-dialog-buttonset,
@@ -4223,10 +4223,10 @@ a.atk-swatch-ink:not([class*=atk-button]):hover {
   border-color: #010102;
 }
 .atk-swatch-ink .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.2);
 }
 .atk-swatch-ink .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.3);
 }
 .atk-swatch-ink .ui-dialog .ui-dialog-buttonset {
   border-top: 1px solid #e1e1e1;
@@ -4386,10 +4386,10 @@ a.atk-swatch-gray:not([class*=atk-button]):hover {
   border-color: #cbd0d5;
 }
 .atk-swatch-gray .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.2);
 }
 .atk-swatch-gray .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.3);
 }
 .atk-swatch-gray .ui-dialog .ui-dialog-buttonset {
   border-top: 1px solid #e1e1e1;
@@ -4549,10 +4549,10 @@ a.atk-swatch-blue:not([class*=atk-button]):hover {
   border-color: #0068b3;
 }
 .atk-swatch-blue .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.2);
 }
 .atk-swatch-blue .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.3);
 }
 .atk-swatch-blue .ui-dialog .ui-dialog-buttonset {
   border-top: 1px solid #e1e1e1;
@@ -4712,10 +4712,10 @@ a.atk-swatch-red:not([class*=atk-button]):hover {
   border-color: #c62705;
 }
 .atk-swatch-red .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.2);
 }
 .atk-swatch-red .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.3);
 }
 .atk-swatch-red .ui-dialog .ui-dialog-buttonset {
   border-top: 1px solid #e1e1e1;
@@ -4875,10 +4875,10 @@ a.atk-swatch-green:not([class*=atk-button]):hover {
   border-color: #008040;
 }
 .atk-swatch-green .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.2);
 }
 .atk-swatch-green .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.3);
 }
 .atk-swatch-green .ui-dialog .ui-dialog-buttonset {
   border-top: 1px solid #e1e1e1;
@@ -5038,10 +5038,10 @@ a.atk-swatch-yellow:not([class*=atk-button]):hover {
   border-color: #b38f00;
 }
 .atk-swatch-yellow .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.2);
 }
 .atk-swatch-yellow .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.3);
 }
 .atk-swatch-yellow .ui-dialog .ui-dialog-buttonset {
   border-top: 1px solid #e1e1e1;
