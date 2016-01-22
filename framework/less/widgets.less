@@ -3,7 +3,7 @@
 // ==========================================================
 
  // Growl 
-.atk-growl {
+.growl {
     font-weight:bold;
     position:fixed;
     top:@margin*2;
@@ -21,12 +21,12 @@
 }
 
 // Table
-.atk-table {
+[class*="table"] {
     position: relative;
     table {
         width: 100%;
         thead th, tbody td {
-            &:not([data-padding]) {
+            &:not([class*="padding"]) {
                 padding: @space; 
             }
         }
@@ -34,14 +34,14 @@
             text-align: left;
         }
         tbody tr {
-            &.atk-table-expander {
+            &.table-expander {
                 display: none;
                 td {
                     border-top: none;
                 }
 
             }
-            td.atk-table-row-icon {
+            td.table-row-icon {
                 max-width: 0;
                 opacity: 0;
                 padding: 0 !important;
@@ -53,13 +53,13 @@
                     transform: translate(@margin/2,-50%);
                 }
             }
-            &:hover td.atk-table-row-icon {
+            &:hover td.table-row-icon {
                 background: none !important;
                 opacity: 1;
             }
         }
     }
-    &[data-table*=bordered] {
+    &[class*="-separated"] {
         thead tr th {
             border-bottom: 1px solid transparent;
         }
@@ -67,87 +67,87 @@
             border-top: 1px solid transparent;
         }
     }
-    &[data-table*=zebra] {
-        tbody tr:nth-child(odd) td:not([class*='atk-swatch']) {
+    &[class*="-zebra"] {
+        tbody tr:nth-child(odd) td:not([class*="swatch"]) {
             background: lighten(@borderStatic, 9%);
         }
     }
-    &[data-table*=spacing-s] {
+    &[class*="-spacing--s"] {
         table {
             thead th, tbody td {
-                &:not([data-padding]) {
+                &:not([class*="padding"]) {
                     padding: @space-s;  
                 }
             }
         }   
     }
-    &[data-table*=spacing-xs] {
+    &[class*="-spacing--xs"] {
         table {
             thead th, tbody td {
-                &:not([data-padding]) {
+                &:not([class*="padding"]) {
                     padding: @space-xs;  
                 }
             }
         }   
     }
-    &[data-table*=spacing-l] {
+    &[class*="-spacing--l"] {
         table {
             thead th, tbody td {
-                &:not([data-padding]) {
+                &:not([class*="padding"]) {
                     padding: @space-l;  
                 }
             }
         }   
     }
-    &[data-table*=spacing-xl] {
+    &[class*="-spacing--xl"] {
         table {
             thead th, tbody td {
-                &:not([data-padding]) {
+                &:not([class*="padding"]) {
                     padding: @space-xl;
                 }
             }
         }   
     }
-    &[data-table*=semi-spacing] {
+    &[class*="-spacing--semi"] {
         table {
             thead th, tbody td {
-                &:not([data-padding]) {
+                &:not([class*="padding"]) {
                     padding: @space-s @space;  
                 }
             }
         }   
     }
-    &[data-table*=semi-spacing-s] {
+    &[class*="-spacing--semi-xs"] {
         table {
             thead th, tbody td {
-                &:not([data-padding]) {
-                    padding: @space-xs @space-s;  
-                }
-            }
-        }   
-    }
-    &[data-table*=semi-spacing-xs] {
-        table {
-            thead th, tbody td {
-                &:not([data-padding]) {
+                &:not([class*="padding"]) {
                     padding: @space-xs/2 @space-xs;  
                 }
             }
         }   
     }
-    &[data-table*=semi-spacing-l] {
+    &[class*="-spacing--semi-s"] {
         table {
             thead th, tbody td {
-                &:not([data-padding]) {
+                &:not([class*="padding"]) {
+                    padding: @space-xs @space-s;  
+                }
+            }
+        }   
+    }
+    &[class*="-spacing--semi-l"] {
+        table {
+            thead th, tbody td {
+                &:not([class*="padding"]) {
                     padding: @space @space-l;  
                 }
             }
         }   
     }
-    &[data-table*=semi-spacing-xl] {
+    &[class*="-spacing--semi-xl"] {
         table {
             thead th, tbody td {
-                &:not([data-padding]) {
+                &:not([class*="padding"]) {
                     padding: @space-l @space-xl;
                 }
             }
@@ -156,22 +156,22 @@
 }
 
 // Dialog
-.atk-dialog {
+.dialog {
     .ui-dialog-content {
         // margin-bottom: @margin;
     }
-    .atk-dialog-buttons {
+    .dialog-buttons {
         margin: 0 0 -@margin -@margin;
         table-layout: fixed;
-        .atk-cell {
-            .atk-button {
+        .cell {
+            .button {
                 .border-radius(0);
                 box-shadow: none;
                 border-width: 1px 1px 0 0;
                 text-align: center;
                 width: 100%;
             }
-            + .atk-cell .atk-button {
+            + .cell .button {
                 border-right: none;
             }
         }
@@ -179,19 +179,12 @@
 }
 
 // Popover
-.atk-popover {
+[class*="popover"] {
     @x: @popoverArrow;
     @d: round((@x * sqrt(2)), 2) + 4px;
     @s: (@d - @x)/2;
     .position();
-    .atk-popover-arrow {
-        &:before {
-            border-width: 1px;
-            border-color: transparent;
-            border-style: solid;
-        }
-    }
-    .atk-popover-arrow {
+    .popover-arrow {
         background: none !important;
         position: absolute;
         height: @d/2;
@@ -200,39 +193,42 @@
         &:before {
             .rotate(45deg);
             .position(@t:@s,@l:@s);
+            border-width: 1px;
+            border-color: transparent;
+            border-style: solid;
             content: '';
             height: @x;
             width: @x;
         }
     }
-    &[data-popover*=bottom] .atk-popover-arrow:before {
+    &[class*="popover-bottom"] .popover-arrow:before {
         top: auto;
         bottom: @s;
     }
-    &, &[data-popover*=top] {
-        .atk-popover-arrow {
+    &, &[class*="popover-top"] {
+        .popover-arrow {
             bottom: 100%;
         }
     }
-    &[data-popover*=bottom] {
-        .atk-popover-arrow {
+    &[class*="popover-bottom"] {
+        .popover-arrow {
             top: 100%;
         }
     }
-    &, &[data-popover*=left] {
-        .atk-popover-arrow {
+    &[class*="popover-top-left"], &[class*="popover-bottom-left"] {
+        .popover-arrow {
             left: @cornerRadius + 2px;
             right: auto;
         }
     }
-    &[data-popover*=right] {
-        .atk-popover-arrow {
+    &[class*="popover-top-right"], &[class*="popover-bottom-right"] {
+        .popover-arrow {
             left: auto;
             right: @cornerRadius + 2px;
         }
     }
-    &[data-popover*=center] {
-        .atk-popover-arrow {
+    &[class*="popover-top-center"], &[class*="popover-bottom-center"] {
+        .popover-arrow {
             left: 50%;
             margin-left: -@d/2;
             right: auto;
@@ -247,15 +243,15 @@
 .overlayColor (@a) when (lightness(@a) < @swatchText) {
   color: white;
 }
-.atk-banner {
+.banner {
     .position(fixed, @t:0, @l:0, @z:999);
     height: 100%;
     width: 100%;
     text-shadow: 0 0 1px fade(@dialogOverlay, 50%);
-    .atk-box {
+    .box {
         background: @dialogOverlay;
         border: none;
-        &.atk-banner-cogs {
+        &.banner-cogs {
             line-height: 1;
             &:after, &:before {
                 content: '\e800';
@@ -281,10 +277,10 @@
         .overlayColor(@dialogOverlay);
         margin-top: 0;
     }
-    &, &.atk-cells {
+    &, &.cells {
         display: none;
     }
-    &.atk-cells.atk-visible {
+    &.cells.visible {
         display: table;
     }
 }

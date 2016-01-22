@@ -6,7 +6,7 @@
 
 // Basic Fields
 input[readonly],
-div.atk-form-field-readonly {
+div.form-field-readonly {
     background: @bodyColor;
 }
 fieldset {
@@ -62,7 +62,7 @@ textarea:focus {
     .box-shadow(@shadow);
     outline: none;
 }
-label.atk-input-label {
+label.input-label {
     display: inline-block;
     margin: 0.5em 0;
     em {
@@ -73,7 +73,7 @@ label.atk-input-label {
 
 
 // Advanced Fields
-.atk-input-icon {
+.input-icon {
     display: inline-block;
     position: relative;
     input {
@@ -90,31 +90,31 @@ label.atk-input-label {
         }
     }
 }
-.atk-input-combo.atk-cells {
-    .atk-cell {
+.input-combo.cells {
+    .cell {
         >* {
             .border-radius(0);
             width: 100%;
         }
         &:first-child * {
             .border-left-radius(@cornerRadius);
-            &.atk-button {
+            &.button {
                 border-right: none;
             }
         }
         &:last-child * {
             .border-right-radius(@cornerRadius);
         }
-        +.atk-cell {
-            .atk-button {
+        +.cell {
+            .button {
                 border-left: none;
             }
         }
     }
 }
-.atk-input-radio {
+.input-radio {
     padding-top: 0.5em;
-    .atk-form-stacked &, &.atk-input-radio-stacked, &[data-layout='stacked'] {
+    .form-stacked &, &.input-radio-stacked, &[data-layout='stacked'] {
         padding-top: 0;
     }
     span {
@@ -128,20 +128,20 @@ label.atk-input-label {
             .position(relative, -0.05em);
         }
     }
-    &.atk-input-radio-stacked, &[data-layout='stacked'] {
+    &.input-radio-stacked, &[data-layout='stacked'] {
         span {
             display: block;
             margin-right: 0;
         }
     }
 }
-input.atk-option[type=radio] {
+input.option[type=radio] {
     display: none;
     &:checked {
         + label {
             border-color: @inputFocus;
             cursor: default;
-            &, .atk-text-dimmed {
+            &, .text-dimmed {
                 color: @inputFocus;
             }
         }
@@ -153,20 +153,20 @@ input.atk-option[type=radio] {
 
 
 // Form Classes
-.atk-form {
+.form {
     input[type=text]:not([class*="span"]),
     input[type=email]:not([class*="span"]),
     input[type=password]:not([class*="span"]),
     input[readonly]:not([class*="span"]),
     textarea:not([class*="span"]),
-    div.atk-form-field-readonly:not([class*="span"]),
+    div.form-field-readonly:not([class*="span"]),
     select,
     .ui-selectmenu-button,
-    .atk-input-icon {
+    .input-icon {
         display: block;
         width: 100%;
     }
 }
-.atk-form .ui-selectmenu-button {
+.form .ui-selectmenu-button {
     width: 100% !important;
 }

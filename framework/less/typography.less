@@ -19,7 +19,7 @@ body {
 
 
 // ==========================================================
-// Text Size Chart (Inspired by Typeplate.com)
+// Headings
 // ==========================================================
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,114 +28,127 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
     text-transform: @headingCase;
     margin: @margin 0 round(@margin/2,2) 0;
-    &:extend([data-text*=lead]);
+    &:extend([class*="text"][class*="-lead"]);
     &:first-child {
         margin-top: 0;
     }
-    // + .atk-form {
-    //     margin-top: @margin;
-    // }
 }
-.atk-size-yotta4 {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5.5);
-}
-.atk-size-yotta3 {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5);
-}
-.atk-size-yotta2 {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4.5);
-}
-.atk-size-yotta {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4);
-}
-.atk-size-zetta {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3.5);
-}
-h1, .atk-size-exa {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3);
-}
-.atk-size-peta {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2.5);
-}
-h2, .atk-size-tera {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2);
-}
-.atk-size-giga {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1.5);
-}
-h3, .atk-size-mega {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1);
-}
-h4, .atk-size-kilo {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*0.5);
-}
-h5, .atk-size-default, .atk-size-reset {
-    font-size: @bodySize;
-}
-h6, small, .atk-size-milli {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-0.5);
-}
-.atk-size-micro {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1);
-}
-.atk-size-nano {
-    font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1.5);
-}
+h1 { &:extend([class*="text"][class*="-size--5xl"]); }
+h2 { &:extend([class*="text"][class*="-size--3xl"]); }
+h3 { &:extend([class*="text"][class*="-size--xl"]); }
+h4 { &:extend([class*="text"][class*="-size--l"]); }
+h5 { &:extend([class*="text"][class*="-size--m"]); }
+h6, small { &:extend([class*="text"][class*="-size--xs"]); }
 
 
 // ==========================================================
 // Text Styles
 // ==========================================================
 
-[data-text*=heading] {
-    font-family: @headingFamily;
-}
-[data-text*=lead] {
-    line-height: @headingBaseline;
-}
-[data-text*=bold] {
-    font-weight: bold;
-}
-[data-text*=semibold] {
-    font-weight: 600;
-}
-[data-text*=normal] {
-    font-weight: normal;
-    letter-spacing: normal;
-    text-transform: none;
-}
-[data-text*=light] {
-    font-weight: 300;
-}
-[data-text*=italic] {
-    font-style: italic;
-}
-[data-text*=caps] {
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-[data-text*=nowrap] {
-    white-space: nowrap;
-}
-[data-text*=font-reset] {
-    .clear-font;
-}
-[data-text*=baseline-reset] {
-    &, a&[class*='atk-button'], button&[class*='atk-button'], input&[class*='atk-button'], a&.ui-button, button&.ui-button, input&.ui-button {
-        line-height: 1;
+[class*="text"] {
+    &[class*="-heading"] {
+        font-family: @headingFamily;
     }
-}
-[data-text*=baseline-normal] {
-    line-height: @bodyBaseline;
-}
-[data-text*=ellipsis] {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-[data-text*=inherit] {
-    color: inherit;
+    &[class*="-lead"] {
+        line-height: @headingBaseline;
+    }
+    &[class*="-bold"] {
+        font-weight: bold;
+    }
+    &[class*="-semibold"] {
+        font-weight: 600;
+    }
+    &[class*="-normal"] {
+        font-weight: 400;
+    }
+    &[class*="-light"] {
+        font-weight: 300;
+    }
+    &[class*="-underline"] {
+        text-decoration: underline;
+    }
+    &[class*="-italic"] {
+        font-style: italic;
+    }
+    &[class*="-caps"] {
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    &[class*="-nowrap"] {
+        white-space: nowrap;
+    }
+    &[class*="-baseline"] {
+        line-height: @bodyBaseline;
+    }
+    &[class*="-baseline--single"] {
+        &, a&[class*="button"], button&[class*="button"], input&[class*="button"], a&.ui-button, button&.ui-button, input&.ui-button {
+            line-height: 1;
+        }
+    }
+    &[class*="-ellipsis"] {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &[class*="-inherit"] {
+        color: inherit;
+    }
+    &[class*="-font--clear"] {
+        .clear-font;
+    }
+    &[class*="-font--reset"] {
+        font-style: normal;
+        letter-spacing: normal;
+        text-transform: none;
+    }
+
+    // Size Chart
+    &[class*="-size--9xl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5);
+    }
+    &[class*="-size--8xl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4.5);
+    }
+    &[class*="-size--7xl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4);
+    }
+    &[class*="-size--6xl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3.5);
+    }
+    h1, &[class*="-size--5xl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3);
+    }
+    &[class*="-size--4xl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2.5);
+    }
+    &[class*="-size--3xl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2);
+    }
+    &[class*="-size--xxl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1.5);
+    }
+    &[class*="-size--xl"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1);
+    }
+    &[class*="-size--l"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*0.5);
+    }
+    &[class*="-size--m"], &[class*="-size--default"] {
+        font-size: @bodySize;
+    }
+    &[class*="-size--s"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-0.5);
+    }
+    &[class*="-size--xs"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1);
+    }
+    &[class*="-size--xxs"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1.5);
+    }
+    &[class*="-size--3xs"] {
+        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-2);
+    }
 }
 
 // ==========================================================
@@ -168,7 +181,7 @@ ul, ol, dl {
     }
 }
 ul, ol {
-    &[data-list*=no-bullets] {
+    &.list-nobullets {
         margin-left: 0;
         padding-left: 0;
         list-style-type: none;
@@ -177,19 +190,19 @@ ul, ol {
             padding-left: 1em;
         }
     }
-    &[data-list*=inline] {
+    &.list-inline {
         li {
             display: inline;
             margin: 0;
             padding: 0;
             &:first-child {
-                .atk-sep {
+                .sep {
                     display: none;
                 }
             }
         }
     }
-    &[data-list*=no-margin] {
+    &.list-nospacing {
         &, ul, ol {
             padding-left: 1em;
         }
@@ -205,7 +218,7 @@ p {
     margin: 0 0 @margin 0;
 }
 blockquote {
-    .atk-size-kilo;
+    &:extend([class*="text"][class*="-size--l"]);
     font-style: italic;
     font-weight: 300;
     margin: 0 @margin @margin;
@@ -224,7 +237,7 @@ code, kbd, pre, samp {
 }
 pre {
     font-family: monospace, serif;
-    .atk-size-milli;
+    &:extend([class*="text"][class*="-size--s"]);
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -236,7 +249,4 @@ hr {
     height: 0;
     margin: @space 0;
     width: 100%;
-    &.atk-hr-dotted {
-        border-top-style: dotted;
-    }
 }

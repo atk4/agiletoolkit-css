@@ -2,19 +2,19 @@
 // Responsive Grid System
 // ==========================================================
 
-.atk-row {
+.row {
   .clear-fix;
-  >*[class*=atk-col] {
+  >*[class*="col"] {
     float: left;
     min-height: 1px;
   }
 }
-.atk-hide {
-  &, &[class*=atk-layout], &[class*=atk-menu].atk-menu-vertical {
+.hide {
+  &, &[class*="layout"], &[class*="menu"][class*="-vertical"] {
     display: none;
   }
 }
-*[class*=atk-show-] {
+*[class*=show-] {
   display: none !important;
 }
 
@@ -22,19 +22,19 @@
 .generateColumns(@n:@cols, @m:@colsGutter, @i:1) when (@i =< @n) {
   // Percentage Column Gutter
   & when (ispercentage(@m)) {
-    .atk-col-@{i} {
+    .col-@{i} {
       @colsSingleWidth: (100% - @m * (@n - 1)) / @n;
       @colsInnerGutter: @m * (@i - 1);
       width: @colsSingleWidth * @i + @colsInnerGutter;
-      &.atk-col-@{n} {
+      &.col-@{n} {
         width: 100%;
       }
     }
   }
   // Pixel/EM Column Gutter
   & when not (ispercentage(@m)) {
-    .atk-col-@{i} {
-      &, &[class*=atk-col] {
+    .col-@{i} {
+      &, &[class*="col"] {
         width: (@i * 100% / @n);
       }
     }
@@ -54,7 +54,7 @@
 
   // Layout
   .layoutCell(@w) {
-    .atk-layout>.atk-layout-row>.atk-layout-cell {
+    .layout>.layout-row>.layout-cell {
       min-width: @w;
     }
   }
@@ -66,7 +66,7 @@
          (isunit(@wm,'rem')) and (isunit(@wmin,'rem')),
          (isunit(@wm,'%')) and (isunit(@wmin,'%'))
   {
-    .atk-wrapper {
+    .wrapper {
       .box-sizing(content-box);
     }
     & when (@winmin = false) {
@@ -77,7 +77,7 @@
     .layoutCell(@winmin);
   }
 
-  .atk-wrapper {
+  .wrapper {
       min-width: @wmin;
       max-width: @wmax;
       padding-left: @wm;
@@ -86,33 +86,33 @@
 
   // Grid System
     & when (ispercentage(@g)) {
-      .atk-row > *[class*=atk-col] + *[class*=atk-col] {
+      .row > *[class*="col"] + *[class*="col"] {
         margin-left: @g;
       }
     }
     & when not (ispercentage(@g)) {
-      .atk-row {
+      .row {
         margin-left: -@g;
-        > *[class*=atk-col] {
+        > *[class*="col"] {
           border-left:0px solid rgba(0,0,0,0);
           border-right:0px solid rgba(0,0,0,0);
           border-left-width: @g;
         }
       }
-      *[class*=atk-col] {
+      *[class*="col"] {
         width: 100%;
       }
     }
   & when (iskeyword(@c)) and not (@c = false) {
-    .atk-stack-@{c} {
-      &, &.atk-cells, &.atk-cells>.atk-cell, &.atk-row>[class*=atk-col] {
+    .stack-@{c} {
+      &, &.cells, &.cells>.cell, &.row>[class*="col"] {
         display: block;
         border-width: 0;
         float: none;
         width: auto;
       }
-      &.atk-row {
-        &, >[class*=atk-col] {
+      &.row {
+        &, >[class*="col"] {
           margin-left: 0;
         }
       }
@@ -121,64 +121,64 @@
           display: block;
         }
       }
-      &.atk-cells {
-        >.atk-cell + .atk-cell {
+      &.cells {
+        >.cell + .cell {
           margin-top: @margin;
         }
-        &[class*=atk-cells-gutter] {
-          >.atk-cell {
+        &[class*="cells"][class*="-spacing"] {
+          >.cell {
             padding-right: 0;
-            + .atk-cell {
+            + .cell {
               padding-left: 0;
             }
           }
         }
       }
-      &[class*=atk-actions] {
+      &[class*="items"] {
         >* {
           display: block;
           margin-left: 0;
         }
       }
     }
-    .atk-hide-@{c} {
-      &, &[class*=atk-button] {
+    .hide-@{c} {
+      &, &[class*="button"] {
         display: none !important;
       }
     }
-    .atk-show-@{c} {
-      &, &[class*=icon], &[class*=atk-button], &[class*=atk-sep] {
+    .show-@{c} {
+      &, &[class*="icon"], &[class*="button"] {
         display: inline-block !important;
       }
     }
-    .atk-expand-@{c} {
+    .expand-@{c} {
       display: block !important;
       width: 100% !important;
     }
   }
   & when (@b = true) {
-    .atk-layout {
-      &, >.atk-layout-column, .atk-layout-cell, .atk-layout-row {
+    .layout {
+      &, >.layout-column, .layout-cell, .layout-row {
         display: block;
       }
-      .atk-layout-row {
+      .layout-row {
         height: auto;
       }
     }
-    *[class*=atk-menu] {
+    *[class*="menu"] {
       >li {
-        >*[class*=atk-menu] {
+        >*[class*="menu"] {
           bottom: 0 !important;
           left: 0 !important;
           position: relative !important;
           right: 0 !important;
           top: 0 !important;
-          &.atk-menu-horizontal>li {
+          &[class*="-horizontal"]>li {
             display: block;
             float: none;
           }
         }
-        &:hover>*[class*=atk-menu] {
+        &:hover>*[class*="menu"] {
           display: none !important;
         }
         &:focus {

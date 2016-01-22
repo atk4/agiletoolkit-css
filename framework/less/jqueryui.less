@@ -86,7 +86,7 @@
         padding: 0;
         position: relative;
         .ui-datepicker-title {
-            .atk-size-kilo;
+            &:extend([class*="text"][class*="-size--l"]);
             font-weight: 300;
             line-height: 1;
             margin: 0;
@@ -203,17 +203,14 @@
         }
     }
     .ui-tabs-panel.ui-widget-content {
+        &:extend(.box);
         background: @boxColor;
         padding: round(@margin/2,2) 0;
-        &[class*=atk-box] {
-            border-radius: 0 0 @cornerRadius @cornerRadius !important;
-            border-top: none  !important;
-        }
     }
 }
 .ui-accordion {
     .ui-accordion-header {
-        .atk-size-reset;
+        &:extend([class*=text][class*="-size--default"]);
         border-width: 1px;
         margin: 0;
         padding-top: round(@margin/2,2);
@@ -240,7 +237,7 @@
     .ui-widget-header.ui-dialog-titlebar {
         padding: @margin @margin 0 @margin;
         .ui-dialog-title {
-            .atk-size-kilo;
+            &:extend([class*=text][class*="-size--l"]);
             font-weight: @headingWeight;
             line-height: @headingBaseline;
         }
@@ -251,6 +248,7 @@
                 display: none;
             }
             .ui-icon {
+                color: inherit;
                 font-size: 120%;
                 margin-right: -0.2rem;
                 width: auto;
@@ -273,7 +271,7 @@
     }
 }
 .ui-tooltip {
-    .atk-size-milli;
+    &:extend([class*="text"][class*="-size--s"]);
     .box-shadow(0 3px 7px rgba(0,0,0,0.5));
     .colorCheck(color, @tooltipColor, 100%);
     background: @tooltipColor;
@@ -284,7 +282,7 @@
 
 // Icon Replacement
 .ui-icon {
-    background-image: none !important;
+    background: none !important;
     background-position: 0;
     text-align: center;
     width: 1em;
