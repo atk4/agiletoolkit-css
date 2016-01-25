@@ -4,22 +4,26 @@
  *  http://www4.agiletoolkit.org/css
  */
 
-// jQueryUI integration
-@import '../css/libs/jquery-ui/jquery-ui-1.10.3.custom.min.less'; /* jQueryUI Library */
-@import '../css/libs/jquery-ui/jquery.ui.selectmenu.less'; /* jQueryUI Select Menu Plugin */
-@import '../css/libs/jquery-ui/jui-variables.less'; /* jQueryUI parameters transformed to less variables. */
+// ==========================================================
+// jQueryUI
+// ==========================================================
+
+@import '../css/libs/jquery-ui/jquery-ui-1.10.3.custom.min.less';
+@import '../css/libs/jquery-ui/jquery.ui.selectmenu.less';
 @import 'jqueryui.less';
 
-// Structure
-@import 'normalize.less'; /* Renders elements more consistently and in line with modern standards. */
+
+// ==========================================================
+// Agile CSS
+// ==========================================================
+
+@import 'normalize.less';
 @import 'mixins.less';
 @import 'layouts.less';
 @import 'swatches.less';
 @import 'typography.less';
 @import 'forms.less';
 @import 'misc.less';
-@import 'widgets.less'; /* Bars, Tables, Tabs, Datepicker, Accordion  etc. */
-@import 'components.less'; /* Helpers, Colors, Boxes, Buttons etc. */
-@import 'responsive.less';
+@import 'widgets.less';
+@import 'components.less';
 @import 'variables.less';
-@import 'legacy.less';

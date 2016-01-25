@@ -8,7 +8,6 @@ html {
     line-height: @bodyBaseline;
 }
 body {
-    color: @bodyColor;
     font-size: @bodySize;
 }
 
@@ -101,6 +100,7 @@ h6, small { &:extend([class*="text"][class*="-size--xs"]); }
         font-style: normal;
         letter-spacing: normal;
         text-transform: none;
+        white-space: normal;
     }
 
     // Size Chart
@@ -211,9 +211,12 @@ ul, ol {
 
 
 // ==========================================================
-// Other elements (Needs to be reviewed)
+// Other elements
 // ==========================================================
 
+a {
+    text-decoration: none;
+}
 p {
     margin: 0 0 @margin 0;
 }

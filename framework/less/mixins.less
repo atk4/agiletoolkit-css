@@ -1,17 +1,7 @@
-// ========================================================
-//   Mixins
-// ========================================================
-//   All global mixin functions go here.
-// 
-//   You can use variables from variables.less here,
-// but try to avoid using variables from jui-variables.less
-// (custom JUI theme) directly.
-// ========================================================
-
-
-
+// ==========================================================
 // Clearers
-// --------------------------------------------------------
+// ==========================================================
+
 .clear-fix() {
   *zoom: 1;
   &:before,
@@ -46,101 +36,17 @@
   padding: 0;
 }
 
-// Position
-.position(@p: absolute, @t: null, @r: null, @b: null, @l: null, @z: null) {
-  .property(position, @p);
-  .property(top, @t);
-  .property(right, @r);
-  .property(bottom, @b);
-  .property(left, @l);
-  .property(z-index, @z);
 
-  .property(@property, @value) {
+// ==========================================================
+// CSS3 Properties
+// ==========================================================
 
-    ._getProp(position) when not (@p = null) {
-      position: @value;
-    }
-
-    ._getProp(top) when not (@t = null) {
-      top: @value;
-    }
-
-    ._getProp(right) when not (@r = null) {
-      right: @value;
-    }
-
-    ._getProp(bottom) when not (@b = null) {
-      bottom: @value;
-    }
-
-    ._getProp(left) when not (@l = null) {
-      left: @value;
-    }
-    ._getProp(z-index) when not (@z = null) {
-      z-index: @value;
-    }
-    ._getProp(@property);
-  }
-}
-.filler(@z: 1) {
-  .position(@t:0, @l:0);
-  height: 100%;
-  width: 100%;
-  z-index: @z;
-}
-
-// Layouts
-.flex() {
-  display:-moz-box; /* Firefox */
-  display:-webkit-box; /* Safari and Chrome */
-  display:-ms-flexbox; /* Internet Explorer 10 */
-  display:box;
-}
-.box-flex(@value:1.0) {
-  -moz-box-flex: @value; /* Firefox */
-  -webkit-box-flex: @value; /* Safari and Chrome */
-  -ms-flex: @value; /* Internet Explorer 10 */
-  box-flex: @value;
-}
-
-// Placeholder
-.placeholder(@color: red) {
-  &::-webkit-input-placeholder { /* WebKit browsers */
-      color: @color;
-  }
-  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: @color;
-  }
-  &::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: @color;
-  }
-  &:-ms-input-placeholder { /* Internet Explorer 10+ */
-      color: @color;
-  }
-}
-
-// Disable Text Selection Highlight
-.disableTextHighlight() {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-
-// CSS3 PROPERTIES
-// --------------------------------------------------------
-
-// Border Radius (webkit and moz prefixes are no more needed for newest FireFox and Chrome versions)
+// Border Radius
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
           border-radius: @radius;
 }
-
-// Single Corner Border Radius
 .border-top-left-radius(@radius) {
   -webkit-border-top-left-radius: @radius;
      -moz-border-top-left-radius: @radius;
@@ -161,8 +67,6 @@
      -moz-border-bottom-right-radius: @radius;
           border-bottom-right-radius: @radius;
 }
-
-// Single Side Border Radius
 .border-top-radius(@radius) {
   .border-top-left-radius(@radius);
   .border-top-right-radius(@radius);
@@ -268,8 +172,24 @@
           transform: translate3d(@x, @y, @z);
 }
 
+// Box sizing
+.box-sizing(@boxmodel: border-box) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
 
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+
+
+// ==========================================================
 // Animations
+// ==========================================================
+
 .animation(@arguments) {
   -webkit-animation: @arguments;
      -moz-animation: @arguments;
@@ -330,20 +250,6 @@
     to {
         transform:rotate(0deg);
     }
-}
-
-
-// Box sizing
-.box-sizing(@boxmodel: border-box) {
-  -webkit-box-sizing: @boxmodel;
-     -moz-box-sizing: @boxmodel;
-          box-sizing: @boxmodel;
-}
-
-// Opacity
-.opacity(@opacity) {
-  opacity: @opacity / 100;
-  filter: ~"alpha(opacity=@{opacity})";
 }
 
 
@@ -424,35 +330,85 @@
   }
 }
 
+// Disable Text Selection Highlight
+.disableTextHighlight() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-// CUSTOM JQUERY UI STYLES
-// --------------------------------------------------------
-#jui {
-    .defaultBg(@color1,@color2) {
-        .ui-state-default,
-        .ui-widget-content .ui-state-default,
-        .ui-widget-header .ui-state-default {
-            #gradient > .vertical(@color1,@color2);
-        }
+// Position
+.position(@p: absolute, @t: null, @r: null, @b: null, @l: null, @z: null) {
+  .property(position, @p);
+  .property(top, @t);
+  .property(right, @r);
+  .property(bottom, @b);
+  .property(left, @l);
+  .property(z-index, @z);
+
+  .property(@property, @value) {
+
+    ._getProp(position) when not (@p = null) {
+      position: @value;
     }
-    .hoverBg(@color1,@color2) {
-        .ui-state-hover,
-        .ui-widget-content .ui-state-hover,
-        .ui-state-focus,
-        .ui-widget-content .ui-state-focus {
-            #gradient > .vertical(@color1,@color2);
-        }
+
+    ._getProp(top) when not (@t = null) {
+      top: @value;
     }
-    .activeBg(@color1,@color2) {
-        .ui-state-active,
-        .ui-widget-content .ui-state-active,
-        .ui-widget-header .ui-state-active {
-            #gradient > .vertical(@color1,@color2);
-        }
+
+    ._getProp(right) when not (@r = null) {
+      right: @value;
     }
-    .headerBg(@color1,@color2) {
-        .ui-widget-header {
-            #gradient > .vertical(@color1,@color2);
-        }
+
+    ._getProp(bottom) when not (@b = null) {
+      bottom: @value;
     }
+
+    ._getProp(left) when not (@l = null) {
+      left: @value;
+    }
+    ._getProp(z-index) when not (@z = null) {
+      z-index: @value;
+    }
+    ._getProp(@property);
+  }
+}
+.filler(@z: 1) {
+  .position(@t:0, @l:0);
+  height: 100%;
+  width: 100%;
+  z-index: @z;
+}
+
+// Layouts
+.flex() {
+  display:-moz-box;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:box;
+}
+.box-flex(@value:1.0) {
+  -moz-box-flex: @value;
+  -webkit-box-flex: @value;
+  -ms-flex: @value;
+  box-flex: @value;
+}
+
+// Placeholder
+.placeholder(@color: red) {
+  &::-webkit-input-placeholder {
+      color: @color;
+  }
+  &:-moz-placeholder {
+      color: @color;
+  }
+  &::-moz-placeholder {
+      color: @color;
+  }
+  &:-ms-input-placeholder {
+      color: @color;
+  }
 }

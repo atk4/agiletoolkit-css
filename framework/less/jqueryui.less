@@ -1,8 +1,7 @@
 // ==========================================================
-// jQueryUI
+// Components
 // ==========================================================
 
-// Components
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
     .border-bottom-right-radius(@cornerRadius);
 }
@@ -52,7 +51,11 @@
 }
 
 
+// ==========================================================
 // Widgets
+// ==========================================================
+
+// Button
 .ui-selectmenu-button {
     display: inline-block;
     span.ui-selectmenu-text {
@@ -64,6 +67,8 @@
         margin-top: -0.4em;
     }
 }
+
+// Dropdown
 .ui-selectmenu-menu {
     .ui-menu {
         border-top-width: 0;
@@ -77,6 +82,8 @@
         }
     }
 }
+
+// Datepicker
 .ui-datepicker {
     padding: round(@margin/2,2);
     .ui-datepicker-header {
@@ -182,6 +189,8 @@
         }
     }
 }
+
+// Tabs
 .ui-tabs {
     .clear-area;
     .ui-tabs-nav.ui-widget-header {
@@ -204,10 +213,11 @@
     }
     .ui-tabs-panel.ui-widget-content {
         &:extend(.box);
-        background: @boxColor;
         padding: round(@margin/2,2) 0;
     }
 }
+
+// Accordion
 .ui-accordion {
     .ui-accordion-header {
         &:extend([class*=text][class*="-size--default"]);
@@ -232,8 +242,9 @@
         }
     }
 }
+
+// Dialog
 .ui-dialog {
-    border-color: @borderOverlay;
     .ui-widget-header.ui-dialog-titlebar {
         padding: @margin @margin 0 @margin;
         .ui-dialog-title {
@@ -270,6 +281,8 @@
         }
     }
 }
+
+// Tooltip
 .ui-tooltip {
     &:extend([class*="text"][class*="-size--s"]);
     .box-shadow(0 3px 7px rgba(0,0,0,0.5));
@@ -279,8 +292,7 @@
     padding: round(@margin/4,2) round(@margin/3,2) round(@margin/6,2) round(@margin/3,2);
 }
 
-
-// Icon Replacement
+// Icons
 .ui-icon {
     background: none !important;
     background-position: 0;

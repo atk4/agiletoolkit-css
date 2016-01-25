@@ -1,13 +1,13 @@
 // ==========================================================
-// Hidden Variables
-// ==========================================================
-@margin:                round(@baselineDestroyer * @bodyBaseline, 1);
-@baselineDestroyer:     1rem;
-
-
-// ==========================================================
 // General
 // ==========================================================
+
+@margin:                round(@bodyBaseline * 1rem, 1);
+@space:                 round(@margin, 1);
+@space-xs:              round(@margin/3, 1);
+@space-s:               round(@margin/2, 1);
+@space-l:               round(@margin*2, 1);
+@space-xl:              round(@margin*3, 1);
 
 * { 
    .box-sizing();
@@ -22,7 +22,7 @@ body {
 
 
 // ==========================================================
-// Effects
+// Styles & Colors
 // ==========================================================
 
 .background-cover {
@@ -31,12 +31,6 @@ body {
 .background-fixed {
   .background-fixed;
 }
-
-
-// ==========================================================
-// Selection Colors
-// ==========================================================
-
 ::selection {
     background: @textSelect;
     .colorCheck(@textSelect);
@@ -54,24 +48,30 @@ img::-moz-selection {
 
 
 // ==========================================================
-// Hyperlinks
-// ==========================================================
-
-a {
-    color: @linkColor;
-    text-decoration: none;
-    &:hover, &:focus{
-        color: @linkColorHover;
-    }
-}
-
-
-// ==========================================================
-// Common
+// Misc
 // ==========================================================
 
 .overflow {
   overflow: hidden;
+}
+.inline {
+    display: inline-block !important;
+}
+.block {
+    display: block !important;
+}
+.expand {
+    width: 100% !important;
+}
+.width-auto {
+    width: auto !important;
+}
+.clear-fix {
+    .clear-fix;
+}
+.disabled {
+    .opacity(50);
+    pointer-events: none;
 }
 
 
@@ -81,20 +81,6 @@ a {
 
 .row {
     .clear-fix;
-}
-.labelSupport() {
-  .label {
-      display: inline-block;
-      height: 1em * @bodyBaseline;
-      margin: 0 .2em;
-      min-width: 1em * @bodyBaseline;
-      padding-bottom: 0;
-      padding-top: 0;
-      text-align: center;
-      &[class*='icon']:before {
-          margin: 0;
-      }
-  }
 }
 *[class*=icon] {
   &:before {

@@ -1,21 +1,12 @@
-/**
- *  Agile Toolkit CSS Framework (c) 2013-2014 v0.912
- *  http://www4.agiletoolkit.org/css
- *  Theme: Default
- */
-
-
 // ==========================================================
 // Typography
 // ==========================================================
 
 @bodyFamily:           "Helvetica Neue", "Helvetica", sans-serif;
-@bodyColor:            #4c5359;
 @bodySize:             0.875rem; // 14px
 @bodyBaseline:         1.618; // Golden Section
 
 @headingCase:          none; // Options: none, capitalize, uppercase, lowercase
-@headingColor:         #3d4c59;
 @headingFamily:        "Helvetica Neue", "Helvetica", sans-serif;
 @headingWeight:		   400;
 @headingBaseline:	   1.2; // Minor Third
@@ -28,63 +19,24 @@
 // ==========================================================
 
 @bodyBackground:       #fff;
-
 @cornerRadius:         5px;
-
-@textSelect:           #1c2933; // Text selection's color
-@textDimmed:           lighten(@bodyColor, 40%);
-
-@blur:                 5px; // Effect .blur can be applied on any element.
-
-@borderDisabled:       lighten(@borderStatic, 10%);
-@borderStatic:         #dcdee0;
-@borderClickable:      darken(@borderStatic, 10%);
-@borderOverlay:        darken(@borderStatic, 25%);
-
-// @swatch-white:	   #ffffff;		.createSwatch(swatch-white);
-// @swatch-black:     #000000;		.createSwatch(swatch-black);
-// @swatch-gray:	   #f5f6f7;		.createSwatch(swatch-gray);
-// @swatch-ink:       #1c2933;		.createSwatch(swatch-ink);
-// @swatch-yellow:	   #ffcc00;		.createSwatch(swatch-yellow);
-// @swatch-red:	   #f9451f;		.createSwatch(swatch-red);
-// @swatch-green:     #00cc66;		.createSwatch(swatch-green);
-// @swatch-blue:      #0095ff;		.createSwatch(swatch-blue);
-
-@swatchText:           50%; // Text color sensitivity based on swatch
+@textSelect:           #000; // Text selection's color
+@dialogOverlay:        fade(#000, 25%); // Color of modal dialog's overlay
+@tooltipColor:         fade(#000, 90%);
+@popoverArrow:         12px;
+@buttonPadding:        0.5em;
+@buttonPaddingRatio:   2;
 
 @effectSuccess:        #25c425;
 @effectWarning:        #f7a600;
 @effectDanger:         #ff2d1a;
 @effectInfo:           #2bacd7;
 
-
-// ==========================================================
-// Components & Widgets
-// ==========================================================
-
-@linkColor:            darken(#0095ff,10%);
-@linkColorHover:       darken(@linkColor,10%);
-
-@dialogOverlay:        fade(#000, 25%); // Color of modal dialog's overlay
-
-@tooltipColor:         fade(#1c2933, 90%);
-
-@menuActive:           #0095ff;
-
-@buttonDefault:        #fff;
-@buttonHover:          #f5f5f5;
-@buttonActive:         #eee;
-
-@boxColor:             #fff;
-
-@formMandatory:        #ff0000;
-
-@hoverIntensity:       3%;
-
-@textDimmed:           lighten(@bodyColor, 20%);
-
+@inputColor:           #fff;
+@inputText:            #000;
 @inputFocus:           #0095ff;
 @inputFocusGlow:       3px;
-@inputPlaceholder:     lighten(@bodyColor, 40%);
-
-@popoverArrow:        12px;
+@inputPadding:         0.5em;
+@inputPaddingRatio:    3;
+@inputPlaceholder:     lighten(#000, 40%);
+@inputInnerShadow:     0 3px 0 rgba(0, 0, 0, 0.03) inset;
