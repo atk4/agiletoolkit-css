@@ -89,8 +89,11 @@
         }
         [class*="table"][class*="-hover"] {
             table tbody tr:hover td {
-                background: darken(@sFill, @sHoverIntensity/2);
+                background-color: darken(@sFill, @sHoverIntensity/2) !important;
             }
+        }
+        [class*="table"][class*="-zebra"] tbody tr:nth-child(odd) td:not([class*="swatch"]) {
+            background-color: darken(@sFill, 2%);
         }
         [class*="menu"][class*="-separated"], &[class*="menu"][class*="-separated"] {
             >li+li:not([class*="border"]) {
@@ -180,12 +183,6 @@
                 border-color: @sBorder;
             }
         }
-        .ui-datepicker {
-            border-color: @sBorderOverlay;
-            .ui-datepicker-header {
-                color: @sText;
-            }
-        }
         .ui-dialog {
             border-color: @sBorderOverlay;
             .ui-widget-header.ui-dialog-titlebar {
@@ -197,7 +194,33 @@
                 }
             }
             .ui-dialog-buttonset {
-                border-top: 1px solid @borderStatic;
+                border-top: 1px solid @sBorderDisabled;
+            }
+        }
+    }
+    .createjQueryUISingular() {
+        .ui-datepicker {
+            &.ui-widget-content {
+                border-color: @sBorderOverlay;
+            }
+            .ui-datepicker-header {
+                color: @sText;
+            }
+            table.ui-datepicker-calendar {
+                tr td, tr th {
+                    border: 1px solid @sBorder;
+                    a, a:hover {
+                        color: @sText;
+                    }
+                }
+                tr td {
+                    &.ui-datepicker-today {
+                        a {
+                            color: @inputFocus;
+                            outline: 1px solid @inputFocus;
+                        }
+                    }
+                }
             }
         }
         .ui-selectmenu-menu .ui-menu {
@@ -206,6 +229,7 @@
     }
     & when (@sName = default) {
         .createWidgetColors();
+        .createjQueryUISingular();
         body, .swatch-@{sName},
         [class*="swatch"]:not([class*="swatch-default"]) .box:not([class*="swatch"]),
         [class*="swatch"]:not([class*="swatch-default"]) [class*="swatch-default"] {
