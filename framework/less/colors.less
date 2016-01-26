@@ -107,10 +107,12 @@
             border-color: @sBorder;
         }
         input:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]), textarea,
-        &[class*="button"], .ui-state-default, .ui-widget-content .ui-state-default {
+        a&[class*="button"], input&[class*="button"], button&[class*="button"],
+        .ui-state-default, .ui-widget-content .ui-state-default {
             border-color: @sBorderActive;
         }
-        &[class*="button"], .ui-state-default, .ui-widget-content .ui-state-default {
+        a&[class*="button"], input&[class*="button"], button&[class*="button"],
+        .ui-state-default, .ui-widget-content .ui-state-default {
             .colorCheck(color, @sFill);
             background-color: @sFill;
             &:hover {
@@ -161,9 +163,33 @@
         }
         .ui-tabs {
             .ui-tabs-nav.ui-widget-header {
-                border-bottom: 1px solid @sBorderActive;
-                .ui-state-default.ui-state-active {
-                    border-color: @sBorderActive;
+                border-bottom: 1px solid @sBorder;
+                .ui-state-default {
+                    a:not([class*="button"]):not([class*="swatch"]) {
+                        & when (@sText = auto) {
+                          .colorCheck(color, @sFill, 50%);
+                          &:hover {
+                            .colorCheck(color, @sFill, 70%);
+                          }
+                        }
+                        & when not (@sText = auto) {
+                          color: fade(@sText, 70%);
+                          &:hover {
+                            color: @sText;
+                          }
+                        }
+                    }
+                    &.ui-state-active {
+                        border-color: @sBorder;
+                        a:not([class*="button"]):not([class*="swatch"]) {
+                            & when (@sText = auto) {
+                              .colorCheck(color, @sFill, 70%);
+                            }
+                            & when not (@sText = auto) {
+                              color: @sText;
+                            }
+                        }
+                    }
                 }
             }
             .ui-tabs-panel.ui-widget-content {
@@ -193,8 +219,11 @@
                     }
                 }
             }
+            .ui-widget-header.ui-dialog-titlebar {
+                border-bottom: 1px solid @sBorder;
+            }
             .ui-dialog-buttonset {
-                border-top: 1px solid @sBorderDisabled;
+                border-top: 1px solid @sBorder;
             }
         }
     }

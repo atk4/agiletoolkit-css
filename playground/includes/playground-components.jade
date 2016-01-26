@@ -2,493 +2,493 @@ section#components
   h2 Components
   h3 Swatches
   p
-    span.atk-label.atk-effect-info .atk-swatch-*
+    span.label.effect-info .swatch-*
     | &nbsp;component can be assigned to any element. Text color will adapt based on luma value (perceptual brightness) of the swatch. You can easily create as many swatches as you need using&nbsp;
-    span.atk-label.atk-effect-info .createSwatch()
+    span.label.effect-info .createSwatch()
     | &nbsp;mixin (see variables.less).
-  #example-swatches.atk-box
-    .atk-row.atk-push-small
-      .atk-col-4
-        .atk-swatch-ink.atk-box-small.atk-align-center .atk-swatch-ink
-      .atk-col-4
-        .atk-swatch-blue.atk-box-small.atk-align-center .atk-swatch-blue
-      .atk-col-4
-        .atk-swatch-green.atk-box-small.atk-align-center .atk-swatch-green
-    .atk-row
-      .atk-col-4
-        .atk-swatch-yellow.atk-box-small.atk-align-center .atk-swatch-yellow
-      .atk-col-4
-        .atk-swatch-red.atk-box-small.atk-align-center .atk-swatch-red
-      .atk-col-4
-        .atk-swatch-gray.atk-box-small.atk-align-center .atk-swatch-gray
+  #example-swatches.box
+    .row.push-small
+      .col-4
+        .swatch-ink.box.padding-all--s.align-center .swatch-ink
+      .col-4
+        .swatch-blue.box.padding-all--s.align-center .swatch-blue
+      .col-4
+        .swatch-green.box.padding-all--s.align-center .swatch-green
+    .row
+      .col-4
+        .swatch-yellow.box.padding-all--s.align-center .swatch-yellow
+      .col-4
+        .swatch-red.box.padding-all--s.align-center .swatch-red
+      .col-4
+        .swatch-gray.box.padding-all--s.align-center .swatch-gray
   h3 Effects
   p
-    span.atk-label.atk-effect-info .atk-effect-*
+    span.label.effect-info .effect-*
     | &nbsp;component is the best used for different kind of notifications.
-  .atk-box.atk-inline
-    span.atk-effect-success .atk-effect-success
-    span.atk-sep
-    span.atk-effect-warning .atk-effect-warning
-    span.atk-sep
-    span.atk-effect-danger .atk-effect-danger
-    span.atk-sep
-    span.atk-effect-info .atk-effect-info
+  .box.inline
+    span.effect-success .effect-success
+    span.margin-left--xs.margin-right--xs
+    span.effect-warning .effect-warning
+    span.margin-left--xs.margin-right--xs
+    span.effect-danger .effect-danger
+    span.margin-left--xs.margin-right--xs
+    span.effect-info .effect-info
   p
     | Combination of&nbsp;
-    span.atk-label.atk-effect-info .atk-effect-*
+    span.label.effect-info .effect-*
     | &nbsp;and&nbsp;
-    span.atk-label.atk-effect-info .atk-label
+    span.label.effect-info .label
     | &nbsp;components.
-  .atk-box.atk-actions.atk-inline
-    span.atk-label.atk-effect-success .atk-effect-success
-    span.atk-label.atk-effect-warning .atk-effect-warning
-    span.atk-label.atk-effect-danger .atk-effect-danger
-    span.atk-label.atk-effect-info .atk-effect-info
+  .box.items-spacing.inline
+    span.label.effect-success .effect-success
+    span.label.effect-warning .effect-warning
+    span.label.effect-danger .effect-danger
+    span.label.effect-info .effect-info
   p
     | Combination of&nbsp;
-    span.atk-label.atk-effect-info .atk-effect-*
+    span.label.effect-info .effect-*
     | &nbsp;and&nbsp;
-    span.atk-label.atk-effect-info .atk-button
+    span.label.effect-info .button
     | &nbsp;components.
-  .atk-box.atk-actions.atk-inline
-    a.atk-button.atk-effect-success(href='javascript:void(0)') .atk-effect-success
-    a.atk-button.atk-effect-warning(href='javascript:void(0)') .atk-effect-warning
-    a.atk-button.atk-effect-danger(href='javascript:void(0)') .atk-effect-danger
-    a.atk-button.atk-effect-info(href='javascript:void(0)') .atk-effect-info
+  .box.items-spacing.inline
+    a.button.effect-success(href='javascript:void(0)') .effect-success
+    a.button.effect-warning(href='javascript:void(0)') .effect-warning
+    a.button.effect-danger(href='javascript:void(0)') .effect-danger
+    a.button.effect-info(href='javascript:void(0)') .effect-info
   p
     | Combination of&nbsp;
-    span.atk-label.atk-effect-info .atk-effect-*
+    span.label.effect-info .effect-*
     | &nbsp;and&nbsp;
-    span.atk-label.atk-effect-info .atk-box
+    span.label.effect-info .box
     | &nbsp;components.
-  #example-effects-box.atk-box.atk-actions.atk-inline
-    .atk-box-small.atk-inline.atk-effect-success .atk-effect-success
-    .atk-box-small.atk-inline.atk-effect-warning .atk-effect-warning
-    .atk-box-small.atk-inline.atk-effect-danger .atk-effect-danger
-    .atk-box-small.atk-inline.atk-effect-info .atk-effect-info
+  #example-effects-box.box.items-spacing.inline
+    .box.padding-all--s.inline.effect-success .effect-success
+    .box.padding-all--s.inline.effect-warning .effect-warning
+    .box.padding-all--s.inline.effect-danger .effect-danger
+    .box.padding-all--s.inline.effect-info .effect-info
   h3 Shapes
-  #example-styling-shapes.atk-box.atk-inline
-    .atk-cells.atk-cells-gutter-large.atk-align-center
-      .atk-cell
-        p.atk-padding.atk-inline.atk-swatch-ink.atk-shape-rectangle
-        div .atk-shape-rectangle
-      .atk-cell
-        p.atk-padding.atk-inline.atk-swatch-ink.atk-shape-circle
-        div .atk-shape-circle
-      .atk-cell
-        p.atk-padding.atk-inline.atk-swatch-ink.atk-shape-rounded
-        div .atk-shape-rounded
+  #example-styling-shapes.box.inline
+    .cells.cells-gutter-large.align-center
+      .cell
+        p.padding.inline.swatch-ink.shape-rectangle
+        div .shape-rectangle
+      .cell
+        p.padding.inline.swatch-ink.shape-circle
+        div .shape-circle
+      .cell
+        p.padding.inline.swatch-ink.shape-rounded
+        div .shape-rounded
   h3 Blocks
   h4 Labels
   p
-    span.atk-label.atk-effect-info .atk-label
+    span.label.effect-info .label
     | &nbsp;component is used to highlight a piece of text. The best used with&nbsp;
-    span.atk-label.atk-effect-info .atk-effect-*
+    span.label.effect-info .effect-*
     | &nbsp;and&nbsp;
-    span.atk-label.atk-effect-info .atk-swatch-*
+    span.label.effect-info .swatch-*
     | .
-  .atk-box
+  .box
     | Lorem ipsum&nbsp;
-    span.atk-label.atk-effect-success dolor
+    span.label.effect-success dolor
     | &nbsp;sit amet, consectetur adipiscing elit. Aliquam quam augue, placerat nec lacus nec, tristique sagittis lectus. Donec eu accumsan ipsum. Pellentesque at&nbsp;
-    span.atk-label.atk-effect-warning fringilla
+    span.label.effect-warning fringilla
     | &nbsp;elit. Etiam auctor dui at consectetur blandit. Nulla&nbsp;
-    span.atk-label.atk-swatch-red sagittis
+    span.label.swatch-red sagittis
     | &nbsp;neque nisi, eget ornare nunc fermentum eu. In ante justo, mollis vitae lectus vel, mollis dictum mauris.
   h4 Boxes
   p
-    span.atk-label.atk-effect-info .atk-box
+    span.label.effect-info .box
     | &nbsp;is a component that creates paddings, rounds corners (value&nbsp;
-    span.atk-label.atk-effect-info @cornerRadius
+    span.label.effect-info @cornerRadius
     | &nbsp;can be changed in variables.less) and sets bottom margins between boxes (when stacked).&nbsp;
     strong Options:&nbsp;
-    span.atk-label.atk-effect-info .atk-box-small
+    span.label.effect-info .box.padding-all--s
     | ,&nbsp;
-    span.atk-label.atk-effect-info .atk-box
+    span.label.effect-info .box
     | ,&nbsp;
-    span.atk-label.atk-effect-info .atk-box-large
+    span.label.effect-info .box-large
     | .
-  .atk-box.atk-inline
-    .atk-cells.atk-cells-gutter.atk-align-center
-      .atk-cell
-        .atk-box-small.atk-swatch-ink.atk-inline .atk-box-small
-      .atk-cell
-        .atk-box.atk-swatch-ink.atk-inline .atk-box
-      .atk-cell
-        .atk-box-large.atk-swatch-ink.atk-inline .atk-box-large
+  .box.inline
+    .cells.cells-gutter.align-center
+      .cell
+        .box.padding-all--s.swatch-ink.inline .box.padding-all--s
+      .cell
+        .box.swatch-ink.inline .box
+      .cell
+        .box-large.swatch-ink.inline .box-large
   h3 Buttons
   p
-    span.atk-label.atk-effect-info .atk-button
+    span.label.effect-info .button
     | &nbsp;component can be applied on any tag.
-  .atk-box.atk-actions.atk-inline
-    button.atk-button-small .atk-button-small
-    button.atk-button.atk-swatch-yellow .atk-button
-    button.atk-button-large.atk-swatch-ink(href='javascript:void(0)') .atk-button-large
+  .box.items-spacing.inline
+    button.button-small .button-small
+    button.button.swatch-yellow .button
+    button.button-large.swatch-ink(href='javascript:void(0)') .button-large
   p
-    span.atk-label.atk-effect-info .atk-buttonset
-  .atk-box.atk-inline
-    .atk-buttonset.atk-push
-      a.atk-button-small(href='javascript:void(0)')
+    span.label.effect-info .buttonset
+  .box.inline
+    .buttonset.push
+      a.button-small(href='javascript:void(0)')
         span.icon-angle-left
-      a.atk-button-small(href='javascript:void(0)')
+      a.button-small(href='javascript:void(0)')
         span.icon-calendar
-      a.atk-button-small(href='javascript:void(0)') 1
-      a.atk-button-small(href='javascript:void(0)') 2
-      a.atk-button-small(href='javascript:void(0)') 3
-      a.atk-button-small(href='javascript:void(0)') 4
-      a.atk-button-small(href='javascript:void(0)') 5
-      a.atk-button-small(href='javascript:void(0)')
+      a.button-small(href='javascript:void(0)') 1
+      a.button-small(href='javascript:void(0)') 2
+      a.button-small(href='javascript:void(0)') 3
+      a.button-small(href='javascript:void(0)') 4
+      a.button-small(href='javascript:void(0)') 5
+      a.button-small(href='javascript:void(0)')
         span.icon-angle-right
-    .atk-buttonset
-      button.atk-button Button
-      button.atk-button Button
-      button.atk-button Button
+    .buttonset
+      button.button Button
+      button.button Button
+      button.button Button
   h3 Cells
   p
     | Component&nbsp;
-    span.atk-label.atk-effect-info .atk-cells
+    span.label.effect-info .cells
     | &nbsp;is used for side by side positioning of several elements.
     strong Options:
-    span.atk-label.atk-effect-info .atk-cells-gutter-small
+    span.label.effect-info .cells-gutter-small
     | ,
-    span.atk-label.atk-effect-info .atk-cells-gutter
+    span.label.effect-info .cells-gutter
     | ,
-    span.atk-label.atk-effect-info .atk-cells-gutter-large
+    span.label.effect-info .cells-gutter-large
     | ,
-    span.atk-label.atk-effect-info .atk-cells-justified
+    span.label.effect-info .cells-justified
     | .
-  .atk-box
-    .atk-cells.atk-align-center
-      .atk-cell.atk-padding-small.atk-swatch-gray
+  .box
+    .cells.align-center
+      .cell.padding-small.swatch-gray
         | Cell #1
-      .atk-cell.atk-padding-small.atk-swatch-white
+      .cell.padding-small.swatch-white
         | Cell #2
-      .atk-cell.atk-padding-small.atk-swatch-gray
+      .cell.padding-small.swatch-gray
         | Cell #3
-      .atk-cell.atk-padding-small.atk-swatch-white
+      .cell.padding-small.swatch-white
         | Cell #4
-      .atk-cell.atk-padding-small.atk-swatch-gray
+      .cell.padding-small.swatch-gray
         | Cell #5
   p
     | Component&nbsp;
-    span.atk-label.atk-effect-info .atk-cells
+    span.label.effect-info .cells
     | &nbsp;combined with&nbsp;
-    span.atk-label.atk-effect-info .atk-cells-gutter-*
+    span.label.effect-info .cells-gutter-*
     | &nbsp;option.
-  .atk-box
-    h5.atk-text-bold.atk-text-dimmed Regular Gutter
-    .atk-cells.atk-cells-gutter.atk-push
-        .atk-cell.atk-jackscrew
-          .atk-swatch-gray.atk-box-small
+  .box
+    h5.text-bold.text-dimmed Regular Gutter
+    .cells.cells-gutter.push
+        .cell.jackscrew
+          .swatch-gray.box.padding-all--s
             | Cell #1 with
-            strong .atk-jackscrew
-        .atk-cell
-          .atk-swatch-gray.atk-box-small.atk-text-nowrap Cell #2
-        .atk-cell
-          .atk-swatch-gray.atk-box-small.atk-text-nowrap Cell #3
-    h5.atk-text-bold.atk-text-dimmed Large Gutter
-    .atk-cells.atk-cells-gutter-large
-        .atk-cell
-          .atk-swatch-gray.atk-box-small Cell #1
-        .atk-cell
-          .atk-swatch-gray.atk-box-small Cell #2
-        .atk-cell
-          .atk-swatch-gray.atk-box-small Cell #3
+            strong .jackscrew
+        .cell
+          .swatch-gray.box.padding-all--s.text-nowrap Cell #2
+        .cell
+          .swatch-gray.box.padding-all--s.text-nowrap Cell #3
+    h5.text-bold.text-dimmed Large Gutter
+    .cells.cells-gutter-large
+        .cell
+          .swatch-gray.box.padding-all--s Cell #1
+        .cell
+          .swatch-gray.box.padding-all--s Cell #2
+        .cell
+          .swatch-gray.box.padding-all--s Cell #3
   p
     | Component&nbsp;
-    span.atk-label.atk-effect-info .atk-cells
+    span.label.effect-info .cells
     | &nbsp;combined with&nbsp;
-    span.atk-label.atk-effect-info .atk-cells-justfied
+    span.label.effect-info .cells-justfied
     | ,&nbsp;
-    span.atk-label.atk-effect-info .atk-cells-gutter
+    span.label.effect-info .cells-gutter
     | &nbsp;option.
   p
-    .atk-label.atk-effect-warning
+    .label.effect-warning
       span.icon-attention
-      | &nbsp;Width is distributed equally only for two cells when using combination of .atk-cells-justified and .atk-cells-gutter options.
-  .atk-box.atk-col-6
-    .atk-cells.atk-cells-gutter-small.atk-cells-justified
-        .atk-cell
-          button.atk-button.atk-jackscrew Button
-        .atk-cell
-          button.atk-button.atk-jackscrew Button
+      | &nbsp;Width is distributed equally only for two cells when using combination of .cells-justified and .cells-gutter options.
+  .box.col-6
+    .cells.cells-gutter-small.cells-justified
+        .cell
+          button.button.jackscrew Button
+        .cell
+          button.button.jackscrew Button
   h3 Menu
   p
     | Component&nbsp;
-    span.atk-label.atk-effect-info .atk-menu-horizontal
+    span.label.effect-info .menu-horizontal
     | &nbsp;combined with&nbsp;
-    span.atk-label.atk-effect-info .atk-padding
+    span.label.effect-info .padding
     | .
-  .atk-box.atk-inline
-    ul.atk-menu-horizontal
+  .box.inline
+    ul.menu-horizontal
       li
-        a.atk-padding.atk-swatch-ink(href='javascript:void(0)') Item #1
+        a.padding.swatch-ink(href='javascript:void(0)') Item #1
       li
-        a.atk-padding.atk-swatch-ink(href='javascript:void(0)') Item #2
+        a.padding.swatch-ink(href='javascript:void(0)') Item #2
       li
-        a.atk-padding.atk-swatch-ink(href='javascript:void(0)') Item #3
-      li.atk-swatch-gray
-        a.atk-padding.atk-swatch-ink(href='javascript:void(0)')
+        a.padding.swatch-ink(href='javascript:void(0)') Item #3
+      li.swatch-gray
+        a.padding.swatch-ink(href='javascript:void(0)')
           | Item #4&nbsp;
           span.icon-down-dir
-        ul.atk-menu-horizontal
+        ul.menu-horizontal
           li
-            a.atk-padding-small.atk-swatch-gray(href='javascript:void(0)') Subitem #1
+            a.padding-small.swatch-gray(href='javascript:void(0)') Subitem #1
           li
-            a.atk-padding-small.atk-swatch-gray(href='javascript:void(0)') Subitem #2
+            a.padding-small.swatch-gray(href='javascript:void(0)') Subitem #2
           li
-            a.atk-padding-small.atk-swatch-gray(href='javascript:void(0)') Subitem #3
+            a.padding-small.swatch-gray(href='javascript:void(0)') Subitem #3
           li
-            a.atk-padding-small.atk-swatch-gray(href='javascript:void(0)') Subitem #4
+            a.padding-small.swatch-gray(href='javascript:void(0)') Subitem #4
           li
-            a.atk-padding-small.atk-swatch-gray(href='javascript:void(0)') Subitem #5
-      li.atk-swatch-blue
-        a.atk-padding.atk-swatch-ink(href='javascript:void(0)')
+            a.padding-small.swatch-gray(href='javascript:void(0)') Subitem #5
+      li.swatch-blue
+        a.padding.swatch-ink(href='javascript:void(0)')
           | Item #5&nbsp;
           span.icon-down-dir
-        ul.atk-menu-vertical
+        ul.menu-vertical
           li
-            a.atk-padding-small.atk-swatch-blue(href='javascript:void(0)') Subitem #1
+            a.padding-small.swatch-blue(href='javascript:void(0)') Subitem #1
           li
-            a.atk-padding-small.atk-swatch-blue(href='javascript:void(0)') Subitem #2
+            a.padding-small.swatch-blue(href='javascript:void(0)') Subitem #2
       li
-        a.atk-padding.atk-swatch-ink(href='javascript:void(0)')
+        a.padding.swatch-ink(href='javascript:void(0)')
           | Item #6&nbsp;
           span.icon-down-dir
-        ul.atk-menu-vertical
+        ul.menu-vertical
           li
-            a.atk-padding-small.atk-swatch-ink(href='javascript:void(0)') Subitem #1
+            a.padding-small.swatch-ink(href='javascript:void(0)') Subitem #1
           li
-            a.atk-padding-small.atk-swatch-ink(href='javascript:void(0)') Subitem #2
+            a.padding-small.swatch-ink(href='javascript:void(0)') Subitem #2
   p
     | Component&nbsp;
-    span.atk-label.atk-effect-info .atk-menu-vertical
+    span.label.effect-info .menu-vertical
     | &nbsp;combined with&nbsp;
-    span.atk-label.atk-effect-info .atk-padding-small
+    span.label.effect-info .padding-small
     | &nbsp;and&nbsp;
-    span.atk-label.atk-effect-info .atk-label
+    span.label.effect-info .label
     | .
-  .atk-box.atk-col-4
-    ul.atk-menu-vertical
-      li.atk-padding-small.atk-swatch-ink.atk-size-kilo Navigation
-      li.atk-menu-active
-        a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
-          span.atk-cell.atk-jackscrew
+  .box.col-4
+    ul.menu-vertical
+      li.padding-small.swatch-ink.size-kilo Navigation
+      li.menu-active
+        a.padding-small.swatch-ink.cells(href='javascript:void(0)')
+          span.cell.jackscrew
             span.icon-gauge-1
             | &nbsp;
             strong Dashboard
-          span.atk-cell
-            span.atk-label.atk-size-milli.atk-swatch-red 253
+          span.cell
+            span.label.size-milli.swatch-red 253
       li
-        a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
-          span.atk-cell.atk-jackscrew
+        a.padding-small.swatch-ink.cells(href='javascript:void(0)')
+          span.cell.jackscrew
             span.icon-paper-plane
             | &nbsp;
             strong Messages
-          span.atk-cell
-            span.atk-label.atk-size-milli.atk-shape-circle.atk-swatch-green 1
-      li.atk-swatch-green
-        a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
-          span.atk-cell.atk-jackscrew
+          span.cell
+            span.label.size-milli.shape-circle.swatch-green 1
+      li.swatch-green
+        a.padding-small.swatch-ink.cells(href='javascript:void(0)')
+          span.cell.jackscrew
             span.icon-chart-line
             | &nbsp;
             strong Analytics
-          span.atk-cell
+          span.cell
             span.icon-right-dir
-        ul.atk-menu-horizontal
+        ul.menu-horizontal
           li
-            a.atk-padding-small.atk-swatch-green(href='javascript:void(0)') Subitem #1
+            a.padding-small.swatch-green(href='javascript:void(0)') Subitem #1
           li
-            a.atk-padding-small.atk-swatch-green(href='javascript:void(0)') Subitem #2
+            a.padding-small.swatch-green(href='javascript:void(0)') Subitem #2
           li
-            a.atk-padding-small.atk-swatch-green(href='javascript:void(0)') Subitem #3
+            a.padding-small.swatch-green(href='javascript:void(0)') Subitem #3
           li
-            a.atk-padding-small.atk-swatch-green(href='javascript:void(0)') Subitem #4
+            a.padding-small.swatch-green(href='javascript:void(0)') Subitem #4
           li
-            a.atk-padding-small.atk-swatch-green(href='javascript:void(0)') Subitem #5
+            a.padding-small.swatch-green(href='javascript:void(0)') Subitem #5
       li
-        a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
-          span.atk-cell.atk-jackscrew
+        a.padding-small.swatch-ink.cells(href='javascript:void(0)')
+          span.cell.jackscrew
             span.icon-tools
             | &nbsp;
             strong Settings
-          span.atk-cell
-            span.atk-size.atk-swatch-yellow.icon-attention
-      li.atk-swatch-blue
-        a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
-          span.atk-cell.atk-jackscrew
+          span.cell
+            span.size.swatch-yellow.icon-attention
+      li.swatch-blue
+        a.padding-small.swatch-ink.cells(href='javascript:void(0)')
+          span.cell.jackscrew
             span.icon-lifebuoy
             | &nbsp;
             strong Support
-          span.atk-cell
+          span.cell
             span.icon-right-dir
-        ul.atk-menu-vertical
+        ul.menu-vertical
           li
-            a.atk-padding-small.atk-swatch-blue(href='javascript:void(0)') Subitem #1
+            a.padding-small.swatch-blue(href='javascript:void(0)') Subitem #1
           li
-            a.atk-padding-small.atk-swatch-blue(href='javascript:void(0)') Subitem #2
+            a.padding-small.swatch-blue(href='javascript:void(0)') Subitem #2
           li
-            a.atk-padding-small.atk-swatch-blue(href='javascript:void(0)') Subitem #3
+            a.padding-small.swatch-blue(href='javascript:void(0)') Subitem #3
           li
-            a.atk-padding-small.atk-swatch-blue(href='javascript:void(0)') Subitem #4
+            a.padding-small.swatch-blue(href='javascript:void(0)') Subitem #4
           li
-            a.atk-padding-small.atk-swatch-blue(href='javascript:void(0)') Subitem #5
-      li.atk-swatch-white
-        a.atk-padding-small.atk-swatch-ink.atk-cells(href='javascript:void(0)')
-          span.atk-cell.atk-jackscrew
+            a.padding-small.swatch-blue(href='javascript:void(0)') Subitem #5
+      li.swatch-white
+        a.padding-small.swatch-ink.cells(href='javascript:void(0)')
+          span.cell.jackscrew
             span.icon-chat-empty
             | &nbsp;
             strong Forums
-          span.atk-cell
+          span.cell
             span.icon-right-dir
-        ul.atk-menu-horizontal
+        ul.menu-horizontal
           li
-            a.atk-padding-small.atk-swatch-white(href='javascript:void(0)') Subitem #1
+            a.padding-small.swatch-white(href='javascript:void(0)') Subitem #1
           li
-            a.atk-padding-small.atk-swatch-white(href='javascript:void(0)') Subitem #2
+            a.padding-small.swatch-white(href='javascript:void(0)') Subitem #2
           li
-            a.atk-padding-small.atk-swatch-white(href='javascript:void(0)') Subitem #3
+            a.padding-small.swatch-white(href='javascript:void(0)') Subitem #3
           li
-            a.atk-padding-small.atk-swatch-white(href='javascript:void(0)') Subitem #4
+            a.padding-small.swatch-white(href='javascript:void(0)') Subitem #4
           li
-            a.atk-padding-small.atk-swatch-white(href='javascript:void(0)') Subitem #5
+            a.padding-small.swatch-white(href='javascript:void(0)') Subitem #5
   //- p
   //-   | Component&nbsp;
-  //-   span.atk-label.atk-effect-info .atk-menu-horizontal
+  //-   span.label.effect-info .menu-horizontal
   //-   | &nbsp;combined with&nbsp;
-  //-   span.atk-label.atk-effect-info .atk-button-small
+  //-   span.label.effect-info .button-small
   //-   | .
-  //- .atk-box.atk-inline
-  //-   ul.atk-menu-horizontal
+  //- .box.inline
+  //-   ul.menu-horizontal
   //-     li
-  //-       a.atk-swatch-blue.atk-button-small(href='javascript:void(0)')
+  //-       a.swatch-blue.button-small(href='javascript:void(0)')
   //-         span.icon-angle-left
   //-     li
-  //-       a.atk-swatch-blue.atk-button-small(href='javascript:void(0)')
+  //-       a.swatch-blue.button-small(href='javascript:void(0)')
   //-         span.icon-calendar
   //-     li
-  //-       a.atk-swatch-blue.atk-button-small(href='javascript:void(0)') 1
-  //-       a.atk-swatch-blue.atk-button-small(href='javascript:void(0)') 2
+  //-       a.swatch-blue.button-small(href='javascript:void(0)') 1
+  //-       a.swatch-blue.button-small(href='javascript:void(0)') 2
   //-     li
-  //-       a.atk-swatch-blue.atk-button-small(href='javascript:void(0)') 3
+  //-       a.swatch-blue.button-small(href='javascript:void(0)') 3
   //-     li
-  //-       a.atk-swatch-blue.atk-button-small(href='javascript:void(0)') 4
+  //-       a.swatch-blue.button-small(href='javascript:void(0)') 4
   //-     li
-  //-       a.atk-swatch-blue.atk-button-small(href='javascript:void(0)') 5
+  //-       a.swatch-blue.button-small(href='javascript:void(0)') 5
   //-     li
-  //-       a.atk-swatch-blue.atk-button-small(href='javascript:void(0)')
+  //-       a.swatch-blue.button-small(href='javascript:void(0)')
   //-         span.icon-angle-right
   //- p
   //-   | Component&nbsp;
-  //-   span.atk-label.atk-effect-info .atk-menu-vertical
+  //-   span.label.effect-info .menu-vertical
   //-   | &nbsp;combined with&nbsp;
-  //-   span.atk-label.atk-effect-info .atk-button
+  //-   span.label.effect-info .button
   //-   | .
-  //- .atk-box.atk-col-4
-  //-   ul.atk-menu-vertical
+  //- .box.col-4
+  //-   ul.menu-vertical
   //-     li
-  //-       a.atk-swatch-blue.atk-button-large(href='javascript:void(0)') Item #1
+  //-       a.swatch-blue.button-large(href='javascript:void(0)') Item #1
   //-     li
-  //-       a.atk-swatch-blue.atk-button-large(href='javascript:void(0)') Item #2
+  //-       a.swatch-blue.button-large(href='javascript:void(0)') Item #2
   //-     li
-  //-       a.atk-swatch-blue.atk-button-large(href='javascript:void(0)') Item #3
+  //-       a.swatch-blue.button-large(href='javascript:void(0)') Item #3
   //-     li
-  //-       a.atk-swatch-blue.atk-button-large(href='javascript:void(0)') Item #4
+  //-       a.swatch-blue.button-large(href='javascript:void(0)') Item #4
   //-     li
-  //-       a.atk-swatch-blue.atk-button-large(href='javascript:void(0)') Item #5
+  //-       a.swatch-blue.button-large(href='javascript:void(0)') Item #5
   h3 Paddings & Margins
-  h4 Actions
+  h4 items-spacing
   p
-    span.atk-label.atk-effect-info .atk-actions
+    span.label.effect-info .items-spacing
     | &nbsp;is a component that creates margins between its children. Make sure there are no spaces between your action buttons.
-  .atk-box.atk-inline
-    .atk-actions
-      button.atk-button Add
-      button.atk-button Edit
-      button.atk-button.atk-effect-danger
+  .box.inline
+    .items-spacing
+      button.button Add
+      button.button Edit
+      button.button.effect-danger
         span.icon-trash
         | &nbsp;Delete
   h4 Separator
   p
-    span.atk-label.atk-effect-info .atk-sep
+    span.label.effect-info .margin-left--xs.margin-right--xs
     | &nbsp;is a component that creates margins between its siblings. It is recommended to use it with&nbsp;
-    span.atk-label.atk-effect-info
+    span.label.effect-info
       = "<span>"
     | &nbsp;tag.
-  .atk-box.atk-inline
+  .box.inline
     a(href='javascript:void(0)') Sign In
-    span.atk-sep ⋅
+    span.margin-left--xs.margin-right--xs ⋅
     a(href='javascript:void(0)') Sign Up
   h4 Sections
   p
-    span.atk-label.atk-effect-warning
+    span.label.effect-warning
       span.icon-attention
     | &nbsp;
-    span.atk-label.atk-effect-info .atk-section
+    span.label.effect-info .section
     | &nbsp;component creates top and bottom margins. It is the best used for pages with fixed centered layout.&nbsp;
     strong Options:&nbsp;
-    span.atk-label.atk-effect-info .atk-section-small
+    span.label.effect-info .section-small
     | ,&nbsp;
-    span.atk-label.atk-effect-info .atk-section
+    span.label.effect-info .section
     | ,&nbsp;
-    span.atk-label.atk-effect-info .atk-section-large
+    span.label.effect-info .section-large
     | .
-  .atk-box
-    .atk-swatch-ink
-      .atk-section-small.atk-col-8.atk-move-center
-        h5 .atk-section-small
+  .box
+    .swatch-ink
+      .section-small.col-8.move-center
+        h5 .section-small
         p
           | Curabitur eleifend metus nec eros scelerisque porta. Ut eget enim tortor. Integer vulputate scelerisque urna, nec rhoncus leo gravida at. Ut porta, lorem vel eleifend laoreet, nulla ante tempus mauris, in fermentum mi purus vitae nunc.
-    .atk-swatch-yellow
-      .atk-section.atk-col-8.atk-move-center
-        h5 .atk-section
+    .swatch-yellow
+      .section.col-8.move-center
+        h5 .section
         p
           | Vestibulum nec turpis sit amet purus imperdiet ultrices mollis nec nibh. Phasellus viverra adipiscing diam sed venenatis. Mauris sagittis, sapien sed malesuada pharetra, dui nunc dignissim dolor, ultrices varius velit massa nec dolor.
-    .atk-swatch-gray
-      .atk-section-large.atk-col-8.atk-move-center
-        h5 .atk-section-large
+    .swatch-gray
+      .section-large.col-8.move-center
+        h5 .section-large
         p
           | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin est justo, bibendum quis ipsum placerat, accumsan vestibulum purus. Quisque leo nibh, laoreet non nibh non, accumsan tincidunt nunc. Morbi eget purus placerat lectus vulputate laoreet ut ac odio.
   h4 Paddings
   p
-    span.atk-label.atk-effect-info .atk-padding
+    span.label.effect-info .padding
     |  component creates (consistent with the rest of the design) paddings in any element.
     strong Options:
-    span.atk-label.atk-effect-info .atk-padding-small
+    span.label.effect-info .padding-small
     | ,
-    span.atk-label.atk-effect-info .atk-padding
+    span.label.effect-info .padding
     | ,
-    span.atk-label.atk-effect-info .atk-padding-large
+    span.label.effect-info .padding-large
     | ,
-    span.atk-label.atk-effect-info .atk-padding-reset
+    span.label.effect-info .padding-reset
     | .
-  .atk-box.atk-inline
-    .atk-cells.atk-cells-gutter
-      .atk-cell
-        .atk-padding-small.atk-swatch-ink.atk-align-center.atk-inline .atk-padding-small
-      .atk-cell
-        .atk-padding.atk-swatch-ink.atk-align-center.atk-inline .atk-padding
-      .atk-cell
-        .atk-padding-large.atk-swatch-ink.atk-align-center.atk-inline .atk-padding-large
+  .box.inline
+    .cells.cells-gutter
+      .cell
+        .padding-small.swatch-ink.align-center.inline .padding-small
+      .cell
+        .padding.swatch-ink.align-center.inline .padding
+      .cell
+        .padding-large.swatch-ink.align-center.inline .padding-large
   h4 Pushes
   p
-    span.atk-label.atk-effect-info .atk-push
+    span.label.effect-info .push
     | &nbsp;component creates a bottom margin for any element.&nbsp;
     strong Options:&nbsp;
-    span.atk-label.atk-effect-info .atk-push-small
+    span.label.effect-info .push-small
     | ,&nbsp;
-    span.atk-label.atk-effect-info .atk-push
+    span.label.effect-info .push
     | ,&nbsp;
-    span.atk-label.atk-effect-info .atk-push-large
+    span.label.effect-info .push-large
     | .
-  .atk-box.atk-inline
-    .atk-cells.atk-cells-gutter
-      .atk-cell.atk-valign-top.atk-align-center
-        .atk-padding-small.atk-swatch-ink.atk-push-small.atk-inline .atk-push-small
-        .atk-padding-small.atk-swatch-yellow
-      .atk-cell.atk-valign-top.atk-align-center
-        .atk-padding-small.atk-swatch-ink.atk-push.atk-inline .atk-push
-        .atk-padding-small.atk-swatch-yellow
-      .atk-cell.atk-valign-top.atk-align-center
-        .atk-padding-small.atk-swatch-ink.atk-push-large.atk-inline .atk-push-large
-        .atk-padding-small.atk-swatch-yellow
+  .box.inline
+    .cells.cells-gutter
+      .cell.valign-top.align-center
+        .padding-small.swatch-ink.push-small.inline .push-small
+        .padding-small.swatch-yellow
+      .cell.valign-top.align-center
+        .padding-small.swatch-ink.push.inline .push
+        .padding-small.swatch-yellow
+      .cell.valign-top.align-center
+        .padding-small.swatch-ink.push-large.inline .push-large
+        .padding-small.swatch-yellow

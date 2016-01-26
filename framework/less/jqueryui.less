@@ -207,6 +207,7 @@
     }
     .ui-tabs-panel.ui-widget-content {
         &:extend(.box);
+        .border-radius(0 0 @cornerRadius @cornerRadius~'!important');
         padding: round(@margin/2,2) 0;
     }
 }
@@ -240,11 +241,14 @@
 // Dialog
 .ui-dialog {
     .ui-widget-header.ui-dialog-titlebar {
-        padding: @margin @margin 0 @margin;
+        .shape-rounded--top;
+        padding: @margin/2 @margin;
         .ui-dialog-title {
             &:extend([class*=text][class*="-size--l"]);
             font-weight: @headingWeight;
-            line-height: @headingBaseline;
+            line-height: 1;
+            text-align: center;
+            font-weight: 700;
         }
         .ui-button.ui-dialog-titlebar-close {
             .clear-area;

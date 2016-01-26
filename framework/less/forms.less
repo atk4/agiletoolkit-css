@@ -13,10 +13,12 @@ input:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox
     background: @inputColor;
     border-style: solid;
     border-width: 1px;
-    border-radius: @cornerRadius;
     box-shadow: @inputInnerShadow;
     color: @inputText;
     line-height: @bodyBaseline;
+    &:not([class*=shape]) {
+        .border-radius(@cornerRadius);
+    }
     &:focus {
         @shadow: 0 0 @inputFocusGlow fadeout(@inputFocus,30%), 0 0 @inputFocusGlow*2 fadeout(@inputFocus,70%);
         .box-shadow(@shadow);

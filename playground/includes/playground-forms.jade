@@ -1,271 +1,271 @@
 section#forms
   h2 Forms
   h3 Regular Form
-  .atk-box.atk-col-6
-    form.atk-form.atk-cells-group.atk-cells-gutter-large.atk-valign-top
-      .atk-cells.atk-push
-        .atk-cell.atk-text-nowrap
-          label.atk-input-label 
+  .box.col-6
+    form.form.cells-group.cells-gutter-large.align-top
+      .cells.margin-bottom
+        .cell.text-nowrap
+          label.input-label 
             strong Input:
-        .atk-cell.atk-jackscrew
-          input(type="text",size="9",class="atk-push-xsmall")
-          div.atk-text-dimmed.atk-size-milli Some Text
-      .atk-cells.atk-push
-        .atk-cell.atk-text-nowrap
-          label.atk-input-label 
+        .cell.expand
+          input(type="text",size="9",class="margin-bottom--xs")
+          div.text-dimmed.size-milli Some Text
+      .cells.margin-bottom
+        .cell.text-nowrap
+          label.input-label 
             strong Password:
-        .atk-cell.atk-jackscrew
-          input(type="password",class="atk-jackscrew atk-push-xsmall")
-      .atk-cells.atk-push
-        .atk-cell.atk-text-nowrap
-          label.atk-input-label
+        .cell.expand
+          input(type="password",class="expand margin-bottom--xs")
+      .cells.margin-bottom
+        .cell.text-nowrap
+          label.input-label
             strong About:
-        .atk-cell.atk-jackscrew
-          textarea(class="atk-jackscrew")
-      .atk-cells.atk-push
-        .atk-cell
-        .atk-cell.atk-jackscrew
-          .atk-input-radio.atk-push-xsmall
+        .cell.expand
+          textarea
+      .cells.margin-bottom
+        .cell
+        .cell.expand
+          .input-radio.margin-bottom--xs
               span
                 input(type='checkbox')
                 label
                   | Accept 
                   a(href='#') Terms &amp; Conditions
                   | .
-          p.atk-effect-danger
+          p.effect-danger
             span.icon-attention
             | &nbsp;Please accept Terms &amp; Conditions to continue.
-      .atk-cells
-        .atk-cell 
-        .atk-cell.atk-actions.atk-jackscrew
-          button.atk-button Submit
-          button.atk-button Cancel
+      .cells
+        .cell 
+        .cell.items-spacing--xs.expand
+          button.button Submit
+          button.button Cancel
 
   h3 Compact Form
-  .atk-box.atk-col-6
-    form.atk-form.atk-cells-group.atk-cells-gutter-large
-      .atk-cells.atk-push-small
-        .atk-cell.atk-text-nowrap
-          label.atk-input-label
+  .box.col-6
+    form.form.cells-group-spacing--l
+      .cells.margin-bottom--s
+        .cell.text-nowrap
+          label.input-label
             strong Input:
-        .atk-cell.atk-jackscrew
+        .cell.expand
           input(type="text",size="9")
-      .atk-cells.atk-push-small
-        .atk-cell.atk-text-nowrap
-          label.atk-input-label
+      .cells.margin-bottom--s
+        .cell.text-nowrap
+          label.input-label
             strong Password:
-        .atk-cell.atk-jackscrew
-          input(type="password",class="atk-jackscrew")
-      .atk-cells
-        .atk-cell 
-        .atk-cell.atk-actions.atk-jackscrew
-          button.atk-button Submit
-          button.atk-button Cancel
+        .cell.expand
+          input(type="password",class="expand")
+      .cells
+        .cell 
+        .cell.items-spacing--xs.expand
+          button.button Submit
+          button.button Cancel
   h3 Stacked Form
-  .atk-box.atk-col-6
-    form.atk-form
-      .atk-push-xsmall
+  .box.col-6
+    form.form
+      .margin-bottom--xs
         label
           strong Input:
-      .atk-push
-        input(type='text',class='atk-jackscrew')
-      .atk-push-xsmall
+      .margin-bottom
+        input(type='text',class='expand')
+      .margin-bottom--xs
         label
           strong Password:
-      .atk-push
-        input(type='password',class='atk-jackscrew')
-      .atk-actions
-        button.atk-button Okay
-        button.atk-button Cancel
+      .margin-bottom
+        input(type='password',class='expand')
+      .items-spacing--xs
+        button.button Okay
+        button.button Cancel
 
   h3 Stacked Compact Form
-  .atk-box.atk-col-10
-    form.atk-form
-      .atk-push-small
-        div.atk-push-small
+  .box.col-10
+    form.form
+      .margin-bottom--s
+        div.margin-bottom--s
           label
             strong Input:
-        input(type='text',class='atk-jackscrew')
-      .atk-push-small.atk-effect-danger
-        div.atk-push-xsmall
+        input(type='text',class='expand')
+      .margin-bottom--s.effect-danger
+        div.margin-bottom--xs
           label
              strong Password:
-        input(type='password',class='atk-jackscrew atk-push-xsmall')
+        input(type='password',class='expand margin-bottom--xs')
         p
           span.icon-attention
           | &nbsp;This is error
-      .atk-cells.atk-push-small.atk-cells-gutter-small.atk-effect-danger
-        .atk-cell
+      .cells.margin-bottom--s.cells-gutter-small.effect-danger
+        .cell
           input(type="text")
-        .atk-cell
+        .cell
           select
             option Option #1
             option Option #2
-      .atk-actions
-        button.atk-button Okay
-        button.atk-button Cancel
+      .items-spacing--xs
+        button.button Okay
+        button.button Cancel
   h3 Minimal Form
-  .atk-box.atk-col-3
-    form.atk-form
-      .atk-push-xsmall
-        input(type='text',class='atk-jackscrew',placeholder="Username")
-      .atk-push-xsmall
-        input(type='password',class='atk-jackscrew',placeholder="Password")
-      button.atk-button.atk-swatch-green.atk-jackscrew Okay
+  .box.col-3
+    form.form
+      .margin-bottom--xs
+        input(type='text',class='expand',placeholder="Username")
+      .margin-bottom--xs
+        input(type='password',class='expand',placeholder="Password")
+      button.button.swatch-green.expand Okay
   //- h3 Hybrid Form
   //- p
-  //-   span.atk-label.atk-effect-info .atk-form-hybrid
+  //-   span.label.effect-info .form-hybrid
   //-   | &nbsp;allows to assign&nbsp;
-  //-   span.atk-label.atk-effect-info .atk-form-*
+  //-   span.label.effect-info .form-*
   //-   | &nbsp;classes to&nbsp;
-  //-   span.atk-label.atk-effect-info .atk-form-fieldset
+  //-   span.label.effect-info .form-fieldset
   //-   | .
-  //- .atk-box.atk-col-6
-  //-   .atk-form.atk-form-hybrid
+  //- .box.col-6
+  //-   .form.form-hybrid
   //-     form
-  //-       .atk-form-fieldset
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //-       .form-fieldset
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label Input:
-  //-           .atk-cell.atk-jackscrew
+  //-           .cell.expand
   //-             input(type='text')
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label Password:
-  //-           .atk-cell
-  //-             span.atk-input-icon
+  //-           .cell
+  //-             span.input-icon
   //-               input(type='password')
   //-               a.icon-help-circled-1(href='javascript:void(0)')
-  //-       .atk-form-fieldset.atk-form-stacked
-  //-         .atk-cells
-  //-           .atk-cell
+  //-       .form-fieldset.form-stacked
+  //-         .cells
+  //-           .cell
   //-             label Textarea:
-  //-           .atk-cell.atk-jackscrew
+  //-           .cell.expand
   //-             textarea(rows='3')
-  //-       .atk-cells
-  //-         .atk-cell
-  //-         .atk-cell.atk-actions
-  //-           button.atk-button Okay
-  //-           button.atk-button Cancel
+  //-       .cells
+  //-         .cell
+  //-         .cell.items-spacing--xs
+  //-           button.button Okay
+  //-           button.button Cancel
   //- p
-  //-   span.atk-label.atk-effect-info .atk-form-fieldset
+  //-   span.label.effect-info .form-fieldset
   //-   | &nbsp;and&nbsp;
-  //-   span.atk-label.atk-effect-info .atk-actions
+  //-   span.label.effect-info .items-spacing--xs
   //-   | &nbsp;combined with grid system's&nbsp;
-  //-   span.atk-label.atk-effect-info .atk-col-*
+  //-   span.label.effect-info .col-*
   //-   | &nbsp;classes.
-  //- .atk-box
-  //-   .atk-form.atk-form-hybrid
-  //-     form.atk-row
-  //-       .atk-form-fieldset.atk-col-6
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //- .box
+  //-   .form.form-hybrid
+  //-     form.row
+  //-       .form-fieldset.col-6
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label
   //-               | Input:
-  //-               span.atk-form-mandatory *
+  //-               span.form-mandatory *
   //-               | :
-  //-           .atk-cell.atk-jackscrew
+  //-           .cell.expand
   //-             input(type='text')
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label Password:
-  //-           .atk-cell
-  //-             span.atk-input-icon
+  //-           .cell
+  //-             span.input-icon
   //-               input(type='password')
   //-               a.icon-help-circled-1(href='javascript:void(0)')
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label Dropdown:
-  //-           .atk-cell
+  //-           .cell
   //-             select(name='speed')
   //-               option(value='Slower') Slower
   //-               option(value='Slow') Slow
   //-               option(value='Medium', selected='selected') Medium Roast
   //-               option(value='Fast') Fast
   //-               option(value='Faster') Faster
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell.atk-text-nowrap
-  //-             span.atk-label.atk-effect-warning
+  //-         .cells.cells-gutter-large
+  //-           .cell.text-nowrap
+  //-             span.label.effect-warning
   //-               span.icon-attention
   //-             label Combo Input #1:
-  //-           .atk-cell.atk-jackscrew
-  //-             .atk-cells.atk-input-combo
-  //-               .atk-cell
-  //-                 a.atk-button(href='javascript:void(0)')
+  //-           .cell.expand
+  //-             .cells.input-combo
+  //-               .cell
+  //-                 a.button(href='javascript:void(0)')
   //-                   span.icon-plus-1
-  //-               .atk-cell.atk-jackscrew
+  //-               .cell.expand
   //-                 input(type='text')
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell.atk-text-nowrap
+  //-         .cells.cells-gutter-large
+  //-           .cell.text-nowrap
   //-             label Combo Input #2:
-  //-           .atk-cell.atk-jackscrew
-  //-             .atk-cells.atk-input-combo
-  //-               .atk-cell.atk-jackscrew
+  //-           .cell.expand
+  //-             .cells.input-combo
+  //-               .cell.expand
   //-                 input(type='text')
-  //-               .atk-cell
-  //-                 a.atk-button(href='javascript:void(0)')
+  //-               .cell
+  //-                 a.button(href='javascript:void(0)')
   //-                   span.icon-calendar
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label Combo Input #3:
-  //-           .atk-cell.atk-jackscrew
-  //-             .atk-cells.atk-input-combo
-  //-               .atk-cell
-  //-                 a.atk-button(href='javascript:void(0)')
+  //-           .cell.expand
+  //-             .cells.input-combo
+  //-               .cell
+  //-                 a.button(href='javascript:void(0)')
   //-                   span.icon-minus-1
-  //-               .atk-cell.atk-jackscrew
+  //-               .cell.expand
   //-                 input(type='text')
-  //-               .atk-cell
-  //-                 a.atk-button(href='javascript:void(0)')
+  //-               .cell
+  //-                 a.button(href='javascript:void(0)')
   //-                   span.icon-plus-1
-  //-               .atk-cell
-  //-                 a.atk-button(href='javascript:void(0)')
+  //-               .cell
+  //-                 a.button(href='javascript:void(0)')
   //-                   span.icon-trash
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label Textarea:
-  //-           .atk-cell
+  //-           .cell
   //-             textarea(rows='3')
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label Checkbox:
-  //-           .atk-cell.atk-jackscrew
-  //-             .atk-input-radio
+  //-           .cell.expand
+  //-             .input-radio
   //-               span
   //-                 input(type='checkbox')
   //-                 label
   //-                   | Pellentesque a ligula dignissim, accumsan est sit amet, aliquet risus. Phasellus eget rutrum diam. Cras condimentum ornare dapibus.
-  //-         .atk-cells.atk-cells-gutter-large
-  //-           .atk-cell
+  //-         .cells.cells-gutter-large
+  //-           .cell
   //-             label
   //-               | Input
-  //-               span.atk-form-mandatory *
+  //-               span.form-mandatory *
   //-               | :
-  //-           .atk-cell.atk-jackscrew
+  //-           .cell.expand
   //-             input(type='text')
-  //-             p.atk-text-dimmed This is a form Comment.
-  //-         .atk-cells.atk-cells-gutter-large.atk-form-error
-  //-           .atk-cell.atk-text-nowrap
+  //-             p.text-dimmed This is a form Comment.
+  //-         .cells.cells-gutter-large.form-error
+  //-           .cell.text-nowrap
   //-             label Input with error:
-  //-           .atk-cell.atk-jackscrew
+  //-           .cell.expand
   //-             input(type='text')
-  //-             p.atk-effect-danger This is a form error.
-  //-       .atk-form-fieldset.atk-form-stacked.atk-col-6
-  //-         .atk-cells
-  //-           .atk-cell
+  //-             p.effect-danger This is a form error.
+  //-       .form-fieldset.form-stacked.col-6
+  //-         .cells
+  //-           .cell
   //-             label File Upload:
-  //-           .atk-cell
+  //-           .cell
   //-             input(type='file')
-  //-         .atk-cells
-  //-           .atk-cell
+  //-         .cells
+  //-           .cell
   //-             label Textarea:
-  //-           .atk-cell
+  //-           .cell
   //-             textarea(rows='5')
-  //-         .atk-cells
-  //-           .atk-cell
+  //-         .cells
+  //-           .cell
   //-             label Horizontal Radio Buttons:
-  //-           .atk-cell
-  //-             .atk-input-radio
+  //-           .cell
+  //-             .input-radio
   //-               span
   //-                 input(type='radio')
   //-                 label Blueberry
@@ -284,11 +284,11 @@ section#forms
   //-               span
   //-                 input(type='radio')
   //-                 label Gooseberry
-  //-         .atk-cells
-  //-           .atk-cell
+  //-         .cells
+  //-           .cell
   //-             label Vertical Radio Buttons:
-  //-           .atk-cell
-  //-             .atk-input-radio.atk-input-radio-stacked
+  //-           .cell
+  //-             .input-radio.input-radio-stacked
   //-               span
   //-                 input(type='radio')
   //-                 label Blueberry
@@ -307,15 +307,15 @@ section#forms
   //-               span
   //-                 input(type='radio')
   //-                 label Gooseberry
-  //-         .atk-cells
-  //-           .atk-cell
+  //-         .cells
+  //-           .cell
   //-             label
   //-               | Vertical Radio Buttons with
-  //-               span.atk-label.atk-effect-info .atk-cells
+  //-               span.label.effect-info .cells
   //-               | component:
-  //-           .atk-cell
-  //-             .atk-input-radio.atk-input-radio-stacked.atk-cells
-  //-               .atk-cell
+  //-           .cell
+  //-             .input-radio.input-radio-stacked.cells
+  //-               .cell
   //-                 span
   //-                   input(type='radio')
   //-                   label Blueberry
@@ -325,7 +325,7 @@ section#forms
   //-                 span
   //-                   input(type='radio')
   //-                   label Strawberry
-  //-               .atk-cell
+  //-               .cell
   //-                 span
   //-                   input(type='radio')
   //-                   label Cherry
@@ -335,7 +335,7 @@ section#forms
   //-                 span
   //-                   input(type='radio')
   //-                   label Gooseberry
-  //-       .atk-col-12.atk-actions.atk-text-right
+  //-       .col-12.items-spacing--xs.text-right
   //-         hr
-  //-         button.atk-button.atk-button-blank Cancel
-  //-         button.atk-button.atk-swatch-green Okay
+  //-         button.button.button-blank Cancel
+  //-         button.button.swatch-green Okay

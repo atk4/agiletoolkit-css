@@ -275,8 +275,10 @@
 }
 
 // Item List
-.items:not([class*='items-'])>* + * {
-    margin-left: @space;
+.items, .items-spacing, .items-spacing--m {
+    >* + * {
+        margin-left: @space;
+    }
 }
 .items-spacing--xs>* + * {
     margin-left: @space-xs;
@@ -293,7 +295,9 @@
 
 // Buttons
 .createButton() {
-    .border-radius(@cornerRadius);
+    &:not([class*=shape]) {
+        .border-radius(@cornerRadius);
+    }
     border-style: solid;
     border-width: 1px;
     display: inline-block;
@@ -319,8 +323,8 @@
         }
     }
 }
-a, button, input, .ui-button {
-    &[class*=button] {
+a, button, input {
+    &[class*=button], &.ui-button {
         .createButton;
     }
 }
@@ -329,8 +333,10 @@ a, button, input, .ui-button {
     border-color: transparent !important;
     box-shadow: none !important;
 }
-[class*=button]:not(.ui-icon) {
-    .createElementPadding(@buttonPadding, @buttonPaddingRatio);
+a, button, input {
+    &[class*=button]:not(.ui-icon) {
+        .createElementPadding(@buttonPadding, @buttonPaddingRatio);
+    }
 }
 
 // Menu
@@ -425,11 +431,14 @@ ul[class*="menu"] {
 
 // Box
 .box {
-    .border-radius(@cornerRadius);
     border: 1px solid transparent;
     display: block;
-    margin-bottom: @space;
-    padding: @space;
+    &:not([class*=shape-rounded]) {
+        .border-radius(@cornerRadius);
+    }
+    &:not([class*=padding]) {
+        padding: @space;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -497,13 +506,13 @@ ul[class*="menu"] {
         width: auto;
     }
 }
-.cells-group {
+[class*="cells"][class*="group"] {
     display: table;
     >[class*="cells"] {
         display: table-row;
     }
 }
-.cells-table {
+[class*="cells"][class*="table"] {
     display: table;
     .cells-group {
         display: table-row-group;
