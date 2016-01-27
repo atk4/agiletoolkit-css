@@ -12,9 +12,6 @@
 * { 
    .box-sizing();
    outline: none;
-   &:last-child {
-        margin-bottom: 0;
-   }
 }
 body {
     background: @bodyBackground;
@@ -25,10 +22,10 @@ body {
 // Styles & Colors
 // ==========================================================
 
-.background-cover {
+.atk-background-cover {
   .background-cover(inherit);
 }
-.background-fixed {
+.atk-background-fixed {
   .background-fixed;
 }
 ::selection {
@@ -51,27 +48,33 @@ img::-moz-selection {
 // Misc
 // ==========================================================
 
-.overflow {
+.atk-relative {
+  position: relative;
+}
+.atk-overflow {
   overflow: hidden;
 }
-.inline {
-    display: inline-block !important;
+.atk-inline {
+  display: inline !important;
 }
-.block {
-    display: block !important;
+.atk-inline-block {
+  display: inline-block !important;
 }
-.expand {
-    width: 100% !important;
+.atk-block {
+  display: block !important;
 }
-.width-auto {
-    width: auto !important;
+.atk-expand {
+  width: 100% !important;
 }
-.clear-fix {
-    .clear-fix;
+.atk-width-auto {
+  width: auto !important;
 }
-.disabled {
-    .opacity(50);
-    pointer-events: none;
+.atk-clear-fix {
+  .clear-fix;
+}
+.atk-disabled {
+  .opacity(50);
+  pointer-events: none;
 }
 
 
@@ -82,7 +85,7 @@ img::-moz-selection {
 a {
   outline: none !important;
 }
-.row {
+.atk-row {
     .clear-fix;
 }
 *[class*=icon] {

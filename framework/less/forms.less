@@ -16,7 +16,7 @@ input:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox
     box-shadow: @inputInnerShadow;
     color: @inputText;
     line-height: @bodyBaseline;
-    &:not([class*=shape]) {
+    &:not([class*="atk-shape"]) {
         .border-radius(@cornerRadius);
     }
     &:focus {
@@ -43,14 +43,14 @@ input::-moz-focus-inner {
 }
 
 // Extras
-.input-icon {
+.atk-input-icon {
     display: inline-block;
     position: relative;
     input {
         padding-right: 1.4em;
         width: 100%;
     }
-    *[class*=icon] {
+    *[class*="icon"] {
         .position(@t:50%, @r:0.5em);
         line-height: 1;
         margin-top: -0.5em;
@@ -60,7 +60,7 @@ input::-moz-focus-inner {
         }
     }
 }
-input.option[type=radio] {
+input.atk-option[type=radio] {
     display: none;
     &:checked {
         + label {
