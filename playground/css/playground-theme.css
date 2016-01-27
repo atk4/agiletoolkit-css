@@ -1529,6 +1529,7 @@ body .ui-tooltip {
   background: none;
   border-bottom: none;
   border-color: transparent;
+  margin: 0 0 -1px 0;
 }
 .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default a {
   display: block;
@@ -1542,7 +1543,9 @@ body .ui-tooltip {
   -webkit-border-radius: 0 0 5px 5px !important;
   -moz-border-radius: 0 0 5px 5px !important;
   border-radius: 0 0 5px 5px !important;
-  padding: 0.8rem 0;
+}
+.ui-tabs .ui-tabs-panel.ui-widget-content:not([class*=padding]) {
+  padding: 0.8rem;
 }
 .ui-accordion .ui-accordion-header {
   border-width: 1px;
@@ -3005,6 +3008,14 @@ hr[class*="border"][class*="-thick"] {
 [class*="table"][class*="-spacing--semi--xl"] table thead th:not([class*="padding"]),
 [class*="table"][class*="-spacing--semi--xl"] table tbody td:not([class*="padding"]) {
   padding: 3.2rem 4.8rem;
+}
+[class*="table"][class*="-nosides"] table thead th:not([class*="padding"]):first-child,
+[class*="table"][class*="-nosides"] table tbody td:not([class*="padding"]):first-child {
+  padding-left: 0;
+}
+[class*="table"][class*="-nosides"] table thead th:not([class*="padding"]):last-child,
+[class*="table"][class*="-nosides"] table tbody td:not([class*="padding"]):last-child {
+  padding-right: 0;
 }
 .dialog .dialog-buttons {
   margin: 0 0 -1.6rem -1.6rem;

@@ -195,6 +195,7 @@
             background: none;
             border-bottom: none;
             border-color: transparent;
+            margin: 0 0 -1px 0;
             a {
                 display: block;
                 float: none;
@@ -208,7 +209,9 @@
     .ui-tabs-panel.ui-widget-content {
         &:extend(.box);
         .border-radius(0 0 @cornerRadius @cornerRadius~'!important');
-        padding: round(@margin/2,2) 0;
+        &:not([class*=padding]) {
+            padding: round(@margin/2,2);
+        }
     }
 }
 

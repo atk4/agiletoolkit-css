@@ -148,6 +148,18 @@
             }
         }   
     }
+    &[class*="-nosides"] {
+        table {
+            thead th, tbody td {
+                &:not([class*="padding"]):first-child {
+                    padding-left: 0;
+                }
+                &:not([class*="padding"]):last-child {
+                    padding-right: 0;
+                }
+            }
+        }   
+    }
 }
 
 // Dialog
