@@ -313,72 +313,30 @@
 // Effects
 // ==========================================================
 
-*[class*="atk-effect"] {
-    &, &[class*="atk-button"] {
-        &.atk-effect-danger {
-            color: @effectDanger !important;
-        }
-        &.atk-effect-warning {
-            color: @effectWarning !important;
-        }
-        &.atk-effect-success {
-            color: @effectSuccess !important;
-        }
-        &.atk-effect-info {
-            color: @effectInfo !important;
-        }
+.createEffect(@name, @color) {
+  @bgColor: tint(@color, 90%);
+  .atk-effect-@{name} {
+    background-color: @bgColor;
+    color: @color;
+    &[class*="atk-button"] {
+      color: @color !important;
     }
-    &.atk-label, &.atk-box {
-        &.atk-effect-danger {
-            @color: tint(@effectDanger, 90%);
-            background-color: @color !important;;
-            border-color: @color !important;;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectDanger, #999) !important;;
-            }
-        }
-        &.atk-effect-warning {
-            @color: tint(@effectWarning, 90%);
-            background-color: @color !important;;
-            border-color: @color !important;;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectWarning, #999) !important;;
-            }
-        }
-        &.atk-effect-success {
-            @color: tint(@effectSuccess, 90%);
-            background: @color !important;;
-            border-color: @color !important;;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectSuccess, #999) !important;;
-            }
-        }
-        &.atk-effect-info {
-            @color: tint(@effectInfo, 90%);
-            background-color: @color !important;;
-            border-color: @color !important;;
-            &, h1, h2, h3, h4, h5, h6 {
-                color: multiply(@effectInfo, #999) !important;;
-            }
-        }
+    &.atk-box {
+      background: @bgColor !important;
+      border-color: @bgColor !important;
     }
-    &.atk-effect-danger {
-        input[type="text"],
-        input[type="url"],
-        input[type="email"],
-        input[type="password"],
-        input[type="search"],
-        input[type="number"],
-        input[type="date"],
-        input[type="month"],
-        input[type="week"],
-        input[type="time"],
-        input[type="datetime"],
-        input[type="datetime-local"],
-        input[type="tel"],
-        textarea,
-        .ui-selectmenu-button  {
-            border-color: @effectDanger;
-        }
+    input& {
+      border-color: @color !important;
     }
+  }
+  .atk-effect-@{name}--fill {
+    background-color: @bgColor !important;
+  }
+  .atk-effect-@{name}--text {
+    color: @color !important;
+  }
 }
+.createEffect(success, @effectSuccess);
+.createEffect(info, @effectInfo);
+.createEffect(warning, @effectWarning);
+.createEffect(danger, @effectDanger);
