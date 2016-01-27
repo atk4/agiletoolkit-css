@@ -2116,7 +2116,7 @@ body,
 }
 .atk-effect-success.atk-box {
   background: #e9f9e9 !important;
-  border-color: #e9f9e9 !important;
+  border-color: #25c425 !important;
 }
 input.atk-effect-success {
   border-color: #25c425 !important;
@@ -2136,7 +2136,7 @@ input.atk-effect-success {
 }
 .atk-effect-info.atk-box {
   background: #eaf7fb !important;
-  border-color: #eaf7fb !important;
+  border-color: #2bacd7 !important;
 }
 input.atk-effect-info {
   border-color: #2bacd7 !important;
@@ -2156,7 +2156,7 @@ input.atk-effect-info {
 }
 .atk-effect-warning.atk-box {
   background: #fef6e6 !important;
-  border-color: #fef6e6 !important;
+  border-color: #f7a600 !important;
 }
 input.atk-effect-warning {
   border-color: #f7a600 !important;
@@ -2176,7 +2176,7 @@ input.atk-effect-warning {
 }
 .atk-effect-danger.atk-box {
   background: #ffeae8 !important;
-  border-color: #ffeae8 !important;
+  border-color: #ff2d1a !important;
 }
 input.atk-effect-danger {
   border-color: #ff2d1a !important;
