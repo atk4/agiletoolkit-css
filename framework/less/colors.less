@@ -2,7 +2,7 @@
 // Swatches
 // ==========================================================
 
-.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sLinkHover:auto, @sSwatchSensitivity:50%, @sHoverIntensity:4%, @sBorderIntensity:3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5), @sCustomStyles:false) {
+.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sLinkHover:auto, @sSwatchSensitivity:50%, @sHoverIntensity:4%, @sBorderIntensity:3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5), @sCustomStyles:false,  @sjQueryUI:false) {
     .colorCheck (@property:color, @color:#fff, @intensity:100%) when (luma(@color) >= @sSwatchSensitivity) {
       & when (@property = color) {
         @{property}: fade(black, @intensity);
@@ -155,11 +155,9 @@
             .colorCheck(background, @sFill, @sHoverIntensity);
           }
         }
-          & when not (@sCustomStyles = false) {
-            
+        & when not (@sCustomStyles = false) {
             @sCustomStyles();
-
-          }
+        }
     }
     .createjQueryUI() {
         .ui-widget {
@@ -287,7 +285,9 @@
             background-color: @sFill;
             .createWidgetColors();
             .createTextColors();
-            .createjQueryUI();
+            & when not (@sjQueryUI = false) {
+              .createjQueryUI();
+            }
             &[class*="icon"] {
                 background: none;
                 color: @sFill;

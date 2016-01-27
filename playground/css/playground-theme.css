@@ -3,7 +3,7 @@
  * http://css.agiletoolkit.org/
  */
 /**
- * Agile CSS Framework (c) 2013–2015 v0.9.2
+ * Agile CSS Framework (c) 2013–2016 v0.9.2
  *  http://www4.agiletoolkit.org/css
  */
 /*! jQuery UI - v1.10.3 - 2013-12-23
@@ -4099,58 +4099,6 @@ a.atk-swatch-ink:not([class*="atk-button"]):hover {
 .atk-swatch-ink[class*="atk-menu"][class*="-separated"] > li + li:not([class*="atk-border"]) {
   border-color: #11191f;
 }
-.atk-swatch-ink .ui-widget {
-  color: auto;
-}
-.atk-swatch-ink .ui-widget-hover.ui-state-hover {
-  background: #151e26;
-}
-.atk-swatch-ink .ui-widget-content {
-  background: #1c2933;
-  border-color: #11191f;
-}
-.atk-swatch-ink .ui-tabs .ui-tabs-nav.ui-widget-header {
-  border-bottom: 1px solid #11191f;
-}
-.atk-swatch-ink .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-  color: rgba(255, 255, 255, 0.5);
-}
-.atk-swatch-ink .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
-  color: rgba(255, 255, 255, 0.7);
-}
-.atk-swatch-ink .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
-  border-color: #11191f;
-}
-.atk-swatch-ink .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-  color: rgba(255, 255, 255, 0.7);
-}
-.atk-swatch-ink .ui-tabs .ui-tabs-panel.ui-widget-content {
-  border: 1px solid #11191f;
-  border-top: none;
-}
-.atk-swatch-ink .ui-accordion .ui-accordion-header.ui-state-active {
-  background: #1c2933;
-  border-color: #11191f;
-  border-bottom-color: #1c2933;
-}
-.atk-swatch-ink .ui-accordion .ui-accordion-content {
-  border-color: #11191f;
-}
-.atk-swatch-ink .ui-dialog {
-  border-color: #010102;
-}
-.atk-swatch-ink .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(255, 255, 255, 0.2);
-}
-.atk-swatch-ink .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(255, 255, 255, 0.3);
-}
-.atk-swatch-ink .ui-dialog .ui-widget-header.ui-dialog-titlebar {
-  border-bottom: 1px solid #11191f;
-}
-.atk-swatch-ink .ui-dialog .ui-dialog-buttonset {
-  border-top: 1px solid #11191f;
-}
 .atk-swatch-ink[class*="icon"] {
   background: none;
   color: #1c2933;
@@ -4283,58 +4231,6 @@ a.atk-swatch-gray:not([class*="atk-button"]):hover {
 .atk-swatch-gray[class*="atk-menu"][class*="-separated"] > li + li:not([class*="atk-border"]) {
   border-color: #e4e7e9;
 }
-.atk-swatch-gray .ui-widget {
-  color: auto;
-}
-.atk-swatch-gray .ui-widget-hover.ui-state-hover {
-  background: #eaecee;
-}
-.atk-swatch-gray .ui-widget-content {
-  background: #f5f6f7;
-  border-color: #e4e7e9;
-}
-.atk-swatch-gray .ui-tabs .ui-tabs-nav.ui-widget-header {
-  border-bottom: 1px solid #e4e7e9;
-}
-.atk-swatch-gray .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-  color: rgba(0, 0, 0, 0.5);
-}
-.atk-swatch-gray .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
-  color: rgba(0, 0, 0, 0.7);
-}
-.atk-swatch-gray .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
-  border-color: #e4e7e9;
-}
-.atk-swatch-gray .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-  color: rgba(0, 0, 0, 0.7);
-}
-.atk-swatch-gray .ui-tabs .ui-tabs-panel.ui-widget-content {
-  border: 1px solid #e4e7e9;
-  border-top: none;
-}
-.atk-swatch-gray .ui-accordion .ui-accordion-header.ui-state-active {
-  background: #f5f6f7;
-  border-color: #e4e7e9;
-  border-bottom-color: #f5f6f7;
-}
-.atk-swatch-gray .ui-accordion .ui-accordion-content {
-  border-color: #e4e7e9;
-}
-.atk-swatch-gray .ui-dialog {
-  border-color: #cbd0d5;
-}
-.atk-swatch-gray .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(0, 0, 0, 0.2);
-}
-.atk-swatch-gray .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(0, 0, 0, 0.3);
-}
-.atk-swatch-gray .ui-dialog .ui-widget-header.ui-dialog-titlebar {
-  border-bottom: 1px solid #e4e7e9;
-}
-.atk-swatch-gray .ui-dialog .ui-dialog-buttonset {
-  border-top: 1px solid #e4e7e9;
-}
 .atk-swatch-gray[class*="icon"] {
   background: none;
   color: #f5f6f7;
@@ -4466,58 +4362,6 @@ a.atk-swatch-blue:not([class*="atk-button"]):hover {
 .atk-swatch-blue [class*="atk-menu"][class*="-separated"] > li + li:not([class*="atk-border"]),
 .atk-swatch-blue[class*="atk-menu"][class*="-separated"] > li + li:not([class*="atk-border"]) {
   border-color: #0083e0;
-}
-.atk-swatch-blue .ui-widget {
-  color: auto;
-}
-.atk-swatch-blue .ui-widget-hover.ui-state-hover {
-  background: #0089eb;
-}
-.atk-swatch-blue .ui-widget-content {
-  background: #0095ff;
-  border-color: #0083e0;
-}
-.atk-swatch-blue .ui-tabs .ui-tabs-nav.ui-widget-header {
-  border-bottom: 1px solid #0083e0;
-}
-.atk-swatch-blue .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-  color: rgba(255, 255, 255, 0.5);
-}
-.atk-swatch-blue .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
-  color: rgba(255, 255, 255, 0.7);
-}
-.atk-swatch-blue .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active {
-  border-color: #0083e0;
-}
-.atk-swatch-blue .ui-tabs .ui-tabs-nav.ui-widget-header .ui-state-default.ui-state-active a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-  color: rgba(255, 255, 255, 0.7);
-}
-.atk-swatch-blue .ui-tabs .ui-tabs-panel.ui-widget-content {
-  border: 1px solid #0083e0;
-  border-top: none;
-}
-.atk-swatch-blue .ui-accordion .ui-accordion-header.ui-state-active {
-  background: #0095ff;
-  border-color: #0083e0;
-  border-bottom-color: #0095ff;
-}
-.atk-swatch-blue .ui-accordion .ui-accordion-content {
-  border-color: #0083e0;
-}
-.atk-swatch-blue .ui-dialog {
-  border-color: #0068b3;
-}
-.atk-swatch-blue .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close {
-  color: rgba(255, 255, 255, 0.2);
-}
-.atk-swatch-blue .ui-dialog .ui-widget-header.ui-dialog-titlebar .ui-button.ui-dialog-titlebar-close:hover {
-  color: rgba(255, 255, 255, 0.3);
-}
-.atk-swatch-blue .ui-dialog .ui-widget-header.ui-dialog-titlebar {
-  border-bottom: 1px solid #0083e0;
-}
-.atk-swatch-blue .ui-dialog .ui-dialog-buttonset {
-  border-top: 1px solid #0083e0;
 }
 .atk-swatch-blue[class*="icon"] {
   background: none;
