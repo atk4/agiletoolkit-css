@@ -246,21 +246,10 @@
             .ui-datepicker-header {
                 color: @sText;
             }
-            table.ui-datepicker-calendar {
-                tr td, tr th {
-                    border: 1px solid @sBorder;
-                    a, a:hover {
-                        color: @sText;
-                    }
-                }
-                tr td {
-                    &.ui-datepicker-today {
-                        a {
-                            color: @inputFocus;
-                            outline: 1px solid @inputFocus;
-                        }
-                    }
-                }
+            table.ui-datepicker-calendar tr {
+              a, a:hover {
+                  color: @sText;
+              }
             }
         }
         .ui-selectmenu-menu .ui-menu {

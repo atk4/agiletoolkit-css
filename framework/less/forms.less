@@ -49,6 +49,9 @@ input::-moz-focus-inner {
     input {
         padding-right: 1.4em;
         width: 100%;
+        &:focus ~ [class*="icon"] {
+            color: @inputFocus !important;
+        }
     }
     *[class*="icon"] {
         .position(@t:50%, @r:0.5em);

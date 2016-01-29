@@ -1475,12 +1475,13 @@ body .ui-tooltip {
 .ui-datepicker table.ui-datepicker-calendar {
   border-collapse: collapse;
   border-spacing: 0;
-  line-height: 1;
+  line-height: 1.1;
   margin: 0;
   table-layout: fixed;
 }
 .ui-datepicker table.ui-datepicker-calendar tr a,
 .ui-datepicker table.ui-datepicker-calendar tr span {
+  border-radius: 5px;
   display: inline-block;
   padding: 0.32rem;
 }
@@ -1505,6 +1506,13 @@ body .ui-tooltip {
   display: block;
   font-weight: normal;
   text-align: center;
+}
+.ui-datepicker table.ui-datepicker-calendar tr td.ui-datepicker-today a {
+  color: #0095ff;
+}
+.ui-datepicker table.ui-datepicker-calendar tr td.ui-datepicker-current-day a {
+  color: #ffffff;
+  background: #0095ff;
 }
 .ui-datepicker table.ui-datepicker-calendar tr:last-child td,
 .ui-datepicker table.ui-datepicker-calendar tr:last-child td .ui-state-default {
@@ -3495,6 +3503,9 @@ input::-moz-focus-inner {
   padding-right: 1.4em;
   width: 100%;
 }
+.atk-inputIcon input:focus ~ [class*="icon"] {
+  color: #0095ff !important;
+}
 .atk-inputIcon *[class*="icon"] {
   position: absolute;
   top: 50%;
@@ -3673,19 +3684,9 @@ a[class*="atk-swatch"]:not([class*="atk-button"]):hover {
 .ui-datepicker .ui-datepicker-header {
   color: #444;
 }
-.ui-datepicker table.ui-datepicker-calendar tr td,
-.ui-datepicker table.ui-datepicker-calendar tr th {
-  border: 1px solid #e6e6e6;
-}
-.ui-datepicker table.ui-datepicker-calendar tr td a,
-.ui-datepicker table.ui-datepicker-calendar tr th a,
-.ui-datepicker table.ui-datepicker-calendar tr td a:hover,
-.ui-datepicker table.ui-datepicker-calendar tr th a:hover {
+.ui-datepicker table.ui-datepicker-calendar tr a,
+.ui-datepicker table.ui-datepicker-calendar tr a:hover {
   color: #444;
-}
-.ui-datepicker table.ui-datepicker-calendar tr td.ui-datepicker-today a {
-  color: #0095ff;
-  outline: 1px solid #0095ff;
 }
 .ui-selectmenu-menu .ui-menu {
   border: 1px solid #bfbfbf;

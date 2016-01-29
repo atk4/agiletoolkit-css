@@ -145,11 +145,12 @@
     table.ui-datepicker-calendar {
         border-collapse: collapse;
         border-spacing: 0;
-        line-height: 1;
+        line-height: 1.1;
         margin: 0;
         table-layout: fixed;
         tr {
             a, span {
+                border-radius: @cornerRadius;
                 display: inline-block;
                 padding: round(@margin/5,2);
             }
@@ -172,6 +173,13 @@
                     display: block;
                     font-weight: normal;
                     text-align: center;
+                }
+                &.ui-datepicker-today a {
+                    color: @inputFocus;
+                }
+                &.ui-datepicker-current-day a {
+                    .colorCheck(color, @inputFocus);
+                    background: @inputFocus;
                 }
             }
             &:last-child {
