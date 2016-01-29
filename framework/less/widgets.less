@@ -36,20 +36,23 @@
         tbody tr {
           td {
             position: relative;
-            &:first-child, &:last-child {
-              .atk-tableAction {
-                .position(@t:50%);
-                opacity: 0;
-                transform: translate(0,-50%);
+            .atk-tableAction {
+              .position(@t:50%);
+              opacity: 0;
+              transform: translate(0,-50%);
+              >* {
+                // Fix for Chrome (Chopped 1px at the bottom)
+                margin-top: -1px;
+                transform: translate(0, 1px);
               }
-              &:first-child .atk-tableAction {
-                padding-right: @space/2;
-                right: 100%;
-              }
-              &:last-child .atk-tableAction {
-                left: 100%;
-                padding-left: @space/2;
-              }
+            }
+            &:first-child .atk-tableAction {
+              padding-right: @space/2;
+              right: 100%;
+            }
+            &:last-child .atk-tableAction {
+              left: 100%;
+              padding-left: @space/2;
             }
           }
           &:hover td {
