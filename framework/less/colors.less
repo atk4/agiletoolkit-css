@@ -145,7 +145,7 @@
         }
         &[class*="atk-popover"], &[class*="atk-popover"].atk-box {
             border-color: @sBorderOverlay;
-            .atk-popover-arrow:before {
+            .atk-popoverArrow:before {
                 background-color: @sFill;
                 border-color: @sBorderOverlay;
             }
@@ -301,7 +301,7 @@
         }
         .atk-swatch-@{sName}--fill {
             background-color: @sFill;
-            &, &[class*="atk-popover"] .atk-popover-arrow:before {
+            &, &[class*="atk-popover"] .atk-popoverArrow:before {
               background-color: @sFill;
             }
         }
@@ -318,7 +318,7 @@
   .atk-effect-@{name} {
     background-color: @bgColor;
     color: @color;
-    &[class*="atk-button"] {
+    &[class*="atk-button"], a& {
       color: @color !important;
     }
     &.atk-box {

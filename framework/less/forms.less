@@ -43,7 +43,7 @@ input::-moz-focus-inner {
 }
 
 // Extras
-.atk-input-icon {
+.atk-inputIcon {
     display: inline-block;
     position: relative;
     input {
@@ -60,13 +60,13 @@ input::-moz-focus-inner {
         }
     }
 }
-input.atk-option[type=radio] {
+input.atk-inputOption[type=radio] {
     display: none;
     &:checked {
         + label {
             border-color: @inputFocus;
             cursor: default;
-            &, .comment {
+            &, .atk-comment {
                 color: @inputFocus;
             }
         }

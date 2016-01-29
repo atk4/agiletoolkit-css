@@ -9,23 +9,23 @@ html, body, .atk-layout  {
 	.box-sizing;
 	display: table;
 	width: 100%;
-	>.atk-layout-row, >.atk-layout-column, .atk-layout-row>.atk-layout-column {
+	>.atk-layoutRow, >.atk-layoutColumn, .atk-layoutRow>.atk-layoutColumn {
 		height: 0.1%;
 		position: relative;
 	}
-	>.atk-layout-row {
+	>.atk-layoutRow {
 		display: table-row;
 		height: 0.01em;
-		.atk-expand {
+		.atk-layoutExpand {
 			height: auto;
 		}
 	}
-	>.atk-layout-column, >.atk-layout-row>.atk-layout-column {
+	>.atk-layoutColumn, >.atk-layoutRow>.atk-layoutColumn {
 		display: table-cell;
 		height: auto;
 		vertical-align: top;
 		width: 0.01em;
-		.atk-expand {
+		.atk-layoutExpand {
 			width: auto;
 		}
 	}
@@ -92,7 +92,7 @@ html, body, .atk-layout  {
 
   // Layout
   .layoutCell(@w) {
-    .atk-layout>.atk-layout-row>.atk-layout-cell {
+    .atk-layout>.atk-layoutRow>.atk-layoutCell {
       min-width: @w;
     }
   }
@@ -196,10 +196,10 @@ html, body, .atk-layout  {
   }
   & when (@b = true) {
     .atk-layout {
-      &, >.atk-layout-column, .atk-layout-cell, .atk-layout-row {
+      &, >.atk-layoutColumn, .atk-layoutCell, .atk-layoutRow {
         display: block;
       }
-      .atk-layout-row {
+      .atk-layoutRow {
         height: auto;
       }
     }

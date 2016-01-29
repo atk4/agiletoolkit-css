@@ -26,38 +26,39 @@
     table {
         width: 100%;
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
-                padding: @space; 
-            }
+          &:not([class*="atk-padding"]) {
+              padding: @space; 
+          }
         }
         thead th {
             text-align: left;
         }
         tbody tr {
-            &.atk-table-expander {
-                display: none;
-                td {
-                    border-top: none;
-                }
-
-            }
-            td.atk-table-row-icon {
-                border: none !important;
-                max-width: 0;
+          td {
+            position: relative;
+            &:first-child, &:last-child {
+              .atk-tableAction {
+                .position(@t:50%);
                 opacity: 0;
-                padding: 0 !important;
-                position: relative;
-                width: 0;
-                vertical-align: middle;
-                >* {
-                    .position(@l:100%, @t:50%);
-                    transform: translate(@margin/2,-50%);
-                }
+                transform: translate(0,-50%);
+              }
+              &:first-child .atk-tableAction {
+                padding-right: @space/2;
+                right: 100%;
+              }
+              &:last-child .atk-tableAction {
+                left: 100%;
+                padding-left: @space/2;
+              }
             }
-            &:hover td.atk-table-row-icon {
-                background: none !important;
+          }
+          &:hover td {
+            &:first-child, &:last-child {
+              .atk-tableAction {
                 opacity: 1;
+              }
             }
+          }
         }
     }
     &[class*="-separated"] table {
@@ -112,35 +113,35 @@
             }
         }
     }
-    &[class*="-spacing--semi"] table {
+    &[class*="-spacingSemi"] table {
         thead th, tbody td {
             &:not([class*="atk-padding"]) {
                 padding: @space-s @space;  
             }
         }
     }
-    &[class*="-spacing--semi--xs"] table {
+    &[class*="-spacingSemi--xs"] table {
         thead th, tbody td {
             &:not([class*="atk-padding"]) {
                 padding: @space-xs/2 @space-xs;  
             }
         }
     }
-    &[class*="-spacing--semi--s"] table {
+    &[class*="-spacingSemi--s"] table {
         thead th, tbody td {
             &:not([class*="atk-padding"]) {
                 padding: @space-xs @space-s;  
             }
         }
     }
-    &[class*="-spacing--semi--l"] table {
+    &[class*="-spacingSemi--l"] table {
         thead th, tbody td {
             &:not([class*="atk-padding"]) {
                 padding: @space @space-l;  
             }
         }
     }
-    &[class*="-spacing--semi--xl"] table {
+    &[class*="-spacingSemi--xl"] table {
         thead th, tbody td {
             &:not([class*="atk-padding"]) {
                 padding: @space-l @space-xl;
@@ -165,7 +166,7 @@
     @d: round((@x * sqrt(2)), 2) + 4px;
     @s: (@d - @x)/2;
     .position();
-    .atk-popover-arrow {
+    .atk-popoverArrow {
         background: none !important;
         position: absolute;
         height: @d/2;
@@ -182,34 +183,34 @@
             width: @x;
         }
     }
-    &[class*="atk-popover-bottom"] .atk-popover-arrow:before {
+    &[class*="atk-popover-bottom"] .atk-popoverArrow:before {
         top: auto;
         bottom: @s;
     }
     &, &[class*="atk-popover-top"] {
-        .atk-popover-arrow {
+        .atk-popoverArrow {
             bottom: 100%;
         }
     }
     &[class*="atk-popover-bottom"] {
-        .atk-popover-arrow {
+        .atk-popoverArrow {
             top: 100%;
         }
     }
     &[class*="atk-popover-top-left"], &[class*="atk-popover-bottom-left"] {
-        .atk-popover-arrow {
+        .atk-popoverArrow {
             left: @cornerRadius + 2px;
             right: auto;
         }
     }
     &[class*="atk-popover-top-right"], &[class*="atk-popover-bottom-right"] {
-        .atk-popover-arrow {
+        .atk-popoverArrow {
             left: auto;
             right: @cornerRadius + 2px;
         }
     }
     &[class*="atk-popover-top-center"], &[class*="atk-popover-bottom-center"] {
-        .atk-popover-arrow {
+        .atk-popoverArrow {
             left: 50%;
             margin-left: -@d/2;
             right: auto;
@@ -226,7 +227,7 @@
     .atk-box {
         background: @dialogOverlay;
         border: none;
-        &.banner-cogs {
+        &.atk-bannerCogs {
             line-height: 1;
             &:after, &:before {
                 content: '\e800';
@@ -492,13 +493,13 @@ ul[class*="atk-menu"] {
         width: auto;
     }
 }
-[class*="atk-cells"][class*="group"] {
+[class*="atk-cells"][class*="Group"] {
     display: table;
     >[class*="atk-cells"] {
         display: table-row;
     }
 }
-[class*="atk-cells"][class*="atk-table"] {
+[class*="atk-cells"][class*="Table"] {
     display: table;
     [class*="atk-cells"]-group {
         display: table-row-group;
@@ -512,7 +513,7 @@ ul[class*="atk-menu"] {
 }
 [class*="spacing"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space/2;
         padding-right: @space/2;
         &:first-child {
@@ -525,28 +526,28 @@ ul[class*="atk-menu"] {
 }
 [class*="-spacing--xl"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space-xl/2;
         padding-right: @space-xl/2;
     }
 }
 [class*="-spacing--l"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space-l/2;
         padding-right: @space-l/2;
     }
 }
 [class*="-spacing--s"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space-s/2;
         padding-right: @space-s/2;
     }
 }
 [class*="-spacing--xs"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space-xs/2;
         padding-right: @space-xs/2;
     }

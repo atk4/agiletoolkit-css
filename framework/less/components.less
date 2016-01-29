@@ -235,8 +235,11 @@
 }
 .atk-shape-circle {
     display: inline-block;
-    &, img&, a&[class*="atk-button"], button&[class*="atk-button"], input&[class*="atk-button"], a&.ui-button, button&.ui-button, input&.ui-button {
+    & {
         .border-radius(50%);
+    }
+    &[class*="atk-button"] {
+        &:extend([class*="atk-text"][class*="-baseline--single"]);
     }
 }
 
