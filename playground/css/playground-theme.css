@@ -1628,7 +1628,7 @@ body .ui-tooltip {
   overflow: auto;
   padding: 1.6rem;
 }
-.ui-tooltip {
+.ui-tooltip.ui-widget-content {
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
@@ -2360,7 +2360,7 @@ h5 {
   font-size: 0.875rem;
 }
 [class*="atk-text"][class*="-size--s"],
-.ui-tooltip,
+.ui-tooltip.ui-widget-content,
 pre {
   font-size: 0.77582438rem;
 }
