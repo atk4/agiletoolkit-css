@@ -191,15 +191,16 @@
                         }
                     }
                     &.ui-state-active {
-                        border-color: @sBorder;
-                        a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-                            & when (@sText = auto) {
-                              .colorCheck(color, @sFill, 70%);
-                            }
-                            & when not (@sText = auto) {
-                              color: @sText;
-                            }
+                      background: @sFill;
+                      border-color: @sBorder;
+                      a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
+                        & when (@sText = auto) {
+                          .colorCheck(color, @sFill, 70%);
                         }
+                        & when not (@sText = auto) {
+                          color: @sText;
+                        }
+                      }
                     }
                 }
             }

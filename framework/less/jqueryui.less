@@ -29,7 +29,7 @@
     }
 }
 .ui-widget {
-    font-size: 1em;
+    font-size: @bodySize;
     &, input, select, textarea, button {
         font-family: @bodyFamily;
     }
@@ -208,9 +208,6 @@
                 display: block;
                 float: none;
                 text-align: center;
-            }
-            &.ui-state-active {
-                background: #fff;
             }
         }
     }

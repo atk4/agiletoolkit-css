@@ -24,48 +24,49 @@
 [class*="atk-table"] {
     position: relative;
     table {
-        width: 100%;
-        thead th, tbody td {
-          &:not([class*="atk-padding"]) {
-              padding: @space; 
+      border-spacing: 0;
+      border-collapse: separate;
+      width: 100%;
+      thead th, tbody td {
+        &:not([class*="atk-padding-all"]) {
+            padding: @space; 
+        }
+      }
+      thead th {
+          text-align: left;
+      }
+      tbody tr {
+        td {
+          position: relative;
+          .atk-tableAction {
+            .position(@t:50%);
+            opacity: 0;
+            transform: translate(0,-50%);
+            >* {
+              // Fix for Chrome (Chopped 1px at the bottom)
+              margin-top: -1px;
+              transform: translate(0, 1px);
+            }
+          }
+          &:first-child .atk-tableAction {
+            padding-right: @space/2;
+            right: 100%;
+          }
+          &:last-child .atk-tableAction {
+            left: 100%;
+            padding-left: @space/2;
           }
         }
-        thead th {
-            text-align: left;
-        }
-        tbody tr {
-          td {
-            position: relative;
+        &:hover td {
+          &:first-child, &:last-child {
             .atk-tableAction {
-              .position(@t:50%);
-              opacity: 0;
-              transform: translate(0,-50%);
-              >* {
-                // Fix for Chrome (Chopped 1px at the bottom)
-                margin-top: -1px;
-                transform: translate(0, 1px);
-              }
-            }
-            &:first-child .atk-tableAction {
-              padding-right: @space/2;
-              right: 100%;
-            }
-            &:last-child .atk-tableAction {
-              left: 100%;
-              padding-left: @space/2;
-            }
-          }
-          &:hover td {
-            &:first-child, &:last-child {
-              .atk-tableAction {
-                opacity: 1;
-              }
+              opacity: 1;
             }
           }
         }
+      }
     }
     &[class*="-separated"] table {
-        border-collapse: collapse;
         thead tr th {
             border-bottom-width: 1px;
             border-bottom-style: solid;
@@ -76,87 +77,93 @@
         }
     }
     &[class*="-separated--all"] table {
-        thead tr th, tbody tr td {
+        thead tr th, tbody tr td, tfoot tr td {
             border-width: 1px;
             border-style: solid;
+        }
+        thead + tbody tr td, tbody + tfoot tr td {
+          border-top-width: 0;
+        }
+        thead tr th + th, tbody tr td + td {
+          border-left-width: 0;
         }
     }
     &[class*="-spacing--none"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: 0;
             }
         }
     }
     &[class*="-spacing--s"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space-s;  
             }
         }
     }
     &[class*="-spacing--xs"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space-xs;  
             }
         }
     }
     &[class*="-spacing--l"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space-l;  
             }
         }
     }
     &[class*="-spacing--xl"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space-xl;
             }
         }
     }
     &[class*="-spacingSemi"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space-s @space;  
             }
         }
     }
     &[class*="-spacingSemi--xs"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space-xs/2 @space-xs;  
             }
         }
     }
     &[class*="-spacingSemi--s"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space-xs @space-s;  
             }
         }
     }
     &[class*="-spacingSemi--l"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space @space-l;  
             }
         }
     }
     &[class*="-spacingSemi--xl"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]) {
+            &:not([class*="atk-padding-all"]) {
                 padding: @space-l @space-xl;
             }
         }
     }
     &[class*="-nosides"] table {
         thead th, tbody td {
-            &:not([class*="atk-padding"]):first-child {
+            &:not([class*="atk-padding-all"]):first-child {
                 padding-left: 0;
             }
-            &:not([class*="atk-padding"]):last-child {
+            &:not([class*="atk-padding-all"]):last-child {
                 padding-right: 0;
             }
         }
@@ -297,7 +304,7 @@
     white-space: nowrap;
 }
 .createElementPadding(@padding, @ratio:2) {
-    &:not([class*="atk-padding"]) {
+    &:not([class*="atk-padding-all"]) {
         padding: round(@padding,1) round(@padding*(4/@ratio),1);
         &[class*="-spacing--xs"] {
             padding: round(@padding*0.5,1) round(@padding*(2/@ratio),1);
@@ -314,19 +321,15 @@
     }
 }
 a, button, input {
-    &[class*="atk-button"], &.ui-button {
-        .createButton;
-    }
+  &[class*="atk-button"], &.ui-button {
+    .createButton;
+    .createElementPadding(@buttonPadding, @buttonPaddingRatio);
+  }
 }
 [class*="atk-button"][class*="-blank"] {
     background: none !important;
     border-color: transparent !important;
     box-shadow: none !important;
-}
-a, button, input {
-    &[class*="atk-button"]:not(.ui-icon) {
-        .createElementPadding(@buttonPadding, @buttonPaddingRatio);
-    }
 }
 
 // Menu
@@ -426,7 +429,7 @@ ul[class*="atk-menu"] {
     &:not([class*="atk-shape-rounded"]) {
         .border-radius(@cornerRadius);
     }
-    &:not([class*="atk-padding"]) {
+    &:not([class*="atk-padding-all"]) {
         padding: @space;
     }
     &:last-child {
@@ -565,7 +568,7 @@ ul[class*="atk-menu"] {
             border-top-width: 1px;
             padding-top: @space;
         }
-        &:last-child:not([class*="atk-padding"]) {
+        &:last-child:not([class*="atk-padding-all"]) {
             padding-bottom: 0 !important;
         }
     }

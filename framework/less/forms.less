@@ -7,7 +7,7 @@ fieldset {
     margin: 0;
     padding: 0;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]), textarea {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]), textarea {
     .createElementPadding(@inputPadding, @inputPaddingRatio);
     .placeholder(@inputPlaceholder);
     background: @inputColor;
@@ -16,6 +16,9 @@ input:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox
     box-shadow: @inputInnerShadow;
     color: @inputText;
     line-height: @bodyBaseline;
+    &:not([class*="atk-text"][class*="size"]) {
+      font-size: @bodySize;
+    }
     &:not([class*="atk-shape"]) {
         .border-radius(@cornerRadius);
     }
@@ -26,11 +29,14 @@ input:not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox
         outline: none;
     }
 }
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]), textarea, [class*="inputLabel"] {
+    .createElementPadding(@inputPadding, @inputPaddingRatio);
+}
 input[readonly] {
     background: @inputColor;
 }
-textarea {
-    min-height: @space-xl;
+textarea:not([rows]) {
+  min-height: @space-xl;
 }
 input[type=radio],
 input[type=checkbox] {
@@ -62,6 +68,13 @@ input::-moz-focus-inner {
             margin: 0;
         }
     }
+}
+[class*="atk-inputLabel"] {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 input.atk-inputOption[type=radio] {
     display: none;
