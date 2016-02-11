@@ -72,9 +72,14 @@ input::-moz-focus-inner {
 [class*="atk-inputLabel"] {
     border-color: transparent;
     border-style: solid;
-    border-width: 1px 0;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    &:not([class*="atk-padding-left"]) {
+      padding-left: 0 !important;
+    }
+    &:not([class*="atk-padding-right"]) {
+      padding-right: 0 !important;
+    }
 }
 input.atk-inputOption[type=radio] {
     display: none;

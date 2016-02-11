@@ -27,7 +27,7 @@
       border-spacing: 0;
       border-collapse: separate;
       width: 100%;
-      thead th, tbody td {
+      th, td {
         &:not([class*="atk-padding-all"]) {
             padding: @space; 
         }
@@ -89,83 +89,90 @@
         }
     }
     &[class*="-spacing--none"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: 0;
             }
         }
     }
     &[class*="-spacing--s"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space-s;  
             }
         }
     }
     &[class*="-spacing--xs"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space-xs;  
             }
         }
     }
     &[class*="-spacing--l"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space-l;  
             }
         }
     }
     &[class*="-spacing--xl"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space-xl;
             }
         }
     }
     &[class*="-spacingSemi"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space-s @space;  
             }
         }
     }
     &[class*="-spacingSemi--xs"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space-xs/2 @space-xs;  
             }
         }
     }
     &[class*="-spacingSemi--s"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space-xs @space-s;  
             }
         }
     }
     &[class*="-spacingSemi--l"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space @space-l;  
             }
         }
     }
     &[class*="-spacingSemi--xl"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]) {
                 padding: @space-l @space-xl;
             }
         }
     }
     &[class*="-nosides"] table {
-        thead th, tbody td {
+        th, td {
             &:not([class*="atk-padding-all"]):first-child {
                 padding-left: 0;
             }
             &:not([class*="atk-padding-all"]):last-child {
                 padding-right: 0;
             }
+        }
+    }
+    &[class*="-hover"] {
+        table tbody tr:hover td {
+          @hue: hue(@inputFocus);
+          @saturation: saturation(@inputFocus);
+          background-color: hsl(@hue, @saturation, 97%);
         }
     }
 }
@@ -375,7 +382,7 @@ ul[class*="atk-menu"] {
             }
             &[class*="atk-swatch"] {
                 >a[class*="atk-swatch"] {
-                    background: none;
+                    background: none !important;
                     color: inherit !important;
                 }
             }

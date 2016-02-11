@@ -8,7 +8,7 @@ html {
     line-height: @bodyBaseline;
 }
 body {
-    font-size: @bodySize;
+  font-size: @bodySize;
 }
 
 *, body, button, input, textarea, select {
@@ -35,12 +35,12 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 0;
     }
 }
-h1 { &:extend([class*="atk-text"][class*="-size--5xl"]); }
-h2 { &:extend([class*="atk-text"][class*="-size--3xl"]); }
-h3 { &:extend([class*="atk-text"][class*="-size--xl"]); }
-h4 { &:extend([class*="atk-text"][class*="-size--l"]); }
-h5 { &:extend([class*="atk-text"][class*="-size--m"]); }
-h6, small { &:extend([class*="atk-text"][class*="-size--xs"]); }
+h1 { .atk-text-size--6xl; }
+h2 { .atk-text-size--3xl; }
+h3 { .atk-text-size--xl; }
+h4 { .atk-text-size--l; }
+h5 { .atk-text-size--default; }
+h6, small { .atk-text-size--xs; }
 
 
 // ==========================================================
@@ -49,38 +49,37 @@ h6, small { &:extend([class*="atk-text"][class*="-size--xs"]); }
 
 [class*="atk-text"] {
     &[class*="-heading"] {
-        font-family: @headingFamily;
+      font-family: @headingFamily;
     }
     &[class*="-lead"] {
-        line-height: @headingBaseline;
+      line-height: @headingBaseline;
     }
     &[class*="-bold"] {
-        font-weight: bold;
+      font-weight: bold;
     }
     &[class*="-semibold"] {
-        font-weight: 600;
+      font-weight: 600;
     }
     &[class*="-normal"] {
-        font-weight: 400;
+      font-weight: 400;
     }
     &[class*="-light"] {
-        font-weight: 300;
+      font-weight: 300;
     }
     &[class*="-underline"] {
-        text-decoration: underline;
+      text-decoration: underline;
     }
     &[class*="-italic"] {
-        font-style: italic;
+      font-style: italic;
     }
     &[class*="-caps"] {
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
+      .atk-text-caps;
     }
     &[class*="-nowrap"] {
-        white-space: nowrap;
+      white-space: nowrap;
     }
     &[class*="-baseline"] {
-        line-height: @bodyBaseline;
+      line-height: @bodyBaseline;
     }
     &[class*="-baseline--single"] {
         &, a&[class*="button"], button&[class*="button"], input&[class*="button"], a&.ui-button, button&.ui-button, input&.ui-button {
@@ -88,69 +87,63 @@ h6, small { &:extend([class*="atk-text"][class*="-size--xs"]); }
         }
     }
     &[class*="-ellipsis"] {
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+      .atk-text-ellipsis;
     }
     &[class*="-inherit"] {
-        color: inherit;
+      color: inherit;
     }
     &[class*="-font--clear"] {
-        .clear-font;
+      .atk-text-clear;
     }
     &[class*="-font--reset"] {
-        font-style: normal;
-        letter-spacing: normal;
-        text-transform: none;
-        white-space: normal;
+      .atk-text-reset
     }
 
     // Size Chart
     &[class*="-size--9xl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5);
+      .atk-text-size--9xl;
     }
     &[class*="-size--8xl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4.5);
+      .atk-text-size--8xl;
     }
     &[class*="-size--7xl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4);
+      .atk-text-size--7xl;
     }
     &[class*="-size--6xl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3.5);
+      .atk-text-size--6xl;
     }
     h1, &[class*="-size--5xl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3);
+      .atk-text-size--5xl;
     }
     &[class*="-size--4xl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2.5);
+      .atk-text-size--4xl;
     }
     &[class*="-size--3xl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2);
+      .atk-text-size--3xl;
     }
     &[class*="-size--xxl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1.5);
+      .atk-text-size--xxl;
     }
     &[class*="-size--xl"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1);
+      .atk-text-size--xl;
     }
     &[class*="-size--l"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*0.5);
+      .atk-text-size--l;
     }
     &[class*="-size--m"], &[class*="-size--default"] {
-        font-size: @bodySize;
+      .atk-text-size--default;
     }
     &[class*="-size--s"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-0.5);
+      .atk-text-size--s;
     }
     &[class*="-size--xs"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1);
+      .atk-text-size--xs;
     }
     &[class*="-size--xxs"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1.5);
+      .atk-text-size--xxs;
     }
     &[class*="-size--3xs"] {
-        font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-2);
+      .atk-text-size--3xs;
     }
 }
 
@@ -250,4 +243,76 @@ hr {
     height: 0;
     margin: @space 0;
     width: 100%;
+}
+
+
+// ==========================================================
+// Mixins
+// ==========================================================
+
+
+.atk-text-clear() {
+  font-size: 0;
+  line-height: 0;
+}
+.atk-text-reset() {
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: normal;
+}
+.atk-text-ellipsis() {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.atk-text-caps() {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.atk-text-size--9xl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*5);
+}
+.atk-text-size--8xl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4.5);
+}
+.atk-text-size--7xl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*4);
+}
+.atk-text-size--6xl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3.5);
+}
+.atk-text-size--5xl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*3);
+}
+.atk-text-size--4xl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2.5);
+}
+.atk-text-size--3xl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*2);
+}
+.atk-text-size--xxl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1.5);
+}
+.atk-text-size--xl() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*1);
+}
+.atk-text-size--l() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*0.5);
+}
+.atk-text-size--default() {
+  font-size: @bodySize;
+}
+.atk-text-size--s() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-0.5);
+}
+.atk-text-size--xs() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1);
+}
+.atk-text-size--xxs() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-1.5);
+}
+.atk-text-size--3xs() {
+  font-size: @bodySize * pow(@bodyBaseline,@fontScatter*-2);
 }

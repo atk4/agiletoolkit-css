@@ -16,7 +16,7 @@
         @{property}: fade(white, @intensity);
       }
       & when (@property = background) {
-        @{property}: lighten(@color, @intensity);
+        @{property}: darken(@color, @intensity);
       }
     }
     .createTextColors() {
@@ -95,11 +95,6 @@
         & hr[class*="atk-border"][class*="-overlay"] {
             border-color: @sBorderOverlay;
         }
-        [class*="atk-table"][class*="-hover"] {
-            table tbody tr:hover td {
-                background-color: darken(@sFill, @sHoverIntensity/2) !important;
-            }
-        }
         [class*="atk-table"][class*="-zebra"] tbody tr:nth-child(odd) td:not([class*="atk-swatch"]) {
             background-color: darken(@sFill, 2%);
         }
@@ -150,7 +145,7 @@
                 border-color: @sBorderOverlay;
             }
         }
-        a&[class*="atk-swatch"]:not([class*="atk-button"]) {
+        a&[class*="atk-swatch"]:not([class*="atk-button"]):not([class*="--text"]) {
           &:hover {
             .colorCheck(background, @sFill, @sHoverIntensity);
           }
@@ -266,8 +261,17 @@
             .createTextColors();
             .createjQueryUI();
         }
-        .atk-swatch-@{sName} {
-          background-color: @sFill;
+        .atk-swatch-@{sName}--text {
+            color: @sFill;
+            a&:hover {
+              color: darken(@sFill, @sHoverIntensity*4);
+            }
+        }
+        .atk-swatch-@{sName}, .atk-swatch-@{sName}--fill {
+            background-color: @sFill;
+            &, &[class*="atk-popover"] .atk-popoverArrow:before {
+              background-color: @sFill;
+            }
         }
     }
     & when not (@sName = default) {
