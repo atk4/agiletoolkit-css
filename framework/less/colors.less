@@ -37,10 +37,12 @@
             }
         }
         & when (@sComment = auto) {
-            .atk-comment, a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]) {
+            .atk-comment, a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]),
+            .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
                 .colorCheck(color, @sFill, 50%);
             }
-            a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
+            a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
+            .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
                 .colorCheck(color, @sFill, 60%);
             }
         }
@@ -79,20 +81,24 @@
                 }
             }
         }
-        & [class*="atk-border"][class*="-static"], &[class*="atk-border"][class*="-static"], hr {
+        & [class*="atk-border"][class*="-static"], &[class*="atk-border"][class*="-static"], hr,
+        &[class*="atk-border"][class*="-static"][class*="atk-popover"] .atk-popoverArrow:before {
             border-color: @sBorder;
         }
         & [class*="atk-border"][class*="-disabled"], &[class*="atk-border"][class*="-disabled"], [class*="atk-lister"]>*:not([class*="atk-border"]),
         [class*="atk-table"][class*="-separated"] tbody>tr>td, [class*="atk-table"][class*="-separated"] thead>tr>th,
-        & hr[class*="-disabled"] {
+        & hr[class*="-disabled"],
+        &[class*="atk-border"][class*="-disabled"][class*="atk-popover"] .atk-popoverArrow:before {
             border-color: @sBorderDisabled;
         }
         & [class*="atk-border"][class*="-active"], &[class*="atk-border"][class*="-active"],
-        & hr[class*="atk-border"][class*="-active"] {
+        & hr[class*="atk-border"][class*="-active"],
+        &[class*="atk-border"][class*="-active"][class*="atk-popover"] .atk-popoverArrow:before {
             border-color: @sBorderActive;
         }
         & [class*="atk-border"][class*="-overlay"], &[class*="atk-border"][class*="-overlay"],
-        & hr[class*="atk-border"][class*="-overlay"] {
+        & hr[class*="atk-border"][class*="-overlay"],
+        &[class*="atk-border"][class*="-overlay"][class*="atk-popover"] .atk-popoverArrow:before {
             border-color: @sBorderOverlay;
         }
         [class*="atk-table"][class*="-zebra"] tbody tr:nth-child(odd) td:not([class*="atk-swatch"]) {
@@ -138,12 +144,9 @@
                 border-color: @sFill;
             }
         }
-        &[class*="atk-popover"], &[class*="atk-popover"].atk-box {
-            border-color: @sBorderOverlay;
-            .atk-popoverArrow:before {
-                background-color: @sFill;
-                border-color: @sBorderOverlay;
-            }
+        &[class*="atk-popover"].atk-box .atk-popoverArrow:before {
+            background-color: @sFill;
+            border-color: @sBorder;
         }
         a&[class*="atk-swatch"]:not([class*="atk-button"]):not([class*="--text"]) {
           &:hover {

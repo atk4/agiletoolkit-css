@@ -4,10 +4,10 @@
 
 @margin:                round(@bodyBaseline * 1rem, 1);
 @space:                 round(@margin, 1);
-@space-xs:              round(@margin/3, 1);
-@space-s:               round(@margin/2, 1);
-@space-l:               round(@margin*2, 1);
-@space-xl:              round(@margin*3, 1);
+@space-xs:              round(@margin/(1.5*@spaceRatio), 1);
+@space-s:               round(@margin/@spaceRatio, 1);
+@space-l:               round(@margin*@spaceRatio, 1);
+@space-xl:              round(@margin*(1.5*@spaceRatio), 1);
 
 * { 
    .box-sizing();
