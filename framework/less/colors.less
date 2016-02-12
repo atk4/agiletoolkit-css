@@ -267,10 +267,12 @@
             .createjQueryUI();
         }
         .atk-swatch-@{sName}--text {
-            color: @sFill;
-            a&:hover {
-              color: darken(@sFill, @sHoverIntensity*4);
+            &, h1&, h2&, h3&, h4&, h5&, h6& {
+                color: @sFill;
             }
+        }
+        .atk-swatch-@{sName}--text a&:hover {
+          color: darken(@sFill, @sHoverIntensity*4);
         }
         .atk-swatch-@{sName}, .atk-swatch-@{sName}--fill {
             background-color: @sFill;
@@ -293,10 +295,12 @@
             }
         }
         .atk-swatch-@{sName}--text {
-            color: @sFill;
-            a&:hover {
-              color: darken(@sFill, @sHoverIntensity*4);
+            &, h1&, h2&, h3&, h4&, h5&, h6& {
+                color: @sFill;
             }
+        }
+        .atk-swatch-@{sName}--text a&:hover {
+          color: darken(@sFill, @sHoverIntensity*4);
         }
         .atk-swatch-@{sName}--fill {
             background-color: @sFill;

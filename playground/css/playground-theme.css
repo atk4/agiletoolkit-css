@@ -2788,10 +2788,16 @@ body .ui-dialog .ui-dialog-buttonset,
 [class*="atk-swatch"]:not(.atk-swatch-default) .atk-swatch-default .ui-dialog .ui-dialog-buttonset {
   border-top: 1px solid #e6e6e6;
 }
-.atk-swatch-default--text {
+.atk-swatch-default--text,
+h1.atk-swatch-default--text,
+h2.atk-swatch-default--text,
+h3.atk-swatch-default--text,
+h4.atk-swatch-default--text,
+h5.atk-swatch-default--text,
+h6.atk-swatch-default--text {
   color: #fff;
 }
-a.atk-swatch-default--text:hover {
+.atk-swatch-default--text a:hover {
   color: #d6d6d6;
 }
 .atk-swatch-default,
@@ -2921,10 +2927,16 @@ a.atk-swatch-ink:not([class*="atk-button"]):hover {
   background: none;
   color: #1c2933;
 }
-.atk-swatch-ink--text {
+.atk-swatch-ink--text,
+h1.atk-swatch-ink--text,
+h2.atk-swatch-ink--text,
+h3.atk-swatch-ink--text,
+h4.atk-swatch-ink--text,
+h5.atk-swatch-ink--text,
+h6.atk-swatch-ink--text {
   color: #1c2933;
 }
-a.atk-swatch-ink--text:hover {
+.atk-swatch-ink--text a:hover {
   color: #000000;
 }
 .atk-swatch-ink--fill {
@@ -3051,10 +3063,16 @@ a.atk-swatch-gray:not([class*="atk-button"]):hover {
   background: none;
   color: #f5f6f7;
 }
-.atk-swatch-gray--text {
+.atk-swatch-gray--text,
+h1.atk-swatch-gray--text,
+h2.atk-swatch-gray--text,
+h3.atk-swatch-gray--text,
+h4.atk-swatch-gray--text,
+h5.atk-swatch-gray--text,
+h6.atk-swatch-gray--text {
   color: #f5f6f7;
 }
-a.atk-swatch-gray--text:hover {
+.atk-swatch-gray--text a:hover {
   color: #c8cdd3;
 }
 .atk-swatch-gray--fill {
@@ -3181,10 +3199,16 @@ a.atk-swatch-blue:not([class*="atk-button"]):hover {
   background: none;
   color: #0095ff;
 }
-.atk-swatch-blue--text {
+.atk-swatch-blue--text,
+h1.atk-swatch-blue--text,
+h2.atk-swatch-blue--text,
+h3.atk-swatch-blue--text,
+h4.atk-swatch-blue--text,
+h5.atk-swatch-blue--text,
+h6.atk-swatch-blue--text {
   color: #0095ff;
 }
-a.atk-swatch-blue--text:hover {
+.atk-swatch-blue--text a:hover {
   color: #0065ad;
 }
 .atk-swatch-blue--fill {
