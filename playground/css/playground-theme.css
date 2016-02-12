@@ -1586,8 +1586,8 @@ hr[class*="atk-border"][class*="-thick"] {
   border-collapse: separate;
   width: 100%;
 }
-[class*="atk-table"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 1.6rem;
 }
 [class*="atk-table"] table thead th {
@@ -1640,52 +1640,52 @@ hr[class*="atk-border"][class*="-thick"] {
 [class*="atk-table"][class*="-separated--all"] table tbody tr td + td {
   border-left-width: 0;
 }
-[class*="atk-table"][class*="-spacing--none"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacing--none"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacing--none"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacing--none"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 0;
 }
-[class*="atk-table"][class*="-spacing--s"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacing--s"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacing--s"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacing--s"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 1.1rem;
 }
-[class*="atk-table"][class*="-spacing--xs"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacing--xs"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacing--xs"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacing--xs"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 0.7rem;
 }
-[class*="atk-table"][class*="-spacing--l"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacing--l"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacing--l"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacing--l"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 2.4rem;
 }
-[class*="atk-table"][class*="-spacing--xl"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacing--xl"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacing--xl"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacing--xl"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 3.6rem;
 }
-[class*="atk-table"][class*="-spacingSemi"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacingSemi"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacingSemi"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacingSemi"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 1.1rem 1.6rem;
 }
-[class*="atk-table"][class*="-spacingSemi--xs"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacingSemi--xs"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacingSemi--xs"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacingSemi--xs"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 0.35rem 0.7rem;
 }
-[class*="atk-table"][class*="-spacingSemi--s"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacingSemi--s"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacingSemi--s"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacingSemi--s"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 0.7rem 1.1rem;
 }
-[class*="atk-table"][class*="-spacingSemi--l"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacingSemi--l"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacingSemi--l"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacingSemi--l"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 1.6rem 2.4rem;
 }
-[class*="atk-table"][class*="-spacingSemi--xl"] table th:not([class*="atk-padding-all"]),
-[class*="atk-table"][class*="-spacingSemi--xl"] table td:not([class*="atk-padding-all"]) {
+[class*="atk-table"][class*="-spacingSemi--xl"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="atk-table"][class*="-spacingSemi--xl"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 2.4rem 3.6rem;
 }
-[class*="atk-table"][class*="-nosides"] table th:not([class*="atk-padding-all"]):first-child,
-[class*="atk-table"][class*="-nosides"] table td:not([class*="atk-padding-all"]):first-child {
+[class*="atk-table"][class*="-nosides"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]):first-child,
+[class*="atk-table"][class*="-nosides"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]):first-child {
   padding-left: 0;
 }
-[class*="atk-table"][class*="-nosides"] table th:not([class*="atk-padding-all"]):last-child,
-[class*="atk-table"][class*="-nosides"] table td:not([class*="atk-padding-all"]):last-child {
+[class*="atk-table"][class*="-nosides"] table th:not([class*="atk-padding--"]):not([class*="atk-padding "]):last-child,
+[class*="atk-table"][class*="-nosides"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]):last-child {
   padding-right: 0;
 }
 [class*="atk-table"][class*="-hover"] table tbody tr:hover td {
@@ -2166,7 +2166,7 @@ ul[class*="atk-menu"][class*="-separated"] > li + li {
   border-top-width: 1px;
   padding-top: 1.6rem;
 }
-[class*="atk-lister"] > *:last-child:not([class*="atk-padding-all"]) {
+[class*="atk-lister"] > *:last-child:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding-bottom: 0 !important;
 }
 [class*="atk-lister"][class*="-spacing--none"] > * {

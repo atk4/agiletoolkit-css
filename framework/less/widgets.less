@@ -28,7 +28,7 @@
       border-collapse: separate;
       width: 100%;
       th, td {
-        &:not([class*="atk-padding-all"]) {
+        &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
             padding: @space; 
         }
       }
@@ -90,80 +90,80 @@
     }
     &[class*="-spacing--none"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: 0;
             }
         }
     }
     &[class*="-spacing--s"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space-s;  
             }
         }
     }
     &[class*="-spacing--xs"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space-xs;  
             }
         }
     }
     &[class*="-spacing--l"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space-l;  
             }
         }
     }
     &[class*="-spacing--xl"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space-xl;
             }
         }
     }
     &[class*="-spacingSemi"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space-s @space;  
             }
         }
     }
     &[class*="-spacingSemi--xs"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space-xs/2 @space-xs;  
             }
         }
     }
     &[class*="-spacingSemi--s"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space-xs @space-s;  
             }
         }
     }
     &[class*="-spacingSemi--l"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space @space-l;  
             }
         }
     }
     &[class*="-spacingSemi--xl"] table {
         th, td {
-            &:not([class*="atk-padding-all"]) {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
                 padding: @space-l @space-xl;
             }
         }
     }
     &[class*="-nosides"] table {
         th, td {
-            &:not([class*="atk-padding-all"]):first-child {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]):first-child {
                 padding-left: 0;
             }
-            &:not([class*="atk-padding-all"]):last-child {
+            &:not([class*="atk-padding--"]):not([class*="atk-padding "]):last-child {
                 padding-right: 0;
             }
         }
@@ -628,7 +628,7 @@ ul[class*="atk-menu"] {
             border-top-width: 1px;
             padding-top: @space;
         }
-        &:last-child:not([class*="atk-padding-all"]) {
+        &:last-child:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
             padding-bottom: 0 !important;
         }
     }
