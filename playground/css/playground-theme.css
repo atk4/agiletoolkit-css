@@ -930,20 +930,20 @@ h6 {
   text-transform: none;
   margin: 1.6rem 0 0.8rem 0;
 }
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
+h1:first-child:not([class*="atk-margin-top"]),
+h2:first-child:not([class*="atk-margin-top"]),
+h3:first-child:not([class*="atk-margin-top"]),
+h4:first-child:not([class*="atk-margin-top"]),
+h5:first-child:not([class*="atk-margin-top"]),
+h6:first-child:not([class*="atk-margin-top"]) {
   margin-top: 0;
 }
-h1:last-child,
-h2:last-child,
-h3:last-child,
-h4:last-child,
-h5:last-child,
-h6:last-child {
+h1:last-child:not([class*="atk-margin-bottom"]),
+h2:last-child:not([class*="atk-margin-bottom"]),
+h3:last-child:not([class*="atk-margin-bottom"]),
+h4:last-child:not([class*="atk-margin-bottom"]),
+h5:last-child:not([class*="atk-margin-bottom"]),
+h6:last-child:not([class*="atk-margin-bottom"]) {
   margin-bottom: 0;
 }
 h2 {
@@ -1086,8 +1086,6 @@ pre {
 }
 figure img {
   display: block;
-  height: auto;
-  width: 100%;
 }
 figcaption {
   color: red;
@@ -2552,13 +2550,21 @@ body .atk-comment,
 body a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]),
 .atk-swatch-default a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]),
 [class*="atk-swatch"]:not(.atk-swatch-default) .box:not([class*="atk-swatch"]) a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]),
-[class*="atk-swatch"]:not(.atk-swatch-default) .atk-swatch-default a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]) {
+[class*="atk-swatch"]:not(.atk-swatch-default) .atk-swatch-default a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]),
+body .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]),
+.atk-swatch-default .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]),
+[class*="atk-swatch"]:not(.atk-swatch-default) .box:not([class*="atk-swatch"]) .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]),
+[class*="atk-swatch"]:not(.atk-swatch-default) .atk-swatch-default .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
   color: #999;
 }
 body a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
 .atk-swatch-default a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
 [class*="atk-swatch"]:not(.atk-swatch-default) .box:not([class*="atk-swatch"]) a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
-[class*="atk-swatch"]:not(.atk-swatch-default) .atk-swatch-default a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
+[class*="atk-swatch"]:not(.atk-swatch-default) .atk-swatch-default a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
+body .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
+.atk-swatch-default .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
+[class*="atk-swatch"]:not(.atk-swatch-default) .box:not([class*="atk-swatch"]) .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
+[class*="atk-swatch"]:not(.atk-swatch-default) .atk-swatch-default .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
   color: #808080;
 }
 body a:not([class*="atk-button"]):not([class*="atk-swatch"]),

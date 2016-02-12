@@ -28,10 +28,10 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: @headingCase;
     margin: @space 0 round(@space/2,2) 0;
     &:extend([class*="atk-text"][class*="-lead"]);
-    &:first-child {
+    &:first-child:not([class*="atk-margin-top"]) {
         margin-top: 0;
     }
-    &:last-child {
+    &:last-child:not([class*="atk-margin-bottom"]) {
         margin-bottom: 0;
     }
 }
@@ -153,8 +153,6 @@ h6, small { .atk-text-size--xs; }
 // Make images responsive
 figure img {
     display:block;
-    height: auto;
-    width: 100%;
 }
 
 // Figcaption styling

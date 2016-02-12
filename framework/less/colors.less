@@ -47,10 +47,12 @@
             }
         }
         & when not (@sComment = auto) {
-            .atk-comment, a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]) {
+            .atk-comment, a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]),
+            .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
                 color: @sComment;
             }
-            a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
+            a.atk-comment:not([class*="atk-button"]):not([class*="atk-swatch"]):hover,
+            .atk-comment a:not([class*="atk-button"]):not([class*="atk-swatch"]):hover {
                 color: darken(@sComment, 10%);
             }
         }
