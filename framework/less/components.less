@@ -49,19 +49,19 @@
 .createSpace(@property:padding) {
 
     // All
-    [class*='atk-@{property}-all'] {
+    .atk-@{property} {
         @{property}: @space;
     }
-    [class*='atk-@{property}-all--xs'] {
+    [class*='atk-@{property}--xs'] {
         @{property}: @space-xs;
     }
-    [class*='atk-@{property}-all--s'] {
+    [class*='atk-@{property}--s'] {
         @{property}: @space-s;
     }
-    [class*='atk-@{property}-all--l'] {
+    [class*='atk-@{property}--l'] {
         @{property}: @space-l;
     }
-    [class*='atk-@{property}-all--xl'] {
+    [class*='atk-@{property}--xl'] {
         @{property}: @space-xl;
     }
 
@@ -134,7 +134,7 @@
     }
 
     // Reset
-    [class*='atk-@{property}-all--none'] {
+    [class*='atk-@{property}--none'] {
         @{property}: 0 !important;
     }
     [class*='atk-@{property}-bottom--none'] {

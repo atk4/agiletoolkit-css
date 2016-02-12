@@ -946,9 +946,6 @@ h5:last-child,
 h6:last-child {
   margin-bottom: 0;
 }
-h1 {
-  font-size: 2.03104927rem;
-}
 h2 {
   font-size: 1.41575rem;
 }
@@ -1218,19 +1215,19 @@ hr {
 [class*="atk-align-top"][class*=atk-cells] > .atk-cell {
   vertical-align: top !important;
 }
-[class*='atk-padding-all'] {
+.atk-padding {
   padding: 1.6rem;
 }
-[class*='atk-padding-all--xs'] {
+[class*='atk-padding--xs'] {
   padding: 0.7rem;
 }
-[class*='atk-padding-all--s'] {
+[class*='atk-padding--s'] {
   padding: 1.1rem;
 }
-[class*='atk-padding-all--l'] {
+[class*='atk-padding--l'] {
   padding: 2.4rem;
 }
-[class*='atk-padding-all--xl'] {
+[class*='atk-padding--xl'] {
   padding: 3.6rem;
 }
 [class*='atk-padding-bottom'] {
@@ -1293,7 +1290,7 @@ hr {
 [class*='atk-padding-top--xl'] {
   padding-top: 3.6rem;
 }
-[class*='atk-padding-all--none'] {
+[class*='atk-padding--none'] {
   padding: 0 !important;
 }
 [class*='atk-padding-bottom--none'] {
@@ -1308,19 +1305,19 @@ hr {
 [class*='atk-padding-top--none'] {
   padding-top: 0 !important;
 }
-[class*='atk-margin-all'] {
+.atk-margin {
   margin: 1.6rem;
 }
-[class*='atk-margin-all--xs'] {
+[class*='atk-margin--xs'] {
   margin: 0.7rem;
 }
-[class*='atk-margin-all--s'] {
+[class*='atk-margin--s'] {
   margin: 1.1rem;
 }
-[class*='atk-margin-all--l'] {
+[class*='atk-margin--l'] {
   margin: 2.4rem;
 }
-[class*='atk-margin-all--xl'] {
+[class*='atk-margin--xl'] {
   margin: 3.6rem;
 }
 [class*='atk-margin-bottom'] {
@@ -1383,7 +1380,7 @@ hr {
 [class*='atk-margin-top--xl'] {
   margin-top: 3.6rem;
 }
-[class*='atk-margin-all--none'] {
+[class*='atk-margin--none'] {
   margin: 0 !important;
 }
 [class*='atk-margin-bottom--none'] {
@@ -1895,44 +1892,44 @@ input.ui-button:not([class*="atk-shape"]) {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-a[class*="atk-button"]:not([class*="atk-padding-all"]),
-button[class*="atk-button"]:not([class*="atk-padding-all"]),
-input[class*="atk-button"]:not([class*="atk-padding-all"]),
-a.ui-button:not([class*="atk-padding-all"]),
-button.ui-button:not([class*="atk-padding-all"]),
-input.ui-button:not([class*="atk-padding-all"]) {
+a[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+button[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+input[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+a.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+button.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+input.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 0.5em 1em;
 }
-a[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--xs"],
-button[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--xs"],
-input[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--xs"],
-a.ui-button:not([class*="atk-padding-all"])[class*="-spacing--xs"],
-button.ui-button:not([class*="atk-padding-all"])[class*="-spacing--xs"],
-input.ui-button:not([class*="atk-padding-all"])[class*="-spacing--xs"] {
+a[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
+button[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
+input[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
+a.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
+button.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
+input.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"] {
   padding: 0.3em 0.5em;
 }
-a[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--s"],
-button[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--s"],
-input[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--s"],
-a.ui-button:not([class*="atk-padding-all"])[class*="-spacing--s"],
-button.ui-button:not([class*="atk-padding-all"])[class*="-spacing--s"],
-input.ui-button:not([class*="atk-padding-all"])[class*="-spacing--s"] {
+a[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
+button[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
+input[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
+a.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
+button.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
+input.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"] {
   padding: 0.4em 0.8em;
 }
-a[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--l"],
-button[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--l"],
-input[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--l"],
-a.ui-button:not([class*="atk-padding-all"])[class*="-spacing--l"],
-button.ui-button:not([class*="atk-padding-all"])[class*="-spacing--l"],
-input.ui-button:not([class*="atk-padding-all"])[class*="-spacing--l"] {
+a[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
+button[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
+input[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
+a.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
+button.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
+input.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"] {
   padding: 0.6em 1.3em;
 }
-a[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--xl"],
-button[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--xl"],
-input[class*="atk-button"]:not([class*="atk-padding-all"])[class*="-spacing--xl"],
-a.ui-button:not([class*="atk-padding-all"])[class*="-spacing--xl"],
-button.ui-button:not([class*="atk-padding-all"])[class*="-spacing--xl"],
-input.ui-button:not([class*="atk-padding-all"])[class*="-spacing--xl"] {
+a[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
+button[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
+input[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
+a.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
+button.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
+input.ui-button:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"] {
   padding: 0.8em 1.5em;
 }
 [class*="atk-button"][class*="-blank"] {
@@ -2045,7 +2042,7 @@ ul[class*="atk-menu"][class*="-separated"] > li + li {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.atk-box:not([class*="atk-padding-all"]) {
+.atk-box:not([class*="atk-padding--"]) {
   padding: 1.6rem;
 }
 .atk-box:last-child {
@@ -2216,24 +2213,24 @@ textarea {
   color: #000;
   line-height: 1.618;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"]),
-textarea:not([class*="atk-padding-all"]) {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "]),
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 0.5em 0.7em;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"])[class*="-spacing--xs"],
-textarea:not([class*="atk-padding-all"])[class*="-spacing--xs"] {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"] {
   padding: 0.3em 0.3em;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"])[class*="-spacing--s"],
-textarea:not([class*="atk-padding-all"])[class*="-spacing--s"] {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"] {
   padding: 0.4em 0.5em;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"])[class*="-spacing--l"],
-textarea:not([class*="atk-padding-all"])[class*="-spacing--l"] {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"] {
   padding: 0.6em 0.8em;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"])[class*="-spacing--xl"],
-textarea:not([class*="atk-padding-all"])[class*="-spacing--xl"] {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"] {
   padding: 0.8em 1em;
 }
 input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox])::-webkit-input-placeholder,
@@ -2270,29 +2267,29 @@ textarea:focus {
   border-color: #0095ff !important;
   outline: none;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"]),
-textarea:not([class*="atk-padding-all"]),
-[class*="inputLabel"]:not([class*="atk-padding-all"]) {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "]),
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "]),
+[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 0.5em 0.7em;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"])[class*="-spacing--xs"],
-textarea:not([class*="atk-padding-all"])[class*="-spacing--xs"],
-[class*="inputLabel"]:not([class*="atk-padding-all"])[class*="-spacing--xs"] {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
+[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"] {
   padding: 0.3em 0.3em;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"])[class*="-spacing--s"],
-textarea:not([class*="atk-padding-all"])[class*="-spacing--s"],
-[class*="inputLabel"]:not([class*="atk-padding-all"])[class*="-spacing--s"] {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
+[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"] {
   padding: 0.4em 0.5em;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"])[class*="-spacing--l"],
-textarea:not([class*="atk-padding-all"])[class*="-spacing--l"],
-[class*="inputLabel"]:not([class*="atk-padding-all"])[class*="-spacing--l"] {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
+[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"] {
   padding: 0.6em 0.8em;
 }
-input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding-all"])[class*="-spacing--xl"],
-textarea:not([class*="atk-padding-all"])[class*="-spacing--xl"],
-[class*="inputLabel"]:not([class*="atk-padding-all"])[class*="-spacing--xl"] {
+input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
+textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
+[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"] {
   padding: 0.8em 1em;
 }
 input[readonly] {
@@ -2388,6 +2385,9 @@ img::selection {
 }
 img::-moz-selection {
   background: transparent;
+}
+.atk-absolute {
+  position: absolute;
 }
 .atk-relative {
   position: relative;

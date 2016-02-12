@@ -364,7 +364,7 @@
     white-space: nowrap;
 }
 .createElementPadding(@padding, @ratio:2) {
-    &:not([class*="atk-padding-all"]) {
+    &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
         padding: round(@padding,1) round(@padding*(4/@ratio),1);
         &[class*="-spacing--xs"] {
             padding: round(@padding*0.5,1) round(@padding*(2/@ratio),1);
@@ -489,7 +489,7 @@ ul[class*="atk-menu"] {
     &:not([class*="atk-shape-rounded"]) {
         .border-radius(@cornerRadius);
     }
-    &:not([class*="atk-padding-all"]) {
+    &:not([class*="atk-padding--"]) {
         padding: @space;
     }
     &:last-child {
