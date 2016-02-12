@@ -142,8 +142,8 @@
             }
             &[class*="atk-button"]:hover {
                 .colorCheck(color, @sFill);
-                background-color: @sFill;
-                border-color: @sFill;
+                background-color: darken(@sFill,@sHoverIntensity);
+                border-color: darken(@sBorderActive,@sHoverIntensity);
             }
         }
         &[class*="atk-popover"].atk-box .atk-popoverArrow:before {
