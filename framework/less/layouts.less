@@ -81,7 +81,7 @@ html, body, .atk-layout  {
 }
 
 // Viewport Features
-.viewportFeatures(@c:@class, @cs:@customStyle, @g:@colsGutter, @b:@stackLayout, @wmin:@wrapperMinWidth, @wmax:@wrapperMaxWidth, @wm:@wrapperMargin, @winmin:@windowMinWidth) { 
+.viewportFeatures(@c:@class, @cs:@customStyles, @g:@colsGutter, @b:@stackLayout, @wmin:@wrapperMinWidth, @wmax:@wrapperMaxWidth, @wm:@wrapperMargin, @winmin:@windowMinWidth) { 
   
   // Custom Mixin
   & when not (@cs = false) {
@@ -228,7 +228,7 @@ html, body, .atk-layout  {
 }
 
 // Grid System Generator
-.createViewport(@class:false, @customStyle: false, @viewportMinWidth:false, @viewportMaxWidth:false, @cols:12, @colsGutter:20px, @stackLayout:false, @wrapperMinWidth:0, @wrapperMaxWidth:100%, @wrapperMargin:0, @windowMinWidth:false) {
+.createViewport(@class:false, @customStyles: false, @viewportMinWidth:false, @viewportMaxWidth:false, @cols:12, @colsGutter:20px, @stackLayout:false, @wrapperMinWidth:0, @wrapperMaxWidth:100%, @wrapperMargin:0, @windowMinWidth:false) {
   & when (isnumber(@viewportMinWidth)) and (isnumber(@viewportMaxWidth)) {
     @media screen and (min-width: @viewportMinWidth) and (max-width: @viewportMaxWidth) {
       .viewportFeatures();
