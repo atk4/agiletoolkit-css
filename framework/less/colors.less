@@ -8,7 +8,7 @@
         @{property}: fade(black, @intensity);
       }
       & when (@property = background) {
-        @{property}: darken(@color, @intensity);
+        @{property}-color: darken(@color, @intensity);
       }
     }
     .colorCheck (@property:color, @color:#fff, @intensity:100%) when (luma(@color) < @sSwatchSensitivity) {
@@ -16,7 +16,7 @@
         @{property}: fade(white, @intensity);
       }
       & when (@property = background) {
-        @{property}: darken(@color, @intensity);
+        @{property}-color: darken(@color, @intensity);
       }
     }
     .createTextColors() {
@@ -165,11 +165,11 @@
         }
         .ui-widget-hover {
             &.ui-state-hover {
-                background: darken(@sFill, @sHoverIntensity);
+                background-color: darken(@sFill, @sHoverIntensity);
             }
         }
         .ui-widget-content {
-            background: @sFill;
+            background-color: @sFill;
             border-color: @sBorder;
         }
         .ui-tabs {
@@ -191,7 +191,7 @@
                         }
                     }
                     &.ui-state-active {
-                      background: @sFill;
+                      background-color: @sFill;
                       border-color: @sBorder;
                       a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
                         & when (@sText = auto) {
@@ -212,7 +212,7 @@
         .ui-accordion {
             .ui-accordion-header {
                 &.ui-state-active {
-                    background: @sFill;
+                    background-color: @sFill;
                     border-color: @sBorder;
                     border-bottom-color: @sFill;
                 }
@@ -290,7 +290,7 @@
               .createjQueryUI();
             }
             &[class*="icon"] {
-                background: none;
+                background-color: none;
                 color: @sFill;
             }
         }
@@ -325,7 +325,7 @@
       color: @color !important;
     }
     &.atk-box {
-      background: @bgColor !important;
+      background-color: @bgColor !important;
       border-color: @color !important;
     }
     input& {
