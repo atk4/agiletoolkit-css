@@ -3485,14 +3485,14 @@ button[class*="atk-button"]:hover,
 }
 [class*="atk-border"][class*="-outline"],
 [class*="atk-border"][class*="-outline"][class*="atk-button"] {
-  background-color: transparent;
+  background-color: transparent !important;
   border-color: #fff;
-  color: #fff;
+  color: #fff !important;
 }
 [class*="atk-border"][class*="-outline"][class*="atk-button"]:hover {
-  color: #000000;
-  background-color: #f5f5f5;
-  border-color: #c2c2c2;
+  color: #000000 !important;
+  background-color: #f5f5f5 !important;
+  border-color: #f5f5f5;
 }
 [class*="atk-popover"].atk-box .atk-popoverArrow:before {
   background-color: #fff;
@@ -3696,14 +3696,14 @@ button.atk-swatch-ink[class*="atk-button"]:hover,
 }
 .atk-swatch-ink[class*="atk-border"][class*="-outline"],
 .atk-swatch-ink[class*="atk-border"][class*="-outline"][class*="atk-button"] {
-  background-color: transparent;
+  background-color: transparent !important;
   border-color: #1c2933;
-  color: #1c2933;
+  color: #1c2933 !important;
 }
 .atk-swatch-ink[class*="atk-border"][class*="-outline"][class*="atk-button"]:hover {
-  color: #ffffff;
-  background-color: #151e26;
-  border-color: #000000;
+  color: #ffffff !important;
+  background-color: #151e26 !important;
+  border-color: #151e26;
 }
 .atk-swatch-ink[class*="atk-popover"].atk-box .atk-popoverArrow:before {
   background-color: #1c2933;
@@ -3865,14 +3865,14 @@ button.atk-swatch-gray[class*="atk-button"]:hover,
 }
 .atk-swatch-gray[class*="atk-border"][class*="-outline"],
 .atk-swatch-gray[class*="atk-border"][class*="-outline"][class*="atk-button"] {
-  background-color: transparent;
+  background-color: transparent !important;
   border-color: #f5f6f7;
-  color: #f5f6f7;
+  color: #f5f6f7 !important;
 }
 .atk-swatch-gray[class*="atk-border"][class*="-outline"][class*="atk-button"]:hover {
-  color: #000000;
-  background-color: #eaecee;
-  border-color: #c8cdd3;
+  color: #000000 !important;
+  background-color: #eaecee !important;
+  border-color: #eaecee;
 }
 .atk-swatch-gray[class*="atk-popover"].atk-box .atk-popoverArrow:before {
   background-color: #f5f6f7;
@@ -4034,14 +4034,14 @@ button.atk-swatch-blue[class*="atk-button"]:hover,
 }
 .atk-swatch-blue[class*="atk-border"][class*="-outline"],
 .atk-swatch-blue[class*="atk-border"][class*="-outline"][class*="atk-button"] {
-  background-color: transparent;
+  background-color: transparent !important;
   border-color: #0095ff;
-  color: #0095ff;
+  color: #0095ff !important;
 }
 .atk-swatch-blue[class*="atk-border"][class*="-outline"][class*="atk-button"]:hover {
-  color: #ffffff;
-  background-color: #0089eb;
-  border-color: #0065ad;
+  color: #ffffff !important;
+  background-color: #0089eb !important;
+  border-color: #0089eb;
 }
 .atk-swatch-blue[class*="atk-popover"].atk-box .atk-popoverArrow:before {
   background-color: #0095ff;

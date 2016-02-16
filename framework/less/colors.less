@@ -119,46 +119,46 @@
     }
     .createWidgetColors() {
         &.atk-box {
-            background-color: @sFill;
-            border-color: @sBorder;
+          background-color: @sFill;
+          border-color: @sBorder;
         }
         a&[class*="atk-button"],
         input&[class*="atk-button"],
         button&[class*="atk-button"],
         .ui-state-default,
         .ui-widget-content .ui-state-default {
-            border-color: @sBorderActive;
+          border-color: @sBorderActive;
         }
         a&[class*="atk-button"],
         input&[class*="atk-button"],
         button&[class*="atk-button"],
         .ui-state-default,
         .ui-widget-content .ui-state-default {
-            .colorCheck(color, @sFill);
-            background-color: @sFill;
-            &:hover {
-                background-color: darken(@sFill,@sHoverIntensity);
-                border-color: darken(@sBorderActive,@sHoverIntensity);
-            }
+          .colorCheck(color, @sFill);
+          background-color: @sFill;
+          &:hover {
+            background-color: darken(@sFill,@sHoverIntensity);
+            border-color: darken(@sBorderActive,@sHoverIntensity);
+          }
         }
         &[class*="atk-button"][class*="-blank"] {
-            color: @sFill !important;
+          color: @sFill !important;
         }
         &[class*="atk-border"][class*="-outline"] {
-            &, &[class*="atk-button"] {
-            background-color: transparent;
+          &, &[class*="atk-button"] {
+            background-color: transparent !important;
             border-color: @sFill;   
-            color: @sFill;
-            }
-            &[class*="atk-button"]:hover {
-                .colorCheck(color, @sFill);
-                background-color: darken(@sFill,@sHoverIntensity);
-                border-color: darken(@sBorderActive,@sHoverIntensity);
-            }
+            color: @sFill !important;
+          }
+        }
+        &[class*="atk-border"][class*="-outline"][class*="atk-button"]:hover {
+          .colorCheck(color, @sFill) !important;
+          background-color: darken(@sFill,@sHoverIntensity) !important;
+          border-color: darken(@sFill,@sHoverIntensity);
         }
         &[class*="atk-popover"].atk-box .atk-popoverArrow:before {
-            background-color: @sFill;
-            border-color: @sBorder;
+          background-color: @sFill;
+          border-color: @sBorder;
         }
         a&[class*="atk-swatch"]:not([class*="atk-button"]):not([class*="--text"]) {
           &:hover {
@@ -166,58 +166,58 @@
           }
         }
         [class*="atk-table"][class*="-zebra"] tbody tr:nth-child(odd) td:not([class*="atk-swatch"]) {
-            background-color: darken(@sFill, 2%);
+          background-color: darken(@sFill, 2%);
         }
     }
     .createjQueryUI() {
         .ui-widget {
-            color: @sText;
+          color: @sText;
         }
         .ui-widget-hover {
-            &.ui-state-hover {
-                background-color: darken(@sFill, @sHoverIntensity);
-            }
+          &.ui-state-hover {
+            background-color: darken(@sFill, @sHoverIntensity);
+          }
         }
         .ui-widget-content {
-            background-color: @sFill;
-            border-color: @sBorder;
+          background-color: @sFill;
+          border-color: @sBorder;
         }
         .ui-tabs {
-            .ui-tabs-nav.ui-widget-header {
-                border-bottom: 1px solid @sBorder;
-                .ui-state-default {
-                    a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-                        & when (@sText = auto) {
-                          .colorCheck(color, @sFill, 50%);
-                          &:hover {
-                            .colorCheck(color, @sFill, 70%);
-                          }
-                        }
-                        & when not (@sText = auto) {
-                          color: fade(@sText, 70%);
-                          &:hover {
-                            color: @sText;
-                          }
-                        }
-                    }
-                    &.ui-state-active {
-                      background-color: @sFill;
-                      border-color: @sBorder;
-                      a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
-                        & when (@sText = auto) {
+          .ui-tabs-nav.ui-widget-header {
+              border-bottom: 1px solid @sBorder;
+              .ui-state-default {
+                  a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
+                      & when (@sText = auto) {
+                        .colorCheck(color, @sFill, 50%);
+                        &:hover {
                           .colorCheck(color, @sFill, 70%);
                         }
-                        & when not (@sText = auto) {
+                      }
+                      & when not (@sText = auto) {
+                        color: fade(@sText, 70%);
+                        &:hover {
                           color: @sText;
                         }
                       }
+                  }
+                  &.ui-state-active {
+                    background-color: @sFill;
+                    border-color: @sBorder;
+                    a:not([class*="atk-button"]):not([class*="atk-swatch"]) {
+                      & when (@sText = auto) {
+                        .colorCheck(color, @sFill, 70%);
+                      }
+                      & when not (@sText = auto) {
+                        color: @sText;
+                      }
                     }
-                }
-            }
-            .ui-tabs-panel.ui-widget-content {
-                border: 1px solid @sBorder;
-                border-top: none;
-            }
+                  }
+              }
+          }
+          .ui-tabs-panel.ui-widget-content {
+            border: 1px solid @sBorder;
+            border-top: none;
+          }
         }
         .ui-accordion {
             .ui-accordion-header {
