@@ -16,6 +16,9 @@ html, body, .atk-layout  {
 	>.atk-layoutRow {
 		display: table-row;
 		height: 0.01em;
+    >.atk-layoutCell:not(.atk-layout) {
+      display: table-cell;
+    }
 		&.atk-layoutExpand {
 			height: auto;
 		}

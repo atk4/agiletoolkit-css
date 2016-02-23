@@ -198,7 +198,7 @@
 
 // Tabs
 .ui-tabs {
-    .clear-area;
+    .clear-area(@margin:false);
     .ui-tabs-nav.ui-widget-header {
         border-radius: @cornerRadius @cornerRadius 0 0;
         padding: 0;
@@ -258,10 +258,13 @@
         padding: @margin/2 @margin;
         .ui-dialog-title {
             &:extend([class*="atk-text"][class*="-size--l"]);
+            float: none;
             font-weight: @headingWeight;
             line-height: 1;
+            margin: 0;
+            overflow: inherit;
             text-align: center;
-            font-weight: 700;
+            width: 100%;
         }
         .ui-button.ui-dialog-titlebar-close {
             .clear-area;
@@ -281,14 +284,14 @@
         background: none;
         border:none;
         .ui-dialog-buttonset {
-            padding: round(@margin/2,2) @margin;
+            padding: @space-xs @space;
             >* + * {
                 margin-left: @space-xs;
             }
         }
         &.ui-dialog-content {
             overflow: auto;
-            padding: @margin;
+            padding: @space;
         }
     }
 }

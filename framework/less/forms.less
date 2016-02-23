@@ -81,18 +81,22 @@ input::-moz-focus-inner {
       padding-right: 0 !important;
     }
 }
-input.atk-inputOption[type=radio] {
-    display: none;
-    &:checked {
-        + label {
-            border-color: @inputFocus;
-            cursor: default;
-            &, .atk-comment {
-                color: @inputFocus;
+.atk-inputOption {
+    display: inline-block;
+    input[type=radio] {
+        display: none;
+        &:checked {
+            + label {
+                border-color: @inputFocus !important;
+                cursor: default;
+                &, .atk-comment {
+                    color: @inputFocus !important;
+                }
             }
         }
-    }
-    + label {
-        cursor: pointer;
+        + label {
+            cursor: pointer;
+            display: inline-block;
+        }
     }
 }

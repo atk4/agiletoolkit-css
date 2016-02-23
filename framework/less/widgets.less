@@ -387,9 +387,11 @@ a, button, input {
   }
 }
 [class*="atk-button"][class*="-blank"] {
-    background: none !important;
-    border-color: transparent !important;
-    box-shadow: none !important;
+  &, &[class*="atk-swatch"], &[class*="atk-border"][class*="-outline"] {
+    background: none;
+    border-color: transparent;
+    box-shadow: none;
+  }
 }
 
 // Menu

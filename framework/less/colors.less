@@ -141,8 +141,8 @@
             border-color: darken(@sBorderActive,@sHoverIntensity);
           }
         }
-        &[class*="atk-button"][class*="-blank"] {
-          color: @sFill !important;
+        &[class*="atk-button"][class*="-blank"]:not(:hover) {
+          color: @sFill;
         }
         &[class*="atk-border"][class*="-outline"] {
           &, &[class*="atk-button"] {
@@ -286,6 +286,11 @@
         .atk-swatch-@{sName}, [class*="atk-swatch"] .atk-swatch-@{sName} {
           background-color: @sFill;
         }
+        & when not (@sCustomStyles = false) {
+          @{void}, .atk-swatch-@{sName} {
+            @sCustomStyles();
+          }
+        }
     }
     & when not (@sName = default) {
         .atk-swatch-@{sName} {
@@ -296,11 +301,11 @@
                 .createBorderColors();
             }
         }
-    }
-    & when not (@sCustomStyles = false) {
-      .atk-swatch-@{sName} {
-        @sCustomStyles();
-      }
+        & when not (@sCustomStyles = false) {
+          .atk-swatch-@{sName} {
+            @sCustomStyles();
+          }
+        }
     }
     .atk-swatch-@{sName}--text {
       &, h1&, h2&, h3&, h4&, h5&, h6& {
@@ -324,11 +329,16 @@
 // Effects
 // ==========================================================
 
-.createEffect(@name, @color) {
+.createEffect(@name, @color, @customStyles:false) {
   @bgColor: tint(@color, 90%);
   .atk-effect-@{name} {
     background-color: @bgColor;
-    color: @color;
+    &, h1, h2, h3, h4, h5, h6, a:not([class*="atk-swatch"]):not([class*="atk-button"]) {
+      color: @color;
+    }
+    a:hover:not([class*="atk-swatch"]):not([class*="atk-button"]) {
+      color: darken(@color, 5%);
+    }
     &[class*="atk-button"], a& {
       color: @color !important;
     }
@@ -339,6 +349,9 @@
     input& {
       border-color: @color !important;
     }
+    & when not (@customStyles = false) {
+      @customStyles();
+    }
   }
   .atk-effect-@{name}--fill {
     background-color: @bgColor !important;
@@ -347,7 +360,3 @@
     color: @color !important;
   }
 }
-.createEffect(success, @effectSuccess);
-.createEffect(info, @effectInfo);
-.createEffect(warning, @effectWarning);
-.createEffect(danger, @effectDanger);
