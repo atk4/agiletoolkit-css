@@ -103,8 +103,8 @@
       & @{bDisabled}, &@{bDisabled}, & hr@{bDisabled},
       &@{bDisabled}[class*="atk-popover"] .atk-popoverArrow:before,
       [class*="atk-lister"]>*:not([class*="atk-border"]),
-      [class*="atk-table"][class*="-separated"] tbody>tr>td,
-      [class*="atk-table"][class*="-separated"] thead>tr>th {
+      [class*="atk-table"][class*="-separated"] tbody>tr>td:not([class*="atk-border"]),
+      [class*="atk-table"][class*="-separated"] thead>tr>th:not([class*="atk-border"]) {
         border-color: @sBorderDisabled;
       }
       & @{bActive}, &@{bActive}, & hr@{bActive},

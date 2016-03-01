@@ -525,15 +525,6 @@ small {
 [class*="atk-text"][class*="-heading"] {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
 }
-[class*="atk-text"][class*="-lead"],
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-}
 [class*="atk-text"][class*="-bold"] {
   font-weight: bold;
 }
@@ -561,6 +552,9 @@ h6 {
 }
 [class*="atk-text"][class*="-baseline"] {
   line-height: 1.618;
+}
+[class*="atk-text"][class*="-baseline--lead"] {
+  line-height: 1.2;
 }
 [class*="atk-text"][class*="-baseline--single"],
 a[class*="atk-text"][class*="-baseline--single"][class*="button"],
@@ -1671,54 +1665,54 @@ ul[class*="atk-menu"][class*="-separated"] > li + li {
 [class*="atk-cells"][class*="move"] {
   width: auto;
 }
-[class*="atk-cells"][class*="Group"] {
+[class*="atk-cells"][class*="-group"] {
   display: table;
 }
-[class*="atk-cells"][class*="Group"] > [class*="atk-cells"] {
+[class*="atk-cells"][class*="-group"] > [class*="atk-cells"] {
   display: table-row;
 }
-[class*="atk-cells"][class*="Table"] {
+[class*="atk-cells"][class*="-table"] {
   display: table;
 }
-[class*="atk-cells"][class*="Table"] [class*="atk-cells"]-group {
+[class*="atk-cells"][class*="-table"] [class*="atk-cells"][class*="-group"] {
   display: table-row-group;
 }
-[class*="atk-cells"][class*="Table"] > [class*="atk-cells"] {
+[class*="atk-cells"][class*="-table"] > [class*="atk-cells"] {
   display: table-row;
 }
 [class*="atk-cells"][class*="-justified"] {
   table-layout: fixed;
 }
 [class*="spacing"][class*="atk-cells"] > .atk-cell,
-[class*="spacing"][class*="atk-cells"][class*="Group"] > [class*="atk-cells"] > .atk-cell {
+[class*="spacing"][class*="atk-cells"][class*="-group"] > [class*="atk-cells"] > .atk-cell {
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
 [class*="spacing"][class*="atk-cells"] > .atk-cell:first-child,
-[class*="spacing"][class*="atk-cells"][class*="Group"] > [class*="atk-cells"] > .atk-cell:first-child {
+[class*="spacing"][class*="atk-cells"][class*="-group"] > [class*="atk-cells"] > .atk-cell:first-child {
   padding-left: 0;
 }
 [class*="spacing"][class*="atk-cells"] > .atk-cell:last-child,
-[class*="spacing"][class*="atk-cells"][class*="Group"] > [class*="atk-cells"] > .atk-cell:last-child {
+[class*="spacing"][class*="atk-cells"][class*="-group"] > [class*="atk-cells"] > .atk-cell:last-child {
   padding-right: 0;
 }
 [class*="-spacing--xl"][class*="atk-cells"] > .atk-cell,
-[class*="-spacing--xl"][class*="atk-cells"][class*="Group"] > [class*="atk-cells"] > .atk-cell {
+[class*="-spacing--xl"][class*="atk-cells"][class*="-group"] > [class*="atk-cells"] > .atk-cell {
   padding-left: 2.4rem;
   padding-right: 2.4rem;
 }
 [class*="-spacing--l"][class*="atk-cells"] > .atk-cell,
-[class*="-spacing--l"][class*="atk-cells"][class*="Group"] > [class*="atk-cells"] > .atk-cell {
+[class*="-spacing--l"][class*="atk-cells"][class*="-group"] > [class*="atk-cells"] > .atk-cell {
   padding-left: 1.6rem;
   padding-right: 1.6rem;
 }
 [class*="-spacing--s"][class*="atk-cells"] > .atk-cell,
-[class*="-spacing--s"][class*="atk-cells"][class*="Group"] > [class*="atk-cells"] > .atk-cell {
+[class*="-spacing--s"][class*="atk-cells"][class*="-group"] > [class*="atk-cells"] > .atk-cell {
   padding-left: 0.4rem;
   padding-right: 0.4rem;
 }
 [class*="-spacing--xs"][class*="atk-cells"] > .atk-cell,
-[class*="-spacing--xs"][class*="atk-cells"][class*="Group"] > [class*="atk-cells"] > .atk-cell {
+[class*="-spacing--xs"][class*="atk-cells"][class*="-group"] > [class*="atk-cells"] > .atk-cell {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
@@ -3526,12 +3520,12 @@ a[class*="atk-swatch"] .atk-swatch-default:not([class*="atk-button"]):hover {
  [class*="atk-lister"] > *:not([class*="atk-border"]),
 .atk-swatch-default [class*="atk-lister"] > *:not([class*="atk-border"]),
 [class*="atk-swatch"] .atk-swatch-default [class*="atk-lister"] > *:not([class*="atk-border"]),
- [class*="atk-table"][class*="-separated"] tbody > tr > td,
-.atk-swatch-default [class*="atk-table"][class*="-separated"] tbody > tr > td,
-[class*="atk-swatch"] .atk-swatch-default [class*="atk-table"][class*="-separated"] tbody > tr > td,
- [class*="atk-table"][class*="-separated"] thead > tr > th,
-.atk-swatch-default [class*="atk-table"][class*="-separated"] thead > tr > th,
-[class*="atk-swatch"] .atk-swatch-default [class*="atk-table"][class*="-separated"] thead > tr > th {
+ [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+.atk-swatch-default [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+[class*="atk-swatch"] .atk-swatch-default [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+ [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]),
+.atk-swatch-default [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]),
+[class*="atk-swatch"] .atk-swatch-default [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]) {
   border-color: #f2f2f2;
 }
  [class*="atk-border"][class*="-active"],
@@ -3711,10 +3705,10 @@ a[class*="atk-swatch"] .atk-swatch-ink:not([class*="atk-button"]):hover {
 [class*="atk-swatch"] .atk-swatch-ink[class*="atk-border"][class*="-disabled"][class*="atk-popover"] .atk-popoverArrow:before,
 .atk-swatch-ink [class*="atk-lister"] > *:not([class*="atk-border"]),
 [class*="atk-swatch"] .atk-swatch-ink [class*="atk-lister"] > *:not([class*="atk-border"]),
-.atk-swatch-ink [class*="atk-table"][class*="-separated"] tbody > tr > td,
-[class*="atk-swatch"] .atk-swatch-ink [class*="atk-table"][class*="-separated"] tbody > tr > td,
-.atk-swatch-ink [class*="atk-table"][class*="-separated"] thead > tr > th,
-[class*="atk-swatch"] .atk-swatch-ink [class*="atk-table"][class*="-separated"] thead > tr > th {
+.atk-swatch-ink [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+[class*="atk-swatch"] .atk-swatch-ink [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+.atk-swatch-ink [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]),
+[class*="atk-swatch"] .atk-swatch-ink [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]) {
   border-color: #172129;
 }
 .atk-swatch-ink [class*="atk-border"][class*="-active"],
@@ -3880,10 +3874,10 @@ a[class*="atk-swatch"] .atk-swatch-gray:not([class*="atk-button"]):hover {
 [class*="atk-swatch"] .atk-swatch-gray[class*="atk-border"][class*="-disabled"][class*="atk-popover"] .atk-popoverArrow:before,
 .atk-swatch-gray [class*="atk-lister"] > *:not([class*="atk-border"]),
 [class*="atk-swatch"] .atk-swatch-gray [class*="atk-lister"] > *:not([class*="atk-border"]),
-.atk-swatch-gray [class*="atk-table"][class*="-separated"] tbody > tr > td,
-[class*="atk-swatch"] .atk-swatch-gray [class*="atk-table"][class*="-separated"] tbody > tr > td,
-.atk-swatch-gray [class*="atk-table"][class*="-separated"] thead > tr > th,
-[class*="atk-swatch"] .atk-swatch-gray [class*="atk-table"][class*="-separated"] thead > tr > th {
+.atk-swatch-gray [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+[class*="atk-swatch"] .atk-swatch-gray [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+.atk-swatch-gray [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]),
+[class*="atk-swatch"] .atk-swatch-gray [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]) {
   border-color: #eceef0;
 }
 .atk-swatch-gray [class*="atk-border"][class*="-active"],
@@ -4049,10 +4043,10 @@ a[class*="atk-swatch"] .atk-swatch-blue:not([class*="atk-button"]):hover {
 [class*="atk-swatch"] .atk-swatch-blue[class*="atk-border"][class*="-disabled"][class*="atk-popover"] .atk-popoverArrow:before,
 .atk-swatch-blue [class*="atk-lister"] > *:not([class*="atk-border"]),
 [class*="atk-swatch"] .atk-swatch-blue [class*="atk-lister"] > *:not([class*="atk-border"]),
-.atk-swatch-blue [class*="atk-table"][class*="-separated"] tbody > tr > td,
-[class*="atk-swatch"] .atk-swatch-blue [class*="atk-table"][class*="-separated"] tbody > tr > td,
-.atk-swatch-blue [class*="atk-table"][class*="-separated"] thead > tr > th,
-[class*="atk-swatch"] .atk-swatch-blue [class*="atk-table"][class*="-separated"] thead > tr > th {
+.atk-swatch-blue [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+[class*="atk-swatch"] .atk-swatch-blue [class*="atk-table"][class*="-separated"] tbody > tr > td:not([class*="atk-border"]),
+.atk-swatch-blue [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]),
+[class*="atk-swatch"] .atk-swatch-blue [class*="atk-table"][class*="-separated"] thead > tr > th:not([class*="atk-border"]) {
   border-color: #008cf0;
 }
 .atk-swatch-blue [class*="atk-border"][class*="-active"],

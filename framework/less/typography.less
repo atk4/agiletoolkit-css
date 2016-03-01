@@ -51,9 +51,6 @@ h6, small { .text-size--s; }
     &[class*="-heading"] {
       font-family: @headingFamily;
     }
-    &[class*="-lead"] {
-      line-height: @headingBaseline;
-    }
     &[class*="-bold"] {
       font-weight: bold;
     }
@@ -80,6 +77,9 @@ h6, small { .text-size--s; }
     }
     &[class*="-baseline"] {
       line-height: @bodyBaseline;
+    }
+    &[class*="-baseline--lead"] {
+      line-height: @headingBaseline;
     }
     &[class*="-baseline--single"] {
         &, a&[class*="button"], button&[class*="button"], input&[class*="button"], a&.ui-button, button&.ui-button, input&.ui-button {

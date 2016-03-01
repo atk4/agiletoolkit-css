@@ -561,15 +561,15 @@ ul[class*="atk-menu"] {
         width: auto;
     }
 }
-[class*="atk-cells"][class*="Group"] {
+[class*="atk-cells"][class*="-group"] {
     display: table;
     >[class*="atk-cells"] {
         display: table-row;
     }
 }
-[class*="atk-cells"][class*="Table"] {
+[class*="atk-cells"][class*="-table"] {
     display: table;
-    [class*="atk-cells"]-group {
+    [class*="atk-cells"][class*="-group"] {
         display: table-row-group;
     }
     >[class*="atk-cells"] {
@@ -581,7 +581,7 @@ ul[class*="atk-menu"] {
 }
 [class*="spacing"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="-group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space/2;
         padding-right: @space/2;
         &:first-child {
@@ -594,28 +594,28 @@ ul[class*="atk-menu"] {
 }
 [class*="-spacing--xl"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="-group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space-xl/2;
         padding-right: @space-xl/2;
     }
 }
 [class*="-spacing--l"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="-group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space-l/2;
         padding-right: @space-l/2;
     }
 }
 [class*="-spacing--s"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="-group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space-s/2;
         padding-right: @space-s/2;
     }
 }
 [class*="-spacing--xs"] {
     &[class*="atk-cells"]>.atk-cell,
-    &[class*="atk-cells"][class*="Group"]>[class*="atk-cells"]>.atk-cell {
+    &[class*="atk-cells"][class*="-group"]>[class*="atk-cells"]>.atk-cell {
         padding-left: @space-xs/2;
         padding-right: @space-xs/2;
     }
