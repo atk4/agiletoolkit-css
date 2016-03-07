@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
     text-transform: @headingCase;
     margin: @space 0 round(@space/2,2) 0;
-    &:extend([class*="atk-text"][class*="-lead"]);
+    &:extend([class*="atk-text"][class*="-baseline--lead"]);
     &:first-child:not([class*="atk-margin-top"]) {
         margin-top: 0;
     }

@@ -553,7 +553,13 @@ small {
 [class*="atk-text"][class*="-baseline"] {
   line-height: 1.618;
 }
-[class*="atk-text"][class*="-baseline--lead"] {
+[class*="atk-text"][class*="-baseline--lead"],
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
 }
 [class*="atk-text"][class*="-baseline--single"],
