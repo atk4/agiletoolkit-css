@@ -2,7 +2,7 @@
 // Swatches
 // ==========================================================
 
-.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sLinkHover:auto, @sSwatchSensitivity:50%, @sHoverIntensity:4%, @sBorderIntensity:3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5), @sCustomStyles:false,  @sjQueryUI:false) {
+.createSmartSwatch(@sName, @sFill:#fff, @sText:auto, @sHeading:auto, @sComment:auto, @sLink:auto, @sLinkHover:auto, @sButtonText:auto, @sSwatchSensitivity:50%, @sHoverIntensity:4%, @sBorderIntensity:3%, @sBorder:darken(@sFill, @sBorderIntensity*2), @sBorderDisabled:darken(@sFill, @sBorderIntensity), @sBorderActive:darken(@sFill, @sBorderIntensity*4), @sBorderOverlay:darken(@sFill, @sBorderIntensity*5), @sCustomStyles:false,  @sjQueryUI:false) {
 
     // Mixins
     .colorCheck (@property:color, @color:#fff, @intensity:100%) when (luma(@color) >= @sSwatchSensitivity) {
@@ -134,11 +134,16 @@
         button&[class*="atk-button"],
         .ui-state-default,
         .ui-widget-content .ui-state-default {
-          .colorCheck(color, @sFill);
           background-color: @sFill;
           &:hover {
             background-color: darken(@sFill,@sHoverIntensity);
             border-color: darken(@sBorderActive,@sHoverIntensity);
+          }
+          & when (@sButtonText = auto) {
+            .colorCheck(color, @sFill);
+          }
+          & when not (@sButtonText = auto) {
+            color: @sButtonText;
           }
         }
         &[class*="atk-button"][class*="-blank"]:not(:hover) {

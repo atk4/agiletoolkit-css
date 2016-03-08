@@ -3399,8 +3399,8 @@ input[class*="atk-button"],
 button[class*="atk-button"],
 .ui-state-default,
 .ui-widget-content .ui-state-default {
-  color: #000000;
   background-color: #fff;
+  color: #000000;
 }
 a[class*="atk-button"]:hover,
 input[class*="atk-button"]:hover,
@@ -3610,8 +3610,8 @@ input.atk-swatch-ink[class*="atk-button"],
 button.atk-swatch-ink[class*="atk-button"],
 .atk-swatch-ink .ui-state-default,
 .atk-swatch-ink .ui-widget-content .ui-state-default {
-  color: #ffffff;
   background-color: #1c2933;
+  color: #ffffff;
 }
 a.atk-swatch-ink[class*="atk-button"]:hover,
 input.atk-swatch-ink[class*="atk-button"]:hover,
@@ -3779,8 +3779,8 @@ input.atk-swatch-gray[class*="atk-button"],
 button.atk-swatch-gray[class*="atk-button"],
 .atk-swatch-gray .ui-state-default,
 .atk-swatch-gray .ui-widget-content .ui-state-default {
-  color: #000000;
   background-color: #f5f6f7;
+  color: #000000;
 }
 a.atk-swatch-gray[class*="atk-button"]:hover,
 input.atk-swatch-gray[class*="atk-button"]:hover,
@@ -3948,8 +3948,8 @@ input.atk-swatch-blue[class*="atk-button"],
 button.atk-swatch-blue[class*="atk-button"],
 .atk-swatch-blue .ui-state-default,
 .atk-swatch-blue .ui-widget-content .ui-state-default {
-  color: #ffffff;
   background-color: #0095ff;
+  color: #ffffff;
 }
 a.atk-swatch-blue[class*="atk-button"]:hover,
 input.atk-swatch-blue[class*="atk-button"]:hover,
