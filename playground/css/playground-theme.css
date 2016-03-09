@@ -531,7 +531,7 @@ small {
 [class*="atk-text"][class*="-semibold"] {
   font-weight: 600;
 }
-[class*="atk-text"][class*="-normal"] {
+[class*="atk-text"][class*="-regular"] {
   font-weight: 400;
 }
 [class*="atk-text"][class*="-light"] {
@@ -546,6 +546,9 @@ small {
 [class*="atk-text"][class*="-caps"] {
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+[class*="atk-text"][class*="-wrap"] {
+  white-space: normal;
 }
 [class*="atk-text"][class*="-nowrap"] {
   white-space: nowrap;
@@ -1068,12 +1071,14 @@ input.atk-shape-rectangle {
 [class*="atk-border"]:not([class*="atk-border-left"]):not([class*="atk-border-right"]):not([class*="atk-border-top"]):not([class*="atk-border-bottom"]):not(hr):not([class*="atk-border--none"]) {
   border-width: 1px;
 }
+[class*="atk-border"]:not([class*="atk-border-left"]):not([class*="atk-border-right"]):not([class*="atk-border-top"]):not([class*="atk-border-bottom"]):not(hr):not([class*="atk-border--none"])[class*="--thick"] {
+  border-width: 2px !important;
+}
 [class*="atk-border"][class*="--outline"],
 [class*="atk-border"][class*="--outline"][class*=button],
 [class*="atk-border"][class*="--outline"][class*=swatch] {
   background-color: rgba(255, 255, 255, 0);
 }
-[class*="atk-border"][class*="--thick"],
 [class*="atk-border"][class*="--thick"][class*="atk-popover"] .atk-popover-arrow:before {
   border-width: 2px !important;
 }
@@ -1083,14 +1088,26 @@ hr[class*="atk-border"][class*="--thick"] {
 [class*="atk-border-bottom"] {
   border-bottom-width: 1px !important;
 }
+[class*="atk-border-bottom"][class*="--thick"] {
+  border-bottom-width: 2px !important;
+}
 [class*="atk-border-left"] {
   border-left-width: 1px !important;
+}
+[class*="atk-border-left"][class*="--thick"] {
+  border-left-width: 2px !important;
 }
 [class*="atk-border-right"] {
   border-right-width: 1px !important;
 }
+[class*="atk-border-right"][class*="--thick"] {
+  border-right-width: 2px !important;
+}
 [class*="atk-border-top"] {
   border-top-width: 1px !important;
+}
+[class*="atk-border-top"][class*="--thick"] {
+  border-top-width: 2px !important;
 }
 [class*="atk-border--none"],
 [class*="atk-border--none"].atk-box,

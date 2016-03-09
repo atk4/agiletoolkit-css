@@ -249,6 +249,9 @@
     border-width: 0px;
     &:not([class*="atk-border-left"]):not([class*="atk-border-right"]):not([class*="atk-border-top"]):not([class*="atk-border-bottom"]):not(hr):not([class*="atk-border--none"]) {
       border-width: 1px;
+      &[class*="--thick"] {
+        border-width: 2px !important;
+      }
     }
 }
 [class*="atk-border"][class*="--outline"] {
@@ -257,7 +260,7 @@
     }
 }
 [class*="atk-border"][class*="--thick"] {
-  &, &[class*="atk-popover"] .atk-popover-arrow:before {
+  &[class*="atk-popover"] .atk-popover-arrow:before {
     border-width: 2px !important;
   }
   hr& {
@@ -266,15 +269,27 @@
 }
 [class*="atk-border-bottom"] {
   border-bottom-width: 1px !important;
+  &[class*="--thick"] {
+    border-bottom-width: 2px !important;
+  }
 }
 [class*="atk-border-left"] {
   border-left-width: 1px !important;
+  &[class*="--thick"] {
+    border-left-width: 2px !important;
+  }
 }
 [class*="atk-border-right"] {
   border-right-width: 1px !important;
+  &[class*="--thick"] {
+    border-right-width: 2px !important;
+  }
 }
 [class*="atk-border-top"] {
   border-top-width: 1px !important;
+  &[class*="--thick"] {
+    border-top-width: 2px !important;
+  }
 }
 [class*="atk-border--none"] {
   &, &.atk-box, &[class*="atk-button"], &[class*="atk-popover"] .atk-popover-arrow:before {
