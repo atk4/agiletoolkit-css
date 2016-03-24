@@ -363,21 +363,26 @@
     text-align: center;
     white-space: nowrap;
 }
-.createElementPadding(@padding, @ratio:2) {
-    &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
+.createElementPadding(@padding, @ratio:2, @variations:true) {
+    & when (@variations = true) {
+        &:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
+            padding: round(@padding,1) round(@padding*(4/@ratio),1);
+            &[class*="-spacing--xs"] {
+                padding: round(@padding*0.5,1) round(@padding*(2/@ratio),1);
+            }
+            &[class*="-spacing--s"] {
+                padding: round(@padding*0.75,1) round(@padding*(3/@ratio),1);
+            }
+            &[class*="-spacing--l"] {
+                padding: round(@padding*1.25,1) round(@padding*(5/@ratio),1);
+            }
+            &[class*="-spacing--xl"] {
+                padding: round(@padding*1.5,1) round(@padding*(6/@ratio),1);
+            }
+        }
+    }
+    & when (@variations = false) {
         padding: round(@padding,1) round(@padding*(4/@ratio),1);
-        &[class*="-spacing--xs"] {
-            padding: round(@padding*0.5,1) round(@padding*(2/@ratio),1);
-        }
-        &[class*="-spacing--s"] {
-            padding: round(@padding*0.75,1) round(@padding*(3/@ratio),1);
-        }
-        &[class*="-spacing--l"] {
-            padding: round(@padding*1.25,1) round(@padding*(5/@ratio),1);
-        }
-        &[class*="-spacing--xl"] {
-            padding: round(@padding*1.5,1) round(@padding*(6/@ratio),1);
-        }
     }
 }
 a, button, input {
