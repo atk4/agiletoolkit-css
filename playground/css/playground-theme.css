@@ -1080,7 +1080,7 @@ input.atk-shape-rectangle {
 [class*="atk-border"][class*="--outline"][class*=swatch] {
   background-color: rgba(255, 255, 255, 0);
 }
-[class*="atk-border"][class*="--thick"][class*="atk-popover"] .atk-popover-arrow:before {
+[class*="atk-border"][class*="--thick"][class*="atk-popover"] .atk-popoverArrow:before {
   border-width: 2px !important;
 }
 hr[class*="atk-border"][class*="--thick"] {
@@ -1312,9 +1312,11 @@ hr[class*="atk-border"][class*="--thick"] {
 [class*="atk-popover"] .atk-popoverArrow,
 [class*="atk-popover"][class*="atk-popover-top"] .atk-popoverArrow {
   bottom: 100%;
+  margin-bottom: -1px;
 }
 [class*="atk-popover"][class*="atk-popover-bottom"] .atk-popoverArrow {
   top: 100%;
+  margin-top: -1px;
 }
 [class*="atk-popover"][class*="atk-popover-left"] .atk-popoverArrow {
   right: 100%;

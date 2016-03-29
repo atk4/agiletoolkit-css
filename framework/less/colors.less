@@ -335,7 +335,7 @@
 // ==========================================================
 
 .createEffect(@name, @color, @customStyles:false) {
-  @bgColor: tint(@color, 90%);
+  @bgColor: tint(@color, 95%);
   .atk-effect-@{name} {
     background-color: @bgColor;
     &, h1, h2, h3, h4, h5, h6, a:not([class*="atk-swatch"]):not([class*="atk-button"]) {
@@ -356,6 +356,10 @@
     }
     & when not (@customStyles = false) {
       @customStyles();
+    }
+    .atk-popoverArrow:before {
+      background: @bgColor !important;
+      border-color: @color !important;
     }
   }
   .atk-effect-@{name}--fill {
