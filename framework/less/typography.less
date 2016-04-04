@@ -161,8 +161,6 @@ figure img {
 
 // Figcaption styling
 figcaption {
-    color: red;
-    font-size: small;
     font-style: italic;
 }
 
@@ -172,33 +170,37 @@ figcaption {
 // ==========================================================
 
 ul, ol, dl {
-    margin: 0 0 @margin 0;
-    &:last-child {
-        margin-bottom: 0;
-    }
+  margin: 0 0 @margin 0;
+  &:last-child {
+      margin-bottom: 0;
+  }
 }
 ul, ol {
-    &.atk-list-nobullets {
-        margin-left: 0;
-        padding-left: 0;
+  &[class*="atk-list"] {
+    &[class*="-nobullets"] {
+      margin-left: 0;
+      padding-left: 0;
+      &, li {
         list-style-type: none;
-        ul, ol {
-            list-style-type: none;
-            padding-left: 1em;
-        }
+      }
+      ul, ol {
+          list-style-type: none;
+          padding-left: 1em;
+      }
     }
-    &.atk-list-inline {
-        li {
-            display: inline;
-            margin: 0;
-            padding: 0;
-        }
+    &[class*="-inline"] {
+      li {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+      }
     }
-    &.atk-list-nospacing {
-        &, ul, ol {
-            padding-left: 1em;
-        }
+    &[class*="-nospacing"] {
+      &, ul, ol {
+          padding-left: 1em;
+      }
     }
+  }
 }
 
 

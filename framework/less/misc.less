@@ -82,6 +82,11 @@ img::-moz-selection {
 .atk-filler {
   .filler;
 }
+.atk-hide {
+  &, &[class*="atk-layout"], &[class*="atk-menu"][class*="-vertical"] {
+    display: none !important;
+  }
+}
 
 
 // ==========================================================

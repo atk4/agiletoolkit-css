@@ -8,7 +8,6 @@ html, body, .atk-layout  {
 .atk-layout {
 	.box-sizing;
 	display: table;
-  table-layout: fixed;
 	width: 100%;
 	>.atk-layoutRow, >.atk-layoutColumn, .atk-layoutRow>.atk-layoutColumn {
 		height: 0.1%;
@@ -51,13 +50,12 @@ html, body, .atk-layout  {
     min-height: 1px;
   }
 }
-.atk-hide {
-  &, &[class*="atk-layout"], &[class*="atk-menu"][class*="-vertical"] {
-    display: none !important;
+.showFeature(@c) {
+  .atk-@{c}-show {
+    &, &[class*="atk-button"], &[class*="atk-cell"], &li {
+      display: none;
+    }
   }
-}
-*[class*=atk-show-] {
-  display: none !important;
 }
 
 // Grid System Loop
@@ -127,83 +125,94 @@ html, body, .atk-layout  {
   }
 
   // Grid System
-    & when (ispercentage(@g)) {
-      .atk-row > *[class*="atk-col"] + *[class*="atk-col"] {
-        margin-left: @g;
+  & when (ispercentage(@g)) {
+    .atk-row > *[class*="atk-col"] + *[class*="atk-col"] {
+      margin-left: @g;
+    }
+  }
+  & when not (ispercentage(@g)) {
+    .atk-row {
+      margin-left: -@g;
+      > *[class*="atk-col"] {
+        border-left:0px solid rgba(0,0,0,0);
+        border-right:0px solid rgba(0,0,0,0);
+        border-left-width: @g;
       }
     }
-    & when not (ispercentage(@g)) {
-      .atk-row {
-        margin-left: -@g;
-        > *[class*="atk-col"] {
-          border-left:0px solid rgba(0,0,0,0);
-          border-right:0px solid rgba(0,0,0,0);
-          border-left-width: @g;
-        }
-      }
-      *[class*="atk-col"] {
-        width: 100%;
-      }
+    *[class*="atk-col"] {
+      width: 100%;
     }
+  }
   & when (iskeyword(@c)) and not (@c = false) {
-    .atk-stack-@{c} {
-      &, &[class*="atk-cells"], &[class*="atk-cells"]>.atk-cell, &.atk-row>[class*="atk-col"] {
-        display: block;
-        border-width: 0;
-        float: none;
-        width: auto;
-      }
-      &.atk-row {
-        &, >[class*="atk-col"] {
-          margin-left: 0;
-        }
-      }
-      table& {
-        &, >tbody, >tbody>tr, >tbody>tr>td {
-          display: block;
-        }
-      }
-      &[class*="atk-cells"] {
-        >.atk-cell + .atk-cell {
-          margin-top: @margin;
-        }
-        &[class*="cells"][class*="-spacing"] {
-          >.atk-cell {
-            padding-right: 0;
-            + .atk-cell {
-              padding-left: 0;
-            }
-          }
-        }
-      }
-      &[class*="items"] {
-        >* {
-          display: block;
-          margin-left: 0;
-        }
-      }
-    }
-    .atk-hide-@{c} {
+    .atk-@{c}-hide {
       &, &[class*="atk-button"] {
         display: none !important;
       }
     }
-    .atk-show-@{c} {
-      &, &[class*="icon"], &[class*="atk-button"] {
+    .atk-@{c}-show {
+      display: block !important;
+      &[class*="icon"], &[class*="atk-button"], a& {
         display: inline-block !important;
       }
+      &[class*="atk-cell"] {
+        display: table-cell !important;
+      }
     }
-    .atk-expand-@{c} {
+    .atk-@{c}-expand {
       display: block !important;
       width: 100% !important;
+    }
+    .atk-@{c}-align-center {
+      text-align: center !important;
+    }
+    .atk-@{c}-align-left {
+      text-align: left !important;
+    }
+    .atk-@{c}-align-right {
+      text-align: right !important;
+    }
+    [class*="atk-@{c}-stack"] {
+      border-width: 0 !important;
+      float: none !important;
+      width: auto;
+      &, >*:not([class*="-hide"]), >*[class*="atk-button"] {
+        display: block !important;
+      }
+      &[class*="atk-items"]>* + * {
+        margin-left: 0 !important;
+      }
+      &[class*="atk-cells"]>.atk-cell {
+        &:not([class*="atk-padding-left"]):not([class*="atk-padding--"]) {
+          padding-left: 0 !important;  
+        }
+        &:not([class*="atk-padding-right"]):not([class*="atk-padding--"]) {
+          padding-right: 0 !important;  
+        }
+      }
+    }
+    .atk-@{c}-stack--xs>* + * {
+      margin-top: @space-xs;
+    }
+    .atk-@{c}-stack--s>* + * {
+      margin-top: @space-s;
+    }
+    .atk-@{c}-stack--m>* + *, .atk-@{c}-stack>* + * {
+      margin-top: @space;
+    }
+    .atk-@{c}-stack--l>* + * {
+      margin-top: @space-l;
+    }
+    .atk-@{c}-stack--xl>* + * {
+      margin-top: @space-xl;
+    }
+    .atk-@{c}-stack--none>* + * {
+      margin-top: 0;
     }
   }
   & when (@b = true) {
     .atk-layout {
       &, >.atk-layoutColumn, .atk-layoutCell, .atk-layoutRow {
         display: block;
-      }
-      .atk-layoutRow {
         height: auto;
       }
     }
@@ -234,18 +243,27 @@ html, body, .atk-layout  {
 // Grid System Generator
 .createViewport(@class:false, @customStyles: false, @viewportMinWidth:false, @viewportMaxWidth:false, @cols:12, @colsGutter:20px, @stackLayout:false, @wrapperMinWidth:0, @wrapperMaxWidth:100%, @wrapperMargin:0, @windowMinWidth:false) {
   & when (isnumber(@viewportMinWidth)) and (isnumber(@viewportMaxWidth)) {
+    & when not (@class = false) {
+      .showFeature(@class)
+    }
     @media screen and (min-width: @viewportMinWidth) and (max-width: @viewportMaxWidth) {
       .viewportFeatures();
       .generateColumns();
     }
   }
   & when (isnumber(@viewportMinWidth)) and (@viewportMaxWidth = false) {
+    & when not (@class = false) {
+      .showFeature(@class)
+    }
     @media screen and (min-width: @viewportMinWidth) {
       .viewportFeatures();
       .generateColumns();
     }
   }
   & when (isnumber(@viewportMaxWidth)) and (@viewportMinWidth = false) {
+    & when not (@class = false) {
+      .showFeature(@class)
+    }
     @media screen and (max-width: @viewportMaxWidth) {
       .viewportFeatures();
       .generateColumns();
