@@ -1164,9 +1164,6 @@ hr[class*="atk-border"][class*="--thick"] {
 [class*="atk-table"] table td:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 1.6rem;
 }
-[class*="atk-table"] table thead th {
-  text-align: left;
-}
 [class*="atk-table"] table tbody tr td {
   position: relative;
 }
