@@ -762,15 +762,18 @@ hr {
   text-align: center;
 }
 [class*="atk-align-bottom"],
-[class*="atk-align-bottom"][class*="atk-cells"] > .atk-cell {
+[class*="atk-align-bottom"][class*="atk-cells"] > .atk-cell,
+.atk-cells [class*="atk-align-bottom"].atk-cell {
   vertical-align: bottom;
 }
 [class*="atk-align-middle"],
-[class*="atk-align-middle"][class*=atk-cells] > .atk-cell {
+[class*="atk-align-middle"][class*=atk-cells] > .atk-cell,
+.atk-cells [class*="atk-align-middle"].atk-cell {
   vertical-align: middle;
 }
 [class*="atk-align-top"],
-[class*="atk-align-top"][class*=atk-cells] > .atk-cell {
+[class*="atk-align-top"][class*=atk-cells] > .atk-cell,
+.atk-cells [class*="atk-align-top"].atk-cell {
   vertical-align: top;
 }
 .atk-padding {

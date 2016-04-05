@@ -150,9 +150,11 @@ html, body, .atk-layout  {
       }
     }
     .atk-@{c}-show {
-      display: block !important;
       &[class*="icon"], &[class*="atk-button"], a& {
         display: inline-block !important;
+      }
+      &, [class*="atk-@{c}-stack"]>& {
+        display: block !important;
       }
       &[class*="atk-cell"] {
         display: table-cell !important;
@@ -174,9 +176,9 @@ html, body, .atk-layout  {
     [class*="atk-@{c}-stack"] {
       border-width: 0 !important;
       float: none !important;
-      width: auto;
+      width: 100%;
       &, >*:not([class*="-hide"]), >*[class*="atk-button"] {
-        display: block !important;
+        display: block;
       }
       &[class*="atk-items"]>* + * {
         margin-left: 0 !important;
