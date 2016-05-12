@@ -1062,13 +1062,26 @@ input.atk-shape-rectangle {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
+.atk-shape-pill {
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+}
 [class*="atk-border"] {
   border-style: solid;
   border-width: 0px;
 }
+[class*="atk-border"][class*="atk-border-top--none"],
+[class*="atk-border"][class*="atk-border-bottom--none"],
+[class*="atk-border"][class*="atk-border-left--none"],
+[class*="atk-border"][class*="atk-border-right--none"],
 [class*="atk-border"]:not([class*="atk-border-left"]):not([class*="atk-border-right"]):not([class*="atk-border-top"]):not([class*="atk-border-bottom"]):not(hr):not([class*="atk-border--none"]) {
   border-width: 1px;
 }
+[class*="atk-border"][class*="atk-border-top--none"][class*="--thick"],
+[class*="atk-border"][class*="atk-border-bottom--none"][class*="--thick"],
+[class*="atk-border"][class*="atk-border-left--none"][class*="--thick"],
+[class*="atk-border"][class*="atk-border-right--none"][class*="--thick"],
 [class*="atk-border"]:not([class*="atk-border-left"]):not([class*="atk-border-right"]):not([class*="atk-border-top"]):not([class*="atk-border-bottom"]):not(hr):not([class*="atk-border--none"])[class*="--thick"] {
   border-width: 2px !important;
 }
@@ -1453,7 +1466,6 @@ input.ui-button {
   display: inline-block;
   font-weight: bold;
   line-height: 1.618;
-  text-align: center;
   white-space: nowrap;
 }
 a[class*="atk-button"]:not([class*="atk-shape"]),
@@ -1465,6 +1477,14 @@ input.ui-button:not([class*="atk-shape"]) {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+a[class*="atk-button"]:not([class*="atk-align"]),
+button[class*="atk-button"]:not([class*="atk-align"]),
+input[class*="atk-button"]:not([class*="atk-align"]),
+a.ui-button:not([class*="atk-align"]),
+button.ui-button:not([class*="atk-align"]),
+input.ui-button:not([class*="atk-align"]) {
+  text-align: center;
 }
 a[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "]),
 button[class*="atk-button"]:not([class*="atk-padding--"]):not([class*="atk-padding "]),
@@ -1845,27 +1865,27 @@ textarea:focus {
 }
 input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "]),
 textarea:not([class*="atk-padding--"]):not([class*="atk-padding "]),
-[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
+[class*="atk-inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "]) {
   padding: 0.5em 0.7em;
 }
 input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
 textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"],
-[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"] {
+[class*="atk-inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xs"] {
   padding: 0.3em 0.3em;
 }
 input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
 textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"],
-[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"] {
+[class*="atk-inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--s"] {
   padding: 0.4em 0.5em;
 }
 input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
 textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"],
-[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"] {
+[class*="atk-inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--l"] {
   padding: 0.6em 0.8em;
 }
 input:not([type=submit]):not([type=button]):not([type=radio]):not([type=file]):not([type=checkbox]):not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
 textarea:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"],
-[class*="inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"] {
+[class*="atk-inputLabel"]:not([class*="atk-padding--"]):not([class*="atk-padding "])[class*="-spacing--xl"] {
   padding: 0.8em 1em;
 }
 input[readonly] {

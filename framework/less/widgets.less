@@ -352,12 +352,14 @@
     &:not([class*="atk-shape"]) {
         .border-radius(@cornerRadius);
     }
+    &:not([class*="atk-align"]) {
+        text-align: center;
+    }
     border-style: solid;
     border-width: 1px;
     display: inline-block;
     font-weight: bold;
     line-height: @bodyBaseline;
-    text-align: center;
     white-space: nowrap;
 }
 .createElementPadding(@padding, @ratio:2, @variations:true) {

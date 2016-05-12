@@ -242,11 +242,15 @@
         &:extend([class*="atk-text"][class*="-baseline--single"]);
     }
 }
+.atk-shape-pill {
+  .border-radius(10em);
+}
 
 // Borders
 [class*="atk-border"] {
     border-style: solid;
     border-width: 0px;
+    &[class*="atk-border-top--none"], &[class*="atk-border-bottom--none"], &[class*="atk-border-left--none"], &[class*="atk-border-right--none"],
     &:not([class*="atk-border-left"]):not([class*="atk-border-right"]):not([class*="atk-border-top"]):not([class*="atk-border-bottom"]):not(hr):not([class*="atk-border--none"]) {
       border-width: 1px;
       &[class*="--thick"] {
