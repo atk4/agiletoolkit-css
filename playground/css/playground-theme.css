@@ -763,17 +763,20 @@ hr {
 }
 [class*="atk-align-bottom"],
 [class*="atk-align-bottom"][class*="atk-cells"] > .atk-cell,
-.atk-cells [class*="atk-align-bottom"].atk-cell {
+.atk-cells [class*="atk-align-bottom"].atk-cell,
+[class*="atk-align-bottom"].atk-layoutColumn {
   vertical-align: bottom;
 }
 [class*="atk-align-middle"],
 [class*="atk-align-middle"][class*=atk-cells] > .atk-cell,
-.atk-cells [class*="atk-align-middle"].atk-cell {
+.atk-cells [class*="atk-align-middle"].atk-cell,
+[class*="atk-align-middle"].atk-layoutColumn {
   vertical-align: middle;
 }
 [class*="atk-align-top"],
 [class*="atk-align-top"][class*=atk-cells] > .atk-cell,
-.atk-cells [class*="atk-align-top"].atk-cell {
+.atk-cells [class*="atk-align-top"].atk-cell,
+[class*="atk-align-top"].atk-layoutColumn {
   vertical-align: top;
 }
 .atk-padding {
